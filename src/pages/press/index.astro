@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const allPress = (await getCollection('press'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const title = "Press & Media — David Hampian | Field Vision";
+const description = "David Hampian has been featured as an expert source in the Australian Financial Review, Covers, Daily Express, Birch, and other leading publications. Read his expert commentary on marketing strategy, entertainment, sports, and performance marketing.";
+---
+<BaseLayout title={title} description={description}>
+  <Header slot="header" />
+  <section class="press-hero">
+    <div class="container">
+      <span class="press-hero__label">Press & Media</span>
+      <h1 class="press-hero__title">Featured In</h1>
+      <p class="press-hero__subtitle">Expert commentary on marketing strategy, entertainment, sports, and performance — featured in leading international publications.</p>
+    </div>
+  </section>
+
+  <section class="press-grid">
+    <div class="container">
+      <div class="press-grid__cards">
+        {allPress.map((item) => (
+          <a href={`/press/${item.slug}`} class="press-card">
+            <div class="press-card__pub">
+              <span class="press-card__pub-name">{item.data.publication}</span>
+              <time class="press-card__date" datetime={item.data.date.toISOString()}>
+                {item.data.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+              </time>
+            </div>
+            <h2 class="press-card__title">{item.data.title}</h2>
+            <p class="press-card__desc">{item.data.description}</p>
+            <div class="press-card__meta">
+              <span class="press-card__topic">{item.data.topic}</span>
+              <span class="press-card__arrow">&rarr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Press & Media Features — David Hampian",
+    "description": "Expert commentary and interviews featuring David Hampian in leading publications",
+    "numberOfItems": allPress.length,
+    "itemListElement": allPress.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `https://fieldvisiongroup.com/press/${item.slug}`,
+      "name": item.data.title
+    }))
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Press & Media — David Hampian",
+    "description": description,
+    "url": "https://fieldvisiongroup.com/press",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Field Vision",
+      "url": "https://fieldvisiongroup.com"
+    },
+    "about": {
+      "@type": "Person",
+      "name": "David Hampian",
+      "jobTitle": "Managing Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Field Vision"
+      }
+    }
+  })} />
+    <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  /* ── Press Hero ── */
+  .press-hero {
+    padding: clamp(6rem, 12vw, 10rem) 0 clamp(3rem, 6vw, 5rem);
+    background: var(--color-bg, #0a0a0a);
+    text-align: center;
+  }
+
+  .press-hero__label {
+    display: inline-block;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent, #a5db5d);
+    margin-bottom: 1rem;
+  }
+
+  .press-hero__title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    text-transform: uppercase;
+    color: var(--color-text, #fff);
+    line-height: 1;
+    margin: 0 0 1.25rem;
+  }
+
+  .press-hero__subtitle {
+    font-family: 'Satoshi', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: var(--color-text-muted, #999);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ── Press Grid ── */
+  .press-grid {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    background: var(--color-bg, #0a0a0a);
+  }
+
+  .press-grid__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+    gap: 2rem;
+  }
+
+  /* ── Press Card ── */
+  .press-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  }
+
+  .press-card:hover {
+    border-color: var(--accent, #a5db5d);
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .press-card__pub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .press-card__pub-name {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent, #a5db5d);
+  }
+
+  .press-card__date {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #999);
+  }
+
+  .press-card__title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    text-transform: uppercase;
+    color: var(--color-text, #fff);
+    line-height: 1.15;
+    margin: 0 0 0.75rem;
+  }
+
+  .press-card__desc {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.95rem;
+    color: var(--color-text-muted, #999);
+    line-height: 1.6;
+    flex-grow: 1;
+    margin: 0 0 1.25rem;
+  }
+
+  .press-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .press-card__topic {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #666);
+  }
+
+  .press-card__arrow {
+    font-size: 1.25rem;
+    color: var(--accent, #a5db5d);
+    transition: transform 0.3s ease;
+  }
+
+  .press-card:hover .press-card__arrow {
+    transform: translateX(4px);
+  }
+
+  /* ── Container ── */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+  }
+</style>

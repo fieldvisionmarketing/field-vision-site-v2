@@ -1,0 +1,60 @@
+---
+/**
+ * StatsBar — Row of key statistics
+ * @prop stats — Array of { value: string, label: string }
+ */
+interface Props {
+  stats: Array<{ value: string; label: string }>;
+}
+const { stats } = Astro.props;
+---
+<div class="stats-bar">
+  {stats.map((stat) => (
+    <div class="stat-item">
+      <span class="stat-number">{stat.value}</span>
+      <span class="stat-label">{stat.label}</span>
+    </div>
+  ))}
+</div>
+
+<style>
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 48px 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(33, 54, 33, 0.08);
+  }
+  .stat-item {
+    text-align: center;
+    padding: 28px 16px;
+    background: #fff;
+    border-right: 1px solid rgba(33, 54, 33, 0.06);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-number {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    color: #213621;
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8B9A7E;
+  }
+
+  @media (max-width: 900px) {
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .stats-bar { grid-template-columns: 1fr 1fr; }
+  }
+</style>

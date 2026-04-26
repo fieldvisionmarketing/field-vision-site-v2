@@ -1,0 +1,54 @@
+---
+const starPath = 'M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78z';
+
+const testimonials = [
+  {
+    quote: "Working with David has been a game-changer for MONTREALITY. He helped us revamp our media kit into something sharper, more premium, and brand-ready — and also improved our outreach approach with clearer messaging and stronger positioning.",
+    name: "Sina Ghiassi & Daniel Yanez",
+    title: "Founders, MONTREALITY",
+    initials: "SG",
+    theme: "t-light",
+  },
+  {
+    quote: "We knew we had to find the right experts to guide us through this process because we're new to the space. We're extremely grateful for Field Vision's help building a first-of-its-kind go-to-market strategy that will change college sports forever.",
+    name: "John Lee",
+    title: "COO, The LinkU & Co-Founder, StreamU",
+    initials: "JL",
+    theme: "t-dark",
+  },
+  {
+    quote: "We were spending six figures on agencies with nothing to show for it. David replaced all of that with a clear strategy, the right hires, and systems that actually compound.",
+    name: "Jessica Liu",
+    title: "COO, Vibes Media",
+    initials: "JL",
+    theme: "t-light",
+  },
+];
+---
+
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <h2 class="reveal">What Founders <span class="highlight">Say</span></h2>
+    <div class="test-grid">
+      {testimonials.map((t, i) => (
+        <div class={`test-card ${t.theme} reveal rd${i + 1}`}>
+          <div class="test-stars">
+            {[...Array(5)].map(() => (
+              <svg viewBox="0 0 20 20" width="18" height="18">
+                <path d={starPath} fill="var(--accent)" />
+              </svg>
+            ))}
+          </div>
+          <p class="test-quote">"{t.quote}"</p>
+          <div class="test-author">
+            <div class="test-avatar">{t.initials}</div>
+            <div>
+              <div class="test-name">{t.name}</div>
+              <div class="test-title">{t.title}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+---
+/**
+ * OutputCard — Callout showing the deliverable/output of a phase or step
+ * @prop label — Optional label override (defaults to "OUTPUT")
+ */
+interface Props {
+  label?: string;
+}
+const { label = 'OUTPUT' } = Astro.props;
+---
+<div class="output-card">
+  <span class="output-icon">✓</span>
+  <div class="output-body">
+    <strong>{label}:</strong>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .output-card {
+    background: #fff;
+    border: 1px solid rgba(33, 54, 33, 0.08);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(33, 54, 33, 0.04);
+  }
+  .output-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: rgba(165, 219, 93, 0.12);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #A5DB5D;
+    font-size: 18px;
+  }
+  .output-body {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 15px;
+    color: rgba(33, 54, 33, 0.7);
+    line-height: 1.65;
+  }
+  .output-body strong {
+    color: #213621;
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .output-card { flex-direction: column; }
+  }
+</style>

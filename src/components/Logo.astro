@@ -1,0 +1,30 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<img
+  src="https://static.wixstatic.com/media/d84514_1d808a120d1c4c21853df43e2a557528~mv2.png"
+  alt="Field Vision"
+  class:list={["fv-logo", className]}
+/>
+
+<style>
+  .fv-logo {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+  }
+  .header-logo {
+    max-height: 2.2rem;
+    width: auto;
+  }
+  .footer-logo {
+    max-height: 3.5rem;
+    width: auto;
+  }
+</style>

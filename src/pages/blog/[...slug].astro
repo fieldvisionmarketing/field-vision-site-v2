@@ -1,0 +1,156 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import AuthorByline from '@/components/AuthorByline.astro';
+import AuthorBio from '@/components/AuthorBio.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const rawBody = post.body || '';
+const readingTime = rawBody ? Math.ceil(rawBody.split(/\s+/).length / 200) : 5;
+
+const siteUrl = 'https://fieldvisiongroup.com';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "author": {
+    "@type": "Person",
+    "name": post.data.author,
+    "url": "https://www.linkedin.com/in/davidhampian/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Field Vision Group",
+    "url": siteUrl
+  },
+  "datePublished": post.data.date.toISOString(),
+  ...(post.data.updated && { "dateModified": post.data.updated.toISOString() }),
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `${siteUrl}/blog/${post.id.replace(/\.md$/, '')}/`
+  }
+};
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  ogImage={post.data.ogImage}
+  ogType="article"
+  publishDate={post.data.date.toISOString()}
+>
+  <Header slot="header" />
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <article class="blog-article">
+    <div class="article-header reveal">
+      <span class="blog-cat">{post.data.category}</span>
+      <h1>{post.data.title}</h1>
+    </div>
+    <AuthorByline date={post.data.date} readingTime={readingTime} />
+    <div class="article-content">
+      <Content />
+    </div>
+    <AuthorBio />
+  </article>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .blog-article {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 140px 24px 80px;
+  }
+  .article-header {
+    margin-bottom: 48px;
+  }
+  .article-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 16px 0 24px;
+  }
+  .article-meta {
+    font-size: 0.95rem;
+    color: #666;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .meta-sep { opacity: 0.4; }
+  .article-content :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin: 48px 0 16px;
+    line-height: 1.1;
+  }
+  .article-content :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin: 36px 0 12px;
+    line-height: 1.15;
+  }
+  .article-content :global(p) {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .article-content :global(ul),
+  .article-content :global(ol) {
+    margin: 16px 0 24px 24px;
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+  .article-content :global(li) {
+    margin-bottom: 8px;
+  }
+  .article-content :global(strong) {
+    font-weight: 700;
+  }
+  .article-content :global(a) {
+    color: var(--dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .article-content :global(blockquote) {
+    border-left: 4px solid var(--accent);
+    padding: 12px 24px;
+    margin: 24px 0;
+    font-style: italic;
+    color: #555;
+  }
+  .article-content :global(hr) {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 40px 0;
+  }
+  .article-content :global(code) {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95em;
+  }
+</style>

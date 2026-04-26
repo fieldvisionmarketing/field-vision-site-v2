@@ -1,0 +1,746 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<BaseLayout title="Architecting Amazon Music's Livestream Strategy" description="A Field Vision case study - Architecting Amazon Music's Livestream Strategy">
+  <Header slot="header" />
+
+  <!-- ═══════════════════════════════════════════
+     SECTION 1: HERO
+     ═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="section-tag">Case Study</span>
+      <h1>Architecting Amazon Music's Livestream Strategy</h1>
+      <p class="hero-desc">
+        Amazon Music had access to the biggest artists and cultural moments in music — but livestreams were treated as isolated activations. I architected the marketing and growth strategy that transformed livestreams into a scalable audience growth engine, powering flagship programming like Amazon Music Live and landmark events like Kendrick Lamar's The Pop Out.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Company</span>
+          <span class="hero-meta-value">Amazon Music</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Industry</span>
+          <span class="hero-meta-value">Entertainment / Livestreaming</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Scope</span>
+          <span class="hero-meta-value">Global</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Focus</span>
+          <span class="hero-meta-value">Growth Strategy &amp; Live Programming</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image" style="padding:0; background:none; border:none;">
+          <img src="https://static.wixstatic.com/media/d84514_ffa2dc6ea5ea445bb9a5e54c917e2ef8~mv2.png" alt="Amazon Music Live marketing" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);" />
+        </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2: RESULTS STRIP
+     ═══════════════════════════════════════════ -->
+<section class="results-strip">
+  <div class="results-strip-inner">
+    <div class="result-stat">
+      <div class="result-number">+31%</div>
+      <div class="result-label">Customer Growth</div>
+    </div>
+    <div class="result-stat">
+      <div class="result-number">+39%</div>
+      <div class="result-label">Revenue Growth</div>
+    </div>
+    <div class="result-stat">
+      <div class="result-number">+3.7pt</div>
+      <div class="result-label">Brand Favorability Lift</div>
+    </div>
+    <div class="result-stat">
+      <div class="result-number">Flagship</div>
+      <div class="result-label">Live Performance Series</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3: THE SITUATION
+     ═══════════════════════════════════════════ -->
+<section class="content-section">
+  <span class="section-tag">The Situation</span>
+  <h2>Cultural Moments Were Being Wasted as One-Off Activations</h2>
+  <p>
+    Amazon Music had access to some of the biggest artists, festivals, and cultural moments in music. However, these events were historically treated as isolated marketing activations rather than a unified strategy for audience growth. Fan behavior was shifting toward livestreaming, yet the opportunity remained unrealized.
+  </p>
+  <div class="challenge-grid">
+    <ul class="challenge-points">
+      <li class="challenge-point">
+        <div class="challenge-icon">1</div>
+        <div class="challenge-text">
+          <strong>Livestreams were treated as isolated promotions.</strong> Major cultural moments — festivals, album drops, artist performances — generated attention but were not connected to a repeatable growth framework.
+        </div>
+      </li>
+      <li class="challenge-point">
+        <div class="challenge-icon">2</div>
+        <div class="challenge-text">
+          <strong>Fan behavior was shifting to live digital experiences.</strong> Younger audiences were consuming culture through platforms like Twitch and live digital events, but Amazon Music hadn't built a strategy for this shift.
+        </div>
+      </li>
+      <li class="challenge-point">
+        <div class="challenge-icon">3</div>
+        <div class="challenge-text">
+          <strong>Amazon's ecosystem was a unique but unrealized advantage.</strong> Twitch, Prime Video, and Amazon Music created a powerful distribution network — but no unified strategy connected them for live programming.
+        </div>
+      </li>
+      <li class="challenge-point">
+        <div class="challenge-icon">4</div>
+        <div class="challenge-text">
+          <strong>No repeatable operating model existed.</strong> Each event required building from scratch rather than operating from a scalable playbook for live music programming.
+        </div>
+      </li>
+    </ul>
+    <div class="challenge-callout">
+      <span class="section-tag">The Mandate</span>
+      <blockquote>
+        Transform livestreams from one-off promotional moments into a scalable audience growth engine — connecting artists, fans, and Amazon's media ecosystem.
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4: THE APPROACH
+     ═══════════════════════════════════════════ -->
+<div class="approach-bg">
+  <div class="content-section">
+    <span class="section-tag">The Approach</span>
+    <h2>Culture-First Programming Meets Ecosystem Amplification</h2>
+    <p>
+      I developed the strategic framework that positioned livestreams as a core pillar of Amazon Music's growth strategy. The model focused on three key principles: culture-first programming, ecosystem amplification across Amazon platforms, and marketing designed for discovery.
+    </p>
+    <div class="approach-phases">
+      <div class="phase-card">
+        <div class="phase-number">01</div>
+        <div class="phase-title">Culture-First Programming</div>
+        <div class="phase-desc">
+          Prioritized events that fans already cared about — festivals, artist moments, and major cultural conversations. Amazon Music participated in moments with existing momentum rather than trying to manufacture interest.
+        </div>
+        <div class="phase-tools">
+          <a href="/services/go-to-market" class="phase-tool">Go-to-Market Strategy →</a>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-number">02</div>
+        <div class="phase-title">Ecosystem Amplification</div>
+        <div class="phase-desc">
+          Connected multiple Amazon platforms into a unified distribution strategy. Livestreams were distributed across Twitch and Prime Video while driving listeners back into Amazon Music for deeper catalog engagement.
+        </div>
+        <div class="phase-tools">
+          <a href="/services/integrated-marketing" class="phase-tool">Integrated Marketing →</a>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-number">03</div>
+        <div class="phase-title">Marketing Designed for Discovery</div>
+        <div class="phase-desc">
+          Each livestream was treated as a growth event. Campaigns combined paid media, artist co-marketing, owned Amazon channels, and PR to maximize reach and bring new audiences into the ecosystem.
+        </div>
+        <div class="phase-tools">
+          <a href="/services/growth-marketing" class="phase-tool">Growth &amp; Lifecycle Marketing →</a>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-number">04</div>
+        <div class="phase-title">Repeatable Operating Model</div>
+        <div class="phase-desc">
+          Formalized the approach into a scalable playbook that worked across festivals, album launches, cultural events, and original programming — turning individual activations into an ongoing growth engine.
+        </div>
+        <div class="phase-tools">
+          <a href="/services/content-creator-marketing" class="phase-tool">Content &amp; Creator Marketing →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5: VISUAL GALLERY
+     ═══════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════
+     SECTION 6: BEFORE / AFTER
+     ═══════════════════════════════════════════ -->
+<section class="before-after">
+  <div class="before-after-inner">
+    <span class="section-tag">Transformation</span>
+    <h2>Before &amp; After the Livestream Strategy</h2>
+    <div class="ba-grid">
+      <div class="ba-column ba-before">
+        <div class="ba-label">Before</div>
+        <div class="ba-item">
+          <div class="ba-bullet"></div>
+          <div class="ba-item-text">Livestreams treated as isolated one-off marketing activations</div>
+        </div>
+        <div class="ba-item">
+          <div class="ba-bullet"></div>
+          <div class="ba-item-text">No unified strategy connecting Twitch, Prime Video, and Amazon Music</div>
+        </div>
+        <div class="ba-item">
+          <div class="ba-bullet"></div>
+          <div class="ba-item-text">Cultural moments generated attention but not measurable growth</div>
+        </div>
+        <div class="ba-item">
+          <div class="ba-bullet"></div>
+          <div class="ba-item-text">Each event required building marketing programs from scratch</div>
+        </div>
+      </div>
+      <div class="ba-column ba-after">
+        <div class="ba-label">After</div>
+        <div class="ba-item">
+          <div class="ba-bullet"></div>
+          <div class="ba-item-text">Livestreams operating as a scalable, repeatable audience growth engine</div>
+        </div>
+        <div class="ba-item">
+          <div class="ba-bullet"></div>
+          <div class="ba-item-text">Unified ecosystem strategy distributing content across all Amazon platforms</div>
+        </div>
+        <div class="ba-item">
+          <div class="ba-bullet"></div>
+          <div class="ba-item-text">31% customer growth and 39% revenue growth from live programming</div>
+        </div>
+        <div class="ba-item">
+          <div class="ba-bullet"></div>
+          <div class="ba-item-text">Amazon Music Live established as a flagship series with global artists</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 7: RESULTS DEEP DIVE
+     ═══════════════════════════════════════════ -->
+<section class="results-section">
+  <div class="results-inner">
+    <span class="section-tag">Results</span>
+    <h2 style="font-family:'Anton',sans-serif; font-size:clamp(28px,3.5vw,40px); text-transform:uppercase; color:var(--dark); margin-bottom:8px;">
+      The Numbers Tell the Story
+    </h2>
+    <p style="font-size:16px; color:rgba(33,54,33,0.65); max-width:600px;">
+      A unified livestream strategy that turned cultural moments into one of Amazon Music's most powerful audience engagement channels.
+    </p>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-card-metric">+31%</div>
+        <div class="result-card-label">Customer Growth</div>
+        <div class="result-card-desc">
+          Livestream programming drove significant customer acquisition, turning cultural music moments into measurable platform growth through integrated campaigns.
+        </div>
+        <div class="result-card-bar"><div class="result-card-bar-fill" style="width:85%"></div></div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-metric">+39%</div>
+        <div class="result-card-label">Revenue Growth</div>
+        <div class="result-card-desc">
+          The livestream strategy directly contributed to revenue growth by converting live event audiences into engaged Amazon Music subscribers and listeners.
+        </div>
+        <div class="result-card-bar"><div class="result-card-bar-fill" style="width:90%"></div></div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-metric">+3.7pt</div>
+        <div class="result-card-label">Brand Favorability Increase</div>
+        <div class="result-card-desc">
+          Live programming featuring top-tier artists elevated Amazon Music's brand perception, strengthening its position in the competitive streaming landscape.
+        </div>
+        <div class="result-card-bar"><div class="result-card-bar-fill" style="width:75%"></div></div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-metric">Flagship</div>
+        <div class="result-card-label">Amazon Music Live Series</div>
+        <div class="result-card-desc">
+          Established Amazon Music Live as a premier live performance series featuring global artists including Megan Thee Stallion, Jelly Roll, Garth Brooks, and Snoop Dogg.
+        </div>
+        <div class="result-card-bar"><div class="result-card-bar-fill" style="width:95%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 8: IMPACT
+     ═══════════════════════════════════════════ -->
+<section class="impact-section">
+  <span class="section-tag">Impact</span>
+  <h2>From One-Off Events to a Growth Engine</h2>
+  <p>
+    By architecting a unified strategy for livestream programming, Amazon Music transformed live events from isolated promotional moments into a scalable audience growth engine. The approach connected artists, fans, and Amazon's broader media ecosystem — establishing livestreams as one of the company's most powerful tools for cultural relevance, discovery, and fan engagement.
+  </p>
+  <p>
+    The strategy became the blueprint for Amazon Music's live programming, powering everything from weekly artist performances to culturally significant moments like Kendrick Lamar's The Pop Out — one of the most watched music livestream events of the year.
+  </p>
+  <div class="impact-callout">
+    <div class="impact-icon">🎤</div>
+    <div class="impact-text">
+      Amazon Music's livestream strategy turned cultural moments into a scalable growth engine — connecting artists, fans, and Amazon's ecosystem to drive 31% customer growth and establish the platform as a destination for live music.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 9: SERVICES USED
+     ═══════════════════════════════════════════ -->
+<section class="services-used">
+  <span class="section-tag">Capabilities Applied</span>
+  <h2 style="font-family:'Anton',sans-serif; font-size:clamp(24px,3vw,32px); text-transform:uppercase; color:var(--dark); margin-bottom:8px;">
+    What This Took
+  </h2>
+  <div class="services-pills">
+    <a href="/services/go-to-market" class="service-pill">Go-to-Market Strategy</a>
+    <a href="/services/integrated-marketing" class="service-pill">Integrated Marketing</a>
+    <a href="/services/content-creator-marketing" class="service-pill">Content &amp; Creator Marketing</a>
+    <a href="/services/growth-marketing" class="service-pill">Growth &amp; Lifecycle Marketing</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 10: CTA
+     ═══════════════════════════════════════════ -->
+<section class="cta-section">
+  <h2>Ready to Build Your Growth Engine?</h2>
+  <p>
+    Every engagement starts with a conversation. Let's talk about where you are, where you want to go, and how to get there.
+  </p>
+  <a href="#" class="cta-btn">Book a Strategy Call</a>
+</section>
+
+<div class="lightbox-overlay" id="heroLightbox" onclick="this.classList.remove('active')">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+<script>
+(function(){
+  var hi=document.querySelector('.hero-image img');
+  if(!hi)return;
+  var ov=document.getElementById('heroLightbox'),li=document.getElementById('lightboxImg');
+  hi.addEventListener('click',function(){li.src=hi.src;li.alt=hi.alt;ov.classList.add('active');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')ov.classList.remove('active');});
+})();
+</script>
+<script>
+(function(){
+  var hb=document.querySelector('.hamburger'),mn=document.querySelector('.mobile-nav');
+  if(!hb||!mn)return;
+  hb.addEventListener('click',function(){
+    hb.classList.toggle('active');mn.classList.toggle('open');
+    hb.setAttribute('aria-expanded',hb.classList.contains('active')?'true':'false');
+    document.body.style.overflow=mn.classList.contains('open')?'hidden':'';
+  });
+  document.querySelectorAll('.mobile-nav a').forEach(function(l){
+    l.addEventListener('click',function(){
+      hb.classList.remove('active');mn.classList.remove('open');
+      hb.setAttribute('aria-expanded','false');document.body.style.overflow='';
+    });
+  });
+})();
+</script>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style is:global>
+.section-tag {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--tan);
+    margin-bottom: 12px;
+    display: block;
+}
+.hero {
+    background: var(--dark);
+    color: var(--cream);
+    padding: 152px 24px 60px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+.hero .section-tag { color: var(--accent); }
+.hero h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+}
+.hero-desc {
+    font-size: 16px;
+    color: rgba(239,234,211,0.8);
+    max-width: 500px;
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+.hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+.hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+.hero-meta-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--tan);
+    font-weight: 700;
+}
+.hero-meta-value { font-size: 14px; font-weight: 600; color: var(--cream); }
+.hero-image {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: rgba(239,234,211,0.08);
+    border: 1px solid rgba(239,234,211,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tan);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.results-strip { background: var(--accent); padding: 40px 24px; }
+.results-strip-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    text-align: center;
+}
+.result-number {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+.result-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(33,54,33,0.7);
+}
+.content-section {
+    padding: 72px 24px;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+.content-section h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(28px, 3.5vw, 40px);
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+.content-section p {
+    font-size: 16px;
+    color: rgba(33,54,33,0.75);
+    max-width: 720px;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+.challenge-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-top: 32px;
+}
+.challenge-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.challenge-point { display: flex; gap: 14px; align-items: flex-start; }
+.challenge-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--dark);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-weight: 700;
+}
+.challenge-text { font-size: 15px; color: var(--dark); line-height: 1.6; }
+.challenge-text strong { font-weight: 700; }
+.challenge-callout {
+    background: var(--dark);
+    color: var(--cream);
+    border-radius: var(--radius);
+    padding: 32px;
+}
+.challenge-callout .section-tag { color: var(--accent); margin-bottom: 16px; }
+.challenge-callout blockquote {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: rgba(239,234,211,0.9);
+}
+.challenge-callout cite {
+    font-size: 13px;
+    font-style: normal;
+    color: var(--tan);
+    font-weight: 600;
+}
+.approach-bg { background: var(--dark); padding: 72px 24px; }
+.approach-bg .content-section { padding: 0; max-width: var(--max-w); margin: 0 auto; }
+.approach-bg .section-tag { color: var(--accent); }
+.approach-bg h2 { color: var(--cream); }
+.approach-bg p { color: rgba(239,234,211,0.7); }
+.approach-phases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+.phase-card {
+    background: rgba(239,234,211,0.06);
+    border: 1px solid rgba(239,234,211,0.1);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: border-color 0.3s;
+}
+.phase-card:hover { border-color: var(--accent); }
+.phase-number {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 12px;
+}
+.phase-title { font-size: 15px; font-weight: 700; color: var(--cream); margin-bottom: 8px; }
+.phase-desc { font-size: 13px; color: rgba(239,234,211,0.6); line-height: 1.6; }
+.phase-tools { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+.phase-tool {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(165,219,93,0.12);
+    color: var(--accent);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    display: inline-block;
+}
+a.phase-tool:hover { background: var(--accent); color: var(--dark); }
+.gallery-section {
+    padding: 72px 24px;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+.gallery-item {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tan);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(33,54,33,0.1);
+    position: relative;
+}
+.before-after { background: var(--dark); padding: 72px 24px; }
+.before-after-inner { max-width: var(--max-w); margin: 0 auto; }
+.before-after .section-tag { color: var(--accent); }
+.before-after h2 {
+    color: var(--cream);
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(28px,3.5vw,40px);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.ba-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+}
+.ba-before .ba-label { color: var(--tan); border-bottom: 2px solid rgba(185,169,143,0.3); }
+.ba-after .ba-label { color: var(--accent); border-bottom: 2px solid var(--accent); }
+.ba-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
+.ba-bullet { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+.ba-before .ba-bullet { background: var(--tan); opacity: 0.5; }
+.ba-after .ba-bullet { background: var(--accent); }
+.ba-item-text { font-size: 14px; line-height: 1.6; }
+.ba-before .ba-item-text { color: rgba(239,234,211,0.5); }
+.ba-after .ba-item-text { color: rgba(239,234,211,0.85); }
+.results-section { background: var(--light-cream); padding: 72px 24px; }
+.results-inner { max-width: var(--max-w); margin: 0 auto; }
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+.result-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 32px;
+    border: 1px solid rgba(185,169,143,0.2);
+}
+.result-card-metric {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+.result-card-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--tan);
+    margin-bottom: 12px;
+}
+.result-card-desc { font-size: 14px; color: rgba(33,54,33,0.65); line-height: 1.6; }
+.result-card-bar {
+    height: 4px;
+    background: rgba(33,54,33,0.06);
+    border-radius: 2px;
+    margin-top: 16px;
+    overflow: hidden;
+}
+.result-card-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 1s ease;
+}
+.impact-section { padding: 72px 24px; max-width: var(--max-w); margin: 0 auto; }
+.impact-section h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(28px, 3.5vw, 40px);
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+.impact-section p {
+    font-size: 16px;
+    color: rgba(33,54,33,0.75);
+    max-width: 720px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+.impact-callout {
+    margin-top: 32px;
+    background: var(--dark);
+    color: var(--cream);
+    border-radius: var(--radius);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.impact-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 24px;
+}
+.impact-text { font-size: 16px; line-height: 1.7; color: rgba(239,234,211,0.85); }
+.services-used { padding: 48px 24px; max-width: var(--max-w); margin: 0 auto; }
+.services-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.service-pill {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: var(--dark);
+    color: var(--cream);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+.service-pill:hover { background: var(--accent); color: var(--dark); }
+.cta-section { background: var(--dark); padding: 80px 24px; text-align: center; }
+.cta-section h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 16px;
+}
+.cta-section p {
+    font-size: 16px;
+    color: rgba(239,234,211,0.7);
+    max-width: 540px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+.cta-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--accent);
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(165,219,93,0.3); }
+@media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-image { aspect-ratio: 16/9; }
+    .results-strip-inner { grid-template-columns: repeat(2, 1fr); }
+    .challenge-grid { grid-template-columns: 1fr; }
+    .approach-phases { grid-template-columns: 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .ba-grid { grid-template-columns: 1fr; }
+    .impact-callout { flex-direction: column; text-align: center; }
+}
+
+/* ---- Lightbox ---- */
+  .hero-image img { cursor: zoom-in; transition: transform 0.2s ease; }
+  .hero-image img:hover { transform: scale(1.02); }
+  .lightbox-overlay { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.92); z-index:9999; cursor:zoom-out; align-items:center; justify-content:center; padding:40px; }
+  .lightbox-overlay.active { display:flex; }
+  .lightbox-overlay img { max-width:90vw; max-height:90vh; object-fit:contain; border-radius:var(--radius); }
+  .lightbox-close { position:absolute; top:20px; right:28px; color:white; font-size:36px; cursor:pointer; font-weight:300; z-index:10000; }
+</style>

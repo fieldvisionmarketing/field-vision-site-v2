@@ -1,0 +1,44 @@
+---
+const oldWay = [
+    "Hire a full-time CMO at $250K+ before you have product-market fit",
+      "Pay expensive agencies that don't understand your business or industry",
+        "Engage ivory-tower consultants who deliver strategy decks that collect dust",
+          "Chase disconnected tactics — paid ads, PR, influencers — hoping something sticks",
+];
+
+const newWay = [
+    "Engage a fractional CMO consultant who's scaled growth at Amazon, Twitch, and Pandora",
+        "Get a project-based engagement with proprietary growth systems — not a retainer that drains budget",
+            "Align brand, growth, and product marketing with a unified, systems-driven strategy",
+                "Own everything we build — every engagement transfers full IP, no dependency created",
+];
+---
+
+<section class="how-it-works">
+  <div class="hiw-layout">
+    <div class="hiw-left reveal">
+      <h2>How We <span class="highlight">Work</span></h2>
+      <p>We replace the broken playbook with a systems-driven approach built on a decade of scaling brands at Amazon, Twitch, and Pandora.</p>
+    </div>
+    <div class="hiw-right">
+      <div class="ps-split reveal rd1">
+        <div class="ps-half ps-problem">
+          <div class="ps-label">The Old Way</div>
+          <ul class="ps-list">
+            {oldWay.map(item => (
+              <li><span class="ps-icon">&#x2717;</span>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div class="ps-half ps-solution">
+          <div class="ps-label">The New Way</div>
+          <ul class="ps-list">
+            {newWay.map(item => (
+              <li><span class="ps-icon">&#x2713;</span>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,155 @@
+---
+import Logo from './Logo.astro';
+
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Press', href: '/press/' },
+  { label: 'Guides', href: '/guides/' },
+  { label: 'Contact', href: '/contact/' },
+];
+---
+
+<header class="header">
+  <a href="/" class="logo"><Logo class="header-logo" /></a>
+
+  <nav class="nav-center">
+    {navLinks.map(item => (
+      <a href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+
+  <div class="nav-right">
+    <a href="/contact/" class="nav-cta">Contact Us</a>
+  </div>
+
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="mobile-nav">
+    <nav class="mobile-nav-links">
+      {navLinks.map(item => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+    <div class="mobile-nav-actions">
+      <a href="/contact/" class="nav-cta">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--cream, #f5f0e8);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #213621;
+    z-index: 999;
+    flex-direction: column;
+    padding: 32px 24px;
+    overflow-y: auto;
+  }
+  .mobile-nav.open {
+    display: flex;
+  }
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mobile-nav-links a {
+    color: var(--cream, #f5f0e8);
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.1);
+  }
+  .mobile-nav-actions {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mobile-nav-actions .nav-login {
+    color: var(--cream, #f5f0e8);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .mobile-nav-actions .nav-cta {
+    display: block;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+    .nav-right {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileNav?.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded',
+      hamburger.classList.contains('active') ? 'true' : 'false'
+    );
+    document.body.style.overflow =
+      mobileNav?.classList.contains('open') ? 'hidden' : '';
+  });
+
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger?.classList.remove('active');
+      mobileNav?.classList.remove('open');
+      hamburger?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+</script>

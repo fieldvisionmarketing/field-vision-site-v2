@@ -1,0 +1,32 @@
+---
+/**
+ * KeyPrinciple — Callout highlighting a core principle
+ */
+---
+<div class="key-principle">
+  <div class="principle-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .key-principle {
+    background: rgba(165, 219, 93, 0.06);
+    border-left: 4px solid #A5DB5D;
+    border-radius: 0 12px 12px 0;
+    padding: 24px 28px;
+    margin: 28px 0;
+  }
+  .principle-body {
+    font-family: 'Satoshi', sans-serif;
+    font-style: italic;
+    color: #213621;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .principle-body :global(strong) {
+    font-style: normal;
+    color: #213621;
+    font-weight: 700;
+  }
+</style>

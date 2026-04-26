@@ -1,0 +1,17 @@
+---
+/**
+ * OverviewGrid — Responsive grid for OverviewCard components
+ */
+---
+<div class="overview-grid">
+  <slot />
+</div>
+
+<style>
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
+  }
+</style>

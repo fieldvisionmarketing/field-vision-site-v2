@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fieldvisiongroup.com/sitemap-index.xml

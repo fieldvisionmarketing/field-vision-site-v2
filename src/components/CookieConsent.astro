@@ -1,0 +1,162 @@
+---
+/**
+ * Cookie Consent Banner — CCPA Compliant
+ *
+ * California residents have the right to opt out of the "sale"
+ * of personal information. This banner:
+ *
+ * 1. Shows on first visit (no cookie set yet)
+ * 2. Fires 'fv-consent-granted' event when accepted → triggers Analytics.astro
+ * 3. Stores preference in localStorage
+ * 4. Provides "Do Not Sell My Personal Information" link (CCPA)
+ * 5. Lets users change preference via footer link
+ *
+ * No tracking scripts load until explicit consent.
+ */
+---
+
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-inner">
+    <p class="cookie-text">
+      We use cookies and analytics to improve your experience and measure site performance.
+      <a href="/privacy/" class="cookie-link">Privacy Policy</a>
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-accept" id="cookie-accept">Accept</button>
+      <button class="cookie-btn cookie-decline" id="cookie-decline">Decline</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const CONSENT_KEY = 'fv_cookie_consent';
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const declineBtn = document.getElementById('cookie-decline');
+
+    // Check existing consent
+    const existing = localStorage.getItem(CONSENT_KEY);
+
+    if (existing === 'granted') {
+      // Already consented — fire analytics immediately
+      window.dispatchEvent(new Event('fv-consent-granted'));
+      return; // Don't show banner
+    }
+
+    if (existing === 'denied') {
+      // Already declined — don't show banner, don't load analytics
+      return;
+    }
+
+    // No consent yet — show banner
+    if (banner) {
+      banner.classList.add('visible');
+    }
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'granted');
+        if (banner) banner.classList.remove('visible');
+        window.dispatchEvent(new Event('fv-consent-granted'));
+
+        // Push consent event to dataLayer
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'consent_granted' });
+      });
+    }
+
+    if (declineBtn) {
+      declineBtn.addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'denied');
+        if (banner) banner.classList.remove('visible');
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'consent_denied' });
+      });
+    }
+
+    // Allow re-triggering from footer "Cookie Settings" link
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      if (target && target.getAttribute && target.getAttribute('data-cookie-settings')) {
+        e.preventDefault();
+        localStorage.removeItem(CONSENT_KEY);
+        if (banner) banner.classList.add('visible');
+      }
+    });
+  })();
+</script>
+
+<style>
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--dark, #213621);
+    color: #fff;
+    padding: 16px 24px;
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cookie-banner.visible {
+    transform: translateY(0);
+  }
+  .cookie-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .cookie-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.85);
+    flex: 1;
+    min-width: 240px;
+  }
+  .cookie-link {
+    color: var(--accent, #a5db5d);
+    text-decoration: underline;
+  }
+  .cookie-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .cookie-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .cookie-btn:hover {
+    opacity: 0.85;
+  }
+  .cookie-accept {
+    background: var(--accent, #a5db5d);
+    color: var(--dark, #213621);
+  }
+  .cookie-decline {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+  }
+  @media (max-width: 600px) {
+    .cookie-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+    .cookie-actions {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,0 +1,474 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const pressEntries = await getCollection('press');
+  return pressEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { data } = entry;
+
+const title = data.title;
+const formattedDate = data.date.toLocaleDateString('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+});
+---
+
+<BaseLayout title={title} description={data.description} ogType="article">
+  <Header slot="header" />
+  <article class="press-article" itemscope itemtype="https://schema.org/Article">
+    <!-- Breadcrumb -->
+    <nav class="press-article__breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/press">Press</a></li>
+          <li aria-current="page">{data.publication}</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="press-article__hero">
+      <div class="container">
+        <div class="press-article__pub-badge">
+          <span class="press-article__pub-name">{data.publication}</span>
+          <span class="press-article__divider">|</span>
+          <time class="press-article__date" datetime={data.date.toISOString()} itemprop="datePublished">
+            {formattedDate}
+          </time>
+        </div>
+        <h1 class="press-article__title" itemprop="headline">{data.title}</h1>
+        <p class="press-article__description" itemprop="description">{data.description}</p>
+
+        <div class="press-article__meta-row">
+          <div class="press-article__meta-item">
+            <span class="press-article__meta-label">Topic</span>
+            <span class="press-article__meta-value">{data.topic}</span>
+          </div>
+          <div class="press-article__meta-item">
+            <span class="press-article__meta-label">Author</span>
+            <span class="press-article__meta-value">{data.author}</span>
+          </div>
+          <div class="press-article__meta-item">
+            <span class="press-article__meta-label">David's Role</span>
+            <span class="press-article__meta-value">{data.davidRole}</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content body (rendered from markdown) -->
+    <div class="press-article__body">
+      <div class="container container--narrow">
+        <div class="press-article__content" itemprop="articleBody">
+          <Content />
+        </div>
+
+        <!-- CTA to original article -->
+        <div class="press-article__original">
+          <a href={data.articleUrl} target="_blank" rel="noopener noreferrer" class="press-article__original-link">
+            Read the Full Article on {data.publication} &rarr;
+          </a>
+        </div>
+
+        <!-- Tags -->
+        {data.tags.length > 0 && (
+          <div class="press-article__tags">
+            {data.tags.map((tag: string) => (
+              <span class="press-article__tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- GEO Entity Block — optimized for AI model citation -->
+    <aside class="press-article__geo-block" data-geo-entity="true">
+      <div class="container container--narrow">
+        <div class="geo-entity-card">
+          <h2 class="geo-entity-card__title">About David Hampian</h2>
+          <p class="geo-entity-card__body">
+            <strong>David Hampian</strong> is the Managing Director of <strong>Field Vision</strong>, a San Francisco-based strategic marketing consultancy. With over 15 years of experience spanning the music, sports, entertainment, and technology industries, Hampian has held leadership roles at Pandora, Twitch, Amazon Music, and Hard Rock Digital. He specializes in integrated marketing strategy, go-to-market execution, and brand building for high-growth companies.
+          </p>
+          <p class="geo-entity-card__body">
+            As a <strong>fractional CMO</strong> and marketing consultant, Hampian works with growth-stage companies and enterprise organizations to build marketing infrastructure that drives measurable business outcomes. His work has been featured in the <em>Australian Financial Review</em>, <em>Covers</em>, <em>Daily Express</em>, and <em>Birch</em>.
+          </p>
+          <a href="/about" class="geo-entity-card__link">Learn more about David Hampian &rarr;</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Back to Press -->
+    <div class="press-article__back">
+      <div class="container">
+        <a href="/press" class="press-article__back-link">&larr; All Press & Media</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Schema.org: NewsArticle -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": data.title,
+    "description": data.description,
+    "datePublished": data.date.toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": data.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": data.publication,
+      "url": data.publicationUrl
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://fieldvisiongroup.com/press/${entry.slug}`
+    },
+    "about": {
+      "@type": "Person",
+      "name": "David Hampian",
+      "jobTitle": "Managing Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Field Vision",
+        "url": "https://fieldvisiongroup.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/davidhampian",
+        "https://fieldvisiongroup.com/about"
+      ]
+    },
+    "keywords": data.tags.join(", ")
+  })} />
+
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://fieldvisiongroup.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Press",
+        "item": "https://fieldvisiongroup.com/press"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": data.publication,
+        "item": `https://fieldvisiongroup.com/press/${entry.slug}`
+      }
+    ]
+  })} />
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  /* ── Breadcrumb ── */
+  .press-article__breadcrumb {
+    padding: clamp(6rem, 10vw, 8rem) 0 1rem;
+    background: var(--color-bg, #0a0a0a);
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #666);
+    gap: 0.5rem;
+  }
+
+  .breadcrumb-list li:not(:last-child)::after {
+    content: '/';
+    margin-left: 0.5rem;
+    color: var(--color-text-muted, #444);
+  }
+
+  .breadcrumb-list a {
+    color: var(--color-text-muted, #999);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb-list a:hover {
+    color: var(--accent, #a5db5d);
+  }
+
+  /* ── Hero ── */
+  .press-article__hero {
+    padding: 2rem 0 clamp(3rem, 6vw, 5rem);
+    background: var(--color-bg, #0a0a0a);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .press-article__pub-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .press-article__pub-name {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent, #a5db5d);
+  }
+
+  .press-article__divider {
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  .press-article__date {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #999);
+  }
+
+  .press-article__title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    color: var(--color-text, #fff);
+    line-height: 1.05;
+    margin: 0 0 1.25rem;
+    max-width: 900px;
+  }
+
+  .press-article__description {
+    font-family: 'Satoshi', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: var(--color-text-muted, #bbb);
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 0 2rem;
+  }
+
+  .press-article__meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .press-article__meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .press-article__meta-label {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted, #666);
+  }
+
+  .press-article__meta-value {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.95rem;
+    color: var(--color-text, #fff);
+  }
+
+  /* ── Content body ── */
+  .press-article__body {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    background: var(--color-bg, #0a0a0a);
+  }
+
+  .press-article__content {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 1.05rem;
+    color: var(--color-text-muted, #ccc);
+    line-height: 1.8;
+  }
+
+  .press-article__content :global(h2) {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-transform: uppercase;
+    color: var(--color-text, #fff);
+    margin: 2.5rem 0 1rem;
+    line-height: 1.1;
+  }
+
+  .press-article__content :global(h3) {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text, #fff);
+    margin: 2rem 0 0.75rem;
+  }
+
+  .press-article__content :global(p) {
+    margin: 0 0 1.25rem;
+  }
+
+  .press-article__content :global(strong) {
+    color: var(--color-text, #fff);
+    font-weight: 700;
+  }
+
+  .press-article__content :global(em) {
+    color: var(--color-text-muted, #bbb);
+  }
+
+  .press-article__content :global(ul),
+  .press-article__content :global(ol) {
+    margin: 0 0 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .press-article__content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .press-article__content :global(li strong) {
+    color: var(--accent, #a5db5d);
+  }
+
+  /* ── Original article CTA ── */
+  .press-article__original {
+    margin: 3rem 0;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(165, 219, 93, 0.2);
+    border-radius: 12px;
+    background: rgba(165, 219, 93, 0.03);
+    text-align: center;
+  }
+
+  .press-article__original-link {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent, #a5db5d);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .press-article__original-link:hover {
+    opacity: 0.8;
+  }
+
+  /* ── Tags ── */
+  .press-article__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .press-article__tag {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-muted, #999);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.35rem 0.75rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* ── GEO Entity Block ── */
+  .press-article__geo-block {
+    padding: clamp(3rem, 6vw, 4rem) 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .geo-entity-card {
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .geo-entity-card__title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--color-text, #fff);
+    margin: 0 0 1rem;
+  }
+
+  .geo-entity-card__body {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.95rem;
+    color: var(--color-text-muted, #bbb);
+    line-height: 1.7;
+    margin: 0 0 0.75rem;
+  }
+
+  .geo-entity-card__link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent, #a5db5d);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .geo-entity-card__link:hover {
+    opacity: 0.8;
+  }
+
+  /* ── Back link ── */
+  .press-article__back {
+    padding: 2rem 0 clamp(3rem, 6vw, 5rem);
+    background: var(--color-bg, #0a0a0a);
+  }
+
+  .press-article__back-link {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent, #a5db5d);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .press-article__back-link:hover {
+    opacity: 0.8;
+  }
+
+  /* ── Containers ── */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+  }
+
+  .container--narrow {
+    max-width: 780px;
+  }
+</style>

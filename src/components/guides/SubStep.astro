@@ -1,0 +1,99 @@
+---
+/**
+ * SubStep — A numbered step with connector line
+ * @prop number — Step number/code (e.g. "A1", "B2", "1.1")
+ * @prop label  — Small label above the title (e.g. "Sub-step 1", "Day 1")
+ * @prop title  — Step title
+ */
+interface Props {
+  number: string;
+  label?: string;
+  title: string;
+}
+const { number, label, title } = Astro.props;
+---
+<div class="step-item">
+  <div class="step-connector">
+    <div class="step-number">{number}</div>
+    <div class="step-line"></div>
+  </div>
+  <div class="step-content">
+    {label && <div class="step-label">{label}</div>}
+    <div class="step-title">{title}</div>
+    <div class="step-description">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .step-item {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .step-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 48px;
+  }
+  .step-number {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: #A5DB5D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    color: #213621;
+    font-weight: 400;
+  }
+  .step-line {
+    flex: 1;
+    width: 2px;
+    background: rgba(33, 54, 33, 0.1);
+    margin: 4px 0;
+  }
+  .step-content {
+    flex: 1;
+    padding-bottom: 32px;
+  }
+  .step-label {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8B9A7E;
+    margin-bottom: 4px;
+  }
+  .step-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.25rem;
+    color: #213621;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .step-description {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 15px;
+    color: rgba(33, 54, 33, 0.7);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 600px) {
+    .step-number {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      font-size: 14px;
+    }
+    .step-content { padding-bottom: 24px; }
+    .step-title { font-size: 1.1rem; }
+  }
+</style>

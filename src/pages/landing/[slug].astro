@@ -1,0 +1,208 @@
+---
+/**
+ * Landing Page Template
+ *
+ * Usage: Create new landing pages by adding .astro files to src/pages/landing/
+ * or use this dynamic template with frontmatter-driven data.
+ *
+ * For quick offer testing, duplicate this file and rename the slug.
+ * Example: /landing/series-a-marketing → targets Series A founders
+ */
+
+// This template can be driven by a JSON/data file, or duplicated per landing page.
+// For now, we'll show the structure with placeholder content that you swap per offer.
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  const pages: Record<string, any> = {
+    'fractional-cmo-sf': {
+      title: 'Fractional CMO for SF Startups',
+      headline: 'Your Startup Needs a Marketing Leader — Not Another Agency',
+      subheadline: 'Get executive-level marketing strategy, systems, and team oversight at a fraction of the cost of a full-time CMO.',
+      cta: 'Book a Free Strategy Call',
+      bookingUrl: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ000qS7-Zde2OJuhy9OE-k5POEPYrBYIcs3nSIioTUUg3So_ia8Ao5axqJ7HF39xP_BSH84Cz4v?gv=true',
+      bullets: [
+        'Strategic direction tied to your growth model',
+        'Execution systems that run without heroics',
+        'Team and vendor management from day one',
+        'Built to transfer — we leave you better than we found you',
+      ],
+      socialProof: 'Trusted by teams from Amazon, Twitch, Pandora & Hard Rock',
+      testimonial: {
+        quote: 'David brought the structure we were missing. Within 90 days we had a real marketing engine.',
+        name: 'Sarah Chen',
+        title: 'CEO, StreamScale',
+      },
+    },
+  };
+
+  return Object.keys(pages).map((slug) => ({
+    params: { slug },
+    props: { page: pages[slug] },
+  }));
+}
+
+const { page } = Astro.props;
+if (!page) return Astro.redirect('/404');
+---
+
+<BaseLayout title={page.title} description={page.subheadline}>
+  <!-- No header nav — landing pages are distraction-free -->
+
+  <div class="lp">
+    <div class="lp-inner">
+      <!-- Logo only -->
+      <div class="lp-logo reveal">
+        <a href="/">FIELD<br/>VISION</a>
+      </div>
+
+      <!-- Hero -->
+      <div class="lp-hero reveal">
+        <h1>{page.headline}</h1>
+        <p class="lp-sub">{page.subheadline}</p>
+      </div>
+
+      <!-- Bullets -->
+      <div class="lp-bullets reveal rd1">
+        {page.bullets.map((b: string) => (
+          <div class="lp-bullet">
+            <span class="lp-check">✓</span>
+            <span>{b}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <div class="lp-cta reveal rd2">
+        <a href={page.bookingUrl} class="pill-btn lp-btn" target="_blank" rel="noopener">
+          {page.cta} →
+        </a>
+        <p class="lp-trust">{page.socialProof}</p>
+      </div>
+
+      <!-- Testimonial -->
+      {page.testimonial && (
+        <div class="lp-testimonial reveal rd3">
+          <blockquote>"{page.testimonial.quote}"</blockquote>
+          <div class="lp-tester">
+            <strong>{page.testimonial.name}</strong>
+            <span>{page.testimonial.title}</span>
+          </div>
+        </div>
+      )}
+
+      <!-- Google Calendar Booking -->
+      <div class="lp-embed reveal rd3">
+        <iframe src={page.bookingUrl} style="border: 0" width="100%" height="600" frameborder="0" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .lp {
+    min-height: 100vh;
+    padding: 48px 24px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lp-inner {
+    max-width: 640px;
+    width: 100%;
+    text-align: center;
+  }
+  .lp-logo a {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 0.85;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    color: var(--dark);
+  }
+  .lp-hero {
+    margin-top: 48px;
+  }
+  .lp-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin-bottom: 20px;
+  }
+  .lp-sub {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .lp-bullets {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lp-bullet {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  .lp-check {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .lp-cta {
+    margin-top: 40px;
+  }
+  .lp-btn {
+    font-size: 1.1rem;
+    padding: 16px 40px;
+  }
+  .lp-trust {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: #999;
+    letter-spacing: 0.02em;
+  }
+  .lp-testimonial {
+    margin-top: 48px;
+    padding: 32px 28px;
+    background: #f7f7f5;
+    border-radius: 16px;
+  }
+  .lp-testimonial blockquote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: #333;
+    margin: 0 0 16px;
+  }
+  .lp-tester {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .lp-tester strong {
+    font-size: 0.95rem;
+  }
+  .lp-tester span {
+    font-size: 0.85rem;
+    color: #777;
+  }
+  .lp-embed {
+    margin-top: 48px;
+  }
+  .lp-embed iframe {
+    border-radius: 16px;
+  }
+</style>

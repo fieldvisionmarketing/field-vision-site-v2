@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<section class="insights">
+  <div class="insights-inner">
+    <div class="insights-head reveal">
+      <h2>Latest <span class="highlight">Insights</span></h2>
+      <a href="/blog/" class="view-all">View All →</a>
+    </div>
+    <div class="blog-grid">
+      {posts.map((post, i) => (
+        <a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class={`blog-card reveal rd${i + 1}`}>
+          <div class="blog-body">
+            <span class="blog-cat">{post.data.category}</span>
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

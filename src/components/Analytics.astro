@@ -1,0 +1,64 @@
+---
+/**
+ * Analytics Component
+ *
+ * Loads GTM directly on page load.
+ * GTM is the container — GA4, Meta Pixel, LinkedIn Insight Tag,
+ * Google Ads, and TikTok Pixel are all configured INSIDE GTM.
+ *
+ * Replace the placeholder ID below with your real GTM container ID:
+ * - GTM_ID: GTM-XXXXXXX
+ *
+ * All pixels fire through GTM so you manage them in one place.
+ */
+
+const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID
+---
+
+<!-- Google Tag Manager -->
+<script define:vars={{ GTM_ID }}>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer', GTM_ID);
+</script>
+
+<!-- GTM noscript fallback -->
+<noscript>
+  <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<!-- UTM parameter capture -->
+<script>
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    const utmData = {};
+    let hasUtm = false;
+
+    utmKeys.forEach(function(key) {
+      const val = params.get(key);
+      if (val) {
+        utmData[key] = val;
+        hasUtm = true;
+      }
+    });
+
+    if (hasUtm) {
+      sessionStorage.setItem('fv_utm', JSON.stringify(utmData));
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'utm_captured',
+        ...utmData
+      });
+    }
+
+    if (!sessionStorage.getItem('fv_landing')) {
+      sessionStorage.setItem('fv_landing', window.location.href);
+      sessionStorage.setItem('fv_referrer', document.referrer || 'direct');
+    }
+  })();
+</script>

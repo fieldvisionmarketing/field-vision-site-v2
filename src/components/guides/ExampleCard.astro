@@ -1,0 +1,44 @@
+---
+/**
+ * ExampleCard — Real-world example callout
+ * @prop label — Optional label override (defaults to "Real-World Example")
+ */
+interface Props {
+  label?: string;
+}
+const { label = 'Real-World Example' } = Astro.props;
+---
+<div class="example-card">
+  <div class="card-label">{label}</div>
+  <div class="example-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .example-card {
+    background: rgba(33, 54, 33, 0.03);
+    border: 1px solid rgba(33, 54, 33, 0.08);
+    border-radius: 14px;
+    padding: 28px;
+    margin: 24px 0;
+  }
+  .card-label {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #213621;
+    margin-bottom: 14px;
+  }
+  .example-body {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 15px;
+    color: rgba(33, 54, 33, 0.7);
+    line-height: 1.7;
+  }
+  .example-body :global(strong) {
+    color: #213621;
+  }
+</style>

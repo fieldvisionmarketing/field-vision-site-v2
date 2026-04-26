@@ -1,0 +1,22 @@
+---
+/**
+ * FaqItem — Collapsible FAQ accordion item with Schema.org markup
+ * Uses the same details/summary pattern and CSS classes as the services pages.
+ * @prop question — The question text
+ */
+interface Props {
+  question: string;
+}
+const { question } = Astro.props;
+---
+<details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <summary class="faq-question">
+    <span itemprop="name">{question}</span>
+    <span class="faq-toggle">+</span>
+  </summary>
+  <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div itemprop="text">
+      <slot />
+    </div>
+  </div>
+</details>

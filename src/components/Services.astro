@@ -1,0 +1,66 @@
+---
+const services = [
+  {
+    title: "Fractional CMO",
+    body: "Senior marketing leadership embedded in your team — without the full-time price tag. Strategy, execution, and accountability on a flexible engagement.",
+    href: "/services/fractional-cmo/",
+    style: "bento-dark span-2",
+  },
+  {
+    title: "Go-to-Market Strategy",
+    body: "Launch plans built on market intelligence, competitive positioning, and channel strategy that actually converts.",
+    href: "/services/go-to-market/",
+    style: "bento-light",
+  },
+  {
+    title: "Growth & Lifecycle Marketing",
+    body: "Acquisition, activation, retention — full-funnel systems designed to compound over time.",
+    href: "/services/growth-marketing/",
+    style: "bento-cream",
+  },
+  {
+    title: "Integrated<br/>Marketing",
+    body: "Brand, product, and growth marketing aligned under one strategy. No more silos, no more mixed messages.",
+    href: "/services/integrated-marketing/",
+    style: "bento-light",
+  },
+  {
+    title: "Content & Creator Marketing",
+    body: "Content strategy, creator partnerships, and community building that drive organic growth and brand equity.",
+    href: "/services/content-creator-marketing/",
+    style: "bento-cream",
+  },
+  {
+    title: "AI Growth Systems",
+    body: "Custom AI-powered workflows that automate research, content, reporting, and competitive intelligence — built for your team, not off-the-shelf.",
+    href: "/services/ai-growth-systems/",
+    style: "bento-dark span-2",
+    badge: "New",
+  },
+  {
+    title: "Org & Process Design",
+    body: "Marketing team structures, hiring plans, vendor selection, and operating models built to scale.",
+    href: "/services/org-process-design/",
+    style: "bento-light",
+  }
+];
+---
+
+<section class="services">
+  <div class="services-inner">
+    <div class="services-head reveal">
+      <h2>Our <span class="highlight">Services</span></h2>
+      <p>We don't just advise — we build the systems, strategies, and teams that drive growth.</p>
+    </div>
+    <div class="bento">
+      {services.map((s, i) => (
+        <a href={s.href} class={`bento-card ${s.style} reveal rd${(i % 5) + 1}`}>
+          {s.badge && <span class="bento-badge">{s.badge}</span>}
+          <h3 set:html={s.title} />
+          <p>{s.body}</p>
+          <span class="card-link">Learn More →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

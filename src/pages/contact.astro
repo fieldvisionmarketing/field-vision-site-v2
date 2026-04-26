@@ -1,0 +1,136 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<BaseLayout title="Book a Strategy Call" description="Book a free discovery call with David Hampian, fractional CMO for startups. Let's talk about where your marketing is today and where it needs to go.">
+  <Header slot="header" />
+
+  <section class="contact-page">
+    <div class="contact-inner">
+      <div class="contact-text reveal">
+        <h1>Let's <span class="highlight">Talk</span></h1>
+        <p class="contact-sub">Book a 30-minute discovery call to discuss your marketing challenges, growth goals, and whether Field Vision is the right fit.</p>
+      </div>
+
+      <div class="contact-grid reveal rd1">
+        <!-- Google Calendar Scheduling -->
+        <div class="contact-booking">
+          <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ000qS7-Zde2OJuhy9OE-k5POEPYrBYIcs3nSIioTUUg3So_ia8Ao5axqJ7HF39xP_BSH84Cz4v?gv=true" style="border: 0" width="100%" height="600" frameborder="0" loading="lazy"></iframe>
+        </div>
+
+        <!-- Contact Form (Netlify Forms) -->
+        <div class="contact-form-wrap">
+          <h3>Or Send a Message</h3>
+      <form action="https://formsubmit.co/hampian@fieldvisiongroup.com" method="POST" class="contact-form">
+        <input type="hidden" name="_subject" value="New Lead from fieldvisiongroup.com" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://fieldvisiongroup.com/thank-you/" />
+            <input type="text" name="name" placeholder="Your name" required class="form-input" />
+            <input type="email" name="email" placeholder="Work email" required class="form-input" />
+            <input type="text" name="company" placeholder="Company" class="form-input" />
+            <textarea name="message" placeholder="How can we help you with your marketing and growth?" rows="4" class="form-input form-textarea"></textarea>
+            <button type="submit" class="pill-btn form-btn">Send Message →</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-direct reveal rd2">
+        <p>Prefer email? Reach out directly at <a href="mailto:david@fieldvisiongroup.com">david@fieldvisiongroup.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .contact-page {
+    padding: 140px 24px 80px;
+  }
+  .contact-inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .contact-text {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .contact-text h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-transform: uppercase;
+    line-height: 0.92;
+  }
+  .contact-sub {
+    max-width: 520px;
+    margin: 16px auto 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contact-booking {
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 400px;
+  }
+  .contact-booking iframe {
+    border-radius: 16px;
+  }
+  .contact-form-wrap h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-bottom: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #fff;
+  }
+  .form-input:focus {
+    border-color: var(--dark);
+  }
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .form-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+  .contact-direct {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 36px;
+    border-top: 1px solid #e0e0e0;
+    color: #777;
+    font-size: 0.95rem;
+  }
+  .contact-direct a {
+    color: var(--dark);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

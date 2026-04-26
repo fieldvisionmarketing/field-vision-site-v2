@@ -1,0 +1,34 @@
+---
+const reasons = [
+  {
+    num: "01",
+    title: "Systems-Driven",
+    body: "We don't wing it. Every engagement runs on proprietary frameworks — ABCT, SCORE, PLOT — so you get repeatable results, not random tactics.",
+  },
+  {
+    num: "02",
+    title: "Built to Be Fired",
+    body: "Our success is measured by how quickly your team can run without us. We transfer knowledge, not create dependency.",
+  },
+  {
+    num: "03",
+    title: "Game-Tested",
+    body: "A decade of senior leadership at Amazon, Twitch, Pandora, and Hard Rock. We've scaled the marketing functions you're building now.",
+  },
+];
+---
+
+<section class="why-us">
+  <div class="why-inner">
+    <h2 class="reveal">Why <span class="highlight">Field Vision</span></h2>
+    <div class="why-grid">
+      {reasons.map((r, i) => (
+        <div class={`why-card reveal rd${i + 1}`}>
+          <div class="why-num">{r.num}</div>
+          <h3>{r.title}</h3>
+          <p>{r.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

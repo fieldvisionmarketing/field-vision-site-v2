@@ -1,0 +1,65 @@
+# Netlify 301 Redirects — Wix to Astro Migration
+# Specific redirects MUST come before catch-alls (first match wins)
+
+# ── Blog posts where Wix slug differs from Astro slug ──
+/post/why-your-startup-doesnt-need-a-cmo              /blog/why-your-startup-doesnt-need-a-cmo-yet/                          301
+/post/authenticity-competitive-advantage               /blog/authenticity-competitive-advantage-ai-content-trust/             301
+/post/run-the-play-episode-001                         /blog/taco-bell-social-media-blackout-run-the-play-001/               301
+
+# ── Blog posts with matching slugs (explicit for SEO equity) ──
+/post/the-score-framework                              /blog/the-score-framework/                    301
+/post/the-plot-framework                               /blog/the-plot-framework/                     301
+/post/burn-your-marketing-calendar                     /blog/burn-your-marketing-calendar/            301
+/post/super-bowl-lx                                    /blog/super-bowl-lx/                          301
+/post/content-marketing-masterclass                    /blog/content-marketing-masterclass/           301
+/post/bucket-list                                      /blog/bucket-list/                            301
+/post/run-the-play-episode-002                         /blog/run-the-play-episode-002/               301
+/post/run-the-play-episode-003                         /blog/run-the-play-episode-003/               301
+/post/ai-killing-music                                 /blog/ai-killing-music/                       301
+/post/all-of-the-lights                                /blog/all-of-the-lights/                      301
+/post/david-hampian-on-kendrick-lamar-and-raising-the-bar  /blog/david-hampian-on-kendrick-lamar-and-raising-the-bar/  301
+/post/gen-z-workforce-readiness-storytelling-career-skill   /blog/gen-z-workforce-readiness-storytelling-career-skill/  301
+/post/my-advice-to-new-marketers                       /blog/my-advice-to-new-marketers/              301
+/post/skateboarding-is-about-to-change-forever         /blog/skateboarding-is-about-to-change-forever/  301
+/post/speaking-prep-tips                               /blog/speaking-prep-tips/                      301
+/post/taco-bell-social-media-blackout-run-the-play-001 /blog/taco-bell-social-media-blackout-run-the-play-001/  301
+/post/the-worst-rebrands-of-all-time-sorry-cracker-barrel  /blog/the-worst-rebrands-of-all-time-sorry-cracker-barrel/  301
+/post/twitch-the-raiders-and-allegiant-stadium         /blog/twitch-the-raiders-and-allegiant-stadium/  301
+/post/we-are-hiring                                    /blog/we-are-hiring/                          301
+/post/what-starting-a-band-in-college-taught-me        /blog/what-starting-a-band-in-college-taught-me/  301
+/post/who-actually-wants-to-be-a-manager               /blog/who-actually-wants-to-be-a-manager/      301
+/post/why-your-startup-doesnt-need-a-cmo-yet           /blog/why-your-startup-doesnt-need-a-cmo-yet/  301
+
+# ── Catch-all: any remaining /post/ URLs go to blog index ──
+/post/*                                                /blog/                                        301
+/blog-post/*                                           /blog/:splat                                  301
+
+# ── Wix service pages → Astro service pages ──
+/fractional-cmo                                        /services/fractional-cmo/                     301
+/go-to-market-strategy                                 /services/go-to-market/                       301
+/go-to-market                                          /services/go-to-market/                       301
+/growth-marketing                                      /services/growth-marketing/                   301
+/content-strategy                                      /services/content-creator-marketing/           301
+/content-creator-marketing                             /services/content-creator-marketing/           301
+/integrated-marketing                                  /services/integrated-marketing/               301
+/ai-growth-systems                                     /services/ai-growth-systems/                  301
+/org-and-process                                       /services/org-process-design/                 301
+/org-process-design                                    /services/org-process-design/                 301
+
+# ── Wix guide pages ──
+/score-framework                                       /guides/score-framework/                      301
+/plot-framework                                        /guides/plot-framework/                       301
+/abct-framework                                        /guides/abct-framework/                       301
+/ai-blueprint                                          /guides/ai-blueprint/                         301
+/compound-growth-system                                /guides/compound-growth-system/               301
+
+# ── Common Wix system pages ──
+/blank                                                 /                                             301
+/home                                                  /                                             301
+/copy-of-*                                             /                                             301
+
+# ── Custom 404 ──
+/guides/abct-framework.mdx   /guides/abct-framework/   301
+/guides/abct-framework.mdx/  /guides/abct-framework/   301
+
+/*                                                     /404.html                                     404

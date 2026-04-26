@@ -1,0 +1,78 @@
+---
+import Logo from './Logo.astro';
+
+const currentYear = new Date().getFullYear();
+
+const companyLinks = [
+  { label: 'About', href: '/about/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Contact', href: '/contact/' },
+    { label: 'Press', href: '/press/' },
+];
+
+const serviceLinks = [
+  { label: 'Fractional CMO', href: '/services/fractional-cmo/' },
+  { label: 'Go-to-Market', href: '/services/go-to-market/' },
+  { label: 'Growth & Lifecycle', href: '/services/growth-marketing/' },
+  { label: 'Content & Creators', href: '/services/content-creator-marketing/' },
+  { label: 'AI Growth Systems', href: '/services/ai-growth-systems/' },
+    { label: 'Integrated Marketing', href: '/services/integrated-marketing/' },
+    { label: 'Org & Process Design', href: '/services/org-process-design/' },
+];
+
+const resourceLinks = [
+  { label: 'Guides', href: '/guides/' },
+  { label: 'Newsletter', href: '/#newsletter' },
+  { label: 'Book a Call', href: '/contact/' },
+];
+
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/davidhampian/' },
+  { label: 'Instagram', href: 'https://www.instagram.com/fieldvisiongroup/' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@fieldvisiongroup' },
+];
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo"><Logo class="footer-logo" /></a>
+        <p>Growth marketing leadership for digital media, streaming, entertainment, and creator economy companies.</p>
+        <p style="margin-top:16px">San Francisco, CA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        {companyLinks.map(link => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        {serviceLinks.map(link => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        {resourceLinks.map(link => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {currentYear} Field Vision Group. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/privacy/#ccpa">Do Not Sell My Info</a>
+      </div>
+      <div class="footer-social">
+        {socialLinks.map(link => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>

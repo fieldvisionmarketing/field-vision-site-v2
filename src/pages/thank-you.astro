@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Thank You" description="Thanks for reaching out to Field Vision." noindex={true}>
+  <section class="thank-you-page">
+    <div class="thank-you-inner">
+      <h1>Thank You</h1>
+      <p>We got your message and will be in touch shortly.</p>
+      <a href="/" class="pill-btn form-btn">Back to Home &rarr;</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .thank-you-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .thank-you-inner h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 1rem;
+  }
+  .thank-you-inner p {
+    font-size: 1.25rem;
+    color: var(--charcoal);
+    margin-bottom: 2rem;
+  }
+</style>

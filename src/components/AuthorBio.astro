@@ -1,0 +1,58 @@
+---
+---
+
+<div class="author-bio">
+  <img src="/headshot-david-hampian.jpg" alt="David Hampian" class="bio-avatar" loading="lazy" />
+  <div>
+    <strong>David Hampian</strong>
+    <p>Founder & Fractional CMO at Field Vision. Former marketing leader at Amazon Music, Twitch, Pandora, and Hard Rock. Based in San Francisco.</p>
+    <a href="/about/" class="bio-link">Full bio →</a>
+  </div>
+</div>
+
+<style>
+  .author-bio {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    background: var(--cream, #f5f0e8);
+    border-radius: 12px;
+    margin-top: 3rem;
+    border: 1px solid rgba(33, 54, 33, 0.1);
+  }
+  .bio-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .author-bio strong {
+    display: block;
+    color: var(--forest, #213621);
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .author-bio p {
+    font-size: 0.9rem;
+    color: var(--charcoal, #555);
+    line-height: 1.5;
+    margin: 0 0 8px 0;
+  }
+  .bio-link {
+    font-size: 0.85rem;
+    color: var(--forest, #213621);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .bio-link:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 480px) {
+    .author-bio {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+</style>

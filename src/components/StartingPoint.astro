@@ -1,0 +1,40 @@
+---
+const cards = [
+  {
+    icon: '\u{1F3AF}',
+    title: "Not ready for a full-time marketing hire",
+    body: "You need senior marketing leadership but not the $250K commitment. A fractional CMO gives you the strategy and oversight without the overhead.",
+    link: { label: "Explore Fractional CMO →", href: "/services/fractional-cmo/" },
+  },
+  {
+    icon: '\u{1F680}',
+    title: "Launching something and need a growth strategy",
+    body: "You have a specific initiative — a product launch, new market entry, or rebrand — and need an expert to build the plan and lead the execution.",
+    link: { label: "Explore Go-to-Market →", href: "/services/go-to-market/" },
+  },
+  {
+    icon: '\u{1F9ED}',
+    title: "Have a team but need an expert to steer",
+    body: "You're doing marketing but aren't sure it's working. You need someone to audit what exists, set a direction, and coach your team to execute.",
+    link: { label: "Take the Assessment →", href: "/assessment/" },
+  },
+];
+---
+
+<section class="starting-point grid-bg">
+  <div class="sp-inner">
+    <div class="reveal">
+      <h2>Find Your <span class="highlight">Starting Point</span></h2>
+              <p class="section-sub">Every startup's marketing challenge looks different.<br />Which sounds like yours?</p>
+    </div>
+    <div class="starting-cards">
+      {cards.map((card, i) => (
+        <div class={`starting-card reveal rd${i + 1}`}>
+          <span class="starting-card-icon">{card.icon}</span>
+          <h3>{card.title}</h3>
+          <p>{card.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

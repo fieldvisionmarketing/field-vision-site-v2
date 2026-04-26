@@ -1,0 +1,56 @@
+---
+/**
+ * OverviewCard — Compact overview card with a circle badge
+ * @prop badge — Short badge text (e.g. "A", "1")
+ * @prop title — Card title
+ */
+interface Props {
+  badge: string;
+  title: string;
+}
+const { badge, title } = Astro.props;
+---
+<div class="overview-card">
+  <div class="overview-card-badge">{badge}</div>
+  <h4 class="overview-card-title">{title}</h4>
+  <div class="overview-card-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .overview-card {
+    background: #fff;
+    border: 1px solid rgba(33, 54, 33, 0.08);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(33, 54, 33, 0.04);
+  }
+  .overview-card-badge {
+    width: 48px;
+    height: 48px;
+    background: #A5DB5D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    color: #213621;
+    margin: 0 auto 14px;
+  }
+  .overview-card-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.2rem;
+    color: #213621;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .overview-card-body {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 14px;
+    color: rgba(33, 54, 33, 0.6);
+    line-height: 1.6;
+  }
+</style>

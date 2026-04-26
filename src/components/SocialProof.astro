@@ -1,0 +1,25 @@
+---
+const brands = [
+  'Amazon',
+  'Twitch',
+  'Pandora',
+  'Hard Rock International',
+  'Deepr',
+  'MONTREALITY',
+  'Prime Video',
+  'Audible',
+  'University of California, Berkeley',
+  'Savannah College of Art and Design',
+];
+---
+
+<section class="social-proof">
+  <p class="sp-label">Trusted by teams at</p>
+  <div class="marquee-track">
+    <div class="marquee-inner" aria-hidden="true">
+      {[...brands, ...brands].map(name => (
+        <span>{name}</span>
+      ))}
+    </div>
+  </div>
+</section>

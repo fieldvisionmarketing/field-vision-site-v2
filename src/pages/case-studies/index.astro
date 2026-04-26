@@ -1,0 +1,218 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<BaseLayout
+  title="Case Studies"
+  description="Real results from real engagements. Explore how Field Vision has driven growth for Amazon, Pandora, Twitch, Hard Rock Bet, and more."
+>
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="cs-hero">
+    <h1>Our Work</h1>
+    <p>Real results from real engagements. Explore how we've driven growth, launched products, and built audiences for some of the biggest names in entertainment, streaming, and sports.</p>
+  </section>
+
+  <!-- CASE STUDY CARDS -->
+  <section class="cases-section">
+    <div class="cases-grid">
+
+      <a href="/case-studies/amazon-audience-development/" class="case-card">
+        <span class="case-card-company">Amazon</span>
+        <h3>Audience Development at Amazon</h3>
+        <p>Built and scaled audience development strategies across Amazon's entertainment portfolio, driving growth and acquisition at a global scale.</p>
+        <div class="case-card-meta">
+          <span class="case-card-tag">Growth &amp; Acquisition</span>
+          <span class="case-card-tag">Global</span>
+        </div>
+        <span class="case-card-link">View Case Study &rarr;</span>
+      </a>
+
+      <a href="/case-studies/maestro/" class="case-card">
+        <span class="case-card-company">Amazon Music</span>
+        <h3>Launching Maestro, Amazon's First AI Music Experience</h3>
+        <p>Led the go-to-market strategy for Amazon Music's first AI-powered playlist generator, positioning the brand as the category innovator.</p>
+        <div class="case-card-meta">
+          <span class="case-card-tag">Product Launch</span>
+          <span class="case-card-tag">AI</span>
+        </div>
+        <span class="case-card-link">View Case Study &rarr;</span>
+      </a>
+
+      <a href="/case-studies/amazon-music-live/" class="case-card">
+        <span class="case-card-company">Amazon Music</span>
+        <h3>Architecting Amazon Music's Livestream Strategy</h3>
+        <p>Designed and launched the livestream programming strategy that transformed Amazon Music from an audio platform into a live entertainment destination.</p>
+        <div class="case-card-meta">
+          <span class="case-card-tag">Growth Strategy</span>
+          <span class="case-card-tag">Live Programming</span>
+        </div>
+        <span class="case-card-link">View Case Study &rarr;</span>
+      </a>
+
+      <a href="/case-studies/hard-rock-bet/" class="case-card">
+        <span class="case-card-company">Hard Rock Digital</span>
+        <h3>Launching Hard Rock Bet Across Six States</h3>
+        <p>Orchestrated the multi-state brand launch and growth strategy for Hard Rock's digital sports betting platform across six regulated markets.</p>
+        <div class="case-card-meta">
+          <span class="case-card-tag">Brand Launch</span>
+          <span class="case-card-tag">Multi-State</span>
+        </div>
+        <span class="case-card-link">View Case Study &rarr;</span>
+      </a>
+
+      <a href="/case-studies/pandora-ticketfly/" class="case-card">
+        <span class="case-card-company">Pandora / Ticketfly</span>
+        <h3>Connecting Listeners to Live Music at Pandora &amp; Ticketfly</h3>
+        <p>Drove the audience development strategy that connected Pandora's streaming listeners to live music experiences through the Ticketfly integration.</p>
+        <div class="case-card-meta">
+          <span class="case-card-tag">Audience Development</span>
+          <span class="case-card-tag">Partnerships</span>
+        </div>
+        <span class="case-card-link">View Case Study &rarr;</span>
+      </a>
+
+      <a href="/case-studies/pandora/" class="case-card">
+        <span class="case-card-company">Pandora</span>
+        <h3>Growing Pandora from 50M to 80M+ Monthly Active Users</h3>
+        <p>Led growth and lifecycle marketing that scaled Pandora's user base by 60%, building the full-funnel engine from acquisition through retention.</p>
+        <div class="case-card-meta">
+          <span class="case-card-tag">Growth &amp; Lifecycle</span>
+          <span class="case-card-tag">Global</span>
+        </div>
+        <span class="case-card-link">View Case Study &rarr;</span>
+      </a>
+
+      <a href="/case-studies/thursday-night-football/" class="case-card">
+        <span class="case-card-company">Amazon / Twitch</span>
+        <h3>Inventing Creator-Led Sports Broadcasting with Thursday Night Football</h3>
+        <p>Pioneered the creator-led broadcast model for Thursday Night Football, merging live sports with interactive streaming culture.</p>
+        <div class="case-card-meta">
+          <span class="case-card-tag">Creator Marketing</span>
+          <span class="case-card-tag">Sports</span>
+        </div>
+        <span class="case-card-link">View Case Study &rarr;</span>
+      </a>
+
+      <a href="/case-studies/twitch/" class="case-card">
+        <span class="case-card-company">Twitch</span>
+        <h3>Expanding Twitch Beyond Gaming into Sports &amp; Music</h3>
+        <p>Led the strategic expansion that took Twitch from a gaming-only platform into sports and music, unlocking new audiences and content verticals.</p>
+        <div class="case-card-meta">
+          <span class="case-card-tag">Platform Expansion</span>
+          <span class="case-card-tag">Sports &amp; Music</span>
+        </div>
+        <span class="case-card-link">View Case Study &rarr;</span>
+      </a>
+
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style is:global>
+  /* ─── HERO ─── */
+  .cs-hero {
+    padding: 152px 24px 60px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .cs-hero h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 16px;
+  }
+  .cs-hero p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(33, 54, 33, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ─── CARD GRID ─── */
+  .cases-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 100px;
+  }
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .case-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 0.8px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 40px 32px;
+    text-decoration: none;
+    color: var(--dark);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(33, 54, 33, 0.08);
+  }
+  .case-card-company {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 12px;
+  }
+  .case-card h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .case-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(33, 54, 33, 0.65);
+    flex: 1;
+  }
+  .case-card-meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(33, 54, 33, 0.08);
+  }
+  .case-card-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    background: rgba(165, 219, 93, 0.15);
+    color: var(--dark);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .case-card-link {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .cases-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .cases-grid { grid-template-columns: 1fr; }
+  }
+</style>

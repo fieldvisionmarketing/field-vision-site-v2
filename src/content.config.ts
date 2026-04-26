@@ -1,0 +1,92 @@
+import { defineCollection, z } from 'astro:content';
+
+const blog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    category: z.string(),
+    date: z.coerce.date(),
+    updated: z.coerce.date().optional(),
+    author: z.string().default('David Hampian'),
+    ogImage: z.string().optional(),
+    draft: z.boolean().default(false),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+const services = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    icon: z.string().optional(),
+    order: z.number().default(0),
+    ogImage: z.string().optional(),
+    sidebar: z.array(z.object({
+      label: z.string(),
+      value: z.string(),
+    })).optional(),
+    problemHeadline: z.string().optional(),
+    problemIntro: z.string().optional(),
+    oldWay: z.array(z.string()).optional(),
+    newWay: z.array(z.string()).optional(),
+    deliverables: z.array(z.object({
+      icon: z.string(),
+      title: z.string(),
+      desc: z.string(),
+    })).optional(),
+    whoIntro: z.string().optional(),
+    whoTriggers: z.array(z.string()).optional(),
+    whoCta: z.object({
+      headline: z.string(),
+      body: z.string(),
+    }).optional(),
+    abctSteps: z.array(z.object({
+      step: z.string(),
+      title: z.string(),
+      desc: z.string(),
+    })).optional(),
+    faqs: z.array(z.object({
+      question: z.string(),
+      answer: z.string(),
+    })).optional(),
+    ctaHeadline: z.string().optional(),
+    ctaBody: z.string().optional(),
+  }),
+});
+
+const guides = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    framework: z.string().optional(),
+    ogImage: z.string().optional(),
+    gated: z.boolean().default(true),
+    mailerliteGroupId: z.string().optional(),
+    downloadUrl: z.string().optional(),
+    readTime: z.string().default('8 min read'),
+    phases: z.string().default('4 Phases'),
+  }),
+});
+
+const press = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    publication: z.string(),
+    publicationUrl: z.string(),
+    articleUrl: z.string(),
+    date: z.coerce.date(),
+    author: z.string(),
+    topic: z.string(),
+    description: z.string(),
+    davidRole: z.string(),
+    tags: z.array(z.string()).default([]),
+    ogImage: z.string().optional(),
+    featured: z.boolean().default(false),
+  }),
+});
+
+export const collections = { blog, services, guides, press };

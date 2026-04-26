@@ -1,0 +1,88 @@
+---
+/**
+ * PhaseBlock — Section header for a framework phase
+ * @prop badge  — Short label for the circle badge (e.g. "A", "1", "S")
+ * @prop title  — Phase name (e.g. "Audit")
+ * @prop subtitle — One-line description
+ */
+interface Props {
+  badge: string;
+  title: string;
+  subtitle: string;
+}
+const { badge, title, subtitle } = Astro.props;
+---
+<div class="phase-block-wrapper">
+  <div class="phase-header">
+    <div class="phase-badge">{badge}</div>
+    <div>
+      <h2 class="phase-title">{title}</h2>
+      <div class="phase-subtitle">{subtitle}</div>
+    </div>
+  </div>
+  <div class="phase-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .phase-block-wrapper {
+    margin-top: 56px;
+    padding-top: 56px;
+    border-top: 1px solid rgba(33, 54, 33, 0.08);
+  }
+  .phase-block-wrapper:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 8px;
+  }
+  .phase-badge {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: #A5DB5D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color: #213621;
+  }
+  .phase-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.6rem;
+    color: #213621;
+    text-transform: uppercase;
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+  .phase-subtitle {
+    font-family: 'Satoshi', sans-serif;
+    font-style: italic;
+    color: rgba(33, 54, 33, 0.5);
+    font-size: 15px;
+    margin: 4px 0 0;
+  }
+  .phase-body {
+    margin-top: 28px;
+  }
+
+  @media (max-width: 900px) {
+    .phase-header { gap: 14px; }
+    .phase-badge {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      font-size: 20px;
+    }
+  }
+</style>

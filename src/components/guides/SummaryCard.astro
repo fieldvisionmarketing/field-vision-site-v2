@@ -1,0 +1,67 @@
+---
+/**
+ * SummaryCard — Dark-themed summary with a grid of key deliverables
+ * @prop heading — Optional heading (defaults to "WHEN YOU COMPLETE THIS FRAMEWORK, YOU WALK AWAY WITH:")
+ * @prop items — Array of { title: string, description: string }
+ */
+interface Props {
+  heading?: string;
+  items: Array<{ title: string; description: string }>;
+}
+const { heading, items } = Astro.props;
+---
+<div class="summary-card">
+  {heading && <h3 class="summary-heading">{heading}</h3>}
+  <div class="summary-grid">
+    {items.map((item) => (
+      <div class="summary-item">
+        <strong>{item.title}</strong>
+        <span>{item.description}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .summary-card {
+    background: #213621;
+    border-radius: 16px;
+    padding: 36px 32px;
+    margin: 32px 0;
+  }
+  .summary-heading {
+    font-family: 'Anton', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(239, 234, 211, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .summary-item strong {
+    font-family: 'Satoshi', sans-serif;
+    color: #A5DB5D;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .summary-item span {
+    font-family: 'Satoshi', sans-serif;
+    color: rgba(239, 234, 211, 0.6);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    .summary-grid { grid-template-columns: 1fr; }
+    .summary-card { padding: 28px 20px; }
+  }
+</style>
