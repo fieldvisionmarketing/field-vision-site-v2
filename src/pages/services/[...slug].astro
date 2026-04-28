@@ -196,15 +196,15 @@ const faqSchema = d.faqs?.length ? {
 
   <!-- ═══ FAQ ═══ -->
   {d.faqs?.length > 0 && (
-    <section class="svcpg-faq reveal">
-      <div class="svcpg-faq-inner">
+    <section class="faq-section svcpg-faq reveal">
+      <div class="faq-section-inner">
         <span class="eyebrow">Common Questions</span>
         <h2><span class="hl-cream">FAQ</span></h2>
-        <div class="svcpg-faq-list">
+        <div class="faq-canon-list">
           {d.faqs.map((faq: { question: string; answer: string }) => (
-            <details class="svcpg-faq-item">
+            <details class="faq-canon-item">
               <summary>{faq.question}</summary>
-              <div class="svcpg-faq-answer"><p>{faq.answer}</p></div>
+              <div class="faq-canon-answer"><p>{faq.answer}</p></div>
             </details>
           ))}
         </div>

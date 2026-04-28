@@ -383,21 +383,16 @@ const press = [
     </div>
   </section>
 
-  <!-- ═══ FAQ (warm-gray bg) ═══ -->
-  <section class="abt-faq section" style="background:var(--warm-gray)">
-    <div class="abt-faq-inner">
+  <!-- ═══ FAQ (warm-gray bg — canonical FAQ format) ═══ -->
+  <section class="faq-section section" style="background:var(--warm-gray)">
+    <div class="faq-section-inner">
       <span class="eyebrow">— Common Questions</span>
       <h2>Frequently Asked <span class="hl-cream">Questions</span></h2>
-      <div class="abt-faq-list">
+      <div class="faq-canon-list">
         {faqs.map(faq => (
-          <details class="abt-faq-item">
-            <summary class="abt-faq-q">
-              <span>{faq.question}</span>
-              <span class="abt-faq-toggle">+</span>
-            </summary>
-            <div class="abt-faq-a">
-              <p>{faq.answer}</p>
-            </div>
+          <details class="faq-canon-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-canon-answer"><p>{faq.answer}</p></div>
           </details>
         ))}
       </div>
