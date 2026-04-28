@@ -6,98 +6,104 @@ import Footer from '@/components/Footer.astro';
 
 const services = (await getCollection('services'))
   .sort((a, b) => a.data.order - b.data.order);
+
+const siteUrl = 'https://fieldvisiongroup.com';
+
+/* Schema.org for the services listing */
+const serviceListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Field Vision Marketing Services",
+  "itemListElement": services.map((s, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": s.data.title,
+    "url": `${siteUrl}/services/${s.id.replace(/\.md$/, '')}/`
+  }))
+};
 ---
 
-<BaseLayout title="Marketing Services for Startups" description="Fractional CMO, go-to-market strategy, growth marketing, content strategy, and marketing org design for seed through Series D startups in digital media and entertainment.">
+<BaseLayout
+  title="Marketing Services for Startups | Field Vision"
+  description="Fractional CMO, go-to-market strategy, growth marketing, content strategy, and marketing org design for seed through Series D startups in digital media and entertainment."
+>
   <Header slot="header" />
 
-  <section class="services-listing">
-    <div class="services-listing-inner">
-      <h1 class="reveal">Our <span class="highlight">Services</span></h1>
-      <p class="section-sub reveal rd1">Full-stack marketing leadership — from strategy through execution — built for startups at inflection points.</p>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceListSchema)} />
+  </Fragment>
 
-      <div class="services-grid" style="margin-top:48px">
-        {services.map((service, i) => (
-          <a href={`/services/${service.id.replace(/\.md$/, '')}/`} class={`service-list-card reveal rd${(i % 3) + 1}`}>
-            {service.data.icon && <span class="service-list-icon">{service.data.icon}</span>}
-            <h3>{service.data.title}</h3>
-            <p>{service.data.description}</p>
-            <span class="service-list-link">Learn More →</span>
-          </a>
-        ))}
+  <!-- ═══ HERO ═══ -->
+  <section class="svclp-hero reveal">
+    <div class="svclp-hero-inner">
+      <span class="eyebrow">Full-Stack Marketing Leadership</span>
+      <h1>Our <span class="hl-green">Services</span></h1>
+      <p class="svclp-hero-lede">Strategy through execution — built for startups at inflection points. Every engagement follows our ABCT® model: Audit, Blueprint, Construct, Transfer.</p>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICE CARDS GRID ═══ -->
+  <section class="svclp-grid-section reveal">
+    <div class="svclp-grid-inner">
+      <div class="svclp-grid">
+        {services.map((service, i) => {
+          const slug = service.id.replace(/\.md$/, '');
+          return (
+            <a href={`/services/${slug}/`} class={`svclp-card reveal rd${(i % 3) + 1}`}>
+              <div class="svclp-card-header">
+                {service.data.icon && <span class="svclp-card-icon">{service.data.icon}</span>}
+                <span class="svclp-card-name">{service.data.title}</span>
+              </div>
+              <div class="svclp-card-body">
+                <p class="svclp-card-desc">{service.data.description}</p>
+                <span class="svclp-card-link">Learn More →</span>
+              </div>
+            </a>
+          );
+        })}
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABCT MODEL OVERVIEW ═══ -->
+  <section class="svclp-abct reveal">
+    <div class="svclp-abct-inner">
+      <span class="eyebrow">Built to Be Fired</span>
+      <h2>The ABCT® Model</h2>
+      <p class="svclp-abct-intro">Every engagement follows the same four-phase framework — designed to deliver results and build independence. We succeed when you don't need us anymore.</p>
+      <div class="svclp-abct-grid">
+        <div class="svclp-abct-card">
+          <span class="svclp-abct-num">01</span>
+          <h3>A — Audit</h3>
+          <p>Deep-dive diagnostic into what's working, what's not, and where the biggest opportunities are.</p>
+        </div>
+        <div class="svclp-abct-card">
+          <span class="svclp-abct-num">02</span>
+          <h3>B — Blueprint</h3>
+          <p>Strategy, positioning, and channel plan — tied directly to your growth model and business goals.</p>
+        </div>
+        <div class="svclp-abct-card">
+          <span class="svclp-abct-num">03</span>
+          <h3>C — Construct</h3>
+          <p>Stand up the systems, processes, and team structure to execute the strategy at scale.</p>
+        </div>
+        <div class="svclp-abct-card">
+          <span class="svclp-abct-num">04</span>
+          <h3>T — Transfer</h3>
+          <p>Document everything and hand it off so your team can run independently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="svclp-cta reveal">
+    <div class="svclp-cta-inner">
+      <h2>Ready to Build Your <span class="hl-cream">Growth Engine</span>?</h2>
+      <p>Book a 30-minute discovery call. We'll talk about where you are, where you want to go, and whether Field Vision is the right fit.</p>
+      <a href="/contact/" class="btn-brutal">Book a Call →</a>
     </div>
   </section>
 
   <Footer slot="footer" />
 </BaseLayout>
-
-<style>
-  .services-listing {
-    padding: 140px 24px 80px;
-  }
-  .services-listing-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .services-listing h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    text-transform: uppercase;
-    line-height: 0.92;
-    text-align: center;
-  }
-  .services-listing .section-sub {
-    text-align: center;
-    max-width: 600px;
-    margin: 16px auto 0;
-  }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
-    gap: 24px;
-  }
-  .service-list-card {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 0;
-    padding: 36px 28px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.25s, box-shadow 0.25s;
-    display: flex;
-    flex-direction: column;
-  }
-  .service-list-card:hover {
-    border-color: var(--accent);
-    box-shadow: 8px 8px 0 var(--ink);
-  }
-  .service-list-icon {
-    font-size: 2rem;
-    margin-bottom: 12px;
-  }
-  .service-list-card h3 {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    line-height: 1.1;
-    margin-bottom: 12px;
-  }
-  .service-list-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
-    flex: 1;
-  }
-  .service-list-link {
-    margin-top: 16px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--dark);
-  }
-  @media (max-width: 768px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

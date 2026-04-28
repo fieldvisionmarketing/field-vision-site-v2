@@ -33,7 +33,7 @@ const serviceSchema = {
   "url": `${siteUrl}/services/${slug}/`
 };
 
-/* ── Schema.org: FAQPage (dynamic from frontmatter) ── */
+/* ── Schema.org: FAQPage ── */
 const faqSchema = d.faqs?.length ? {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -49,7 +49,7 @@ const faqSchema = d.faqs?.length ? {
 ---
 
 <BaseLayout
-  title={d.title}
+  title={d.title + ' | Field Vision'}
   description={d.description}
   ogImage={d.ogImage}
 >
@@ -61,56 +61,64 @@ const faqSchema = d.faqs?.length ? {
   </Fragment>
 
   <!-- ═══ HERO ═══ -->
-  <section class="svc-hero">
-    <div class="svc-hero-inner">
-      <div class="svc-hero-text">
-        {d.icon && <span class="svc-icon">{d.icon}</span>}
-        <h1 class="svc-h1">{d.title}</h1>
-        <p class="svc-subtitle">{d.description}</p>
-        <a href="/contact/" class="pill-btn">Let's Talk →</a>
+  <section class="svcpg-hero">
+    <div class="svcpg-hero-inner">
+      <div class="svcpg-hero-text">
+        {d.icon && <span class="svcpg-icon">{d.icon}</span>}
+        <h1>{d.title}</h1>
+        <p class="svcpg-subtitle">{d.description}</p>
+        <a href="/contact/" class="btn-brutal">Book a Call →</a>
       </div>
-      <aside class="hero-sidebar reveal">
-        <h3 class="sidebar-label">Engagement Snapshot</h3>
-        {d.sidebar?.map((item: { label: string; value: string }) => (
-          <div class="sidebar-row">
-            <span class="sidebar-key">{item.label}</span>
-            <span class="sidebar-val">{item.value}</span>
-          </div>
-        ))}
+      <aside class="svcpg-sidebar reveal">
+        <div class="svcpg-sidebar-header">Engagement Snapshot</div>
+        <div class="svcpg-sidebar-body">
+          {d.sidebar?.map((item: { label: string; value: string }) => (
+            <div class="svcpg-sidebar-row">
+              <span class="svcpg-sidebar-key">{item.label}</span>
+              <span class="svcpg-sidebar-val">{item.value}</span>
+            </div>
+          ))}
+        </div>
       </aside>
     </div>
   </section>
 
   <!-- ═══ PROBLEM / SOLUTION ═══ -->
-  <section class="svc-ps reveal">
-    <div class="svc-ps-inner">
-      <h2 class="svc-section-head svc-section-head--light">{d.problemHeadline || 'The Challenge'}</h2>
-      <p class="svc-ps-intro">{d.problemIntro}</p>
-      <div class="ps-grid">
-        <div class="ps-card old-way">
-          <span class="ps-label">❌ Without Strategic Leadership</span>
-          <ul>
-            {d.oldWay?.map((item: string) => <li>{item}</li>)}
-          </ul>
+  <section class="svcpg-ps reveal">
+    <div class="svcpg-ps-inner">
+      <span class="eyebrow">The Challenge You're Facing</span>
+      <h2>{d.problemHeadline || 'The Challenge'}</h2>
+      <p class="svcpg-ps-intro">{d.problemIntro}</p>
+      <div class="svcpg-ps-grid">
+        <div class="svcpg-ps-card svcpg-ps-old">
+          <div class="svcpg-ps-card-header svcpg-ps-card-header--old">Without Strategic Leadership</div>
+          <div class="svcpg-ps-card-body">
+            <ul>
+              {d.oldWay?.map((item: string) => <li><span class="ps-x">✗</span> {item}</li>)}
+            </ul>
+          </div>
         </div>
-        <div class="ps-card new-way">
-          <span class="ps-label">✅ With Field Vision</span>
-          <ul>
-            {d.newWay?.map((item: string) => <li>{item}</li>)}
-          </ul>
+        <div class="svcpg-ps-card svcpg-ps-new">
+          <div class="svcpg-ps-card-header svcpg-ps-card-header--new">With Field Vision</div>
+          <div class="svcpg-ps-card-body">
+            <ul>
+              {d.newWay?.map((item: string) => <li><span class="ps-check">✓</span> {item}</li>)}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══ DELIVERABLES ═══ -->
-  <section class="svc-deliverables reveal">
-    <div class="svc-del-inner">
-      <h2 class="svc-section-head">What You Get</h2>
-      <div class="del-grid">
+  <section class="svcpg-del reveal">
+    <div class="svcpg-del-inner">
+      <span class="eyebrow">What You Walk Away With</span>
+      <h2>Deliverables</h2>
+      <div class="svcpg-del-grid">
         {d.deliverables?.map((del: { icon: string; title: string; desc: string }) => (
-          <div class="del-card">
-            <span class="del-icon">{del.icon}</span>
+          <div class="svcpg-del-card">
+            <span class="svcpg-del-icon">{del.icon}</span>
             <h3>{del.title}</h3>
             <p>{del.desc}</p>
           </div>
@@ -120,39 +128,43 @@ const faqSchema = d.faqs?.length ? {
   </section>
 
   <!-- ═══ WHO THIS IS FOR ═══ -->
-  <section class="svc-who reveal">
-    <div class="svc-who-inner">
-      <div class="who-main">
-        <h2 class="svc-section-head">Who This Is For</h2>
-        <p class="who-intro">{d.whoIntro}</p>
-        <ul class="who-triggers">
+  <section class="svcpg-who reveal">
+    <div class="svcpg-who-inner">
+      <div class="svcpg-who-main">
+        <span class="eyebrow">Is This You?</span>
+        <h2>Who This Is For</h2>
+        <p class="svcpg-who-intro">{d.whoIntro}</p>
+        <ul class="svcpg-who-triggers">
           {d.whoTriggers?.map((t: string) => (
-            <li><span class="check-icon">✓</span> {t}</li>
+            <li><span class="who-check">✓</span> {t}</li>
           ))}
         </ul>
       </div>
-      <aside class="who-sidebar-card">
-        <h3>{d.whoCta?.headline || 'Ready to get started?'}</h3>
-        <p>{d.whoCta?.body || "Book a 30-minute discovery call. We'll discuss where you are, where you want to go, and whether Field Vision is the right fit."}</p>
-        <a href="/contact/" class="pill-btn pill-btn--accent">Let's Talk →</a>
+      <aside class="svcpg-who-cta-card">
+        <div class="svcpg-who-cta-header">{d.whoCta?.headline || 'Ready to get started?'}</div>
+        <div class="svcpg-who-cta-body">
+          <p>{d.whoCta?.body || "Book a 30-minute discovery call. We'll discuss where you are, where you want to go, and whether Field Vision is the right fit."}</p>
+          <a href="/contact/" class="btn-brutal btn-brutal--sm">Let's Talk →</a>
+        </div>
       </aside>
     </div>
   </section>
 
   <!-- ═══ ABCT® MODEL ═══ -->
-  <section class="svc-abct reveal">
-    <div class="svc-abct-inner">
-      <h2 class="svc-section-head">How We Work: The ABCT® Model</h2>
-      <p class="abct-intro">Every engagement follows our proven four-phase framework — designed to deliver results and build independence.</p>
-      <div class="abct-grid">
+  <section class="svcpg-abct reveal">
+    <div class="svcpg-abct-inner">
+      <span class="eyebrow">Our Proven Framework</span>
+      <h2>The ABCT® Model</h2>
+      <p class="svcpg-abct-intro">Every engagement follows our proven four-phase framework — designed to deliver results and build independence.</p>
+      <div class="svcpg-abct-grid">
         {(d.abctSteps || [
           { step: 'A', title: 'Audit', desc: "Deep-dive diagnostic into what's working, what's not, and where the biggest opportunities are." },
           { step: 'B', title: 'Blueprint', desc: "Strategy, positioning, and channel plan — tied directly to your growth model and business goals." },
           { step: 'C', title: 'Construct', desc: "Stand up the systems, processes, and team structure to execute the strategy at scale." },
           { step: 'T', title: 'Transfer', desc: "Document everything and hand it off so your team can run independently — built to be fired." },
         ]).map((s: { step: string; title: string; desc: string }, i: number) => (
-          <div class="abct-card">
-            <span class="abct-step">{i + 1}</span>
+          <div class="svcpg-abct-card">
+            <span class="svcpg-abct-num">0{i + 1}</span>
             <h3>{s.step} — {s.title}</h3>
             <p>{s.desc}</p>
           </div>
@@ -163,19 +175,15 @@ const faqSchema = d.faqs?.length ? {
 
   <!-- ═══ FAQ ═══ -->
   {d.faqs?.length > 0 && (
-    <section class="svc-faq reveal">
-      <div class="svc-faq-inner">
-        <h2 class="svc-section-head">Frequently Asked Questions</h2>
-        <div class="faq-list">
-          {d.faqs.map((faq: { question: string; answer: string }, i: number) => (
-            <details class="faq-item">
-              <summary class="faq-question">
-                <span>{faq.question}</span>
-                <span class="faq-toggle">+</span>
-              </summary>
-              <div class="faq-answer">
-                <p>{faq.answer}</p>
-              </div>
+    <section class="svcpg-faq reveal">
+      <div class="svcpg-faq-inner">
+        <span class="eyebrow">Common Questions</span>
+        <h2>FAQ</h2>
+        <div class="svcpg-faq-list">
+          {d.faqs.map((faq: { question: string; answer: string }) => (
+            <details class="svcpg-faq-item">
+              <summary>{faq.question}</summary>
+              <div class="svcpg-faq-answer"><p>{faq.answer}</p></div>
             </details>
           ))}
         </div>
@@ -184,11 +192,11 @@ const faqSchema = d.faqs?.length ? {
   )}
 
   <!-- ═══ FINAL CTA ═══ -->
-  <section class="svc-final-cta reveal">
-    <div class="svc-final-cta-inner">
+  <section class="svcpg-final-cta reveal">
+    <div class="svcpg-final-cta-inner">
       <h2>{d.ctaHeadline || 'Ready to Build Your Growth Engine?'}</h2>
       <p>{d.ctaBody || "Book a 30-minute discovery call. We'll talk about where you are, where you want to go, and whether Field Vision is the right fit."}</p>
-      <a href="/contact/" class="pill-btn pill-btn--accent">Let's Talk →</a>
+      <a href="/contact/" class="btn-brutal">Book a Call →</a>
     </div>
   </section>
 
