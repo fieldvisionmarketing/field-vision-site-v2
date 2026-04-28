@@ -20,19 +20,18 @@ const slug = service.id.replace(/\.md$/, '');
 
 /* ── Highlight chip helper: wraps last word in hl-green ── */
 function chipLastWord(text, chipClass = 'hl-green') {
+  // Chip the last word — trailing punctuation stays inside the span (R19)
   const words = text.trim().split(/\s+/);
   if (words.length <= 1) return text;
   const last = words.pop();
   return words.join(' ') + ' <span class="' + chipClass + '">' + last + '</span>';
 }
 function chipCtaWord(text, chipClass = 'hl-green') {
-  // For CTA headlines like "Ready to Build Your Growth Engine?"
-  // Chip the second-to-last word (the noun/action) before the ?
-  const clean = text.replace(/\?$/, '');
-  const words = clean.trim().split(/\s+/);
-  if (words.length <= 1) return text;
-  const last = words.pop();
-  return words.join(' ') + ' <span class="' + chipClass + '">' + last + '</span>?';
+  // Chip the last word — include trailing punctuation INSIDE the span (R19)
+  const match = text.match(/^(.+?)\s+(\S+?)([?!.]?)$/);
+  if (!match) return text;
+  const [, prefix, lastWord, punct] = match;
+  return prefix + ' <span class="' + chipClass + '">' + lastWord + punct + '</span>';
 }
 
 const heroTitle = chipLastWord(d.title);

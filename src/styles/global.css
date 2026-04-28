@@ -23,6 +23,7 @@
    R16 PLAY DIAGRAM: Football only. Service names cycle with emojis. Labels 2x default. Play art shifted down 1/8.
    R17 SCROLL REVEAL: Sections fade+slide in via IntersectionObserver. Chevron pulses below Trusted By bar.
    R18 FULL ROWS:    Card grids must fill every row. No orphan cards. Use column spans or split rows.
+   R19 NO ORPHAN PUNCT: Trailing punctuation (?!.) must be INSIDE the highlight chip span, never after it.
    ══════════════════════════════════════════ */
 
 :root {
@@ -1155,7 +1156,7 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: 1fr 400px;
   gap: 48px;
-  align-items: start;
+  align-items: stretch;
 }
 .svcpg-who h2 {
   font-family: 'Anton', sans-serif;
@@ -1195,6 +1196,8 @@ h1, h2, h3 {
   border: 4px solid var(--ink);
   box-shadow: 8px 8px 0 var(--ink);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .svcpg-who-cta-header {
   background: var(--ink);
@@ -1208,6 +1211,10 @@ h1, h2, h3 {
 .svcpg-who-cta-body {
   background: var(--paper);
   padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .svcpg-who-cta-body p {
   font-size: 14px;
