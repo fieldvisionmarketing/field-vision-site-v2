@@ -22,6 +22,7 @@
    R15 HERO TYPE:    Headline stacks one word per line (Anton). Sub-header 28px Satoshi under 4px divider. CTA below copy.
    R16 PLAY DIAGRAM: Football only. Service names cycle with emojis. Labels 2x default. Play art shifted down 1/8.
    R17 SCROLL REVEAL: Sections fade+slide in via IntersectionObserver. Chevron pulses below Trusted By bar.
+   R18 FULL ROWS:    Card grids must fill every row. No orphan cards. Use column spans or split rows.
    ══════════════════════════════════════════ */
 
 :root {
@@ -790,7 +791,7 @@ h1, h2, h3 {
 }
 .svclp-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 
@@ -907,7 +908,7 @@ h1, h2, h3 {
 }
 .svclp-abct-card h3 {
   font-family: 'Anton', sans-serif;
-  font-size: 15px;
+  font-size: 19px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding: 16px 24px 8px;
@@ -923,7 +924,7 @@ h1, h2, h3 {
 /* ── CTA ── */
 .svclp-cta {
   padding: 80px 48px;
-  background: var(--ink);
+  background: var(--offwhite);
   text-align: center;
 }
 .svclp-cta-inner {
@@ -934,19 +935,15 @@ h1, h2, h3 {
   font-family: 'Anton', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   text-transform: uppercase;
-  color: var(--paper);
+  color: var(--ink);
   margin-bottom: 16px;
 }
 .svclp-cta p {
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255,255,255,0.7);
+  color: var(--muted);
   font-weight: 450;
   margin-bottom: 32px;
-}
-.svclp-cta .btn-brutal {
-  background: var(--green-lt);
-  color: var(--ink);
 }
 
 /* ══════════════════════════════════════════
@@ -962,7 +959,7 @@ h1, h2, h3 {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr 400px;
   gap: 48px;
   align-items: start;
 }
@@ -1134,7 +1131,7 @@ h1, h2, h3 {
 }
 .svcpg-del-card h3 {
   font-family: 'Anton', sans-serif;
-  font-size: 14px;
+  font-size: 19px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding: 16px 24px 8px;
@@ -1156,7 +1153,7 @@ h1, h2, h3 {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: 1fr 400px;
   gap: 48px;
   align-items: start;
 }
@@ -1265,7 +1262,7 @@ h1, h2, h3 {
 }
 .svcpg-abct-card h3 {
   font-family: 'Anton', sans-serif;
-  font-size: 15px;
+  font-size: 19px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding: 16px 24px 8px;
@@ -1339,7 +1336,7 @@ h1, h2, h3 {
 /* ── Final CTA ── */
 .svcpg-final-cta {
   padding: 80px 48px;
-  background: var(--ink);
+  background: var(--offwhite);
   text-align: center;
 }
 .svcpg-final-cta-inner {
@@ -1350,19 +1347,15 @@ h1, h2, h3 {
   font-family: 'Anton', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   text-transform: uppercase;
-  color: var(--paper);
+  color: var(--ink);
   margin-bottom: 16px;
 }
 .svcpg-final-cta p {
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255,255,255,0.7);
+  color: var(--muted);
   font-weight: 450;
   margin-bottom: 32px;
-}
-.svcpg-final-cta .btn-brutal {
-  background: var(--green-lt);
-  color: var(--ink);
 }
 
 /* ══════════════════════════════════════════
@@ -1412,4 +1405,24 @@ h1, h2, h3 {
 @keyframes bounce-down {
   0%, 100% { transform: translateY(0); opacity: 0.4; }
   50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* ── R18: No Incomplete Card Rows ── */
+/* Last card alone in its row spans full width in 2-col grid */
+.svclp-grid > .svclp-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+/* Deliverables 3-col: if orphan, span full */
+.svcpg-del-grid > .svcpg-del-card:last-child:nth-child(3n+1) {
+  grid-column: 1 / -1;
+}
+/* Two orphans in 3-col: span 3 cols centered */
+.svcpg-del-grid > .svcpg-del-card:nth-last-child(2):nth-child(3n+1) {
+  grid-column: 1 / 2;
+}
+
+@media (max-width: 768px) {
+  .svclp-grid { grid-template-columns: 1fr; }
+  .svclp-grid > .svclp-card:last-child:nth-child(odd) { grid-column: auto; }
 }
