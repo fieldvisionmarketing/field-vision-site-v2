@@ -1,21 +1,28 @@
 ---
 ---
 
-<section class="hero">
-  <!-- Left play diagram -->
-  <svg class="play-diagram play-diagram-left" viewBox="0 0 500 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <g id="bg-L"></g>
-    <g id="play-L" opacity="0"></g>
-  </svg>
-  <!-- Right play diagram -->
-  <svg class="play-diagram play-diagram-right" viewBox="0 0 500 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <g id="bg-R"></g>
-    <g id="play-R" opacity="0"></g>
-  </svg>
-
-  <h1>Marketing Leadership for <span class="highlight">Startups</span></h1>
-  <p class="hero-sub">We come in at inflection points — product launches, new market entries, growth plateaus — to align your strategy, test what works, and install systems that scale.</p>
-  <a href="/contact/" class="pill-btn" style="position:relative;z-index:1">Book a Call</a>
+<section class="hero-section">
+  <div class="hero-left">
+    <div class="hero-headline">
+      <h1>Marketing Leadership for <span class="hl-green">Startups</span></h1>
+    </div>
+    <div class="hero-lede-row">
+      <div class="hero-lede">
+        <p>We come in at <span class="mark">inflection points</span> — product launches, new market entries, growth plateaus — to align your strategy, test what works, and install systems that scale.</p>
+      </div>
+      <a href="/contact/" class="btn-brutal">Book a Call <span>→</span></a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-label">
+      <div class="label-eyebrow">Currently Running</div>
+      <div class="label-service" id="play-label">Shotgun Spread</div>
+    </div>
+    <svg class="play-anim-svg" viewBox="0 0 500 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <g id="bg-main"></g>
+      <g id="play-main" opacity="0"></g>
+    </svg>
+  </div>
 </section>
 
 <script>
@@ -34,7 +41,6 @@
   }
   function raf(fn) { requestAnimationFrame(function(){ requestAnimationFrame(fn); }); }
 
-  /* Field / Court backgrounds (500x800 viewBox) */
   function drawFootball(bgEl) {
     bgEl.innerHTML = '';
     [[0,200,500,200],[0,600,500,600]].forEach(function(c){
@@ -42,15 +48,6 @@
     });
     [[0,350,500,350],[0,480,500,480]].forEach(function(c){
       bgEl.appendChild(el('line',{class:'scrimmage',x1:c[0],y1:c[1],x2:c[2],y2:c[3]}));
-    });
-    [100,200,300,400].forEach(function(x){
-      bgEl.appendChild(el('line',{class:'yard-hash',x1:x,y1:250,x2:x,y2:270}));
-      bgEl.appendChild(el('line',{class:'yard-hash',x1:x,y1:530,x2:x,y2:550}));
-    });
-    [180,320].forEach(function(x){
-      [300,310,320,330,340,490,500,510,520,530].forEach(function(y){
-        bgEl.appendChild(el('line',{class:'yard-hash',x1:x-5,y1:y,x2:x+5,y2:y,opacity:'0.1'}));
-      });
     });
   }
 
@@ -62,16 +59,10 @@
     bgEl.appendChild(el('line',{class:'yard-hash',x1:170,y1:320,x2:330,y2:320,opacity:'0.15'}));
     bgEl.appendChild(el('circle',{cx:'250',cy:'155',r:'12',class:'scrimmage'}));
     bgEl.appendChild(el('path',{d:'M 170 320 A 80 80 0 0 1 330 320',class:'scrimmage'}));
-    bgEl.appendChild(el('path',{d:'M 60 550 L 60 280 A 190 190 0 0 1 440 280 L 440 550',class:'yard-hash',opacity:'0.12'}));
-    bgEl.appendChild(el('line',{class:'yard-hash',x1:30,y1:580,x2:470,y2:580,opacity:'0.08'}));
-    bgEl.appendChild(el('line',{class:'yard-hash',x1:30,y1:140,x2:30,y2:580,opacity:'0.06'}));
-    bgEl.appendChild(el('line',{class:'yard-hash',x1:470,y1:140,x2:470,y2:580,opacity:'0.06'}));
   }
 
-  /* Play data (500x800 viewBox) */
   var plays = [
-    // 1. Football: Shotgun Spread Pass
-    { sport:'football', players:[
+    { sport:'football', label:'Shotgun Spread', players:[
       {x:200,y:410,t:'O'},{x:230,y:410,t:'O'},{x:250,y:410,t:'O'},{x:270,y:410,t:'O'},{x:300,y:410,t:'O'},
       {x:250,y:470,t:'X'},{x:220,y:500,t:'X'},
       {x:50,y:400,t:'X'},{x:140,y:390,t:'X'},{x:450,y:400,t:'X'},{x:340,y:400,t:'X'}
@@ -82,8 +73,7 @@
       {d:'M 340 400 L 340 350 Q 340 320 300 300 L 180 280',delay:.8,dur:1.8},
       {d:'M 220 500 Q 150 500 100 480 L 60 450',delay:1.0,dur:1.5}
     ]},
-    // 2. Basketball: Pick & Roll
-    { sport:'basketball', players:[
+    { sport:'basketball', label:'Pick & Roll', players:[
       {x:250,y:480,t:'O'},{x:80,y:380,t:'O'},{x:420,y:380,t:'O'},{x:250,y:370,t:'O'},{x:150,y:280,t:'O'}
     ], routes:[
       {d:'M 250 480 L 280 460 Q 310 440 330 410 L 350 370',delay:.4,dur:1.8},
@@ -93,8 +83,7 @@
       {d:'M 80 380 L 70 340 L 80 300',delay:1.0,dur:1.0},
       {d:'M 150 280 L 200 240 L 250 220',delay:1.4,dur:1.0}
     ]},
-    // 3. Football: I-Form Power Run
-    { sport:'football', players:[
+    { sport:'football', label:'I-Form Power', players:[
       {x:200,y:410,t:'O'},{x:230,y:410,t:'O'},{x:250,y:410,t:'O'},{x:270,y:410,t:'O'},{x:300,y:410,t:'O'},
       {x:250,y:435,t:'X'},{x:250,y:480,t:'X'},{x:250,y:530,t:'X'},
       {x:340,y:405,t:'X'},{x:60,y:405,t:'X'},{x:440,y:405,t:'X'}
@@ -103,11 +92,9 @@
       {d:'M 250 480 L 290 450 L 330 420',delay:.3,dur:1.3},
       {d:'M 230 410 Q 230 430 240 440 Q 270 450 310 430 L 350 400',delay:.2,dur:1.5},
       {d:'M 60 405 L 60 300 L 60 220',delay:.6,dur:1.5},
-      {d:'M 440 405 L 380 370 L 350 340',delay:.7,dur:1.1},
-      {d:'M 340 405 L 320 390 L 310 375',delay:.2,dur:.7}
+      {d:'M 440 405 L 380 370 L 350 340',delay:.7,dur:1.1}
     ]},
-    // 4. Basketball: Fast Break 3v2
-    { sport:'basketball', players:[
+    { sport:'basketball', label:'Fast Break', players:[
       {x:250,y:560,t:'O'},{x:120,y:480,t:'O'},{x:380,y:480,t:'O'}
     ], routes:[
       {d:'M 250 560 L 250 440 L 250 340',delay:.3,dur:1.8},
@@ -115,37 +102,12 @@
       {d:'M 380 480 L 400 380 Q 410 320 420 260 L 420 200',delay:.4,dur:2.0},
       {d:'M 250 340 Q 320 300 390 270',delay:2.0,dur:.8,dashed:true},
       {d:'M 420 200 Q 380 180 330 165 L 280 155',delay:2.8,dur:1.2}
-    ]},
-    // 5. Football: Spread 4-WR
-    { sport:'football', players:[
-      {x:200,y:410,t:'O'},{x:230,y:410,t:'O'},{x:250,y:410,t:'O'},{x:270,y:410,t:'O'},{x:300,y:410,t:'O'},
-      {x:250,y:470,t:'X'},
-      {x:30,y:405,t:'X'},{x:130,y:395,t:'X'},{x:370,y:395,t:'X'},{x:470,y:405,t:'X'}
-    ], routes:[
-      {d:'M 30 405 L 30 300 L 30 200 L 45 140',delay:.4,dur:2.3},
-      {d:'M 130 395 L 130 330 Q 130 300 100 290 L 50 280',delay:.6,dur:1.7},
-      {d:'M 370 395 L 370 320 Q 370 280 340 270 L 220 255',delay:.7,dur:2.0},
-      {d:'M 470 405 L 470 320 Q 470 290 460 285 L 450 290',delay:.5,dur:1.5},
-      {d:'M 250 470 Q 240 455 230 445',delay:1.8,dur:.7}
-    ]},
-    // 6. Basketball: Horns Set
-    { sport:'basketball', players:[
-      {x:250,y:530,t:'O'},{x:170,y:360,t:'O'},{x:330,y:360,t:'O'},{x:70,y:490,t:'O'},{x:430,y:490,t:'O'}
-    ], routes:[
-      {d:'M 250 530 L 180 380',delay:.3,dur:.8,dashed:true},
-      {d:'M 250 530 Q 200 470 185 420 Q 175 380 200 310 L 230 240',delay:.6,dur:2.0},
-      {d:'M 170 360 L 330 360',delay:1.8,dur:.6,dashed:true},
-      {d:'M 430 490 L 410 430 L 390 380',delay:1.6,dur:1.3},
-      {d:'M 330 360 Q 360 320 370 280 Q 380 240 350 200 L 290 170',delay:2.4,dur:1.6},
-      {d:'M 70 490 L 60 440 L 80 400',delay:1.0,dur:.9}
     ]}
   ];
 
-  /* Render */
   function renderPlay(playEl, bgEl, p) {
     playEl.innerHTML = '';
     if (p.sport === 'football') drawFootball(bgEl); else drawCourt(bgEl);
-
     p.players.forEach(function(pl, i) {
       var g = el('g',{class: pl.t==='X' ? 'player-x' : 'player-o'});
       var txt = el('text',{x:pl.x, y:pl.y});
@@ -156,16 +118,11 @@
       playEl.appendChild(g);
       raf(function(){ txt.style.opacity = '1'; });
     });
-
     p.routes.forEach(function(r) {
       var path = el('path',{d:r.d, class:'route'});
-      if (r.dashed) {
-        path.setAttribute('stroke-dasharray','6 4');
-        path.style.opacity = '0';
-      }
+      if (r.dashed) { path.setAttribute('stroke-dasharray','6 4'); path.style.opacity = '0'; }
       playEl.appendChild(path);
       var len = path.getTotalLength();
-
       if (r.dashed) {
         path.style.strokeDashoffset = len;
         path.style.transition = 'stroke-dashoffset '+r.dur+'s ease-in-out '+r.delay+'s, opacity 0.3s ease '+r.delay+'s';
@@ -176,7 +133,6 @@
         path.style.transition = 'stroke-dashoffset '+r.dur+'s ease-in-out '+r.delay+'s';
         raf(function(){ path.style.strokeDashoffset='0'; });
       }
-
       var end = path.getPointAtLength(len);
       var prev = path.getPointAtLength(Math.max(0,len-14));
       var arrow = el('polygon',{class:'arrowhead', points:arrowPts(end.x,end.y,prev.x,prev.y)});
@@ -186,17 +142,14 @@
     });
   }
 
-  /* Two independent loops */
-  var leftPlay  = document.getElementById('play-L');
-  var leftBg    = document.getElementById('bg-L');
-  var rightPlay = document.getElementById('play-R');
-  var rightBg   = document.getElementById('bg-R');
-  if (!leftPlay || !rightPlay) return;
+  var playEl = document.getElementById('play-main');
+  var bgEl = document.getElementById('bg-main');
+  var labelEl = document.getElementById('play-label');
+  if (!playEl || !bgEl) return;
 
-  var leftQueue  = [0, 2, 4]; // Football plays
-  var rightQueue = [1, 3, 5]; // Basketball plays
-  var leftIdx = 0, rightIdx = 0;
-  var active = true, timers = [];
+  var idx = 0;
+  var active = true;
+  var timers = [];
 
   function fadeEl(g, op, dur) {
     return new Promise(function(res){
@@ -206,57 +159,28 @@
     });
   }
 
-  function cycleLeft() {
+  function cycle() {
     if (!active) return;
-    var pi = leftQueue[leftIdx];
-    leftIdx = (leftIdx+1)%leftQueue.length;
-    renderPlay(leftPlay, leftBg, plays[pi]);
-
-    fadeEl(leftPlay,1,.8).then(function(){
+    var p = plays[idx];
+    idx = (idx+1) % plays.length;
+    renderPlay(playEl, bgEl, p);
+    if (labelEl) { labelEl.style.opacity = '0'; setTimeout(function(){ labelEl.textContent = p.label; labelEl.style.opacity = '1'; }, 400); }
+    fadeEl(playEl,1,.8).then(function(){
       return new Promise(function(r){ timers.push(setTimeout(r,5200)); });
     }).then(function(){
-      return fadeEl(leftPlay,0,.8);
+      return fadeEl(playEl,0,.8);
     }).then(function(){
-      if (active) cycleLeft();
+      if (active) cycle();
     });
   }
 
-  function cycleRight() {
-    if (!active) return;
-    var pi = rightQueue[rightIdx];
-    rightIdx = (rightIdx+1)%rightQueue.length;
-    renderPlay(rightPlay, rightBg, plays[pi]);
-
-    fadeEl(rightPlay,1,.8).then(function(){
-      return new Promise(function(r){ timers.push(setTimeout(r,5200)); });
-    }).then(function(){
-      return fadeEl(rightPlay,0,.8);
-    }).then(function(){
-      if (active) cycleRight();
-    });
-  }
-
-  function start() {
-    cycleLeft();
-    setTimeout(function(){ cycleRight(); }, 3000);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', start);
-  } else {
-    start();
-  }
+  function start() { cycle(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 
   document.addEventListener('visibilitychange', function(){
-    if (document.hidden) {
-      active = false;
-      timers.forEach(clearTimeout);
-      timers = [];
-    } else {
-      active = true;
-      cycleLeft();
-      setTimeout(function(){ cycleRight(); }, 1500);
-    }
+    if (document.hidden) { active = false; timers.forEach(clearTimeout); timers = []; }
+    else { active = true; cycle(); }
   });
 })();
 </script>

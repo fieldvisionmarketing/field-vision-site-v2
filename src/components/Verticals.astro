@@ -1,24 +1,25 @@
 ---
 const verticals = [
-  { icon: '\u{1F4F1}', label: 'Digital Media' },
-  { icon: '\u{1F3AC}', label: 'Entertainment' },
-  { icon: '\u{1F3A8}', label: 'Creator Economy' },
-  { icon: '\u{1F4FA}', label: 'Streaming' },
-  { icon: '\u{1F3B5}', label: 'Music' },
-  { icon: '\u26BD',    label: 'Sports' },
+  { icon: '📱', label: 'Digital Media' },
+  { icon: '🎬', label: 'Entertainment' },
+  { icon: '🎨', label: 'Creator Economy' },
+  { icon: '📺', label: 'Streaming' },
+  { icon: '🎵', label: 'Music' },
+  { icon: '⚽', label: 'Sports' },
 ];
 ---
 
-<section class="verticals">
-  <div class="verticals-inner">
-    <h2 class="reveal">Where We <span class="highlight">Play</span></h2>
-    <div class="vert-grid">
-      {verticals.map((v, i) => (
-        <div class={`vert-card reveal rd${i + 1}`}>
-          <span class="vert-icon">{v.icon}</span>
-          <h3>{v.label}</h3>
-        </div>
-      ))}
-    </div>
+<section class="verticals section">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Industries</div>
+    <h2 class="section-title">Where We <span class="hl-green">Play</span></h2>
+  </div>
+  <div class="verticals-grid">
+    {verticals.map((v, i) => (
+      <div class={`vertical-tile reveal rd${i + 1}`}>
+        <div class="vertical-emoji">{v.icon}</div>
+        <div class="vertical-name">{v.label}</div>
+      </div>
+    ))}
   </div>
 </section>

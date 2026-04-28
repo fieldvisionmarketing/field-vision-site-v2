@@ -1,37 +1,47 @@
 ---
 const frameworks = [
   {
+    icon: "🔬",
     name: "ABCT®",
     body: "Our key engagement model. We audit what exists, blueprint the strategy, construct the systems, then transfer ownership — built to be fired.",
     href: "/guides/abct-framework/",
   },
   {
+    icon: "📊",
     name: "SCORE®",
-    body: "Field Vision’s hypothesis-driven marketing playbook. Five steps to turn strategic context into testable experiments, disciplined execution, and compounding growth.",
+    body: "Field Vision's hypothesis-driven marketing playbook. Five steps to turn strategic context into testable experiments, disciplined execution, and compounding growth.",
     href: "/guides/score-framework/",
   },
   {
+    icon: "🔄",
     name: "CGS®",
-    body: "The Compound Growth System® — a 4 C’s flywheel for scalable customer acquisition and retention. Catch, Convert, Cultivate, and Champion your way to compounding growth.",
+    body: "The Compound Growth System — a 4 C’s flywheel for scalable customer acquisition and retention. Catch, Convert, Cultivate, and Champion your way to compounding growth.",
     href: "/guides/compound-growth-system/",
   },
 ];
 ---
 
-<section class="frameworks">
-  <div class="frameworks-inner">
-    <div class="reveal">
-      <h2>Our <span class="highlight">Products</span></h2>
-      <p class="section-sub">Every engagement runs on proprietary growth systems — not guesswork. Repeatable results, every time.</p>
+<section class="frameworks section" style="background:var(--warm-gray)">
+  <div class="section-header-row reveal">
+    <div>
+      <div class="section-eyebrow">Frameworks</div>
+      <h2 class="section-title">Our <span class="hl-green">Products</span></h2>
+      <p class="section-subtitle">Every engagement runs on proprietary growth systems — not guesswork.</p>
     </div>
-    <div class="fw-grid">
-      {frameworks.map((fw, i) => (
-        <a href={fw.href} class={`fw-card reveal rd${i + 1}`}>
-          <div class="fw-name">{fw.name}</div>
-          <p>{fw.body}</p>
-          <span class="fw-link">Read the Guide →</span>
-        </a>
-      ))}
-    </div>
+    <a href="/guides/" class="btn-brutal-outline">View All Guides →</a>
+  </div>
+  <div class="products-grid">
+    {frameworks.map((fw, i) => (
+      <a href={fw.href} class={`product-card reveal rd${i + 1}`}>
+        <div class="product-header">
+          <div class="product-icon"><span>{fw.icon}</span></div>
+          <span class="product-name">{fw.name}</span>
+        </div>
+        <div class="product-body">
+          <p class="product-desc">{fw.body}</p>
+          <span class="product-link">Read the Guide →</span>
+        </div>
+      </a>
+    ))}
   </div>
 </section>

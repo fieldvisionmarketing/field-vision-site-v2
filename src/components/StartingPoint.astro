@@ -21,20 +21,26 @@ const cards = [
 ];
 ---
 
-<section class="starting-point">
-  <div class="sp-inner">
-    <div class="reveal">
-      <h2>Find Your <span class="highlight">Starting Point</span></h2>
-              <p class="section-sub">Every startup's marketing challenge looks different.<br />Which sounds like yours?</p>
-    </div>
-    <div class="starting-cards">
-      {cards.map((card, i) => (
-        <div class={`starting-card reveal rd${i + 1}`}>
-          <div class="starting-card-num">{card.num}</div>
-          <h3>{card.title}</h3>
-          <p>{card.body}</p>
+<section class="starting-point section">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Your Starting Point</div>
+    <h2 class="section-title">Every Startup's Marketing Challenge Looks <span class="hl-cream">Different</span></h2>
+    <p class="section-subtitle">Which sounds like yours?</p>
+  </div>
+  <div class="persona-grid">
+    {cards.map((card, i) => (
+      <a href={card.link.href} class={`persona-card reveal rd${i + 1}`}>
+        <div class="persona-top">
+          <div class="persona-num">{card.num}</div>
+          <div>
+            <div class="persona-label">Starting Point</div>
+            <div class="persona-name">{card.title}</div>
+          </div>
         </div>
-      ))}
-    </div>
+        <div class="persona-bottom">
+          <p class="persona-desc">{card.body}</p>
+        </div>
+      </a>
+    ))}
   </div>
 </section>

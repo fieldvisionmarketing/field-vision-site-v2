@@ -1,46 +1,43 @@
 ---
-const services = [
+const topRow = [
   {
     emoji: "🎯",
     title: "Fractional CMO",
     body: "Senior marketing leadership embedded in your team — without the full-time price tag. Strategy, execution, and accountability on a flexible engagement.",
     href: "/services/fractional-cmo/",
-    style: "bento-dark span-2",
   },
   {
     emoji: "🚀",
     title: "Go-to-Market Strategy",
     body: "Launch plans built on market intelligence, competitive positioning, and channel strategy that actually converts.",
     href: "/services/go-to-market/",
-    style: "bento-light",
   },
   {
     emoji: "📈",
-    title: "Growth & Lifecycle Marketing",
+    title: "Growth & Lifecycle",
     body: "Acquisition, activation, retention — full-funnel systems designed to compound over time.",
     href: "/services/growth-marketing/",
-    style: "bento-cream",
   },
   {
     emoji: "🧩",
-    title: "Integrated<br/>Marketing",
+    title: "Integrated Marketing",
     body: "Brand, product, and growth marketing aligned under one strategy. No more silos, no more mixed messages.",
     href: "/services/integrated-marketing/",
-    style: "bento-light",
   },
+];
+
+const bottomRow = [
   {
     emoji: "✍️",
-    title: "Content & Creator Marketing",
+    title: "Content & Creator",
     body: "Content strategy, creator partnerships, and community building that drive organic growth and brand equity.",
     href: "/services/content-creator-marketing/",
-    style: "bento-cream",
   },
   {
     emoji: "🤖",
     title: "AI Growth Systems",
-    body: "Custom AI-powered workflows that automate research, content, reporting, and competitive intelligence — built for your team, not off-the-shelf.",
+    body: "Custom AI-powered workflows that automate research, content, reporting, and competitive intelligence.",
     href: "/services/ai-growth-systems/",
-    style: "bento-dark span-2",
     badge: "New",
   },
   {
@@ -48,27 +45,45 @@ const services = [
     title: "Org & Process Design",
     body: "Marketing team structures, hiring plans, vendor selection, and operating models built to scale.",
     href: "/services/org-process-design/",
-    style: "bento-light",
-  }
+  },
 ];
 ---
 
-<section class="services">
-  <div class="services-inner">
-    <div class="services-head reveal">
-      <h2>Our <span class="highlight">Services</span></h2>
-      <p>We don’t just advise — we build the systems, strategies, and teams that drive growth.</p>
+<section class="services section" style="background:var(--warm-gray)">
+  <div class="section-header-row reveal">
+    <div>
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title">Our <span class="hl-green">Services</span></h2>
     </div>
-    <div class="bento">
-      {services.map((s, i) => (
-        <a href={s.href} class={`bento-card ${s.style} reveal rd${(i % 5) + 1}`}>
-          {s.badge && <span class="bento-badge">{s.badge}</span>}
-          {s.emoji && <span class="bento-emoji">{s.emoji}</span>}
-          <h3 set:html={s.title} />
-          <p>{s.body}</p>
-          <span class="card-link">Learn More →</span>
-        </a>
-      ))}
-    </div>
+    <a href="/services/" class="btn-brutal-outline">View All Services →</a>
+  </div>
+  <div class="services-grid">
+    {topRow.map((s, i) => (
+      <a href={s.href} class={`service-card reveal rd${i + 1}`}>
+        <div class="service-card-header">
+          <span class="service-emoji">{s.emoji}</span>
+          <span class="service-name">{s.title}</span>
+        </div>
+        <div class="service-card-body">
+          <p class="service-desc">{s.body}</p>
+          <span class="service-link">Learn More →</span>
+        </div>
+      </a>
+    ))}
+  </div>
+  <div class="services-row-bottom">
+    {bottomRow.map((s, i) => (
+      <a href={s.href} class={`service-card reveal rd${i + 1}`}>
+        <div class="service-card-header">
+          <span class="service-emoji">{s.emoji}</span>
+          <span class="service-name">{s.title}</span>
+          {s.badge && <span class="service-new-badge">{s.badge}</span>}
+        </div>
+        <div class="service-card-body">
+          <p class="service-desc">{s.body}</p>
+          <span class="service-link">Learn More →</span>
+        </div>
+      </a>
+    ))}
   </div>
 </section>
