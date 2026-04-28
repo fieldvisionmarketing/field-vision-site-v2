@@ -66,8 +66,9 @@ p,.body-text{font-weight:400;line-height:1.6;font-size:1.15rem}
 }
 
 /* ── Reveal Animation ── */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .35s cubic-bezier(.4,0,.2,1),transform .35s cubic-bezier(.4,0,.2,1)}
+.reveal{opacity:1;transform:translateY(0);transition:opacity .35s cubic-bezier(.4,0,.2,1),transform .35s cubic-bezier(.4,0,.2,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
+html.js-reveal .reveal:not(.visible){opacity:0;transform:translateY(32px)}
 .rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.25s}
 .rd4{transition-delay:.3s}.rd5{transition-delay:.4s}.rd6{transition-delay:.5s}
 

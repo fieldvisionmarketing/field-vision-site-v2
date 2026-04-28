@@ -265,6 +265,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <!-- Reveal animation script -->
   <script is:inline>
     (function(){
+      document.documentElement.classList.add('js-reveal');
       function initReveal(){
         var reveals = document.querySelectorAll('.reveal');
         if(!reveals.length) return;
@@ -272,7 +273,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
           entries.forEach(function(entry){
             if(entry.isIntersecting){ entry.target.classList.add('visible'); }
           });
-        }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+        }, { threshold: 0.05, rootMargin: '0px 0px -10px 0px' });
         reveals.forEach(function(el){ observer.observe(el); });
       }
       if(document.readyState === 'loading'){

@@ -1,0 +1,168 @@
+{
+  "$ref": "#/definitions/services",
+  "definitions": {
+    "services": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number",
+          "default": 0
+        },
+        "ogImage": {
+          "type": "string"
+        },
+        "sidebar": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "problemHeadline": {
+          "type": "string"
+        },
+        "problemIntro": {
+          "type": "string"
+        },
+        "oldWay": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "newWay": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "deliverables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "desc": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "icon",
+              "title",
+              "desc"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "whoIntro": {
+          "type": "string"
+        },
+        "whoTriggers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "whoCta": {
+          "type": "object",
+          "properties": {
+            "headline": {
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "headline",
+            "body"
+          ],
+          "additionalProperties": false
+        },
+        "abctSteps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "desc": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "step",
+              "title",
+              "desc"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "faqs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string"
+              },
+              "answer": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "question",
+              "answer"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "ctaHeadline": {
+          "type": "string"
+        },
+        "ctaBody": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
