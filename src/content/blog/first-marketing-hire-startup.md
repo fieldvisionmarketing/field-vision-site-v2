@@ -36,7 +36,7 @@ A Series A startup has none of that. Zero.
 
 The skills that make someone excellent at a large company are completely different from what an early startup needs. Cross-functional coordination, stakeholder management, budget optimization, vendor negotiations, team building across multiple disciplines — these are critical capabilities at scale. But at a startup with twelve employees and $2M in the bank, they’re irrelevant.
 
-<img src="/blog/expensive.png" alt="Burning cash fanned out next to a curriculum vitae and empty planner — the cost of hiring the wrong first marketer" style="max-width:100%; border-radius:8px; margin:2rem 0;" />
+<img src="/blog/expensive.png" alt="Burning cash fanned out next to a curriculum vitae and empty planner — the cost of hiring the wrong first marketer" style="max-width:100%; border-radius:0; margin:2rem 0;" />
 
 What an early startup actually needs is someone who can go from zero to one. Someone who can write the copy, build the landing page, set up the ad campaign, analyze the data, and iterate — all before lunch. Someone who’s comfortable operating without a playbook because they’re the one writing it.
 
@@ -52,7 +52,7 @@ At this stage, the founder *is* the marketing department. Full stop. Nobody know
 
 If you absolutely need help, hire one generalist — someone who can write, run ads, build landing pages, and look at a spreadsheet without flinching. Not a strategist. A doer. Budget: $0-$80K salary.
 
-<img src="/blog/seed%20series%20a.png" alt="Founder wearing stacked Design, Sales, and Marketing hats while working on a laptop — surrounded by landing page wireframes, funnel sketches, and sticky notes" style="max-width:100%; border-radius:8px; margin:2rem 0;" />
+<img src="/blog/seed%20series%20a.png" alt="Founder wearing stacked Design, Sales, and Marketing hats while working on a laptop — surrounded by landing page wireframes, funnel sketches, and sticky notes" style="max-width:100%; border-radius:0; margin:2rem 0;" />
 
 ### Series A: Hire a Builder, Not a Strategist
 
@@ -70,7 +70,7 @@ When they are met, a Head of Marketing or VP makes sense. This person builds the
 
 Now you need someone who can build and manage a department, own a P&L, interface with the board, and drive the company’s growth narrative. This is where the big-company hire makes sense — someone who’s operated at scale, managed large teams, and knows how to translate marketing investment into predictable revenue. They’ve been through the fire at a company with real infrastructure and they know how to build that infrastructure from the mid-stage up. Budget: $200K-$300K+.
 
-<img src="/blog/series%20b%20c.png" alt="Scrappy marketing builder — hard hat on a laptop showing a marketing dashboard, surrounded by ad campaign metrics, duct tape, a rocket sketch, and sticky notes reading Launch, Optimize, Scale" style="max-width:100%; border-radius:8px; margin:2rem 0;" />
+<img src="/blog/series%20b%20c.png" alt="Scrappy marketing builder — hard hat on a laptop showing a marketing dashboard, surrounded by ad campaign metrics, duct tape, a rocket sketch, and sticky notes reading Launch, Optimize, Scale" style="max-width:100%; border-radius:0; margin:2rem 0;" />
 
 <table>
 <thead>

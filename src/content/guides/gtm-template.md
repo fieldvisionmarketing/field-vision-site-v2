@@ -47,10 +47,10 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 </div>
 </div>
 
-<div class="inline-cta" style="background: #213621; border-radius: 16px; padding: 40px 32px; text-align: center; margin: 2rem 0;">
+<div class="inline-cta" style="background: #213621; border-radius: 0; padding: 40px 32px; text-align: center; margin: 2rem 0;">
 <p style="font-family: Anton, sans-serif; font-size: 1.6rem; text-transform: uppercase; color: #F5F0E8; margin: 0 0 12px;">Download the GTM Template</p>
 <p style="color: #F5F0E8; margin: 0 0 20px; font-size: 1rem; opacity: 0.85;">Start running go-to-market plans without chaos.</p>
-<a href="/downloads/Field Vision GTM Template.docx" style="display: inline-block; background: #A5DB5D; color: #213621; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.95rem;">Download Template &rarr;</a>
+<a href="/downloads/Field Vision GTM Template.docx" style="display: inline-block; background: #A5DB5D; color: #213621; padding: 14px 32px; border-radius: 0; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.95rem;">Download Template &rarr;</a>
 </div>
 
 

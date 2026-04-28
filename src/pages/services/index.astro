@@ -60,7 +60,7 @@ const services = (await getCollection('services'))
   .service-list-card {
     background: #fff;
     border: 1px solid #e0e0e0;
-    border-radius: var(--radius);
+    border-radius: 0;
     padding: 36px 28px;
     text-decoration: none;
     color: inherit;
@@ -70,7 +70,7 @@ const services = (await getCollection('services'))
   }
   .service-list-card:hover {
     border-color: var(--accent);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    box-shadow: 8px 8px 0 var(--ink);
   }
   .service-list-icon {
     font-size: 2rem;
