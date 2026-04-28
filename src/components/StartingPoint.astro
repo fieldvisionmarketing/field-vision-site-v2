@@ -29,7 +29,7 @@ const cards = [
   </div>
   <div class="persona-grid">
     {cards.map((card, i) => (
-      <a href={card.link.href} class={`persona-card reveal rd${i + 1}`}>
+      <div class={`persona-card reveal rd${i + 1}`}>
         <div class="persona-top">
           <div class="persona-num">{card.num}</div>
           <div>
@@ -38,8 +38,9 @@ const cards = [
         </div>
         <div class="persona-bottom">
           <p class="persona-desc">{card.body}</p>
+          <a href={card.link.href} class="persona-link">{card.link.label}</a>
         </div>
-      </a>
+      </div>
     ))}
   </div>
 </section>

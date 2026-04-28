@@ -80,8 +80,8 @@ h1, h2, h3 {
 }
 
 /* ── Reveal Animation ── */
-.reveal { opacity: 1; transform: translateY(0); transition: opacity .35s cubic-bezier(.4,0,.2,1), transform .35s cubic-bezier(.4,0,.2,1); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity .5s cubic-bezier(.4,0,.2,1), transform .5s cubic-bezier(.4,0,.2,1); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
 .rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.25s}
 .rd4{transition-delay:.3s}.rd5{transition-delay:.4s}.rd6{transition-delay:.5s}
 
@@ -184,6 +184,7 @@ h1, h2, h3 {
 
 /* ── HERO — two-column grid ── */
 .hero-section {
+  min-height: calc(100vh - 72px);
   padding: 80px 48px;
   padding-top: 152px; /* account for fixed header */
   background: var(--paper);
@@ -297,10 +298,8 @@ h1, h2, h3 {
   border: 4px solid var(--ink);
   box-shadow: 8px 8px 0 var(--ink);
   overflow: hidden; position: relative;
-  transition: transform 0.15s, box-shadow 0.15s;
-  display: block; text-decoration: none; color: var(--ink);
+  display: block; color: var(--ink);
 }
-.persona-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
 /* R11: Only clickable cards animate on hover. Non-clickable cards have no transition/hover. */
 /* R12: Clickable cards are fully clickable — whole card is an <a> link, not just the CTA. */
 .persona-num {
@@ -326,6 +325,16 @@ h1, h2, h3 {
   letter-spacing: 0.02em; color: var(--ink); line-height: 1.15;
 }
 .persona-bottom { background: var(--paper); padding: 20px 24px; }
+.persona-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--ink);
+  border-top: 4px solid var(--ink);
+  padding-top: 12px; margin-top: 16px;
+  display: inline-block; text-decoration: none;
+  transition: color 0.15s;
+}
+.persona-link:hover { color: var(--green-dk); }
 .persona-desc {
   font-size: 15px; font-weight: 450; line-height: 1.55; color: var(--muted);
 }
@@ -684,7 +693,8 @@ h1, h2, h3 {
    RESPONSIVE — 1024px
    ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .hero-section { grid-template-columns: 1fr; min-height: auto; }
+  .hero-section {
+  min-height: calc(100vh - 72px); grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding-right: 0; }
   .hero-right { display: none; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -700,7 +710,8 @@ h1, h2, h3 {
    ══════════════════════════════════════════ */
 @media (max-width: 768px) {
   .section { padding: 56px 24px; }
-  .hero-section { padding: 120px 24px 56px; }
+  .hero-section {
+  min-height: calc(100vh - 72px); padding: 120px 24px 56px; }
   .hero-headline h1 { font-size: clamp(36px, 10vw, 52px); }
   .hero-lede-row { grid-template-columns: 1fr; gap: 16px; }
   .nav-center { display: none; }
