@@ -9,6 +9,8 @@
    R4  PADDING:     Header/body: 20px 24px. Footer: 14px 24px.
    R5  TEXT COLORS:  --ink (headings), --muted (body), --green-dk (labels).
    R6  CARD LINKS:  JBM 11px uppercase, 4px top-border, arrow on hover.
+   R11 HOVER RULE:  Only clickable cards animate on hover. Non-clickable = no transition.
+   R12 CLICK AREA:  Clickable cards are fully clickable — whole card is an <a>, not just the CTA.
    R7  HOVER:       Cards = lift (-2px, shadow +2px). Text = green-dk.
    R8  SECTION HDR: Eyebrow (JBM 12px + dash) + Title (Anton).
    R9  BACKGROUNDS: white ↔ warm-gray alternate. Cream = bookends. Dark = testimonials/footer.
@@ -298,7 +300,9 @@ h1, h2, h3 {
   transition: transform 0.15s, box-shadow 0.15s;
   display: block; text-decoration: none; color: var(--ink);
 }
-/* Non-clickable cards: no hover animation (R11) */
+.persona-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
+/* R11: Only clickable cards animate on hover. Non-clickable cards have no transition/hover. */
+/* R12: Clickable cards are fully clickable — whole card is an <a> link, not just the CTA. */
 .persona-num {
   font-family: 'Anton', sans-serif;
   font-size: 48px; color: var(--green-lt);
@@ -393,7 +397,6 @@ h1, h2, h3 {
   border: 4px solid var(--ink);
   box-shadow: 6px 6px 0 var(--ink);
   padding: 28px 16px; text-align: center;
-  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .vertical-emoji { font-size: 28px; margin-bottom: 10px; display: block; }
@@ -412,7 +415,6 @@ h1, h2, h3 {
   border: 4px solid var(--ink);
   box-shadow: 8px 8px 0 var(--ink);
   overflow: hidden; position: relative;
-  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .why-num {
