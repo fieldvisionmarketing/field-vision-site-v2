@@ -3,7 +3,7 @@ title: "Why Your Startup Doesn't Need a CMO Yet"
 description: "The case for fractional marketing leadership before making a full-time commitment. How to get executive-level strategy without the $250K salary."
 category: "Growth Strategy"
 date: 2025-03-01
-author: "David Hampian"
+author: "Field Vision"
 tags: ["fractional cmo", "startup marketing", "leadership"]
 ---
 
@@ -31,7 +31,7 @@ The three most common failure modes I've seen:
 
 Before product-market fit is locked in, you need three things from marketing leadership:
 
-**Strategic clarity.** Someone who can translate your product and market reality into a coherent go-to-market thesis — who you're targeting, what you're saying, through which channels, and why. This is what we call the [SCORE Framework](/guides/score-framework/) in practice: setting the foundation before building anything.
+**Strategic clarity.** Someone who can translate your product and market reality into a coherent go-to-market thesis — who you're targeting, what you're saying, through which channels, and why. This is what we call the [SCORE® Framework](/guides/score-framework/) in practice: setting the foundation before building anything.
 
 **Lightweight systems.** A marketing infrastructure that matches your stage — not enterprise-grade martech stacks, but the right CRM, the right attribution model, the right content engine for your current scale. Systems that will grow with you rather than need to be ripped out and replaced in 12 months.
 
@@ -41,7 +41,7 @@ You don't need someone sitting in your office five days a week to deliver these 
 
 ## The Fractional CMO Advantage
 
-When I embed with a startup, I'm not advising from the sidelines. I'm in Slack, in the data, in the weeds with the team. The difference from a full-time hire is that I'm building the system to run without me — what we call the [ABCT Framework](/guides/abct-framework/): Audit what exists, Blueprint the strategy, Construct the infrastructure, and Transfer ownership back to the team.
+When I embed with a startup, I'm not advising from the sidelines. I'm in Slack, in the data, in the weeds with the team. The difference from a full-time hire is that I'm building the system to run without me — what we call the [ABCT® Framework](/guides/abct-framework/): Audit what exists, Blueprint the strategy, Construct the infrastructure, and Transfer ownership back to the team.
 
 The fractional model solves three problems simultaneously:
 
@@ -77,7 +77,7 @@ The fractional model isn't forever. Here's how you know it's time to make the fu
 
 ## A Decision Framework
 
-Use this simple framework to evaluate your CMO timing — it maps to the [SCORE methodology](/guides/score-framework/) we use with every client:
+Use this simple framework to evaluate your CMO timing — it maps to the [SCORE® methodology](/guides/score-framework/) we use with every client:
 
 **If you're pre-PMF (Seed to Series A):** You need a fractional CMO or a senior marketing advisor. Full stop. Don't hire a full-time marketing executive until you know what's working.
 

@@ -3,7 +3,7 @@ title: "What is a Fractional CMO? Everything You Need to Know"
 description: "A fractional CMO is a senior marketing executive who works with companies on a part-time or contract basis. Learn how fractional CMOs work, what they cost, and when to hire one."
 category: "Growth Strategy"
 date: 2026-03-14
-author: "David Hampian"
+author: "Field Vision"
 tags: ["fractional cmo", "marketing leadership", "growth strategy", "fractional cmo cost"]
 ---
 
@@ -21,7 +21,7 @@ In practice, a fractional CMO engagement looks like this. During the first 30 da
 
 The reporting structure matters. A fractional CMO reports directly to the CEO, just like a full-time CMO would. They attend leadership meetings, contribute to strategic planning, and have the authority to make decisions about marketing direction. This is what separates a fractional CMO from a marketing consultant — they don't just recommend, they own the outcomes.
 
-The typical engagement runs six to eighteen months. Some companies use a fractional CMO as a bridge while they search for a full-time hire. Others find that the fractional model is the right permanent solution — particularly companies in the $2M to $30M revenue range where a full-time CMO isn't financially justified. In either case, the goal is to build marketing infrastructure that outlasts the engagement. As [David Hampian](/about/), founder of Field Vision, puts it: the best fractional CMO engagement is one where the client doesn't need you anymore because you've built the systems, trained the team, and documented the playbook.
+The typical engagement runs six to eighteen months. Some companies use a fractional CMO as a bridge while they search for a full-time hire. Others find that the fractional model is the right permanent solution — particularly companies in the $2M to $30M revenue range where a full-time CMO isn't financially justified. In either case, the goal is to build marketing infrastructure that outlasts the engagement. As [Field Vision](/about/), founder of Field Vision, puts it: the best fractional CMO engagement is one where the client doesn't need you anymore because you've built the systems, trained the team, and documented the playbook.
 
 The fractional model has gained traction because it solves a real structural problem. Companies that are growing past founder-led marketing need strategic leadership, but the traditional hire-a-VP approach carries significant risk at early stages. A fractional CMO gives you the strategy and seniority without the $250K salary, the six-month search process, or the risk of a bad full-time hire.
 
@@ -77,13 +77,13 @@ If you're a startup trying to figure out the right timing, check out [why your s
 
 Not all fractional CMOs are created equal. Some are genuinely C-suite caliber. Others are mid-career marketers using the "fractional CMO" title to charge premium rates. Here's how to evaluate candidates.
 
-**Look for a strategic framework.** The best fractional CMOs don't just bring experience — they bring a systematic approach to marketing. Ask candidates to walk you through their methodology. How do they diagnose marketing problems? How do they prioritize initiatives? How do they build a marketing strategy from scratch? If the answer is vague or purely tactical, they're probably a marketing manager, not a CMO. At Field Vision, for example, every engagement starts with the [SCORE Framework](/guides/score-framework/) — a structured five-step process for aligning marketing with buyer psychology — because strategy without a system is just opinion.
+**Look for a strategic framework.** The best fractional CMOs don't just bring experience — they bring a systematic approach to marketing. Ask candidates to walk you through their methodology. How do they diagnose marketing problems? How do they prioritize initiatives? How do they build a marketing strategy from scratch? If the answer is vague or purely tactical, they're probably a marketing manager, not a CMO. At Field Vision, for example, every engagement starts with the [SCORE® Framework](/guides/score-framework/) — a structured five-step process for aligning marketing with buyer psychology — because strategy without a system is just opinion.
 
 **Evaluate measurable results.** Ask for specific outcomes from previous engagements. Not "we increased brand awareness" but "we built a content system that generated 340% more qualified leads in six months" or "we restructured the go-to-market and reduced customer acquisition cost by 40%." A real fractional CMO can point to concrete business outcomes, not just activity metrics.
 
 **Assess team compatibility.** A fractional CMO will work closely with your existing team, your CEO, and potentially your board. Chemistry matters. The best fractional CMOs are skilled at quickly building trust with teams, motivating people they don't directly employ full-time, and navigating the politics of organizations where they're an outsider with insider authority.
 
-**Check industry fluency, not just industry experience.** Having worked in your exact industry is less important than understanding the dynamics of your market. A fractional CMO with B2B SaaS experience can often transition effectively to B2B services or B2B hardware because the buyer psychology and channel dynamics are similar. What matters more is whether they understand your buyer's decision-making process.
+**Check industry fluency, not just industry experience.** Having worked in your exact industry is less important than understanding the dynamics of your market. A fractional CMO with B2C SaaS experience can often transition effectively to B2C services or B2C hardware because the buyer psychology and channel dynamics are similar. What matters more is whether they understand your buyer's decision-making process.
 
 **Look for technology fluency.** Modern marketing is inseparable from technology. Your fractional CMO should be comfortable with marketing automation, CRM systems, analytics platforms, and increasingly, AI tools. They don't need to be a technical operator, but they need to understand what's possible and make informed decisions about your marketing stack.
 
@@ -133,7 +133,7 @@ Yes. Most fractional CMOs manage existing marketing teams as a core part of thei
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 <div itemprop="text">
 
-Fractional CMOs work across virtually every B2B and B2C industry, though the model is most common in B2B SaaS, professional services, healthcare technology, financial services, e-commerce, and manufacturing. Any company that needs senior marketing leadership but doesn't have the budget, scale, or certainty to justify a full-time CMO hire is a potential fit for the fractional model.
+Fractional CMOs work across virtually every B2B and B2C industry, though the model is most common in B2C SaaS, professional services, healthcare technology, financial services, e-commerce, and manufacturing. Any company that needs senior marketing leadership but doesn't have the budget, scale, or certainty to justify a full-time CMO hire is a potential fit for the fractional model.
 
 </div>
 </div>

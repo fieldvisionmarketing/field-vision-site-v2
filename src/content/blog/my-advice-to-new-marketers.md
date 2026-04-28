@@ -67,7 +67,7 @@ Creating compelling stuff and getting it seen.
 
 ### 2d) Brand & Storytelling
 
-Defining who you are and why people should care. This is where the [SCORE framework](/guides/score-framework/) comes in handy—it helps you structure how you communicate your brand's value.
+Defining who you are and why people should care. This is where the [SCORE® framework](/guides/score-framework/) comes in handy—it helps you structure how you communicate your brand's value.
 
 **What to learn:** Positioning, crafting strong value propositions, defining tone of voice, and building compelling brand narratives.
 

@@ -4,7 +4,7 @@ description: "What nobody tells you about starting a business — the rejection,
 category: "Career & Leadership"
 date: 2025-10-22
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["entrepreneurship", "startups", "fractional CMO", "career advice", "Field Vision"]
 ---
 
@@ -46,4 +46,4 @@ This dark period also reminds me of what I learned [starting a band in college](
 
 ## About Field Vision
 
-Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.
+Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.

@@ -1,50 +1,50 @@
 ---
-title: "Why SCORE Beats Traditional Messaging"
-description: "Discover why the SCORE methodology outperforms traditional messaging frameworks for B2B companies. The case for buyer-psychology-aligned marketing."
+title: "Why SCORE® Beats Traditional Messaging"
+description: "Discover why the SCORE® methodology outperforms traditional messaging frameworks for B2C companies. The case for buyer-psychology-aligned marketing."
 category: "Growth Strategy"
 date: 2025-10-13
 updated: 2026-03-03
 author: "David Hampian"
-tags: ["SCORE framework", "growth marketing", "Twitch", "emerging markets", "growth strategy"]
+tags: ["SCORE® framework", "growth marketing", "Twitch", "emerging markets", "growth strategy"]
 ---
 
-*Looking for the step-by-step implementation guide? See the [SCORE Framework: Complete Guide](/guides/score-framework/).*
+*Looking for the step-by-step implementation guide? See the [SCORE® Framework: Complete Guide](/guides/score-framework/).*
 
 TwitchCon week always reminds me of a core truth I learned firsthand: the smartest brands don't predict the future. They build systems that reveal where it's going.
 
-That system, for me, is called SCORE. It's a framework I've developed over the course of my career helping brands grow into new, emerging areas of business and audiences. At Twitch, this new area of business was Music. Early experiments spiked, then fizzled, and nothing was sticking. SCORE became the playbook that turned chaos into a scalable growth system. We used a similar approach when [expanding Twitch into sports and music](/case-studies/twitch/), and it worked because the framework forces you to move quickly without moving recklessly.
+That system, for me, is called SCORE®. It's a framework I've developed over the course of my career helping brands grow into new, emerging areas of business and audiences. At Twitch, this new area of business was Music. Early experiments spiked, then fizzled, and nothing was sticking. SCORE® became the playbook that turned chaos into a scalable growth system. We used a similar approach when [expanding Twitch into sports and music](/case-studies/twitch/), and it worked because the framework forces you to move quickly without moving recklessly.
 
-## Why SCORE Beats Traditional Messaging Frameworks
+## Why SCORE® Beats Traditional Messaging Frameworks
 
-SCORE stands for Signal, Convene, Operate, Refine, and Expand. It's a five-step growth marketing system designed for brands entering new markets, launching new product verticals, or scaling emerging business lines where there's no established playbook.
+SCORE® stands for Set the Foundation, Create the Hypothesis, Outline the Experiment Plan, Run the Play, and Evolve and Improve. It's a five-step growth marketing system designed for brands entering new markets, launching new product verticals, or scaling emerging business lines where there's no established playbook.
 
-Unlike traditional growth frameworks that assume you know your market, SCORE is built for the ambiguity of new territory. It helps you find the signal in the noise, then build infrastructure around what's working.
+Unlike traditional growth frameworks that assume you know your market, SCORE® is built for the ambiguity of new territory. It helps you find the signal in the noise, then build infrastructure around what's working.
 
-## Signal — Find the real patterns, not the noise
+## Set the Foundation — Define the strategic context before you build anything
 
-The first step is identifying genuine market signals. Not hype. Not one-off spikes. Repeatable patterns that indicate real demand. At Twitch, this meant separating viral moments from sustainable engagement — figuring out which music activations created lasting audience behavior versus one-time curiosity.
+The first step is establishing the strategic landscape. Not jumping into tactics. Not chasing shiny objects. Defining the audience, the goals, and the competitive environment with precision. At Twitch, this meant mapping the total addressable market for music, narrowing to the serviceable audience (18–34 year olds passionate about live music), and identifying the core insight: differentiated live content that viewers couldn't get anywhere else.
 
-## Convene — Build the right coalition
+## Create the Hypothesis — Translate context into a testable bet
 
-Growth in new markets never happens in isolation. The Convene step is about identifying and aligning the right internal and external stakeholders — from product teams and partnerships to creators and community leaders. The coalition you build at this stage determines whether your growth initiative has organizational support or dies on the vine. This is central to effective [go-to-market strategy](/services/go-to-market/) — without the right partners aligned early, even great execution will fall short.
+Once the foundation is set, you need a clear, testable hypothesis — an IF/THEN statement that every downstream decision ladders back to. At Twitch, the hypothesis was: "IF we create exclusive live music content that viewers can't get anywhere else, THEN we will drive sustained audience growth in the music vertical." Every partnership, creative decision, and channel choice had to prove or disprove that single bet. This is central to effective [go-to-market strategy](/services/go-to-market/) — without a clear hypothesis, even great execution produces noise instead of learning.
 
-## Operate — Run fast, structured experiments
+## Outline the Experiment Plan — Map your hypothesis into structured experiments
 
-This is where most growth teams get stuck. They either experiment without structure (chaos) or plan without executing (paralysis). The Operate step provides a framework for running fast, time-boxed experiments that generate actionable data. Each experiment is designed to validate or invalidate a specific hypothesis about your new market.
+This is where most growth teams get stuck. They either experiment without structure (chaos) or plan without executing (paralysis). Outlining the Experiment Plan means designing a complete go-to-market test — channel mix, creative approach, targeting strategy, and measurement plan — where every element ladders back to the hypothesis. Each experiment is designed to validate or invalidate that specific IF/THEN bet.
 
-## Refine — Double down on what's working, cut what isn't
+## Run the Play — Execute with discipline and alignment
 
-After the first round of experiments, the Refine step is about ruthless prioritization. You take the data from Operate and make hard decisions: which activations scale, which partnerships deepen, which channels get more investment, and which experiments get killed. The goal is to consolidate your learnings into a repeatable system.
+After the experiment plan is set, Run the Play is about disciplined execution. You launch campaigns, monitor performance in real-time, and keep execution tightly aligned with the plan. At Twitch, this meant maintaining strict alignment between creative, channels, and attribution tracking — resisting scope creep and ad hoc requests that would dilute the hypothesis test. The goal is to execute exactly what was designed, with the measurement in place to learn from it.
 
-## Expand — Scale the system, not just the tactic
+## Evolve and Improve — Close the loop, learn, and compound
 
-The final step is building scalable infrastructure around your validated approach. This isn't about doing more of the same thing — it's about creating systems that can grow without you. At Twitch, the Expand phase turned a music experiment into a permanent business vertical with its own team, partnerships, and revenue streams.
+The final step is closing the learning loop. Analyze results against the hypothesis. Did you prove or disprove the IF/THEN? Synthesize learnings, conduct gap analysis, and document everything into repeatable playbooks. At Twitch, the Evolve and Improve phase turned a music experiment into a permanent business vertical — not by scaling blindly, but by compounding what we learned into a documented system that the organization could replicate.
 
-## Why SCORE works for emerging markets
+## Why SCORE® works for emerging markets
 
-Most growth frameworks assume you already know your customer, your channels, and your value proposition. SCORE is built for the opposite situation — when you're entering territory where none of that is established yet. It gives you a structured way to learn fast, build conviction, and scale with confidence. This is exactly what the [SCORE framework](/guides/score-framework/) was designed to solve — giving you a repeatable system for [growth marketing](/services/growth-marketing/) in the chaos of new markets.
+Most growth frameworks assume you already know your customer, your channels, and your value proposition. SCORE® is built for the opposite situation — when you're entering territory where none of that is established yet. It gives you a structured way to learn fast, build conviction, and scale with confidence. This is exactly what the [SCORE® framework](/guides/score-framework/) was designed to solve — giving you a repeatable system for [growth marketing](/services/growth-marketing/) in the chaos of new markets.
 
-## Key takeaways from the SCORE Framework
+## Key takeaways from the SCORE® Framework
 
 - How to identify genuine growth signals versus one-off spikes in new markets
 - Why coalition-building is the most overlooked step in growth strategy
@@ -53,4 +53,4 @@ Most growth frameworks assume you already know your customer, your channels, and
 - How to turn a growth experiment into a permanent business line with its own infrastructure
 - Why the best growth marketers build systems, not campaigns
 
-The SCORE Framework is one of several methodologies we use to help startups build [scalable growth systems](/services/growth-marketing/). It sits at the center of how we approach new market opportunities and has been validated across dozens of client engagements.
+The SCORE® Framework is one of several methodologies we use to help startups build [scalable growth systems](/services/growth-marketing/). It sits at the center of how we approach new market opportunities and has been validated across dozens of client engagements.

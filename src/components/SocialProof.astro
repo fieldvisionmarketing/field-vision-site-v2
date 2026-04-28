@@ -1,24 +1,37 @@
 ---
 const brands = [
-  'Amazon',
-  'Twitch',
-  'Pandora',
-  'Hard Rock International',
-  'Deepr',
-  'MONTREALITY',
-  'Prime Video',
-  'Audible',
-  'University of California, Berkeley',
-  'Savannah College of Art and Design',
+  { name: 'SCAD', domain: 'scad.edu' },
+  { name: 'Deepr', domain: 'deeprmusic.com' },
+  { name: 'Hard Rock', domain: 'hardrockcafe.com' },
+  { name: 'Amazon', domain: 'amazon.com' },
+  { name: 'Arena', domain: 'arenatalent.com' },
+  { name: 'Twitch', domain: 'twitch.tv' },
+  { name: 'StreamU', domain: 'thestreamu.com', logo: '/logos/streamu.png' },
+  { name: 'Pandora', domain: 'pandora.com' },
+  { name: 'MONTREALITY', domain: 'montreality.com' },
+  { name: 'Prime Video', domain: 'primevideo.com' },
+  { name: 'Audible', domain: 'audible.com' },
+  { name: 'UC Berkeley', domain: 'calbears.com' },
+  { name: 'Amazon Music', domain: 'music.amazon.com' },
+  { name: 'Ticketfly', domain: 'ticketfly.com' },
 ];
 ---
 
 <section class="social-proof">
   <p class="sp-label">Trusted by teams at</p>
   <div class="marquee-track">
-    <div class="marquee-inner" aria-hidden="true">
-      {[...brands, ...brands].map(name => (
-        <span>{name}</span>
+    <div class="marquee-inner">
+      {[0, 1].map(() => (
+        <div class="marquee-set">
+          {brands.map(b => (
+            <span class="sp-brand">
+              {(b.logo || b.domain) && (
+                <img src={b.logo || `https://www.google.com/s2/favicons?domain=${b.domain}&sz=128`} alt="" class="sp-logo" />
+              )}
+              {b.name}
+            </span>
+          ))}
+        </div>
       ))}
     </div>
   </div>

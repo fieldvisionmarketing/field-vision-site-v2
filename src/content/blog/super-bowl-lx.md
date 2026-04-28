@@ -4,7 +4,7 @@ description: "What Super Bowl LX ads teach us about creative effectiveness, bran
 category: "Events"
 date: 2026-02-07
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["super bowl", "tentpole events", "networking", "sports marketing", "bay area", "advertising analysis"]
 ---
 
@@ -18,7 +18,7 @@ Super Bowl ads succeed or fail based on a few fundamental principles — the sam
 
 ### The Ads That Worked — And Why
 
-**Emotional resonance over product features.** The top-performing Super Bowl LX ads didn't lead with product specs or pricing. They led with emotion — humor, nostalgia, aspiration, or surprise. This maps directly to what we teach in the [SCORE Framework](/guides/score-framework/): your messaging must align with buyer psychology, not just product capabilities. The ads that scored highest in post-game brand recall were the ones that made viewers feel something before asking them to consider anything.
+**Emotional resonance over product features.** The top-performing Super Bowl LX ads didn't lead with product specs or pricing. They led with emotion — humor, nostalgia, aspiration, or surprise. This maps directly to what we teach in the [SCORE® Framework](/guides/score-framework/): your messaging must align with buyer psychology, not just product capabilities. The ads that scored highest in post-game brand recall were the ones that made viewers feel something before asking them to consider anything.
 
 **Celebrity as amplifier, not substitute.** The best celebrity-driven spots used famous faces to amplify a clear brand message. The worst ones relied on celebrity recognition as the entire concept — memorable for the star, forgettable for the brand. This is the difference between strategy and spectacle.
 
@@ -70,13 +70,13 @@ The answer comes down to three factors:
 
 At Field Vision, we bring the same strategic rigor to our clients' marketing that the best Super Bowl advertisers bring to their spots — just at different scale and budget:
 
-**Start with the hypothesis.** Before creating anything, define what you're testing. The [SCORE Framework](/guides/score-framework/) ensures every creative decision ladders to a testable hypothesis about what will resonate with your audience.
+**Start with the hypothesis.** Before creating anything, define what you're testing. The [SCORE® Framework](/guides/score-framework/) ensures every creative decision ladders to a testable hypothesis about what will resonate with your audience.
 
 **Build for your context.** Don't create "generic good content." Create content designed for the specific platform, audience, and moment where it will be consumed.
 
 **Measure what matters.** Don't measure impressions. Measure whether your creative moved the business needle — awareness among the right audience, engagement that predicts conversion, pipeline that turns into revenue.
 
-**Compound your learnings.** Every campaign, every creative test, every piece of content should generate insights that make the next one better. This is the [Compound Growth System](/guides/compound-growth-system/) in action — growth that accelerates because you're building on what you've learned.
+**Compound your learnings.** Every campaign, every creative test, every piece of content should generate insights that make the next one better. This is the [Compound Growth System®](/guides/compound-growth-system/) in action — growth that accelerates because you're building on what you've learned.
 
 ## The Bay Area Opportunity
 

@@ -4,7 +4,7 @@ description: "I thought starting a band in college would be about music. It turn
 category: "Career & Leadership"
 date: 2025-08-19
 updated: 2026-02-23
-author: "David Hampian"
+author: "Field Vision"
 tags: ["personal story", "brand building", "marketing lessons", "career", "music"]
 ---
 

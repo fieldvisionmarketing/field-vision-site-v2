@@ -38,7 +38,7 @@ const guideSlug = guide.id.replace(/\.mdx?$/, '');
           <span class="meta-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {guide.data.readTime}</span>
           <span class="meta-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> {guide.data.phases}</span>
           {guide.data.downloadUrl && (
-            <span class="meta-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> PDF Available</span>
+            <span class="meta-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> {guide.data.downloadLabel || "PDF"} Available</span>
           )}
         </div>
       </div>
@@ -46,7 +46,7 @@ const guideSlug = guide.id.replace(/\.mdx?$/, '');
 
     <!-- ======== CONTENT WITH SIDEBAR ======== -->
     {guide.data.gated ? (
-      <div class="guide-gate" data-guide-slug={guideSlug} data-download-url={guide.data.downloadUrl} data-guide-framework={guide.data.framework}>
+      <div class="guide-gate" data-guide-slug={guideSlug} data-download-url={guide.data.downloadUrl} data-guide-framework={guide.data.framework} data-download-label={guide.data.downloadLabel || "PDF"}>
         <div class="guide-preview">
           <div class="guide-layout">
             <div class="guide-main">
@@ -64,8 +64,8 @@ const guideSlug = guide.id.replace(/\.mdx?$/, '');
               {guide.data.downloadUrl && (
                 <div class="toc-download">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A5DB5D" stroke-width="2" style="margin-bottom:8px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                  <p class="toc-download-text">Download the full guide as a PDF</p>
-                  <a href={guide.data.downloadUrl} target="_blank" rel="noopener noreferrer" class="toc-download-btn">Download PDF &rarr;</a>
+                  <p class="toc-download-text">Download the full guide as a {guide.data.downloadLabel || "PDF"}</p>
+                  <a href={guide.data.downloadUrl} target="_blank" rel="noopener noreferrer" class="toc-download-btn">Download {guide.data.downloadLabel || "PDF"} &rarr;</a>
                 </div>
               )}
             </aside>
@@ -103,8 +103,8 @@ const guideSlug = guide.id.replace(/\.mdx?$/, '');
           {guide.data.downloadUrl && (
             <div class="toc-download">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A5DB5D" stroke-width="2" style="margin-bottom:8px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <p class="toc-download-text">Download the full guide as a PDF</p>
-              <a href={guide.data.downloadUrl} target="_blank" rel="noopener noreferrer" class="toc-download-btn">Download PDF &rarr;</a>
+              <p class="toc-download-text">Download the full guide as a {guide.data.downloadLabel || "PDF"}</p>
+              <a href={guide.data.downloadUrl} target="_blank" rel="noopener noreferrer" class="toc-download-btn">Download {guide.data.downloadLabel || "PDF"} &rarr;</a>
             </div>
           )}
         </aside>
@@ -194,12 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (preview) preview.style.maxHeight = 'none';
       if (overlay) overlay.style.display = 'none';
       if (formSection) {
-        const dlLink = downloadUrl ? '<a href="' + downloadUrl + '" class="gate-btn" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:12px;">Download PDF &rarr;</a>' : '';
+        const dlLink = downloadUrl ? '<a href="' + downloadUrl + '" class="download-btn" download>Download ' + (gate.dataset.downloadLabel || 'PDF') + ' Now</a>' : '';
         formSection.innerHTML = '<div class="gate-card" style="text-align:center;padding:48px 32px">' +
           '<div style="font-size:3rem;margin-bottom:16px">&#10003;</div>' +
           '<h3 class="gate-title" style="margin-bottom:12px">You have access!</h3>' +
-          '<p class="gate-desc" style="margin-bottom:20px">Enjoy the full ' + (framework || '') + ' guide below.</p>' +
           dlLink +
+          '<p class="gate-desc" style="margin-bottom:20px">Enjoy the full ' + (framework || '') + ' guide below.</p>' +
           '</div>';
       }
     }
@@ -330,9 +330,21 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ---- SIDEBAR / TOC ---- */
 .guide-sidebar {
   position: sticky;
-  top: 100px;
-  max-height: calc(100vh - 140px);
+  top: 90px;
+  max-height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.guide-sidebar .sidebar-inner {
   overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.guide-sidebar .toc-download {
+  flex-shrink: 0;
 }
 .sidebar-inner {
   background: #fff;
@@ -1294,4 +1306,17 @@ document.addEventListener('DOMContentLoaded', () => {
       font-size: 1.1rem;
     }
 }
+    :global(.download-btn) { display: inline-block; max-width: 100%; box-sizing: border-box; background: #A5DB5D; color: #213621 !important; padding: 16px 36px; border-radius: 8px; font-size: 1.15rem; font-weight: 700; text-decoration: none !important; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 12px; transition: all 0.2s ease; border: none; }
+    /* FAQ Accordion Styles — matches About page canonical format */
+    :global(.faq-list) { display: flex; flex-direction: column; gap: 0; padding: 0; margin: 2rem 0; list-style: none; }
+    :global(.faq-item) { border: none; border-bottom: 1px solid #e8e8e8; border-radius: 0; margin-bottom: 0; background: none; overflow: visible; }
+    :global(.faq-item:first-child) { border-top: 1px solid #e8e8e8; }
+    :global(.faq-item summary) { list-style: none; }
+    :global(.faq-item summary::-webkit-details-marker) { display: none; }
+    :global(.faq-question) { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; cursor: pointer; font-weight: 600; font-size: 1.05rem; color: #213621; list-style: none; }
+    :global(.faq-toggle) { font-size: 1.4rem; font-weight: 300; color: #999; flex-shrink: 0; margin-left: 16px; transition: transform 0.2s; }
+    :global(.faq-item[open] .faq-toggle) { transform: rotate(45deg); }
+    :global(.faq-answer) { padding: 0 0 22px; }
+    :global(.faq-answer p) { font-size: 0.95rem; line-height: 1.7; color: #555; margin: 0; }
+    :global(.download-btn:hover) { background: #8BC34A; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(165, 219, 93, 0.3); }
 </style>

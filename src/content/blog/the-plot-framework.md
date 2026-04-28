@@ -1,10 +1,10 @@
 ---
 title: "Story-Driven Content That Converts"
-description: "Why narrative-driven content outperforms feature-led marketing. Introducing the PLOT Framework for story-based B2B content strategy."
+description: "Why narrative-driven content outperforms feature-led marketing. Introducing the PLOT Framework for story-based B2C content strategy."
 category: "Growth Strategy"
 date: 2025-11-30
 updated: 2026-03-04
-author: "David Hampian"
+author: "Field Vision"
 tags: ["PLOT framework", "marketing budget", "leadership", "finance", "growth strategy"]
 ---
 

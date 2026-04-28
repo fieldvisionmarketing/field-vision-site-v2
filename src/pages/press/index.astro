@@ -7,8 +7,8 @@ import Footer from '../../components/Footer.astro';
 const allPress = (await getCollection('press'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const title = "Press & Media — David Hampian | Field Vision";
-const description = "David Hampian has been featured as an expert source in the Australian Financial Review, Covers, Daily Express, Birch, and other leading publications. Read his expert commentary on marketing strategy, entertainment, sports, and performance marketing.";
+const title = "Press & Media — Field Vision | Field Vision";
+const description = "Field Vision has been featured as an expert source in the Australian Financial Review, Covers, Daily Express, Birch, and other leading publications. Read his expert commentary on marketing strategy, entertainment, sports, and performance marketing.";
 ---
 <BaseLayout title={title} description={description}>
   <Header slot="header" />
@@ -24,7 +24,7 @@ const description = "David Hampian has been featured as an expert source in the 
     <div class="container">
       <div class="press-grid__cards">
         {allPress.map((item) => (
-          <a href={`/press/${item.slug}`} class="press-card">
+          <a href={`/press/${item.slug}/`} class="press-card">
             <div class="press-card__pub">
               <span class="press-card__pub-name">{item.data.publication}</span>
               <time class="press-card__date" datetime={item.data.date.toISOString()}>
@@ -43,12 +43,106 @@ const description = "David Hampian has been featured as an expert source in the 
     </div>
   </section>
 
+
+  <!-- ═══ AWARDS & RECOGNITION ═══ -->
+  <section class="awards-section" id="awards">
+    <div class="container">
+      <span class="awards-section__label">Awards & Recognition</span>
+      <h2 class="awards-section__title">8 Clio Awards</h2>
+      <p class="awards-section__subtitle">Award-winning marketing programs spanning live music, fan engagement, and brand innovation — recognized by the Clio Awards across two organizations and a decade of work.</p>
+
+      <div class="awards-grid">
+
+        <!-- Amazon Music Live (2026) -->
+        <div class="award-card">
+          <div class="award-card__year">2026</div>
+          <span class="award-card__badge award-card__badge--silver">Silver</span>
+          <h3 class="award-card__title">Amazon Music Live</h3>
+          <p class="award-card__category">Category: Clio Music &bull; Fan Engagement</p>
+          <p class="award-card__role">Role: Oversaw the live stream marketing department responsible for go-to-market activation for the concert series.</p>
+          
+        </div>
+
+        <!-- Kendrick Lamar's The Pop Out (2026) -->
+        <div class="award-card">
+          <div class="award-card__year">2026</div>
+          <span class="award-card__badge award-card__badge--bronze">Bronze</span>
+          <h3 class="award-card__title">Kendrick Lamar's The Pop Out</h3>
+          <p class="award-card__category">Category: Clio Music</p>
+          <p class="award-card__role">Role: Led the growth marketing campaign that delivered the most viewed live stream in Amazon history.</p>
+          
+        </div>
+
+        <!-- Alpine F1 Partnership (2026) -->
+        <div class="award-card">
+          <div class="award-card__year">2026</div>
+          <span class="award-card__badge award-card__badge--bronze">Bronze</span>
+          <h3 class="award-card__title">Alpine F1 Partnership</h3>
+          <p class="award-card__category">Category: Clio Music</p>
+          <p class="award-card__role">Role: Led go-to-market activation for the partnership through the live stream marketing department.</p>
+          
+        </div>
+
+        <!-- TWICE (2026) -->
+        <div class="award-card">
+          <div class="award-card__year">2026</div>
+          <span class="award-card__badge award-card__badge--bronze">Bronze</span>
+          <h3 class="award-card__title">TWICE</h3>
+          <p class="award-card__category">Category: Clio Music</p>
+          <p class="award-card__role">Role: Led go-to-market activation for the campaign through the live stream marketing department.</p>
+          
+        </div>
+
+        <!-- Amazon Music Live Season Two (2025) -->
+        <div class="award-card">
+          <div class="award-card__year">2025</div>
+          <span class="award-card__badge award-card__badge--silver">Silver</span>
+          <h3 class="award-card__title">Amazon Music Live Season Two</h3>
+          <p class="award-card__category">Category: Clio Music &bull; Fan Engagement</p>
+          <p class="award-card__role">Role: Oversaw the live stream marketing department responsible for go-to-market activation for each episode.</p>
+          
+        </div>
+
+        <!-- Amazon Music Live Season One (2024) -->
+        <div class="award-card">
+          <div class="award-card__year">2024</div>
+          <span class="award-card__badge award-card__badge--bronze">Bronze</span>
+          <h3 class="award-card__title">Amazon Music Live Season One</h3>
+          <p class="award-card__category">Category: Clio Music &bull; Fan Engagement</p>
+          <p class="award-card__role">Role: Oversaw the live stream marketing department responsible for go-to-market activation for the concert series.</p>
+          
+        </div>
+
+        <!-- Thumb Moments Silver (2015) -->
+        <div class="award-card">
+          <div class="award-card__year">2015</div>
+          <span class="award-card__badge award-card__badge--silver">Silver</span>
+          <h3 class="award-card__title">Thumb Moments</h3>
+          <p class="award-card__category">Category: Clio Music &bull; Digital/Social, Brand</p>
+          <p class="award-card__role">Role: Managed the customer-facing marketing channel strategy for the campaign, partnering between industry, brand, and product to execute at scale.</p>
+          
+        </div>
+
+        <!-- Thumb Moments Bronze (2015) -->
+        <div class="award-card">
+          <div class="award-card__year">2015</div>
+          <span class="award-card__badge award-card__badge--bronze">Bronze</span>
+          <h3 class="award-card__title">Thumb Moments</h3>
+          <p class="award-card__category">Category: Clio Music &bull; Audio/Radio</p>
+          <p class="award-card__role">Role: Managed the customer-facing marketing channel strategy for the campaign, partnering between industry, brand, and product.</p>
+          
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Schema.org structured data -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Press & Media Features — David Hampian",
-    "description": "Expert commentary and interviews featuring David Hampian in leading publications",
+    "name": "Press & Media Features — Field Vision",
+    "description": "Expert commentary and interviews featuring Field Vision in leading publications",
     "numberOfItems": allPress.length,
     "itemListElement": allPress.map((item, index) => ({
       "@type": "ListItem",
@@ -61,7 +155,7 @@ const description = "David Hampian has been featured as an expert source in the 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Press & Media — David Hampian",
+    "name": "Press & Media — Field Vision",
     "description": description,
     "url": "https://fieldvisiongroup.com/press",
     "isPartOf": {
@@ -71,7 +165,7 @@ const description = "David Hampian has been featured as an expert source in the 
     },
     "about": {
       "@type": "Person",
-      "name": "David Hampian",
+      "name": "Field Vision",
       "jobTitle": "Managing Director",
       "worksFor": {
         "@type": "Organization",
@@ -219,5 +313,121 @@ const description = "David Hampian has been featured as an expert source in the 
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 clamp(1rem, 3vw, 2rem);
+  }
+
+  /* ── Awards & Recognition Section ── */
+  .awards-section {
+    padding: clamp(4rem, 8vw, 7rem) 0;
+    background: var(--color-bg, #0a0a0a);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .awards-section__label {
+    display: inline-block;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent, #a5db5d);
+    margin-bottom: 1rem;
+  }
+
+  .awards-section__title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-transform: uppercase;
+    color: var(--color-text, #fff);
+    line-height: 1.05;
+    margin: 0.5rem 0 1rem;
+  }
+
+  .awards-section__subtitle {
+    font-family: 'Satoshi', sans-serif;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    color: var(--color-text-muted, #999);
+    max-width: 640px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .award-card {
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+
+  .award-card__year {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted, #666);
+    margin-bottom: 0.5rem;
+  }
+
+  .award-card__badge {
+    display: inline-block;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .award-card__badge--silver {
+    background: rgba(192, 192, 192, 0.15);
+    color: #c0c0c0;
+    border: 1px solid rgba(192, 192, 192, 0.25);
+  }
+
+  .award-card__badge--bronze {
+    background: rgba(205, 127, 50, 0.12);
+    color: #cd7f32;
+    border: 1px solid rgba(205, 127, 50, 0.25);
+  }
+
+  .award-card__title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--color-text, #fff);
+    line-height: 1.15;
+    margin: 0 0 0.35rem;
+  }
+
+  .award-card__category {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.75rem;
+    color: var(--accent, #a5db5d);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .award-card__role {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.82rem;
+    color: var(--color-text-muted, #888);
+    line-height: 1.55;
+    margin-bottom: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .awards-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

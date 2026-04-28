@@ -4,7 +4,7 @@ description: "The best opportunities in your career won't come from your network
 category: "Career & Leadership"
 date: 2025-11-11
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["relationships", "networking", "career advice", "leadership", "business", "personal brand"]
 ---
 
@@ -32,7 +32,7 @@ My time at Pandora taught me that the best marketers are listeners first. When I
 
 The career parallel is exact. The professionals who "network" by talking about themselves at every event build wide but hollow connections. The ones who listen — who remember what you said three months ago, who follow up on your challenges, who offer help without being asked — build relationships that compound over decades.
 
-This is the same principle behind authentic brand building. We teach this through the [ABCT Framework](/guides/abct-framework/) — Authenticity, Boldness, Consistency, Trust — because the brands that listen and respond with genuine value earn loyalty that no advertising budget can buy.
+This is the same principle behind authentic brand building. We teach this through the [ABCT® Framework](/guides/abct-framework/) — Audit, Blueprint, Construct, Transfer — because the brands that listen and respond with genuine value earn loyalty that no advertising budget can buy.
 
 ### The Twitch Years: Community Over Audience
 
@@ -40,7 +40,7 @@ Twitch fundamentally changed how I think about relationships in business. Twitch
 
 The creators who succeeded on Twitch weren't the ones with the most followers. They were the ones with the most engaged communities — viewers who showed up every stream, who knew each other by name, who felt genuine belonging. That principle translates directly to career and marketing strategy.
 
-When I started Field Vision, I didn't try to build a massive following. I focused on deepening relationships with a specific group of people — startup founders, B2B marketers, growth-stage companies — who shared my values and could benefit from my experience. That focused approach has generated every client relationship I have.
+When I started Field Vision, I didn't try to build a massive following. I focused on deepening relationships with a specific group of people — startup founders, B2C marketers, growth-stage companies — who shared my values and could benefit from my experience. That focused approach has generated every client relationship I have.
 
 ### The Amazon Years: The Power of Compounding Relationships
 
@@ -48,7 +48,7 @@ Amazon taught me about compound growth — not just in business metrics, but in 
 
 At Amazon Music, the best partnerships I built were with people I'd known for years — from Pandora, from Twitch, from the broader music industry. Those relationships came pre-loaded with trust, shared context, and mutual investment. We could move faster, take bigger swings, and recover from failures more gracefully because the relational infrastructure was already in place.
 
-This is the core insight behind the [Compound Growth System](/guides/compound-growth-system/) we use at Field Vision. Growth compounds when you invest in systems that build on themselves — and relationships are the ultimate compounding system.
+This is the core insight behind the [Compound Growth System®](/guides/compound-growth-system/) we use at Field Vision. Growth compounds when you invest in systems that build on themselves — and relationships are the ultimate compounding system.
 
 ### The Hard Rock Digital Years: Boldness Requires Trust
 
@@ -66,7 +66,7 @@ Here's where the personal and professional intersect: your marketing bucket list
 
 **Want to build a personal brand?** Stop optimizing for reach and start optimizing for connection depth. Write for your tribe, not for everyone. The audience will come.
 
-This is exactly how I built Field Vision. No paid ads. No cold outreach. No growth hacks. Just two decades of building genuine relationships, providing real value, and being consistently present for the people who matter most. The [SCORE Framework](/guides/score-framework/) applies here too — set the foundation, create a hypothesis about where to invest your relationship capital, run the experiment, and evolve based on what works.
+This is exactly how I built Field Vision. No paid ads. No cold outreach. No growth hacks. Just two decades of building genuine relationships, providing real value, and being consistently present for the people who matter most. The [SCORE® Framework](/guides/score-framework/) applies here too — set the foundation, create a hypothesis about where to invest your relationship capital, run the experiment, and evolve based on what works.
 
 ## Lessons for Your Own Bucket List
 

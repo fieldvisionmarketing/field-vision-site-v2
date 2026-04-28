@@ -4,7 +4,7 @@ description: "The story of how Twitch built a permanent brand experience inside 
 category: "Case Study"
 date: 2025-09-10
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["twitch", "brand experience", "NFL", "experiential marketing", "Las Vegas Raiders"]
 ---
 
@@ -18,7 +18,7 @@ Twitch is a digital-first brand. The audience lives online. So why invest millio
 
 ## How we designed for two audiences at once
 
-The biggest challenge wasn't construction or budget — it was designing for two fundamentally different audiences. Raiders fans who'd never heard of Twitch needed to feel welcomed, not alienated. Twitch creators and viewers needed to feel like the space was authentically theirs. The solution was layered experience design: surface-level entertainment for casual visitors, deeper integration for the Twitch-native audience. This approach aligns with the [SCORE framework](/guides/score-framework/), where structure enables flexibility across different segments.
+The biggest challenge wasn't construction or budget — it was designing for two fundamentally different audiences. Raiders fans who'd never heard of Twitch needed to feel welcomed, not alienated. Twitch creators and viewers needed to feel like the space was authentically theirs. The solution was layered experience design: surface-level entertainment for casual visitors, deeper integration for the Twitch-native audience. This approach aligns with the [SCORE® framework](/guides/score-framework/), where structure enables flexibility across different segments.
 
 ## The business case for physical brand experiences in a digital world
 
@@ -34,4 +34,4 @@ The Twitch Lounge wasn't a vanity project. It was a strategic asset that served 
 
 ## About Field Vision
 
-Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.
+Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.

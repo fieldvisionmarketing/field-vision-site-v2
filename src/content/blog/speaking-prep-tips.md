@@ -1,10 +1,10 @@
 ---
 title: "5 Public Speaking Prep Tips"
-description: "David Hampian keynoted BrightonSEO in front of thousands. Here are the 5 preparation tips that made the biggest difference — none of them involve slide design."
+description: "Field Vision keynoted BrightonSEO in front of thousands. Here are the 5 preparation tips that made the biggest difference — none of them involve slide design."
 category: "Career & Leadership"
 date: 2025-09-24
 updated: 2026-02-23
-author: "David Hampian"
+author: "Field Vision"
 tags: ["public speaking", "BrightonSEO", "career advice", "presentation tips", "leadership"]
 ---
 
@@ -44,4 +44,4 @@ These principles aren't just for keynotes — they're the same ones we apply to 
 
 ## About Field Vision
 
-Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.
+Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.

@@ -2,35 +2,64 @@
 /**
  * Analytics Component
  *
- * Loads GTM directly on page load.
- * GTM is the container — GA4, Meta Pixel, LinkedIn Insight Tag,
- * Google Ads, and TikTok Pixel are all configured INSIDE GTM.
+ * Loads GA4 (gtag.js) and GTM behind cookie consent.
  *
- * Replace the placeholder ID below with your real GTM container ID:
- * - GTM_ID: GTM-XXXXXXX
+ * GA4 fires directly via gtag.js for immediate analytics.
+ * GTM is available as a container for future pixels (Meta, LinkedIn, etc.)
  *
- * All pixels fire through GTM so you manage them in one place.
+ * IDs:
+ * - GA4_ID: G-W2HXBJNJ6V (Google Analytics 4)
+ * - GTM_ID: GTM-XXXXXXX (replace when GTM container is set up)
  */
 
-const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID
+const GA4_ID = 'G-W2HXBJNJ6V';
+const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID when ready
 ---
 
-<!-- Google Tag Manager -->
-<script define:vars={{ GTM_ID }}>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer', GTM_ID);
+<!-- GA4 (gtag.js) — fires only after consent -->
+<script define:vars={{ GA4_ID }}>
+  window.addEventListener('fv-consent-granted', function() {
+    // Only load once
+    if (document.querySelector('script[src*="googletagmanager.com/gtag"]')) return;
+
+    // Load gtag.js
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+    document.head.appendChild(script);
+
+    // Initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA4_ID, {
+      send_page_view: true
+    });
+  });
+
+  // Initialize dataLayer
+  window.dataLayer = window.dataLayer || [];
 </script>
 
-<!-- GTM noscript fallback -->
+<!-- GTM Script — activate when GTM container is ready by uncommenting -->
+<!--
+<script define:vars={{ GTM_ID }}>
+  window.addEventListener('fv-consent-granted', function() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', GTM_ID);
+  });
+</script>
 <noscript>
   <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
     height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
+-->
 
-<!-- UTM parameter capture -->
+<!-- UTM parameter capture — runs immediately, no consent needed -->
 <script>
   (function() {
     const params = new URLSearchParams(window.location.search);
@@ -47,8 +76,10 @@ const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID
     });
 
     if (hasUtm) {
+      // Store UTMs in sessionStorage for attribution
       sessionStorage.setItem('fv_utm', JSON.stringify(utmData));
 
+      // Push to dataLayer for GTM
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: 'utm_captured',
@@ -56,6 +87,7 @@ const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID
       });
     }
 
+    // Also store landing page and referrer
     if (!sessionStorage.getItem('fv_landing')) {
       sessionStorage.setItem('fv_landing', window.location.href);
       sessionStorage.setItem('fv_referrer', document.referrer || 'direct');

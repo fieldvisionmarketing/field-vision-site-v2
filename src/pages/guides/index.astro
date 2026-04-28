@@ -4,10 +4,21 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 
-const guides = await getCollection('guides');
+const orderMap = {
+  'abct-framework': 1,
+  'score-framework': 2,
+  'compound-growth-system': 3,
+  'ai-blueprint': 4,
+  'plot-framework': 5,
+};
+const guides = (await getCollection('guides')).sort((a, b) => {
+  const slugA = a.id.replace(/\.(md|mdx)$/, '');
+  const slugB = b.id.replace(/\.(md|mdx)$/, '');
+  return (orderMap[slugA] || 99) - (orderMap[slugB] || 99);
+});
 ---
 
-<BaseLayout title="Marketing Frameworks & Guides" description="Proprietary marketing frameworks and playbooks for startups — SCORE, PACEE, FRAME, ABCT, and more. Free downloads built from a decade of growth leadership at Amazon, Twitch, and Pandora.">
+<BaseLayout title="Marketing Frameworks & Guides" description="Proprietary marketing frameworks and playbooks for startups — SCORE®, ABCT®, Compound Growth System®, and more. Free downloads built from a decade of growth leadership at Amazon, Twitch, and Pandora.">
   <Header slot="header" />
 
   <section class="guides-listing">
@@ -17,7 +28,7 @@ const guides = await getCollection('guides');
 
       <div class="guides-grid" style="margin-top:48px">
         {guides.map((guide, i) => (
-          <a href={`/guides/${guide.id.replace(/\.md$/, '')}/`} class={`guide-card reveal rd${(i % 3) + 1}`}>
+          <a href={`/guides/${guide.id.replace(/\.(md|mdx)$/, '')}/`} class={`guide-card reveal rd${(i % 3) + 1}`}>
             <div class="guide-card-top">
               {guide.data.framework && <span class="guide-badge">{guide.data.framework}</span>}
               {guide.data.gated && <span class="guide-gated-badge">Free Download</span>}
@@ -64,7 +75,7 @@ const guides = await getCollection('guides');
   .guide-card {
     background: var(--dark);
     color: #fff;
-    border-radius: 16px;
+    border-radius: var(--radius);
     padding: 36px 28px;
     text-decoration: none;
     transition: transform 0.25s, box-shadow 0.25s;

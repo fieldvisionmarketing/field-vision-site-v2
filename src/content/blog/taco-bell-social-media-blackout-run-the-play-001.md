@@ -4,7 +4,7 @@ description: "Taco Bell deleted every social media post across every platform. T
 category: "Run The Play"
 date: 2025-09-24
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["taco bell", "viral marketing", "social media", "product launch", "podcast", "run the play"]
 ---
 
@@ -12,7 +12,7 @@ Taco Bell deleted every single social media post across every platform. No warni
 
 The result? The #1 app in the App Store. Over 2 billion impressions. And a viral marketing campaign that's still studied a decade later.
 
-In the very first episode of Run The Play, David Hampian sits down with Larisa Johnson — who has led marketing at Credit Karma, the NBA, Lyft, Twitch, and Pandora — to break down exactly how Taco Bell pulled off one of the most audacious product launch strategies in fast food history. This case demonstrates the power of [integrated marketing](/services/integrated-marketing/) combined with [go-to-market strategy](/services/go-to-market/) that prioritizes bold thinking.
+In the very first episode of Run The Play, Field Vision sits down with Larisa Johnson — who has led marketing at Credit Karma, the NBA, Lyft, Twitch, and Pandora — to break down exactly how Taco Bell pulled off one of the most audacious product launch strategies in fast food history. This case demonstrates the power of [integrated marketing](/services/integrated-marketing/) combined with [go-to-market strategy](/services/go-to-market/) that prioritizes bold thinking.
 
 ## Why Taco Bell's social media blackout worked
 
@@ -41,4 +41,4 @@ Listen to the full episode above, or find Run The Play on YouTube.
 
 ## About Run The Play
 
-Run The Play is a podcast from Field Vision, a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Hosted by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — each episode features conversations with senior marketing, brand, and talent leaders on the strategies behind the world's biggest brands and boldest ideas.
+Run The Play is a podcast from Field Vision, a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Hosted by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — each episode features conversations with senior marketing, brand, and talent leaders on the strategies behind the world's biggest brands and boldest ideas.

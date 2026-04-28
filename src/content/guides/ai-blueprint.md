@@ -112,7 +112,7 @@ In your marketing operations, humans act as slow middleware. Your CRM talks to y
 
 <div class="example-card">
   <div class="card-label">Real-World Example</div>
-  <p>A B2B marketing ops team audited their workflows and found 8 friction points. Three were massive: lead scoring (manually reviewing 300 leads/week), email segmentation (6 hours/week copying audience lists between systems), and campaign reporting (4 hours/week pulling data from 3 platforms into a single spreadsheet). Those three became their Q1 AI candidates.</p>
+  <p>A B2C marketing ops team audited their workflows and found 8 friction points. Three were massive: lead scoring (manually reviewing 300 leads/week), email segmentation (6 hours/week copying audience lists between systems), and campaign reporting (4 hours/week pulling data from 3 platforms into a single spreadsheet). Those three became their Q1 AI candidates.</p>
 </div>
 
 <div class="key-principle">

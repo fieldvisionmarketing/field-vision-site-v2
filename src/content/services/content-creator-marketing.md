@@ -1,7 +1,7 @@
 ---
 title: "Content & Creator Marketing"
 description: "We build content and creator strategies that drive genuine audience relationships — not just impressions — by combining editorial rigor with creator-economy expertise."
-icon: "🎬"
+icon: "✍️"
 order: 5
 sidebar:
   - label: "Duration"

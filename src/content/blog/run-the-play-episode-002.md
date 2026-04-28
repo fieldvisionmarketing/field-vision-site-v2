@@ -4,19 +4,19 @@ description: "Scott McAdams breaks down the behind-the-scenes strategy that made
 category: "Run The Play"
 date: 2025-11-11
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["PlayStation", "PS5", "product launch", "brand partnerships", "podcast", "run the play"]
 ---
 
 What does it take to launch one of the biggest products in entertainment history… in the middle of a global pandemic?
 
-In this episode of Run The Play, David Hampian sits down with Scott McAdams — former Head of Brand Partnerships at PlayStation and now VP of Strategic Partnerships at the Association of Pickleball Players — to break down the behind-the-scenes strategy that made the PlayStation 5 the most successful console launch in history. This is a masterclass in [go-to-market strategy](/services/go-to-market/) under extreme constraint.
+In this episode of Run The Play, Field Vision sits down with Scott McAdams — former Head of Brand Partnerships at PlayStation and now VP of Strategic Partnerships at the Association of Pickleball Players — to break down the behind-the-scenes strategy that made the PlayStation 5 the most successful console launch in history. This is a masterclass in [go-to-market strategy](/services/go-to-market/) under extreme constraint.
 
 The PS5 sold 4.5 million units in its first month. It became the fastest-selling console in U.S. history. And it all happened while the world was locked down, supply chains were fractured, and nobody could host a launch event.
 
 ## Why the PS5 launch strategy still matters for marketers
 
-The PlayStation 5 launch is a masterclass in constraint-driven marketing, demonstrating the [SCORE framework](/guides/score-framework/) in action under pressure. When your entire go-to-market playbook — retail activations, hands-on demos, media events — gets wiped overnight by a pandemic, what do you do? Sony's answer was to lean harder into what they could control: brand partnerships, digital-first community building, and strategic scarcity.
+The PlayStation 5 launch is a masterclass in constraint-driven marketing, demonstrating the [SCORE® framework](/guides/score-framework/) in action under pressure. When your entire go-to-market playbook — retail activations, hands-on demos, media events — gets wiped overnight by a pandemic, what do you do? Sony's answer was to lean harder into what they could control: brand partnerships, digital-first community building, and strategic scarcity.
 
 Scott breaks down how PlayStation's brand partnership strategy created cultural moments that traditional advertising couldn't match. When you can't put the controller in someone's hands, you put the brand in their world.
 
@@ -41,4 +41,4 @@ Listen to the full episode above, or find Run The Play on YouTube. For more on l
 
 ## About Run The Play
 
-Run The Play is a podcast from Field Vision, a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Hosted by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — each episode features conversations with senior marketing, brand, and talent leaders on the strategies behind the world's biggest brands and boldest ideas.
+Run The Play is a podcast from Field Vision, a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Hosted by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — each episode features conversations with senior marketing, brand, and talent leaders on the strategies behind the world's biggest brands and boldest ideas.

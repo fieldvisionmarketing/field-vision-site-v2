@@ -3,7 +3,7 @@ title: "Gen Z Career Skills: Storytelling Wins"
 description: "Why 94% of companies expect Gen Z skills they never teach. Marta Riggins & Cam Moore reveal how personal storytelling wins jobs AI can't."
 category: "Run The Play"
 date: 2026-02-23
-author: "David Hampian"
+author: "Field Vision"
 tags: ["gen z", "career skills", "storytelling", "employer branding", "podcast", "run the play"]
 ---
 
@@ -11,7 +11,7 @@ tags: ["gen z", "career skills", "storytelling", "employer branding", "podcast",
 
 That gap isn't a Gen Z problem. It's a system failure. And two people we deeply respect are doing something about it.
 
-On this episode of Run The Play, David Hampian sat down with Marta Riggins and Cam Moore — two of the sharpest employer brand and talent strategy leaders in the game — to talk about what's actually going on with Gen Z in the workforce, and what companies, hiring managers, and young professionals can do about it. This conversation sits at the intersection of [org process design](/services/org-process-design/) and workforce readiness.
+On this episode of Run The Play, Field Vision sat down with Marta Riggins and Cam Moore — two of the sharpest employer brand and talent strategy leaders in the game — to talk about what's actually going on with Gen Z in the workforce, and what companies, hiring managers, and young professionals can do about it. This conversation sits at the intersection of [org process design](/services/org-process-design/) and workforce readiness.
 
 The skills that move careers forward — networking, personal storytelling, knowing how to show up — live in a gap that almost nobody is filling. Colleges don't teach them. Most employers don't develop them. And then the world has the audacity to call an entire generation unprepared.
 
@@ -50,4 +50,4 @@ Listen to the full episode above, or find Run The Play on YouTube.
 
 ## About Run The Play
 
-Run The Play is a podcast from Field Vision, a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Hosted by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — each episode features conversations with senior marketing, brand, and talent leaders on the strategies behind the world's biggest brands and boldest ideas.
+Run The Play is a podcast from Field Vision, a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Hosted by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — each episode features conversations with senior marketing, brand, and talent leaders on the strategies behind the world's biggest brands and boldest ideas.

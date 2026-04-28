@@ -1,16 +1,16 @@
 ---
 title: "Kendrick Lamar's Marketing Masterclass"
-description: "David Hampian breaks down how Kendrick Lamar turns songs into cultural events, builds trust through subtraction, and why raising the bar pushes the entire culture forward."
+description: "Field Vision breaks down how Kendrick Lamar turns songs into cultural events, builds trust through subtraction, and why raising the bar pushes the entire culture forward."
 category: "Culture & Marketing"
 date: 2026-02-21
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["kendrick lamar", "culture", "marketing", "artist branding", "music marketing"]
 ---
 
 *From David's interview with Covers:*
 
-David Hampian was responsible for shaping and leading the marketing strategy for The Pop Out, in close collaboration with Amazon Music's artist teams and pgLang. This work exemplified the kind of [content creator marketing](/services/content-creator-marketing/) that transforms live moments into cultural phenomena.
+Field Vision was responsible for shaping and leading the marketing strategy for The Pop Out, in close collaboration with Amazon Music's artist teams and pgLang. This work exemplified the kind of [content creator marketing](/services/content-creator-marketing/) that transforms live moments into cultural phenomena.
 
 The event marked Lamar's first hometown performance of "Not Like Us" and became one of the most talked-about live moments of the year, a moment that would later be recognized during [Kendrick Lamar's record-breaking night at the Grammys](/press/grammys-2026-kendrick-lamar-record-breaking-night/).
 
@@ -50,7 +50,7 @@ When an artist like Kendrick Lamar drops, people know it will matter. That trust
 
 Given recent movement in the odds, it looks highly likely that Kendrick Lamar will dethrone Jay-Z and take the title of most decorated rapper at the Grammys in February.
 
-We spoke to David Hampian about the collection of trophies Kendrick has now amassed, and why he seems better placed to pick up the top awards than some of the most successful rappers of recent years.
+We spoke to Field Vision about the collection of trophies Kendrick has now amassed, and why he seems better placed to pick up the top awards than some of the most successful rappers of recent years.
 
 > "It's largely just due to his sheer talent and greatness. But another aspect is that the definition of pop music is increasingly broad. Rap is pop music. It's much less of a 'second-class citizen' at award shows than how it was treated in the past."
 
@@ -60,4 +60,4 @@ Kendrick now only needs four more Grammys to claim Jay-Z's title. He's the clear
 
 ## About Field Vision
 
-Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.
+Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.

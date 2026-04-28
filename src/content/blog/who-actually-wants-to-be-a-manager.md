@@ -18,6 +18,6 @@ But there's no real coaching on this stuff. No place to ask, "Hey, how do I hand
 
 I've been lucky. I've had good managers. Which is probably why I became a decent one myself. But luck is not a strategy.
 
-If we want more people to step into leadership, then developing leadership skills should be a regular part of the job. No matter how senior you are. This is where tools like the [SCORE framework](/guides/score-framework/) help — they give teams a shared language and structure for navigating the complexity of working together. When I look at how we've built high-performing teams at Amazon and Twitch, like the case study showing [how Amazon developed audience development at scale](/case-studies/amazon-audience-development/), it's always because we invested in building the leadership infrastructure first.
+If we want more people to step into leadership, then developing leadership skills should be a regular part of the job. No matter how senior you are. This is where tools like the [SCORE® framework](/guides/score-framework/) help — they give teams a shared language and structure for navigating the complexity of working together. When I look at how we've built high-performing teams at Amazon and Twitch, like the case study showing [how Amazon developed audience development at scale](/case-studies/amazon-audience-development/), it's always because we invested in building the leadership infrastructure first.
 
 Now please excuse me while I go watch some Phil Jackson interview clips.

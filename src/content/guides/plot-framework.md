@@ -17,9 +17,9 @@ phases: "4 Steps"
 
 ## What Is PLOT?
 
-The PLOT Framework is a narrative-driven content strategy system developed by David Hampian that helps B2B marketing leaders secure budget by proving marketing's financial impact through four stages: Partner, Locate High Value Actions, Outline the Impact, and Tell the Story. PLOT is Field Vision's proprietary framework for transforming marketing from a cost center into a proven investment.
+The PLOT Framework is a narrative-driven content strategy system developed by Field Vision that helps B2C marketing leaders secure budget by proving marketing's financial impact through four stages: Partner, Locate High Value Actions, Outline the Impact, and Tell the Story. PLOT is Field Vision's proprietary framework for transforming marketing from a cost center into a proven investment.
 
-Story-driven content generates 3x more engagement than feature-led messaging ([Content Marketing Institute, 2025](https://contentmarketinginstitute.com/research/)). B2B companies that quantify marketing's financial impact are 1.7x more likely to receive budget increases ([Forrester, 2024](https://www.forrester.com/research/)). Yet 63% of CMOs still struggle to connect marketing activities to revenue outcomes ([Gartner CMO Survey, 2025](https://www.gartner.com/en/marketing)). Instead of pitching for dollars, PLOT teaches you to partner with Finance, identify the user actions that drive business value, measure marketing's contribution to those actions, and present an investment case that gets approved.
+Story-driven content generates 3x more engagement than feature-led messaging ([Content Marketing Institute, 2025](https://contentmarketinginstitute.com/research/)). B2C companies that quantify marketing's financial impact are 1.7x more likely to receive budget increases ([Forrester, 2024](https://www.forrester.com/research/)). Yet 63% of CMOs still struggle to connect marketing activities to revenue outcomes ([Gartner CMO Survey, 2025](https://www.gartner.com/en/marketing)). Instead of pitching for dollars, PLOT teaches you to partner with Finance, identify the user actions that drive business value, measure marketing's contribution to those actions, and present an investment case that gets approved.
 
 <div class="stats-bar">
   <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">STEPS</span></div>
@@ -28,7 +28,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
   <div class="stat-item"><span class="stat-number">1</span><span class="stat-label">INVESTMENT CASE</span></div>
 </div>
 
-<blockquote>"CFOs don't care about impressions. They care about pipeline and revenue. PLOT exists because the biggest reason marketing budgets get cut is that marketers can't speak Finance's language." — David Hampian, Founder, Field Vision</blockquote>
+<blockquote>"CFOs don't care about impressions. They care about pipeline and revenue. PLOT exists because the biggest reason marketing budgets get cut is that marketers can't speak Finance's language." — Field Vision, Founder, Field Vision</blockquote>
 
 ## The Four Steps
 

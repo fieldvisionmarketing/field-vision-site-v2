@@ -1,18 +1,18 @@
 ---
 title: "Content as a Growth System"
-description: "Most content strategies fail because they treat content as a deliverable instead of a growth system. David Hampian breaks down the framework built across Pandora, Twitch, and Amazon."
+description: "Most content strategies fail because they treat content as a deliverable instead of a growth system. Field Vision breaks down the framework built across Pandora, Twitch, and Amazon."
 category: "Growth Strategy"
 date: 2025-09-29
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["content marketing", "growth strategy", "BrightonSEO", "content strategy", "startup marketing"]
 ---
 
-Content marketing strategy is the systematic use of content to drive measurable business outcomes — not just traffic, not just engagement, but pipeline and revenue. Most B2B content strategies fail because they treat content as a deliverable instead of a growth system. That was the thesis behind my BrightonSEO keynote — and the response told me it struck a nerve.
+Content marketing strategy is the systematic use of content to drive measurable business outcomes — not just traffic, not just engagement, but pipeline and revenue. Most B2C content strategies fail because they treat content as a deliverable instead of a growth system. That was the thesis behind my BrightonSEO keynote — and the response told me it struck a nerve.
 
 In this talk, I break down the content-as-growth framework I built across Pandora, Twitch, and Amazon Music — the same approach that now drives how Field Vision helps clients build [content systems that compound](/guides/compound-growth-system/).
 
-B2B companies that treat content as a system rather than a series of deliverables generate 3x more leads per dollar spent ([Demand Gen Report, 2024](https://www.demandgenreport.com/resources/research/)). Yet 65% of B2B marketers say their content strategy lacks a clear connection to revenue ([Content Marketing Institute, 2025](https://contentmarketinginstitute.com/research/)). The gap between content that exists and content that drives growth is almost always a systems problem, not a creativity problem.
+B2C companies that treat content as a system rather than a series of deliverables generate 3x more leads per dollar spent ([Demand Gen Report, 2024](https://www.demandgenreport.com/resources/research/)). Yet 65% of B2C marketers say their content strategy lacks a clear connection to revenue ([Content Marketing Institute, 2025](https://contentmarketinginstitute.com/research/)). The gap between content that exists and content that drives growth is almost always a systems problem, not a creativity problem.
 
 ## Why Most Content Strategies Don't Drive Growth
 
@@ -52,7 +52,7 @@ Before you create anything, you need clarity on three questions:
 
 **Who are we trying to reach?** Not a demographic profile — a psychographic one. What do they believe? What are they struggling with? What language do they use to describe their problems? At Twitch, the content that performed best wasn't about "live streaming features." It was about creator identity, community building, and the emotional journey of going from hobbyist to professional.
 
-**What's our point of view?** In a world where AI can generate commodity content in seconds, your point of view is your only durable advantage. At Field Vision, we teach the [ABCT Framework](/guides/abct-framework/) — Authenticity, Boldness, Consistency, Trust — because brand voice is the one thing competitors and AI can't replicate.
+**What's our point of view?** In a world where AI can generate commodity content in seconds, your point of view is your only durable advantage. At Field Vision, we teach the [ABCT® Framework](/guides/abct-framework/) — Audit, Blueprint, Construct, Transfer — because brand voice is the one thing competitors and AI can't replicate.
 
 **What business outcome are we driving?** Every content initiative should connect to a specific business metric. Not "awareness" in the abstract — awareness among [specific audience] that drives [specific action] resulting in [measurable outcome].
 
@@ -66,7 +66,7 @@ Content architecture is the system that connects strategy to execution. It inclu
 
 **Content cadence.** How often you publish matters less than how consistently you publish. A blog post every week for a year beats a "content blitz" of 20 posts in a month followed by silence. Consistency signals credibility to both search engines and humans.
 
-**Repurposing system.** Every piece of anchor content — a long-form blog post, a webinar, a keynote — should atomize into 5-10 derivative pieces across channels. This is how you get volume without proportional effort. My BrightonSEO keynote, for example, became this blog post, three LinkedIn posts, a newsletter deep-dive, and the foundation of the [Compound Growth System](/guides/compound-growth-system/) guide.
+**Repurposing system.** Every piece of anchor content — a long-form blog post, a webinar, a keynote — should atomize into 5-10 derivative pieces across channels. This is how you get volume without proportional effort. My BrightonSEO keynote, for example, became this blog post, three LinkedIn posts, a newsletter deep-dive, and the foundation of the [Compound Growth System®](/guides/compound-growth-system/) guide.
 
 ### Layer 3: Measurement and Learning Loops
 
@@ -92,7 +92,7 @@ A **content calendar** says: "Publish a blog post about product features on Tues
 
 A **content system** says: "Our hypothesis is that comparison content converts 3x better than feature content for mid-funnel prospects. This week's post tests that hypothesis with a 'Build vs. Buy' piece targeting the IT Director persona. We'll measure time-on-page, CTA click-through, and demo requests within 14 days. Results feed into next month's content plan."
 
-The system approach maps directly to the [SCORE Framework](/guides/score-framework/) we use at Field Vision: Set the Foundation (strategic context), Create the Hypothesis (what we expect), Outline the Experiment Plan (the content piece), Run the Play (publish and promote), Evolve and Improve (measure and learn).
+The system approach maps directly to the [SCORE® Framework](/guides/score-framework/) we use at Field Vision: Set the Foundation (strategic context), Create the Hypothesis (what we expect), Outline the Experiment Plan (the content piece), Run the Play (publish and promote), Evolve and Improve (measure and learn).
 
 ## Common Content Marketing Failures and How to Fix Them
 
@@ -118,7 +118,7 @@ The BrightonSEO talk covers these principles in depth with real examples from Pa
 
 ## About Field Vision
 
-David Hampian is the founder of [Field Vision](/about/), a fractional CMO practice that helps B2B companies build marketing systems that compound. His content-as-growth approach is built into the [Compound Growth System](/guides/compound-growth-system/) — the same methodology used with clients like [Maestro](/case-studies/maestro/) and [Hard Rock Digital](/case-studies/hard-rock-digital/).
+Field Vision is the founder of [Field Vision](/about/), a fractional CMO practice that helps B2C companies build marketing systems that compound. His content-as-growth approach is built into the [Compound Growth System®](/guides/compound-growth-system/) — the same methodology used with clients like [Maestro](/case-studies/maestro/) and [Hard Rock Digital](/case-studies/hard-rock-digital/).
 
 ---
 

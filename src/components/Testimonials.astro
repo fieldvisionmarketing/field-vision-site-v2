@@ -3,9 +3,10 @@ const starPath = 'M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.
 
 const testimonials = [
   {
-    quote: "Working with David has been a game-changer for MONTREALITY. He helped us revamp our media kit into something sharper, more premium, and brand-ready — and also improved our outreach approach with clearer messaging and stronger positioning.",
+    quote: "Working with Field Vision has been a game-changer for MONTREALITY. They helped us revamp our media kit into something sharper, more premium, and brand-ready — and also improved our outreach approach with clearer messaging and stronger positioning.",
     name: "Sina Ghiassi & Daniel Yanez",
     title: "Founders, MONTREALITY",
+    image: "https://i.cbc.ca/ais/1.4020970,1489243352000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C220%2C1387%2C1034%29%3BResize%3D1104",
     initials: "SG",
     theme: "t-light",
   },
@@ -13,15 +14,25 @@ const testimonials = [
     quote: "We knew we had to find the right experts to guide us through this process because we're new to the space. We're extremely grateful for Field Vision's help building a first-of-its-kind go-to-market strategy that will change college sports forever.",
     name: "John Lee",
     title: "COO, The LinkU & Co-Founder, StreamU",
+    image: "https://media.licdn.com/dms/image/v2/C5603AQGLKSj6SQBs3g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1620490315434?e=1777507200&v=beta&t=N-TXOJMs2-xUm1QwKIMCww5CPiqqmxsl72-IUrlEg_4",
     initials: "JL",
     theme: "t-dark",
   },
   {
-    quote: "We were spending six figures on agencies with nothing to show for it. David replaced all of that with a clear strategy, the right hires, and systems that actually compound.",
-    name: "Jessica Liu",
-    title: "COO, Vibes Media",
-    initials: "JL",
+    quote: "David is one of the elite integrated marketers that can tap into both culture as well as traditional marketing discipline to drive outsized success in market. He's a team guy first and foremost and can join and lead within almost any category. But when you get him into idea workshops and planning on how to build a sustainable and differentiated moat for your business, he's one of the best I've ever seen. Make sure David is on your side for any competitive war — as you'll win those battles!",
+    name: "John Koller",
+    title: "Former CMO, Twitch",
+    image: "https://brand-innovators.com/wp-content/uploads/2024/01/Koller-John-e1769471129407.png",
+    initials: "JK",
     theme: "t-light",
+  },
+  {
+    quote: "The results have been real and fast: we've already had former members come back after receiving his emails, and our referral program is actively bringing new members into our ecosystem organically. Every deliverable came with clear, step-by-step instructions so we could hit the ground running.",
+    name: "Parul Khosla & Adriene Bueno",
+    title: "Founders, Arena",
+    image: "https://framerusercontent.com/images/WaQq8Tfp0X4W63RslbgQxhSR2ig.png?scale-down-to=1024&width=1080&height=1080",
+    initials: "PK",
+    theme: "t-dark",
   },
 ];
 ---
@@ -29,6 +40,7 @@ const testimonials = [
 <section class="testimonials">
   <div class="testimonials-inner">
     <h2 class="reveal">What Founders <span class="highlight">Say</span></h2>
+
     <div class="test-grid">
       {testimonials.map((t, i) => (
         <div class={`test-card ${t.theme} reveal rd${i + 1}`}>
@@ -41,7 +53,7 @@ const testimonials = [
           </div>
           <p class="test-quote">"{t.quote}"</p>
           <div class="test-author">
-            <div class="test-avatar">{t.initials}</div>
+            <div class="test-avatar"><img src={t.image} alt={t.name} class="test-avatar-img" /></div>
             <div>
               <div class="test-name">{t.name}</div>
               <div class="test-title">{t.title}</div>

@@ -4,7 +4,7 @@ description: "Gary Payton II is launching a professional skateboarding league. T
 category: "Culture & Marketing"
 date: 2025-09-02
 updated: 2026-02-23
-author: "David Hampian"
+author: "Field Vision"
 tags: ["skateboarding", "sports marketing", "brand authenticity", "culture", "SBA"]
 ---
 
@@ -36,4 +36,4 @@ The SBA's story is still being written, but the playbook mirrors what we learned
 
 ## About Field Vision
 
-Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.
+Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.

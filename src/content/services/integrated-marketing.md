@@ -1,7 +1,7 @@
 ---
 title: "Integrated Marketing Strategy"
 description: "We connect brand, growth, content, and channels into one coordinated system — so every touchpoint reinforces the same story and compounds over time."
-icon: "🔗"
+icon: "🧩"
 order: 3
 sidebar:
   - label: "Duration"
@@ -46,7 +46,7 @@ deliverables:
   - icon: "🔄"
     title: "Channel Orchestration"
     desc: "A system for coordinating messaging, cadence, and customer experience across owned, earned, and paid channels."
-  - icon: "📋"
+  - icon: "🧩"
     title: "Team Alignment Playbook"
     desc: "Rituals, governance structures, and decision frameworks that keep your marketing team coordinated, accountable, and moving in the same direction."
 whoIntro: "This engagement is for marketing leaders and founders who know their team is working hard but suspect the pieces are not connected — and it is costing them growth."

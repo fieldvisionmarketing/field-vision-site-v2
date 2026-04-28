@@ -2,9 +2,13 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import FinalCTA from '@/components/FinalCTA.astro';
 ---
 
-<BaseLayout title="Connecting Listeners to Live Music at Pandora &amp; Ticketfly" description="A Field Vision case study - Connecting Listeners to Live Music at Pandora &amp; Ticketfly">
+<BaseLayout
+  title="Connecting Listeners to Live Music at Pandora &amp; Ticketfly"
+  description=""
+>
   <Header slot="header" />
 
   <!-- ═══════════════════════════════════════════
@@ -308,35 +312,12 @@ import Footer from '@/components/Footer.astro';
 <!-- ═══════════════════════════════════════════
      SECTION 10: CTA
      ═══════════════════════════════════════════ -->
-<section class="cta-section">
-  <h2>Ready to Build Your Growth Engine?</h2>
-  <p>
-    Every engagement starts with a conversation. Let's talk about where you are, where you want to go, and how to get there.
-  </p>
-  <a href="#" class="cta-btn">Book a Strategy Call</a>
-</section>
+<FinalCTA />
 
 <div class="lightbox-overlay" id="heroLightbox" onclick="this.classList.remove('active')">
     <span class="lightbox-close">&times;</span>
     <img id="lightboxImg" src="" alt="" />
 </div>
-<script>
-    (function() {
-        var heroImg = document.querySelector('.hero-image img');
-        if (!heroImg) return;
-        var overlay = document.getElementById('heroLightbox');
-        var lbImg = document.getElementById('lightboxImg');
-        heroImg.addEventListener('click', function() {
-            lbImg.src = heroImg.src;
-            lbImg.alt = heroImg.alt;
-            overlay.classList.add('active');
-        });
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') overlay.classList.remove('active');
-        });
-    })();
-</script>
-<script>(function(){var hb=document.querySelector('.hamburger'),mn=document.querySelector('.mobile-nav');if(!hb||!mn)return;hb.addEventListener('click',function(){hb.classList.toggle('active');mn.classList.toggle('open');hb.setAttribute('aria-expanded',hb.classList.contains('active')?'true':'false');document.body.style.overflow=mn.classList.contains('open')?'hidden':'';}); document.querySelectorAll('.mobile-nav a').forEach(function(l){l.addEventListener('click',function(){hb.classList.remove('active');mn.classList.remove('open');hb.setAttribute('aria-expanded','false');document.body.style.overflow='';});});})();</script>
 
   <Footer slot="footer" />
 </BaseLayout>
@@ -348,7 +329,7 @@ import Footer from '@/components/Footer.astro';
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    color: var(--tan);
+    color: var(--dark);
     margin-bottom: 12px;
     display: block;
 }
@@ -380,10 +361,12 @@ import Footer from '@/components/Footer.astro';
     font-size: 16px;
     color: rgba(239,234,211,0.8);
     max-width: 500px;
-    margin-bottom: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 28px;
     line-height: 1.7;
 }
-.hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+.hero-meta { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
 .hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
 .hero-meta-label {
     font-size: 10px;
@@ -672,36 +655,7 @@ a.phase-tool:hover { background: var(--accent); color: var(--dark); }
     transition: background 0.3s, color 0.3s;
 }
 .service-pill:hover { background: var(--accent); color: var(--dark); }
-.cta-section { background: var(--dark); padding: 80px 24px; text-align: center; }
-.cta-section h2 {
-    font-family: 'Anton', sans-serif;
-    font-size: clamp(28px, 3.5vw, 44px);
-    text-transform: uppercase;
-    color: var(--cream);
-    margin-bottom: 16px;
-}
-.cta-section p {
-    font-size: 16px;
-    color: rgba(239,234,211,0.7);
-    max-width: 540px;
-    margin: 0 auto 32px;
-    line-height: 1.7;
-}
-.cta-btn {
-    display: inline-block;
-    padding: 16px 40px;
-    background: var(--accent);
-    color: var(--dark);
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(165,219,93,0.3); }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; }
     .hero-image { aspect-ratio: 16/9; }
     .results-strip-inner { grid-template-columns: repeat(2, 1fr); }
@@ -712,11 +666,22 @@ a.phase-tool:hover { background: var(--accent); color: var(--dark); }
     .impact-callout { flex-direction: column; text-align: center; }
 }
 
-/* ---- Lightbox ---- */
+/* ─── SITE HEADER ─── */
+.
+.
+
+@media(max-width:768px){
+  .
+  
+}
+
+    /* ---- Lightbox ---- */
     .hero-image img { cursor: zoom-in; transition: transform 0.2s ease; }
     .hero-image img:hover { transform: scale(1.02); }
     .lightbox-overlay { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.92); z-index:9999; cursor:zoom-out; align-items:center; justify-content:center; padding:40px; }
     .lightbox-overlay.active { display:flex; }
     .lightbox-overlay img { max-width:90vw; max-height:90vh; object-fit:contain; border-radius:var(--radius); }
     .lightbox-close { position:absolute; top:20px; right:28px; color:white; font-size:36px; cursor:pointer; font-weight:300; z-index:10000; }
+    
+  /* ---- Hamburger & Mobile Nav ---- */
 </style>

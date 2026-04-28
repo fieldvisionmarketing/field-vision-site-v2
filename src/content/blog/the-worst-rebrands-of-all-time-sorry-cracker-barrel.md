@@ -4,7 +4,7 @@ description: "Netflix Qwikster. Olive Garden's breadstick rebrand. The London 20
 category: "Culture & Marketing"
 date: 2025-08-25
 updated: 2026-03-03
-author: "David Hampian"
+author: "Field Vision"
 tags: ["rebranding", "marketing failures", "brand strategy", "Netflix", "case study"]
 ---
 
@@ -36,4 +36,4 @@ For more on building sustainable brand strategy and avoiding these pitfalls, see
 
 ## About Field Vision
 
-Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by David Hampian — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.
+Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.

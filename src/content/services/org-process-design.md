@@ -34,7 +34,7 @@ deliverables:
   - icon: "🏗️"
     title: "Org Design"
     desc: "Marketing organization structure built for your current stage and next 12 months of growth — with clear reporting lines and cross-functional alignment."
-  - icon: "📋"
+  - icon: "⚙️"
     title: "Role Architecture"
     desc: "Defined roles with ownership clarity, responsibilities, career progression paths, and performance expectations."
   - icon: "🗓️"

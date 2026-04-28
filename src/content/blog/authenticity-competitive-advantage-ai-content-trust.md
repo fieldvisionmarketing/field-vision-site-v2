@@ -3,11 +3,11 @@ title: "Authenticity as Competitive Edge"
 description: "In an AI-saturated content landscape, authentic brand voice is the ultimate competitive advantage. Here's why and how to build it."
 category: "Growth Strategy"
 date: 2026-03-04
-author: "David Hampian"
+author: "Field Vision"
 tags: ["authenticity", "AI content", "content strategy", "startup marketing", "growth"]
 ---
 
-*Looking for the step-by-step implementation guide? See the [ABCT Framework: Complete Guide](/guides/abct-framework/).*
+*Looking for the step-by-step implementation guide? See the [ABCT® Framework: Complete Guide](/guides/abct-framework/).*
 
 Two years ago, 60% of consumers said they trusted AI-generated content. Today, that number is 26%.
 
