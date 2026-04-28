@@ -185,18 +185,17 @@ h1, h2, h3 {
 
 /* ── HERO — two-column grid ── */
 .hero-section {
-  min-height: calc(100vh - 180px);
-  padding: 80px 48px;
-  padding-top: 152px; /* account for fixed header */
+  padding: 48px 48px 56px;
+  padding-top: 120px; /* account for fixed header */
   background: var(--paper);
   display: grid;
   grid-template-columns: 58% 42%;
+  align-items: center;
   gap: 0;
 }
 .hero-left {
   display: flex; flex-direction: column;
-  justify-content: center;
-  gap: 48px;
+  gap: 40px;
   padding-right: 48px;
 }
 .hero-headline h1 {
