@@ -221,8 +221,9 @@ h1, h2, h3 {
   border-left: 4px solid var(--ink);
   position: relative; overflow: hidden;
   background: var(--ink);
-  margin: -80px -48px -80px 0;
-  margin-top: -152px; /* extend behind header */
+  margin: -56px -48px -56px 0;
+  margin-top: -120px; /* extend behind header */
+  min-height: 580px;
   padding: 0;
 }
 .hero-right-label {
