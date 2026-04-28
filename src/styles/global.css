@@ -191,15 +191,15 @@ h1, h2, h3 {
 
 /* ── HERO — two-column grid ── */
 .hero-section {
-  min-height: calc(100vh - 340px);
+  height: calc(100vh - 220px);
   padding: 0 48px;
   padding-top: 80px; /* just below fixed header */
-  padding-bottom: 24px;
   background: var(--paper);
   display: grid;
   grid-template-columns: 58% 42%;
   align-items: center;
   gap: 0;
+  overflow: hidden;
 }
 .hero-left {
   display: flex; flex-direction: column;
@@ -229,7 +229,7 @@ h1, h2, h3 {
   border-left: 4px solid var(--ink);
   position: relative; overflow: hidden;
   background: var(--ink);
-  margin: -80px -48px -24px 0; /* stretch to edges */
+  margin: -80px -48px 0 0; /* stretch to edges */
   padding: 0;
   align-self: stretch;
 }
@@ -701,7 +701,7 @@ h1, h2, h3 {
    RESPONSIVE — 1024px
    ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .hero-section { grid-template-columns: 1fr; min-height: auto; }
+  .hero-section { grid-template-columns: 1fr; height: auto; }
   .hero-left { padding-right: 0; margin-top: 0; }
   .hero-right { display: none; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -717,7 +717,7 @@ h1, h2, h3 {
    ══════════════════════════════════════════ */
 @media (max-width: 768px) {
   .section { padding: 56px 24px; }
-  .hero-section { padding: 96px 24px 40px; min-height: auto; }
+  .hero-section { padding: 96px 24px 40px; height: auto; }
   .hero-left { margin-top: 0; }
   .hero-headline h1 { font-size: clamp(40px, 12vw, 60px); }
   .hero-lede-row { gap: 16px; }
