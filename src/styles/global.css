@@ -193,7 +193,8 @@ h1, h2, h3 {
 .hero-section {
   min-height: calc(100vh - 200px);
   padding: 0 48px;
-  padding-top: 72px; /* account for fixed header */
+  padding-top: 80px; /* just below fixed header */
+  padding-bottom: 24px;
   background: var(--paper);
   display: grid;
   grid-template-columns: 58% 42%;
@@ -202,8 +203,7 @@ h1, h2, h3 {
 }
 .hero-left {
   display: flex; flex-direction: column;
-  gap: clamp(16px, 2.5vh, 28px);
-  margin-top: clamp(-72px, -5vh, -20px);
+  gap: clamp(16px, 2vh, 24px);
   padding-right: 48px;
 }
 .hero-headline h1 {
@@ -229,12 +229,12 @@ h1, h2, h3 {
   border-left: 4px solid var(--ink);
   position: relative; overflow: hidden;
   background: var(--ink);
-  margin: -72px -48px 0 0; /* stretch to edges */
+  margin: -80px -48px -24px 0; /* stretch to edges */
   padding: 0;
   align-self: stretch;
 }
 .hero-right-label {
-  position: absolute; top: clamp(72px, 8vh, 96px); left: 24px; z-index: 2;
+  position: absolute; top: clamp(80px, 9vh, 100px); left: 24px; z-index: 2;
 }
 .label-eyebrow {
   font-family: 'JetBrains Mono', monospace;
