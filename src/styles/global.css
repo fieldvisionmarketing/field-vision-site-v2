@@ -191,7 +191,7 @@ h1, h2, h3 {
 
 /* ── HERO — two-column grid ── */
 .hero-section {
-  height: calc(100vh - 220px);
+  height: calc(100vh - 190px);
   padding: 0 48px;
   padding-top: 80px; /* just below fixed header */
   background: var(--paper);
