@@ -263,16 +263,24 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <slot name="footer" />
 
   <!-- Reveal animation script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const reveals = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
-      reveals.forEach(el => observer.observe(el));
-    });
+  <script is:inline>
+    (function(){
+      function initReveal(){
+        var reveals = document.querySelectorAll('.reveal');
+        if(!reveals.length) return;
+        var observer = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+        reveals.forEach(function(el){ observer.observe(el); });
+      }
+      if(document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', initReveal);
+      } else {
+        initReveal();
+      }
+    })();
   </script>
 
   <!-- Analytics: GTM container + pixel stack (consent-gated) -->
