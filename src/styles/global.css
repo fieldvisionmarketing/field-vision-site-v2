@@ -114,7 +114,7 @@ h1, h2, h3 {
   line-height: 1.05; color: var(--ink);
 }
 .section-subtitle {
-  font-size: 18px; font-weight: 500;
+  font-size: clamp(11px, 1.4vw, 18px); font-weight: 500;
   margin-top: 14px; max-width: 600px; line-height: 1.55;
 }
 .section-header-row {
@@ -191,7 +191,7 @@ h1, h2, h3 {
 
 /* ── HERO — two-column grid ── */
 .hero-section {
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   padding: 0 48px;
   padding-top: 72px; /* account for fixed header */
   background: var(--paper);
@@ -202,13 +202,13 @@ h1, h2, h3 {
 }
 .hero-left {
   display: flex; flex-direction: column;
-  gap: 28px;
-  margin-top: -72px;
+  gap: clamp(16px, 2.5vh, 28px);
+  margin-top: clamp(-72px, -5vh, -20px);
   padding-right: 48px;
 }
 .hero-headline h1 {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(65px, 8.1vw, 138px);
+  font-size: clamp(48px, 7vw, 138px);
   line-height: 1.0; letter-spacing: 0.01em;
   text-transform: uppercase; color: var(--ink);
 }
@@ -220,7 +220,7 @@ h1, h2, h3 {
   gap: 24px;
 }
 .hero-lede p {
-  font-size: 28px; line-height: 1.45; font-weight: 500; max-width: 580px;
+  font-size: clamp(18px, 2.2vw, 28px); line-height: 1.45; font-weight: 500; max-width: 580px;
 }
 .hero-lede .mark {
   background: var(--offwhite); padding: 0 4px; font-weight: 700;
@@ -234,17 +234,17 @@ h1, h2, h3 {
   align-self: stretch;
 }
 .hero-right-label {
-  position: absolute; top: 96px; left: 24px; z-index: 2;
+  position: absolute; top: clamp(72px, 8vh, 96px); left: 24px; z-index: 2;
 }
 .label-eyebrow {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 18px; font-weight: 500;
+  font-size: clamp(11px, 1.4vw, 18px); font-weight: 500;
   text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--green-dk); margin-bottom: 4px;
 }
 .label-service {
   font-family: 'Anton', sans-serif;
-  font-size: 44px; letter-spacing: 0.07em;
+  font-size: clamp(22px, 3.3vw, 44px); letter-spacing: 0.07em;
   text-transform: uppercase; color: var(--offwhite);
   text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
   transition: opacity 0.4s ease;
@@ -604,7 +604,7 @@ h1, h2, h3 {
   background: var(--ink);
   padding: 14px 24px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 18px; font-weight: 500;
+  font-size: clamp(11px, 1.4vw, 18px); font-weight: 500;
   text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--green-lt);
   display: flex; align-items: center; gap: 8px;
@@ -642,7 +642,7 @@ h1, h2, h3 {
   margin-bottom: 16px;
 }
 .final-cta p {
-  font-size: 18px; font-weight: 500;
+  font-size: clamp(11px, 1.4vw, 18px); font-weight: 500;
   color: var(--muted); margin-bottom: 32px;
   max-width: 480px; margin-left: auto; margin-right: auto;
 }
@@ -701,9 +701,8 @@ h1, h2, h3 {
    RESPONSIVE — 1024px
    ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .hero-section {
-  grid-template-columns: 1fr; }
-  .hero-left { padding-right: 0; }
+  .hero-section { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding-right: 0; margin-top: 0; }
   .hero-right { display: none; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .services-row-bottom { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
@@ -718,10 +717,10 @@ h1, h2, h3 {
    ══════════════════════════════════════════ */
 @media (max-width: 768px) {
   .section { padding: 56px 24px; }
-  .hero-section {
-  padding: 120px 24px 56px; }
-  .hero-headline h1 { font-size: clamp(45px, 12.5vw, 65px); }
-  .hero-lede-row { grid-template-columns: 1fr; gap: 16px; }
+  .hero-section { padding: 96px 24px 40px; min-height: auto; }
+  .hero-left { margin-top: 0; }
+  .hero-headline h1 { font-size: clamp(40px, 12vw, 60px); }
+  .hero-lede-row { gap: 16px; }
   .nav-center { display: none; }
   .persona-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
