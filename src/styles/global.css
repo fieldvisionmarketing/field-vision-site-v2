@@ -220,7 +220,7 @@ h1, h2, h3 {
   gap: 24px;
 }
 .hero-lede p {
-  font-size: clamp(17px, 2vw, 25px); line-height: 1.45; font-weight: 500; max-width: 580px;
+  font-size: clamp(15px, 1.7vw, 21px); line-height: 1.5; font-weight: 500; max-width: 580px;
 }
 .hero-lede .mark {
   background: var(--offwhite); padding: 0 4px; font-weight: 700;
