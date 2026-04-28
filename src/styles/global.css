@@ -201,7 +201,7 @@ h1, h2, h3 {
 }
 .hero-headline h1 {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(52px, 6.5vw, 110px);
+  font-size: clamp(78px, 9.75vw, 165px);
   line-height: 1.0; letter-spacing: 0.01em;
   text-transform: uppercase; color: var(--ink);
 }
@@ -213,7 +213,7 @@ h1, h2, h3 {
   margin-top: 36px;
 }
 .hero-lede p {
-  font-size: 22px; line-height: 1.5; font-weight: 500; max-width: 540px;
+  font-size: 33px; line-height: 1.4; font-weight: 500; max-width: 600px;
 }
 .hero-lede .mark {
   background: var(--offwhite); padding: 0 4px; font-weight: 700;
@@ -713,7 +713,7 @@ h1, h2, h3 {
   .section { padding: 56px 24px; }
   .hero-section {
   padding: 120px 24px 56px; }
-  .hero-headline h1 { font-size: clamp(36px, 10vw, 52px); }
+  .hero-headline h1 { font-size: clamp(54px, 15vw, 78px); }
   .hero-lede-row { grid-template-columns: 1fr; gap: 16px; }
   .nav-center { display: none; }
   .persona-grid { grid-template-columns: 1fr; }
