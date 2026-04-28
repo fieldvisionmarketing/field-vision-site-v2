@@ -16,7 +16,7 @@
   <div class="hero-right">
     <div class="hero-right-label">
       <div class="label-eyebrow">Currently Running</div>
-      <div class="label-service" id="play-label">Shotgun Spread</div>
+      <div class="label-service" id="play-label">Fractional CMO</div>
     </div>
     <svg class="play-anim-svg" viewBox="0 0 500 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <g id="bg-main"></g>
@@ -51,15 +51,7 @@
     });
   }
 
-  function drawCourt(bgEl) {
-    bgEl.innerHTML = '';
-    bgEl.appendChild(el('line',{class:'yard-hash',x1:50,y1:140,x2:450,y2:140,opacity:'0.15'}));
-    bgEl.appendChild(el('line',{class:'yard-hash',x1:170,y1:140,x2:170,y2:320,opacity:'0.15'}));
-    bgEl.appendChild(el('line',{class:'yard-hash',x1:330,y1:140,x2:330,y2:320,opacity:'0.15'}));
-    bgEl.appendChild(el('line',{class:'yard-hash',x1:170,y1:320,x2:330,y2:320,opacity:'0.15'}));
-    bgEl.appendChild(el('circle',{cx:'250',cy:'155',r:'12',class:'scrimmage'}));
-    bgEl.appendChild(el('path',{d:'M 170 320 A 80 80 0 0 1 330 320',class:'scrimmage'}));
-  }
+
 
   var plays = [
     { sport:'football', label:'Shotgun Spread', players:[
@@ -73,16 +65,6 @@
       {d:'M 340 400 L 340 350 Q 340 320 300 300 L 180 280',delay:.8,dur:1.8},
       {d:'M 220 500 Q 150 500 100 480 L 60 450',delay:1.0,dur:1.5}
     ]},
-    { sport:'basketball', label:'Pick & Roll', players:[
-      {x:250,y:480,t:'O'},{x:80,y:380,t:'O'},{x:420,y:380,t:'O'},{x:250,y:370,t:'O'},{x:150,y:280,t:'O'}
-    ], routes:[
-      {d:'M 250 480 L 280 460 Q 310 440 330 410 L 350 370',delay:.4,dur:1.8},
-      {d:'M 250 370 Q 240 340 235 300 Q 230 260 240 220 L 250 175',delay:1.2,dur:1.8},
-      {d:'M 350 370 Q 310 300 260 200',delay:2.4,dur:.8,dashed:true},
-      {d:'M 420 380 L 400 430 L 370 470',delay:.8,dur:1.2},
-      {d:'M 80 380 L 70 340 L 80 300',delay:1.0,dur:1.0},
-      {d:'M 150 280 L 200 240 L 250 220',delay:1.4,dur:1.0}
-    ]},
     { sport:'football', label:'I-Form Power', players:[
       {x:200,y:410,t:'O'},{x:230,y:410,t:'O'},{x:250,y:410,t:'O'},{x:270,y:410,t:'O'},{x:300,y:410,t:'O'},
       {x:250,y:435,t:'X'},{x:250,y:480,t:'X'},{x:250,y:530,t:'X'},
@@ -93,21 +75,23 @@
       {d:'M 230 410 Q 230 430 240 440 Q 270 450 310 430 L 350 400',delay:.2,dur:1.5},
       {d:'M 60 405 L 60 300 L 60 220',delay:.6,dur:1.5},
       {d:'M 440 405 L 380 370 L 350 340',delay:.7,dur:1.1}
-    ]},
-    { sport:'basketball', label:'Fast Break', players:[
-      {x:250,y:560,t:'O'},{x:120,y:480,t:'O'},{x:380,y:480,t:'O'}
-    ], routes:[
-      {d:'M 250 560 L 250 440 L 250 340',delay:.3,dur:1.8},
-      {d:'M 120 480 L 100 380 Q 90 320 80 260 L 80 200',delay:.4,dur:2.0},
-      {d:'M 380 480 L 400 380 Q 410 320 420 260 L 420 200',delay:.4,dur:2.0},
-      {d:'M 250 340 Q 320 300 390 270',delay:2.0,dur:.8,dashed:true},
-      {d:'M 420 200 Q 380 180 330 165 L 280 155',delay:2.8,dur:1.2}
     ]}
   ];
 
+  var serviceNames = [
+    'Fractional CMO',
+    'Go-to-Market Strategy',
+    'Growth & Lifecycle',
+    'Integrated Marketing',
+    'Content & Creator',
+    'AI Growth Systems',
+    'Org & Process Design'
+  ];
+  var serviceIdx = 0;
+
   function renderPlay(playEl, bgEl, p) {
     playEl.innerHTML = '';
-    if (p.sport === 'football') drawFootball(bgEl); else drawCourt(bgEl);
+    drawFootball(bgEl);
     p.players.forEach(function(pl, i) {
       var g = el('g',{class: pl.t==='X' ? 'player-x' : 'player-o'});
       var txt = el('text',{x:pl.x, y:pl.y});
@@ -164,7 +148,7 @@
     var p = plays[idx];
     idx = (idx+1) % plays.length;
     renderPlay(playEl, bgEl, p);
-    if (labelEl) { labelEl.style.opacity = '0'; setTimeout(function(){ labelEl.textContent = p.label; labelEl.style.opacity = '1'; }, 400); }
+    if (labelEl) { labelEl.style.opacity = '0'; setTimeout(function(){ labelEl.textContent = serviceNames[serviceIdx]; serviceIdx = (serviceIdx+1) % serviceNames.length; labelEl.style.opacity = '1'; }, 400); }
     fadeEl(playEl,1,.8).then(function(){
       return new Promise(function(r){ timers.push(setTimeout(r,5200)); });
     }).then(function(){

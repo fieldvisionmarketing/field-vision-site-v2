@@ -158,7 +158,7 @@ h1, h2, h3 {
 }
 .logo { display: flex; align-items: center; }
 .header-logo { height: 44px; width: auto; filter: brightness(0) invert(1); }
-.footer-logo { height: 72px; width: auto; }
+.footer-logo { height: 48px; width: auto; margin-bottom: 16px; }
 .nav-center { display: flex; gap: 28px; }
 .nav-center a {
   font-size: 14px; font-weight: 600;
@@ -173,12 +173,12 @@ h1, h2, h3 {
   letter-spacing: 0.08em;
   padding: 10px 20px;
   background: var(--green-lt); color: var(--ink);
-  border: 4px solid var(--green-lt);
-  box-shadow: none;
+  border: 4px solid var(--ink);
+  box-shadow: 4px 4px 0 rgba(255,255,255,0.12);
   transition: transform 0.15s, box-shadow 0.15s;
   cursor: pointer;
 }
-.nav-cta:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 rgba(255,255,255,0.15); }
+.nav-cta:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 rgba(255,255,255,0.18); }
 
 /* ── HERO — two-column grid ── */
 .hero-section {
@@ -269,8 +269,8 @@ h1, h2, h3 {
 .marquee-inner { display: flex; white-space: nowrap; animation: slide 35s linear infinite; }
 .marquee-set { display: flex; align-items: center; }
 .sp-brand {
-  display: inline-flex; align-items: center; gap: 10px;
-  margin-right: 36px;
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-right: 56px;
   font-family: 'Anton', sans-serif;
   font-size: 15px; font-weight: 400;
   text-transform: uppercase; letter-spacing: 0.04em;
@@ -298,7 +298,7 @@ h1, h2, h3 {
   transition: transform 0.15s, box-shadow 0.15s;
   display: block; text-decoration: none; color: var(--ink);
 }
-.persona-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
+/* Non-clickable cards: no hover animation (R11) */
 .persona-num {
   font-family: 'Anton', sans-serif;
   font-size: 48px; color: var(--green-lt);
@@ -395,7 +395,7 @@ h1, h2, h3 {
   padding: 28px 16px; text-align: center;
   transition: transform 0.15s, box-shadow 0.15s;
 }
-.vertical-tile:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--ink); }
+
 .vertical-emoji { font-size: 28px; margin-bottom: 10px; display: block; }
 .vertical-name {
   font-family: 'Anton', sans-serif;
@@ -414,7 +414,7 @@ h1, h2, h3 {
   overflow: hidden; position: relative;
   transition: transform 0.15s, box-shadow 0.15s;
 }
-.why-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
+
 .why-num {
   position: absolute; top: -10px; right: 10px;
   font-family: 'Anton', sans-serif;
@@ -451,8 +451,9 @@ h1, h2, h3 {
   background: rgba(255,255,255,0.04);
 }
 .testimonial-quote {
-  font-size: 15px; line-height: 1.6;
-  font-style: italic; color: rgba(255,255,255,0.8);
+
+  font-size: 17px; line-height: 1.65;
+  font-style: italic; color: rgba(255,255,255,0.85);
   margin-bottom: 20px;
 }
 .testimonial-footer {
