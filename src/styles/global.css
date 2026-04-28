@@ -195,7 +195,8 @@ h1, h2, h3 {
 }
 .hero-left {
   display: flex; flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 48px;
   padding-right: 48px;
 }
 .hero-headline h1 {
@@ -775,4 +776,22 @@ h1, h2, h3 {
   .svc-ps-problem{border-right:none;border-bottom:4px solid var(--ink)}
   .svc-deliverables,.svc-who,.svc-abct,.svc-faq,.svc-final-cta{padding:48px 24px}
   .svc-abct-grid{grid-template-columns:1fr 1fr}
+}
+
+/* Scroll hint chevron */
+.scroll-hint {
+  text-align: center;
+  padding: 12px 0 0;
+  background: var(--paper);
+}
+.scroll-chevron {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  color: var(--muted);
+  animation: bounce-down 1.8s ease-in-out infinite;
+}
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(8px); opacity: 1; }
 }
