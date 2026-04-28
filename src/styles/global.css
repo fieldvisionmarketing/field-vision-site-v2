@@ -208,7 +208,7 @@ h1, h2, h3 {
 }
 .hero-headline h1 {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(42px, 6vw, 118px);
+  font-size: clamp(48px, 7vw, 138px);
   line-height: 1.0; letter-spacing: 0.01em;
   text-transform: uppercase; color: var(--ink);
 }
@@ -220,7 +220,7 @@ h1, h2, h3 {
   gap: 24px;
 }
 .hero-lede p {
-  font-size: clamp(16px, 1.8vw, 24px); line-height: 1.45; font-weight: 500; max-width: 580px;
+  font-size: clamp(18px, 2.2vw, 28px); line-height: 1.45; font-weight: 500; max-width: 580px;
 }
 .hero-lede .mark {
   background: var(--offwhite); padding: 0 4px; font-weight: 700;
