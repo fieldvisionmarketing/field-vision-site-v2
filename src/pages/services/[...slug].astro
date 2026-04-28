@@ -18,6 +18,28 @@ const d = service.data;
 const siteUrl = 'https://fieldvisiongroup.com';
 const slug = service.id.replace(/\.md$/, '');
 
+/* ── Highlight chip helper: wraps last word in hl-green ── */
+function chipLastWord(text, chipClass = 'hl-green') {
+  const words = text.trim().split(/\s+/);
+  if (words.length <= 1) return text;
+  const last = words.pop();
+  return words.join(' ') + ' <span class="' + chipClass + '">' + last + '</span>';
+}
+function chipCtaWord(text, chipClass = 'hl-green') {
+  // For CTA headlines like "Ready to Build Your Growth Engine?"
+  // Chip the second-to-last word (the noun/action) before the ?
+  const clean = text.replace(/\?$/, '');
+  const words = clean.trim().split(/\s+/);
+  if (words.length <= 1) return text;
+  const last = words.pop();
+  return words.join(' ') + ' <span class="' + chipClass + '">' + last + '</span>?';
+}
+
+const heroTitle = chipLastWord(d.title);
+const ctaTitle = chipCtaWord(d.ctaHeadline || 'Ready to Build Your Growth Engine?');
+const problemTitle = chipLastWord(d.problemHeadline || 'The Challenge');
+
+
 /* ── Schema.org: Service ── */
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -65,7 +87,7 @@ const faqSchema = d.faqs?.length ? {
     <div class="svcpg-hero-inner">
       <div class="svcpg-hero-text">
         {d.icon && <span class="svcpg-icon">{d.icon}</span>}
-        <h1>{d.title}</h1>
+        <h1 set:html={heroTitle} />
         <p class="svcpg-subtitle">{d.description}</p>
         <a href="/contact/" class="btn-brutal">Book a Call →</a>
       </div>
@@ -87,7 +109,7 @@ const faqSchema = d.faqs?.length ? {
   <section class="svcpg-ps reveal">
     <div class="svcpg-ps-inner">
       <span class="eyebrow">The Challenge You're Facing</span>
-      <h2>{d.problemHeadline || 'The Challenge'}</h2>
+      <h2 set:html={problemTitle} />
       <p class="svcpg-ps-intro">{d.problemIntro}</p>
       <div class="svcpg-ps-grid">
         <div class="svcpg-ps-card svcpg-ps-old">
@@ -114,7 +136,7 @@ const faqSchema = d.faqs?.length ? {
   <section class="svcpg-del reveal">
     <div class="svcpg-del-inner">
       <span class="eyebrow">What You Walk Away With</span>
-      <h2>Deliverables</h2>
+      <h2><span class="hl-cream">Deliverables</span></h2>
       <div class="svcpg-del-grid">
         {d.deliverables?.map((del: { icon: string; title: string; desc: string }) => (
           <div class="svcpg-del-card">
@@ -132,7 +154,7 @@ const faqSchema = d.faqs?.length ? {
     <div class="svcpg-who-inner">
       <div class="svcpg-who-main">
         <span class="eyebrow">Is This You?</span>
-        <h2>Who This Is For</h2>
+        <h2>Who This Is <span class="hl-cream">For</span></h2>
         <p class="svcpg-who-intro">{d.whoIntro}</p>
         <ul class="svcpg-who-triggers">
           {d.whoTriggers?.map((t: string) => (
@@ -154,7 +176,7 @@ const faqSchema = d.faqs?.length ? {
   <section class="svcpg-abct reveal">
     <div class="svcpg-abct-inner">
       <span class="eyebrow">Our Proven Framework</span>
-      <h2>The ABCT® Model</h2>
+      <h2>The <span class="hl-green">ABCT®</span> Model</h2>
       <p class="svcpg-abct-intro">Every engagement follows our proven four-phase framework — designed to deliver results and build independence.</p>
       <div class="svcpg-abct-grid">
         {(d.abctSteps || [
@@ -178,7 +200,7 @@ const faqSchema = d.faqs?.length ? {
     <section class="svcpg-faq reveal">
       <div class="svcpg-faq-inner">
         <span class="eyebrow">Common Questions</span>
-        <h2>FAQ</h2>
+        <h2><span class="hl-cream">FAQ</span></h2>
         <div class="svcpg-faq-list">
           {d.faqs.map((faq: { question: string; answer: string }) => (
             <details class="svcpg-faq-item">
@@ -194,7 +216,7 @@ const faqSchema = d.faqs?.length ? {
   <!-- ═══ FINAL CTA ═══ -->
   <section class="svcpg-final-cta reveal">
     <div class="svcpg-final-cta-inner">
-      <h2>{d.ctaHeadline || 'Ready to Build Your Growth Engine?'}</h2>
+      <h2 set:html={ctaTitle} />
       <p>{d.ctaBody || "Book a 30-minute discovery call. We'll talk about where you are, where you want to go, and whether Field Vision is the right fit."}</p>
       <a href="/contact/" class="btn-brutal">Book a Call →</a>
     </div>
