@@ -356,7 +356,7 @@ h1, h2, h3 {
   transition: transform 0.15s, box-shadow 0.15s;
   text-decoration: none; color: var(--ink);
 }
-.service-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 20px rgba(165,219,93,0.35); }
+.service-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2); }
 .service-card-header {
   background: var(--ink);
   padding: 20px 24px;
@@ -542,7 +542,7 @@ h1, h2, h3 {
   transition: transform 0.15s, box-shadow 0.15s;
   text-decoration: none; color: var(--ink);
 }
-.product-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 20px rgba(165,219,93,0.35); }
+.product-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2); }
 .product-header {
   background: var(--ink);
   padding: 20px 24px;
@@ -591,7 +591,7 @@ h1, h2, h3 {
   transition: transform 0.15s, box-shadow 0.15s;
   text-decoration: none; color: var(--ink);
 }
-.blog-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 20px rgba(165,219,93,0.35); }
+.blog-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2); }
 .blog-cat-bar {
   background: var(--ink);
   padding: 14px 24px;
