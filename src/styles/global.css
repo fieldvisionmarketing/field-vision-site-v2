@@ -648,7 +648,7 @@ h1, h2, h3 {
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--green-dk);
+  color: var(--muted);
   margin-bottom: 10px;
   display: block;
 }
