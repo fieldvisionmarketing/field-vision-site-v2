@@ -389,6 +389,7 @@ h1, h2, h3 {
   background: var(--ink);
   transition: background 0.2s, color 0.2s;
   padding: 20px 24px;
+  border-bottom: 4px solid var(--ink);
   display: flex; align-items: center; gap: 14px;
   min-height: 80px;
 }
@@ -579,6 +580,7 @@ h1, h2, h3 {
   background: var(--ink);
   transition: background 0.2s, color 0.2s;
   padding: 20px 24px;
+  border-bottom: 4px solid var(--ink);
   display: flex; align-items: center; gap: 14px;
 }
 .product-icon {
@@ -631,6 +633,7 @@ h1, h2, h3 {
 .blog-cat-bar {
   background: var(--ink);
   transition: background 0.2s, color 0.2s;
+  border-bottom: 4px solid var(--ink);
   padding: 14px 24px;
   font-family: 'JetBrains Mono', monospace;
   font-size: clamp(10px, 1.26vw, 16px); font-weight: 500;
@@ -832,6 +835,7 @@ h1, h2, h3 {
   transition: background 0.2s, color 0.2s;
   background: var(--ink);
   padding: 20px 24px;
+  border-bottom: 4px solid var(--ink);
   display: flex;
   align-items: center;
   gap: 14px;
@@ -1887,7 +1891,8 @@ h1, h2, h3 {
   transition: background 0.2s, color 0.2s;
   background: var(--green-lt);
   color: var(--ink);
-}
+
+  border-bottom: 4px solid var(--ink);}
 .abt-press-card-header {
   background: rgba(239,234,211,0.08);
   padding: 14px 20px;
@@ -1958,7 +1963,8 @@ h1, h2, h3 {
   transition: background 0.2s, color 0.2s;
   background: var(--green-lt);
   color: var(--ink);
-}
+
+  border-bottom: 4px solid var(--ink);}
 .abt-svc-card-header {
   background: var(--ink);
   padding: 20px 24px;
@@ -2847,6 +2853,7 @@ h1, h2, h3 {
   background: var(--ink);
   color: var(--offwhite);
   padding: 14px 20px;
+  border-bottom: 4px solid var(--ink);
   display: flex;
   align-items: center;
   justify-content: space-between;
