@@ -1967,12 +1967,6 @@ h1, h2, h3 {
   grid-column: 1 / -1;
 }
 
-  font-size: 0.95rem;
-  font-weight: 450;
-  line-height: 1.7;
-  color: var(--muted);
-}
-
 /* ── CANONICAL FAQ (shared across all pages) ── */
 .faq-section {
   padding: 80px 48px;
