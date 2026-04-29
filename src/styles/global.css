@@ -615,6 +615,44 @@ h1, h2, h3 {
 }
 .product-link:hover { color: var(--green-dk); }
 
+/* ══════════════════════════════════════════════════════════════
+   BLOG LANDING PAGE HERO  (blg-*)
+   ══════════════════════════════════════════════════════════════ */
+.blg-hero {
+  padding: 140px 24px 60px;
+  background: var(--offwhite);
+  text-align: center;
+}
+.blg-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.blg-hero h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--ink);
+  margin: 12px 0 0;
+}
+.blg-hero-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--ink);
+  margin: 20px auto;
+}
+.blg-hero-sub {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .blg-hero { padding: 120px 20px 40px; }
+}
+
 /* ── BLOG CARDS — bg: white ── */
 .insights { background: var(--paper); }
 .blog-grid {

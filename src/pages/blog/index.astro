@@ -11,12 +11,20 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 <BaseLayout title="Startup Marketing Blog" description="Insights on growth strategy, fractional CMO leadership, go-to-market playbooks, and building marketing systems for startups in digital media and entertainment.">
   <Header slot="header" />
 
+  <!-- ═══ HERO (Memphis Brutalist) ═══ -->
+  <section class="blg-hero">
+    <div class="blg-hero-inner">
+      <span class="eyebrow">— Blog</span>
+      <h1>Latest <span class="hl-green">Insights</span></h1>
+      <div class="blg-hero-divider"></div>
+      <p class="blg-hero-sub">Growth strategy, frameworks, and lessons from a decade of scaling brands at Amazon, Twitch, and Pandora.</p>
+    </div>
+  </section>
+
+  <!-- ═══ BLOG CARDS ═══ -->
   <section class="blog-listing">
     <div class="blog-listing-inner">
-      <h1 class="reveal">Latest <span class="highlight">Insights</span></h1>
-      <p class="section-sub reveal rd1">Growth strategy, frameworks, and lessons from a decade of scaling brands at Amazon, Twitch, and Pandora.</p>
-
-      <div class="blog-grid" style="margin-top:48px">
+      <div class="blog-grid" style="margin-top:0">
         {posts.map((post, i) => (
           <a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class={`blog-card reveal rd${(i % 3) + 1}`}>
             <div class="blog-body">
@@ -35,22 +43,10 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
 <style>
   .blog-listing {
-    padding: 140px 24px 80px;
+    padding: 0 24px 80px;
   }
   .blog-listing-inner {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  .blog-listing h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    text-transform: uppercase;
-    line-height: 0.92;
-    text-align: center;
-  }
-  .blog-listing .section-sub {
-    text-align: center;
-    max-width: 600px;
-    margin: 16px auto 0;
   }
 </style>
