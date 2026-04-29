@@ -272,8 +272,9 @@ h1, h2, h3 {
   opacity: 0.45; z-index: 1;
 }
 .player-x text, .player-o text {
-  font-family: 'Anton', sans-serif; font-size: 52px;
+  font-family: 'Permanent Marker', cursive; font-size: 44px; font-weight: 400;
   fill: rgba(255,255,255,0.85); text-anchor: middle; dominant-baseline: central;
+  letter-spacing: 0.15em;
 }
 .route { fill: none; stroke: var(--offwhite); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
 .arrowhead { fill: var(--offwhite); opacity: 0; }
