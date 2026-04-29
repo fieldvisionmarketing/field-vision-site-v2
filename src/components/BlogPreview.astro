@@ -17,13 +17,10 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   <div class="blog-grid">
     {posts.map((post, i) => (
       <a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class={`blog-card reveal rd${i + 1}`}>
-        <div class="blog-cat-bar">
-          <span class="blog-cat-dot"></span>
-          {post.data.category}
-        </div>
-        <div class="blog-card-body">
-          <h3 class="blog-card-title">{post.data.title}</h3>
-          <p class="blog-card-desc">{post.data.description}</p>
+        <div class="blog-body">
+          <span class="blog-cat">{post.data.category}</span>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.description}</p>
         </div>
       </a>
     ))}
