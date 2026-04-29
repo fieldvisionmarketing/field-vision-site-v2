@@ -382,10 +382,12 @@ h1, h2, h3 {
   text-decoration: none; color: var(--ink);
 }
 .service-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
-.service-card:hover .card-header {
-  transition: background 0.2s, color 0.2s; background: var(--green-lt); color: var(--ink); }
+.service-card:hover .service-card-header {
+  background: var(--green-lt); color: var(--ink); }
+.service-card:hover .service-name { color: var(--ink); }
 .service-card-header {
   background: var(--ink);
+  transition: background 0.2s, color 0.2s;
   padding: 20px 24px;
   display: flex; align-items: center; gap: 14px;
   min-height: 80px;
@@ -570,10 +572,12 @@ h1, h2, h3 {
   text-decoration: none; color: var(--ink);
 }
 .product-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
-.product-card:hover .card-header {
-  transition: background 0.2s, color 0.2s; background: var(--green-lt); color: var(--ink); }
+.product-card:hover .product-header {
+  background: var(--green-lt); color: var(--ink); }
+.product-card:hover .product-name { color: var(--ink); }
 .product-header {
   background: var(--ink);
+  transition: background 0.2s, color 0.2s;
   padding: 20px 24px;
   display: flex; align-items: center; gap: 14px;
 }
@@ -621,10 +625,12 @@ h1, h2, h3 {
   text-decoration: none; color: var(--ink);
 }
 .blog-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
-.blog-card:hover .card-header {
-  transition: background 0.2s, color 0.2s; background: var(--green-lt); color: var(--ink); }
+.blog-card:hover .blog-cat-bar {
+  background: var(--green-lt); color: var(--ink); }
+.blog-card:hover .blog-cat-bar span { color: var(--ink); }
 .blog-cat-bar {
   background: var(--ink);
+  transition: background 0.2s, color 0.2s;
   padding: 14px 24px;
   font-family: 'JetBrains Mono', monospace;
   font-size: clamp(10px, 1.26vw, 16px); font-weight: 500;
@@ -818,10 +824,10 @@ h1, h2, h3 {
   box-shadow: 10px 10px 0 var(--ink);
 }
 .svclp-card:hover .svclp-card-header {
-  transition: background 0.2s, color 0.2s;
   background: var(--green-lt);
   color: var(--ink);
 }
+.svclp-card:hover .svclp-card-header span { color: var(--ink); }
 .svclp-card-header {
   transition: background 0.2s, color 0.2s;
   background: var(--ink);
@@ -2172,10 +2178,10 @@ h1, h2, h3 {
   box-shadow: 10px 10px 0 var(--ink);
 }
 .cslp-card:hover .cslp-card-header {
-  transition: background 0.2s, color 0.2s;
   background: var(--green-lt);
   color: var(--ink);
 }
+.cslp-card:hover .cslp-card-header span { color: var(--ink); }
 .cslp-card-header {
   transition: background 0.2s, color 0.2s;
   background: var(--ink);
