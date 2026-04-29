@@ -1513,7 +1513,6 @@ h1, h2, h3 {
   text-align: center;
   flex: 1 1 0;
   padding: 0 20px;
-  max-width: 180px;
 }
 .abt-cred-num {
   font-family: 'Anton', sans-serif;
