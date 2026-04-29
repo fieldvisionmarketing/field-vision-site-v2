@@ -3,13 +3,15 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import FinalCTA from '@/components/FinalCTA.astro';
 
 const orderMap = {
   'abct-framework': 1,
   'score-framework': 2,
   'compound-growth-system': 3,
-  'ai-blueprint': 4,
-  'plot-framework': 5,
+  'plot-framework': 4,
+  'ai-blueprint': 5,
+  'gtm-template': 6,
 };
 const guides = (await getCollection('guides')).sort((a, b) => {
   const slugA = a.id.replace(/\.(md|mdx)$/, '');
@@ -21,118 +23,48 @@ const guides = (await getCollection('guides')).sort((a, b) => {
 <BaseLayout title="Marketing Frameworks & Guides" description="Proprietary marketing frameworks and playbooks for startups — SCORE®, ABCT®, Compound Growth System®, and more. Free downloads built from a decade of growth leadership at Amazon, Twitch, and Pandora.">
   <Header slot="header" />
 
-  <section class="guides-listing">
-    <div class="guides-listing-inner">
-      <h1 class="reveal">Our <span class="highlight">Frameworks</span></h1>
-      <p class="section-sub reveal rd1">Proprietary playbooks built from a decade of scaling marketing functions at Amazon, Twitch, Pandora, and Hard Rock. Download them. Use them. Win.</p>
+  <!-- HERO (cream bg) -->
+  <section class="gdlp-hero section">
+    <div class="gdlp-hero-inner">
+      <span class="eyebrow">— Frameworks & Guides</span>
+      <h1>Proprietary <span class="hl-green">Playbooks</span></h1>
+      <div class="gdlp-hero-divider"></div>
+      <p class="gdlp-hero-sub">Built from a decade of scaling marketing functions at Amazon, Twitch, Pandora, and Hard Rock. Download them. Use them. Win.</p>
+    </div>
+  </section>
 
-      <div class="guides-grid" style="margin-top:48px">
-        {guides.map((guide, i) => (
-          <a href={`/guides/${guide.id.replace(/\.(md|mdx)$/, '')}/`} class={`guide-card reveal rd${(i % 3) + 1}`}>
-            <div class="guide-card-top">
-              {guide.data.framework && <span class="guide-badge">{guide.data.framework}</span>}
-              {guide.data.gated && <span class="guide-gated-badge">Free Download</span>}
-            </div>
-            <h3>{guide.data.title}</h3>
-            <p>{guide.data.description}</p>
-            <span class="guide-card-link">
-              {guide.data.gated ? 'Get the Guide →' : 'Read Now →'}
-            </span>
-          </a>
-        ))}
+  <!-- GUIDE CARDS (white bg) -->
+  <section class="gdlp-cards section">
+    <div class="gdlp-cards-inner">
+      <div class="gdlp-grid">
+        {guides.map((guide) => {
+          const slug = guide.id.replace(/\.(md|mdx)$/, '');
+          return (
+            <a href={`/guides/${slug}/`} class="gdlp-card">
+              <div class="gdlp-card-header">
+                <span>{guide.data.framework || 'Guide'}</span>
+                {guide.data.phases && <span class="gdlp-card-phases">{guide.data.phases}</span>}
+              </div>
+              <div class="gdlp-card-body">
+                <h3>{guide.data.title}</h3>
+                <p>{guide.data.description}</p>
+              </div>
+              <div class="gdlp-card-footer">
+                <div class="gdlp-card-tags">
+                  {guide.data.readTime && <span class="gdlp-tag">{guide.data.readTime}</span>}
+                  {guide.data.gated && <span class="gdlp-tag">Free Download</span>}
+                </div>
+                <span class="gdlp-card-link">{guide.data.gated ? 'Get the Guide →' : 'Read Now →'}</span>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
+  <FinalCTA />
+
   <Footer slot="footer" />
 </BaseLayout>
-
-<style>
-  .guides-listing {
-    padding: 140px 24px 80px;
-  }
-  .guides-listing-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .guides-listing h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    text-transform: uppercase;
-    line-height: 0.92;
-    text-align: center;
-  }
-  .guides-listing .section-sub {
-    text-align: center;
-    max-width: 600px;
-    margin: 16px auto 0;
-  }
-  .guides-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 24px;
-  }
-  .guide-card {
-    background: var(--dark);
-    color: #fff;
-    border-radius: 0;
-    padding: 36px 28px;
-    text-decoration: none;
-    transition: transform 0.25s, box-shadow 0.25s;
-    display: flex;
-    flex-direction: column;
-  }
-  .guide-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-  }
-  .guide-card-top {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-  }
-  .guide-badge {
-    background: var(--accent);
-    color: var(--dark);
-    font-weight: 700;
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 0;
-  }
-  .guide-gated-badge {
-    background: rgba(255,255,255,0.12);
-    color: rgba(255,255,255,0.7);
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 0;
-  }
-  .guide-card h3 {
-    font-family: var(--font-display);
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    line-height: 1.1;
-    margin-bottom: 12px;
-  }
-  .guide-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.65);
-    flex: 1;
-  }
-  .guide-card-link {
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--accent);
-  }
-  @media (max-width: 768px) {
-    .guides-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
