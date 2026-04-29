@@ -2084,3 +2084,671 @@ h1, h2, h3 {
   .abt-press-grid { grid-template-columns: 1fr; }
   .abt-tl-item { grid-template-columns: 24px 1fr; gap: 14px; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   CASE STUDIES LANDING PAGE  (cslp-*)
+   Rules: R1-R19 Memphis Brutalist
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── HERO (cream bookend per R9) ── */
+.cslp-hero {
+  padding: 140px 24px 60px;
+  background: var(--offwhite);
+  text-align: center;
+}
+.cslp-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.cslp-hero h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--ink);
+  margin: 12px 0 0;
+}
+.cslp-hero-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--ink);
+  margin: 20px auto;
+}
+.cslp-hero-sub {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 450;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── CARD GRID (white bg) ── */
+.cslp-cards {
+  background: var(--paper);
+}
+.cslp-cards-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.cslp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+/* Dark-header clickable cards (R3, R12, R13) */
+.cslp-card {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  background: var(--paper);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cslp-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2);
+}
+.cslp-card-header {
+  background: var(--ink);
+  padding: 16px 24px;
+  border-bottom: 4px solid var(--ink);
+}
+.cslp-card-header span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--green-lt);
+}
+.cslp-card-body {
+  padding: 20px 24px;
+  flex: 1;
+}
+.cslp-card-body h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.cslp-card-body p {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 450;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.cslp-card-footer {
+  padding: 14px 24px;
+  border-top: 4px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cslp-card-tags {
+  display: flex;
+  gap: 8px;
+}
+.cslp-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  background: rgba(165,219,93,0.15);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
+.cslp-card-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.cslp-card:hover .cslp-card-link {
+  color: var(--green-dk);
+}
+
+/* ── CTA (offwhite bookend per R9) ── */
+.cslp-cta {
+  background: var(--offwhite);
+  text-align: center;
+}
+.cslp-cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.cslp-cta h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.cslp-cta p {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 450;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+/* ── LANDING RESPONSIVE ── */
+@media (max-width: 768px) {
+  .cslp-hero { padding: 120px 20px 40px; }
+  .cslp-grid { grid-template-columns: 1fr; }
+  .cslp-card-footer { flex-direction: column; gap: 10px; align-items: flex-start; }
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   CASE STUDY DETAIL PAGES  (cs-*)
+   Shared CSS for all individual case studies.
+   10 sections: Hero, Results Strip, Situation, Approach,
+   Gallery, Before/After, Results Deep Dive, Impact,
+   Services Used, CTA (FinalCTA component)
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── HERO (ink bg) ── */
+.cs-hero {
+  background: var(--ink);
+  color: var(--offwhite);
+  padding: 152px 24px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.cs-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.cs-hero .eyebrow { color: var(--green-lt); }
+.cs-hero h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--offwhite);
+  margin-bottom: 20px;
+}
+.cs-hero-desc {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 16px;
+  font-weight: 450;
+  color: rgba(239,234,211,0.8);
+  max-width: 500px;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+.cs-hero-meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.cs-hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cs-hero-meta-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green-dk);
+}
+.cs-hero-meta-value {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--offwhite);
+}
+.cs-hero-image img {
+  width: 100%;
+  border: 4px solid rgba(239,234,211,0.15);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+  display: block;
+}
+
+/* ── RESULTS STRIP (green-lt bg) ── */
+.cs-results-strip {
+  background: var(--green-lt);
+  padding: 40px 24px;
+}
+.cs-results-strip-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+.cs-stat-num {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.cs-stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(33,54,33,0.7);
+}
+
+/* ── CONTENT SECTIONS (shared) ── */
+.cs-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+.cs-section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cs-section h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+.cs-section p {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 16px;
+  font-weight: 450;
+  color: var(--muted);
+  max-width: 720px;
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+/* ── SITUATION: Challenge Grid ── */
+.cs-challenge-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 32px;
+}
+.cs-challenge-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-challenge-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.cs-challenge-num {
+  width: 36px;
+  height: 36px;
+  background: var(--ink);
+  color: var(--green-lt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 16px;
+  flex-shrink: 0;
+  border: 4px solid var(--ink);
+}
+.cs-challenge-text {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 15px;
+  font-weight: 450;
+  color: var(--ink);
+  line-height: 1.6;
+}
+.cs-challenge-text strong { font-weight: 700; }
+.cs-callout {
+  background: var(--ink);
+  color: var(--offwhite);
+  padding: 32px;
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--green-dk);
+}
+.cs-callout .eyebrow { color: var(--green-lt); }
+.cs-callout blockquote {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 450;
+  line-height: 1.6;
+  color: rgba(239,234,211,0.9);
+  margin-top: 12px;
+}
+
+/* ── APPROACH (ink bg) ── */
+.cs-approach {
+  background: var(--ink);
+  padding: 80px 24px;
+}
+.cs-approach .cs-section-inner { max-width: 1100px; margin: 0 auto; }
+.cs-approach .eyebrow { color: var(--green-lt); }
+.cs-approach h2 { color: var(--offwhite); }
+.cs-approach p { color: rgba(239,234,211,0.7); }
+.cs-phases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.cs-phase-card {
+  border: 4px solid rgba(239,234,211,0.15);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+  background: rgba(239,234,211,0.04);
+  padding: 28px;
+}
+.cs-phase-num {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  color: var(--green-lt);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.cs-phase-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--offwhite);
+  margin-bottom: 8px;
+}
+.cs-phase-desc {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 13px;
+  font-weight: 450;
+  color: rgba(239,234,211,0.6);
+  line-height: 1.6;
+}
+.cs-phase-tools {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cs-phase-tool {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  background: rgba(165,219,93,0.12);
+  color: var(--green-lt);
+  text-decoration: none;
+  border: 2px solid rgba(165,219,93,0.25);
+  transition: background 0.2s, color 0.2s;
+}
+.cs-phase-tool:hover {
+  background: var(--green-lt);
+  color: var(--ink);
+}
+
+/* ── BEFORE / AFTER (warm-gray bg) ── */
+.cs-ba {
+  background: var(--warm-gray);
+  padding: 80px 24px;
+}
+.cs-ba-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cs-ba h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 40px;
+}
+.cs-ba-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.cs-ba-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+}
+.cs-ba-before .cs-ba-label { color: var(--muted); border-bottom: 4px solid rgba(33,54,33,0.15); }
+.cs-ba-after .cs-ba-label { color: var(--green-dk); border-bottom: 4px solid var(--green-lt); }
+.cs-ba-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.cs-ba-bullet {
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  border: 3px solid var(--ink);
+}
+.cs-ba-before .cs-ba-bullet { background: var(--warm-gray); opacity: 0.5; }
+.cs-ba-after .cs-ba-bullet { background: var(--green-lt); }
+.cs-ba-text {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.cs-ba-after .cs-ba-text { color: var(--ink); }
+
+/* ── RESULTS DEEP DIVE (white bg) ── */
+.cs-results {
+  background: var(--paper);
+  padding: 80px 24px;
+}
+.cs-results-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cs-results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.cs-result-card {
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  background: var(--paper);
+  padding: 32px;
+}
+.cs-result-metric {
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.cs-result-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--green-dk);
+  margin-bottom: 12px;
+}
+.cs-result-desc {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  font-weight: 450;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.cs-result-bar {
+  height: 4px;
+  background: rgba(33,54,33,0.08);
+  margin-top: 16px;
+  overflow: hidden;
+}
+.cs-result-bar-fill {
+  height: 100%;
+  background: var(--green-lt);
+}
+
+/* ── IMPACT (warm-gray bg) ── */
+.cs-impact {
+  background: var(--warm-gray);
+  padding: 80px 24px;
+}
+.cs-impact > span,
+.cs-impact > h2,
+.cs-impact > p,
+.cs-impact > .cs-impact-callout {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cs-impact > p { margin-bottom: 16px; }
+.cs-impact-callout {
+  margin-top: 32px;
+  background: var(--ink);
+  color: var(--offwhite);
+  padding: 40px;
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--green-dk);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.cs-impact-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--green-lt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 24px;
+  border: 4px solid var(--ink);
+}
+.cs-impact-text {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 1.7;
+  color: rgba(239,234,211,0.85);
+}
+
+/* ── SERVICES USED (white bg) ── */
+.cs-services {
+  background: var(--paper);
+  padding: 60px 24px;
+}
+/* cs-services content is centered via max-width on section itself */
+.cs-services > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cs-services h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.cs-services-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.cs-service-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 10px 20px;
+  background: var(--ink);
+  color: var(--offwhite);
+  border: 4px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.cs-service-pill:hover {
+  background: var(--green-lt);
+  color: var(--ink);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+/* ── GALLERY (white bg) ── */
+.cs-gallery {
+  padding: 80px 24px;
+  background: var(--paper);
+}
+.cs-gallery-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cs-gallery-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  margin-top: 32px;
+}
+.cs-gallery-item {
+  overflow: hidden;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--offwhite);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 4px solid var(--ink);
+  position: relative;
+}
+.cs-gallery-item.large { grid-row: span 2; min-height: 380px; }
+.cs-gallery-item.small { min-height: 180px; }
+
+/* ── CASE STUDY DETAIL RESPONSIVE ── */
+@media (max-width: 900px) {
+  .cs-hero-inner { grid-template-columns: 1fr; }
+  .cs-results-strip-inner { grid-template-columns: repeat(2, 1fr); }
+  .cs-challenge-grid { grid-template-columns: 1fr; }
+  .cs-phases { grid-template-columns: 1fr; }
+  .cs-ba-grid { grid-template-columns: 1fr; }
+  .cs-results-grid { grid-template-columns: 1fr; }
+  .cs-gallery-grid { grid-template-columns: 1fr; }
+  .cs-gallery-item.large { grid-row: span 1; min-height: 240px; }
+  .cs-impact-callout { flex-direction: column; text-align: center; }
+}
