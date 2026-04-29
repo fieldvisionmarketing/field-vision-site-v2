@@ -381,7 +381,9 @@ h1, h2, h3 {
   transition: transform 0.15s, box-shadow 0.15s;
   text-decoration: none; color: var(--ink);
 }
-.service-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2); }
+.service-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
+.service-card:hover .card-header {
+  transition: background 0.2s, color 0.2s; background: var(--green-lt); color: var(--ink); }
 .service-card-header {
   background: var(--ink);
   padding: 20px 24px;
@@ -567,7 +569,9 @@ h1, h2, h3 {
   transition: transform 0.15s, box-shadow 0.15s;
   text-decoration: none; color: var(--ink);
 }
-.product-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2); }
+.product-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
+.product-card:hover .card-header {
+  transition: background 0.2s, color 0.2s; background: var(--green-lt); color: var(--ink); }
 .product-header {
   background: var(--ink);
   padding: 20px 24px;
@@ -616,7 +620,9 @@ h1, h2, h3 {
   transition: transform 0.15s, box-shadow 0.15s;
   text-decoration: none; color: var(--ink);
 }
-.blog-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2); }
+.blog-card:hover { transform: translate(-2px,-2px); box-shadow: 10px 10px 0 var(--ink); }
+.blog-card:hover .card-header {
+  transition: background 0.2s, color 0.2s; background: var(--green-lt); color: var(--ink); }
 .blog-cat-bar {
   background: var(--ink);
   padding: 14px 24px;
@@ -809,11 +815,15 @@ h1, h2, h3 {
 }
 .svclp-card:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 var(--ink),
-    0 0 30px rgba(165,219,93,0.55),
-    0 0 60px rgba(165,219,93,0.2);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+.svclp-card:hover .svclp-card-header {
+  transition: background 0.2s, color 0.2s;
+  background: var(--green-lt);
+  color: var(--ink);
 }
 .svclp-card-header {
+  transition: background 0.2s, color 0.2s;
   background: var(--ink);
   padding: 20px 24px;
   display: flex;
@@ -1865,7 +1875,12 @@ h1, h2, h3 {
 }
 .abt-press-card:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 rgba(0,0,0,0.3), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2);
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.3);
+}
+.abt-press-card:hover .abt-press-header {
+  transition: background 0.2s, color 0.2s;
+  background: var(--green-lt);
+  color: var(--ink);
 }
 .abt-press-card-header {
   background: rgba(239,234,211,0.08);
@@ -1931,7 +1946,12 @@ h1, h2, h3 {
 }
 .abt-svc-card:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+.abt-svc-card:hover .abt-svc-header {
+  transition: background 0.2s, color 0.2s;
+  background: var(--green-lt);
+  color: var(--ink);
 }
 .abt-svc-card-header {
   background: var(--ink);
@@ -2149,9 +2169,15 @@ h1, h2, h3 {
 }
 .cslp-card:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 var(--ink), 0 0 30px rgba(165,219,93,0.55), 0 0 60px rgba(165,219,93,0.2);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+.cslp-card:hover .cslp-card-header {
+  transition: background 0.2s, color 0.2s;
+  background: var(--green-lt);
+  color: var(--ink);
 }
 .cslp-card-header {
+  transition: background 0.2s, color 0.2s;
   background: var(--ink);
   padding: 16px 24px;
   border-bottom: 4px solid var(--ink);
