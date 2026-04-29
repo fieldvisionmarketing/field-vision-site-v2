@@ -2592,11 +2592,11 @@ h1, h2, h3 {
 }
 .cs-result-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--green-dk);
+  color: var(--ink);
   margin-bottom: 12px;
 }
 .cs-result-desc {
@@ -2607,14 +2607,10 @@ h1, h2, h3 {
   line-height: 1.6;
 }
 .cs-result-bar {
-  height: 4px;
-  background: rgba(33,54,33,0.08);
-  margin-top: 16px;
-  overflow: hidden;
+  display: none;
 }
 .cs-result-bar-fill {
-  height: 100%;
-  background: var(--green-lt);
+  display: none;
 }
 
 /* ── IMPACT (warm-gray bg) ── */
