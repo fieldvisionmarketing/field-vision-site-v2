@@ -24,6 +24,7 @@
    R17 SCROLL REVEAL: Sections fade+slide in via IntersectionObserver. Chevron pulses below Trusted By bar.
    R18 FULL ROWS:    Card grids must fill every row. No orphan cards. Use column spans or split rows.
    R19 NO ORPHAN PUNCT: Trailing punctuation (?!.) must be INSIDE the highlight chip span, never after it.
+   R20 EYEBROWS:     JetBrains Mono 12px uppercase. Light bg = --ink (#213621). Dark bg = --offwhite (#efead3). Always.
    ══════════════════════════════════════════ */
 
 :root {
@@ -138,8 +139,10 @@ h1, h2, h3 {
 /* Dark section overrides */
 .section-dark { background: var(--ink); color: var(--paper); }
 .section-dark .section-title { color: var(--paper); }
-.section-dark .section-eyebrow { color: var(--green-dk); }
-.section-dark .section-eyebrow::before { background: var(--green-dk); }
+.section-dark .section-eyebrow { color: var(--offwhite); }
+.section-dark .section-eyebrow::before { background: var(--offwhite); }
+.section-dark .eyebrow { color: var(--offwhite); }
+.section-dark .eyebrow::before { background: var(--offwhite); }
 
 /* ── Buttons ── */
 .btn-brutal {
@@ -2354,7 +2357,7 @@ h1, h2, h3 {
   gap: 48px;
   align-items: center;
 }
-.cs-hero .eyebrow { color: var(--green-lt); }
+.cs-hero .eyebrow { color: var(--offwhite); }
 .cs-hero h1 {
   font-family: 'Anton', sans-serif;
   font-size: clamp(36px, 5vw, 56px);
@@ -2507,7 +2510,7 @@ h1, h2, h3 {
   border: 4px solid var(--ink);
   box-shadow: 8px 8px 0 var(--green-dk);
 }
-.cs-callout .eyebrow { color: var(--green-lt); }
+.cs-callout .eyebrow { color: var(--offwhite); }
 .cs-callout blockquote {
   font-family: 'Satoshi', sans-serif;
   font-size: 18px;
@@ -2524,7 +2527,7 @@ h1, h2, h3 {
   padding: 80px 24px;
 }
 .cs-approach .cs-section-inner { max-width: 1100px; margin: 0 auto; }
-.cs-approach .eyebrow { color: var(--green-lt); }
+.cs-approach .eyebrow { color: var(--offwhite); }
 .cs-approach h2 { color: var(--offwhite); }
 .cs-approach p { color: rgba(239,234,211,0.7); }
 .cs-phases {
