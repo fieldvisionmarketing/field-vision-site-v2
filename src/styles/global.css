@@ -1869,7 +1869,8 @@ h1, h2, h3 {
 .abt-awards-media {
   display: flex;
 }
-.abt-awards-media video {
+.abt-awards-media video,
+.abt-awards-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2138,14 +2139,11 @@ h1, h2, h3 {
     justify-content: center;
   }
   .abt-hero-headshot img { width: 320px; height: 320px; }
-.abt-awards-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: stretch;
-}
+  .abt-awards-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
   .abt-cred-inner {
     flex-wrap: wrap;
     gap: 16px;
