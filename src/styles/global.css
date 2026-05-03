@@ -109,7 +109,6 @@ h1, h2, h3 {
   content: ''; display: inline-block;
   width: 24px; height: 4px; background: var(--ink);
 }
-.section-title {
 .eyebrow {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px; font-weight: 700;
@@ -121,6 +120,7 @@ h1, h2, h3 {
   content: ''; display: inline-block;
   width: 24px; height: 4px; background: var(--green-dk);
 }
+.section-title {
   font-family: 'Anton', sans-serif;
   font-size: clamp(36px, 4.5vw, 64px);
   text-transform: uppercase; letter-spacing: 0.02em;
