@@ -7,6 +7,7 @@ mailerliteGroupId: "181508100922017560"
 downloadUrl: ""
 readTime: "9 min read"
 phases: "4 Steps"
+schemaJson: '{"@context": "https://schema.org", "@type": "HowTo", "name": "How to Apply the PLOT Framework", "description": "A four-step process for proving marketing''s financial impact and securing more budget.", "step": [{"@type": "HowToStep", "name": "Partner with Finance", "text": "Build a relationship with your Finance team. Learn their language, understand their metrics, and establish regular touchpoints for sharing marketing performance data."}, {"@type": "HowToStep", "name": "Locate High Value Actions", "text": "Identify the marketing activities that most directly drive revenue. Map your marketing funnel to financial outcomes and prioritize the actions with the highest business impact."}, {"@type": "HowToStep", "name": "Outline the Impact", "text": "Build attribution models that connect marketing activities to financial results. Create dashboards and reports that translate marketing metrics into business language."}, {"@type": "HowToStep", "name": "Tell the Story", "text": "Present marketing''s impact in narrative form that resonates with executive stakeholders. Use data to support a compelling story about marketing''s contribution to business growth."}]}'
 ---
 
 <div class="guide-cross-link">
@@ -28,29 +29,29 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
   <div class="stat-item"><span class="stat-number">1</span><span class="stat-label">INVESTMENT CASE</span></div>
 </div>
 
-<blockquote>"CFOs don't care about impressions. They care about pipeline and revenue. PLOT exists because the biggest reason marketing budgets get cut is that marketers can't speak Finance's language." — Field Vision, Founder, Field Vision</blockquote>
+<blockquote>"CFOs don't care about impressions. They care about pipeline and revenue. PLOT exists because the biggest reason marketing budgets get cut is that marketers can't speak Finance's language." — David Hampian, Founder, Field Vision</blockquote>
 
 ## The Four Steps
 
 <div class="overview-grid">
   <div class="overview-card">
     <div class="overview-card-badge">P</div>
-    <h3>Partner, Don't Pitch</h3>
+    <div class="overview-card-title">Partner, Don't Pitch</div>
     <p>Start on the same side as Finance and leadership.</p>
   </div>
   <div class="overview-card">
     <div class="overview-card-badge">L</div>
-    <h3>Locate High Value Actions</h3>
+    <div class="overview-card-title">Locate High Value Actions</div>
     <p>Identify the user actions that drive downstream business value.</p>
   </div>
   <div class="overview-card">
     <div class="overview-card-badge">O</div>
-    <h3>Outline the Impact</h3>
+    <div class="overview-card-title">Outline the Impact</div>
     <p>Connect marketing activity to HVAs and build the business case.</p>
   </div>
   <div class="overview-card">
     <div class="overview-card-badge">T</div>
-    <h3>Tell the Story</h3>
+    <div class="overview-card-title">Tell the Story</div>
     <p>Present a clean, confident narrative that gets the investment approved.</p>
   </div>
 </div>
@@ -264,34 +265,3 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
 ---
 
 *Download the full PLOT framework and start building your marketing investment case.*
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Apply the PLOT Framework",
-  "description": "A four-step process for proving marketing's financial impact and securing more budget.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Partner with Finance",
-      "text": "Build a relationship with your Finance team. Learn their language, understand their metrics, and establish regular touchpoints for sharing marketing performance data."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Locate High Value Actions",
-      "text": "Identify the marketing activities that most directly drive revenue. Map your marketing funnel to financial outcomes and prioritize the actions with the highest business impact."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Outline the Impact",
-      "text": "Build attribution models that connect marketing activities to financial results. Create dashboards and reports that translate marketing metrics into business language."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Tell the Story",
-      "text": "Present marketing's impact in narrative form that resonates with executive stakeholders. Use data to support a compelling story about marketing's contribution to business growth."
-    }
-  ]
-}
-</script>

@@ -69,6 +69,7 @@ const guides = defineCollection({
     downloadLabel: z.string().optional(),
     readTime: z.string().default('8 min read'),
     phases: z.string().default('4 Phases'),
+    schemaJson: z.string().optional(),
   }),
 });
 

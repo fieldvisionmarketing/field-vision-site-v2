@@ -118,6 +118,10 @@ const guideSlug = guide.id.replace(/\.mdx?$/, '');
       <a href="/contact" class="cta-btn">Book a Call &rarr;</a>
     </section>
 
+    {guide.data.schemaJson && (
+      <Fragment set:html={`<script type="application/ld+json">${guide.data.schemaJson}</script>`} />
+    )}
+
   </article>
 
   <Footer slot="footer" />
@@ -273,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
   letter-spacing: 2.5px;
   text-transform: uppercase;
   padding: 6px 18px;
-  border-radius: 0;
+  border-radius: 20px;
   margin-bottom: 28px;
 }
 .guide-hero h1 {
@@ -310,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
   font-family: 'Satoshi', sans-serif;
   font-size: 13px;
   padding: 7px 16px;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
 /* ---- LAYOUT: CONTENT + SIDEBAR ---- */
@@ -349,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .sidebar-inner {
   background: #fff;
   border: 1px solid rgba(33,54,33,0.08);
-  border-radius: 0;
+  border-radius: 14px;
   padding: 28px 24px;
   box-shadow: 0 2px 16px rgba(33,54,33,0.04);
 }
@@ -378,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
   color: rgba(33, 54, 33, 0.5);
   text-decoration: none;
   padding: 7px 14px;
-  border-radius: 0;
+  border-radius: 8px;
   border-left: 2px solid transparent;
   transition: all 0.2s ease;
   line-height: 1.4;
@@ -402,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .toc-download {
   margin-top: 18px;
   background: #213621;
-  border-radius: 0;
+  border-radius: 14px;
   padding: 24px 20px;
   text-align: center;
 }
@@ -418,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
   background: #A5DB5D;
   color: #213621;
   padding: 11px 16px;
-  border-radius: 0;
+  border-radius: 10px;
   font-family: 'Satoshi', sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -610,7 +614,7 @@ document.addEventListener('DOMContentLoaded', () => {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 0;
+  border-radius: 12px;
   overflow: hidden;
   margin: 28px 0;
   box-shadow: 0 1px 8px rgba(33, 54, 33, 0.06);
@@ -701,7 +705,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .guide-content :global(.card) {
   background: #fff;
   border: 1px solid rgba(33, 54, 33, 0.08);
-  border-radius: 0;
+  border-radius: 14px;
   padding: 28px 24px;
   box-shadow: 0 2px 8px rgba(33, 54, 33, 0.04);
 }
@@ -740,7 +744,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .guide-content :global(.output-card) {
   background: #fff;
   border: 1px solid rgba(33, 54, 33, 0.08);
-  border-radius: 0;
+  border-radius: 14px;
   padding: 24px 28px;
   margin: 20px 0;
   display: flex;
@@ -753,7 +757,7 @@ document.addEventListener('DOMContentLoaded', () => {
   height: 36px;
   min-width: 36px;
   background: rgba(165, 219, 93, 0.12);
-  border-radius: 0;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -772,7 +776,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .guide-content :global(.example-card) {
   background: rgba(33, 54, 33, 0.03);
   border: 1px solid rgba(33, 54, 33, 0.08);
-  border-radius: 0;
+  border-radius: 14px;
   padding: 28px;
   margin: 24px 0;
 }
@@ -822,7 +826,7 @@ document.addEventListener('DOMContentLoaded', () => {
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   margin: 48px 0;
-  border-radius: 0;
+  border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(33, 54, 33, 0.08);
 }
@@ -855,7 +859,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* --- What You Get Summary Card --- */
 .guide-content :global(.summary-card) {
   background: #213621;
-  border-radius: 0;
+  border-radius: 16px;
   padding: 40px 36px;
   margin: 48px 0;
   position: relative;
@@ -922,7 +926,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .gate-card {
   background: #213621;
   border: 2px solid rgba(165, 219, 93, 0.15);
-  border-radius: 0;
+  border-radius: 20px;
   padding: 56px 48px;
   max-width: 560px;
   width: 100%;
@@ -964,7 +968,7 @@ document.addEventListener('DOMContentLoaded', () => {
   max-width: 360px;
   margin: 0 auto 12px;
   padding: 14px 18px;
-  border-radius: 0;
+  border-radius: 10px;
   border: 1.5px solid rgba(165, 219, 93, 0.15);
   background: rgba(255, 255, 255, 0.04);
   color: #F5F0E8;
@@ -988,7 +992,7 @@ document.addEventListener('DOMContentLoaded', () => {
   color: #213621;
   border: none;
   padding: 14px 24px;
-  border-radius: 0;
+  border-radius: 10px;
   font-family: 'Satoshi', sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -1052,7 +1056,7 @@ document.addEventListener('DOMContentLoaded', () => {
   background: #213621;
   color: #A5DB5D;
   padding: 14px 40px;
-  border-radius: 0;
+  border-radius: 10px;
   font-family: 'Satoshi', sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -1136,7 +1140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .guide-content :global(.guide-cross-link) {
   background: rgba(165, 219, 93, 0.06);
   border: 1px solid rgba(165, 219, 93, 0.15);
-  border-radius: 0;
+  border-radius: 12px;
   padding: 16px 24px;
   margin-bottom: 8px;
 }
@@ -1160,7 +1164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .guide-content :global(.overview-card) {
   background: #fff;
   border: 1px solid rgba(33, 54, 33, 0.08);
-  border-radius: 0;
+  border-radius: 14px;
   padding: 28px 24px;
   box-shadow: 0 2px 8px rgba(33, 54, 33, 0.04);
   position: relative;
@@ -1178,7 +1182,8 @@ document.addEventListener('DOMContentLoaded', () => {
   color: #213621;
   margin-bottom: 16px;
 }
-.guide-content :global(.overview-card h3) {
+.guide-content :global(.overview-card h3),
+.guide-content :global(.overview-card-title) {
   font-family: 'Anton', sans-serif;
   font-size: 1.15rem;
   color: #213621;
@@ -1207,7 +1212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .guide-content :global(.summary-item) {
   background: rgba(245, 240, 232, 0.12);
   border: 1px solid rgba(165, 219, 93, 0.2);
-  border-radius: 0;
+  border-radius: 12px;
   padding: 24px;
 }
 .guide-content :global(.summary-item h4) {
@@ -1306,7 +1311,7 @@ document.addEventListener('DOMContentLoaded', () => {
       font-size: 1.1rem;
     }
 }
-    :global(.download-btn) { display: inline-block; max-width: 100%; box-sizing: border-box; background: #A5DB5D; color: #213621 !important; padding: 16px 36px; border-radius: 0; font-size: 1.15rem; font-weight: 700; text-decoration: none !important; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 12px; transition: all 0.2s ease; border: none; }
+    :global(.download-btn) { display: inline-block; max-width: 100%; box-sizing: border-box; background: #A5DB5D; color: #213621 !important; padding: 16px 36px; border-radius: 8px; font-size: 1.15rem; font-weight: 700; text-decoration: none !important; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 12px; transition: all 0.2s ease; border: none; }
     /* FAQ Accordion Styles — matches About page canonical format */
     :global(.faq-list) { display: flex; flex-direction: column; gap: 0; padding: 0; margin: 2rem 0; list-style: none; }
     :global(.faq-item) { border: none; border-bottom: 1px solid #e8e8e8; border-radius: 0; margin-bottom: 0; background: none; overflow: visible; }

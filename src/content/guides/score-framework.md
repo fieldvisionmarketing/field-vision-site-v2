@@ -30,16 +30,16 @@ Companies that align messaging to buyer psychology see 2.3x higher conversion ra
 <div class="stat-item"><span class="stat-number">1</span><span class="stat-label">PLAYBOOK</span></div>
 </div>
 
-<blockquote>"Most B2C companies skip the Situation step entirely. They jump straight to pitching features. But if your prospect doesn't see themselves in your narrative, nothing else lands." — Field Vision, Founder, Field Vision</blockquote>
+<blockquote>"Most B2C companies skip the Situation step entirely. They jump straight to pitching features. But if your prospect doesn't see themselves in your narrative, nothing else lands." — David Hampian, Founder, Field Vision</blockquote>
 
 ## The Five Steps
 
 <div class="overview-grid">
-<div class="overview-card"><div class="overview-card-badge">S</div><h3>Set the Foundation</h3><p>Define the strategic context before you build anything.</p></div>
-<div class="overview-card"><div class="overview-card-badge">C</div><h3>Create the Hypothesis</h3><p>Translate context into a testable IF/THEN statement.</p></div>
-<div class="overview-card"><div class="overview-card-badge">O</div><h3>Outline the Experiment Plan</h3><p>Map your hypothesis into a holistic go-to-market plan.</p></div>
-<div class="overview-card"><div class="overview-card-badge">R</div><h3>Run the Play</h3><p>Execute with discipline and alignment.</p></div>
-<div class="overview-card"><div class="overview-card-badge">E</div><h3>Evolve and Improve</h3><p>Close the loop — learn, document, and compound.</p></div>
+<div class="overview-card"><div class="overview-card-badge">S</div><div class="overview-card-title">Set the Foundation</div><p>Define the strategic context before you build anything.</p></div>
+<div class="overview-card"><div class="overview-card-badge">C</div><div class="overview-card-title">Create the Hypothesis</div><p>Translate context into a testable IF/THEN statement.</p></div>
+<div class="overview-card"><div class="overview-card-badge">O</div><div class="overview-card-title">Outline the Experiment Plan</div><p>Map your hypothesis into a holistic go-to-market plan.</p></div>
+<div class="overview-card"><div class="overview-card-badge">R</div><div class="overview-card-title">Run the Play</div><p>Execute with discipline and alignment.</p></div>
+<div class="overview-card"><div class="overview-card-badge">E</div><div class="overview-card-title">Evolve and Improve</div><p>Close the loop — learn, document, and compound.</p></div>
 </div>
 
 <div class="phase-section">

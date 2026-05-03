@@ -7,6 +7,7 @@ mailerliteGroupId: ""
 downloadUrl: ""
 readTime: "8 min read"
 phases: "3 Phases"
+schemaJson: '{"@context": "https://schema.org", "@type": "HowTo", "name": "How to Apply the AI Marketing Blueprint", "description": "A three-part framework for systematically deploying AI across marketing workflows.", "step": [{"@type": "HowToStep", "name": "Audit Friction", "text": "Map every bottleneck where humans act as slow middleware between systems. Identify repetitive tasks, high-volume processes, and areas where speed matters more than creativity."}, {"@type": "HowToStep", "name": "Build a Blueprint", "text": "Design implementation plans for each identified friction point. Define the AI tools, workflows, prompts, and integration points needed to automate or augment each process."}, {"@type": "HowToStep", "name": "Set Guardrails", "text": "Establish governance frameworks including brand voice guidelines for AI content, review workflows, quality checks, data privacy protocols, and escalation procedures for edge cases."}]}'
 ---
 
 ## What Is the AI Blueprint?
@@ -47,17 +48,17 @@ The AI Marketing Blueprint is a structured implementation plan developed by Davi
 <div class="overview-grid">
   <div class="overview-card">
     <div class="overview-card-badge">A</div>
-    <h3>Audit the Friction</h3>
+    <div class="overview-card-title">Audit the Friction</div>
     <p>Locate every place humans act as slow middleware between your marketing systems. Map the bottlenecks where AI can create leverage.</p>
   </div>
   <div class="overview-card">
     <div class="overview-card-badge">B</div>
-    <h3>Build the Blueprint</h3>
+    <div class="overview-card-title">Build the Blueprint</div>
     <p>Score friction and predictability. Write IF-THEN-UPDATE logic. Prioritize deployment by quarter. Turn friction into AI-ready specifications.</p>
   </div>
   <div class="overview-card">
     <div class="overview-card-badge">G</div>
-    <h3>Set the Guardrails</h3>
+    <div class="overview-card-title">Set the Guardrails</div>
     <p>Define supervision loops, calculate recovery costs, and set confidence thresholds. Ensure every AI deployment is safe and measurable.</p>
   </div>
 </div>
@@ -303,29 +304,3 @@ You’ve mapped friction. You’ve built specifications. Now you need to ensure 
 </div>
 
 </div>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Apply the AI Marketing Blueprint",
-  "description": "A three-part framework for systematically deploying AI across marketing workflows.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Audit Friction",
-      "text": "Map every bottleneck where humans act as slow middleware between systems. Identify repetitive tasks, high-volume processes, and areas where speed matters more than creativity."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Build a Blueprint",
-      "text": "Design implementation plans for each identified friction point. Define the AI tools, workflows, prompts, and integration points needed to automate or augment each process."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Set Guardrails",
-      "text": "Establish governance frameworks including brand voice guidelines for AI content, review workflows, quality checks, data privacy protocols, and escalation procedures for edge cases."
-    }
-  ]
-}
-</script>

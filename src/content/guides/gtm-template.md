@@ -8,6 +8,7 @@ downloadUrl: "/downloads/Field Vision GTM Template.docx"
 downloadLabel: "Template"
 readTime: "8 min read"
 phases: "4 Sections"
+schemaJson: '{"@context": "https://schema.org", "@type": "HowTo", "name": "How to Use the Field Vision GTM Template", "description": "A four-section process for planning and executing go-to-market launches without chaos.", "step": [{"@type": "HowToStep", "name": "Business & Audience Details", "text": "Define the problem you''re solving, the metrics that matter, the target customer, and write the Strategic One-Liner using the GET → TO → BUY structure. Get leadership alignment before anything else moves."}, {"@type": "HowToStep", "name": "Creative Details", "text": "Define positioning, articulate emotional and functional value, build reasons to believe, and distill The One Thing — the internal creative north star that all creative ladders back to."}, {"@type": "HowToStep", "name": "Execution Plan", "text": "Define the campaign, sequence it into phases where each phase has a job, layer in experimentation intentionally, and map the full moment-by-moment roll-out from launch through retention."}, {"@type": "HowToStep", "name": "Internal Mechanics", "text": "Assign ownership, set timelines, define budget, identify risks and dependencies, and road-show the plan across stakeholders to surface gaps before launch."}]}'
 ---
 
 ## What Is the GTM Template?
@@ -47,10 +48,10 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 </div>
 </div>
 
-<div class="inline-cta" style="background: #213621; border-radius: 0; padding: 40px 32px; text-align: center; margin: 2rem 0;">
+<div class="inline-cta" style="background: #213621; border-radius: 16px; padding: 40px 32px; text-align: center; margin: 2rem 0;">
 <p style="font-family: Anton, sans-serif; font-size: 1.6rem; text-transform: uppercase; color: #F5F0E8; margin: 0 0 12px;">Download the GTM Template</p>
 <p style="color: #F5F0E8; margin: 0 0 20px; font-size: 1rem; opacity: 0.85;">Start running go-to-market plans without chaos.</p>
-<a href="/downloads/Field Vision GTM Template.docx" style="display: inline-block; background: #A5DB5D; color: #213621; padding: 14px 32px; border-radius: 0; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.95rem;">Download Template &rarr;</a>
+<a href="/downloads/Field Vision GTM Template.docx" style="display: inline-block; background: #A5DB5D; color: #213621; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.95rem;">Download Template &rarr;</a>
 </div>
 
 
@@ -59,22 +60,22 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="overview-grid">
 <div class="overview-card">
 <div class="overview-card-badge">B</div>
-<h3>Business & Audience Details</h3>
+<div class="overview-card-title">Business & Audience Details</div>
 <p>Define the problem, the metrics, the customer, and the strategic one-liner before anything else moves.</p>
 </div>
 <div class="overview-card">
 <div class="overview-card-badge">C</div>
-<h3>Creative Details</h3>
+<div class="overview-card-title">Creative Details</div>
 <p>Anchor creative in positioning, value, proof points, and a single internal north star.</p>
 </div>
 <div class="overview-card">
 <div class="overview-card-badge">E</div>
-<h3>Execution Plan</h3>
+<div class="overview-card-title">Execution Plan</div>
 <p>Sequence the campaign into phases, layer experimentation, and map the full roll-out.</p>
 </div>
 <div class="overview-card">
 <div class="overview-card-badge">M</div>
-<h3>Internal Mechanics</h3>
+<div class="overview-card-title">Internal Mechanics</div>
 <p>Lock ownership, timelines, budget, risks, and dependencies before launch.</p>
 </div>
 </div>
@@ -405,35 +406,3 @@ The template won't make you brilliant. Your team still has to think. But it remo
 </div>
 
 </div>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Use the Field Vision GTM Template",
-  "description": "A four-section process for planning and executing go-to-market launches without chaos.",
-  "step": [
-{
-"@type": "HowToStep",
-      "name": "Business & Audience Details",
-      "text": "Define the problem you're solving, the metrics that matter, the target customer, and write the Strategic One-Liner using the GET → TO → BUY structure. Get leadership alignment before anything else moves."
-},
-{
-"@type": "HowToStep",
-      "name": "Creative Details",
-      "text": "Define positioning, articulate emotional and functional value, build reasons to believe, and distill The One Thing — the internal creative north star that all creative ladders back to."
-},
-{
-"@type": "HowToStep",
-      "name": "Execution Plan",
-      "text": "Define the campaign, sequence it into phases where each phase has a job, layer in experimentation intentionally, and map the full moment-by-moment roll-out from launch through retention."
-},
-{
-"@type": "HowToStep",
-      "name": "Internal Mechanics",
-      "text": "Assign ownership, set timelines, define budget, identify risks and dependencies, and road-show the plan across stakeholders to surface gaps before launch."
-}
-  ]
-}
-</script>
