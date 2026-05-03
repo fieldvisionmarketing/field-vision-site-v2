@@ -37,7 +37,7 @@ const { badge, title, subtitle } = Astro.props;
   }
   .phase-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     margin-bottom: 8px;
   }
@@ -48,11 +48,12 @@ const { badge, title, subtitle } = Astro.props;
     background: #A5DB5D;
     border-radius: 50%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     font-family: 'Anton', sans-serif;
     font-size: 24px;
     color: #213621;
+    margin-top: 2px;
   }
   .phase-title {
     font-family: 'Anton', sans-serif;
@@ -66,10 +67,12 @@ const { badge, title, subtitle } = Astro.props;
     padding: 0;
   }
   .phase-subtitle {
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-style: italic;
     color: rgba(33, 54, 33, 0.5);
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
     margin: 4px 0 0;
   }
   .phase-body {

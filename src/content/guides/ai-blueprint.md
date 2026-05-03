@@ -68,8 +68,10 @@ The AI Marketing Blueprint is a structured implementation plan developed by Davi
 <div class="phase-section">
   <div class="phase-header">
     <div class="phase-badge">A</div>
-    <h2 class="phase-title">Audit the Friction</h2>
-    <div class="phase-subtitle">Stop chasing better prompts. Start building autonomous, goal-driven AI systems.</div>
+    <div>
+      <h2 class="phase-title">Audit the Friction</h2>
+      <p class="phase-subtitle">Stop chasing better prompts. Start building autonomous, goal-driven AI systems.</p>
+    </div>
   </div>
 
 The fundamental shift is from "AI as a tool" to "AI as a teammate." You’re not looking for better ChatGPT prompts. You’re looking for workflows where humans are doing repetitive data translation between systems—and that’s where AI creates real leverage.
@@ -126,8 +128,10 @@ In your marketing operations, humans act as slow middleware. Your CRM talks to y
 <div class="phase-section">
   <div class="phase-header">
     <div class="phase-badge">B</div>
-    <h2 class="phase-title">Build the Blueprint</h2>
-    <div class="phase-subtitle">Score friction and predictability. Write logic specs. Prioritize deployment by quarter.</div>
+    <div>
+      <h2 class="phase-title">Build the Blueprint</h2>
+      <p class="phase-subtitle">Score friction and predictability. Write logic specs. Prioritize deployment by quarter.</p>
+    </div>
   </div>
 
 Now you take your friction map and turn it into an actionable roadmap. This is the 5-step sequential process that takes a friction point and converts it into an AI-ready specification with a deployment timeline.
@@ -210,8 +214,10 @@ Now you take your friction map and turn it into an actionable roadmap. This is t
 <div class="phase-section">
   <div class="phase-header">
     <div class="phase-badge">G</div>
-    <h2 class="phase-title">Set the Guardrails</h2>
-    <div class="phase-subtitle">Define supervision loops, calculate ROI, and set kill-switches.</div>
+    <div>
+      <h2 class="phase-title">Set the Guardrails</h2>
+      <p class="phase-subtitle">Define supervision loops, calculate ROI, and set kill-switches.</p>
+    </div>
   </div>
 
 You’ve mapped friction. You’ve built specifications. Now you need to ensure every AI deployment is safe, measurable, and reversible.

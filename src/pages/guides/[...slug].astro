@@ -659,7 +659,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 .guide-content :global(.phase-header) {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   margin-bottom: 8px;
 }
@@ -675,6 +675,19 @@ document.addEventListener('DOMContentLoaded', () => {
   font-family: 'Anton', sans-serif;
   font-size: 24px;
   color: #213621;
+  margin-top: 2px;
+}
+.guide-content :global(.phase-header h2),
+.guide-content :global(.phase-header h3) {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem;
+  color: #213621;
+  text-transform: uppercase;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 .guide-content :global(.phase-title) {
   font-family: 'Anton', sans-serif;
@@ -688,11 +701,13 @@ document.addEventListener('DOMContentLoaded', () => {
   padding: 0;
 }
 .guide-content :global(.phase-subtitle) {
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-style: italic;
   color: rgba(33, 54, 33, 0.5);
-  font-size: 15px;
-  margin: 4px 0 28px 72px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 4px 0 0 0;
 }
 
 /* --- Two-column Card Grid (GOAL + WHAT WE EXAMINE) --- */
@@ -1272,7 +1287,7 @@ document.addEventListener('DOMContentLoaded', () => {
     font-size: 20px;
   }
   .guide-content :global(.phase-subtitle) {
-    margin-left: 58px;
+    margin-left: 0;
   }
   .gate-card {
     padding: 40px 24px;

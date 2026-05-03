@@ -70,8 +70,10 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 <div class="phase-section">
   <div class="phase-header">
     <div class="phase-badge">1</div>
-    <h2 class="phase-title">CATCH: Earn Attention & Drive First Action</h2>
-    <div class="phase-subtitle">Identify unmet audience needs, craft hooks that break through noise, test with discipline.</div>
+    <div>
+      <h2 class="phase-title">CATCH: Earn Attention & Drive First Action</h2>
+      <p class="phase-subtitle">Identify unmet audience needs, craft hooks that break through noise, test with discipline.</p>
+    </div>
   </div>
 
 **Why This Phase Matters:** You can't convert or retain what you don't acquire. CATCH is about finding the insight that makes your audience stop scrolling and actually care. It's the difference between a 1.2% and a 4% CTR.
@@ -136,8 +138,10 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 <div class="phase-section">
   <div class="phase-header">
     <div class="phase-badge">2</div>
-    <h2 class="phase-title">CONVERT: Seamlessly Move Interest Into Action</h2>
-    <div class="phase-subtitle">Map the full funnel, remove friction, align every message with CATCH language.</div>
+    <div>
+      <h2 class="phase-title">CONVERT: Seamlessly Move Interest Into Action</h2>
+      <p class="phase-subtitle">Map the full funnel, remove friction, align every message with CATCH language.</p>
+    </div>
   </div>
 
 **Why This Phase Matters:** A 3% CTR means nothing if your conversion rate is 0.5%. CONVERT is where you make it effortless to act on the interest you earned. Small friction kills. One extra form field can drop conversion 10–15%.
@@ -201,8 +205,10 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 <div class="phase-section">
   <div class="phase-header">
     <div class="phase-badge">3</div>
-    <h2 class="phase-title">CULTIVATE: Turn One-Time Users Into Loyal Repeaters</h2>
-    <div class="phase-subtitle">Identify loyalty behaviors, automate lifecycle nudges, engineer surprise moments.</div>
+    <div>
+      <h2 class="phase-title">CULTIVATE: Turn One-Time Users Into Loyal Repeaters</h2>
+      <p class="phase-subtitle">Identify loyalty behaviors, automate lifecycle nudges, engineer surprise moments.</p>
+    </div>
   </div>
 
 **Why This Phase Matters:** Acquisition costs money. Retention builds it. One repeat customer is worth 3–5 new customers in terms of LTV. CULTIVATE is where you build habit loops that keep people coming back.
@@ -267,8 +273,10 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 <div class="phase-section">
   <div class="phase-header">
     <div class="phase-badge">4</div>
-    <h2 class="phase-title">CHAMPION: Turn Customers Into Advocates Who Multiply Growth</h2>
-    <div class="phase-subtitle">Add referral CTAs at peak moments, build brag-worthy features, reward shares with status and value.</div>
+    <div>
+      <h2 class="phase-title">CHAMPION: Turn Customers Into Advocates Who Multiply Growth</h2>
+      <p class="phase-subtitle">Add referral CTAs at peak moments, build brag-worthy features, reward shares with status and value.</p>
+    </div>
   </div>
 
 **Why This Phase Matters:** Your best customers are your best marketers. CHAMPION is where you hand them the megaphone and give them permission to be your evangelist. Referral customers have 25% higher LTV and 16% lower churn than paid customers.
