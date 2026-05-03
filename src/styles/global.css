@@ -113,12 +113,12 @@ h1, h2, h3 {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.14em;
-  color: var(--green-dk); margin-bottom: 12px;
+  color: var(--ink); margin-bottom: 12px;
   display: inline-flex; align-items: center; gap: 8px;
 }
 .eyebrow::before {
   content: ''; display: inline-block;
-  width: 24px; height: 4px; background: var(--green-dk);
+  width: 24px; height: 4px; background: var(--ink);
 }
 .section-title {
   font-family: 'Anton', sans-serif;
