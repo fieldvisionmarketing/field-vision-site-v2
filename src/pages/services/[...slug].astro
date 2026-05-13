@@ -64,7 +64,6 @@ const faqSchema = d.faqs?.length ? {
     "acceptedAnswer": {
       "@type": "Answer",
       "text": faq.answer
-    }
   }))
 } : null;
 ---
@@ -85,7 +84,6 @@ const faqSchema = d.faqs?.length ? {
   <section class="svcpg-hero">
     <div class="svcpg-hero-inner">
       <div class="svcpg-hero-text">
-        {d.icon && <span class="svcpg-icon">{d.icon}</span>}
         <h1 set:html={heroTitle} />
         <p class="svcpg-subtitle">{d.description}</p>
         <a href="/contact/" class="btn-brutal">Book a Call →</a>
