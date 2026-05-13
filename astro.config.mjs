@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/thank-you'),
+      filter: (page) => !page.includes('/thank-you') && !page.includes('/empty-party'),
       serialize(item) {
         const url = item.url;
         let priority = 0.5;

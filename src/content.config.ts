@@ -22,6 +22,7 @@ const services = defineCollection({
     description: z.string(),
     icon: z.string().optional(),
     order: z.number().default(0),
+    hidden: z.boolean().default(false),
     ogImage: z.string().optional(),
     sidebar: z.array(z.object({
       label: z.string(),
