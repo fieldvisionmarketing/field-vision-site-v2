@@ -223,7 +223,7 @@ h1, h2, h3 {
 }
 .hero-left {
   display: flex; flex-direction: column;
-  gap: clamp(16px, 2vh, 24px);
+  gap: clamp(24px, 2vh, 24px);
   padding-right: 48px;
 }
 .hero-headline h1 {
