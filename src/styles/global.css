@@ -2193,11 +2193,11 @@ h1, h2, h3 {
 }
 .cslp-hero-sub {
   font-family: 'Satoshi', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 450;
-  line-height: 1.7;
+  line-height: 1.5;
   color: var(--muted);
-  max-width: 600px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
