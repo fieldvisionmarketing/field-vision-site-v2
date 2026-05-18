@@ -2169,7 +2169,7 @@ h1, h2, h3 {
 
 /* ── HERO (cream bookend per R9) ── */
 .cslp-hero {
-  padding: 140px 24px 60px;
+  padding: 56px 24px 16px;
   background: var(--offwhite);
   text-align: center;
 }
@@ -2206,12 +2206,12 @@ h1, h2, h3 {
   background: var(--paper);
 }
 .cslp-cards-inner {
-  max-width: 1060px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .cslp-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 /* Dark-header clickable cards (R3, R12, R13) */
@@ -2329,7 +2329,7 @@ h1, h2, h3 {
 
 /* ── LANDING RESPONSIVE ── */
 @media (max-width: 768px) {
-  .cslp-hero { padding: 120px 20px 40px; }
+  .cslp-hero { padding: 100px 20px 16px; }
   .cslp-grid { grid-template-columns: 1fr; }
   .cslp-card-footer { flex-direction: column; gap: 10px; align-items: flex-start; }
 }
