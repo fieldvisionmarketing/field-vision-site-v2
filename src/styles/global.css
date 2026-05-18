@@ -2169,7 +2169,7 @@ h1, h2, h3 {
 
 /* ── HERO (cream bookend per R9) ── */
 .cslp-hero {
-  padding: 56px 24px 16px;
+  padding: 88px 24px 20px;
   background: var(--offwhite);
   text-align: center;
 }
@@ -2204,6 +2204,7 @@ h1, h2, h3 {
 /* ── CARD GRID (white bg) ── */
 .cslp-cards {
   background: var(--paper);
+  padding: 24px 48px 40px;
 }
 .cslp-cards-inner {
   max-width: 1200px;
