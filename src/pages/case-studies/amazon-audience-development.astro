@@ -6,116 +6,92 @@ import FinalCTA from '@/components/FinalCTA.astro';
 ---
 
 <BaseLayout
-  title="Audience Development at Amazon"
-  description=""
+  title="Reversing Slowing Growth at Amazon | Field Vision"
+  description="Built a new department and operating model at Amazon Music that drove +306% acquisition growth and cut CAC by 75% — then scaled it across the entire entertainment portfolio."
 >
   <Header slot="header" />
 
-  <!-- ═══════════════════════════════════════════
-     SECTION 1: HERO
-     ═══════════════════════════════════════════ -->
-<section class="cs-hero section">
-  <div class="cs-hero-inner">
-    <div>
-      <span class="eyebrow">— Case Study</span>
-      <h1>Audience Development at Amazon</h1>
-      <p class="cs-hero-desc">
-        When Amazon Entertainment's primary growth funnels started drying up, the mandate was clear: build new ones. A new department and operating model, piloted first at Amazon Music, turned content, paid media, and product experience into a unified growth engine — driving +306% acquisition growth and reducing customer acquisition costs by 75% — before being scaled across the entire portfolio of businesses (Prime Video, Audible, and more).
+<!-- HERO — CS4-CS8: Story-led H1, image right, lightbox -->
+<section class="cs-hero-v2 section">
+  <div class="cs-hero-v2-inner">
+    <div class="cs-hero-v2-text">
+      <h1>Reversing Slowing Growth at <span class="highlight-chip">Amazon</span></h1>
+      <p class="cs-hero-v2-summary">
+        Built a new department and operating model at Amazon Music that turned content,
+        paid media, and product experience into a unified growth engine — then scaled it
+        across Prime Video, Audible, and the entire entertainment portfolio.
       </p>
-      <div class="cs-hero-meta">
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Company</span>
-          <span class="cs-hero-meta-value">Amazon</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Industry</span>
-          <span class="cs-hero-meta-value">Entertainment / Streaming</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Scope</span>
-          <span class="cs-hero-meta-value">Global</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Focus</span>
-          <span class="cs-hero-meta-value">Growth &amp; Acquisition</span>
-        </div>
-      </div>
     </div>
-    <div class="cs-hero-image">
-      <img src="https://static.wixstatic.com/media/d84514_9462fe6516594c91a5fa2bac35265e05~mv2.png" alt="Kendrick Lamar Pop Out Concert breaks Prime Video and Twitch streaming records" />
+    <div class="cs-hero-v2-image" onclick="document.getElementById('cs-lightbox').classList.add('active')">
+      <img src="https://static.wixstatic.com/media/d84514_9462fe6516594c91a5fa2bac35265e05~mv2.png" alt="Amazon Music audience development content collage" />
+      <span class="cs-expand-hint">Click to expand</span>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox — CS8 -->
+<div id="cs-lightbox" class="cs-lightbox-overlay" onclick="this.classList.remove('active')">
+  <button class="cs-lightbox-close">ESC</button>
+  <img src="https://static.wixstatic.com/media/d84514_9462fe6516594c91a5fa2bac35265e05~mv2.png" alt="Amazon Music audience development content collage" />
+</div>
+
+
+<!-- STATS BAR — CS9-CS10 -->
+<section class="cs-stats-bar-v2">
+  <div class="cs-stats-bar-v2-inner">
+    <div class="cs-stat-v2">
+      <div class="cs-stat-v2-num"><span class="cs-stat-accent">+</span>306%</div>
+      <div class="cs-stat-v2-label">YoY Acquisition Growth</div>
+    </div>
+    <div class="cs-stat-v2">
+      <div class="cs-stat-v2-num">75%</div>
+      <div class="cs-stat-v2-label">Reduction in CAC</div>
+    </div>
+    <div class="cs-stat-v2">
+      <div class="cs-stat-v2-num">45%</div>
+      <div class="cs-stat-v2-label">Retention Improvement</div>
+    </div>
+    <div class="cs-stat-v2">
+      <div class="cs-stat-v2-num"><span class="cs-stat-accent">+</span>2.8pt</div>
+      <div class="cs-stat-v2-label">Consideration Lift</div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════
-     SECTION 2: RESULTS STRIP (Headline Metrics)
-     ═══════════════════════════════════════════ -->
-<section class="cs-results-strip section">
-  <div class="cs-results-strip-inner">
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+306%</div>
-      <div class="cs-stat-label">YoY Acquisition Growth</div>
-    </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">75%</div>
-      <div class="cs-stat-label">Reduction in CAC</div>
-    </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">45%</div>
-      <div class="cs-stat-label">Improvement in Retention</div>
-    </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+2.8pt</div>
-      <div class="cs-stat-label">Increase in Consideration</div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     SECTION 3: THE SITUATION
-     ═══════════════════════════════════════════ -->
-<section class="cs-section section">
-  <span class="eyebrow">— The Situation</span>
-  <h2>The Growth Funnels Were Drying Up</h2>
-  <p>
-    Amazon's historically powerful growth channels for its entertainment services — bundled
-    distribution through Prime and Alexa — were in steep decline. The services needed entirely
-    new acquisition funnels, and they needed them fast.
-  </p>
+<!-- THE CHALLENGE — CS11-CS13 -->
+<section class="cs-section section" style="background:var(--warm-gray);">
+  <span class="eyebrow">— The Challenge</span>
+  <h2>Growth Funnels Were Drying Up</h2>
 
   <div class="cs-challenge-grid">
     <ul class="cs-challenge-list">
       <li class="cs-challenge-item">
         <div class="cs-challenge-num">1</div>
         <div class="cs-challenge-text">
-          <strong>Primary funnels were in steep decline.</strong> The bundled distribution channels
-          that once powered growth were shrinking rapidly — and the trend was accelerating.
+          <strong>Primary funnels were in steep decline.</strong> Bundled distribution through
+          Prime and Alexa — once the growth engine — was shrinking fast.
         </div>
       </li>
       <li class="cs-challenge-item">
         <div class="cs-challenge-num">2</div>
         <div class="cs-challenge-text">
-          <strong>No dedicated audience development function existed.</strong> There was no department,
-          strategy, or operating model purpose-built for acquiring new segments of customers through
-          rigorous growth marketing experimentation and measurement.
+          <strong>No audience development function existed.</strong> No department, strategy,
+          or operating model for acquiring new customer segments through growth marketing.
         </div>
       </li>
       <li class="cs-challenge-item">
         <div class="cs-challenge-num">3</div>
         <div class="cs-challenge-text">
-          <strong>Paid marketing infrastructure was underdeveloped.</strong> The tech stack had
-          significant gaps, campaigns ran from siloed accounts without audience suppression, and
-          measurement was inconsistent across teams.
+          <strong>Paid marketing was siloed and underdeveloped.</strong> No audience suppression,
+          no unified measurement, campaigns running from disconnected accounts.
         </div>
       </li>
       <li class="cs-challenge-item">
         <div class="cs-challenge-num">4</div>
         <div class="cs-challenge-text">
-          <strong>Onboarding and product experience were broken.</strong> Content-led customer
-          experiences were essentially non-existent, sign-up flows had significant drop-off, and
-          there was no personalization infrastructure in place.
+          <strong>Onboarding and product experience were broken.</strong> High drop-off,
+          no personalization, no content-led user experiences.
         </div>
       </li>
     </ul>
@@ -131,30 +107,23 @@ import FinalCTA from '@/components/FinalCTA.astro';
 </section>
 
 
-<!-- ═══════════════════════════════════════════
-     SECTION 4: THE APPROACH
-     ═══════════════════════════════════════════ -->
+<!-- THE APPROACH — CS14-CS16 -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">— The Approach</span>
     <h2>Four Pillars. One Growth Engine.</h2>
-    <p>
-      The work started with customer insights: people didn't want a promotion — they wanted
-      content. That qualitative insight reshaped the entire strategy. From there, it was about
-      building the infrastructure across content, paid media, product experience, and retention
-      to turn that insight into scalable, measurable growth.
+    <p class="cs-approach-insight">
+      The work started with one insight: <em>people didn't want a promotion — they wanted
+      content.</em> That reshaped the entire strategy.
     </p>
 
-    <div class="cs-phases">
+    <div class="cs-phases cs-phases-4col">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
         <div class="cs-phase-title">Content-First Strategy</div>
         <div class="cs-phase-desc">
-          Shifted from promotion-led acquisition to content-led funnels built around audience insights.
-          Developed scalable content formats and a tiering framework that prioritized campaigns based
-          on audience alignment and investment. Moved from a handful of tentpole campaigns per quarter
-          to an always-on cadence across niche and flagship content — dramatically increasing volume
-          without going dark between releases.
+          Replaced promotion-led acquisition with content-led funnels. Moved from tentpole
+          campaigns to always-on cadence across niche and flagship content.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creator Marketing →</a>
@@ -165,11 +134,8 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">02</div>
         <div class="cs-phase-title">Paid Media &amp; Measurement</div>
         <div class="cs-phase-desc">
-          Rebuilt the paid marketing stack from the ground up. Centralized media management to
-          eliminate overlapping campaigns and audience waste. Onboarded identity resolution to
-          enable first-party lookalike audiences and retargeting cohorts. Partnered with Finance
-          to align on unified LTV models and efficiency guardrails — ensuring every campaign was
-          measured the same way.
+          Rebuilt the stack from the ground up. Centralized media management, onboarded
+          identity resolution, aligned on unified LTV models with Finance.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -178,13 +144,10 @@ import FinalCTA from '@/components/FinalCTA.astro';
 
       <div class="cs-phase-card">
         <div class="cs-phase-num">03</div>
-        <div class="cs-phase-title">Product Experience &amp; Onboarding</div>
+        <div class="cs-phase-title">Product &amp; Onboarding</div>
         <div class="cs-phase-desc">
-          Redesigned the onboarding experience end-to-end to reduce friction and improve
-          personalization. Replaced manual taste collection with contextual signals — dynamically
-          personalizing the experience based on the content that brought each user in. Implemented
-          frictionless authentication, localized value propositions, and social-to-app flows that
-          connected paid creative directly to in-product experiences.
+          Redesigned onboarding end-to-end. Replaced manual taste collection with contextual
+          signals. Connected paid creative directly to in-product experiences.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -193,13 +156,10 @@ import FinalCTA from '@/components/FinalCTA.astro';
 
       <div class="cs-phase-card">
         <div class="cs-phase-num">04</div>
-        <div class="cs-phase-title">Retention &amp; Churn Reduction</div>
+        <div class="cs-phase-title">Retention &amp; Churn</div>
         <div class="cs-phase-desc">
-          Built coordinated retention interventions across four dimensions: early-use optimization
-          through improved onboarding flows, cancel-save experimentation with re-engineered
-          cancellation paths, product stickiness improvements tied to first-session relevance, and
-          predictive segmentation to identify at-risk users before they churned. Achieved a 40%
-          reduction in early-tenure churn.
+          Coordinated interventions across onboarding flows, cancel-save paths, product
+          stickiness, and predictive segmentation. 40% reduction in early-tenure churn.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -210,181 +170,79 @@ import FinalCTA from '@/components/FinalCTA.astro';
 </div>
 
 
-<!-- ═══════════════════════════════════════════
-     SECTION 5: VISUAL GALLERY
-     ═══════════════════════════════════════════ -->
-<!-- ═══════════════════════════════════════════
-     SECTION 6: BEFORE / AFTER
-     ═══════════════════════════════════════════ -->
-<section class="cs-ba section">
-  <div class="cs-ba-inner">
-    <span class="eyebrow">— Transformation</span>
-    <h2>Before &amp; After Audience Development</h2>
-    <div class="cs-ba-grid">
-      <div class="cs-ba-before">
-        <div class="cs-ba-label">Before</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Dependent on bundled distribution channels in steep decline</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">No dedicated function bridging content, product, and paid marketing teams together to drive growth</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Siloed paid campaigns, no audience suppression, inconsistent measurement</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Broken onboarding flows with significant user drop-off</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Promotion-led messaging with generic, non-purpose-built creative</div>
-        </div>
-      </div>
-      <div class="cs-ba-after">
-        <div class="cs-ba-label">After</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">New growth funnels through content, paid media, and product experience</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">+306% YoY acquisition growth with 75% reduction in customer acquisition cost</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Centralized media management with unified LTV measurement and identity resolution</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Personalized onboarding with frictionless authentication and localized experiences</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Content-first creative with scalable formats and always-on campaign cadence</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     SECTION 7: RESULTS DEEP DIVE
-     ═══════════════════════════════════════════ -->
+<!-- THE RESULTS — CS17-CS19 -->
 <section class="cs-results section">
   <div class="cs-results-inner">
-    <span class="eyebrow">— Results</span>
-    <h2>
-      The Numbers Tell the Story
-    </h2>
-    <p>
-      Measurable outcomes across acquisition, efficiency, retention, and consideration.
-    </p>
+    <span class="eyebrow">— The Results</span>
+    <h2>The Numbers Tell the Story</h2>
 
     <div class="cs-results-grid">
       <div class="cs-result-card">
         <div class="cs-result-metric">+306%</div>
         <div class="cs-result-label">YoY Acquisition Growth</div>
         <div class="cs-result-desc">
-          Year-over-year growth in customer acquisition driven by the new Audience Development
-          operating model — replacing declining bundled distribution channels with content-led,
-          paid media, and product experience funnels.
+          New Audience Development operating model replaced declining bundled distribution
+          with content-led, paid media, and product experience funnels.
         </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:90%"></div></div>
       </div>
       <div class="cs-result-card">
         <div class="cs-result-metric">75%</div>
         <div class="cs-result-label">Reduction in CAC</div>
         <div class="cs-result-desc">
-          Customer acquisition costs reduced by 75% through centralized media management,
-          identity-based targeting, audience suppression to eliminate waste, and unified
-          measurement frameworks aligned with Finance.
+          Centralized media management, identity-based targeting, audience suppression,
+          and unified measurement frameworks aligned with Finance.
         </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:75%"></div></div>
       </div>
       <div class="cs-result-card">
         <div class="cs-result-metric">45%</div>
-        <div class="cs-result-label">Improvement in Retention</div>
+        <div class="cs-result-label">Retention Improvement</div>
         <div class="cs-result-desc">
-          Retention improvement driven by coordinated interventions across early-use
-          optimization, cancel-save experimentation, product stickiness improvements, and
-          predictive segmentation for at-risk users.
+          Coordinated interventions across early-use optimization, cancel-save experimentation,
+          and predictive segmentation for at-risk users.
         </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:80%"></div></div>
       </div>
       <div class="cs-result-card">
         <div class="cs-result-metric">+2.8pt</div>
-        <div class="cs-result-label">Increase in Consideration</div>
+        <div class="cs-result-label">Consideration Lift</div>
         <div class="cs-result-desc">
-          Lift in consideration for Amazon's entertainment services, driven by content-first campaigns that
-          connected cultural moments to measurable shifts in audience perception and
-          intent across key demographics.
+          Content-first campaigns connected cultural moments to measurable shifts in audience
+          perception and intent across key demographics.
         </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:55%"></div></div>
       </div>
     </div>
-  </div>
-</section>
 
+    <!-- Impact callout — CS18 -->
+    <div class="cs-impact-callout" style="margin-top:40px;">
+      <div class="cs-impact-icon">↗</div>
+      <div class="cs-impact-text">
+        The Audience Development model was adopted as a growth playbook across Amazon's Global
+        Media &amp; Entertainment organization — extending from music streaming to Prime Video,
+        Audible, and other entertainment verticals.
+      </div>
+    </div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 8: IMPACT
-     ═══════════════════════════════════════════ -->
-<section class="cs-impact section">
-  <div class="cs-impact-inner">
-  <span class="eyebrow">— Impact</span>
-  <h2>From Department to Playbook</h2>
-  <p>
-    What started as a mandate to replace declining growth funnels became a full operating model
-    for audience-led growth. The Audience Development strategy — spanning content, paid media,
-    product experience, and retention — was formalized into a comprehensive operating document
-    covering the campaign framework, measurement standards, and team structure.
-  </p>
-  <p>
-    The strategy was reviewed and approved by leadership across Amazon's Global Media &amp;
-    Entertainment organization and became the blueprint for scaling audience growth programs
-    beyond music into broader entertainment initiatives.
-  </p>
-
-  <div class="cs-impact-callout">
-    <div class="cs-impact-icon">↗</div>
-    <div class="cs-impact-text">
-      The Audience Development model was adopted as a growth playbook across Amazon's Global
-      Media &amp; Entertainment organization — extending its principles from music streaming
-      to other entertainment verticals.
+    <!-- Capability chips — CS19 -->
+    <div class="cs-services-pills" style="margin-top:32px;">
+      <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
+      <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
+      <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
+      <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
+      <a href="/services/org-process-design" class="cs-service-pill">Org &amp; Process Design</a>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════
-     SECTION 9: SERVICES USED
-     ═══════════════════════════════════════════ -->
-<section class="cs-services section">
-  <div class="cs-services-inner">
-  <span class="eyebrow">— Capabilities Applied</span>
-  <h2>
-    What This Took
-  </h2>
-  <div class="cs-services-pills">
-    <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-    <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
-    <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
-    <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
-    <a href="/services/org-process-design" class="cs-service-pill">Org &amp; Process Design</a>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     SECTION 10: CTA
-     ═══════════════════════════════════════════ -->
+<!-- CTA -->
 <FinalCTA />
-
 
   <Footer slot="footer" />
 </BaseLayout>
+
+<script>
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.getElementById('cs-lightbox')?.classList.remove('active');
+    }
+  });
+</script>

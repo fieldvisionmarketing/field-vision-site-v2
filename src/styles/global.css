@@ -2981,3 +2981,205 @@ h1, h2, h3 {
   .gdlp-grid { grid-template-columns: 1fr; }
   .gdlp-card-footer { flex-direction: column; gap: 10px; align-items: flex-start; }
 }
+
+/* ══════════════════════════════════════════════════
+   CASE STUDY V2 — CS1-CS22 Design Guidelines
+   ══════════════════════════════════════════════════ */
+
+/* ── HERO V2 — CS4-CS8 ── */
+.cs-hero-v2 {
+  background: var(--paper);
+  padding: 60px 24px 0;
+}
+.cs-hero-v2-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: start;
+}
+.cs-hero-v2 h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 1.0;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.cs-hero-v2 h1 .highlight-chip {
+  background: var(--green-lt);
+  padding: 2px 12px;
+  display: inline-block;
+  transform: rotate(-0.8deg);
+  box-shadow: 6px 6px 0 var(--ink);
+  border: 3px solid var(--ink);
+}
+.cs-hero-v2-summary {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 18px;
+  font-weight: 450;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.cs-hero-v2-image {
+  margin-top: 8px;
+  cursor: pointer;
+  position: relative;
+}
+.cs-hero-v2-image img {
+  width: 100%;
+  display: block;
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.cs-hero-v2-image:hover img {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+.cs-expand-hint {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--ink);
+  color: var(--offwhite);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 5px 10px;
+  border: 2px solid var(--offwhite);
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+.cs-hero-v2-image:hover .cs-expand-hint {
+  opacity: 1;
+}
+
+/* ── LIGHTBOX — CS8 ── */
+.cs-lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 54, 33, 0.92);
+  z-index: 9999;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.cs-lightbox-overlay.active {
+  display: flex;
+}
+.cs-lightbox-overlay img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 4px solid var(--ink);
+  box-shadow: 12px 12px 0 rgba(0,0,0,0.3);
+}
+.cs-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--offwhite);
+  background: none;
+  border: 2px solid var(--offwhite);
+  padding: 8px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.cs-lightbox-close:hover {
+  background: var(--offwhite);
+  color: var(--ink);
+}
+
+/* ── STATS BAR V2 — CS9-CS10 ── */
+.cs-stats-bar-v2 {
+  background: var(--paper);
+  padding: 40px 24px 60px;
+}
+.cs-stats-bar-v2-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-top: 4px solid var(--ink);
+  padding-top: 32px;
+}
+.cs-stat-v2 {
+  text-align: left;
+}
+.cs-stat-v2-num {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.cs-stat-accent {
+  color: var(--green-lt);
+}
+.cs-stat-v2-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+/* ── APPROACH INSIGHT — CS14 ── */
+.cs-approach-insight {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.55;
+  color: rgba(239,234,211,0.8);
+  max-width: 740px;
+  margin-bottom: 40px;
+}
+.cs-approach-insight em {
+  color: var(--green-lt);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ── APPROACH 4-COL GRID — CS16 ── */
+.cs-phases-4col {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .cs-hero-v2-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .cs-stats-bar-v2-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .cs-phases-4col {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 600px) {
+  .cs-stats-bar-v2-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cs-phases-4col {
+    grid-template-columns: 1fr !important;
+  }
+}
