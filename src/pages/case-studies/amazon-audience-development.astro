@@ -11,93 +11,72 @@ import FinalCTA from '@/components/FinalCTA.astro';
 >
   <Header slot="header" />
 
-<!-- HERO — CS4-CS8: Story-led H1, image right, lightbox -->
-<section class="cs-hero-v2 section">
-  <div class="cs-hero-v2-inner">
-    <div class="cs-hero-v2-text">
-      <h1>Reversing Slowing Growth at <span class="highlight-chip">Amazon</span></h1>
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+<!-- ═══ HERO — Sticky parallax + blur-to-focus ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <div class="cs-hero-v2-bg" style="background-image:url('https://static.wixstatic.com/media/d84514_9462fe6516594c91a5fa2bac35265e05~mv2.png')"></div>
+    <div class="cs-hero-v2-content">
+      <h1>Reversing<br>Slowing Growth<br>at <span class="highlight-chip">Amazon</span></h1>
       <p class="cs-hero-v2-summary">
         Built a new department and operating model at Amazon Music that turned content,
         paid media, and product experience into a unified growth engine — then scaled it
-        across Prime Video, Audible, and the entire entertainment portfolio.
+        across the entire entertainment portfolio.
       </p>
     </div>
-    <div class="cs-hero-v2-image" onclick="document.getElementById('cs-lightbox').classList.add('active')">
-      <img src="https://static.wixstatic.com/media/d84514_9462fe6516594c91a5fa2bac35265e05~mv2.png" alt="Amazon Music audience development content collage" />
-      <span class="cs-expand-hint">Click to expand</span>
-    </div>
+    <div class="cs-scroll-hint">Scroll to explore</div>
   </div>
-</section>
-
-<!-- Lightbox — CS8 -->
-<div id="cs-lightbox" class="cs-lightbox-overlay" onclick="this.classList.remove('active')">
-  <button class="cs-lightbox-close">ESC</button>
-  <img src="https://static.wixstatic.com/media/d84514_9462fe6516594c91a5fa2bac35265e05~mv2.png" alt="Amazon Music audience development content collage" />
 </div>
 
-
-<!-- STATS BAR — CS9-CS10 -->
-<section class="cs-stats-bar-v2">
-  <div class="cs-stats-bar-v2-inner">
-    <div class="cs-stat-v2">
-      <div class="cs-stat-v2-num"><span class="cs-stat-accent">+</span>306%</div>
-      <div class="cs-stat-v2-label">YoY Acquisition Growth</div>
+<!-- ═══ STATS — Auto-play drop-in ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="306" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">YoY Acquisition Growth</div>
     </div>
-    <div class="cs-stat-v2">
-      <div class="cs-stat-v2-num">75%</div>
-      <div class="cs-stat-v2-label">Reduction in CAC</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="75" data-suffix="%">0%</div>
+      <div class="cs-stat-drop-label">Reduction in CAC</div>
     </div>
-    <div class="cs-stat-v2">
-      <div class="cs-stat-v2-num">45%</div>
-      <div class="cs-stat-v2-label">Retention Improvement</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="45" data-suffix="%">0%</div>
+      <div class="cs-stat-drop-label">Retention Improvement</div>
     </div>
-    <div class="cs-stat-v2">
-      <div class="cs-stat-v2-num"><span class="cs-stat-accent">+</span>2.8pt</div>
-      <div class="cs-stat-v2-label">Consideration Lift</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="2.8" data-prefix="+" data-suffix="pt">+0pt</div>
+      <div class="cs-stat-drop-label">Consideration Lift</div>
     </div>
   </div>
 </section>
 
+<!-- ═══ CHALLENGE — Fly-in cards ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
+    <span class="eyebrow">— The Challenge</span>
+    <h2>Growth Funnels Were Drying Up</h2>
 
-<!-- THE CHALLENGE — CS11-CS13 -->
-<section class="cs-section section" style="background:var(--warm-gray);">
-  <span class="eyebrow">— The Challenge</span>
-  <h2>Growth Funnels Were Drying Up</h2>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>Primary funnels were in steep decline.</strong> Bundled distribution through Prime and Alexa — once the growth engine — was shrinking fast.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>No audience development function existed.</strong> No department, strategy, or operating model for acquiring new customer segments through growth marketing.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>Paid marketing was siloed and underdeveloped.</strong> No audience suppression, no unified measurement, campaigns running from disconnected accounts.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>Onboarding and product experience were broken.</strong> High drop-off, no personalization, no content-led user experiences.</span>
+    </div>
 
-  <div class="cs-challenge-grid">
-    <ul class="cs-challenge-list">
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">1</div>
-        <div class="cs-challenge-text">
-          <strong>Primary funnels were in steep decline.</strong> Bundled distribution through
-          Prime and Alexa — once the growth engine — was shrinking fast.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">2</div>
-        <div class="cs-challenge-text">
-          <strong>No audience development function existed.</strong> No department, strategy,
-          or operating model for acquiring new customer segments through growth marketing.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">3</div>
-        <div class="cs-challenge-text">
-          <strong>Paid marketing was siloed and underdeveloped.</strong> No audience suppression,
-          no unified measurement, campaigns running from disconnected accounts.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">4</div>
-        <div class="cs-challenge-text">
-          <strong>Onboarding and product experience were broken.</strong> High drop-off,
-          no personalization, no content-led user experiences.
-        </div>
-      </li>
-    </ul>
-
-    <div class="cs-callout">
-      <span class="eyebrow" style="color:var(--green-lt)">— The Mandate</span>
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">— The Mandate</span>
       <blockquote>
         Build a new department — Audience Development — and the strategy to create entirely
         new growth funnels across Amazon's entertainment division.
@@ -106,8 +85,7 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </section>
 
-
-<!-- THE APPROACH — CS14-CS16 -->
+<!-- ═══ APPROACH — 2x2 animated grid ═══ -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">— The Approach</span>
@@ -117,7 +95,7 @@ import FinalCTA from '@/components/FinalCTA.astro';
       content.</em> That reshaped the entire strategy.
     </p>
 
-    <div class="cs-phases cs-phases-4col">
+    <div class="cs-approach-grid">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
         <div class="cs-phase-title">Content-First Strategy</div>
@@ -129,7 +107,6 @@ import FinalCTA from '@/components/FinalCTA.astro';
           <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creator Marketing →</a>
         </div>
       </div>
-
       <div class="cs-phase-card">
         <div class="cs-phase-num">02</div>
         <div class="cs-phase-title">Paid Media &amp; Measurement</div>
@@ -141,7 +118,6 @@ import FinalCTA from '@/components/FinalCTA.astro';
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
         </div>
       </div>
-
       <div class="cs-phase-card">
         <div class="cs-phase-num">03</div>
         <div class="cs-phase-title">Product &amp; Onboarding</div>
@@ -153,7 +129,6 @@ import FinalCTA from '@/components/FinalCTA.astro';
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
         </div>
       </div>
-
       <div class="cs-phase-card">
         <div class="cs-phase-num">04</div>
         <div class="cs-phase-title">Retention &amp; Churn</div>
@@ -169,69 +144,67 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </div>
 
-
-<!-- THE RESULTS — CS17-CS19 -->
+<!-- ═══ RESULTS — Count-up + alternating slide ═══ -->
 <section class="cs-results section">
   <div class="cs-results-inner">
     <span class="eyebrow">— The Results</span>
     <h2>The Numbers Tell the Story</h2>
 
-    <div class="cs-results-grid">
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+306%</div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="306" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">YoY Acquisition Growth</div>
-        <div class="cs-result-desc">
-          New Audience Development operating model replaced declining bundled distribution
-          with content-led, paid media, and product experience funnels.
-        </div>
+        <div class="cs-result-desc">New Audience Development operating model replaced declining bundled distribution with content-led, paid media, and product experience funnels.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">75%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="75" data-suffix="%">0%</div>
+      <div>
         <div class="cs-result-label">Reduction in CAC</div>
-        <div class="cs-result-desc">
-          Centralized media management, identity-based targeting, audience suppression,
-          and unified measurement frameworks aligned with Finance.
-        </div>
+        <div class="cs-result-desc">Centralized media management, identity-based targeting, audience suppression, and unified measurement frameworks aligned with Finance.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">45%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="45" data-suffix="%">0%</div>
+      <div>
         <div class="cs-result-label">Retention Improvement</div>
-        <div class="cs-result-desc">
-          Coordinated interventions across early-use optimization, cancel-save experimentation,
-          and predictive segmentation for at-risk users.
-        </div>
+        <div class="cs-result-desc">Coordinated interventions across early-use optimization, cancel-save experimentation, and predictive segmentation for at-risk users.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+2.8pt</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="2.8" data-prefix="+" data-suffix="pt"><span class="accent">+</span>0pt</div>
+      <div>
         <div class="cs-result-label">Consideration Lift</div>
-        <div class="cs-result-desc">
-          Content-first campaigns connected cultural moments to measurable shifts in audience
-          perception and intent across key demographics.
-        </div>
+        <div class="cs-result-desc">Content-first campaigns connected cultural moments to measurable shifts in audience perception and intent across key demographics.</div>
       </div>
-    </div>
-
-    <!-- Impact callout — CS18 -->
-    <div class="cs-impact-callout" style="margin-top:40px;">
-      <div class="cs-impact-icon">↗</div>
-      <div class="cs-impact-text">
-        The Audience Development model was adopted as a growth playbook across Amazon's Global
-        Media &amp; Entertainment organization — extending from music streaming to Prime Video,
-        Audible, and other entertainment verticals.
-      </div>
-    </div>
-
-    <!-- Capability chips — CS19 -->
-    <div class="cs-services-pills" style="margin-top:32px;">
-      <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-      <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
-      <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
-      <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
-      <a href="/services/org-process-design" class="cs-service-pill">Org &amp; Process Design</a>
     </div>
   </div>
 </section>
 
+<!-- ═══ IMPACT — Own reveal section ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
+    <span class="eyebrow">— The Impact</span>
+    <h2>From Department to Playbook</h2>
+
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">↗</div>
+      <p class="cs-impact-text">
+        The Audience Development model was adopted as a growth playbook across Amazon's Global
+        Media &amp; Entertainment organization — extending from music streaming to Prime Video,
+        Audible, and other entertainment verticals.
+      </p>
+    </div>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
+      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
+      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+      <a href="/services/org-process-design" class="cs-cap-chip">Org &amp; Process Design</a>
+    </div>
+  </div>
+</section>
 
 <!-- CTA -->
 <FinalCTA />
@@ -240,9 +213,109 @@ import FinalCTA from '@/components/FinalCTA.astro';
 </BaseLayout>
 
 <script>
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.getElementById('cs-lightbox')?.classList.remove('active');
-    }
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
   });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num[data-target]');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const accentHtml = prefix === '+' ? '<span class="accent">+</span>' : '';
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.innerHTML = accentHtml + (prefix === '+' ? '' : prefix) + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
 </script>
