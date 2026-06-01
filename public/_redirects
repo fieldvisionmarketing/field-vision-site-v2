@@ -1,6 +1,6 @@
-# === SEO redirect: consolidate /about → /about-david/ (resolves GSC duplicate canonical) ===
-/about           /about-david/   301!
-/about/          /about-david/   301!
+# === Redirect old /about-david/ URL to /about/ (page renamed) ===
+/about-david     /about/   301
+/about-david/    /about/   301
 
 # Netlify 301 Redirects — Wix to Astro Migration
 # Specific redirects MUST come before catch-alls (first match wins)
