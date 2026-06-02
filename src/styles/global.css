@@ -3448,8 +3448,10 @@ h1, h2, h3 {
     transform: none;
     left: auto;
     font-size: 10px;
-    margin: 24px auto 0;
+    margin: 28px 0 0;
+    width: 100%;
     justify-content: center;
+    display: flex;
     animation: csHintFadeIn 1s 2s forwards, csHintBobMobile 2.5s 3s ease-in-out infinite;
   }
   .cs-hero-v2-summary {
