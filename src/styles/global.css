@@ -3074,30 +3074,26 @@ h1, h2, h3 {
   letter-spacing: 0.18em;
   color: var(--muted);
   opacity: 0;
-  animation: csHintFadeIn 1s 2s forwards;
+  animation: csHintFadeIn 1s 2s forwards, csHintBob 2.5s 3s ease-in-out infinite;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+}
+.cs-scroll-hint::before {
+  content: '\2193';
+  font-size: 11px;
 }
 .cs-scroll-hint::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 28px;
-  background: var(--green-lt);
-  animation: csHintPulse 2s 2.5s infinite;
-  opacity: 0;
+  content: '\2193';
+  font-size: 11px;
 }
 @keyframes csHintFadeIn {
   0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
   100% { opacity: 0.6; transform: translateX(-50%) translateY(0); }
 }
-@keyframes csHintPulse {
-  0% { opacity: 0; transform: scaleY(0.3); }
-  30% { opacity: 1; transform: scaleY(1); }
-  70% { opacity: 1; transform: scaleY(1); }
-  100% { opacity: 0; transform: scaleY(0.3); }
+@keyframes csHintBob {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
 }
 @keyframes csFadeIn { to { opacity: 1; } }
 @keyframes csScrollPulse {
