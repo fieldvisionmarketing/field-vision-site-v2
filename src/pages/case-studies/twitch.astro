@@ -6,132 +6,103 @@ import FinalCTA from '@/components/FinalCTA.astro';
 ---
 
 <BaseLayout
-  title="Expanding Twitch Beyond Gaming into Sports &amp; Music"
-  description=""
+  title="Expanding Beyond Gaming at Twitch | Field Vision"
+  description="Defined and operationalized Twitch's expansion into music and sports — building credible footholds in new verticals that drove +305% growth contribution and +143% YoY MAU increase."
 >
   <Header slot="header" />
 
-  <!-- ═══════════════════════════════════════════
-     SECTION 1: HERO
-     ═══════════════════════════════════════════ -->
-<section class="cs-hero section">
-  <div class="cs-hero-inner">
-    <div>
-      <span class="eyebrow">— Case Study</span>
-      <h1>Expanding Twitch Beyond Gaming into Sports &amp; Music</h1>
-      <p class="cs-hero-desc">
-        Twitch had conquered gaming, but growth was plateauing. I helped define and operationalize Twitch's expansion into music and sports — building credible footholds in new verticals while preserving the platform's core strength: live, community-driven interaction.
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+<!-- ═══ HERO — Sticky parallax + blur-to-focus ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <div class="cs-hero-v2-bg" style="background-image:url('https://static.wixstatic.com/media/d84514_798b15e935b04341987056c6b9dfa821~mv2.png')"></div>
+    <div class="cs-hero-v2-content">
+      <h1>Expanding Beyond<br>Gaming at<br><span class="highlight-chip">Twitch</span></h1>
+      <p class="cs-hero-v2-summary">
+        Defined and operationalized Twitch's expansion into music and sports — building
+        credible footholds in new verticals while preserving the platform's core strength
+        in live, community-driven interaction.
       </p>
-      <div class="cs-hero-meta">
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Company</span>
-          <span class="cs-hero-meta-value">Twitch / Amazon</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Industry</span>
-          <span class="cs-hero-meta-value">Live Entertainment</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Scope</span>
-          <span class="cs-hero-meta-value">Global</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Focus</span>
-          <span class="cs-hero-meta-value">Platform Expansion &amp; Growth</span>
-        </div>
-      </div>
     </div>
-    <div class="cs-hero-image">
-          <img src="https://static.wixstatic.com/media/d84514_798b15e935b04341987056c6b9dfa821~mv2.png" alt="Twitch Music Sports marketing" />
-        </div>
+    <div class="cs-scroll-hint">Scroll to explore</div>
   </div>
-</section>
+</div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 2: RESULTS STRIP
-     ═══════════════════════════════════════════ -->
-<section class="cs-results-strip section">
-  <div class="cs-results-strip-inner">
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+305%</div>
-      <div class="cs-stat-label">Growth Contribution Increase</div>
+<!-- ═══ STATS — Auto-play drop-in ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="305" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Growth Contribution Increase</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+143%</div>
-      <div class="cs-stat-label">YoY MAU Increase</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="143" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">YoY MAU Increase</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+31%</div>
-      <div class="cs-stat-label">Consideration Lift</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="31" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Consideration Lift</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+26%</div>
-      <div class="cs-stat-label">Brand Awareness Lift</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="26" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Brand Awareness Lift</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 3: THE SITUATION
-     ═══════════════════════════════════════════ -->
-<section class="cs-section section">
-  <span class="eyebrow">— The Situation</span>
-  <h2>Gaming Dominated — But Growth Was Plateauing</h2>
-  <p>
-    By the late 2010s, Twitch had achieved massive growth as the dominant platform for live gaming content. But the platform's growth trajectory was beginning to plateau as it saturated its core audience. Data showed strong brand awareness among gamers but declining organic visitor growth.
-  </p>
-  <div class="cs-challenge-grid">
-    <ul class="cs-challenge-list">
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">1</div>
-        <div class="cs-challenge-text">
-          <strong>Core gaming audience was saturated.</strong> Relying solely on gaming would limit the next phase of scale, as organic visitor growth had started to decline despite strong brand awareness.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">2</div>
-        <div class="cs-challenge-text">
-          <strong>Platform identity was narrowly defined.</strong> Twitch was perceived as "the place to watch gamers" — a brand association that limited appeal to broader entertainment audiences.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">3</div>
-        <div class="cs-challenge-text">
-          <strong>Adjacent audiences were clearly available.</strong> Gaming audiences had overlapping interests in music, sports, and entertainment, but Twitch had no credible presence in these verticals.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">4</div>
-        <div class="cs-challenge-text">
-          <strong>Expansion couldn't alienate the core.</strong> Any growth into new verticals had to preserve the community-driven, interactive experience that defined Twitch.
-        </div>
-      </li>
-    </ul>
-    <div class="cs-callout">
-      <span class="eyebrow" style="color:var(--green-lt)">— The Mandate</span>
+<!-- ═══ CHALLENGE — Fly-in cards ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
+    <span class="eyebrow">— The Challenge</span>
+    <h2>Gaming Growth Was Plateauing</h2>
+
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>Core gaming audience was saturated.</strong> Organic visitor growth had started to decline despite strong brand awareness among gamers.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>Platform identity was narrowly defined.</strong> Twitch was perceived as "the place to watch gamers" — limiting appeal to broader entertainment audiences.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>Adjacent audiences were clearly available.</strong> Gaming audiences overlapped with music, sports, and entertainment, but Twitch had no credible presence in these verticals.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>Expansion couldn't alienate the core.</strong> Any growth into new verticals had to preserve the community-driven, interactive experience that defined the platform.</span>
+    </div>
+
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">— The Mandate</span>
       <blockquote>
-        Reframe Twitch from "the place to watch gamers" into a broader cultural platform for interactive entertainment — without losing the core community.
+        Reframe Twitch from "the place to watch gamers" into a broader cultural platform
+        for interactive entertainment — without losing the core community.
       </blockquote>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 4: THE APPROACH
-     ═══════════════════════════════════════════ -->
+<!-- ═══ APPROACH — 2x2 animated grid ═══ -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">— The Approach</span>
-    <h2>From Gaming Platform to Cultural Destination</h2>
-    <p>
-      I led the development of an integrated growth strategy that combined product innovation, creator partnerships, live events, and large-scale content experiments across music and sports — all anchored in Twitch's core mechanic of real-time community interaction.
+    <h2>From Gaming Platform to Cultural Destination.</h2>
+    <p class="cs-approach-insight">
+      The work started with one insight: <em>Twitch's true product wasn't gaming — it was
+      interactive live entertainment.</em> That reframing unlocked every vertical.
     </p>
-    <div class="cs-phases">
+
+    <div class="cs-approach-grid">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
-        <div class="cs-phase-title">Building Music as a Core Category</div>
+        <div class="cs-phase-title">Music as a Core Category</div>
         <div class="cs-phase-desc">
-          Positioned Twitch as a destination for live music experiences — not traditional listening. Launched live artist performances, creator-led music programming, artist co-streams, and crossovers between gaming creators and music culture.
+          Positioned Twitch as a destination for live music experiences. Launched artist
+          performances, creator-led programming, and crossovers between gaming creators
+          and music culture.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creator Marketing →</a>
@@ -141,7 +112,8 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">02</div>
         <div class="cs-phase-title">Creator-Led Sports Broadcasting</div>
         <div class="cs-phase-desc">
-          Pioneered creator-driven co-streaming for Thursday Night Football. Fans watched alongside creators and athletes with real-time commentary and community chat, scaling into a full seasonal campaign across 20+ channels.
+          Pioneered creator-driven co-streaming for Thursday Night Football. Fans watched
+          alongside creators with real-time commentary and community chat across 20+ channels.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
@@ -149,9 +121,11 @@ import FinalCTA from '@/components/FinalCTA.astro';
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">03</div>
-        <div class="cs-phase-title">Cultural Infrastructure &amp; Partnerships</div>
+        <div class="cs-phase-title">Cultural Infrastructure</div>
         <div class="cs-phase-desc">
-          Built physical brand presence through the Twitch Lounge at Allegiant Stadium — a live creator broadcast hub, esports venue, and gateway for sports and concert audiences to discover Twitch.
+          Built physical brand presence through the Twitch Lounge at Allegiant Stadium —
+          a live creator broadcast hub, esports venue, and gateway for sports and concert
+          audiences to discover Twitch.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/integrated-marketing" class="cs-phase-tool">Integrated Marketing →</a>
@@ -161,7 +135,8 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">04</div>
         <div class="cs-phase-title">Full-Funnel Growth Engine</div>
         <div class="cs-phase-desc">
-          Integrated vertical expansions into Twitch's growth engine with full-funnel campaigns, creator amplification, paid media, and lifecycle marketing following the Inspire → Grow → Sustain framework.
+          Integrated vertical expansions into full-funnel campaigns with creator amplification,
+          paid media, and lifecycle marketing following the Inspire, Grow, Sustain framework.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -171,151 +146,178 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 5: VISUAL GALLERY
-     ═══════════════════════════════════════════ -->
-<!-- ═══════════════════════════════════════════
-     SECTION 6: BEFORE / AFTER
-     ═══════════════════════════════════════════ -->
-<section class="cs-ba section">
-  <div class="cs-ba-inner">
-    <span class="eyebrow">— Transformation</span>
-    <h2>Before &amp; After the Expansion</h2>
-    <div class="cs-ba-grid">
-      <div class="cs-ba-before">
-        <div class="cs-ba-label">Before</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Platform identity tied exclusively to gaming content</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Music and sports categories contributed ~2% of platform growth</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">No physical brand presence outside digital platform</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Organic visitor growth declining as core audience saturated</div>
-        </div>
-      </div>
-      <div class="cs-ba-after">
-        <div class="cs-ba-label">After</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Recognized as a broader interactive entertainment platform</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Music and sports grew to 8.1% of all platform growth — a 305% increase</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Physical brand infrastructure with the Twitch Lounge at Allegiant Stadium</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">+143% YoY MAU growth with +31% consideration and +26% awareness lift</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 7: RESULTS DEEP DIVE
-     ═══════════════════════════════════════════ -->
+<!-- ═══ RESULTS — Count-up + alternating slide ═══ -->
 <section class="cs-results section">
   <div class="cs-results-inner">
-    <span class="eyebrow">— Results</span>
-    <h2>
-      The Numbers Tell the Story
-    </h2>
-    <p>
-      A strategic platform expansion that transformed Twitch from gaming-only to a cultural destination for interactive entertainment.
-    </p>
-    <div class="cs-results-grid">
-      <div class="cs-result-card">
-        <div class="cs-result-metric">305%</div>
+    <span class="eyebrow">— The Results</span>
+    <h2>The Numbers Tell the Story</h2>
+
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="305" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">Growth Contribution Increase</div>
-        <div class="cs-result-desc">
-          Music and sports categories scaled from ~2% to 8.1% of all platform growth, representing a 305% increase in contribution to Twitch's overall growth.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:95%"></div></div>
+        <div class="cs-result-desc">Music and sports scaled from ~2% to 8.1% of all platform growth, representing a 305% increase in contribution to Twitch's overall growth.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+143%</div>
-        <div class="cs-result-label">Year-over-Year MAU Growth</div>
-        <div class="cs-result-desc">
-          Monthly active users surged through targeted expansion into sports and music content verticals, attracting entirely new audience segments to the platform.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:90%"></div></div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="143" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
+        <div class="cs-result-label">YoY MAU Increase</div>
+        <div class="cs-result-desc">Monthly active users surged through targeted expansion into sports and music content verticals, attracting entirely new audience segments.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+31%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="31" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">Consideration Lift</div>
-        <div class="cs-result-desc">
-          Brand consideration increased significantly as Twitch became associated with sports, music, and broader entertainment beyond its gaming roots.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:75%"></div></div>
+        <div class="cs-result-desc">Brand consideration increased significantly as Twitch became associated with sports, music, and broader entertainment beyond gaming.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+26%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="26" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">Brand Awareness Lift</div>
-        <div class="cs-result-desc">
-          Awareness grew as cultural partnerships, physical brand infrastructure, and creator-driven sports content introduced Twitch to audiences far beyond the gaming community.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:70%"></div></div>
+        <div class="cs-result-desc">Cultural partnerships, physical infrastructure, and creator-driven sports content introduced Twitch to audiences far beyond the gaming community.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 8: IMPACT
-     ═══════════════════════════════════════════ -->
-<section class="cs-impact section">
-  <div class="cs-impact-inner">
-  <span class="eyebrow">— Impact</span>
-  <h2>From Gaming Platform to Culture in Real Time</h2>
-  <p>
-    The key insight was that Twitch's true product was not gaming — it was interactive live entertainment. By applying that core mechanic to adjacent verticals like music and sports, Twitch unlocked entirely new audiences without abandoning its roots.
-  </p>
-  <p>
-    The result was a platform that moved from being about games to being about culture in real time — paving the way for future creator-led formats across sports, music, and entertainment.
-  </p>
-  <div class="cs-impact-callout">
-    <div class="cs-impact-icon">🎮</div>
-    <div class="cs-impact-text">
-      The strategic expansion helped reposition Twitch as a broader entertainment platform, proving that live, interactive community experiences could transform any entertainment vertical — not just gaming.
+<!-- ═══ IMPACT — Own reveal section ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
+    <span class="eyebrow">— The Impact</span>
+    <h2>From Strategy to Playbook</h2>
+
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">↗</div>
+      <p class="cs-impact-text">
+        The platform expansion proved that Twitch's true product was interactive live
+        entertainment — not just gaming. By applying that core mechanic to music and sports,
+        Twitch unlocked entirely new audiences and paved the way for creator-led formats
+        across the entertainment industry.
+      </p>
+    </div>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 9: SERVICES USED
-     ═══════════════════════════════════════════ -->
-<section class="cs-services section">
-  <div class="cs-services-inner">
-  <span class="eyebrow">— Capabilities Applied</span>
-  <h2>
-    What This Took
-  </h2>
-  <div class="cs-services-pills">
-    <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-    <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
-    <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
-    <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 10: CTA
-     ═══════════════════════════════════════════ -->
+<!-- CTA -->
 <FinalCTA />
-
 
   <Footer slot="footer" />
 </BaseLayout>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num[data-target]');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const accentHtml = prefix === '+' ? '<span class="accent">+</span>' : '';
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.innerHTML = accentHtml + (prefix === '+' ? '' : prefix) + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
+</script>

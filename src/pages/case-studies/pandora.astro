@@ -6,132 +6,103 @@ import FinalCTA from '@/components/FinalCTA.astro';
 ---
 
 <BaseLayout
-  title="Growing Pandora from 50M to 80M+ Monthly Active Users"
-  description=""
+  title="Growing Pandora from 50M to 80M+ MAU | Field Vision"
+  description="Built the lifecycle marketing engine at Pandora that turned passive listeners into active, retained users — growing MAU from 50M to 80M+, lifting week-2 retention 21%, and increasing subscription conversion 12%."
 >
   <Header slot="header" />
 
-  <!-- ═══════════════════════════════════════════
-     SECTION 1: HERO
-     ═══════════════════════════════════════════ -->
-<section class="cs-hero section">
-  <div class="cs-hero-inner">
-    <div>
-      <span class="eyebrow">— Case Study</span>
-      <h1>Growing Pandora from 50M to 80M+ Monthly Active Users</h1>
-      <p class="cs-hero-desc">
-        Pandora had massive reach but was losing listeners to on-demand competitors. I built the lifecycle marketing infrastructure — email, push, and in-app — that turned passive listeners into active, retained users, driving Pandora from 50 million to over 80 million monthly active users and lifting subscription conversion by 12%.
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+<!-- ═══ HERO — Sticky parallax + blur-to-focus ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <div class="cs-hero-v2-bg" style="background-image:url('https://static.wixstatic.com/media/d84514_8700860cdef84f04a9a1d923bbd91ac7~mv2.png')"></div>
+    <div class="cs-hero-v2-content">
+      <h1>Turning Passive Listeners<br>into Growth at<br><span class="highlight-chip">Pandora</span></h1>
+      <p class="cs-hero-v2-summary">
+        Built the lifecycle marketing infrastructure — email, push, and in-app — that
+        turned passive listeners into active, retained users and grew Pandora from
+        50 million to over 80 million monthly active users.
       </p>
-      <div class="cs-hero-meta">
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Company</span>
-          <span class="cs-hero-meta-value">Pandora</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Industry</span>
-          <span class="cs-hero-meta-value">Music Streaming</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Scope</span>
-          <span class="cs-hero-meta-value">National (80M+ MAU)</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Focus</span>
-          <span class="cs-hero-meta-value">Growth &amp; Lifecycle Marketing</span>
-        </div>
-      </div>
     </div>
-    <div class="cs-hero-image">
-          <img src="https://static.wixstatic.com/media/d84514_8700860cdef84f04a9a1d923bbd91ac7~mv2.png" alt="Pandora marketing" />
-        </div>
+    <div class="cs-scroll-hint">Scroll to explore</div>
   </div>
-</section>
+</div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 2: RESULTS STRIP
-     ═══════════════════════════════════════════ -->
-<section class="cs-results-strip section">
-  <div class="cs-results-strip-inner">
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">80M+</div>
-      <div class="cs-stat-label">Monthly Active Users</div>
+<!-- ═══ STATS — Auto-play drop-in ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="80" data-suffix="M+">0M+</div>
+      <div class="cs-stat-drop-label">Monthly Active Users</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+21%</div>
-      <div class="cs-stat-label">Week-2 Retention Lift</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="21" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Week-2 Retention Lift</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+12%</div>
-      <div class="cs-stat-label">Subscription Conversion Lift</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="12" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Subscription Conversion Lift</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">50M→80M</div>
-      <div class="cs-stat-label">MAU Growth</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="3" data-suffix=" Key Behaviors">0 Key Behaviors</div>
+      <div class="cs-stat-drop-label">Activation Signals Identified</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 3: THE SITUATION
-     ═══════════════════════════════════════════ -->
-<section class="cs-section section">
-  <span class="eyebrow">— The Situation</span>
-  <h2>Massive Reach, But Listeners Were Slipping Away</h2>
-  <p>
-    Pandora had built the largest music streaming audience in the United States, but the shift to on-demand competitors like Spotify and Apple Music was accelerating churn. Listeners signed up but didn't stick — and the company lacked the lifecycle marketing infrastructure needed to activate, retain, and convert them at scale.
-  </p>
-  <div class="cs-challenge-grid">
-    <ul class="cs-challenge-list">
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">1</div>
-        <div class="cs-challenge-text">
-          <strong>No lifecycle marketing infrastructure existed.</strong> Pandora had no coordinated system for email, push notifications, or in-app messaging to guide listener behavior after sign-up.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">2</div>
-        <div class="cs-challenge-text">
-          <strong>First-week listener drop-off was significant.</strong> New users were signing up but not returning — the critical first seven days lacked any structured engagement to build habits.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">3</div>
-        <div class="cs-challenge-text">
-          <strong>Activation behaviors were undefined.</strong> The team hadn't identified which early actions — creating a station, giving a thumbs-up, setting Pandora as the default app — predicted long-term retention.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">4</div>
-        <div class="cs-challenge-text">
-          <strong>Subscription conversion was underperforming.</strong> Free-to-paid upsells were generic and poorly timed, missing the behavioral signals that indicated real upgrade intent.
-        </div>
-      </li>
-    </ul>
-    <div class="cs-callout">
-      <span class="eyebrow" style="color:var(--green-lt)">— The Mandate</span>
+<!-- ═══ CHALLENGE — Fly-in cards ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
+    <span class="eyebrow">— The Challenge</span>
+    <h2>Massive Reach, Listeners Slipping Away</h2>
+
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>No lifecycle marketing infrastructure existed.</strong> No coordinated system for email, push, or in-app messaging to guide listener behavior after sign-up.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>First-week drop-off was significant.</strong> New users signed up but didn't return — the critical first seven days lacked any structured engagement to build habits.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>Activation behaviors were undefined.</strong> No one had identified which early actions — creating a station, thumbs-up, setting the default app — predicted long-term retention.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>Subscription conversion was underperforming.</strong> Free-to-paid upsells were generic and poorly timed, missing behavioral signals that indicated real upgrade intent.</span>
+    </div>
+
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">— The Mandate</span>
       <blockquote>
-        Build the lifecycle marketing engine that turns passive listeners into active, retained users — and converts the most engaged into paying subscribers.
+        Build the lifecycle marketing engine that turns passive listeners into active,
+        retained users — and converts the most engaged into paying subscribers.
       </blockquote>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 4: THE APPROACH
-     ═══════════════════════════════════════════ -->
+<!-- ═══ APPROACH — 2x2 animated grid ═══ -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">— The Approach</span>
-    <h2>Activation, Retention, and Conversion — Built from Scratch</h2>
-    <p>
-      We built Pandora's lifecycle marketing function from the ground up, starting with identifying the key activation behaviors that predicted retention, then engineering the first-week listener journey, contextual subscription upsells, and an experimentation culture that optimized every touchpoint.
+    <h2>Activation, Retention, Conversion — from Scratch.</h2>
+    <p class="cs-approach-insight">
+      The work started with one insight: <em>three early listener actions predicted
+      whether someone would stay for years.</em> That shaped the entire lifecycle program.
     </p>
-    <div class="cs-phases">
+
+    <div class="cs-approach-grid">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
-        <div class="cs-phase-title">Identified Key Activation Behaviors</div>
+        <div class="cs-phase-title">Key Activation Behaviors</div>
         <div class="cs-phase-desc">
-          Analyzed listener data to identify the early actions that predicted long-term retention: creating a station, giving a thumbs-up, and setting Pandora as the default music app. These became the north-star metrics for the entire lifecycle program.
+          Analyzed listener data to identify the three early actions that predicted
+          long-term retention: creating a station, giving a thumbs-up, and setting
+          Pandora as the default app.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -139,9 +110,11 @@ import FinalCTA from '@/components/FinalCTA.astro';
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">02</div>
-        <div class="cs-phase-title">Rebuilt the First-Week Listener Journey</div>
+        <div class="cs-phase-title">First-Week Listener Journey</div>
         <div class="cs-phase-desc">
-          Designed and implemented a structured onboarding sequence across email, push, and in-app messaging that guided new users through activation milestones within their first seven days — the window that determined whether they'd become long-term listeners.
+          Designed a structured onboarding sequence across email, push, and in-app
+          that guided new users through activation milestones within their first
+          seven days.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -151,7 +124,9 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">03</div>
         <div class="cs-phase-title">Contextual Subscription Upsells</div>
         <div class="cs-phase-desc">
-          Replaced generic free-to-paid messaging with behaviorally triggered upsells that appeared at the moments listeners were most likely to convert — after hitting listening limits, discovering premium features, or completing key engagement milestones.
+          Replaced generic free-to-paid messaging with behaviorally triggered upsells
+          that appeared when listeners hit limits, discovered premium features, or
+          completed key milestones.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
@@ -159,9 +134,11 @@ import FinalCTA from '@/components/FinalCTA.astro';
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">04</div>
-        <div class="cs-phase-title">Built an Experimentation Culture</div>
+        <div class="cs-phase-title">Experimentation Culture</div>
         <div class="cs-phase-desc">
-          Established a continuous testing framework across every lifecycle touchpoint — subject lines, send times, message sequencing, creative variants, and channel mix — creating a data-driven optimization engine that compounded improvements over time.
+          Established continuous testing across every lifecycle touchpoint — subject
+          lines, send times, sequencing, creative, and channel mix — creating a
+          compounding optimization engine.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/integrated-marketing" class="cs-phase-tool">Integrated Marketing →</a>
@@ -171,151 +148,179 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 5: VISUAL GALLERY
-     ═══════════════════════════════════════════ -->
-<!-- ═══════════════════════════════════════════
-     SECTION 6: BEFORE / AFTER
-     ═══════════════════════════════════════════ -->
-<section class="cs-ba section">
-  <div class="cs-ba-inner">
-    <span class="eyebrow">— Transformation</span>
-    <h2>Before &amp; After Lifecycle Marketing</h2>
-    <div class="cs-ba-grid">
-      <div class="cs-ba-before">
-        <div class="cs-ba-label">Before</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">No lifecycle marketing infrastructure — no coordinated email, push, or in-app messaging</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">New listeners signed up but dropped off within the first week with no structured engagement</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Generic subscription upsells with no behavioral targeting or trigger-based timing</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">50 million monthly active users with increasing churn to on-demand competitors</div>
-        </div>
-      </div>
-      <div class="cs-ba-after">
-        <div class="cs-ba-label">After</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Full lifecycle marketing engine across email, push, and in-app — built from scratch</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Rebuilt first-week journey driving 21% lift in week-2 retention through activation milestones</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Contextual, behavior-triggered upsells lifting subscription conversion by 12%</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Grew to 80M+ monthly active users with a continuous experimentation culture</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 7: RESULTS DEEP DIVE
-     ═══════════════════════════════════════════ -->
+<!-- ═══ RESULTS — Count-up + alternating slide ═══ -->
 <section class="cs-results section">
   <div class="cs-results-inner">
-    <span class="eyebrow">— Results</span>
-    <h2>
-      The Numbers Tell the Story
-    </h2>
-    <p>
-      A lifecycle marketing engine that drove measurable growth in activation, retention, and subscription conversion at massive scale.
-    </p>
-    <div class="cs-results-grid">
-      <div class="cs-result-card">
-        <div class="cs-result-metric">80M+</div>
+    <span class="eyebrow">— The Results</span>
+    <h2>The Numbers Tell the Story</h2>
+
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="80" data-suffix="M+">0M+</div>
+      <div>
         <div class="cs-result-label">Monthly Active Users</div>
-        <div class="cs-result-desc">
-          Grew Pandora's listener base from 50 million to over 80 million monthly active users by building a lifecycle marketing infrastructure that activated, retained, and re-engaged listeners at scale.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:95%"></div></div>
+        <div class="cs-result-desc">Grew from 50M to 80M+ MAU by building lifecycle infrastructure that activated, retained, and re-engaged listeners at scale.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+21%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="21" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">Week-2 Retention Lift</div>
-        <div class="cs-result-desc">
-          Rebuilt the first-week listener journey with structured activation milestones — creating a station, thumbs-up, setting as default — that drove a 21% lift in second-week return rates.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:85%"></div></div>
+        <div class="cs-result-desc">Rebuilt the first-week listener journey with structured activation milestones that drove a 21% lift in second-week return rates.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+12%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="12" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">Subscription Conversion Lift</div>
-        <div class="cs-result-desc">
-          Replaced generic free-to-paid messaging with contextual, behaviorally triggered upsells that appeared at the right moments — lifting paid subscription conversion by 12%.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:80%"></div></div>
+        <div class="cs-result-desc">Contextual, behaviorally triggered upsells replaced generic messaging — lifting paid subscription conversion by 12%.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">3</div>
-        <div class="cs-result-label">Key Activation Behaviors Identified</div>
-        <div class="cs-result-desc">
-          Discovered and validated the three early listener actions — creating a station, giving a thumbs-up, and setting as default app — that predicted long-term retention and became the foundation of the entire lifecycle program.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:75%"></div></div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="3" data-suffix=" Behaviors">0 Behaviors</div>
+      <div>
+        <div class="cs-result-label">Activation Signals Identified</div>
+        <div class="cs-result-desc">Discovered and validated the three early listener actions — create a station, thumbs-up, set as default — that predicted long-term retention.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 8: IMPACT
-     ═══════════════════════════════════════════ -->
-<section class="cs-impact section">
-  <div class="cs-impact-inner">
-  <span class="eyebrow">— Impact</span>
-  <h2>From Passive Listeners to an Engagement Engine</h2>
-  <p>
-    What started as a platform with massive reach but no coordinated retention strategy became one of the most sophisticated lifecycle marketing operations in music streaming. By identifying the activation behaviors that mattered, rebuilding the first-week experience, and introducing contextual conversion triggers, we transformed how Pandora engaged its audience.
-  </p>
-  <p>
-    The experimentation culture we built didn't just produce one-time wins — it created a compounding optimization engine that continued to improve retention, engagement, and conversion long after the initial infrastructure was in place.
-  </p>
-  <div class="cs-impact-callout">
-    <div class="cs-impact-icon">🎧</div>
-    <div class="cs-impact-text">
-      The lifecycle marketing infrastructure built at Pandora grew the platform from 50M to 80M+ monthly active users, lifted week-2 retention by 21%, and increased subscription conversion by 12% — proving that activation-focused lifecycle marketing is the engine behind sustainable growth at scale.
+<!-- ═══ IMPACT — Own reveal section ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
+    <span class="eyebrow">— The Impact</span>
+    <h2>From Strategy to Playbook</h2>
+
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">↗</div>
+      <p class="cs-impact-text">
+        What started as a platform with massive reach but no retention strategy became
+        one of the most sophisticated lifecycle marketing operations in music streaming.
+        The experimentation culture produced a compounding optimization engine that
+        continued to improve retention, engagement, and conversion long after the initial
+        infrastructure was in place.
+      </p>
+    </div>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 9: SERVICES USED
-     ═══════════════════════════════════════════ -->
-<section class="cs-services section">
-  <div class="cs-services-inner">
-  <span class="eyebrow">— Capabilities Applied</span>
-  <h2>
-    What This Took
-  </h2>
-  <div class="cs-services-pills">
-    <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
-    <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-    <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
-    <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 10: CTA
-     ═══════════════════════════════════════════ -->
+<!-- CTA -->
 <FinalCTA />
-
 
   <Footer slot="footer" />
 </BaseLayout>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num[data-target]');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const accentHtml = prefix === '+' ? '<span class="accent">+</span>' : '';
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.innerHTML = accentHtml + (prefix === '+' ? '' : prefix) + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
+</script>

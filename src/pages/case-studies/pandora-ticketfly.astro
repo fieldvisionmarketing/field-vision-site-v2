@@ -6,133 +6,103 @@ import FinalCTA from '@/components/FinalCTA.astro';
 ---
 
 <BaseLayout
-  title="Connecting Listeners to Live Music at Pandora &amp; Ticketfly"
-  description=""
+  title="Bridging Streaming and Live Music at Pandora &amp; Ticketfly | Field Vision"
+  description="Built the Industry Marketing function that connected Pandora's listening data to Ticketfly's ticketing platform — driving 16M ticket sales, promoting 90K+ concerts, and creating the first streaming-to-ticketing integration."
 >
   <Header slot="header" />
 
-  <!-- ═══════════════════════════════════════════
-     SECTION 1: HERO
-     ═══════════════════════════════════════════ -->
-<section class="cs-hero section">
-  <div class="cs-hero-inner">
-    <div>
-      <span class="eyebrow">— Case Study</span>
-      <h1>Connecting Listeners to Live Music at Pandora &amp; Ticketfly</h1>
-      <p class="cs-hero-desc">
-        When Pandora acquired Ticketfly, we saw an opportunity to build something the industry had never done: connect streaming listeners directly to live concert experiences at scale. I built the Industry Marketing function that bridged listening data with ticketing — driving 16 million ticket sales and promoting over 90,000 concerts.
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+<!-- ═══ HERO — Sticky parallax + blur-to-focus ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <div class="cs-hero-v2-bg" style="background-image:url('https://static.wixstatic.com/media/d84514_c70ef83a5a2d4069800cca10ffe8a119~mv2.png')"></div>
+    <div class="cs-hero-v2-content">
+      <h1>Bridging Streaming<br>and <span class="highlight-chip">Live Music</span><br>at Scale</h1>
+      <p class="cs-hero-v2-summary">
+        Built the Industry Marketing function that connected Pandora's listening data
+        to Ticketfly's ticketing platform — driving 16 million ticket sales and promoting
+        over 90,000 concerts.
       </p>
-      <div class="cs-hero-meta">
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Company</span>
-          <span class="cs-hero-meta-value">Pandora / Ticketfly</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Industry</span>
-          <span class="cs-hero-meta-value">Music / Live Events</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Scope</span>
-          <span class="cs-hero-meta-value">National</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Focus</span>
-          <span class="cs-hero-meta-value">Industry Marketing &amp; Ticketing</span>
-        </div>
-      </div>
     </div>
-    <div class="cs-hero-image">
-                <img src="https://static.wixstatic.com/media/d84514_c70ef83a5a2d4069800cca10ffe8a119~mv2.png" alt="Pandora Ticketfly marketing collage" />
-            </div>
+    <div class="cs-scroll-hint">Scroll to explore</div>
+  </div>
+</div>
+
+<!-- ═══ STATS — Auto-play drop-in ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="16" data-suffix="M">0M</div>
+      <div class="cs-stat-drop-label">Tickets Sold</div>
+    </div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="90" data-suffix="K+">0K+</div>
+      <div class="cs-stat-drop-label">Concerts Promoted</div>
+    </div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num">1st</div>
+      <div class="cs-stat-drop-label">Streaming-to-Ticketing Integration</div>
+    </div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num">New</div>
+      <div class="cs-stat-drop-label">Industry Marketing Function</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 2: RESULTS STRIP
-     ═══════════════════════════════════════════ -->
-<section class="cs-results-strip section">
-  <div class="cs-results-strip-inner">
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">16M</div>
-      <div class="cs-stat-label">Tickets Sold</div>
-    </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">90K+</div>
-      <div class="cs-stat-label">Concerts Promoted</div>
-    </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">1st</div>
-      <div class="cs-stat-label">Streaming-to-Ticketing Integration</div>
-    </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">New</div>
-      <div class="cs-stat-label">Industry Marketing Function</div>
-    </div>
-  </div>
-</section>
+<!-- ═══ CHALLENGE — Fly-in cards ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
+    <span class="eyebrow">— The Challenge</span>
+    <h2>Streaming and Live Music in Separate Worlds</h2>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 3: THE SITUATION
-     ═══════════════════════════════════════════ -->
-<section class="cs-section section">
-  <span class="eyebrow">— The Situation</span>
-  <h2>Streaming and Live Music Existed in Separate Worlds</h2>
-  <p>
-    Pandora had the largest audience in digital music with deep listening behavior data. Ticketfly was a fast-growing ticketing platform for independent venues and promoters. But the two businesses operated independently, with no connection between a listener's streaming habits and their concert-going behavior.
-  </p>
-  <div class="cs-challenge-grid">
-    <ul class="cs-challenge-list">
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">1</div>
-        <div class="cs-challenge-text">
-          <strong>No bridge between listening data and live events.</strong> Despite having rich behavioral data on what listeners loved, there was no mechanism to connect that insight to concert discovery or ticket purchasing.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">2</div>
-        <div class="cs-challenge-text">
-          <strong>Artists, labels, and promoters needed proof of value.</strong> The music industry needed to see that Pandora could drive real-world outcomes — not just streams — to invest in the platform as a marketing partner.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">3</div>
-        <div class="cs-challenge-text">
-          <strong>No Industry Marketing function existed.</strong> Pandora had no dedicated team or strategy for working with the music industry as marketing partners — the function needed to be built from scratch.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">4</div>
-        <div class="cs-challenge-text">
-          <strong>Scale required automation, not one-off campaigns.</strong> With 90,000+ concerts per year, the ticketing integration needed to work at massive scale through behavioral targeting and programmatic promotion.
-        </div>
-      </li>
-    </ul>
-    <div class="cs-callout">
-      <span class="eyebrow" style="color:var(--green-lt)">— The Mandate</span>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>No bridge between listening data and live events.</strong> Rich behavioral data on what listeners loved, but no mechanism to connect that insight to concert discovery or ticket purchasing.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>The music industry needed proof of real-world value.</strong> Artists, labels, and promoters needed to see that Pandora could drive outcomes beyond streams to invest as marketing partners.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>No Industry Marketing function existed.</strong> No dedicated team or strategy for working with the music industry as marketing partners — the function needed to be built from scratch.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>Scale required automation, not one-off campaigns.</strong> With 90,000+ concerts per year, the integration needed behavioral targeting and programmatic promotion at massive scale.</span>
+    </div>
+
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">— The Mandate</span>
       <blockquote>
-        Build the bridge between streaming and live music — creating a new revenue stream by connecting Pandora listeners directly to concerts and ticket purchases at scale.
+        Build the bridge between streaming and live music — creating a new revenue stream
+        by connecting Pandora listeners directly to concerts and ticket purchases at scale.
       </blockquote>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 4: THE APPROACH
-     ═══════════════════════════════════════════ -->
+<!-- ═══ APPROACH — 2x2 animated grid ═══ -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">— The Approach</span>
-    <h2>Turning Listening Data into Live Music Experiences</h2>
-    <p>
-      We built an entirely new function — Industry Marketing — that connected Pandora's listening intelligence to the live music ecosystem. The strategy linked behavioral data to concert promotion, enabling listeners to discover and purchase tickets to shows from artists they already loved.
+    <h2>Listening Data Becomes Concert Discovery.</h2>
+    <p class="cs-approach-insight">
+      The work started with one insight: <em>listening behavior is the most powerful signal
+      for predicting concert attendance.</em> That connected two separate businesses into one engine.
     </p>
-    <div class="cs-phases">
+
+    <div class="cs-approach-grid">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
-        <div class="cs-phase-title">Built Industry Marketing from Scratch</div>
+        <div class="cs-phase-title">Industry Marketing from Scratch</div>
         <div class="cs-phase-desc">
-          Created the Industry Marketing function at Pandora, establishing the strategy, team, and partnerships needed to position Pandora as an essential marketing partner for artists, labels, and promoters.
+          Created the Industry Marketing function at Pandora — establishing the strategy,
+          team, and partnerships to position Pandora as an essential marketing partner
+          for artists, labels, and promoters.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
@@ -142,7 +112,9 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">02</div>
         <div class="cs-phase-title">Behavioral Targeting at Scale</div>
         <div class="cs-phase-desc">
-          Built targeting systems that used Pandora's listening data — artist preferences, genre affinities, listening patterns — to match listeners with relevant concerts in their area, driving ticket discovery and purchase.
+          Built targeting systems using Pandora's listening data — artist preferences,
+          genre affinities, listening patterns — to match listeners with relevant concerts
+          in their area.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -152,7 +124,9 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">03</div>
         <div class="cs-phase-title">Integrated Ticketing Experience</div>
         <div class="cs-phase-desc">
-          Embedded ticket purchasing directly into the Pandora listener experience — transforming the streaming platform from a passive listening tool into an active concert discovery engine.
+          Embedded ticket purchasing directly into the Pandora experience — transforming
+          the streaming platform from a passive listening tool into an active concert
+          discovery engine.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/integrated-marketing" class="cs-phase-tool">Integrated Marketing →</a>
@@ -162,7 +136,9 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">04</div>
         <div class="cs-phase-title">Artist &amp; Label Partnerships</div>
         <div class="cs-phase-desc">
-          Built marketing programs with major labels, independent artists, and live promoters — creating co-marketing campaigns that used Pandora's platform to drive real-world ticket sales and artist revenue.
+          Built co-marketing programs with major labels, independent artists, and live
+          promoters — using Pandora's platform to drive real-world ticket sales and
+          artist revenue.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creator Marketing →</a>
@@ -172,150 +148,178 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </div>
 
-
-
-<!-- ═══════════════════════════════════════════
-     SECTION 6: BEFORE / AFTER
-     ═══════════════════════════════════════════ -->
-<section class="cs-ba section">
-  <div class="cs-ba-inner">
-    <span class="eyebrow">— Transformation</span>
-    <h2>Before &amp; After Industry Marketing</h2>
-    <div class="cs-ba-grid">
-      <div class="cs-ba-before">
-        <div class="cs-ba-label">Before</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">No connection between streaming listening data and live concert experiences</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Pandora and Ticketfly operated as completely separate businesses</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">No Industry Marketing function — no strategy for artist, label, or promoter partnerships</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Music industry saw Pandora as a streaming platform, not a marketing partner</div>
-        </div>
-      </div>
-      <div class="cs-ba-after">
-        <div class="cs-ba-label">After</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Behavioral targeting connected listeners to concerts based on their actual listening habits</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">16 million tickets sold through integrated streaming-to-ticketing experience</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Full Industry Marketing function built — dedicated team, strategy, and partnership programs</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">90,000+ concerts promoted, establishing Pandora as essential to live music marketing</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 7: RESULTS DEEP DIVE
-     ═══════════════════════════════════════════ -->
+<!-- ═══ RESULTS — Count-up + alternating slide ═══ -->
 <section class="cs-results section">
   <div class="cs-results-inner">
-    <span class="eyebrow">— Results</span>
-    <h2>
-      The Numbers Tell the Story
-    </h2>
-    <p>
-      A new function built from scratch that transformed how the music industry connected with fans.
-    </p>
-    <div class="cs-results-grid">
-      <div class="cs-result-card">
-        <div class="cs-result-metric">16M</div>
+    <span class="eyebrow">— The Results</span>
+    <h2>The Numbers Tell the Story</h2>
+
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="16" data-suffix="M">0M</div>
+      <div>
         <div class="cs-result-label">Tickets Sold</div>
-        <div class="cs-result-desc">
-          16 million tickets sold through the integrated Pandora-Ticketfly experience, proving that streaming listening data could drive real-world concert attendance at massive scale.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:95%"></div></div>
+        <div class="cs-result-desc">16 million tickets sold through the integrated Pandora-Ticketfly experience, proving that streaming data could drive real-world concert attendance at massive scale.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">90K+</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="90" data-suffix="K+">0K+</div>
+      <div>
         <div class="cs-result-label">Concerts Promoted</div>
-        <div class="cs-result-desc">
-          Over 90,000 concerts promoted through behavioral targeting — matching listeners with live shows based on their actual listening preferences and geographic proximity.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:90%"></div></div>
+        <div class="cs-result-desc">Over 90,000 concerts promoted through behavioral targeting — matching listeners with live shows based on actual listening preferences and geographic proximity.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">1st</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num">1st</div>
+      <div>
         <div class="cs-result-label">Streaming-to-Ticketing Integration</div>
-        <div class="cs-result-desc">
-          Built the first scalable integration between a streaming platform's listening intelligence and a ticketing platform's purchase infrastructure — creating a new category for music marketing.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:85%"></div></div>
+        <div class="cs-result-desc">Built the first scalable integration between a streaming platform's listening intelligence and a ticketing platform's purchase infrastructure — creating a new category.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">New</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num">New</div>
+      <div>
         <div class="cs-result-label">Industry Marketing Function</div>
-        <div class="cs-result-desc">
-          Built the Industry Marketing function from zero — team, strategy, partnerships, and programs — positioning Pandora as an essential marketing partner for artists, labels, and live promoters.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:80%"></div></div>
+        <div class="cs-result-desc">Built the Industry Marketing function from zero — team, strategy, partnerships, and programs — positioning Pandora as essential to the live music marketing ecosystem.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 8: IMPACT
-     ═══════════════════════════════════════════ -->
-<section class="cs-impact section">
-  <div class="cs-impact-inner">
-  <span class="eyebrow">— Impact</span>
-  <h2>From Streaming Platform to Music Marketing Engine</h2>
-  <p>
-    The Pandora-Ticketfly integration proved that streaming platforms could drive real-world outcomes at scale. By building the bridge between listening behavior and concert attendance, we created a new revenue stream for Pandora while giving artists, labels, and promoters a powerful new marketing channel.
-  </p>
-  <p>
-    The Industry Marketing function established Pandora as more than a place to listen — it became an essential partner in the broader music ecosystem, connecting fans to the live experiences they craved.
-  </p>
-  <div class="cs-impact-callout">
-    <div class="cs-impact-icon">🎵</div>
-    <div class="cs-impact-text">
-      By connecting streaming data to live music, we sold 16 million tickets and promoted 90,000+ concerts — proving that listening behavior is the most powerful signal for predicting concert attendance.
+<!-- ═══ IMPACT — Own reveal section ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
+    <span class="eyebrow">— The Impact</span>
+    <h2>From Strategy to Playbook</h2>
+
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">↗</div>
+      <p class="cs-impact-text">
+        The Pandora-Ticketfly integration proved that streaming platforms could drive
+        real-world outcomes at scale. By connecting listening behavior to concert attendance,
+        we created a new revenue stream for Pandora and established the platform as more
+        than a place to listen — an essential partner in the broader music ecosystem.
+      </p>
+    </div>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 9: SERVICES USED
-     ═══════════════════════════════════════════ -->
-<section class="cs-services section">
-  <div class="cs-services-inner">
-  <span class="eyebrow">— Capabilities Applied</span>
-  <h2>
-    What This Took
-  </h2>
-  <div class="cs-services-pills">
-    <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-    <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
-    <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
-    <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 10: CTA
-     ═══════════════════════════════════════════ -->
+<!-- CTA -->
 <FinalCTA />
-
 
   <Footer slot="footer" />
 </BaseLayout>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num[data-target]');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const accentHtml = prefix === '+' ? '<span class="accent">+</span>' : '';
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.innerHTML = accentHtml + (prefix === '+' ? '' : prefix) + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
+</script>

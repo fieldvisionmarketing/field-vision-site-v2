@@ -6,132 +6,103 @@ import FinalCTA from '@/components/FinalCTA.astro';
 ---
 
 <BaseLayout
-  title="Architecting Amazon Music's Livestream Strategy"
-  description=""
+  title="Turning Livestreams into a Growth Engine at Amazon Music | Field Vision"
+  description="Architected the strategy that transformed one-off livestreams into a scalable audience growth engine at Amazon Music — driving +31% customer growth, +39% revenue growth, and +3.7pt brand favorability."
 >
   <Header slot="header" />
 
-  <!-- ═══════════════════════════════════════════
-     SECTION 1: HERO
-     ═══════════════════════════════════════════ -->
-<section class="cs-hero section">
-  <div class="cs-hero-inner">
-    <div>
-      <span class="eyebrow">— Case Study</span>
-      <h1>Architecting Amazon Music's Livestream Strategy</h1>
-      <p class="cs-hero-desc">
-        Amazon Music had access to the biggest artists and cultural moments in music — but livestreams were treated as isolated activations. I architected the marketing and growth strategy that transformed livestreams into a scalable audience growth engine, powering flagship programming like Amazon Music Live and landmark events like Kendrick Lamar's The Pop Out.
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+<!-- ═══ HERO — Sticky parallax + blur-to-focus ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <div class="cs-hero-v2-bg" style="background-image:url('https://static.wixstatic.com/media/d84514_ffa2dc6ea5ea445bb9a5e54c917e2ef8~mv2.png')"></div>
+    <div class="cs-hero-v2-content">
+      <h1>Turning Livestreams<br>into a Growth Engine at<br><span class="highlight-chip">Amazon Music</span></h1>
+      <p class="cs-hero-v2-summary">
+        Architected the strategy that transformed one-off cultural moments into a scalable
+        audience growth engine — powering Amazon Music Live and landmark events like
+        Kendrick Lamar's The Pop Out.
       </p>
-      <div class="cs-hero-meta">
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Company</span>
-          <span class="cs-hero-meta-value">Amazon Music</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Industry</span>
-          <span class="cs-hero-meta-value">Entertainment / Livestreaming</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Scope</span>
-          <span class="cs-hero-meta-value">Global</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Focus</span>
-          <span class="cs-hero-meta-value">Growth Strategy &amp; Live Programming</span>
-        </div>
-      </div>
     </div>
-    <div class="cs-hero-image">
-          <img src="https://static.wixstatic.com/media/d84514_ffa2dc6ea5ea445bb9a5e54c917e2ef8~mv2.png" alt="Amazon Music Live marketing" />
-        </div>
+    <div class="cs-scroll-hint">Scroll to explore</div>
   </div>
-</section>
+</div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 2: RESULTS STRIP
-     ═══════════════════════════════════════════ -->
-<section class="cs-results-strip section">
-  <div class="cs-results-strip-inner">
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+31%</div>
-      <div class="cs-stat-label">Customer Growth</div>
+<!-- ═══ STATS — Auto-play drop-in ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="31" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Customer Growth</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+39%</div>
-      <div class="cs-stat-label">Revenue Growth</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="39" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Revenue Growth</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+3.7pt</div>
-      <div class="cs-stat-label">Brand Favorability Lift</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="3.7" data-prefix="+" data-suffix="pt">+0pt</div>
+      <div class="cs-stat-drop-label">Brand Favorability Lift</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">Flagship</div>
-      <div class="cs-stat-label">Live Performance Series</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num">Flagship</div>
+      <div class="cs-stat-drop-label">Live Performance Series</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 3: THE SITUATION
-     ═══════════════════════════════════════════ -->
-<section class="cs-section section">
-  <span class="eyebrow">— The Situation</span>
-  <h2>Cultural Moments Were Being Wasted as One-Off Activations</h2>
-  <p>
-    Amazon Music had access to some of the biggest artists, festivals, and cultural moments in music. However, these events were historically treated as isolated marketing activations rather than a unified strategy for audience growth. Fan behavior was shifting toward livestreaming, yet the opportunity remained unrealized.
-  </p>
-  <div class="cs-challenge-grid">
-    <ul class="cs-challenge-list">
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">1</div>
-        <div class="cs-challenge-text">
-          <strong>Livestreams were treated as isolated promotions.</strong> Major cultural moments — festivals, album drops, artist performances — generated attention but were not connected to a repeatable growth framework.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">2</div>
-        <div class="cs-challenge-text">
-          <strong>Fan behavior was shifting to live digital experiences.</strong> Younger audiences were consuming culture through platforms like Twitch and live digital events, but Amazon Music hadn't built a strategy for this shift.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">3</div>
-        <div class="cs-challenge-text">
-          <strong>Amazon's ecosystem was a unique but unrealized advantage.</strong> Twitch, Prime Video, and Amazon Music created a powerful distribution network — but no unified strategy connected them for live programming.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">4</div>
-        <div class="cs-challenge-text">
-          <strong>No repeatable operating model existed.</strong> Each event required building from scratch rather than operating from a scalable playbook for live music programming.
-        </div>
-      </li>
-    </ul>
-    <div class="cs-callout">
-      <span class="eyebrow" style="color:var(--green-lt)">— The Mandate</span>
+<!-- ═══ CHALLENGE — Fly-in cards ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
+    <span class="eyebrow">— The Challenge</span>
+    <h2>Cultural Moments Wasted as One-Off Activations</h2>
+
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>Livestreams were treated as isolated promotions.</strong> Festivals, album drops, and artist performances generated attention but were not connected to a repeatable growth framework.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>Fan behavior was shifting to live digital experiences.</strong> Younger audiences consumed culture through live platforms, but Amazon Music hadn't built a strategy for this shift.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>Amazon's ecosystem was an unrealized advantage.</strong> Twitch, Prime Video, and Amazon Music created a powerful distribution network — but no unified strategy connected them.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>No repeatable operating model existed.</strong> Each event required building from scratch rather than operating from a scalable playbook for live music programming.</span>
+    </div>
+
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">— The Mandate</span>
       <blockquote>
-        Transform livestreams from one-off promotional moments into a scalable audience growth engine — connecting artists, fans, and Amazon's media ecosystem.
+        Transform livestreams from one-off promotional moments into a scalable audience
+        growth engine — connecting artists, fans, and Amazon's media ecosystem.
       </blockquote>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 4: THE APPROACH
-     ═══════════════════════════════════════════ -->
+<!-- ═══ APPROACH — 2x2 animated grid ═══ -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">— The Approach</span>
-    <h2>Culture-First Programming Meets Ecosystem Amplification</h2>
-    <p>
-      I developed the strategic framework that positioned livestreams as a core pillar of Amazon Music's growth strategy. The model focused on three key principles: culture-first programming, ecosystem amplification across Amazon platforms, and marketing designed for discovery.
+    <h2>Culture-First Programming Meets Ecosystem Scale.</h2>
+    <p class="cs-approach-insight">
+      The work started with one insight: <em>fans already cared about these moments —
+      Amazon Music needed to participate, not manufacture interest.</em>
     </p>
-    <div class="cs-phases">
+
+    <div class="cs-approach-grid">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
         <div class="cs-phase-title">Culture-First Programming</div>
         <div class="cs-phase-desc">
-          Prioritized events that fans already cared about — festivals, artist moments, and major cultural conversations. Amazon Music participated in moments with existing momentum rather than trying to manufacture interest.
+          Prioritized events fans already cared about — festivals, artist moments,
+          and major cultural conversations. Amazon Music participated in existing
+          momentum rather than trying to create it.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
@@ -141,7 +112,9 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">02</div>
         <div class="cs-phase-title">Ecosystem Amplification</div>
         <div class="cs-phase-desc">
-          Connected multiple Amazon platforms into a unified distribution strategy. Livestreams were distributed across Twitch and Prime Video while driving listeners back into Amazon Music for deeper catalog engagement.
+          Connected multiple Amazon platforms into a unified distribution strategy.
+          Livestreams distributed across Twitch and Prime Video while driving listeners
+          back into Amazon Music for deeper engagement.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/integrated-marketing" class="cs-phase-tool">Integrated Marketing →</a>
@@ -149,9 +122,11 @@ import FinalCTA from '@/components/FinalCTA.astro';
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">03</div>
-        <div class="cs-phase-title">Marketing Designed for Discovery</div>
+        <div class="cs-phase-title">Marketing for Discovery</div>
         <div class="cs-phase-desc">
-          Each livestream was treated as a growth event. Campaigns combined paid media, artist co-marketing, owned Amazon channels, and PR to maximize reach and bring new audiences into the ecosystem.
+          Each livestream treated as a growth event. Campaigns combined paid media,
+          artist co-marketing, owned Amazon channels, and PR to maximize reach and
+          bring new audiences into the ecosystem.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -161,7 +136,9 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">04</div>
         <div class="cs-phase-title">Repeatable Operating Model</div>
         <div class="cs-phase-desc">
-          Formalized the approach into a scalable playbook that worked across festivals, album launches, cultural events, and original programming — turning individual activations into an ongoing growth engine.
+          Formalized the approach into a scalable playbook that worked across festivals,
+          album launches, cultural events, and original programming — turning activations
+          into an ongoing engine.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creator Marketing →</a>
@@ -171,151 +148,179 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 5: VISUAL GALLERY
-     ═══════════════════════════════════════════ -->
-<!-- ═══════════════════════════════════════════
-     SECTION 6: BEFORE / AFTER
-     ═══════════════════════════════════════════ -->
-<section class="cs-ba section">
-  <div class="cs-ba-inner">
-    <span class="eyebrow">— Transformation</span>
-    <h2>Before &amp; After the Livestream Strategy</h2>
-    <div class="cs-ba-grid">
-      <div class="cs-ba-before">
-        <div class="cs-ba-label">Before</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Livestreams treated as isolated one-off marketing activations</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">No unified strategy connecting Twitch, Prime Video, and Amazon Music</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Cultural moments generated attention but not measurable growth</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Each event required building marketing programs from scratch</div>
-        </div>
-      </div>
-      <div class="cs-ba-after">
-        <div class="cs-ba-label">After</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Livestreams operating as a scalable, repeatable audience growth engine</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Unified ecosystem strategy distributing content across all Amazon platforms</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">31% customer growth and 39% revenue growth from live programming</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Amazon Music Live established as a flagship series with global artists</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 7: RESULTS DEEP DIVE
-     ═══════════════════════════════════════════ -->
+<!-- ═══ RESULTS — Count-up + alternating slide ═══ -->
 <section class="cs-results section">
   <div class="cs-results-inner">
-    <span class="eyebrow">— Results</span>
-    <h2>
-      The Numbers Tell the Story
-    </h2>
-    <p>
-      A unified livestream strategy that turned cultural moments into one of Amazon Music's most powerful audience engagement channels.
-    </p>
-    <div class="cs-results-grid">
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+31%</div>
+    <span class="eyebrow">— The Results</span>
+    <h2>The Numbers Tell the Story</h2>
+
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="31" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">Customer Growth</div>
-        <div class="cs-result-desc">
-          Livestream programming drove significant customer acquisition, turning cultural music moments into measurable platform growth through integrated campaigns.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:85%"></div></div>
+        <div class="cs-result-desc">Livestream programming drove significant customer acquisition, turning cultural music moments into measurable platform growth through integrated campaigns.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+39%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="39" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">Revenue Growth</div>
-        <div class="cs-result-desc">
-          The livestream strategy directly contributed to revenue growth by converting live event audiences into engaged Amazon Music subscribers and listeners.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:90%"></div></div>
+        <div class="cs-result-desc">The livestream strategy directly contributed to revenue growth by converting live event audiences into engaged Amazon Music subscribers and listeners.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+3.7pt</div>
-        <div class="cs-result-label">Brand Favorability Increase</div>
-        <div class="cs-result-desc">
-          Live programming featuring top-tier artists elevated Amazon Music's brand perception, strengthening its position in the competitive streaming landscape.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:75%"></div></div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="3.7" data-prefix="+" data-suffix="pt"><span class="accent">+</span>0pt</div>
+      <div>
+        <div class="cs-result-label">Brand Favorability Lift</div>
+        <div class="cs-result-desc">Live programming featuring top-tier artists elevated Amazon Music's brand perception, strengthening its position in the competitive streaming landscape.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">Flagship</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num">Flagship</div>
+      <div>
         <div class="cs-result-label">Amazon Music Live Series</div>
-        <div class="cs-result-desc">
-          Established Amazon Music Live as a premier live performance series featuring global artists including Megan Thee Stallion, Jelly Roll, Garth Brooks, and Snoop Dogg.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:95%"></div></div>
+        <div class="cs-result-desc">Established Amazon Music Live as a premier live performance series featuring global artists including Megan Thee Stallion, Jelly Roll, Garth Brooks, and Snoop Dogg.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 8: IMPACT
-     ═══════════════════════════════════════════ -->
-<section class="cs-impact section">
-  <div class="cs-impact-inner">
-  <span class="eyebrow">— Impact</span>
-  <h2>From One-Off Events to a Growth Engine</h2>
-  <p>
-    By architecting a unified strategy for livestream programming, Amazon Music transformed live events from isolated promotional moments into a scalable audience growth engine. The approach connected artists, fans, and Amazon's broader media ecosystem — establishing livestreams as one of the company's most powerful tools for cultural relevance, discovery, and fan engagement.
-  </p>
-  <p>
-    The strategy became the blueprint for Amazon Music's live programming, powering everything from weekly artist performances to culturally significant moments like Kendrick Lamar's The Pop Out — one of the most watched music livestream events of the year.
-  </p>
-  <div class="cs-impact-callout">
-    <div class="cs-impact-icon">🎤</div>
-    <div class="cs-impact-text">
-      Amazon Music's livestream strategy turned cultural moments into a scalable growth engine — connecting artists, fans, and Amazon's ecosystem to drive 31% customer growth and establish the platform as a destination for live music.
+<!-- ═══ IMPACT — Own reveal section ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
+    <span class="eyebrow">— The Impact</span>
+    <h2>From Strategy to Playbook</h2>
+
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">↗</div>
+      <p class="cs-impact-text">
+        The strategy became the blueprint for Amazon Music's live programming — powering
+        everything from weekly artist performances to culturally significant moments like
+        Kendrick Lamar's The Pop Out, one of the most watched music livestream events of
+        the year. Livestreams went from isolated promotions to one of the platform's most
+        powerful audience engagement channels.
+      </p>
+    </div>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 9: SERVICES USED
-     ═══════════════════════════════════════════ -->
-<section class="cs-services section">
-  <div class="cs-services-inner">
-  <span class="eyebrow">— Capabilities Applied</span>
-  <h2>
-    What This Took
-  </h2>
-  <div class="cs-services-pills">
-    <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-    <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
-    <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
-    <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 10: CTA
-     ═══════════════════════════════════════════ -->
+<!-- CTA -->
 <FinalCTA />
-
 
   <Footer slot="footer" />
 </BaseLayout>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num[data-target]');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const accentHtml = prefix === '+' ? '<span class="accent">+</span>' : '';
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.innerHTML = accentHtml + (prefix === '+' ? '' : prefix) + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
+</script>

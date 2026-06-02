@@ -6,120 +6,103 @@ import FinalCTA from '@/components/FinalCTA.astro';
 ---
 
 <BaseLayout
-  title="Inventing Creator-Led Sports Broadcasting with Thursday Night Football"
-  description=""
+  title="Inventing Creator-Led Sports Broadcasting | Field Vision"
+  description="Pioneered the creator co-streaming format for Thursday Night Football on Twitch — 3.3M hours watched, +73% YoY growth, and 70-74% audience interaction rates that became the industry blueprint."
 >
   <Header slot="header" />
 
-  <section class="cs-hero section">
-  <div class="cs-hero-inner">
-    <div>
-      <span class="eyebrow">— Case Study</span>
-      <h1>Inventing Creator-Led Sports Broadcasting with Thursday Night Football</h1>
-      <p class="cs-hero-desc">
-        Traditional sports broadcasts were fundamentally passive. I led the strategy for Thursday Night Football on Twitch — pioneering the creator co-streaming format that reimagined live sports through real-time community interaction. Years later, this model became the industry standard.
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+<!-- ═══ HERO — Sticky parallax + blur-to-focus ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <div class="cs-hero-v2-bg" style="background-image:url('https://static.wixstatic.com/media/d84514_01cfbac252c841b193b4fbcf0491dff0~mv2.png')"></div>
+    <div class="cs-hero-v2-content">
+      <h1>Inventing<br><span class="highlight-chip">Creator-Led</span><br>Sports Broadcasting</h1>
+      <p class="cs-hero-v2-summary">
+        Pioneered the creator co-streaming format for Thursday Night Football on Twitch —
+        reimagining live sports through real-time community interaction years before the
+        industry caught on.
       </p>
-      <div class="cs-hero-meta">
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Company</span>
-          <span class="cs-hero-meta-value">Twitch / Amazon / NFL</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Industry</span>
-          <span class="cs-hero-meta-value">Sports &amp; Entertainment</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Scope</span>
-          <span class="cs-hero-meta-value">National</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Focus</span>
-          <span class="cs-hero-meta-value">Format Innovation &amp; Growth</span>
-        </div>
-      </div>
     </div>
-    <div class="cs-hero-image">
-          <img src="https://static.wixstatic.com/media/d84514_01cfbac252c841b193b4fbcf0491dff0~mv2.png" alt="Thursday Night Football marketing" />
-        </div>
+    <div class="cs-scroll-hint">Scroll to explore</div>
   </div>
-</section>
+</div>
 
-<section class="cs-results-strip section">
-  <div class="cs-results-strip-inner">
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">3.3M</div>
-      <div class="cs-stat-label">Hours Watched</div>
+<!-- ═══ STATS — Auto-play drop-in ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="3.3" data-suffix="M">0M</div>
+      <div class="cs-stat-drop-label">Hours Watched</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">+73%</div>
-      <div class="cs-stat-label">YoY Viewership Growth</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="73" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">YoY Viewership Growth</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">128M+</div>
-      <div class="cs-stat-label">Impressions</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="128" data-suffix="M+">0M+</div>
+      <div class="cs-stat-drop-label">Impressions</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">70-74%</div>
-      <div class="cs-stat-label">Audience Interaction Rate</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num">70-74%</div>
+      <div class="cs-stat-drop-label">Audience Interaction Rate</div>
     </div>
   </div>
 </section>
 
-<section class="cs-section section">
-  <span class="eyebrow">— The Situation</span>
-  <h2>Sports Broadcasting Hadn't Embraced Creator Culture</h2>
-  <p>
-    Twitch had established itself as the global leader in live gaming content, but the next phase required expanding beyond gaming. Sports presented a major opportunity — the overlap between gaming and sports audiences was significant, yet traditional broadcasts remained fundamentally passive. No one had embraced creator-driven commentary formats for live sports.
-  </p>
-  <div class="cs-challenge-grid">
-    <ul class="cs-challenge-list">
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">1</div>
-        <div class="cs-challenge-text">
-          <strong>No proven model for creator-led sports broadcasts.</strong> The format that would later become the Manningcast and other alternate broadcasts simply didn't exist yet — it needed to be invented.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">2</div>
-        <div class="cs-challenge-text">
-          <strong>Traditional sports media was entirely passive.</strong> Fans watched games with professional commentators, with no way to interact, participate, or shape the viewing experience.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">3</div>
-        <div class="cs-challenge-text">
-          <strong>Twitch needed to prove sports could work on the platform.</strong> Demonstrating that live sports could thrive inside a creator ecosystem was essential for Twitch's expansion beyond gaming.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">4</div>
-        <div class="cs-challenge-text">
-          <strong>The NFL partnership demanded results at scale.</strong> Working with the NFL and Amazon required a format that could deliver meaningful viewership, not just an experiment.
-        </div>
-      </li>
-    </ul>
-    <div class="cs-callout">
-      <span class="eyebrow" style="color:var(--green-lt)">— The Mandate</span>
+<!-- ═══ CHALLENGE — Fly-in cards ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
+    <span class="eyebrow">— The Challenge</span>
+    <h2>Sports Broadcasting Was Fundamentally Passive</h2>
+
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>No proven model for creator-led sports broadcasts.</strong> The format that would later become the Manningcast simply didn't exist yet — it needed to be invented.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>Traditional sports media was entirely one-way.</strong> Fans watched with professional commentators, with no way to interact, participate, or shape the experience.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>Twitch needed to prove sports could work on the platform.</strong> Demonstrating that live sports could thrive inside a creator ecosystem was essential for expansion beyond gaming.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>The NFL partnership demanded results at scale.</strong> Working with the NFL and Amazon required a format that could deliver meaningful viewership, not just an experiment.</span>
+    </div>
+
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">— The Mandate</span>
       <blockquote>
-        Prove that live sports could succeed on a creator-driven platform — and develop a new broadcast format that blended traditional sports with interactive community experiences.
+        Prove that live sports could succeed on a creator-driven platform — and develop a
+        new broadcast format blending traditional sports with interactive community experiences.
       </blockquote>
     </div>
   </div>
 </section>
 
+<!-- ═══ APPROACH — 2x2 animated grid ═══ -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">— The Approach</span>
-    <h2>Reimagining Sports Through Community Interaction</h2>
-    <p>
-      We invented the creator co-streaming model: creators broadcast the live game to their own communities while adding commentary, reactions, and chat interaction. Fans could watch with their favorite creator, inside a live chat, with commentary that felt authentic and conversational.
+    <h2>Reimagining Sports Through Community.</h2>
+    <p class="cs-approach-insight">
+      The work started with one insight: <em>fans didn't want a better broadcast — they
+      wanted to watch with their people.</em> That reshaped the entire format.
     </p>
-    <div class="cs-phases">
+
+    <div class="cs-approach-grid">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
         <div class="cs-phase-title">Inventing the Creator Co-Stream</div>
         <div class="cs-phase-desc">
-          Pioneered the format where creators layered their personalities and communities on top of the live game broadcast. Fans watched with their favorite creator inside live chat with authentic, conversational commentary.
+          Pioneered the format where creators layered personality and community on top
+          of the live broadcast. Fans watched inside live chat with authentic, conversational
+          commentary.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creator Marketing →</a>
@@ -129,7 +112,9 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">02</div>
         <div class="cs-phase-title">Scaling the Creator Ecosystem</div>
         <div class="cs-phase-desc">
-          Built a program integrating 21 creators and 200+ streams across the NFL season. Expanded to include Spanish and German language broadcasters and professional athlete guest co-streams.
+          Built a program integrating 21 creators and 200+ streams across the NFL season.
+          Expanded to include Spanish and German broadcasters and professional athlete
+          guest co-streams.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
@@ -137,9 +122,11 @@ import FinalCTA from '@/components/FinalCTA.astro';
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">03</div>
-        <div class="cs-phase-title">Integrated Marketing Engine</div>
+        <div class="cs-phase-title">Full-Funnel Marketing Engine</div>
         <div class="cs-phase-desc">
-          Built a full-funnel campaign across owned channels (front page, push, email) and paid media (search, social, programmatic) driving 128M+ impressions and 581K clicks.
+          Built campaigns across owned channels and paid media driving 128M+ impressions
+          and 581K clicks. Front page, push, email, search, social, and programmatic
+          all coordinated per game.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/integrated-marketing" class="cs-phase-tool">Integrated Marketing →</a>
@@ -149,7 +136,9 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">04</div>
         <div class="cs-phase-title">Interactive Viewing Mechanics</div>
         <div class="cs-phase-desc">
-          Integrated Twitch-native features including real-time chat, viewer prediction extensions tied to gameplay, and community participation mechanics — driving 70-74% audience interaction rates.
+          Integrated Twitch-native features — real-time chat, prediction extensions tied
+          to gameplay, and community participation mechanics — driving 70-74% audience
+          interaction rates.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -159,97 +148,178 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </div>
 
-<section class="cs-ba section">
-  <div class="cs-ba-inner">
-    <span class="eyebrow">— Transformation</span>
-    <h2>Before &amp; After TNF on Twitch</h2>
-    <div class="cs-ba-grid">
-      <div class="cs-ba-before">
-        <div class="cs-ba-label">Before</div>
-        <div class="cs-ba-item"><div class="cs-ba-bullet"></div><div class="cs-ba-text">Sports broadcasts were entirely passive — one-way, professional commentary only</div></div>
-        <div class="cs-ba-item"><div class="cs-ba-bullet"></div><div class="cs-ba-text">No creator-led sports formats existed in mainstream media</div></div>
-        <div class="cs-ba-item"><div class="cs-ba-bullet"></div><div class="cs-ba-text">Fan engagement limited to watching and social media commentary</div></div>
-        <div class="cs-ba-item"><div class="cs-ba-bullet"></div><div class="cs-ba-text">No proven model for interactive live sports viewing</div></div>
-      </div>
-      <div class="cs-ba-after">
-        <div class="cs-ba-label">After</div>
-        <div class="cs-ba-item"><div class="cs-ba-bullet"></div><div class="cs-ba-text">Creator co-stream format invented — fans watch with their favorite creators</div></div>
-        <div class="cs-ba-item"><div class="cs-ba-bullet"></div><div class="cs-ba-text">21 creators, 200+ streams, multilingual coverage across the NFL season</div></div>
-        <div class="cs-ba-item"><div class="cs-ba-bullet"></div><div class="cs-ba-text">70-74% audience interaction rates through predictions and chat</div></div>
-        <div class="cs-ba-item"><div class="cs-ba-bullet"></div><div class="cs-ba-text">Format later adopted industry-wide — Manningcast, creator watch parties, and more</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- ═══ RESULTS — Count-up + alternating slide ═══ -->
 <section class="cs-results section">
   <div class="cs-results-inner">
-    <span class="eyebrow">— Results</span>
+    <span class="eyebrow">— The Results</span>
     <h2>The Numbers Tell the Story</h2>
-    <p>A format-defining program that proved creator-led sports broadcasting could work at scale.</p>
-    <div class="cs-results-grid">
-      <div class="cs-result-card">
-        <div class="cs-result-metric">3.3M</div>
+
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="3.3" data-suffix="M">0M</div>
+      <div>
         <div class="cs-result-label">Total Hours Watched</div>
-        <div class="cs-result-desc">3.3 million hours of Thursday Night Football programming watched during a single season on Twitch, demonstrating massive demand for interactive sports viewing.</div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:90%"></div></div>
+        <div class="cs-result-desc">3.3 million hours of Thursday Night Football watched in a single season on Twitch, demonstrating massive demand for interactive sports viewing.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">+73%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="73" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
         <div class="cs-result-label">YoY Viewership Growth</div>
-        <div class="cs-result-desc">Year-over-year growth in hours watched for the program, proving the format was gaining momentum and building a loyal audience each season.</div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:85%"></div></div>
+        <div class="cs-result-desc">Year-over-year growth in hours watched, proving the format was gaining momentum and building a loyal audience each season.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">128M+</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="128" data-suffix="M+">0M+</div>
+      <div>
         <div class="cs-result-label">Impressions Generated</div>
-        <div class="cs-result-desc">Marketing campaigns drove over 128 million impressions with 581K clicks and 1.1M hours watched attributed to marketing channels across the season.</div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:80%"></div></div>
+        <div class="cs-result-desc">Marketing campaigns drove 128M+ impressions with 581K clicks and 1.1M hours watched attributed to marketing channels across the season.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">70-74%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num">70-74%</div>
+      <div>
         <div class="cs-result-label">Audience Interaction Rate</div>
-        <div class="cs-result-desc">Prediction extensions alone drove 70-74% audience interaction rates, far exceeding engagement seen in any traditional sports broadcast format.</div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:95%"></div></div>
+        <div class="cs-result-desc">Prediction extensions alone drove 70-74% interaction rates — far exceeding engagement in any traditional sports broadcast format.</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cs-impact section">
-  <div class="cs-impact-inner">
-  <span class="eyebrow">— Impact</span>
-  <h2>The Birth of a New Sports Broadcasting Format</h2>
-  <p>
-    The most important outcome was not just viewership — it was the creation of a new sports broadcasting format. The creator co-stream model pioneered on Twitch proved that sports fans wanted commentary that felt conversational, interactive, and community-driven.
-  </p>
-  <p>
-    Today, that model has been widely adopted across sports media, from alternate broadcasts to influencer-led watch parties. Thursday Night Football on Twitch was the first large-scale proof that creator-led sports broadcasting could work — years before formats like the Manningcast normalized the idea.
-  </p>
-  <div class="cs-impact-callout">
-    <div class="cs-impact-icon">🏈</div>
-    <div class="cs-impact-text">
-      The creator co-stream format invented for Thursday Night Football on Twitch became the blueprint for interactive sports broadcasting — a model now replicated across the industry by ESPN, the NFL, and major sports properties worldwide.
+<!-- ═══ IMPACT — Own reveal section ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
+    <span class="eyebrow">— The Impact</span>
+    <h2>From Strategy to Playbook</h2>
+
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">↗</div>
+      <p class="cs-impact-text">
+        The creator co-stream format invented for Thursday Night Football on Twitch became
+        the blueprint for interactive sports broadcasting — a model now replicated across
+        the industry by ESPN, the NFL, and major sports properties. Years before the
+        Manningcast normalized the idea, this program proved it could work at scale.
+      </p>
+    </div>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
     </div>
   </div>
-  </div>
 </section>
 
-<section class="cs-services section">
-  <div class="cs-services-inner">
-  <span class="eyebrow">— Capabilities Applied</span>
-  <h2>What This Took</h2>
-  <div class="cs-services-pills">
-    <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-    <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
-    <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
-    <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
-  </div>
-  </div>
-</section>
-
+<!-- CTA -->
 <FinalCTA />
-
 
   <Footer slot="footer" />
 </BaseLayout>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num[data-target]');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const accentHtml = prefix === '+' ? '<span class="accent">+</span>' : '';
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.innerHTML = accentHtml + (prefix === '+' ? '' : prefix) + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
+</script>
