@@ -6,134 +6,104 @@ import FinalCTA from '@/components/FinalCTA.astro';
 ---
 
 <BaseLayout
-  title="Launching Maestro, Amazon's First AI Music Experience"
-  description=""
+  title="Launching AI Music Discovery at Amazon | Field Vision"
+  description="Helped launch Maestro — the streaming industry's first AI-powered playlist generator — positioning Amazon Music as the category innovator with 50+ media placements."
 >
   <Header slot="header" />
 
-  <!-- ═══════════════════════════════════════════
-     SECTION 1: HERO
-     ═══════════════════════════════════════════ -->
-<section class="cs-hero section">
-  <div class="cs-hero-inner">
-    <div>
-      <span class="eyebrow">— Case Study</span>
-      <h1>Launching Maestro, Amazon's First AI Music Experience</h1>
-      <p class="cs-hero-desc">
-        When generative AI was reshaping the tech landscape, Amazon Music saw an opportunity to lead. I helped launch Maestro — the streaming industry's first AI-powered playlist generator in the U.S. — turning mood and imagination into music discovery and positioning Amazon Music as the category innovator.
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+<!-- ═══ HERO ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <!-- Video background instead of image -->
+    <video class="cs-hero-v2-bg" autoplay muted loop playsinline style="width:50%;height:100%;object-fit:cover;opacity:0;transform:scale(1.15);transition:opacity 2s ease, transform 4s ease;">
+      <source src="https://video.wixstatic.com/video/d84514_9ec5ca21a368465bb5979996bef0ac35/720p/mp4/file.mp4" type="video/mp4" />
+    </video>
+    <div class="cs-hero-v2-content">
+      <h1>Launching AI Music<br>Discovery at <span class="highlight-chip">Amazon</span></h1>
+      <p class="cs-hero-v2-summary">
+        Helped launch Maestro — the streaming industry's first AI-powered playlist
+        generator — turning mood and imagination into music discovery and positioning
+        Amazon Music as the category innovator.
       </p>
-      <div class="cs-hero-meta">
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Company</span>
-          <span class="cs-hero-meta-value">Amazon Music</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Industry</span>
-          <span class="cs-hero-meta-value">Entertainment / AI</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Scope</span>
-          <span class="cs-hero-meta-value">Global</span>
-        </div>
-        <div class="cs-hero-meta-item">
-          <span class="cs-hero-meta-label">Focus</span>
-          <span class="cs-hero-meta-value">Product Launch &amp; Innovation</span>
-        </div>
-      </div>
     </div>
-    <div class="cs-hero-image">
-          <video autoplay muted loop playsinline controls style="width:100%; height:100%; object-fit:cover; border-radius:0;">
-            <source src="https://video.wixstatic.com/video/d84514_9ec5ca21a368465bb5979996bef0ac35/720p/mp4/file.mp4" type="video/mp4" />
-          </video>
-        </div>
+    <div class="cs-scroll-hint">Scroll to explore</div>
   </div>
-</section>
+</div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 2: RESULTS STRIP
-     ═══════════════════════════════════════════ -->
-<section class="cs-results-strip section">
-  <div class="cs-results-strip-inner">
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">1st</div>
-      <div class="cs-stat-label">AI Product by Amazon Entertainment</div>
+<!-- ═══ STATS ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num">1st</div>
+      <div class="cs-stat-drop-label">AI Product by Amazon Entertainment</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">50+</div>
-      <div class="cs-stat-label">Media Placements</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="50" data-suffix="+">0+</div>
+      <div class="cs-stat-drop-label">Media Placements</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">1st</div>
-      <div class="cs-stat-label">Public Beta Launch</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num">1st</div>
+      <div class="cs-stat-drop-label">Public Beta Launch</div>
     </div>
-    <div class="cs-result-stat">
-      <div class="cs-stat-num">100%</div>
-      <div class="cs-stat-label">Scaled to All Customers</div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="100" data-suffix="%">0%</div>
+      <div class="cs-stat-drop-label">Scaled to All Customers</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 3: THE SITUATION
-     ═══════════════════════════════════════════ -->
-<section class="cs-section section">
-  <span class="eyebrow">— The Situation</span>
-  <h2>AI Was Reshaping Tech — But Streaming Hadn't Moved</h2>
-  <p>
-    In 2024, generative AI was rapidly reshaping the technology landscape, but consumer-facing applications in streaming music had yet to emerge. Amazon Music identified an opportunity to lead the category by introducing a product that would fundamentally change how listeners discover music.
-  </p>
-  <div class="cs-challenge-grid">
-    <ul class="cs-challenge-list">
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">1</div>
-        <div class="cs-challenge-text">
-          <strong>No major streaming service had launched a consumer AI product.</strong> Despite AI dominating tech headlines, no competitor had delivered a customer-facing generative AI music experience in the United States.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">2</div>
-        <div class="cs-challenge-text">
-          <strong>The interaction model was entirely new.</strong> Maestro relied on natural language prompts instead of traditional playlist browsing — requiring customers to learn a completely new way to discover music.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">3</div>
-        <div class="cs-challenge-text">
-          <strong>Customer education was critical.</strong> The launch needed to spark curiosity, educate listeners on prompt-based discovery, and demonstrate the product's capabilities from day one.
-        </div>
-      </li>
-      <li class="cs-challenge-item">
-        <div class="cs-challenge-num">4</div>
-        <div class="cs-challenge-text">
-          <strong>Amazon Entertainment's first AI product launch.</strong> The stakes extended beyond music — this was a milestone for the entire Amazon Entertainment organization.
-        </div>
-      </li>
-    </ul>
-    <div class="cs-callout">
-      <span class="eyebrow" style="color:var(--green-lt)">— The Mandate</span>
+<!-- ═══ CHALLENGE ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
+    <span class="eyebrow">— The Challenge</span>
+    <h2>AI Was Reshaping Tech. Streaming Hadn't Moved.</h2>
+
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>No streaming service had launched a consumer AI product.</strong> Despite AI dominating headlines, no competitor had delivered a generative AI music experience in the U.S.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>The interaction model was entirely new.</strong> Natural language prompts instead of traditional playlist browsing — customers needed to learn a new way to discover music.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>Customer education was critical.</strong> The launch needed to spark curiosity and demonstrate capabilities from day one.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>Amazon Entertainment's first AI product launch.</strong> Stakes extended beyond music — a milestone for the entire organization.</span>
+    </div>
+
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">— The Mandate</span>
       <blockquote>
-        Launch the streaming industry's first AI-powered music discovery experience — and position Amazon Music as the innovation leader in the category.
+        Launch the streaming industry's first AI-powered music discovery experience —
+        and position Amazon Music as the innovation leader.
       </blockquote>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 4: THE APPROACH
-     ═══════════════════════════════════════════ -->
+<!-- ═══ APPROACH ═══ -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">— The Approach</span>
-    <h2>Discovery Powered by Emotion and Imagination</h2>
-    <p>
-      We built the launch strategy around a clear narrative: instead of searching by artist or genre, listeners could simply type how they were feeling and Maestro would generate a custom soundtrack in seconds. The go-to-market coordinated product, PR, marketing, and media into a unified launch.
+    <h2>Discovery Powered by Imagination</h2>
+    <p class="cs-approach-insight">
+      The narrative was simple: <em>type how you feel, get a custom soundtrack in seconds.</em>
     </p>
-    <div class="cs-phases">
+
+    <div class="cs-approach-grid">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
         <div class="cs-phase-title">Category-Defining Positioning</div>
         <div class="cs-phase-desc">
-          Framed Maestro as a new way to discover music through natural language prompts — turning mood, humor, and creativity into playlist inputs. Positioned Amazon Music as the first major streaming service to bring generative AI directly to listeners.
+          Framed Maestro as music discovery through natural language. Positioned Amazon Music
+          as the first streaming service to bring generative AI directly to listeners.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
@@ -143,7 +113,8 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">02</div>
         <div class="cs-phase-title">Beta-Driven Rollout</div>
         <div class="cs-phase-desc">
-          Launched Maestro as Amazon Music's first public product beta, enabling the team to test customer behavior, iterate quickly based on real usage data, and build momentum before full global release.
+          First public beta in Amazon Music history. Tested customer behavior, iterated on
+          real usage data, built momentum before global release.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle Marketing →</a>
@@ -153,7 +124,8 @@ import FinalCTA from '@/components/FinalCTA.astro';
         <div class="cs-phase-num">03</div>
         <div class="cs-phase-title">PR-Led Innovation Narrative</div>
         <div class="cs-phase-desc">
-          Focused heavily on establishing Amazon Music as the streaming service bringing generative AI to listeners first. Drove coverage across Billboard, TechCrunch, Engadget, The Verge, Hypebot, and leading industry newsletters.
+          Drove 50+ media placements across Billboard, TechCrunch, Engadget, The Verge,
+          and leading industry newsletters.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/integrated-marketing" class="cs-phase-tool">Integrated Marketing →</a>
@@ -161,9 +133,10 @@ import FinalCTA from '@/components/FinalCTA.astro';
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">04</div>
-        <div class="cs-phase-title">Customer Education Through Prompts</div>
+        <div class="cs-phase-title">Customer Education</div>
         <div class="cs-phase-desc">
-          Campaign creative showcased examples of imaginative prompts to help users understand how to interact with the product. Messaging and creative were coordinated across owned channels, social, and product surfaces to spark experimentation.
+          Campaign creative showcased imaginative prompts. Messaging coordinated across
+          owned channels, social, and product surfaces to spark experimentation.
         </div>
         <div class="cs-phase-tools">
           <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creator Marketing →</a>
@@ -173,156 +146,189 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 5: VISUAL GALLERY
-     ═══════════════════════════════════════════ -->
-<!-- ═══════════════════════════════════════════
-     SECTION 6: BEFORE / AFTER
-     ═══════════════════════════════════════════ -->
-<section class="cs-ba section">
-  <div class="cs-ba-inner">
-    <span class="eyebrow">— Transformation</span>
-    <h2>Before &amp; After Maestro</h2>
-    <div class="cs-ba-grid">
-      <div class="cs-ba-before">
-        <div class="cs-ba-label">Before</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">No consumer-facing AI product in Amazon Entertainment's portfolio</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Music discovery limited to traditional search by artist, genre, or curated playlists</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">No streaming service had brought generative AI directly to listeners in the U.S.</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Amazon Music positioned as a fast follower rather than innovation leader</div>
-        </div>
-      </div>
-      <div class="cs-ba-after">
-        <div class="cs-ba-label">After</div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">First customer-facing AI product launched by Amazon Entertainment</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">New interaction model: type how you feel, get a custom soundtrack in seconds</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">50+ media placements across Billboard, TechCrunch, Engadget, The Verge</div>
-        </div>
-        <div class="cs-ba-item">
-          <div class="cs-ba-bullet"></div>
-          <div class="cs-ba-text">Scaled from beta to 100% of Amazon Music customers in-app</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 7: RESULTS DEEP DIVE
-     ═══════════════════════════════════════════ -->
+<!-- ═══ RESULTS ═══ -->
 <section class="cs-results section">
   <div class="cs-results-inner">
-    <span class="eyebrow">— Results</span>
-    <h2>
-      The Numbers Tell the Story
-    </h2>
-    <p>
-      A category-defining launch with measurable outcomes across innovation, media coverage, and product scale.
-    </p>
-    <div class="cs-results-grid">
-      <div class="cs-result-card">
-        <div class="cs-result-metric">1st</div>
+    <span class="eyebrow">— The Results</span>
+    <h2>The Numbers Tell the Story</h2>
+
+    <div class="cs-result-row">
+      <div class="cs-result-row-num">1st</div>
+      <div>
         <div class="cs-result-label">Amazon Entertainment AI Product</div>
-        <div class="cs-result-desc">
-          First customer-facing generative AI product launched by Amazon Entertainment, marking a major milestone for the organization and establishing a new product category.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:95%"></div></div>
+        <div class="cs-result-desc">First customer-facing generative AI product launched by Amazon Entertainment — a milestone for the entire organization.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">50+</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="50" data-suffix="+">0+</div>
+      <div>
         <div class="cs-result-label">Media Placements</div>
-        <div class="cs-result-desc">
-          Coverage across major outlets including Billboard, TechCrunch, Engadget, The Verge, and Hypebot — plus leading music and technology industry newsletters.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:85%"></div></div>
+        <div class="cs-result-desc">Coverage across Billboard, TechCrunch, Engadget, The Verge, Hypebot, and leading music and technology industry newsletters.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">1st</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num">1st</div>
+      <div>
         <div class="cs-result-label">Public Beta for Amazon Music</div>
-        <div class="cs-result-desc">
-          Successfully launched as Amazon Music's first public beta, enabling rapid product iteration and learning ahead of global rollout to all customers.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:80%"></div></div>
+        <div class="cs-result-desc">First public beta in Amazon Music history. Enabled rapid iteration and learning ahead of global rollout.</div>
       </div>
-      <div class="cs-result-card">
-        <div class="cs-result-metric">100%</div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="100" data-suffix="%">0%</div>
+      <div>
         <div class="cs-result-label">Scaled to All Customers</div>
-        <div class="cs-result-desc">
-          Following the successful beta phase, Maestro was scaled to 100% of Amazon Music customers in-app — becoming a core feature of the music discovery experience.
-        </div>
-        <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:100%"></div></div>
+        <div class="cs-result-desc">Following the beta, Maestro scaled to 100% of Amazon Music customers in-app — becoming a core feature of the discovery experience.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 8: IMPACT
-     ═══════════════════════════════════════════ -->
-<section class="cs-impact section">
-  <div class="cs-impact-inner">
-  <span class="eyebrow">— Impact</span>
-  <h2>From Product Launch to Category Creation</h2>
-  <p>
-    Maestro demonstrated how generative AI could fundamentally reshape music discovery. By launching the streaming industry's first AI-powered playlist creator in the United States, Amazon Music positioned itself as a technology innovator while establishing a new interaction model for how listeners find and experience music.
-  </p>
-  <p>
-    The product moved beyond traditional search and curation to offer something entirely new: discovery powered by emotion, creativity, and natural language — setting the standard for what AI-driven music experiences could look like.
-  </p>
-  <div class="cs-impact-callout">
-    <div class="cs-impact-icon">🤖</div>
-    <div class="cs-impact-text">
-      Maestro established Amazon Music as the first major streaming service to bring generative AI directly to listeners — creating a new category for AI-powered music discovery that the industry has since followed.
+<!-- ═══ IMPACT ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
+    <span class="eyebrow">— The Impact</span>
+    <h2>From Strategy to Playbook</h2>
+
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">🤖</div>
+      <p class="cs-impact-text">
+        Maestro established Amazon Music as the first major streaming service to bring
+        generative AI directly to listeners — creating a new category for AI-powered music
+        discovery that the industry has since followed.
+      </p>
+    </div>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 9: SERVICES USED
-     ═══════════════════════════════════════════ -->
-<section class="cs-services section">
-  <div class="cs-services-inner">
-  <span class="eyebrow">— Capabilities Applied</span>
-  <h2>
-    What This Took
-  </h2>
-  <div class="cs-services-pills">
-    <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-    <a href="/services/integrated-marketing" class="cs-service-pill">Integrated Marketing</a>
-    <a href="/services/content-creator-marketing" class="cs-service-pill">Content &amp; Creator Marketing</a>
-    <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle Marketing</a>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 10: CTA
-     ═══════════════════════════════════════════ -->
+<!-- CTA -->
 <FinalCTA />
-
-
-
-<!-- test -->
-
-<!-- capture-test -->
 
   <Footer slot="footer" />
 </BaseLayout>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation — also handle video bg fade-in
+  setTimeout(() => {
+    const hero = document.getElementById('csHero');
+    if (hero) {
+      hero.classList.add('active');
+      const vid = hero.querySelector('video');
+      if (vid) {
+        vid.style.opacity = '0.25';
+        vid.style.transform = 'scale(1.0)';
+      }
+    }
+  }, 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            // Only count up if has data-target
+            if (!el.dataset.target) return;
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const accentHtml = prefix ? '<span class="accent">' + prefix + '</span>' : '';
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.innerHTML = accentHtml + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
+</script>
