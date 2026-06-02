@@ -3441,14 +3441,24 @@ h1, h2, h3 {
 /* ── MOBILE FIX: hero summary / scroll hint overlap ── */
 @media (max-width: 768px) {
   .cs-hero-v2-content {
-    padding-bottom: 100px;
+    padding-bottom: 24px;
   }
   .cs-scroll-hint {
-    bottom: 20px;
+    position: static;
+    transform: none;
+    left: auto;
     font-size: 10px;
+    margin: 24px auto 0;
+    justify-content: center;
+    animation: csHintFadeIn 1s 2s forwards, csHintBobMobile 2.5s 3s ease-in-out infinite;
   }
   .cs-hero-v2-summary {
     font-size: 16px;
     margin-top: 20px;
   }
+}
+
+@keyframes csHintBobMobile {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
 }
