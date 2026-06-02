@@ -129,7 +129,6 @@ h1, h2, h3 {
 }
 .section-subtitle {
   font-size: clamp(10px, 1.26vw, 16px); font-weight: 500;
-  margin-top: 14px; max-width: 600px; line-height: 1.55;
 }
 .section-header-row {
   display: flex; align-items: flex-end;
@@ -653,7 +652,6 @@ h1, h2, h3 {
   font-size: 1.15rem;
   color: var(--muted);
   line-height: 1.6;
-  max-width: 600px;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
@@ -1686,7 +1684,6 @@ h1, h2, h3 {
   line-height: 1.65;
   color: var(--muted);
   margin-bottom: 48px;
-  max-width: 600px;
 }
 .abt-timeline {
   display: flex;
@@ -1910,7 +1907,6 @@ h1, h2, h3 {
   font-size: 1rem;
   font-weight: 450;
   color: rgba(239,234,211,0.6);
-  max-width: 600px;
   margin: 0 auto 40px;
   line-height: 1.6;
 }
@@ -2109,7 +2105,6 @@ h1, h2, h3 {
   text-align: center;
 }
 .abt-cta-inner {
-  max-width: 600px;
   margin: 0 auto;
 }
 .abt-cta h2 {
@@ -2308,7 +2303,6 @@ h1, h2, h3 {
   text-align: center;
 }
 .cslp-cta-inner {
-  max-width: 600px;
   margin: 0 auto;
 }
 .cslp-cta h2 {
@@ -2531,7 +2525,8 @@ h1, h2, h3 {
 }
 .cs-approach .cs-section-inner { max-width: 1100px; margin: 0 auto; }
 .cs-approach .eyebrow { color: var(--offwhite); }
-.cs-approach h2 { color: var(--offwhite); }
+.cs-approach h2 {
+  font-size: clamp(32px, 4vw, 52px); color: var(--offwhite); }
 .cs-approach p { color: rgba(239,234,211,0.7); }
 .cs-phases {
   display: grid;
@@ -3027,7 +3022,7 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 80px 24px 0;
 }
-.cs-hero-v2 h1 {
+.cs-hero-v2-sticky h1 {
   font-family: 'Anton', sans-serif;
   font-size: clamp(56px, 7vw, 96px);
   line-height: 0.95;
@@ -3043,7 +3038,7 @@ h1, h2, h3 {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-.cs-hero-v2 h1 .highlight-chip {
+.cs-hero-v2-sticky h1 .highlight-chip {
   background: var(--green-lt);
   padding: 0 14px;
   display: inline-block;
@@ -3069,26 +3064,30 @@ h1, h2, h3 {
 }
 .cs-scroll-hint {
   position: absolute;
-  bottom: 40px;
+  bottom: 48px;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--muted);
+  color: var(--ink);
+  background: var(--green-lt);
+  border: 3px solid var(--ink);
+  padding: 10px 24px;
+  box-shadow: 4px 4px 0 var(--ink);
   opacity: 0;
-  animation: csFadeIn 1s 2s forwards;
+  animation: csHintBounce 2s 1.5s forwards;
 }
 .cs-scroll-hint::after {
-  content: '';
-  display: block;
-  width: 2px;
-  height: 32px;
-  background: var(--green-lt);
-  margin: 12px auto 0;
-  animation: csScrollPulse 2s infinite;
+  content: ' ↓';
+}
+@keyframes csHintBounce {
+  0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  60% { opacity: 1; transform: translateX(-50%) translateY(-4px); }
+  80% { transform: translateX(-50%) translateY(2px); }
+  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 @keyframes csFadeIn { to { opacity: 1; } }
 @keyframes csScrollPulse {
@@ -3225,7 +3224,7 @@ h1, h2, h3 {
 }
 .cs-fly-card-text strong { color: var(--ink); font-weight: 600; }
 .cs-mandate-drop {
-  max-width: 600px;
+  max-width: 100%;
   margin: 48px auto 0;
   background: var(--ink);
   border: 4px solid var(--ink);
@@ -3255,6 +3254,7 @@ h1, h2, h3 {
 }
 .cs-approach .eyebrow.visible { opacity: 1; transform: translateX(0); }
 .cs-approach h2 {
+  font-size: clamp(32px, 4vw, 52px);
   opacity: 0; filter: blur(4px); transform: translateY(20px);
   transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
 }
@@ -3309,6 +3309,7 @@ h1, h2, h3 {
 }
 .cs-results .eyebrow.visible { opacity: 1; transform: translateX(0); }
 .cs-results h2 {
+  font-size: clamp(32px, 4vw, 52px);
   opacity: 0; filter: blur(4px); transform: translateY(20px);
   transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
 }
