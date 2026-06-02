@@ -3064,30 +3064,40 @@ h1, h2, h3 {
 }
 .cs-scroll-hint {
   position: absolute;
-  bottom: 48px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--ink);
-  background: var(--green-lt);
-  border: 3px solid var(--ink);
-  padding: 10px 24px;
-  box-shadow: 4px 4px 0 var(--ink);
+  letter-spacing: 0.18em;
+  color: var(--muted);
   opacity: 0;
-  animation: csHintBounce 2s 1.5s forwards;
+  animation: csHintFadeIn 1s 2s forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .cs-scroll-hint::after {
-  content: ' ↓';
+  content: '';
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: var(--green-lt);
+  animation: csHintPulse 2s 2.5s infinite;
+  opacity: 0;
 }
-@keyframes csHintBounce {
-  0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
-  60% { opacity: 1; transform: translateX(-50%) translateY(-4px); }
-  80% { transform: translateX(-50%) translateY(2px); }
-  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+@keyframes csHintFadeIn {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  100% { opacity: 0.6; transform: translateX(-50%) translateY(0); }
+}
+@keyframes csHintPulse {
+  0% { opacity: 0; transform: scaleY(0.3); }
+  30% { opacity: 1; transform: scaleY(1); }
+  70% { opacity: 1; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(0.3); }
 }
 @keyframes csFadeIn { to { opacity: 1; } }
 @keyframes csScrollPulse {
@@ -3438,9 +3448,8 @@ h1, h2, h3 {
     padding-bottom: 100px;
   }
   .cs-scroll-hint {
-    bottom: 24px;
-    font-size: 11px;
-    padding: 8px 18px;
+    bottom: 20px;
+    font-size: 10px;
   }
   .cs-hero-v2-summary {
     font-size: 16px;
