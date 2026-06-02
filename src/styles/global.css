@@ -3431,3 +3431,19 @@ h1, h2, h3 {
 @media (max-width: 600px) {
   .cs-stats-v2-inner { grid-template-columns: 1fr; }
 }
+
+/* ── MOBILE FIX: hero summary / scroll hint overlap ── */
+@media (max-width: 768px) {
+  .cs-hero-v2-content {
+    padding-bottom: 100px;
+  }
+  .cs-scroll-hint {
+    bottom: 24px;
+    font-size: 11px;
+    padding: 8px 18px;
+  }
+  .cs-hero-v2-summary {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
