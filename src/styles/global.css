@@ -3063,10 +3063,6 @@ h1, h2, h3 {
   transform: translateY(0);
 }
 .cs-scroll-hint {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   font-weight: 700;
@@ -3077,7 +3073,9 @@ h1, h2, h3 {
   animation: csHintFadeIn 1s 2s forwards, csHintBob 2.5s 3s ease-in-out infinite;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
+  margin-top: 32px;
 }
 .cs-scroll-hint::before {
   content: '\2193';
@@ -3088,12 +3086,12 @@ h1, h2, h3 {
   font-size: 11px;
 }
 @keyframes csHintFadeIn {
-  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
-  100% { opacity: 0.6; transform: translateX(-50%) translateY(0); }
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 0.6; transform: translateY(0); }
 }
 @keyframes csHintBob {
-  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
-  50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
 }
 @keyframes csFadeIn { to { opacity: 1; } }
 @keyframes csScrollPulse {
@@ -3444,15 +3442,9 @@ h1, h2, h3 {
     padding-bottom: 24px;
   }
   .cs-scroll-hint {
-    position: static;
-    transform: none;
-    left: auto;
     font-size: 10px;
-    margin: 28px 0 0;
-    width: 100%;
+    margin-top: 24px;
     justify-content: center;
-    display: flex;
-    animation: csHintFadeIn 1s 2s forwards, csHintBobMobile 2.5s 3s ease-in-out infinite;
   }
   .cs-hero-v2-summary {
     font-size: 16px;
