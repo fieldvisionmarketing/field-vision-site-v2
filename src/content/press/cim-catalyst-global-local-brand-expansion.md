@@ -2,7 +2,7 @@
 title: "A Cultural Connection: David Hampian on Global-Local Brand Expansion"
 publication: "CIM Catalyst"
 publicationUrl: "https://www.cim.co.uk"
-articleUrl: "https://www.cim.co.uk/exchange/catalyst/"
+articleUrl: "/downloads/cim-catalyst-april-2026-a-cultural-connection.pdf"
 date: 2026-04-01
 author: "Lucy Handley"
 topic: "Global Brand Strategy & Market Expansion"
