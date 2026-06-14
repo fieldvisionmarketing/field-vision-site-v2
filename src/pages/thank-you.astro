@@ -10,6 +10,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a href="/" class="pill-btn form-btn">Back to Home &rarr;</a>
     </div>
   </section>
+
+  <!-- Canonical conversion: form lead captured (mark generate_lead as a Key Event in GA4) -->
+  <script is:inline>
+    (function() {
+      function gtagSafe() {
+        if (typeof window.gtag === 'function') { window.gtag.apply(window, arguments); }
+        else { window.dataLayer = window.dataLayer || []; window.dataLayer.push(arguments); }
+      }
+      var attr = {};
+      try {
+        var utm = sessionStorage.getItem('fv_utm');
+        if (utm) attr = JSON.parse(utm);
+        attr.landing_page = sessionStorage.getItem('fv_landing') || '';
+        attr.referrer = sessionStorage.getItem('fv_referrer') || 'direct';
+      } catch (e) {}
+      gtagSafe('event', 'generate_lead', Object.assign({
+        form_name: 'contact_form',
+        conversion_type: 'form_lead'
+      }, attr));
+    })();
+  </script>
 </BaseLayout>
 
 <style>

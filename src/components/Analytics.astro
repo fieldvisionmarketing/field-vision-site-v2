@@ -74,3 +74,50 @@ const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID when ready
     }
   })();
 </script>
+
+<!-- Conversion event tracking — fires GA4 events for lead-intent and lead actions -->
+<script>
+  (function() {
+    function gtagSafe() {
+      if (typeof window.gtag === 'function') {
+        window.gtag.apply(window, arguments);
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(arguments);
+      }
+    }
+
+    // Pull stored attribution captured on landing (set in UTM script above)
+    function getAttribution() {
+      var attr = {};
+      try {
+        var utm = sessionStorage.getItem('fv_utm');
+        if (utm) attr = JSON.parse(utm);
+        attr.landing_page = sessionStorage.getItem('fv_landing') || '';
+        attr.referrer = sessionStorage.getItem('fv_referrer') || 'direct';
+      } catch (e) {}
+      return attr;
+    }
+
+    // Track all "Book a Call" / contact CTA clicks (lead intent)
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href*="/contact"]');
+      if (!a) return;
+      gtagSafe('event', 'book_call_click', Object.assign({
+        link_text: (a.textContent || '').trim().slice(0, 80),
+        page_location: window.location.href
+      }, getAttribution()));
+    });
+
+    // Track contact form submission (lead captured) on the contact page
+    var contactForm = document.querySelector('form.contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function() {
+        gtagSafe('event', 'contact_form_submit', Object.assign({
+          form_name: 'contact_form',
+          page_location: window.location.href
+        }, getAttribution()));
+      });
+    }
+  })();
+</script>
