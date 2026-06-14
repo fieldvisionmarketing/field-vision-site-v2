@@ -77,6 +77,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+    "@id": `${siteUrl}/#organization`,
     "name": "Field Vision Group",
     "alternateName": "Field Vision",
     "url": siteUrl,
@@ -112,9 +113,11 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     "priceRange": "$$$$",
     "founder": {
       "@type": "Person",
+      "@id": `${siteUrl}/#david-hampian`,
       "name": "David Hampian",
       "jobTitle": "Founder & Fractional CMO",
-      "url": "https://www.linkedin.com/company/fieldvisiongroup/"
+      "url": `${siteUrl}/about/`,
+      "sameAs": "https://www.linkedin.com/in/davidhampian/"
     },
     "knowsAbout": [
       "Fractional CMO",
@@ -167,20 +170,18 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     ]
   })} />
 
-  <!-- Schema.org: Organization (Field Vision) -->
+  <!-- Schema.org: Person (David Hampian — founder) -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Field Vision",
-    "name": "Field Vision",
-    "alternateName": "Field Vision Group",
+    "@id": `${siteUrl}/#david-hampian`,
+    "name": "David Hampian",
+    "givenName": "David",
+    "familyName": "Hampian",
     "jobTitle": "Founder & Fractional CMO",
-    "url": "https://www.linkedin.com/company/fieldvisiongroup/",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Field Vision Group",
-      "url": siteUrl
-    },
+    "url": `${siteUrl}/about/`,
+    "image": `${siteUrl}/headshot-david-hampian.jpg`,
+    "worksFor": { "@id": `${siteUrl}/#organization` },
     "alumniOf": [
       { "@type": "Organization", "name": "Amazon" },
       { "@type": "Organization", "name": "Twitch" },
@@ -204,7 +205,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       "Lifecycle Marketing",
       "Marketing Org Design"
     ],
-    "description": "Growth marketing executive with over a decade of senior leadership at Amazon, Twitch, Pandora, and Hard Rock International. Founder of Field Vision, providing fractional CMO services to startups in San Francisco and nationwide.",
+    "description": "David Hampian is a growth marketing executive with over a decade of senior leadership at Amazon, Twitch, Pandora, and Hard Rock International. He is the founder of Field Vision, providing fractional CMO services to startups in digital media, streaming, entertainment, and the creator economy.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "San Francisco",
@@ -212,9 +213,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/fieldvisiongroup/",
-      "https://www.instagram.com/fieldvisiongroup/",
-      "https://www.youtube.com/@fieldvisiongroup"
+      "https://www.linkedin.com/in/davidhampian/"
     ]
   })} />
 
@@ -252,6 +251,24 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       "itemListElement": breadcrumbItems
     };
   })())} />
+
+  <!-- Schema.org: CreativeWork (case-study detail pages, auto-emitted) -->
+  {Astro.url.pathname.startsWith('/case-studies/') && Astro.url.pathname.replace(/\/$/, '') !== '/case-studies' && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": title,
+      "headline": title,
+      "description": description,
+      "url": canonicalURL,
+      "image": ogImage,
+      "author": { "@id": `${siteUrl}/#david-hampian` },
+      "creator": { "@id": `${siteUrl}/#david-hampian` },
+      "publisher": { "@id": `${siteUrl}/#organization` },
+      "about": { "@id": `${siteUrl}/#organization` },
+      "isPartOf": { "@type": "CollectionPage", "name": "Case Studies", "url": `${siteUrl}/case-studies/` }
+    })} />
+  )}
 
   <!-- Slot for page-specific head content -->
   <slot name="head" />
