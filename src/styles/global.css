@@ -128,7 +128,9 @@ h1, h2, h3 {
   line-height: 1.05; color: var(--ink);
 }
 .section-subtitle {
-  font-size: clamp(10px, 1.26vw, 16px); font-weight: 500;
+  font-family: 'Satoshi', sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px); font-weight: 500;
+  margin-top: 14px; max-width: 600px; color: var(--muted);
 }
 .section-header-row {
   display: flex; align-items: flex-end;
