@@ -4,7 +4,7 @@ const verticals = [
   { icon: '🎬', label: 'Entertainment' },
   { icon: '🎨', label: 'Creator Economy' },
   { icon: '📺', label: 'Streaming' },
-  { icon: '🎵', label: 'Music' },
+  { icon: '🎵', label: 'Music', href: '/industries/music/' },
   { icon: '⚽', label: 'Sports' },
 ];
 ---
@@ -16,10 +16,17 @@ const verticals = [
   </div>
   <div class="verticals-grid">
     {verticals.map((v, i) => (
-      <div class={`vertical-tile reveal rd${i + 1}`}>
-        <div class="vertical-emoji">{v.icon}</div>
-        <div class="vertical-name">{v.label}</div>
-      </div>
+      v.href ? (
+        <a href={v.href} class={`vertical-tile vertical-tile--link reveal rd${i + 1}`}>
+          <div class="vertical-emoji">{v.icon}</div>
+          <div class="vertical-name">{v.label}</div>
+        </a>
+      ) : (
+        <div class={`vertical-tile reveal rd${i + 1}`}>
+          <div class="vertical-emoji">{v.icon}</div>
+          <div class="vertical-name">{v.label}</div>
+        </div>
+      )
     ))}
   </div>
 </section>

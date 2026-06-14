@@ -1,0 +1,204 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+export async function getStaticPaths() {
+  const industries = await getCollection('industries');
+  return industries
+    .filter((i) => !i.data.hidden)
+    .map((industry) => ({
+      params: { slug: industry.id.replace(/\.md$/, '') },
+      props: { industry },
+    }));
+}
+
+const { industry } = Astro.props;
+const d = industry.data;
+
+const siteUrl = 'https://fieldvisiongroup.com';
+const slug = industry.id.replace(/\.md$/, '');
+const pageUrl = `${siteUrl}/industries/${slug}/`;
+
+function chipLastWord(text, chipClass = 'hl-green') {
+  const words = text.trim().split(/\s+/);
+  if (words.length <= 1) return text;
+  const last = words.pop();
+  return words.join(' ') + ' <span class="' + chipClass + '">' + last + '</span>';
+}
+const heroTitle = chipLastWord(d.h1);
+const ctaTitle = chipLastWord(d.ctaHeadline || 'Ready to Build Your Growth Engine?');
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": d.targetKeyword,
+  "serviceType": "Fractional CMO",
+  "description": d.description,
+  "provider": { "@id": `${siteUrl}/#organization` },
+  "areaServed": { "@type": "Country", "name": "United States" },
+  "url": pageUrl
+};
+
+const faqSchema = d.faqs?.length ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": d.faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+  }))
+} : null;
+---
+
+<BaseLayout
+  title={d.title + ' | Field Vision'}
+  description={d.description}
+  ogImage={d.ogImage}
+>
+  <Header slot="header" />
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="svcpg-hero">
+    <div class="svcpg-hero-inner">
+      <div class="svcpg-hero-text">
+        <h1 set:html={heroTitle} />
+        <p class="svcpg-subtitle">{d.subtitle}</p>
+        <a href="/contact/" class="btn-brutal">Book a Call →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTITY BLOCK (GEO-liftable prose) -->
+  <section class="ind-entity reveal">
+    <div class="ind-entity-inner">
+      <p set:html={d.entityBlock} />
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  {d.clients?.length > 0 && (
+    <section class="ind-proof reveal">
+      <div class="ind-proof-inner">
+        <span class="eyebrow">Proof, Not Promises</span>
+        <h2><span class="hl-cream">Where We've Done It</span></h2>
+        {d.proofIntro && <p class="ind-proof-intro">{d.proofIntro}</p>}
+        <div class="ind-proof-grid">
+          {d.clients.map((c) => {
+            const inner = (
+              <>
+                <img
+                  src={c.logo || `https://www.google.com/s2/favicons?domain=${c.domain}&sz=128`}
+                  alt={`${c.name} logo`}
+                  class="ind-proof-logo"
+                  loading="lazy"
+                />
+                <span class="ind-proof-name">{c.name}</span>
+                {c.note && <span class="ind-proof-note">{c.note}</span>}
+                {c.caseStudy && <span class="ind-proof-link">Read case study →</span>}
+              </>
+            );
+            return c.caseStudy
+              ? <a href={c.caseStudy} class="ind-proof-card ind-proof-card--link">{inner}</a>
+              : <div class="ind-proof-card">{inner}</div>;
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ANGLE / WHY -->
+  {d.angleBody && (
+    <section class="svcpg-ps reveal">
+      <div class="svcpg-ps-inner">
+        <span class="eyebrow">{d.angleEyebrow || 'Why Field Vision'}</span>
+        <h2 set:html={chipLastWord(d.angleHeadline || 'Built For This')} />
+        <p class="svcpg-ps-intro">{d.angleBody}</p>
+        {d.anglePoints?.length > 0 && (
+          <ul class="ind-angle-points">
+            {d.anglePoints.map((pt) => <li><span class="who-check">✓</span> {pt}</li>)}
+          </ul>
+        )}
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ -->
+  {d.faqs?.length > 0 && (
+    <section class="faq-section svcpg-faq reveal">
+      <div class="faq-section-inner">
+        <span class="eyebrow">Common Questions</span>
+        <h2><span class="hl-cream">FAQ</span></h2>
+        <div class="faq-canon-list">
+          {d.faqs.map((faq) => (
+            <details class="faq-canon-item">
+              <summary>{faq.question}</summary>
+              <div class="faq-canon-answer"><p>{faq.answer}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- RELATED / INTERNAL LINKS -->
+  {d.relatedLinks?.length > 0 && (
+    <section class="ind-related reveal">
+      <div class="ind-related-inner">
+        <span class="eyebrow">Go Deeper</span>
+        <h2>Related <span class="hl-green">Reading</span></h2>
+        <div class="ind-related-grid">
+          {d.relatedLinks.map((l) => (
+            <a href={l.href} class="ind-related-card">
+              <span class="ind-related-label">{l.label} →</span>
+              {l.desc && <span class="ind-related-desc">{l.desc}</span>}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FINAL CTA -->
+  <section class="svcpg-final-cta reveal">
+    <div class="svcpg-final-cta-inner">
+      <h2 set:html={ctaTitle} />
+      <p>{d.ctaBody || "Book a 30-minute discovery call. We'll talk about where you are, where you want to go, and whether Field Vision is the right fit."}</p>
+      <a href="/contact/" class="btn-brutal">Book a Call →</a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .ind-entity { padding: 56px 24px; border-bottom: 3px solid var(--ink, #111); }
+  .ind-entity-inner { max-width: 880px; margin: 0 auto; }
+  .ind-entity-inner p { font-size: clamp(1.15rem, 2.2vw, 1.5rem); line-height: 1.6; font-weight: 500; }
+  .ind-proof { padding: 72px 24px; }
+  .ind-proof-inner { max-width: 1080px; margin: 0 auto; }
+  .ind-proof-intro { max-width: 680px; margin: 8px 0 36px; font-size: 1.1rem; line-height: 1.6; }
+  .ind-proof-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .ind-proof-card { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 20px; border: 3px solid var(--ink, #111); background: #fff; text-decoration: none; color: inherit; }
+  .ind-proof-card--link { transition: transform 0.15s, box-shadow 0.15s; }
+  .ind-proof-card--link:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink, #111); }
+  .ind-proof-logo { width: 40px; height: 40px; object-fit: contain; }
+  .ind-proof-name { font-weight: 700; font-size: 1.05rem; }
+  .ind-proof-note { font-size: 0.9rem; line-height: 1.45; opacity: 0.8; }
+  .ind-proof-link { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-top: auto; }
+  .ind-angle-points { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
+  .ind-angle-points li { font-size: 1.05rem; line-height: 1.5; }
+  .ind-related { padding: 72px 24px; }
+  .ind-related-inner { max-width: 1080px; margin: 0 auto; }
+  .ind-related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 28px; }
+  .ind-related-card { display: flex; flex-direction: column; gap: 8px; padding: 22px; border: 3px solid var(--ink, #111); background: #fff; text-decoration: none; color: inherit; transition: transform 0.15s, box-shadow 0.15s; }
+  .ind-related-card:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink, #111); }
+  .ind-related-label { font-weight: 800; font-size: 1.1rem; }
+  .ind-related-desc { font-size: 0.95rem; line-height: 1.5; opacity: 0.85; }
+</style>

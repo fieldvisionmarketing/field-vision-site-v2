@@ -92,4 +92,42 @@ const press = defineCollection({
   }),
 });
 
-export const collections = { blog, services, guides, press };
+const industries = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    h1: z.string(),
+    subtitle: z.string(),
+    targetKeyword: z.string(),
+    ogImage: z.string().optional(),
+    order: z.number().default(0),
+    hidden: z.boolean().default(false),
+    entityBlock: z.string(),
+    proofIntro: z.string().optional(),
+    clients: z.array(z.object({
+      name: z.string(),
+      domain: z.string().optional(),
+      logo: z.string().optional(),
+      caseStudy: z.string().optional(),
+      note: z.string().optional(),
+    })).optional(),
+    angleEyebrow: z.string().optional(),
+    angleHeadline: z.string().optional(),
+    angleBody: z.string().optional(),
+    anglePoints: z.array(z.string()).optional(),
+    relatedLinks: z.array(z.object({
+      label: z.string(),
+      href: z.string(),
+      desc: z.string().optional(),
+    })).optional(),
+    faqs: z.array(z.object({
+      question: z.string(),
+      answer: z.string(),
+    })).optional(),
+    ctaHeadline: z.string().optional(),
+    ctaBody: z.string().optional(),
+  }),
+});
+
+export const collections = { blog, services, guides, press, industries };
