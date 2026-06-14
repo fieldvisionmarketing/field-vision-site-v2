@@ -10,6 +10,8 @@ const blog = defineCollection({
     updated: z.coerce.date().optional(),
     author: z.string().default('Field Vision'),
     ogImage: z.string().optional(),
+    seoTitle: z.string().optional(),
+    schemaJson: z.string().optional(),
     draft: z.boolean().default(false),
     tags: z.array(z.string()).default([]),
   }),
