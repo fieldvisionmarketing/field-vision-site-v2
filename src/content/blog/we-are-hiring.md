@@ -10,7 +10,7 @@ tags: ["hiring", "fractional marketing", "careers", "Field Vision", "GTM"]
 
 ## Summary
 
-Field Vision is building a roster of senior, project-based integrated marketers who can operate as well-rounded GTM athletes. This role is for people who are comfortable flexing across marketing disciplines — from brand, to content, to growth — depending on what the client needs most. You will step into high-stakes client situations and deliver marketing plans that drive growth. Judgment, structure, and communication matter more than channel-level depth in any one area, as you will move fluidly between strategic and tactical matters. If you're interested in what drives our culture and how we think about building teams, [learn more about our approach](/about/).
+Field Vision is building a roster of senior, project-based integrated marketers who can operate as well-rounded GTM athletes. This role is for people who are comfortable flexing across marketing disciplines, from brand, to content, to growth, depending on what the client needs most. You will step into high-stakes client situations and deliver marketing plans that drive growth. Judgment, structure, and communication matter more than channel-level depth in any one area, as you will move fluidly between strategic and tactical matters. If you're interested in what drives our culture and how we think about building teams, [learn more about our approach](/about/).
 
 ## What You Will Do
 
@@ -49,7 +49,7 @@ Field Vision is a modern integrated marketing consultancy that partners with con
 
 The goal is always the same: help clients solve their marketing challenges and unlock business growth. Whether it's helping a brand launch like [Twitch did in the esports and music space](/case-studies/twitch/), or building the right [fractional CMO](/services/fractional-cmo/) relationship to guide their growth, we're looking for marketers who thrive in high-complexity, high-impact situations.
 
-Field Vision is not a traditional agency — we do not operate as an AOR with bloated teams and a penchant for retainers. We work in focused, high-velocity engagements where we help teams define the right play, build the right systems, and then hand them the playbook so they can run it themselves.
+Field Vision is not a traditional agency. We do not operate as an AOR with bloated teams and a penchant for retainers. We work in focused, high-velocity engagements where we help teams define the right play, build the right systems, and then hand them the playbook so they can run it themselves.
 
 Are you ready to run the play?
 

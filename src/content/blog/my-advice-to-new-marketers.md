@@ -1,6 +1,6 @@
 ---
 title: "How to Break Into Marketing"
-description: "Practical advice for breaking into marketing — from gaining hands-on experience to mastering analytics, advertising, content strategy, and brand storytelling."
+description: "Practical advice for breaking into marketing: from gaining hands-on experience to mastering analytics, advertising, content strategy, and brand storytelling."
 category: "Career & Leadership"
 date: 2025-08-03
 updated: 2026-02-23
@@ -12,7 +12,7 @@ So you want to get into marketing? Here's what I tell anybody who wants to start
 
 ## 1) Just Dive In; Gain Momentum
 
-Marketing isn't just one thing. It's brand strategy, digital ads, content creation, analytics, and a ton more. Don't stress about picking a niche right away. Your first goal? Get a role (internship or entry-level) where you can touch as many aspects of the business or team as you can. This is what a good [fractional CMO](/services/fractional-cmo/) does—they touch every part of the machine.
+Marketing isn't just one thing. It's brand strategy, digital ads, content creation, analytics, and a ton more. Don't stress about picking a niche right away. Your first goal? Get a role (internship or entry-level) where you can touch as many aspects of the business or team as you can. This is what a good [fractional CMO](/services/fractional-cmo/) does: they touch every part of the machine.
 
 My own path started in customer support, then I literally cold-called my way into music marketing. That kind of hands-on exposure teaches you things no online course ever will.
 
@@ -67,7 +67,7 @@ Creating compelling stuff and getting it seen.
 
 ### 2d) Brand & Storytelling
 
-Defining who you are and why people should care. This is where the [SCORE® framework](/guides/score-framework/) comes in handy—it helps you structure how you communicate your brand's value.
+Defining who you are and why people should care. This is where the [SCORE® framework](/guides/score-framework/) comes in handy. It helps you structure how you communicate your brand's value.
 
 **What to learn:** Positioning, crafting strong value propositions, defining tone of voice, and building compelling brand narratives.
 
@@ -79,7 +79,7 @@ Defining who you are and why people should care. This is where the [SCORE® fram
 
 ## 3) Learn by Doing
 
-Don't just read about it. Apply it. Run this play. It's fun — I still do it from time to time to stay sharp. The best way to understand how brands actually work is to study real successes, like the [Amazon Audience Development case study](/case-studies/amazon-audience-development/).
+Don't just read about it. Apply it. Run this play. It's fun. I still do it from time to time to stay sharp. The best way to understand how brands actually work is to study real successes, like the [Amazon Audience Development case study](/case-studies/amazon-audience-development/).
 
 **Pick a brand you admire:**
 

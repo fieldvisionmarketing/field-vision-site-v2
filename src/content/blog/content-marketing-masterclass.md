@@ -8,9 +8,9 @@ author: "Field Vision"
 tags: ["content marketing", "growth strategy", "BrightonSEO", "content strategy", "startup marketing"]
 ---
 
-Content marketing strategy is the systematic use of content to drive measurable business outcomes — not just traffic, not just engagement, but pipeline and revenue. Most B2C content strategies fail because they treat content as a deliverable instead of a growth system. That was the thesis behind my BrightonSEO keynote — and the response told me it struck a nerve.
+Content marketing strategy is the systematic use of content to drive measurable business outcomes, not just traffic, not just engagement, but pipeline and revenue. Most B2C content strategies fail because they treat content as a deliverable instead of a growth system. That was the thesis behind my BrightonSEO keynote, and the response told me it struck a nerve.
 
-In this talk, I break down the content-as-growth framework I built across Pandora, Twitch, and Amazon Music — the same approach that now drives how Field Vision helps clients build [content systems that compound](/guides/compound-growth-system/).
+In this talk, I break down the content-as-growth framework I built across Pandora, Twitch, and Amazon Music, the same approach that now drives how Field Vision helps clients build [content systems that compound](/guides/compound-growth-system/).
 
 B2C companies that treat content as a system rather than a series of deliverables generate 3x more leads per dollar spent ([Demand Gen Report, 2024](https://www.demandgenreport.com/resources/research/)). Yet 65% of B2C marketers say their content strategy lacks a clear connection to revenue ([Content Marketing Institute, 2025](https://contentmarketinginstitute.com/research/)). The gap between content that exists and content that drives growth is almost always a systems problem, not a creativity problem.
 
@@ -22,17 +22,17 @@ The most common content marketing failure I see isn't bad writing or wrong topic
 
 **The "SEO-Only" Trap.** The team builds a keyword-driven content plan. Articles rank. Traffic grows. But the traffic doesn't convert because the content was optimized for search engines rather than buyer psychology. High-traffic, low-intent content is the most expensive kind of marketing waste.
 
-**The "Random Acts of Content" Trap.** The CEO has an idea on Monday, a competitor publishes something on Tuesday, a customer asks a question on Wednesday — and each one becomes a content project. Without a strategic filter, the team produces a lot of content that serves no coherent purpose.
+**The "Random Acts of Content" Trap.** The CEO has an idea on Monday, a competitor publishes something on Tuesday, a customer asks a question on Wednesday, and each one becomes a content project. Without a strategic filter, the team produces a lot of content that serves no coherent purpose.
 
 These traps share a common root cause: content treated as output rather than as a growth system. A system has inputs, processes, feedback loops, and compounding effects. A calendar has due dates.
 
 ## The Content-to-Revenue Pipeline
 
-The first mindset shift is to stop thinking about content as "stuff we publish" and start thinking about it as a pipeline — just like your sales pipeline. Every piece of content should map to a stage of the buyer journey and connect to a measurable business outcome.
+The first mindset shift is to stop thinking about content as "stuff we publish" and start thinking about it as a pipeline, just like your sales pipeline. Every piece of content should map to a stage of the buyer journey and connect to a measurable business outcome.
 
 Here's how the pipeline works in practice:
 
-**Awareness content** catches attention and builds trust with people who don't know you yet. Blog posts, social media, podcasts, speaking engagements. The metric that matters isn't pageviews — it's qualified reach. How many of the right people are discovering you?
+**Awareness content** catches attention and builds trust with people who don't know you yet. Blog posts, social media, podcasts, speaking engagements. The metric that matters isn't pageviews. It's qualified reach. How many of the right people are discovering you?
 
 **Consideration content** helps prospects evaluate whether your approach is right for their situation. Case studies, framework guides, comparison content, webinars. The metric is engagement depth: are people consuming multiple pieces, spending time, and moving closer to a conversation?
 
@@ -44,17 +44,17 @@ When you map every piece of content to this pipeline, you stop measuring "how mu
 
 ## The Three Layers of a Content Growth System
 
-Through building and scaling content organizations across Pandora, Twitch, and Amazon, I've found that every effective content system has three layers. This is the framework I reference as the [PLOT Framework](/guides/plot-framework/) when applied to budget conversations — but the structural principles apply to the content system itself:
+Through building and scaling content organizations across Pandora, Twitch, and Amazon, I've found that every effective content system has three layers. This is the framework I reference as the [PLOT Framework](/guides/plot-framework/) when applied to budget conversations, but the structural principles apply to the content system itself:
 
 ### Layer 1: Strategic Foundation
 
 Before you create anything, you need clarity on three questions:
 
-**Who are we trying to reach?** Not a demographic profile — a psychographic one. What do they believe? What are they struggling with? What language do they use to describe their problems? At Twitch, the content that performed best wasn't about "live streaming features." It was about creator identity, community building, and the emotional journey of going from hobbyist to professional.
+**Who are we trying to reach?** Not a demographic profile, a psychographic one. What do they believe? What are they struggling with? What language do they use to describe their problems? At Twitch, the content that performed best wasn't about "live streaming features." It was about creator identity, community building, and the emotional journey of going from hobbyist to professional.
 
-**What's our point of view?** In a world where AI can generate commodity content in seconds, your point of view is your only durable advantage. At Field Vision, we teach the [ABCT® Framework](/guides/abct-framework/) — Audit, Blueprint, Construct, Transfer — because brand voice is the one thing competitors and AI can't replicate.
+**What's our point of view?** In a world where AI can generate commodity content in seconds, your point of view is your only durable advantage. At Field Vision, we teach the [ABCT® Framework](/guides/abct-framework/), Audit, Blueprint, Construct, Transfer, because brand voice is the one thing competitors and AI can't replicate.
 
-**What business outcome are we driving?** Every content initiative should connect to a specific business metric. Not "awareness" in the abstract — awareness among [specific audience] that drives [specific action] resulting in [measurable outcome].
+**What business outcome are we driving?** Every content initiative should connect to a specific business metric. Not "awareness" in the abstract, but awareness among [specific audience] that drives [specific action] resulting in [measurable outcome].
 
 ### Layer 2: Content Architecture
 
@@ -62,11 +62,11 @@ Content architecture is the system that connects strategy to execution. It inclu
 
 **Content pillars.** The 3-5 thematic territories you own. These should map to your expertise, your audience's pain points, and the keywords you want to rank for. Every piece of content should ladder to a pillar.
 
-**Content formats and channels.** Which formats work for each stage of the buyer journey? Which channels reach your audience where they already spend time? The mistake most teams make is trying to be everywhere — spreading thin across 10 channels instead of going deep on 3.
+**Content formats and channels.** Which formats work for each stage of the buyer journey? Which channels reach your audience where they already spend time? The mistake most teams make is trying to be everywhere, spreading thin across 10 channels instead of going deep on 3.
 
 **Content cadence.** How often you publish matters less than how consistently you publish. A blog post every week for a year beats a "content blitz" of 20 posts in a month followed by silence. Consistency signals credibility to both search engines and humans.
 
-**Repurposing system.** Every piece of anchor content — a long-form blog post, a webinar, a keynote — should atomize into 5-10 derivative pieces across channels. This is how you get volume without proportional effort. My BrightonSEO keynote, for example, became this blog post, three LinkedIn posts, a newsletter deep-dive, and the foundation of the [Compound Growth System®](/guides/compound-growth-system/) guide.
+**Repurposing system.** Every piece of anchor content (a long-form blog post, a webinar, a keynote) should atomize into 5-10 derivative pieces across channels. This is how you get volume without proportional effort. My BrightonSEO keynote, for example, became this blog post, three LinkedIn posts, a newsletter deep-dive, and the foundation of the [Compound Growth System®](/guides/compound-growth-system/) guide.
 
 ### Layer 3: Measurement and Learning Loops
 
@@ -74,7 +74,7 @@ This is where most content strategies fall apart. They measure activity (posts p
 
 The metrics that actually matter:
 
-**Content-influenced pipeline.** How much of your sales pipeline touched content before converting? This requires basic attribution — UTM tracking, CRM integration, and a willingness to give content credit alongside sales outreach.
+**Content-influenced pipeline.** How much of your sales pipeline touched content before converting? This requires basic attribution: UTM tracking, CRM integration, and a willingness to give content credit alongside sales outreach.
 
 **Content velocity.** How quickly does a piece of content move a prospect from one stage to the next? If your case studies accelerate deal cycles by two weeks, that's a measurable, defensible ROI.
 
@@ -114,11 +114,11 @@ The BrightonSEO talk covers these principles in depth with real examples from Pa
 - How to build measurement systems that connect content to revenue
 - The specific frameworks for turning a content calendar into a content growth system
 - Real attribution models you can implement this week
-- How AI changes the content game — and what remains irreplaceable
+- How AI changes the content game, and what remains irreplaceable
 
 ## About Field Vision
 
-Field Vision is the founder of [Field Vision](/about/), a fractional CMO practice that helps B2C companies build marketing systems that compound. His content-as-growth approach is built into the [Compound Growth System®](/guides/compound-growth-system/) — the same methodology used with clients like [Maestro](/case-studies/maestro/) and [Hard Rock Digital](/case-studies/hard-rock-digital/).
+Field Vision is the founder of [Field Vision](/about/), a fractional CMO practice that helps B2C companies build marketing systems that compound. His content-as-growth approach is built into the [Compound Growth System®](/guides/compound-growth-system/): the same methodology used with clients like [Maestro](/case-studies/maestro/) and [Hard Rock Digital](/case-studies/hard-rock-digital/).
 
 ---
 

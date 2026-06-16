@@ -12,17 +12,17 @@ Taco Bell deleted every single social media post across every platform. No warni
 
 The result? The #1 app in the App Store. Over 2 billion impressions. And a viral marketing campaign that's still studied a decade later.
 
-In the very first episode of Run The Play, Field Vision sits down with Larisa Johnson — who has led marketing at Credit Karma, the NBA, Lyft, Twitch, and Pandora — to break down exactly how Taco Bell pulled off one of the most audacious product launch strategies in fast food history. This case demonstrates the power of [integrated marketing](/services/integrated-marketing/) combined with [go-to-market strategy](/services/go-to-market/) that prioritizes bold thinking.
+In the very first episode of Run The Play, Field Vision sits down with Larisa Johnson (who has led marketing at Credit Karma, the NBA, Lyft, Twitch, and Pandora) to break down exactly how Taco Bell pulled off one of the most audacious product launch strategies in fast food history. This case demonstrates the power of [integrated marketing](/services/integrated-marketing/) combined with [go-to-market strategy](/services/go-to-market/) that prioritizes bold thinking.
 
 ## Why Taco Bell's social media blackout worked
 
-In a world where every brand is fighting for attention by posting more, Taco Bell did the opposite. They went dark. The strategy was counterintuitive but psychologically brilliant: when something familiar suddenly disappears, it creates a curiosity gap that demands resolution. This approach reflects the [PLOT framework](/guides/plot-framework/) in action—using narrative tension to build engagement.
+In a world where every brand is fighting for attention by posting more, Taco Bell did the opposite. They went dark. The strategy was counterintuitive but psychologically brilliant: when something familiar suddenly disappears, it creates a curiosity gap that demands resolution. This approach reflects the [PLOT framework](/guides/plot-framework/) in action, using narrative tension to build engagement.
 
-Larisa breaks down how the team navigated the internal politics of convincing leadership to delete millions of dollars worth of social content — and why the risk was actually more calculated than it appeared.
+Larisa breaks down how the team navigated the internal politics of convincing leadership to delete millions of dollars worth of social content, and why the risk was actually more calculated than it appeared.
 
 ## The mobile app launch strategy behind 2 billion impressions
 
-The blackout wasn't just a stunt — it was a launch vehicle. Every piece of the campaign was designed to funnel attention toward one action: downloading the Taco Bell mobile app. The social silence created earned media. The earned media drove app downloads. The app downloads drove a loyalty flywheel that changed how Taco Bell thought about customer relationships.
+The blackout wasn't just a stunt. It was a launch vehicle. Every piece of the campaign was designed to funnel attention toward one action: downloading the Taco Bell mobile app. The social silence created earned media. The earned media drove app downloads. The app downloads drove a loyalty flywheel that changed how Taco Bell thought about customer relationships.
 
 ## What this campaign teaches about modern marketing
 
@@ -34,11 +34,11 @@ The Taco Bell blackout is a masterclass in three principles: attention is a zero
 - Why going dark on social media can be more powerful than posting more
 - How to build a product launch strategy that turns attention into action
 - What Larisa Johnson learned leading marketing at Credit Karma, NBA, Lyft, Twitch, and Pandora
-- Why the best viral campaigns aren't accidents — they're systems
+- Why the best viral campaigns aren't accidents; they're systems
 - How to sell bold creative ideas to risk-averse leadership
 
 Listen to the full episode above, or find Run The Play on YouTube.
 
 ## About Run The Play
 
-Run The Play is a podcast from Field Vision, a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Hosted by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — each episode features conversations with senior marketing, brand, and talent leaders on the strategies behind the world's biggest brands and boldest ideas.
+Run The Play is a podcast from Field Vision, a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Hosted by Field Vision (former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch), each episode features conversations with senior marketing, brand, and talent leaders on the strategies behind the world's biggest brands and boldest ideas.

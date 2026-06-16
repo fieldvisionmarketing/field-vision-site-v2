@@ -13,4 +13,4 @@ Two years ago, 60% of consumers said they trusted AI-generated content. Today, t
 
 That's not a dip. That's a collapse. And if you're a startup founder trying to grow on content, this is the most important shift you'll navigate in 2025.
 
-I've overseen 100+ GTM campaigns across Amazon, Twitch, Pandora, and a handful of startups. The one pattern I keep seeing: the brands that win long-term are the ones that build advantages their competitors can't copy. Right now, authenticity is that advantage — and most startups are leaving it on the table.
+I've overseen 100+ GTM campaigns across Amazon, Twitch, Pandora, and a handful of startups. The one pattern I keep seeing: the brands that win long-term are the ones that build advantages their competitors can't copy. Right now, authenticity is that advantage, and most startups are leaving it on the table.

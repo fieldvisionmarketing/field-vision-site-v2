@@ -20,7 +20,7 @@ Hampian explained that while huge moments like The Pop Out may appear inevitable
 
 ## Turning a song into a cultural moment
 
-The first live performance of "Not Like Us" instantly turned a diss track into a global cultural event. And Hampian told us that's largely down to Kendrick's ability to read the cultural context of the moment—a skill central to the [PLOT framework](/guides/plot-framework/) that guides how brands craft moments that matter.
+The first live performance of "Not Like Us" instantly turned a diss track into a global cultural event. And Hampian told us that's largely down to Kendrick's ability to read the cultural context of the moment, a skill central to the [PLOT framework](/guides/plot-framework/) that guides how brands craft moments that matter.
 
 > "A song becomes a moment when an artist has a deep understanding of the cultural context. What's happening in the world? How are people feeling about it? How are they expressing it? Great artists are able to tap into that in ways most people just can't."
 
@@ -40,7 +40,7 @@ One of the ways in which Lamar has set himself apart in recent years is through 
 
 > "Content in general has become such a volume game. The higher your output, the faster you grow."
 
-> "Artists like Kendrick are able to build intrigue and hype through subtraction — they leave for a bit and everyone gets spun up. It's due to the trust he's built with his audience. He's consistent. We know that when he drops, it's going to be legendary. Not everyone can do that."
+> "Artists like Kendrick are able to build intrigue and hype through subtraction. They leave for a bit and everyone gets spun up. It's due to the trust he's built with his audience. He's consistent. We know that when he drops, it's going to be legendary. Not everyone can do that."
 
 When an artist like Kendrick Lamar drops, people know it will matter. That trust is vital to the ongoing success of any artist, but it's not something that's easy to build and sustain in the long-term.
 
@@ -60,4 +60,4 @@ Kendrick now only needs four more Grammys to claim Jay-Z's title. He's the clear
 
 ## About Field Vision
 
-Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by Field Vision — former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch — we help ambitious brands build scalable growth systems that turn audiences into customers.
+Field Vision is a fractional CMO and growth marketing firm for digital media, entertainment, and creator economy startups (seed to Series D). Founded by Field Vision, former Global Head of Audience Development at Amazon and Senior Director of Global Integrated Marketing at Twitch, we help ambitious brands build scalable growth systems that turn audiences into customers.
