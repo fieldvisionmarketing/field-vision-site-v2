@@ -1,0 +1,557 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// 3 most recent blog posts for the confirmation screen
+const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3)
+  .map((p) => ({
+    title: p.data.title,
+    description: p.data.description,
+    category: p.data.category,
+    href: `/blog/${p.id.replace(/\.md$/, '')}/`,
+  }));
+
+// Single source of truth for branch logic + reveal copy (drives every path)
+const FLOW = {
+  foundation: {
+    forkLabel: "We haven't really started.",
+    forkSub: "No real marketing yet. Figuring out where to even begin.",
+    branchQ: "What moment are you in?",
+    options: [
+      { id: 'f1', label: 'Pre-launch', echo: "You're pre-launch, which is the best time to get this right, before you spend a dollar in the wrong place." },
+      { id: 'f2', label: 'Just launched', echo: "You launched and it's quiet, which almost always means the product is fine and the path to your first audience just hasn't been built yet." },
+      { id: 'f3', label: 'Got traction by accident, need to make it repeatable', echo: "You found traction by accident, and the whole game now is turning a lucky break into something you can run over and over again." },
+      { id: 'f4', label: 'Just raised, need to deploy it', echo: "You just raised, so the clock started, and the question is no longer whether to start marketing, but where your efforts are first deployed." },
+    ],
+    body: "We'll map your fastest path to first traction: who your real audience is, the one or two plays worth your time to execute right now, and the moves that compound instead of scatter, consuming time and money.",
+    takeaways: [
+      "where your first marketing efforts should go",
+      "the two or three plays that fit you right now (and the ones to ignore)",
+      "a simple 90-day plan you can run yourself",
+    ],
+  },
+  focused: {
+    forkLabel: "One thing isn't working.",
+    forkSub: "Something specific is broken or stuck.",
+    branchQ: "What's bugging you most?",
+    options: [
+      { id: 'o1', label: 'Not enough people know we exist', echo: "No one knows you exist, which is rarely a quality problem and almost always a reach and positioning problem you can fix faster than you think." },
+      { id: 'o2', label: "People show up but don't convert", echo: "People are showing up but not converting, which usually means it is not a traffic problem, but more so what happens after they arrive." },
+      { id: 'o3', label: 'People try us once and vanish', echo: "People try you once and vanish, which points to past acquisition and their first experience (and whether anything pulls them back)." },
+      { id: 'o4', label: "Nobody's spreading the word about our brand or product", echo: "Nobody is spreading the word, which signals the moment worth talking about hasn't been built yet, not that your users don't care." },
+      { id: 'o5', label: 'We launched and it landed kind of flat', echo: "You launched and it landed flat, which is almost never the idea and almost always the setup around it. Something in your strategy or execution was off." },
+      { id: 'o6', label: "Our team, partners, or creators aren't driving results for us", echo: "Your team, partners, or creators aren't driving results, which usually traces to their fit, the brief, or the incentive structure. Not to lack of effort." },
+    ],
+    body: "We'll trace where it's actually breaking, separate the real cause from the symptom, and show you the single highest-impact fix, plus a couple of experiments to prove it out this month.",
+    takeaways: [
+      "a real diagnosis of the cause, not the symptom",
+      "the one fix to make first",
+      "two or three specific experiments to run right away",
+    ],
+  },
+  full: {
+    forkLabel: "We're doing a lot, but I'm not sure it's working.",
+    forkSub: "Activity, maybe a team, but no clarity it's paying off.",
+    branchQ: "When you look at your marketing, what's true?",
+    options: [
+      { id: 'u1', label: "We do a lot, but I can't tell what's working", echo: "You're active, but can't tell what's working. That's the most expensive problem in marketing, because you can't fix or defend what you can't measure." },
+      { id: 'u2', label: "The team's busy but there's no rhyme or reason to it", echo: "Your team is busy but there's no system, which means output is high, impact is low, and the fix is structural." },
+      { id: 'u3', label: 'Brand and growth pull in different directions', echo: "Brand and growth are pulling in different directions, which quietly taxes every campaign you run until someone aligns them under one integrated strategy." },
+      { id: 'u4', label: "I don't know what we should be doing / measuring", echo: "You're not sure what you should be doing or measuring, and the wrong scoreboard is making good things look bad and bad things look good. The result is confusion." },
+      { id: 'u5', label: 'I think we need senior guidance', echo: "You think you need a more senior point of view, and the fact that you can feel the gap is usually the strongest signal that you're right." },
+    ],
+    body: "We'll look across everything you're running, find what's quietly working, what's leaking budget, and where the real gap is. Usually it's senior judgment and a system, not more hands.",
+    takeaways: [
+      "an honest read on what's working versus wasting spend",
+      "the top structural gaps holding you back",
+      "a prioritized list of what to fix, in order, sized and prized based on your business reality and economics",
+    ],
+  },
+};
+
+const ENTRY_LABELS = { foundation: 'Foundation', focused: 'Focused', full: 'Full' };
+const INDUSTRIES = ['Tech', 'Entertainment', 'Digital Media', 'Streaming', 'Creator Economy', 'Music', 'Gaming', 'Sports', 'Something else'];
+const STAGES = ['Pre-seed', 'Seed', 'Series A', 'Series B', 'Series C+'];
+const entries = ['foundation', 'focused', 'full'];
+---
+
+<BaseLayout title="Free Marketing Teardown" description="Answer a few quick questions and see where your growth is leaking, and what we'd fix first. About 90 seconds. Free, from Field Vision.">
+  <main class="td">
+    <a class="td-logo" href="/" aria-label="Field Vision home">FIELD<br/>VISION</a>
+
+    <!-- Progress (question phase only) -->
+    <div class="td-progress" id="tdProgress" aria-hidden="true"><span id="tdProgressBar"></span></div>
+
+    <div class="td-stage" aria-live="polite">
+
+      <!-- SCREEN 0: HOOK -->
+      <section class="screen is-active" data-screen="hook">
+        <p class="td-eyebrow">Field Vision</p>
+        <h1 class="td-h1" data-focus tabindex="-1">Get a free marketing teardown.</h1>
+        <p class="td-sub">Answer a few quick questions and we'll show you where the opportunity is. 90 seconds. That's it.</p>
+        <button class="btn-brutal td-cta" data-action="start">Start &rarr;</button>
+        <p class="td-micro">2 FREE slots per month</p>
+      </section>
+
+      <!-- SCREEN 1: FORK -->
+      <section class="screen" data-screen="fork">
+        <h2 class="td-q" data-focus tabindex="-1">Where are you with marketing right now?</h2>
+        <div class="td-options">
+          {entries.map((key) => (
+            <button class="opt-card" data-action="entry" data-entry={key}>
+              <span class="opt-label">{FLOW[key].forkLabel}</span>
+              <span class="opt-sub">{FLOW[key].forkSub}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <!-- SCREEN 2: BRANCH -->
+      <section class="screen" data-screen="branch">
+        <button class="td-back" data-action="back" data-to="fork">&larr; Back</button>
+        <h2 class="td-q" data-focus tabindex="-1" id="branchQ"></h2>
+        <div class="td-options">
+          {entries.map((key) => (
+            <div class="branch-group" data-branch={key} hidden>
+              {FLOW[key].options.map((opt) => (
+                <button class="opt-card opt-card--compact" data-action="branch" data-entry={key} data-opt={opt.id}>
+                  <span class="opt-label">{opt.label}</span>
+                </button>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- SCREEN 3: ABOUT YOU -->
+      <section class="screen" data-screen="about">
+        <button class="td-back" data-action="back" data-to="branch">&larr; Back</button>
+        <h2 class="td-q" data-focus tabindex="-1">Last thing. Tell us about you.</h2>
+
+        <p class="td-chip-label">What you do</p>
+        <div class="td-chips" data-group="industry">
+          {INDUSTRIES.map((v) => (
+            <button class="chip" data-action="industry" data-value={v}>{v}</button>
+          ))}
+        </div>
+
+        <p class="td-chip-label">Stage</p>
+        <div class="td-chips" data-group="stage">
+          {STAGES.map((v) => (
+            <button class="chip" data-action="stage" data-value={v}>{v}</button>
+          ))}
+        </div>
+
+        <button class="btn-brutal td-cta" data-action="reveal" id="aboutContinue" disabled>See my teardown &rarr;</button>
+      </section>
+
+      <!-- SCREEN 4: REVEAL -->
+      <section class="screen" data-screen="reveal">
+        <p class="td-eyebrow">Your teardown</p>
+        <p class="reveal-echo" data-focus tabindex="-1" id="revealEcho"></p>
+        <p class="reveal-body" id="revealBody"></p>
+        <p class="reveal-walk">Walk away with:</p>
+        <ul class="reveal-list" id="revealList">
+          <li></li><li></li><li></li>
+        </ul>
+        <p class="td-terms">Free. 30 minutes. You keep everything.</p>
+        <button class="btn-brutal td-cta" data-action="toSignup">I want this &rarr;</button>
+      </section>
+
+      <!-- SCREEN 5: SIGNUP -->
+      <section class="screen" data-screen="signup">
+        <h2 class="td-q" data-focus tabindex="-1">Let's get it scheduled.</h2>
+        <p class="td-sub">Drop your details and we'll reach out to book your teardown. We keep these limited to 2 per month so we can go deep, not wide.</p>
+        <form id="tdForm" class="td-form" novalidate>
+          <input type="text" name="firstName" placeholder="First name" autocomplete="given-name" required class="td-input" />
+          <input type="email" name="email" placeholder="Work email" autocomplete="email" required class="td-input" />
+          <input type="text" name="website" placeholder="Company website" autocomplete="url" class="td-input" />
+          <textarea name="note" rows="3" placeholder="Anything we should know? (optional)" class="td-input td-textarea"></textarea>
+          <!-- honeypot -->
+          <input type="text" name="_honey" class="td-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <p class="td-error" id="tdError" hidden>Please add your name and a valid work email.</p>
+          <button type="submit" class="btn-brutal td-cta" id="tdSubmit">Claim my teardown &rarr;</button>
+        </form>
+      </section>
+
+      <!-- SCREEN 6: CONFIRMATION -->
+      <section class="screen" data-screen="done">
+        <p class="td-eyebrow">You're in</p>
+        <h2 class="td-h1" data-focus tabindex="-1">You're in.</h2>
+        <p class="td-sub">We'll be in touch within one business day. Keep an eye on your inbox.</p>
+
+        <div class="done-section">
+          <p class="done-lead">Here's how we think about all things growth</p>
+          <div class="done-posts">
+            {recentPosts.map((post) => (
+              <a class="done-post" href={post.href}>
+                <span class="done-cat">{post.category}</span>
+                <span class="done-title">{post.title}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="done-section">
+          <p class="done-lead">Real examples of our work and impact</p>
+          <a class="btn-brutal-outline td-cta" href="/case-studies/">See our case studies &rarr;</a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Fallback form: guarantees email delivery if AJAX fails. Submits to the same proven endpoint as the contact form. -->
+    <form id="tdFallback" action="https://formsubmit.co/hampian@fieldvisiongroup.com" method="POST" class="td-honey">
+      <input type="hidden" name="_subject" value="New Teardown Lead from fieldvisiongroup.com" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="https://fieldvisiongroup.com/thank-you/" />
+      <input type="hidden" name="firstName" /><input type="hidden" name="email" /><input type="hidden" name="website" /><input type="hidden" name="note" />
+      <input type="hidden" name="entry_point" /><input type="hidden" name="their_situation" /><input type="hidden" name="industry" /><input type="hidden" name="stage" />
+    </form>
+  </main>
+
+  <script define:vars={{ FLOW, ENTRY_LABELS }}>
+    (function () {
+      const ENDPOINT = 'https://formsubmit.co/ajax/hampian@fieldvisiongroup.com';
+      const state = { entry: null, opt: null, industry: null, stage: null };
+      const STEP_PROGRESS = { fork: 33, branch: 66, about: 100 };
+      const screens = Array.from(document.querySelectorAll('.screen'));
+      const progress = document.getElementById('tdProgress');
+      const progressBar = document.getElementById('tdProgressBar');
+
+      function ev(name, params) {
+        try {
+          if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+          else { window.dataLayer = window.dataLayer || []; window.dataLayer.push(['event', name, params || {}]); }
+        } catch (e) {}
+      }
+
+      function show(key) {
+        screens.forEach((s) => s.classList.toggle('is-active', s.dataset.screen === key));
+        if (STEP_PROGRESS[key]) { progress.style.visibility = 'visible'; progressBar.style.width = STEP_PROGRESS[key] + '%'; }
+        else { progress.style.visibility = 'hidden'; }
+        const active = document.querySelector('.screen.is-active');
+        const f = active && active.querySelector('[data-focus]');
+        if (f) { try { f.focus({ preventScroll: true }); } catch (e) { f.focus(); } }
+        try { window.scrollTo({ top: 0, behavior: 'instant' }); } catch (e) { window.scrollTo(0, 0); }
+        ev('teardown_screen_view', { step: key });
+      }
+
+      function lowerFirst(s) { return s.charAt(0).toLowerCase() + s.slice(1); }
+
+      function renderReveal() {
+        const f = FLOW[state.entry];
+        const opt = f.options.find((o) => o.id === state.opt);
+        document.getElementById('revealEcho').textContent = opt ? opt.echo : '';
+        let body = f.body;
+        if (state.industry && state.stage && state.industry !== 'Something else') {
+          body = 'For a ' + state.stage + ' ' + state.industry + ' company, ' + lowerFirst(f.body);
+        }
+        document.getElementById('revealBody').textContent = body;
+        const li = document.querySelectorAll('#revealList li');
+        f.takeaways.forEach((t, i) => { if (li[i]) li[i].textContent = t; });
+      }
+
+      function maybeEnableContinue() {
+        document.getElementById('aboutContinue').disabled = !(state.industry && state.stage);
+      }
+
+      // Delegated clicks
+      document.querySelector('.td').addEventListener('click', function (e) {
+        const el = e.target.closest('[data-action]');
+        if (!el) return;
+        const action = el.dataset.action;
+
+        if (action === 'start') { ev('teardown_start', {}); show('fork'); }
+
+        else if (action === 'entry') {
+          state.entry = el.dataset.entry; state.opt = null;
+          ev('teardown_entry_select', { entry: ENTRY_LABELS[state.entry] });
+          document.getElementById('branchQ').textContent = FLOW[state.entry].branchQ;
+          document.querySelectorAll('.branch-group').forEach((g) => { g.hidden = (g.dataset.branch !== state.entry); });
+          show('branch');
+        }
+
+        else if (action === 'branch') {
+          state.opt = el.dataset.opt;
+          const opt = FLOW[state.entry].options.find((o) => o.id === state.opt);
+          ev('teardown_branch_select', { entry: ENTRY_LABELS[state.entry], choice: opt ? opt.label : state.opt });
+          show('about');
+        }
+
+        else if (action === 'industry') {
+          state.industry = el.dataset.value;
+          el.parentElement.querySelectorAll('.chip').forEach((c) => c.classList.toggle('is-selected', c === el));
+          maybeEnableContinue();
+        }
+
+        else if (action === 'stage') {
+          state.stage = el.dataset.value;
+          el.parentElement.querySelectorAll('.chip').forEach((c) => c.classList.toggle('is-selected', c === el));
+          maybeEnableContinue();
+        }
+
+        else if (action === 'reveal') {
+          ev('teardown_about_complete', { industry: state.industry, stage: state.stage });
+          renderReveal();
+          ev('teardown_reveal_view', { entry: ENTRY_LABELS[state.entry] });
+          show('reveal');
+        }
+
+        else if (action === 'toSignup') { show('signup'); }
+
+        else if (action === 'back') { show(el.dataset.to); }
+      });
+
+      // Submit
+      const form = document.getElementById('tdForm');
+      const errEl = document.getElementById('tdError');
+      const submitBtn = document.getElementById('tdSubmit');
+
+      function attribution() {
+        const a = {};
+        try {
+          const utm = sessionStorage.getItem('fv_utm');
+          if (utm) Object.assign(a, JSON.parse(utm));
+          a.landing_page = sessionStorage.getItem('fv_landing') || '';
+          a.referrer = sessionStorage.getItem('fv_referrer') || 'direct';
+        } catch (e) {}
+        return a;
+      }
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        if (form._honey.value) return; // bot trap
+        const firstName = form.firstName.value.trim();
+        const email = form.email.value.trim();
+        const okEmail = /.+@.+\..+/.test(email);
+        if (!firstName || !okEmail) { errEl.hidden = false; return; }
+        errEl.hidden = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        const opt = FLOW[state.entry] ? FLOW[state.entry].options.find((o) => o.id === state.opt) : null;
+        const payload = {
+          _subject: 'New Teardown Lead from fieldvisiongroup.com',
+          _template: 'table',
+          firstName: firstName,
+          email: email,
+          website: form.website.value.trim(),
+          note: form.note.value.trim(),
+          entry_point: state.entry ? ENTRY_LABELS[state.entry] : '',
+          their_situation: opt ? opt.label : '',
+          industry: state.industry || '',
+          stage: state.stage || '',
+        };
+        Object.assign(payload, attribution());
+
+        function fireLead() {
+          ev('generate_lead', Object.assign({ form_name: 'teardown', conversion_type: 'teardown_signup', entry_point: payload.entry_point, industry: payload.industry, stage: payload.stage }, attribution()));
+          ev('teardown_signup', { entry: payload.entry_point });
+        }
+
+        try {
+          const res = await fetch(ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) throw new Error('bad status ' + res.status);
+          fireLead();
+          show('done');
+        } catch (err) {
+          // Fallback: submit the classic form (guaranteed email, redirects to /thank-you)
+          fireLead();
+          const fb = document.getElementById('tdFallback');
+          fb.firstName.value = payload.firstName; fb.email.value = payload.email;
+          fb.website.value = payload.website; fb.note.value = payload.note;
+          fb.entry_point.value = payload.entry_point; fb.their_situation.value = payload.their_situation;
+          fb.industry.value = payload.industry; fb.stage.value = payload.stage;
+          fb.submit();
+        }
+      });
+
+      // Keyboard: Enter/Space on option cards and chips
+      document.querySelectorAll('.opt-card, .chip').forEach((b) => {
+        b.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); b.click(); }
+        });
+      });
+    })();
+  </script>
+
+  <style>
+    .td {
+      min-height: 100vh;
+      background: var(--offwhite);
+      padding: 28px 20px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .td-logo {
+      font-family: 'Anton', sans-serif;
+      font-size: 1rem;
+      line-height: 0.9;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .td-progress {
+      width: 100%;
+      max-width: 560px;
+      height: 8px;
+      background: rgba(33,54,33,0.12);
+      border: 2px solid var(--ink);
+      margin-bottom: 30px;
+      visibility: hidden;
+    }
+    .td-progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--green-lt);
+      transition: width 0.4s cubic-bezier(.4,0,.2,1);
+    }
+    .td-stage { width: 100%; max-width: 560px; }
+
+    .screen { display: none; }
+    .screen.is-active { display: block; animation: tdIn 0.35s cubic-bezier(.4,0,.2,1); }
+    @keyframes tdIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      .screen.is-active { animation: none; }
+      .td-progress span { transition: none; }
+    }
+
+    .td-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--ink); margin-bottom: 14px;
+    }
+    .td-h1 {
+      font-family: 'Anton', sans-serif; font-weight: 400;
+      font-size: clamp(2.1rem, 7vw, 3rem); line-height: 1.02;
+      color: var(--ink); text-transform: uppercase; outline: none;
+    }
+    .td-q {
+      font-family: 'Anton', sans-serif; font-weight: 400;
+      font-size: clamp(1.5rem, 5.2vw, 2.1rem); line-height: 1.08;
+      color: var(--ink); outline: none; margin-bottom: 22px;
+    }
+    .td-sub {
+      font-family: 'Satoshi', sans-serif; font-size: 1.08rem; line-height: 1.55;
+      color: var(--muted); margin-top: 14px; max-width: 460px;
+    }
+    .td-micro {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); margin-top: 18px;
+    }
+    .td-cta { margin-top: 26px; }
+    .td-h1 + .td-sub { margin-top: 16px; }
+
+    .td-options { display: flex; flex-direction: column; gap: 14px; }
+    .opt-card {
+      display: flex; flex-direction: column; gap: 6px;
+      width: 100%; text-align: left; cursor: pointer;
+      background: var(--paper); color: var(--ink);
+      border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
+      padding: 18px 20px; font-family: 'Satoshi', sans-serif;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .opt-card:hover, .opt-card:focus-visible {
+      transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--ink);
+      background: var(--green-pale); outline: none;
+    }
+    .opt-card--compact { padding: 16px 18px; }
+    .opt-label { font-size: 1.06rem; font-weight: 700; line-height: 1.25; }
+    .opt-sub { font-size: 0.92rem; color: var(--muted); line-height: 1.4; }
+
+    .td-back {
+      background: none; border: none; cursor: pointer; padding: 0; margin-bottom: 16px;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+    }
+    .td-back:hover { color: var(--ink); }
+
+    .td-chip-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--green-dk);
+      margin: 22px 0 12px;
+    }
+    .td-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      cursor: pointer; background: var(--paper); color: var(--ink);
+      border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
+      padding: 10px 16px; font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 0.96rem;
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    }
+    .chip:hover, .chip:focus-visible { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--ink); outline: none; }
+    .chip.is-selected { background: var(--green-lt); }
+    #aboutContinue:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    .reveal-echo {
+      font-family: 'Anton', sans-serif; font-weight: 400;
+      font-size: clamp(1.5rem, 5.4vw, 2.05rem); line-height: 1.12;
+      color: var(--ink); outline: none; margin-bottom: 18px;
+    }
+    .reveal-body { font-family: 'Satoshi', sans-serif; font-size: 1.1rem; line-height: 1.6; color: var(--ink); }
+    .reveal-walk {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--green-dk); margin: 24px 0 12px;
+    }
+    .reveal-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .reveal-list li {
+      position: relative; padding-left: 28px;
+      font-family: 'Satoshi', sans-serif; font-size: 1.02rem; line-height: 1.5; color: var(--ink);
+    }
+    .reveal-list li::before {
+      content: ''; position: absolute; left: 0; top: 7px;
+      width: 12px; height: 12px; background: var(--green-lt); border: 2px solid var(--ink);
+    }
+    .td-terms {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); margin-top: 26px;
+    }
+
+    .td-form { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+    .td-input {
+      width: 100%; padding: 14px 16px; background: var(--paper); color: var(--ink);
+      border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
+      font-family: 'Satoshi', sans-serif; font-size: 1rem; outline: none;
+    }
+    .td-input:focus { background: var(--green-pale); }
+    .td-input::placeholder { color: #8a988a; }
+    .td-textarea { resize: vertical; min-height: 84px; }
+    .td-honey { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .td-error { color: #b3261e; font-family: 'Satoshi', sans-serif; font-size: 0.92rem; font-weight: 600; }
+
+    .done-section { margin-top: 30px; }
+    .done-lead {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--green-dk); margin-bottom: 14px;
+    }
+    .done-posts { display: flex; flex-direction: column; gap: 12px; }
+    .done-post {
+      display: flex; flex-direction: column; gap: 5px; text-decoration: none;
+      background: var(--ink); color: var(--offwhite);
+      border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
+      padding: 14px 18px; transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .done-post:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--green-dk); }
+    .done-cat {
+      font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--green-lt);
+    }
+    .done-title { font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 1.02rem; line-height: 1.3; }
+
+    @media (min-width: 620px) {
+      .td { padding-top: 44px; }
+      .opt-card--compact { padding: 18px 20px; }
+    }
+  </style>
+</BaseLayout>
