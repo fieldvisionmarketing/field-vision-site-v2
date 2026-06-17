@@ -21,14 +21,24 @@ const siteUrl = 'https://fieldvisiongroup.com';
 const slug = industry.id.replace(/\.md$/, '');
 const pageUrl = `${siteUrl}/industries/${slug}/`;
 
+/* Chip helpers (R10/R19) — trailing punctuation stays inside the chip */
 function chipLastWord(text, chipClass = 'hl-green') {
   const words = text.trim().split(/\s+/);
   if (words.length <= 1) return text;
   const last = words.pop();
   return words.join(' ') + ' <span class="' + chipClass + '">' + last + '</span>';
 }
+function chipCtaWord(text, chipClass = 'hl-green') {
+  const match = text.match(/^(.+?)\s+(\S+?)([?!.]?)$/);
+  if (!match) return text;
+  const [, prefix, lastWord, punct] = match;
+  return prefix + ' <span class="' + chipClass + '">' + lastWord + punct + '</span>';
+}
+
 const heroTitle = chipLastWord(d.h1);
-const ctaTitle = chipLastWord(d.ctaHeadline || 'Ready to Build Your Growth Engine?');
+const entityTitle = chipLastWord(d.entityHeadline || 'The Field Vision Edge');
+const problemTitle = chipLastWord(d.problemHeadline || 'The Challenge');
+const ctaTitle = chipCtaWord(d.ctaHeadline || 'Ready to Build Your Growth Engine?');
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -52,11 +62,7 @@ const faqSchema = d.faqs?.length ? {
 } : null;
 ---
 
-<BaseLayout
-  title={d.title}
-  description={d.description}
-  ogImage={d.ogImage}
->
+<BaseLayout title={d.title} description={d.description} ogImage={d.ogImage}>
   <Header slot="header" />
 
   <Fragment slot="head">
@@ -64,7 +70,7 @@ const faqSchema = d.faqs?.length ? {
     {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
   </Fragment>
 
-  <!-- HERO -->
+  <!-- ═══ HERO ═══ -->
   <section class="svcpg-hero">
     <div class="svcpg-hero-inner">
       <div class="svcpg-hero-text">
@@ -72,64 +78,135 @@ const faqSchema = d.faqs?.length ? {
         <p class="svcpg-subtitle">{d.subtitle}</p>
         <a href="/contact/" class="btn-brutal">Book a Call →</a>
       </div>
+      {d.sidebar?.length > 0 && (
+        <aside class="svcpg-sidebar reveal">
+          <div class="svcpg-sidebar-header">Engagement Snapshot</div>
+          <div class="svcpg-sidebar-body">
+            {d.sidebar.map((item) => (
+              <div class="svcpg-sidebar-row">
+                <span class="svcpg-sidebar-key">{item.label}</span>
+                <span class="svcpg-sidebar-val">{item.value}</span>
+              </div>
+            ))}
+          </div>
+        </aside>
+      )}
     </div>
   </section>
 
-  <!-- ENTITY BLOCK (GEO-liftable prose) -->
-  <section class="ind-entity reveal">
-    <div class="ind-entity-inner">
-      <p set:html={d.entityBlock} />
+  <!-- ═══ ENTITY BLOCK (GEO-liftable prose) ═══ -->
+  <section class="svcpg-ps reveal">
+    <div class="svcpg-ps-inner">
+      <span class="eyebrow">{d.entityEyebrow || 'The Field Vision Edge'}</span>
+      <h2 set:html={entityTitle} />
+      <p class="ind-lead" set:html={d.entityBlock} />
     </div>
   </section>
 
-  <!-- PROOF -->
+  <!-- ═══ PROOF ═══ -->
   {d.clients?.length > 0 && (
-    <section class="ind-proof reveal">
-      <div class="ind-proof-inner">
+    <section class="svcpg-del reveal">
+      <div class="svcpg-del-inner">
         <span class="eyebrow">Proof, Not Promises</span>
         <h2><span class="hl-cream">Where We've Done It</span></h2>
         {d.proofIntro && <p class="ind-proof-intro">{d.proofIntro}</p>}
-        <div class="ind-proof-grid">
-          {d.clients.map((c) => {
-            const inner = (
-              <>
+        <div class="svcpg-del-grid">
+          {d.clients.map((c) => (
+            <div class="svcpg-del-card ind-proof-card">
+              <span class="svcpg-del-icon">
                 <img
                   src={c.logo || `https://www.google.com/s2/favicons?domain=${c.domain}&sz=128`}
                   alt={`${c.name} logo`}
                   class="ind-proof-logo"
                   loading="lazy"
                 />
-                <span class="ind-proof-name">{c.name}</span>
-                {c.note && <span class="ind-proof-note">{c.note}</span>}
-                {c.caseStudy && <span class="ind-proof-link">Read case study →</span>}
-              </>
-            );
-            return c.caseStudy
-              ? <a href={c.caseStudy} class="ind-proof-card ind-proof-card--link">{inner}</a>
-              : <div class="ind-proof-card">{inner}</div>;
-          })}
+              </span>
+              <h3>{c.name}</h3>
+              {c.note && <p>{c.note}</p>}
+              {c.caseStudy && (
+                <a href={c.caseStudy} class="ind-proof-cta">Read case study →</a>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
   )}
 
-  <!-- ANGLE / WHY -->
-  {d.angleBody && (
+  <!-- ═══ PROBLEM / SOLUTION ═══ -->
+  {(d.oldWay?.length > 0 || d.newWay?.length > 0) && (
     <section class="svcpg-ps reveal">
       <div class="svcpg-ps-inner">
-        <span class="eyebrow">{d.angleEyebrow || 'Why Field Vision'}</span>
-        <h2 set:html={chipLastWord(d.angleHeadline || 'Built For This')} />
-        <p class="svcpg-ps-intro">{d.angleBody}</p>
-        {d.anglePoints?.length > 0 && (
-          <ul class="ind-angle-points">
-            {d.anglePoints.map((pt) => <li><span class="who-check">✓</span> {pt}</li>)}
-          </ul>
-        )}
+        <span class="eyebrow">{d.problemEyebrow || "Why Generic Marketing Falls Short"}</span>
+        <h2 set:html={problemTitle} />
+        {d.problemIntro && <p class="svcpg-ps-intro">{d.problemIntro}</p>}
+        <div class="svcpg-ps-grid">
+          <div class="svcpg-ps-card svcpg-ps-old">
+            <div class="svcpg-ps-card-header svcpg-ps-card-header--old">{d.oldWayLabel || 'A Generalist Marketer'}</div>
+            <div class="svcpg-ps-card-body">
+              <ul>
+                {d.oldWay?.map((item) => <li><span class="ps-x">✗</span> {item}</li>)}
+              </ul>
+            </div>
+          </div>
+          <div class="svcpg-ps-card svcpg-ps-new">
+            <div class="svcpg-ps-card-header svcpg-ps-card-header--new">With Field Vision</div>
+            <div class="svcpg-ps-card-body">
+              <ul>
+                {d.newWay?.map((item) => <li><span class="ps-check">✓</span> {item}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )}
 
-  <!-- FAQ -->
+  <!-- ═══ DELIVERABLES ═══ -->
+  {d.deliverables?.length > 0 && (
+    <section class="svcpg-del reveal">
+      <div class="svcpg-del-inner">
+        <span class="eyebrow">{d.delEyebrow || 'What We Build'}</span>
+        <h2><span class="hl-cream">{d.delHeadline || 'What We Do'}</span></h2>
+        <div class="svcpg-del-grid">
+          {d.deliverables.map((del) => (
+            <div class="svcpg-del-card">
+              <span class="svcpg-del-icon">{del.icon}</span>
+              <h3>{del.title}</h3>
+              <p>{del.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══ WHO THIS IS FOR ═══ -->
+  {d.whoTriggers?.length > 0 && (
+    <section class="svcpg-who reveal">
+      <div class="svcpg-who-inner">
+        <div class="svcpg-who-main">
+          <span class="eyebrow">Is This You?</span>
+          <h2>Who This Is <span class="hl-cream">For</span></h2>
+          {d.whoIntro && <p class="svcpg-who-intro">{d.whoIntro}</p>}
+          <ul class="svcpg-who-triggers">
+            {d.whoTriggers.map((t) => (
+              <li><span class="who-check">✓</span> {t}</li>
+            ))}
+          </ul>
+        </div>
+        <aside class="svcpg-who-cta-card">
+          <div class="svcpg-who-cta-header">{d.whoCta?.headline || 'Ready to get started?'}</div>
+          <div class="svcpg-who-cta-body">
+            <p>{d.whoCta?.body || "Book a 30-minute discovery call. We'll discuss where you are, where you want to go, and whether Field Vision is the right fit."}</p>
+            <a href="/contact/" class="btn-brutal">Let's Talk →</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══ FAQ ═══ -->
   {d.faqs?.length > 0 && (
     <section class="faq-section svcpg-faq reveal">
       <div class="faq-section-inner">
@@ -147,25 +224,7 @@ const faqSchema = d.faqs?.length ? {
     </section>
   )}
 
-  <!-- RELATED / INTERNAL LINKS -->
-  {d.relatedLinks?.length > 0 && (
-    <section class="ind-related reveal">
-      <div class="ind-related-inner">
-        <span class="eyebrow">Go Deeper</span>
-        <h2>Related <span class="hl-green">Reading</span></h2>
-        <div class="ind-related-grid">
-          {d.relatedLinks.map((l) => (
-            <a href={l.href} class="ind-related-card">
-              <span class="ind-related-label">{l.label} →</span>
-              {l.desc && <span class="ind-related-desc">{l.desc}</span>}
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- FINAL CTA -->
+  <!-- ═══ FINAL CTA ═══ -->
   <section class="svcpg-final-cta reveal">
     <div class="svcpg-final-cta-inner">
       <h2 set:html={ctaTitle} />
@@ -178,27 +237,51 @@ const faqSchema = d.faqs?.length ? {
 </BaseLayout>
 
 <style>
-  .ind-entity { padding: 56px 24px; border-bottom: 3px solid var(--ink, #111); }
-  .ind-entity-inner { max-width: 880px; margin: 0 auto; }
-  .ind-entity-inner p { font-size: clamp(1.15rem, 2.2vw, 1.5rem); line-height: 1.6; font-weight: 500; }
-  .ind-proof { padding: 72px 24px; }
-  .ind-proof-inner { max-width: 1080px; margin: 0 auto; }
-  .ind-proof-intro { max-width: 680px; margin: 8px 0 36px; font-size: 1.1rem; line-height: 1.6; }
-  .ind-proof-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
-  .ind-proof-card { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 20px; border: 3px solid var(--ink, #111); background: #fff; text-decoration: none; color: inherit; }
-  .ind-proof-card--link { transition: transform 0.15s, box-shadow 0.15s; }
-  .ind-proof-card--link:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink, #111); }
-  .ind-proof-logo { width: 40px; height: 40px; object-fit: contain; }
-  .ind-proof-name { font-weight: 700; font-size: 1.05rem; }
-  .ind-proof-note { font-size: 0.9rem; line-height: 1.45; opacity: 0.8; }
-  .ind-proof-link { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-top: auto; }
-  .ind-angle-points { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
-  .ind-angle-points li { font-size: 1.05rem; line-height: 1.5; }
-  .ind-related { padding: 72px 24px; }
-  .ind-related-inner { max-width: 1080px; margin: 0 auto; }
-  .ind-related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 28px; }
-  .ind-related-card { display: flex; flex-direction: column; gap: 8px; padding: 22px; border: 3px solid var(--ink, #111); background: #fff; text-decoration: none; color: inherit; transition: transform 0.15s, box-shadow 0.15s; }
-  .ind-related-card:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink, #111); }
-  .ind-related-label { font-weight: 800; font-size: 1.1rem; }
-  .ind-related-desc { font-size: 0.95rem; line-height: 1.5; opacity: 0.85; }
+  /* Entity lead — GEO-liftable paragraph, canonical tokens (R5) */
+  .ind-lead {
+    font-size: clamp(17px, 1.7vw, 21px);
+    line-height: 1.6;
+    color: var(--ink);
+    font-weight: 450;
+    max-width: 820px;
+  }
+  .ind-lead :global(a) {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  .ind-lead :global(a:hover) { color: var(--green-dk); }
+  .ind-proof-intro {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    font-weight: 450;
+    max-width: 720px;
+    margin: 0 0 40px;
+  }
+  /* Proof card — informational (R3 cream-header via .svcpg-del-icon), logo swap */
+  .ind-proof-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+  }
+  .ind-proof-card { display: flex; flex-direction: column; }
+  .ind-proof-card h3 { padding-bottom: 8px; }
+  .ind-proof-card p { flex: 1 0 auto; }
+  /* Card link (R6): JetBrains Mono 11px/700 uppercase, 4px top-border separator */
+  .ind-proof-cta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 14px 24px;
+    border-top: 4px solid var(--ink);
+    transition: color 0.15s, background 0.15s;
+  }
+  .ind-proof-cta:hover { color: var(--green-dk); background: var(--green-pale); }
 </style>
