@@ -88,16 +88,16 @@ const entries = ['foundation', 'focused', 'full'];
 
       <!-- SCREEN 0: HOOK -->
       <section class="screen is-active" data-screen="hook">
-        <p class="td-eyebrow">Field Vision</p>
-        <h1 class="td-h1" data-focus tabindex="-1">Get a free marketing teardown.</h1>
-        <p class="td-sub">Answer a few quick questions and we'll show you where the opportunity is. 90 seconds. That's it.</p>
+        <span class="eyebrow">Field Vision</span>
+        <h1 class="td-h1" data-focus tabindex="-1">Get a free marketing <span class="hl-chip">teardown</span></h1>
+        <p class="td-sub">Answer a few quick questions and we'll show you where the <span class="highlight">opportunity</span> is. 90 seconds. That's it.</p>
         <button class="btn-brutal td-cta" data-action="start">Start &rarr;</button>
-        <p class="td-micro">2 FREE slots per month</p>
+        <p class="td-micro">2 free slots per month</p>
       </section>
 
       <!-- SCREEN 1: FORK -->
       <section class="screen" data-screen="fork">
-        <h2 class="td-q" data-focus tabindex="-1">Where are you with marketing right now?</h2>
+        <h2 class="td-q" data-focus tabindex="-1">Where are you with <span class="highlight">marketing</span> right now?</h2>
         <div class="td-options">
           {entries.map((key) => (
             <button class="opt-card" data-action="entry" data-entry={key}>
@@ -128,7 +128,7 @@ const entries = ['foundation', 'focused', 'full'];
       <!-- SCREEN 3: ABOUT YOU -->
       <section class="screen" data-screen="about">
         <button class="td-back" data-action="back" data-to="branch">&larr; Back</button>
-        <h2 class="td-q" data-focus tabindex="-1">Last thing. Tell us about you.</h2>
+        <h2 class="td-q" data-focus tabindex="-1">Last thing. Tell us about <span class="highlight">you</span>.</h2>
 
         <p class="td-chip-label">What you do</p>
         <div class="td-chips" data-group="industry">
@@ -149,20 +149,22 @@ const entries = ['foundation', 'focused', 'full'];
 
       <!-- SCREEN 4: REVEAL -->
       <section class="screen" data-screen="reveal">
-        <p class="td-eyebrow">Your teardown</p>
-        <p class="reveal-echo" data-focus tabindex="-1" id="revealEcho"></p>
-        <p class="reveal-body" id="revealBody"></p>
-        <p class="reveal-walk">Walk away with:</p>
-        <ul class="reveal-list" id="revealList">
-          <li></li><li></li><li></li>
-        </ul>
-        <p class="td-terms">Free. 30 minutes. You keep everything.</p>
-        <button class="btn-brutal td-cta" data-action="toSignup">I want this &rarr;</button>
+        <div class="reveal-card">
+          <span class="eyebrow">Your teardown</span>
+          <p class="reveal-echo" data-focus tabindex="-1" id="revealEcho"></p>
+          <p class="reveal-body" id="revealBody"></p>
+          <p class="reveal-walk">Walk away with</p>
+          <ul class="reveal-list" id="revealList">
+            <li></li><li></li><li></li>
+          </ul>
+          <p class="td-terms">Free. 30 minutes. You keep everything.</p>
+          <button class="btn-brutal td-cta" data-action="toSignup">I want this &rarr;</button>
+        </div>
       </section>
 
       <!-- SCREEN 5: SIGNUP -->
       <section class="screen" data-screen="signup">
-        <h2 class="td-q" data-focus tabindex="-1">Let's get it scheduled.</h2>
+        <h2 class="td-q" data-focus tabindex="-1">Let's get it <span class="highlight">scheduled</span>.</h2>
         <p class="td-sub">Drop your details and we'll reach out to book your teardown. We keep these limited to 2 per month so we can go deep, not wide.</p>
         <form id="tdForm" class="td-form" novalidate>
           <input type="text" name="firstName" placeholder="First name" autocomplete="given-name" required class="td-input" />
@@ -178,8 +180,8 @@ const entries = ['foundation', 'focused', 'full'];
 
       <!-- SCREEN 6: CONFIRMATION -->
       <section class="screen" data-screen="done">
-        <p class="td-eyebrow">You're in</p>
-        <h2 class="td-h1" data-focus tabindex="-1">You're in.</h2>
+        <span class="eyebrow">Confirmed</span>
+        <h2 class="td-h1" data-focus tabindex="-1">You're <span class="hl-chip">in</span>.</h2>
         <p class="td-sub">We'll be in touch within one business day. Keep an eye on your inbox.</p>
 
         <div class="done-section">
@@ -579,5 +581,40 @@ const entries = ['foundation', 'focused', 'full'];
     @media (min-width: 640px) {
       .td { padding-top: 60px; }
     }
+
+    .hl-chip {
+      background: var(--green-lt); color: var(--ink);
+      display: inline-block; padding: 2px 14px; margin: 4px 0;
+      transform: rotate(-1.5deg);
+      border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
+    }
+    .td-h1 { font-size: clamp(2.9rem, 9.5vw, 4.6rem); line-height: 1.06; }
+    .td-q { font-size: clamp(2.05rem, 6.8vw, 3.15rem); }
+    .td .eyebrow { font-size: 13px; margin-bottom: 20px; }
+    .td-sub { font-size: 1.3rem; }
+    .td-cta { font-size: 1.18rem; padding: 20px 38px; }
+
+    .reveal-card {
+      background: var(--ink); color: var(--offwhite);
+      border: 4px solid var(--ink); box-shadow: 12px 12px 0 var(--green-dk);
+      padding: 44px 38px;
+    }
+    .reveal-card .eyebrow { color: var(--green-lt); }
+    .reveal-card .eyebrow::before { background: var(--green-lt); }
+    .reveal-card .reveal-echo {
+      color: var(--offwhite);
+      font-size: clamp(2.2rem, 7.2vw, 3.4rem); line-height: 1.05;
+      text-shadow: 0 0 44px rgba(165,219,93,0.18);
+    }
+    .reveal-card .reveal-body { color: var(--offwhite); font-size: 1.32rem; opacity: 0.92; }
+    .reveal-card .reveal-walk { color: var(--green-lt); }
+    .reveal-card .reveal-list li { color: var(--offwhite); font-size: 1.22rem; padding-left: 38px; }
+    .reveal-card .reveal-list li::before {
+      width: 18px; height: 18px; top: 6px;
+      background: var(--green-lt); border: 3px solid var(--green-lt);
+      box-shadow: 0 0 18px rgba(165,219,93,0.5);
+    }
+    .reveal-card .td-terms { color: var(--green-lt); }
+    @media (max-width: 560px) { .reveal-card { padding: 32px 22px; } }
   </style>
 </BaseLayout>
