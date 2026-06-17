@@ -72,7 +72,17 @@ const FLOW = {
 };
 
 const ENTRY_LABELS = { foundation: 'Foundation', focused: 'Focused', full: 'Full' };
-const INDUSTRIES = ['Tech', 'Entertainment', 'Digital Media', 'Streaming', 'Creator Economy', 'Music', 'Gaming', 'Sports', 'Something else'];
+const INDUSTRIES = [
+  { label: 'Tech', icon: '💻' },
+  { label: 'Entertainment', icon: '🎬' },
+  { label: 'Digital Media', icon: '📱' },
+  { label: 'Streaming', icon: '📺' },
+  { label: 'Creator Economy', icon: '🎥' },
+  { label: 'Music', icon: '🎵' },
+  { label: 'Gaming', icon: '🎮' },
+  { label: 'Sports', icon: '🏈' },
+  { label: 'Something else', icon: '✨' },
+];
 const STAGES = ['Pre-seed', 'Seed', 'Series A', 'Series B', 'Series C+'];
 const entries = ['foundation', 'focused', 'full'];
 ---
@@ -81,8 +91,11 @@ const entries = ['foundation', 'focused', 'full'];
   <main class="td">
     <a class="td-logo" href="/" aria-label="Field Vision home">FIELD<br/>VISION</a>
 
-    <!-- Progress (question phase only) -->
-    <div class="td-progress" id="tdProgress" aria-hidden="true"><span id="tdProgressBar"></span></div>
+    <!-- Progress: football field (question phase only) -->
+    <div class="td-field" id="tdProgress" aria-hidden="true">
+      <span class="td-field-fill" id="tdProgressBar"></span>
+      <span class="td-field-ball" id="tdProgressBall">🏈</span>
+    </div>
 
     <div class="td-stage" aria-live="polite">
 
@@ -133,7 +146,7 @@ const entries = ['foundation', 'focused', 'full'];
         <p class="td-chip-label">What you do</p>
         <div class="td-chips" data-group="industry">
           {INDUSTRIES.map((v) => (
-            <button class="chip" data-action="industry" data-value={v}>{v}</button>
+            <button class="chip chip--icon" data-action="industry" data-value={v.label}><span class="chip-ico" aria-hidden="true">{v.icon}</span>{v.label}</button>
           ))}
         </div>
 
@@ -150,6 +163,23 @@ const entries = ['foundation', 'focused', 'full'];
       <!-- SCREEN 4: REVEAL -->
       <section class="screen" data-screen="reveal">
         <div class="reveal-card">
+          <svg class="td-play" viewBox="0 0 300 140" role="img" aria-label="Field Vision play diagram">
+            <line class="td-play-line" x1="20" y1="85" x2="280" y2="85" />
+            <circle class="td-play-o" cx="70" cy="85" r="7" />
+            <circle class="td-play-o" cx="110" cy="85" r="7" />
+            <circle class="td-play-o" cx="150" cy="85" r="7" />
+            <circle class="td-play-o" cx="190" cy="85" r="7" />
+            <circle class="td-play-o" cx="230" cy="85" r="7" />
+            <circle class="td-play-o" cx="150" cy="112" r="7" />
+            <path class="td-play-route" d="M150 112 C 150 60, 225 74, 256 30" marker-end="url(#tdArrow)" />
+            <line class="td-play-x" x1="248" y1="46" x2="262" y2="60" />
+            <line class="td-play-x" x1="262" y1="46" x2="248" y2="60" />
+            <defs>
+              <marker id="tdArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#A5DB5D" />
+              </marker>
+            </defs>
+          </svg>
           <span class="eyebrow">Your teardown</span>
           <p class="reveal-echo" data-focus tabindex="-1" id="revealEcho"></p>
           <p class="reveal-body" id="revealBody"></p>
@@ -204,6 +234,8 @@ const entries = ['foundation', 'focused', 'full'];
 
     </div>
 
+    <div class="td-affirm" id="tdAffirm" aria-hidden="true"></div>
+
     <!-- Fallback form: guarantees email delivery if AJAX fails. Submits to the same proven endpoint as the contact form. -->
     <form id="tdFallback" action="https://formsubmit.co/hampian@fieldvisiongroup.com" method="POST" class="td-honey">
       <input type="hidden" name="_subject" value="New Teardown Lead from fieldvisiongroup.com" />
@@ -225,6 +257,9 @@ const entries = ['foundation', 'focused', 'full'];
       const screens = Array.from(document.querySelectorAll('.screen'));
       const progress = document.getElementById('tdProgress');
       const progressBar = document.getElementById('tdProgressBar');
+      const progressBall = document.getElementById('tdProgressBall');
+      const affirmEl = document.getElementById('tdAffirm');
+      const AFFIRMS = ['Got it.', 'Good call.', 'Say less.', 'Love that.', 'On it.'];
 
       function ev(name, params) {
         try {
@@ -233,10 +268,19 @@ const entries = ['foundation', 'focused', 'full'];
         } catch (e) {}
       }
 
-      function show(key) {
-        screens.forEach((s) => s.classList.toggle('is-active', s.dataset.screen === key));
-        if (STEP_PROGRESS[key]) { progress.style.visibility = 'visible'; progressBar.style.width = STEP_PROGRESS[key] + '%'; }
-        else { progress.style.visibility = 'hidden'; }
+      function show(key, dir) {
+        dir = dir || 'fwd';
+        screens.forEach((s) => {
+          const on = s.dataset.screen === key;
+          s.classList.toggle('is-active', on);
+          s.classList.remove('slide-fwd', 'slide-back');
+          if (on && !prefersReduced) { void s.offsetWidth; s.classList.add(dir === 'back' ? 'slide-back' : 'slide-fwd'); }
+        });
+        if (STEP_PROGRESS[key]) {
+          progress.style.visibility = 'visible';
+          progressBar.style.width = STEP_PROGRESS[key] + '%';
+          if (progressBall) progressBall.style.left = STEP_PROGRESS[key] + '%';
+        } else { progress.style.visibility = 'hidden'; }
         const active = document.querySelector('.screen.is-active');
         const f = active && active.querySelector('[data-focus]');
         if (f) { try { f.focus({ preventScroll: true }); } catch (e) { f.focus(); } }
@@ -267,7 +311,15 @@ const entries = ['foundation', 'focused', 'full'];
         if (transitioning) return;
         transitioning = true;
         el.classList.add('is-chosen');
-        setTimeout(function () { el.classList.remove('is-chosen'); transitioning = false; next(); }, prefersReduced ? 0 : 210);
+        if (prefersReduced) { el.classList.remove('is-chosen'); transitioning = false; next(); return; }
+        affirmEl.textContent = AFFIRMS[Math.floor(Math.random() * AFFIRMS.length)];
+        affirmEl.classList.remove('show'); void affirmEl.offsetWidth; affirmEl.classList.add('show');
+        setTimeout(function () {
+          affirmEl.classList.remove('show');
+          el.classList.remove('is-chosen');
+          transitioning = false;
+          next();
+        }, 640);
       }
 
       // Delegated clicks
@@ -276,21 +328,21 @@ const entries = ['foundation', 'focused', 'full'];
         if (!el) return;
         const action = el.dataset.action;
 
-        if (action === 'start') { ev('teardown_start', {}); show('fork'); }
+        if (action === 'start') { ev('teardown_start', {}); show('fork', 'fwd'); }
 
         else if (action === 'entry') {
           state.entry = el.dataset.entry; state.opt = null;
           ev('teardown_entry_select', { entry: ENTRY_LABELS[state.entry] });
           document.getElementById('branchQ').textContent = FLOW[state.entry].branchQ;
           document.querySelectorAll('.branch-group').forEach((g) => { g.hidden = (g.dataset.branch !== state.entry); });
-          chooseAndAdvance(el, function () { show('branch'); });
+          chooseAndAdvance(el, function () { show('branch', 'fwd'); });
         }
 
         else if (action === 'branch') {
           state.opt = el.dataset.opt;
           const opt = FLOW[state.entry].options.find((o) => o.id === state.opt);
           ev('teardown_branch_select', { entry: ENTRY_LABELS[state.entry], choice: opt ? opt.label : state.opt });
-          chooseAndAdvance(el, function () { show('about'); });
+          chooseAndAdvance(el, function () { show('about', 'fwd'); });
         }
 
         else if (action === 'industry') {
@@ -309,12 +361,12 @@ const entries = ['foundation', 'focused', 'full'];
           ev('teardown_about_complete', { industry: state.industry, stage: state.stage });
           renderReveal();
           ev('teardown_reveal_view', { entry: ENTRY_LABELS[state.entry] });
-          show('reveal');
+          show('reveal', 'fwd');
         }
 
-        else if (action === 'toSignup') { show('signup'); }
+        else if (action === 'toSignup') { show('signup', 'fwd'); }
 
-        else if (action === 'back') { show(el.dataset.to); }
+        else if (action === 'back') { show(el.dataset.to, 'back'); }
       });
 
       // Submit
@@ -372,7 +424,7 @@ const entries = ['foundation', 'focused', 'full'];
           });
           if (!res.ok) throw new Error('bad status ' + res.status);
           fireLead();
-          show('done');
+          show('done', 'fwd');
         } catch (err) {
           // Fallback: submit the classic form (guaranteed email, redirects to /thank-you)
           fireLead();
@@ -407,27 +459,38 @@ const entries = ['foundation', 'focused', 'full'];
       text-align: center;
       margin-bottom: 34px;
     }
-    .td-progress {
+    .td-field {
+      position: relative;
       width: 100%;
       max-width: 680px;
-      height: 12px;
-      background: rgba(33,54,33,0.10);
+      height: 30px;
+      background: var(--ink);
       border: 3px solid var(--ink);
       margin-bottom: 44px;
       visibility: hidden;
+      overflow: visible;
+      background-image: repeating-linear-gradient(90deg, transparent 0, transparent calc(10% - 2px), rgba(239,234,211,0.4) calc(10% - 2px), rgba(239,234,211,0.4) 10%);
     }
-    .td-progress span {
-      display: block;
-      height: 100%;
-      width: 0;
+    .td-field-fill {
+      display: block; height: 100%; width: 0;
       background: var(--green-lt);
-      transition: width 0.45s cubic-bezier(.34,1.3,.5,1);
+      transition: width 0.5s cubic-bezier(.34,1.4,.5,1);
+    }
+    .td-field-ball {
+      position: absolute; top: 50%; left: 0;
+      transform: translate(-50%, -50%);
+      font-size: 22px; line-height: 1;
+      transition: left 0.5s cubic-bezier(.34,1.4,.5,1);
+      filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.3));
     }
     .td-stage { width: 100%; max-width: 680px; }
 
     .screen { display: none; }
-    .screen.is-active { display: block; animation: tdIn 0.4s cubic-bezier(.34,1.2,.5,1); }
-    @keyframes tdIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .screen.is-active { display: block; }
+    .screen.is-active.slide-fwd { animation: slideFwd .42s cubic-bezier(.34,1.2,.5,1); }
+    .screen.is-active.slide-back { animation: slideBack .42s cubic-bezier(.34,1.2,.5,1); }
+    @keyframes slideFwd { from { opacity: 0; transform: translateX(46px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes slideBack { from { opacity: 0; transform: translateX(-46px); } to { opacity: 1; transform: translateX(0); } }
     @keyframes popIn { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
     .screen.is-active .opt-card,
@@ -445,10 +508,15 @@ const entries = ['foundation', 'focused', 'full'];
 
     @media (prefers-reduced-motion: reduce) {
       .screen.is-active,
+      .screen.is-active.slide-fwd,
+      .screen.is-active.slide-back,
       .screen.is-active .opt-card,
       .screen.is-active .chip,
-      .screen.is-active .reveal-list li { animation: none; opacity: 1; }
-      .td-progress span { transition: none; }
+      .screen.is-active .reveal-list li,
+      .screen.is-active .td-play { animation: none; opacity: 1; transform: none; }
+      .td-field-fill, .td-field-ball { transition: none; }
+      .td-play-route { stroke-dashoffset: 0; animation: none; }
+      .td-affirm.show { animation: none; opacity: 0; }
     }
 
     .td-eyebrow {
@@ -616,5 +684,38 @@ const entries = ['foundation', 'focused', 'full'];
     }
     .reveal-card .td-terms { color: var(--green-lt); }
     @media (max-width: 560px) { .reveal-card { padding: 32px 22px; } }
+
+    .chip--icon { display: inline-flex; align-items: center; gap: 9px; }
+    .chip-ico { font-size: 1.2rem; line-height: 1; }
+
+    .td-affirm {
+      position: fixed; left: 50%; top: 42%;
+      transform: translate(-50%, -50%) scale(.8);
+      z-index: 60; pointer-events: none; opacity: 0;
+      background: var(--green-lt); color: var(--ink);
+      border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink);
+      font-family: 'Anton', sans-serif; font-size: 1.9rem; text-transform: uppercase;
+      padding: 14px 32px; letter-spacing: 0.02em; white-space: nowrap;
+    }
+    .td-affirm.show { animation: affirmPop .64s cubic-bezier(.34,1.5,.5,1); }
+    @keyframes affirmPop {
+      0%   { opacity: 0; transform: translate(-50%,-50%) scale(.7) rotate(-3deg); }
+      26%  { opacity: 1; transform: translate(-50%,-50%) scale(1.05) rotate(-1.5deg); }
+      72%  { opacity: 1; transform: translate(-50%,-50%) scale(1.05) rotate(-1.5deg); }
+      100% { opacity: 0; transform: translate(-50%,-50%) scale(.92) rotate(-1.5deg); }
+    }
+
+    .td-play { display: block; width: 100%; max-width: 320px; height: auto; margin: 0 auto 26px; }
+    .td-play-line { stroke: var(--offwhite); stroke-width: 2; stroke-dasharray: 6 6; opacity: .4; }
+    .td-play-o { fill: none; stroke: var(--offwhite); stroke-width: 3; opacity: .85; }
+    .td-play-x { stroke: var(--offwhite); stroke-width: 3; opacity: .55; }
+    .td-play-route {
+      fill: none; stroke: var(--green-lt); stroke-width: 4; stroke-linecap: round;
+      stroke-dasharray: 460; stroke-dashoffset: 460;
+      filter: drop-shadow(0 0 8px rgba(165,219,93,.5));
+    }
+    .screen.is-active .td-play { animation: popIn .5s ease both; }
+    .screen.is-active .td-play-route { animation: drawRoute 1.15s .2s ease forwards; }
+    @keyframes drawRoute { from { stroke-dashoffset: 460; } to { stroke-dashoffset: 0; } }
   </style>
 </BaseLayout>
