@@ -7,7 +7,7 @@ import Footer from '../../components/Footer.astro';
 const allPress = (await getCollection('press'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const title = "Press & Media — Field Vision | Field Vision";
+const title = "Press & Media, Field Vision | Field Vision";
 const description = "Field Vision has been featured as an expert source in the Australian Financial Review, Covers, Daily Express, Birch, and other leading publications. Read his expert commentary on marketing strategy, entertainment, sports, and performance marketing.";
 ---
 <BaseLayout title={title} description={description}>
@@ -16,7 +16,7 @@ const description = "Field Vision has been featured as an expert source in the A
     <div class="container">
       <span class="press-hero__label">Press & Media</span>
       <h1 class="press-hero__title">Featured In</h1>
-      <p class="press-hero__subtitle">Expert commentary on marketing strategy, entertainment, sports, and performance — featured in leading international publications.</p>
+      <p class="press-hero__subtitle">Expert commentary on marketing strategy, entertainment, sports, and performance, featured in leading international publications.</p>
     </div>
   </section>
 
@@ -49,7 +49,7 @@ const description = "Field Vision has been featured as an expert source in the A
     <div class="container">
       <span class="awards-section__label">Awards & Recognition</span>
       <h2 class="awards-section__title">8 Clio Awards</h2>
-      <p class="awards-section__subtitle">Award-winning marketing programs spanning live music, fan engagement, and brand innovation — recognized by the Clio Awards across two organizations and a decade of work.</p>
+      <p class="awards-section__subtitle">Award-winning marketing programs spanning live music, fan engagement, and brand innovation, recognized by the Clio Awards across two organizations and a decade of work.</p>
 
       <div class="awards-grid">
 
@@ -141,7 +141,7 @@ const description = "Field Vision has been featured as an expert source in the A
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Press & Media Features — Field Vision",
+    "name": "Press & Media Features, Field Vision",
     "description": "Expert commentary and interviews featuring Field Vision in leading publications",
     "numberOfItems": allPress.length,
     "itemListElement": allPress.map((item, index) => ({
@@ -155,7 +155,7 @@ const description = "Field Vision has been featured as an expert source in the A
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Press & Media — Field Vision",
+    "name": "Press & Media, Field Vision",
     "description": description,
     "url": "https://fieldvisiongroup.com/press",
     "isPartOf": {

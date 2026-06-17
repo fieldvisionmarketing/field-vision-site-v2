@@ -8,14 +8,14 @@ downloadUrl: "/downloads/Field Vision GTM Template.docx"
 downloadLabel: "Template"
 readTime: "8 min read"
 phases: "4 Sections"
-schemaJson: '{"@context": "https://schema.org", "@type": "HowTo", "name": "How to Use the Field Vision GTM Template", "description": "A four-section process for planning and executing go-to-market launches without chaos.", "step": [{"@type": "HowToStep", "name": "Business & Audience Details", "text": "Define the problem you''re solving, the metrics that matter, the target customer, and write the Strategic One-Liner using the GET → TO → BUY structure. Get leadership alignment before anything else moves."}, {"@type": "HowToStep", "name": "Creative Details", "text": "Define positioning, articulate emotional and functional value, build reasons to believe, and distill The One Thing — the internal creative north star that all creative ladders back to."}, {"@type": "HowToStep", "name": "Execution Plan", "text": "Define the campaign, sequence it into phases where each phase has a job, layer in experimentation intentionally, and map the full moment-by-moment roll-out from launch through retention."}, {"@type": "HowToStep", "name": "Internal Mechanics", "text": "Assign ownership, set timelines, define budget, identify risks and dependencies, and road-show the plan across stakeholders to surface gaps before launch."}]}'
+schemaJson: '{"@context": "https://schema.org", "@type": "HowTo", "name": "How to Use the Field Vision GTM Template", "description": "A four-section process for planning and executing go-to-market launches without chaos.", "step": [{"@type": "HowToStep", "name": "Business & Audience Details", "text": "Define the problem you''re solving, the metrics that matter, the target customer, and write the Strategic One-Liner using the GET → TO → BUY structure. Get leadership alignment before anything else moves."}, {"@type": "HowToStep", "name": "Creative Details", "text": "Define positioning, articulate emotional and functional value, build reasons to believe, and distill The One Thing, the internal creative north star that all creative ladders back to."}, {"@type": "HowToStep", "name": "Execution Plan", "text": "Define the campaign, sequence it into phases where each phase has a job, layer in experimentation intentionally, and map the full moment-by-moment roll-out from launch through retention."}, {"@type": "HowToStep", "name": "Internal Mechanics", "text": "Assign ownership, set timelines, define budget, identify risks and dependencies, and road-show the plan across stakeholders to surface gaps before launch."}]}'
 ---
 
 ## What Is the GTM Template?
 
-The GTM Template is a four-section go-to-market planning document developed by Field Vision across 100+ launches — from Kendrick Lamar's The Pop Out to the first legal sportsbook in Florida to Thursday Night Football on Prime Video. It replaces the chaotic spreadsheets and disconnected checklists that most teams call a "GTM plan" with a structured system that forces alignment before a single pixel moves.
+The GTM Template is a four-section go-to-market planning document developed by Field Vision across 100+ launches, from Kendrick Lamar's The Pop Out to the first legal sportsbook in Florida to Thursday Night Football on Prime Video. It replaces the chaotic spreadsheets and disconnected checklists that most teams call a "GTM plan" with a structured system that forces alignment before a single pixel moves.
 
-Every GTM disaster starts the same way: everyone's busy, nobody agrees on what they're doing, and eventually the thing's on fire. That's not a talent problem — it's a process problem. This template solves it by requiring strategic clarity before tactical execution.
+Every GTM disaster starts the same way: everyone's busy, nobody agrees on what they're doing, and eventually the thing's on fire. That's not a talent problem, it's a process problem. This template solves it by requiring strategic clarity before tactical execution.
 
 <div class="stats-bar">
 <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">SECTIONS</span></div>
@@ -43,7 +43,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 </div>
 <div class="summary-item">
 <strong>Operational Readiness</strong>
-<p>Named owners, hard timelines, budget allocation, and risk mitigation — road-tested</p>
+<p>Named owners, hard timelines, budget allocation, and risk mitigation, road-tested</p>
 </div>
 </div>
 </div>
@@ -104,7 +104,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="step-content">
 <div class="step-label">Sub-step 1</div>
 <div class="step-title">Define the Problem</div>
-<p class="step-description">Articulate the specific business problem this GTM is solving. Not the product you're launching — the problem it addresses. If you can't state it in one sentence, you're not ready.</p>
+<p class="step-description">Articulate the specific business problem this GTM is solving. Not the product you're launching, the problem it addresses. If you can't state it in one sentence, you're not ready.</p>
 </div>
 </div>
 
@@ -116,7 +116,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="step-content">
 <div class="step-label">Sub-step 2</div>
 <div class="step-title">Set the Metrics That Matter</div>
-<p class="step-description">Identify the 2-3 KPIs that will define success. Not vanity metrics — the outcomes leadership actually cares about. Revenue impact, market share, acquisition cost, retention lift.</p>
+<p class="step-description">Identify the 2-3 KPIs that will define success. Not vanity metrics, the outcomes leadership actually cares about. Revenue impact, market share, acquisition cost, retention lift.</p>
 </div>
 </div>
 
@@ -166,7 +166,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 </div>
 
 <p class="phase-intro">
-    Unanchored ideas are a waste of time. The Creative Details section forces clarity on how the product should be positioned, what value you're offering (both emotional and functional), and what proof points make the audience believe you. It all ladders into "The One Thing" — an internal creative north star that kills subjective debates.
+    Unanchored ideas are a waste of time. The Creative Details section forces clarity on how the product should be positioned, what value you're offering (both emotional and functional), and what proof points make the audience believe you. It all ladders into "The One Thing", an internal creative north star that kills subjective debates.
 </p>
 
 <div class="steps-label">Follow these 4 sub-steps</div>
@@ -180,7 +180,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="step-content">
 <div class="step-label">Sub-step 1</div>
 <div class="step-title">Define Positioning</div>
-<p class="step-description">Outline exactly how the product or service should be positioned so it lands immediately with your target customer. This isn't the tagline — it's the strategic frame that every creative execution must fit inside.</p>
+<p class="step-description">Outline exactly how the product or service should be positioned so it lands immediately with your target customer. This isn't the tagline, it's the strategic frame that every creative execution must fit inside.</p>
 </div>
 </div>
 
@@ -204,7 +204,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="step-content">
 <div class="step-label">Sub-step 3</div>
 <div class="step-title">Build Your Reasons to Believe</div>
-<p class="step-description">List the specific proof points that will get your audience to believe your claims. Social proof, data, testimonials, demonstrations, partnerships — the evidence that turns positioning into credibility.</p>
+<p class="step-description">List the specific proof points that will get your audience to believe your claims. Social proof, data, testimonials, demonstrations, partnerships, the evidence that turns positioning into credibility.</p>
 </div>
 </div>
 
@@ -224,7 +224,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="output-card">
 <div class="output-icon">✓</div>
 <div>
-<strong>OUTPUT:</strong> A positioning statement, documented emotional and functional value, a library of reasons to believe, and "The One Thing" — the internal creative north star that every asset ladders back to.
+<strong>OUTPUT:</strong> A positioning statement, documented emotional and functional value, a library of reasons to believe, and "The One Thing", the internal creative north star that every asset ladders back to.
 </div>
 </div>
 <div class="key-principle">
@@ -237,12 +237,12 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="phase-badge">E</div>
 <div>
 <h3>Execution Plan</h3>
-<p class="phase-subtitle">Tell the story with cohesion — from first impression to retention</p>
+<p class="phase-subtitle">Tell the story with cohesion, from first impression to retention</p>
 </div>
 </div>
 
 <p class="phase-intro">
-    This is where most teams skip to and start — and it's exactly where most GTMs fall apart. Execution without the upfront work from Business & Audience Details and Creative Details is just a checklist pretending to be a strategy. But now that you've done that work, you can put it all together and tell the story with cohesion.
+    This is where most teams skip to and start, and it's exactly where most GTMs fall apart. Execution without the upfront work from Business & Audience Details and Creative Details is just a checklist pretending to be a strategy. But now that you've done that work, you can put it all together and tell the story with cohesion.
 </p>
 
 <div class="steps-label">Follow these 4 sub-steps</div>
@@ -256,7 +256,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="step-content">
 <div class="step-label">Sub-step 1</div>
 <div class="step-title">Define the Campaign</div>
-<p class="step-description">Name the campaign, the idea, or the offering. Document exactly what you're bringing to market. This is the container that holds everything — make it specific enough that anyone on the team can describe it in one sentence.</p>
+<p class="step-description">Name the campaign, the idea, or the offering. Document exactly what you're bringing to market. This is the container that holds everything, make it specific enough that anyone on the team can describe it in one sentence.</p>
 </div>
 </div>
 
@@ -280,7 +280,7 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 <div class="step-content">
 <div class="step-label">Sub-step 3</div>
 <div class="step-title">Layer in Experimentation</div>
-<p class="step-description">Build experimentation into the plan intentionally — not as an afterthought. Identify what you're testing, what success looks like, and how results will inform the next phase. This is what separates a GTM from a to-do list.</p>
+<p class="step-description">Build experimentation into the plan intentionally, not as an afterthought. Identify what you're testing, what success looks like, and how results will inform the next phase. This is what separates a GTM from a to-do list.</p>
 </div>
 </div>
 
@@ -318,17 +318,17 @@ Every GTM disaster starts the same way: everyone's busy, nobody agrees on what t
 </div>
 
 <p class="phase-intro">
-    This section is boring. It's also where GTMs live or die. These are the internal mechanics that decide whether your plan ever makes it out of a deck and into the real world. Ownership, timelines, budget, risks, and dependencies — skip them at your peril.
+    This section is boring. It's also where GTMs live or die. These are the internal mechanics that decide whether your plan ever makes it out of a deck and into the real world. Ownership, timelines, budget, risks, and dependencies, skip them at your peril.
 </p>
 
 <div class="card-grid">
 <div class="card">
 <div class="card-label">WHAT YOU LOCK DOWN</div>
-<p>Assign clear ownership for every workstream. Set hard timelines with dependencies mapped. Define the budget and where it's allocated. Identify the risks that could derail launch and the contingency plans for each. Document every cross-functional dependency — because there's nothing worse than finding out a key resource doesn't exist two weeks before you need it.</p>
+<p>Assign clear ownership for every workstream. Set hard timelines with dependencies mapped. Define the budget and where it's allocated. Identify the risks that could derail launch and the contingency plans for each. Document every cross-functional dependency, because there's nothing worse than finding out a key resource doesn't exist two weeks before you need it.</p>
 </div>
 <div class="card">
 <div class="card-label">HOW TO ROAD-SHOW IT</div>
-<p>Once you've built this section out, parade it around your department. Present it to stakeholders, partners, and adjacent teams. The goal isn't approval — it's pressure-testing. Surface the gaps, the conflicts, and the missing resources before they surface themselves during launch week.</p>
+<p>Once you've built this section out, parade it around your department. Present it to stakeholders, partners, and adjacent teams. The goal isn't approval, it's pressure-testing. Surface the gaps, the conflicts, and the missing resources before they surface themselves during launch week.</p>
 </div>
 </div>
 
@@ -370,7 +370,7 @@ The template won't make you brilliant. Your team still has to think. But it remo
 <span class="faq-toggle">+</span>
 </summary>
 <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-<p itemprop="text">Use it any time you're launching a product, campaign, feature, or market entry. It's especially valuable when multiple teams need to coordinate, when the stakes are high, or when previous launches have felt chaotic or misaligned. The template works for launches of any size — from a single campaign to a multi-market rollout.</p>
+<p itemprop="text">Use it any time you're launching a product, campaign, feature, or market entry. It's especially valuable when multiple teams need to coordinate, when the stakes are high, or when previous launches have felt chaotic or misaligned. The template works for launches of any size, from a single campaign to a multi-market rollout.</p>
 </div>
 </details>
 
@@ -390,7 +390,7 @@ The template won't make you brilliant. Your team still has to think. But it remo
 <span class="faq-toggle">+</span>
 </summary>
 <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-<p itemprop="text">"The One Thing" is an internal, non-customer-facing tagline that serves as the creative north star for the entire GTM. Every piece of creative — from ads to landing pages to email sequences — should be able to ladder back to it. It's what turns subjective creative reviews into focused evaluations.</p>
+<p itemprop="text">"The One Thing" is an internal, non-customer-facing tagline that serves as the creative north star for the entire GTM. Every piece of creative, from ads to landing pages to email sequences, should be able to ladder back to it. It's what turns subjective creative reviews into focused evaluations.</p>
 </div>
 </details>
 

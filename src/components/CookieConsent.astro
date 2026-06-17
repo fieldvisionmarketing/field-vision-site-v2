@@ -1,9 +1,9 @@
 ---
 /**
- * Cookie Consent Banner — CCPA Compliant
+ * Cookie Consent Banner, CCPA Compliant
  *
  * Provides "Do Not Sell My Personal Information" opt-out for CCPA compliance.
- * Analytics (GA4) fire independently — this banner records user preference only.
+ * Analytics (GA4) fire independently, this banner records user preference only.
  *
  * 1. Shows on first visit (no preference set yet)
  * 2. Stores preference in localStorage
@@ -36,10 +36,10 @@
     const existing = localStorage.getItem(CONSENT_KEY);
 
     if (existing === 'granted' || existing === 'denied') {
-      return; // Already answered — don't show banner
+      return; // Already answered, don't show banner
     }
 
-    // No preference yet — show banner
+    // No preference yet, show banner
     if (banner) {
       banner.classList.add('visible');
     }

@@ -1,6 +1,6 @@
 ---
 title: "Go-to-Market Strategy"
-description: "We define who your product is for, why it wins, and how you take it to market — with the rigor of operators who have launched at Amazon, Twitch, and Pandora."
+description: "We define who your product is for, why it wins, and how you take it to market, with the rigor of operators who have launched at Amazon, Twitch, and Pandora."
 icon: "🚀"
 order: 2
 sidebar:
@@ -15,7 +15,7 @@ sidebar:
   - label: "Location"
     value: "SF-based, nationwide"
 problemHeadline: "Most Products Don't Fail Because They're Bad. They Fail Because Nobody Knew Who They Were For."
-problemIntro: "A go-to-market strategy is the structured plan that defines your target customer, competitive positioning, pricing, channel strategy, and launch sequence. Most startups skip GTM strategy entirely — they have a great product, a launch date, and a hope that awareness will follow. Without a structured GTM plan, teams waste months learning lessons that experienced operators already know."
+problemIntro: "A go-to-market strategy is the structured plan that defines your target customer, competitive positioning, pricing, channel strategy, and launch sequence. Most startups skip GTM strategy entirely, they have a great product, a launch date, and a hope that awareness will follow. Without a structured GTM plan, teams waste months learning lessons that experienced operators already know."
 oldWay:
   - "Launching without clear positioning or target customer definition"
   - "Hope-based awareness with no structured customer research"
@@ -48,7 +48,7 @@ deliverables:
     desc: "A pricing strategy informed by market dynamics, customer willingness-to-pay, and your unit economics model."
   - icon: "🤝"
     title: "Cross-Functional Alignment"
-    desc: "Weekly sprints that get product, engineering, sales, and marketing on the same page — because GTM execution is a team sport."
+    desc: "Weekly sprints that get product, engineering, sales, and marketing on the same page, because GTM execution is a team sport."
 whoIntro: "This engagement is built for founders and product leaders who are about to launch something important and want to get it right the first time."
 whoTriggers:
   - "Launching a new product or feature in the next 3–6 months"
@@ -75,11 +75,11 @@ abctSteps:
     desc: "We embed with your team during launch execution, ensuring the strategy translates to real market results. We adjust on the fly, document learnings, and hand off a playbook your team can repeat."
 faqs:
   - question: "What is a go-to-market strategy?"
-    answer: "A go-to-market strategy is the structured plan that defines how a company brings a product or service to market. It includes five core elements: target customer definition and ideal customer profile, competitive positioning and differentiation, pricing strategy, channel and distribution plan, and launch sequencing with milestones. A GTM strategy is different from a marketing plan — it is foundational. It answers who you are selling to, why they should choose you, and how you will reach them at scale. Marketing executes against the GTM strategy."
+    answer: "A go-to-market strategy is the structured plan that defines how a company brings a product or service to market. It includes five core elements: target customer definition and ideal customer profile, competitive positioning and differentiation, pricing strategy, channel and distribution plan, and launch sequencing with milestones. A GTM strategy is different from a marketing plan, it is foundational. It answers who you are selling to, why they should choose you, and how you will reach them at scale. Marketing executes against the GTM strategy."
   - question: "How do you build a go-to-market strategy for a startup?"
-    answer: "Building a GTM strategy for a startup starts with four foundational questions: Who is your ideal customer? What problem do you solve better than anyone else? How will you reach them? And how will you sequence your entry into market? At Field Vision, we follow the ABCT® model — starting with an Audit of your product, market, and competitive landscape, then building a Blueprint that maps positioning, segmentation, pricing, and launch sequencing. The Construct phase builds the executable playbook, and Transfer ensures your team can repeat the process independently."
+    answer: "Building a GTM strategy for a startup starts with four foundational questions: Who is your ideal customer? What problem do you solve better than anyone else? How will you reach them? And how will you sequence your entry into market? At Field Vision, we follow the ABCT® model, starting with an Audit of your product, market, and competitive landscape, then building a Blueprint that maps positioning, segmentation, pricing, and launch sequencing. The Construct phase builds the executable playbook, and Transfer ensures your team can repeat the process independently."
   - question: "What is the difference between a GTM strategy and a marketing strategy?"
-    answer: "A go-to-market strategy is foundational — it defines who your customer is, why your product wins, and how you enter or expand in a market. A marketing strategy is the execution plan built on top of that foundation — the channels, campaigns, and tactics you use to reach those customers. Most startups try to build a marketing strategy before they have a GTM strategy, and that is where things fall apart. You cannot effectively market a product if you have not defined who it is for, why it wins, and how you are positioned against alternatives."
+    answer: "A go-to-market strategy is foundational, it defines who your customer is, why your product wins, and how you enter or expand in a market. A marketing strategy is the execution plan built on top of that foundation, the channels, campaigns, and tactics you use to reach those customers. Most startups try to build a marketing strategy before they have a GTM strategy, and that is where things fall apart. You cannot effectively market a product if you have not defined who it is for, why it wins, and how you are positioned against alternatives."
   - question: "How long does a go-to-market engagement take?"
     answer: "Most GTM engagements at Field Vision run 4 to 8 weeks as intensive sprints. We move fast because market windows do not wait. The Audit phase takes 1 to 2 weeks, Blueprint and strategy design takes 2 to 3 weeks, and Construct plus launch support takes another 2 to 3 weeks. For companies that have already launched and need to restructure their GTM approach, we can compress or extend timelines depending on complexity."
   - question: "Do you help with execution or just deliver a strategy document?"
@@ -88,7 +88,7 @@ ctaHeadline: "Ready to Launch With Confidence?"
 ctaBody: "Book a 30-minute discovery call. We will assess your go-to-market readiness and map the path to a structured, repeatable launch."
 ------
 title: "Go-to-Market Strategy"
-description: "We define who your product is for, why it wins, and how you take it to market — with the rigor of operators who have launched at Amazon, Twitch, and Pandora."
+description: "We define who your product is for, why it wins, and how you take it to market, with the rigor of operators who have launched at Amazon, Twitch, and Pandora."
 icon: "🚀"
 order: 2
 sidebar:
@@ -103,7 +103,7 @@ sidebar:
   - label: "Location"
     value: "SF-based, nationwide"
 problemHeadline: "Most Products Don't Fail Because They're Bad. They Fail Because Nobody Knew Who They Were For."
-problemIntro: "A go-to-market strategy is the structured plan that defines your target customer, competitive positioning, pricing, channel strategy, and launch sequence. Most startups skip GTM strategy entirely — they have a great product, a launch date, and a hope that awareness will follow. Without a structured GTM plan, teams waste months learning lessons that experienced operators already know."
+problemIntro: "A go-to-market strategy is the structured plan that defines your target customer, competitive positioning, pricing, channel strategy, and launch sequence. Most startups skip GTM strategy entirely, they have a great product, a launch date, and a hope that awareness will follow. Without a structured GTM plan, teams waste months learning lessons that experienced operators already know."
 oldWay:
   - "Launching without clear positioning or target customer definition"
   - "Hope-based awareness with no structured customer research"
@@ -136,7 +136,7 @@ deliverables:
     desc: "A pricing strategy informed by market dynamics, customer willingness-to-pay, and your unit economics model."
   - icon: "🤝"
     title: "Cross-Functional Alignment"
-    desc: "Weekly sprints that get product, engineering, sales, and marketing on the same page — because GTM execution is a team sport."
+    desc: "Weekly sprints that get product, engineering, sales, and marketing on the same page, because GTM execution is a team sport."
 whoIntro: "This engagement is built for founders and product leaders who are about to launch something important and want to get it right the first time."
 whoTriggers:
   - "Launching a new product or feature in the next 3–6 months"
@@ -163,11 +163,11 @@ abctSteps:
     desc: "We embed with your team during launch execution, ensuring the strategy translates to real market results. We adjust on the fly, document learnings, and hand off a playbook your team can repeat."
 faqs:
   - question: "What is a go-to-market strategy?"
-    answer: "A go-to-market strategy is the structured plan that defines how a company brings a product or service to market. It includes five core elements: target customer definition and ideal customer profile, competitive positioning and differentiation, pricing strategy, channel and distribution plan, and launch sequencing with milestones. A GTM strategy is different from a marketing plan — it is foundational. It answers who you are selling to, why they should choose you, and how you will reach them at scale. Marketing executes against the GTM strategy."
+    answer: "A go-to-market strategy is the structured plan that defines how a company brings a product or service to market. It includes five core elements: target customer definition and ideal customer profile, competitive positioning and differentiation, pricing strategy, channel and distribution plan, and launch sequencing with milestones. A GTM strategy is different from a marketing plan, it is foundational. It answers who you are selling to, why they should choose you, and how you will reach them at scale. Marketing executes against the GTM strategy."
   - question: "How do you build a go-to-market strategy for a startup?"
-    answer: "Building a GTM strategy for a startup starts with four foundational questions: Who is your ideal customer? What problem do you solve better than anyone else? How will you reach them? And how will you sequence your entry into market? At Field Vision, we follow the ABCT model — starting with an Audit of your product, market, and competitive landscape, then building a Blueprint that maps positioning, segmentation, pricing, and launch sequencing. The Construct phase builds the executable playbook, and Transfer ensures your team can repeat the process independently."
+    answer: "Building a GTM strategy for a startup starts with four foundational questions: Who is your ideal customer? What problem do you solve better than anyone else? How will you reach them? And how will you sequence your entry into market? At Field Vision, we follow the ABCT model, starting with an Audit of your product, market, and competitive landscape, then building a Blueprint that maps positioning, segmentation, pricing, and launch sequencing. The Construct phase builds the executable playbook, and Transfer ensures your team can repeat the process independently."
   - question: "What is the difference between a GTM strategy and a marketing strategy?"
-    answer: "A go-to-market strategy is foundational — it defines who your customer is, why your product wins, and how you enter or expand in a market. A marketing strategy is the execution plan built on top of that foundation — the channels, campaigns, and tactics you use to reach those customers. Most startups try to build a marketing strategy before they have a GTM strategy, and that is where things fall apart. You cannot effectively market a product if you have not defined who it is for, why it wins, and how you are positioned against alternatives."
+    answer: "A go-to-market strategy is foundational, it defines who your customer is, why your product wins, and how you enter or expand in a market. A marketing strategy is the execution plan built on top of that foundation, the channels, campaigns, and tactics you use to reach those customers. Most startups try to build a marketing strategy before they have a GTM strategy, and that is where things fall apart. You cannot effectively market a product if you have not defined who it is for, why it wins, and how you are positioned against alternatives."
   - question: "How long does a go-to-market engagement take?"
     answer: "Most GTM engagements at Field Vision run 4 to 8 weeks as intensive sprints. We move fast because market windows do not wait. The Audit phase takes 1 to 2 weeks, Blueprint and strategy design takes 2 to 3 weeks, and Construct plus launch support takes another 2 to 3 weeks. For companies that have already launched and need to restructure their GTM approach, we can compress or extend timelines depending on complexity."
   - question: "Do you help with execution or just deliver a strategy document?"

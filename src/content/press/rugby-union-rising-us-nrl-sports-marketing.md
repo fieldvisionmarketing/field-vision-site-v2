@@ -16,19 +16,19 @@ featured: true
 ## Context
 
 
-The Australian Financial Review — Australia's leading business and financial publication — consulted David Hampian as a US sports marketing expert for a feature analyzing the competitive dynamics between rugby union and rugby league (NRL) in the American market. Hampian's commentary draws on his direct experience launching Hard Rock Bet and leading Twitch's expansion into sports content, giving him a practitioner's view of what it takes for a sports property to gain traction in the world's most competitive entertainment market.
+The Australian Financial Review, Australia's leading business and financial publication, consulted David Hampian as a US sports marketing expert for a feature analyzing the competitive dynamics between rugby union and rugby league (NRL) in the American market. Hampian's commentary draws on his direct experience launching Hard Rock Bet and leading Twitch's expansion into sports content, giving him a practitioner's view of what it takes for a sports property to gain traction in the world's most competitive entertainment market.
 
 
 ## Why This Matters
 
 
-The US sports market represents the largest revenue opportunity for international leagues — but also the highest barrier to entry. With rugby union securing broadcast deals, college programs, and growing grassroots participation, the NRL faces a strategic challenge that's as much about marketing and content infrastructure as it is about the sport itself. Hampian's analysis frames this as a marketing and distribution problem, not just a competition for fans.
+The US sports market represents the largest revenue opportunity for international leagues, but also the highest barrier to entry. With rugby union securing broadcast deals, college programs, and growing grassroots participation, the NRL faces a strategic challenge that's as much about marketing and content infrastructure as it is about the sport itself. Hampian's analysis frames this as a marketing and distribution problem, not just a competition for fans.
 
 
 ## David Hampian's Expertise
 
 
-Hampian brings hands-on experience in US sports market entry and sports betting launch strategy. His work launching Hard Rock Bet gave him deep exposure to the intersection of sports media, betting, and fan engagement. His leadership of Twitch's expansion into sports broadcasting provided insight into how digital-first platforms can create year-round audience engagement — a capability he argues is essential for any international league seeking US relevance.
+Hampian brings hands-on experience in US sports market entry and sports betting launch strategy. His work launching Hard Rock Bet gave him deep exposure to the intersection of sports media, betting, and fan engagement. His leadership of Twitch's expansion into sports broadcasting provided insight into how digital-first platforms can create year-round audience engagement, a capability he argues is essential for any international league seeking US relevance.
 
 
 ## Key Themes

@@ -76,7 +76,7 @@ const guideSlug = guide.id.replace(/\.mdx?$/, '');
           <div class="gate-card">
             <div class="gate-icon">ð</div>
             <h3 class="gate-title">Get the Full Guide</h3>
-            <p class="gate-desc">Enter your email to unlock the complete {guide.data.framework} framework guide &mdash; including implementation steps, templates, and real examples.</p>
+            <p class="gate-desc">Enter your email to unlock the complete {guide.data.framework} framework guide, including implementation steps, templates, and real examples.</p>
             <form class="guide-gate-submit">
               <input type="text" name="name" placeholder="First name" class="gate-input" />
               <input type="email" name="email" placeholder="Work email" class="gate-input" required />
@@ -114,7 +114,7 @@ const guideSlug = guide.id.replace(/\.mdx?$/, '');
     <!-- ======== CTA FOOTER ======== -->
     <section class="guide-cta-footer">
       <h2>Ready to Put This Into Action?</h2>
-      <p>Book a free strategy call and find out where your marketing stands &mdash; and what to fix first.</p>
+      <p>Book a free strategy call and find out where your marketing stands, and what to fix first.</p>
       <a href="/contact" class="cta-btn">Book a Call &rarr;</a>
     </section>
 
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (gate) {
         const banner = document.createElement('div');
         banner.className = 'preview-banner';
-        banner.innerHTML = '<span>Full Preview Mode</span> — Email gate is hidden';
+        banner.innerHTML = '<span>Full Preview Mode</span>, Email gate is hidden';
         gate.parentElement?.insertBefore(banner, gate);
       }
     }
@@ -1327,7 +1327,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 }
     :global(.download-btn) { display: inline-block; max-width: 100%; box-sizing: border-box; background: #A5DB5D; color: #213621 !important; padding: 16px 36px; border-radius: 8px; font-size: 1.15rem; font-weight: 700; text-decoration: none !important; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 12px; transition: all 0.2s ease; border: none; }
-    /* FAQ Accordion Styles — matches About page canonical format */
+    /* FAQ Accordion Styles, matches About page canonical format */
     :global(.faq-list) { display: flex; flex-direction: column; gap: 0; padding: 0; margin: 2rem 0; list-style: none; }
     :global(.faq-item) { border: none; border-bottom: 1px solid #e8e8e8; border-radius: 0; margin-bottom: 0; background: none; overflow: visible; }
     :global(.faq-item:first-child) { border-top: 1px solid #e8e8e8; }

@@ -3,7 +3,7 @@
  * Analytics Component
  *
  * Loads GA4 (gtag.js) immediately on every page load.
- * No consent gating — CCPA does not require opt-in consent for analytics.
+ * No consent gating, CCPA does not require opt-in consent for analytics.
  *
  * GTM is available as a container for future pixels (Meta, LinkedIn, etc.)
  *
@@ -16,7 +16,7 @@ const GA4_ID = 'G-W2HXBJNJ6V';
 const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID when ready
 ---
 
-<!-- GA4 (gtag.js) — fires immediately on every page -->
+<!-- GA4 (gtag.js), fires immediately on every page -->
 <script is:inline src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} async></script>
 <script define:vars={{ GA4_ID }}>
   window.dataLayer = window.dataLayer || [];
@@ -28,7 +28,7 @@ const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID when ready
   });
 </script>
 
-<!-- GTM Script — activate when GTM container is ready by uncommenting -->
+<!-- GTM Script, activate when GTM container is ready by uncommenting -->
 <!--
 <script define:vars={{ GTM_ID }}>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,7 +43,7 @@ const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID when ready
 </noscript>
 -->
 
-<!-- UTM parameter capture — runs immediately -->
+<!-- UTM parameter capture, runs immediately -->
 <script>
   (function() {
     const params = new URLSearchParams(window.location.search);
@@ -75,7 +75,7 @@ const GTM_ID = 'GTM-XXXXXXX'; // Replace with real GTM container ID when ready
   })();
 </script>
 
-<!-- Conversion event tracking — fires GA4 events for lead-intent and lead actions -->
+<!-- Conversion event tracking, fires GA4 events for lead-intent and lead actions -->
 <script>
   (function() {
     function gtagSafe() {

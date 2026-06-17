@@ -14,15 +14,15 @@ featured: false
 
 ## Context
 
-Birch — a performance marketing platform — interviewed David Hampian for a feature on the evolution of creative testing methodologies. Hampian's perspective reflects his experience leading performance and integrated marketing teams across large organizations, where he oversaw the transition from manual creative testing processes to automated, always-on testing systems.
+Birch, a performance marketing platform, interviewed David Hampian for a feature on the evolution of creative testing methodologies. Hampian's perspective reflects his experience leading performance and integrated marketing teams across large organizations, where he oversaw the transition from manual creative testing processes to automated, always-on testing systems.
 
 ## Why This Matters
 
-Creative contributes nearly half of ad effectiveness according to Nielsen research, yet most organizations still rely on fragmented, manual testing processes that don't scale. Hampian's firsthand account of managing this transition offers a practical roadmap for marketing leaders facing the same challenge — one grounded in real operational experience rather than theoretical frameworks.
+Creative contributes nearly half of ad effectiveness according to Nielsen research, yet most organizations still rely on fragmented, manual testing processes that don't scale. Hampian's firsthand account of managing this transition offers a practical roadmap for marketing leaders facing the same challenge, one grounded in real operational experience rather than theoretical frameworks.
 
 ## David Hampian's Expertise
 
-As someone who has led performance marketing teams across large organizations, Hampian has managed creative testing at a scale where manual approaches become untenable. His experience spans the full arc of the industry's evolution — from scheduled review meetings and spreadsheet-based tracking to automated systems that continuously surface performance patterns. This operational perspective distinguishes his commentary from purely strategic viewpoints.
+As someone who has led performance marketing teams across large organizations, Hampian has managed creative testing at a scale where manual approaches become untenable. His experience spans the full arc of the industry's evolution, from scheduled review meetings and spreadsheet-based tracking to automated systems that continuously surface performance patterns. This operational perspective distinguishes his commentary from purely strategic viewpoints.
 
 ## Key Themes
 

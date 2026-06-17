@@ -1,6 +1,6 @@
 ---
 title: "SCORE® Framework: Complete Guide"
-description: "Step-by-step implementation guide for the SCORE® Framework — Field Vision's five-step integrated marketing playbook. Learn how to Set the Foundation, Create the Hypothesis, Outline the Experiment Plan, Run the Play, and Evolve and Improve."
+description: "Step-by-step implementation guide for the SCORE® Framework, Field Vision's five-step integrated marketing playbook. Learn how to Set the Foundation, Create the Hypothesis, Outline the Experiment Plan, Run the Play, and Evolve and Improve."
 framework: "SCORE®"
 gated: true
 mailerliteGroupId: "181508100922017560"
@@ -19,7 +19,7 @@ phases: "5 Steps"
 
 The SCORE® Framework is a five-step strategic marketing methodology developed by Field Vision that helps B2C companies build hypothesis-driven marketing systems through five structured steps: Set the Foundation, Create the Hypothesis, Outline the Experiment Plan, Run the Play, and Evolve and Improve.
 
-SCORE is Field Vision's Integrated Marketing Playbook — a repeatable system that turns strategic context into testable hypotheses, structured experiments, disciplined execution, and compounding learning. It replaces gut-feel marketing with a rigorous, hypothesis-driven approach that builds playbooks over time.
+SCORE is Field Vision's Integrated Marketing Playbook, a repeatable system that turns strategic context into testable hypotheses, structured experiments, disciplined execution, and compounding learning. It replaces gut-feel marketing with a rigorous, hypothesis-driven approach that builds playbooks over time.
 
 Companies that align messaging to buyer psychology see 2.3x higher conversion rates ([Gartner, 2025](https://www.gartner.com/en/marketing)). Organizations using structured marketing frameworks report 28% faster campaign launches ([McKinsey Marketing Report, 2024](https://www.mckinsey.com/capabilities/growth-marketing-and-sales)). Yet fewer than 20% of B2C marketing teams operate with a documented, repeatable playbook ([HubSpot State of Marketing, 2025](https://www.hubspot.com/state-of-marketing)).
 
@@ -30,7 +30,7 @@ Companies that align messaging to buyer psychology see 2.3x higher conversion ra
 <div class="stat-item"><span class="stat-number">1</span><span class="stat-label">PLAYBOOK</span></div>
 </div>
 
-<blockquote>"Most B2C companies skip the Situation step entirely. They jump straight to pitching features. But if your prospect doesn't see themselves in your narrative, nothing else lands." — David Hampian, Founder, Field Vision</blockquote>
+<blockquote>"Most B2C companies skip the Situation step entirely. They jump straight to pitching features. But if your prospect doesn't see themselves in your narrative, nothing else lands.", David Hampian, Founder, Field Vision</blockquote>
 
 ## The Five Steps
 
@@ -39,7 +39,7 @@ Companies that align messaging to buyer psychology see 2.3x higher conversion ra
 <div class="overview-card"><div class="overview-card-badge">C</div><div class="overview-card-title">Create the Hypothesis</div><p>Translate context into a testable IF/THEN statement.</p></div>
 <div class="overview-card"><div class="overview-card-badge">O</div><div class="overview-card-title">Outline the Experiment Plan</div><p>Map your hypothesis into a holistic go-to-market plan.</p></div>
 <div class="overview-card"><div class="overview-card-badge">R</div><div class="overview-card-title">Run the Play</div><p>Execute with discipline and alignment.</p></div>
-<div class="overview-card"><div class="overview-card-badge">E</div><div class="overview-card-title">Evolve and Improve</div><p>Close the loop — learn, document, and compound.</p></div>
+<div class="overview-card"><div class="overview-card-badge">E</div><div class="overview-card-title">Evolve and Improve</div><p>Close the loop, learn, document, and compound.</p></div>
 </div>
 
 <div class="phase-section">
@@ -50,50 +50,50 @@ Companies that align messaging to buyer psychology see 2.3x higher conversion ra
 </div>
 <div class="output-card"><div class="output-icon">✓</div><div><strong>CHECKPOINT:</strong> Do we know what we need to do and for whom? You should walk away with a documented audience definition, clear business objectives, and a thorough understanding of the market landscape.</div></div>
 <div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>Amazon Music needed efficient subscriber acquisition. Setting the Foundation meant defining their TAM (non-Amazon Music customers), narrowing the SAM (18–34 year olds passionate about Latin, Hip-Hop, and World music), and identifying the key insight: differentiated content that listeners couldn't get anywhere else would be the driver.</p></div>
-<div class="key-principle"><strong>Key Principle:</strong> Strategy without context is guesswork. Setting the Foundation forces you to document who you serve, what you're solving, and where you play — before you spend a dollar on tactics.</div>
+<div class="key-principle"><strong>Key Principle:</strong> Strategy without context is guesswork. Setting the Foundation forces you to document who you serve, what you're solving, and where you play, before you spend a dollar on tactics.</div>
 </div>
 
 <div class="phase-section">
 <div class="phase-header"><div class="phase-badge">C</div><div><h3>Create the Hypothesis</h3><p class="phase-subtitle">Translate context into a testable IF/THEN statement</p></div></div>
 <div class="card-grid">
-<div class="card"><div class="card-label">WHAT YOU DO</div><p>Take everything you learned in Set the Foundation and distill it into a crisp, measurable hypothesis. This is the strategic choice that guides every tactical decision downstream — your IF/THEN statement that the entire plan is designed to prove or disprove.</p></div>
+<div class="card"><div class="card-label">WHAT YOU DO</div><p>Take everything you learned in Set the Foundation and distill it into a crisp, measurable hypothesis. This is the strategic choice that guides every tactical decision downstream, your IF/THEN statement that the entire plan is designed to prove or disprove.</p></div>
 <div class="card"><div class="card-label">WARNING SIGNS</div><p>Vague goals instead of testable hypotheses. No clear IF/THEN. Tactics chosen before the strategic bet is articulated. Multiple competing hypotheses without prioritization.</p></div>
 </div>
 <div class="output-card"><div class="output-icon">✓</div><div><strong>CHECKPOINT:</strong> Is the bet crisp and measurable? Your hypothesis should follow the format: "IF we do [specific action], THEN we will achieve [measurable outcome]."</div></div>
-<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>For Amazon Music, the hypothesis was clear: "IF we create exclusive content that listeners can't get anywhere else, THEN we will drive trial subscriptions among 18–34 year old music fans." Every downstream decision — channel mix, creative, targeting — laddered back to proving this single hypothesis.</p></div>
-<div class="key-principle"><strong>Key Principle:</strong> A hypothesis turns strategy into science. Without one, you're just running campaigns. With one, every campaign is an experiment that compounds your knowledge — whether it succeeds or fails.</div>
+<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>For Amazon Music, the hypothesis was clear: "IF we create exclusive content that listeners can't get anywhere else, THEN we will drive trial subscriptions among 18–34 year old music fans." Every downstream decision, channel mix, creative, targeting, laddered back to proving this single hypothesis.</p></div>
+<div class="key-principle"><strong>Key Principle:</strong> A hypothesis turns strategy into science. Without one, you're just running campaigns. With one, every campaign is an experiment that compounds your knowledge, whether it succeeds or fails.</div>
 </div>
 
 <div class="phase-section">
 <div class="phase-header"><div class="phase-badge">O</div><div><h3>Outline the Experiment Plan</h3><p class="phase-subtitle">Map your hypothesis into a holistic go-to-market plan</p></div></div>
 <div class="card-grid">
 <div class="card"><div class="card-label">WHAT YOU DO</div><p>Design the complete experiment: channel mix, targeting strategy, messaging framework, creative approach, and measurement plan. Every element should ladder back to proving or disproving your hypothesis. Build in experimentation at every level.</p></div>
-<div class="card"><div class="card-label">WARNING SIGNS</div><p>Tactics that don't connect to the hypothesis. No experimentation built into the plan. Skipping measurement design. Letting stakeholder preferences override strategic alignment — if a tactic doesn't answer the hypothesis, it doesn't belong in the plan.</p></div>
+<div class="card"><div class="card-label">WARNING SIGNS</div><p>Tactics that don't connect to the hypothesis. No experimentation built into the plan. Skipping measurement design. Letting stakeholder preferences override strategic alignment, if a tactic doesn't answer the hypothesis, it doesn't belong in the plan.</p></div>
 </div>
 <div class="output-card"><div class="output-icon">✓</div><div><strong>CHECKPOINT:</strong> Is the GTM plan holistic and predicated on experimentation that ladders to the hypothesis? Every channel, creative, and targeting choice should map back to the IF/THEN.</div></div>
-<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>The Amazon Music experiment plan: develop exclusive content → create templated creatives → deploy across paid channels → optimize the subscription onboarding flow. When a stakeholder pushed for retail widgets, the team pushed back — retail widgets wouldn't answer the hypothesis about exclusive content driving trial.</p></div>
-<div class="key-principle"><strong>Key Principle:</strong> The experiment plan is where strategy meets tactics. It's not a list of things to do — it's a structured test designed to generate learning. Every element either helps prove the hypothesis or it doesn't belong.</div>
+<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>The Amazon Music experiment plan: develop exclusive content → create templated creatives → deploy across paid channels → optimize the subscription onboarding flow. When a stakeholder pushed for retail widgets, the team pushed back, retail widgets wouldn't answer the hypothesis about exclusive content driving trial.</p></div>
+<div class="key-principle"><strong>Key Principle:</strong> The experiment plan is where strategy meets tactics. It's not a list of things to do, it's a structured test designed to generate learning. Every element either helps prove the hypothesis or it doesn't belong.</div>
 </div>
 
 <div class="phase-section">
 <div class="phase-header"><div class="phase-badge">R</div><div><h3>Run the Play</h3><p class="phase-subtitle">Execute with discipline and alignment</p></div></div>
 <div class="card-grid">
-<div class="card"><div class="card-label">WHAT YOU DO</div><p>Build and QA all funnels, assets, and tracking. Launch campaigns. Monitor performance in real-time. Keep execution tightly aligned with the experiment plan — resist scope creep and ad hoc requests that dilute the hypothesis test.</p></div>
+<div class="card"><div class="card-label">WHAT YOU DO</div><p>Build and QA all funnels, assets, and tracking. Launch campaigns. Monitor performance in real-time. Keep execution tightly aligned with the experiment plan, resist scope creep and ad hoc requests that dilute the hypothesis test.</p></div>
 <div class="card"><div class="card-label">WARNING SIGNS</div><p>Execution drifting from the plan. Skipping QA on tracking and attribution. No real-time monitoring. Adding tactics mid-flight that weren't part of the original experiment design.</p></div>
 </div>
 <div class="output-card"><div class="output-icon">✓</div><div><strong>CHECKPOINT:</strong> Is execution aligned with strategy? Every live campaign, funnel, and asset should be traceable back to the experiment plan and ultimately to the hypothesis.</div></div>
-<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>During execution, the team maintained strict alignment: exclusive content campaigns ran across the planned channels with proper attribution tagging. When early results showed strong engagement but weak conversion, they optimized the onboarding flow rather than abandoning the hypothesis — the data pointed to a funnel problem, not a strategy problem.</p></div>
-<div class="key-principle"><strong>Key Principle:</strong> Brilliant strategy dies in sloppy execution. Run the Play is about disciplined implementation — making sure what actually launches matches what was designed, with the tracking in place to learn from it.</div>
+<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>During execution, the team maintained strict alignment: exclusive content campaigns ran across the planned channels with proper attribution tagging. When early results showed strong engagement but weak conversion, they optimized the onboarding flow rather than abandoning the hypothesis, the data pointed to a funnel problem, not a strategy problem.</p></div>
+<div class="key-principle"><strong>Key Principle:</strong> Brilliant strategy dies in sloppy execution. Run the Play is about disciplined implementation, making sure what actually launches matches what was designed, with the tracking in place to learn from it.</div>
 </div>
 
 <div class="phase-section">
-<div class="phase-header"><div class="phase-badge">E</div><div><h3>Evolve and Improve</h3><p class="phase-subtitle">Close the loop — learn, document, and compound</p></div></div>
+<div class="phase-header"><div class="phase-badge">E</div><div><h3>Evolve and Improve</h3><p class="phase-subtitle">Close the loop, learn, document, and compound</p></div></div>
 <div class="card-grid">
-<div class="card"><div class="card-label">WHAT YOU DO</div><p>Analyze results against the hypothesis. Synthesize learnings — did you prove or disprove your IF/THEN? Conduct gap analysis on both outcomes and process. Report findings broadly across the organization. Document everything into repeatable playbooks.</p></div>
+<div class="card"><div class="card-label">WHAT YOU DO</div><p>Analyze results against the hypothesis. Synthesize learnings, did you prove or disprove your IF/THEN? Conduct gap analysis on both outcomes and process. Report findings broadly across the organization. Document everything into repeatable playbooks.</p></div>
 <div class="card"><div class="card-label">WARNING SIGNS</div><p>Celebrating vanity metrics instead of evaluating the hypothesis. No post-mortem process. Learnings trapped in one team's head. No playbook documentation. Starting the next campaign from scratch instead of building on what you learned.</p></div>
 </div>
 <div class="output-card"><div class="output-icon">✓</div><div><strong>CHECKPOINT:</strong> Did we prove or disprove the hypothesis? What's the gap analysis? Have learnings been documented into a playbook that the organization can reference and build on?</div></div>
-<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>Post-campaign analysis confirmed the hypothesis: exclusive content drove 3x higher trial rates than generic advertising. The team documented the winning creative frameworks, audience segments, and channel mix into a playbook — making the next campaign launch faster, cheaper, and more effective from day one.</p></div>
+<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>Post-campaign analysis confirmed the hypothesis: exclusive content drove 3x higher trial rates than generic advertising. The team documented the winning creative frameworks, audience segments, and channel mix into a playbook, making the next campaign launch faster, cheaper, and more effective from day one.</p></div>
 <div class="key-principle"><strong>Key Principle:</strong> Marketing without learning loops is just spending money. Evolve and Improve is what separates teams that compound their effectiveness from teams that start over every quarter. The playbook is the product.</div>
 </div>
 
@@ -103,7 +103,7 @@ Companies that align messaging to buyer psychology see 2.3x higher conversion ra
 <li class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><details><summary class="faq-question"><span itemprop="name">What does SCORE stand for?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">SCORE stands for Set the Foundation, Create the Hypothesis, Outline the Experiment Plan, Run the Play, and Evolve and Improve. Each step builds on the previous one to create a repeatable, hypothesis-driven marketing system.</p></div></details></li>
 <li class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><details><summary class="faq-question"><span itemprop="name">When should you use the SCORE Framework?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">SCORE is ideal when launching new campaigns, entering new markets, or when your current marketing feels reactive rather than strategic. It works best for B2C companies that need a structured approach to testing and learning rather than relying on gut-feel marketing decisions.</p></div></details></li>
 <li class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><details><summary class="faq-question"><span itemprop="name">How is SCORE different from other messaging frameworks?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Unlike traditional messaging frameworks that focus on what to say, SCORE focuses on how to test and learn. It treats every campaign as a structured experiment with a clear hypothesis, measurement plan, and documented learnings that compound over time into a reusable playbook.</p></div></details></li>
-<li class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><details><summary class="faq-question"><span itemprop="name">Can SCORE be used for B2B marketing?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Yes. While SCORE was developed for B2C contexts, the hypothesis-driven approach applies to any marketing environment. The key principles — setting strategic context, creating testable hypotheses, running structured experiments, and building playbooks — are universal. B2B teams may adjust the cycle speed and buying committee dynamics but the framework applies.</p></div></details></li>
+<li class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><details><summary class="faq-question"><span itemprop="name">Can SCORE be used for B2B marketing?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Yes. While SCORE was developed for B2C contexts, the hypothesis-driven approach applies to any marketing environment. The key principles, setting strategic context, creating testable hypotheses, running structured experiments, and building playbooks, are universal. B2B teams may adjust the cycle speed and buying committee dynamics but the framework applies.</p></div></details></li>
 </ul>
 
 ## What You Get

@@ -20,14 +20,14 @@ const slug = service.id.replace(/\.md$/, '');
 
 /* ── Highlight chip helper: wraps last word in hl-green ── */
 function chipLastWord(text, chipClass = 'hl-green') {
-  // Chip the last word — trailing punctuation stays inside the span (R19)
+  // Chip the last word, trailing punctuation stays inside the span (R19)
   const words = text.trim().split(/\s+/);
   if (words.length <= 1) return text;
   const last = words.pop();
   return words.join(' ') + ' <span class="' + chipClass + '">' + last + '</span>';
 }
 function chipCtaWord(text, chipClass = 'hl-green') {
-  // Chip the last word — include trailing punctuation INSIDE the span (R19)
+  // Chip the last word, include trailing punctuation INSIDE the span (R19)
   const match = text.match(/^(.+?)\s+(\S+?)([?!.]?)$/);
   if (!match) return text;
   const [, prefix, lastWord, punct] = match;
@@ -175,17 +175,17 @@ const faqSchema = d.faqs?.length ? {
     <div class="svcpg-abct-inner">
       <span class="eyebrow">Our Proven Framework</span>
       <h2>The <span class="hl-green">ABCT®</span> Model</h2>
-      <p class="svcpg-abct-intro">Every engagement follows our proven four-phase framework — designed to deliver results and build independence.</p>
+      <p class="svcpg-abct-intro">Every engagement follows our proven four-phase framework, designed to deliver results and build independence.</p>
       <div class="svcpg-abct-grid">
         {(d.abctSteps || [
           { step: 'A', title: 'Audit', desc: "Deep-dive diagnostic into what's working, what's not, and where the biggest opportunities are." },
-          { step: 'B', title: 'Blueprint', desc: "Strategy, positioning, and channel plan — tied directly to your growth model and business goals." },
+          { step: 'B', title: 'Blueprint', desc: "Strategy, positioning, and channel plan, tied directly to your growth model and business goals." },
           { step: 'C', title: 'Construct', desc: "Stand up the systems, processes, and team structure to execute the strategy at scale." },
-          { step: 'T', title: 'Transfer', desc: "Document everything and hand it off so your team can run independently — built to be fired." },
+          { step: 'T', title: 'Transfer', desc: "Document everything and hand it off so your team can run independently, built to be fired." },
         ]).map((s: { step: string; title: string; desc: string }, i: number) => (
           <div class="svcpg-abct-card">
             <span class="svcpg-abct-num">0{i + 1}</span>
-            <h3>{s.step} — {s.title}</h3>
+            <h3>{s.step}, {s.title}</h3>
             <p>{s.desc}</p>
           </div>
         ))}

@@ -8,7 +8,7 @@
     </div>
     <div class="hero-lede-row">
       <div class="hero-lede">
-        <p>We come in at <span class="mark">inflection points</span> — product launches, new market entries, growth plateaus — to align your strategy, test what works, and install systems that scale.</p>
+        <p>We come in at <span class="mark">inflection points</span>, product launches, new market entries, growth plateaus, to align your strategy, test what works, and install systems that scale.</p>
       </div>
       <a href="/contact/" class="btn-brutal">Book a Call <span>→</span></a>
     </div>
@@ -149,10 +149,10 @@
     idx = (idx+1) % plays.length;
     renderPlay(playEl, bgEl, p);
     if (labelEl) { labelEl.style.opacity = '0'; setTimeout(function(){ labelEl.textContent = serviceNames[serviceIdx]; serviceIdx = (serviceIdx+1) % serviceNames.length; labelEl.style.opacity = '1'; }, 400); }
-    fadeEl(playEl,1,.8).then(function(){
+    fadeEl(playEl,1.8).then(function(){
       return new Promise(function(r){ timers.push(setTimeout(r,5200)); });
     }).then(function(){
-      return fadeEl(playEl,0,.8);
+      return fadeEl(playEl,0.8);
     }).then(function(){
       if (active) cycle();
     });

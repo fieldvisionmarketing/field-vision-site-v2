@@ -1,6 +1,6 @@
 ---
 title: "PLOT Framework: Complete Guide"
-description: "Step-by-step implementation guide for the PLOT Framework — four steps to secure more marketing budget by proving financial impact. Learn how to Partner, Locate High Value Actions, Outline the Impact, and Tell the Story."
+description: "Step-by-step implementation guide for the PLOT Framework, four steps to secure more marketing budget by proving financial impact. Learn how to Partner, Locate High Value Actions, Outline the Impact, and Tell the Story."
 framework: "PLOT"
 gated: true
 mailerliteGroupId: "181508100922017560"
@@ -29,7 +29,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
   <div class="stat-item"><span class="stat-number">1</span><span class="stat-label">INVESTMENT CASE</span></div>
 </div>
 
-<blockquote>"CFOs don't care about impressions. They care about pipeline and revenue. PLOT exists because the biggest reason marketing budgets get cut is that marketers can't speak Finance's language." — David Hampian, Founder, Field Vision</blockquote>
+<blockquote>"CFOs don't care about impressions. They care about pipeline and revenue. PLOT exists because the biggest reason marketing budgets get cut is that marketers can't speak Finance's language.", David Hampian, Founder, Field Vision</blockquote>
 
 ## The Four Steps
 
@@ -68,7 +68,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
 <div class="card-grid">
   <div class="card">
     <div class="card-label">WHAT YOU DO</div>
-    <p>Build partnerships with Finance, Strategy, Product, and Analytics before you ever ask for budget. Set up a "Pre-Flight Meeting" to understand the business problem, success measures, risks, and how marketing contributes — so your eventual ask is grounded in shared context.</p>
+    <p>Build partnerships with Finance, Strategy, Product, and Analytics before you ever ask for budget. Set up a "Pre-Flight Meeting" to understand the business problem, success measures, risks, and how marketing contributes, so your eventual ask is grounded in shared context.</p>
   </div>
   <div class="card">
     <div class="card-label">KEY QUESTIONS</div>
@@ -89,7 +89,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
 </div>
 
 <div class="key-principle">
-  <strong>Key Principle:</strong> You'll never win a budget fight. But you can win a partnership. When Finance understands the business problem you're solving — because they helped define it — the budget conversation becomes a formality, not a battle.
+  <strong>Key Principle:</strong> You'll never win a budget fight. But you can win a partnership. When Finance understands the business problem you're solving, because they helped define it, the budget conversation becomes a formality, not a battle.
 </div>
 </div>
 
@@ -109,7 +109,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
   </div>
   <div class="card">
     <div class="card-label">THE FOUR SUB-STEPS</div>
-    <p><strong>L1:</strong> Map the Customer Journey — identify 6–10 major stages. <strong>L2:</strong> Find Correlations — run behavioral models to pick top 2–3 HVAs. <strong>L3:</strong> Calculate Lift — compare users who perform the HVA vs. those who don't. <strong>L4:</strong> Assign Financial Value — agree on a dollar figure per HVA with Finance.</p>
+    <p><strong>L1:</strong> Map the Customer Journey, identify 6–10 major stages. <strong>L2:</strong> Find Correlations, run behavioral models to pick top 2–3 HVAs. <strong>L3:</strong> Calculate Lift, compare users who perform the HVA vs. those who don't. <strong>L4:</strong> Assign Financial Value, agree on a dollar figure per HVA with Finance.</p>
   </div>
 </div>
 
@@ -146,7 +146,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
   </div>
   <div class="card">
     <div class="card-label">THE FOUR SUB-STEPS</div>
-    <p><strong>O1:</strong> Analyze Marketing Channels — which touchpoints precede HVAs? <strong>O2:</strong> Cluster and Prioritize — score each HVA on Business Value × Marketing Achievability. <strong>O3:</strong> Validate with Experiments — prove causation with controlled tests. <strong>O4:</strong> Model Total Value — Incremental Lift × Reach × HVA Value = Total Value Driven.</p>
+    <p><strong>O1:</strong> Analyze Marketing Channels, which touchpoints precede HVAs? <strong>O2:</strong> Cluster and Prioritize, score each HVA on Business Value × Marketing Achievability. <strong>O3:</strong> Validate with Experiments, prove causation with controlled tests. <strong>O4:</strong> Model Total Value, Incremental Lift × Reach × HVA Value = Total Value Driven.</p>
   </div>
 </div>
 
@@ -159,11 +159,11 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
 
 <div class="example-card">
   <div class="card-label">REAL-WORLD EXAMPLE</div>
-  <p>The team ran a controlled experiment: users who received a targeted onboarding email sequence were 2.3x more likely to complete integration (their HVA). With 50,000 users reached and each integration worth $340, marketing could demonstrate $39M in influenced downstream value — against a $2M campaign cost.</p>
+  <p>The team ran a controlled experiment: users who received a targeted onboarding email sequence were 2.3x more likely to complete integration (their HVA). With 50,000 users reached and each integration worth $340, marketing could demonstrate $39M in influenced downstream value, against a $2M campaign cost.</p>
 </div>
 
 <div class="key-principle">
-  <strong>Key Principle:</strong> Correlation gets attention. Causation gets budget. Outline the Impact is where you move from "marketing touches helped" to "marketing investment produced this measurable financial return" — using experiments executives trust.
+  <strong>Key Principle:</strong> Correlation gets attention. Causation gets budget. Outline the Impact is where you move from "marketing touches helped" to "marketing investment produced this measurable financial return", using experiments executives trust.
 </div>
 </div>
 
@@ -179,7 +179,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
 <div class="card-grid">
   <div class="card">
     <div class="card-label">WHAT YOU DO</div>
-    <p>Build a nine-step narrative: you partnered across teams, identified what drives value, proved which actions matter, ran experiments, measured the impact, showed the ROI, highlighted what you learned, and present your ask — ending with the investment case and expected return.</p>
+    <p>Build a nine-step narrative: you partnered across teams, identified what drives value, proved which actions matter, ran experiments, measured the impact, showed the ROI, highlighted what you learned, and present your ask, ending with the investment case and expected return.</p>
   </div>
   <div class="card">
     <div class="card-label">WARNING SIGNS</div>
@@ -190,7 +190,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
 <div class="output-card">
   <div class="output-icon">✓</div>
   <div>
-    <strong>OUTPUT:</strong> An executive-ready investment narrative that ends with: "With an investment of $X, we will generate $Y in long-term value for the business" — backed by every data point from the previous three steps.
+    <strong>OUTPUT:</strong> An executive-ready investment narrative that ends with: "With an investment of $X, we will generate $Y in long-term value for the business", backed by every data point from the previous three steps.
   </div>
 </div>
 
@@ -200,7 +200,7 @@ Story-driven content generates 3x more engagement than feature-led messaging ([C
 </div>
 
 <div class="key-principle">
-  <strong>Key Principle:</strong> Marketing is an investment, not a cost — but only if you can prove it. Tell the Story is the culmination of PLOT: a confident, data-backed narrative that makes budget approval the logical conclusion, not a leap of faith.
+  <strong>Key Principle:</strong> Marketing is an investment, not a cost, but only if you can prove it. Tell the Story is the culmination of PLOT: a confident, data-backed narrative that makes budget approval the logical conclusion, not a leap of faith.
 </div>
 </div>
 

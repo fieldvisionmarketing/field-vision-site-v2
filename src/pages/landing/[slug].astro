@@ -18,7 +18,7 @@ export function getStaticPaths() {
   const pages: Record<string, any> = {
     'fractional-cmo-sf': {
       title: 'Fractional CMO for SF Startups',
-      headline: 'Your Startup Needs a Marketing Leader — Not Another Agency',
+      headline: 'Your Startup Needs a Marketing Leader, Not Another Agency',
       subheadline: 'Get executive-level marketing strategy, systems, and team oversight at a fraction of the cost of a full-time CMO.',
       cta: 'Book a Free Strategy Call',
       bookingUrl: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ000qS7-Zde2OJuhy9OE-k5POEPYrBYIcs3nSIioTUUg3So_ia8Ao5axqJ7HF39xP_BSH84Cz4v?gv=true',
@@ -26,7 +26,7 @@ export function getStaticPaths() {
         'Strategic direction tied to your growth model',
         'Execution systems that run without heroics',
         'Team and vendor management from day one',
-        'Built to transfer — we leave you better than we found you',
+        'Built to transfer, we leave you better than we found you',
       ],
       socialProof: 'Trusted by teams from Amazon, Twitch, Pandora & Hard Rock',
       testimonial: {
@@ -48,7 +48,7 @@ if (!page) return Astro.redirect('/404');
 ---
 
 <BaseLayout title={page.title} description={page.subheadline}>
-  <!-- No header nav — landing pages are distraction-free -->
+  <!-- No header nav, landing pages are distraction-free -->
 
   <div class="lp">
     <div class="lp-inner">

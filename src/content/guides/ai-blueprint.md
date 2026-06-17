@@ -12,7 +12,7 @@ schemaJson: '{"@context": "https://schema.org", "@type": "HowTo", "name": "How t
 
 ## What Is the AI Blueprint?
 
-The AI Marketing Blueprint is a structured implementation plan developed by David Hampian that provides a three-part framework — Audit Friction, Build a Blueprint, and Set Guardrails — for systematically deploying AI across marketing workflows. The AI Blueprint is a 3-part systematic framework for implementing AI in marketing workflows. It moves teams from random AI experimentation to measurable, goal-driven AI deployment. You’ll shift from asking "What can AI do?" to asking "Where does AI create leverage?"—and then you’ll actually deploy it.
+The AI Marketing Blueprint is a structured implementation plan developed by David Hampian that provides a three-part framework, Audit Friction, Build a Blueprint, and Set Guardrails, for systematically deploying AI across marketing workflows. The AI Blueprint is a 3-part systematic framework for implementing AI in marketing workflows. It moves teams from random AI experimentation to measurable, goal-driven AI deployment. You’ll shift from asking "What can AI do?" to asking "Where does AI create leverage?", and then you’ll actually deploy it.
 
 72% of marketing teams are experimenting with AI but only 19% have a systematic implementation plan ([Salesforce State of Marketing, 2025](https://www.salesforce.com/resources/research-reports/state-of-marketing/)). Companies with structured AI adoption see 40% higher productivity gains than those with ad-hoc approaches ([McKinsey AI Report, 2024](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)). Yet 67% of AI marketing initiatives fail due to lack of governance and guardrails ([Gartner AI Survey, 2025](https://www.gartner.com/en/articles/ai-in-marketing)).
 
@@ -41,7 +41,7 @@ The AI Marketing Blueprint is a structured implementation plan developed by Davi
   </div>
 </div>
 
-<blockquote>"The biggest mistake marketing teams make with AI isn't using the wrong tools — it's not having a framework for deciding which problems to solve first. The AI Blueprint forces you to start with friction, not features." — David Hampian, Founder, Field Vision</blockquote>
+<blockquote>"The biggest mistake marketing teams make with AI isn't using the wrong tools, it's not having a framework for deciding which problems to solve first. The AI Blueprint forces you to start with friction, not features.", David Hampian, Founder, Field Vision</blockquote>
 
 ## The Three Parts
 
@@ -74,7 +74,7 @@ The AI Marketing Blueprint is a structured implementation plan developed by Davi
     </div>
   </div>
 
-The fundamental shift is from "AI as a tool" to "AI as a teammate." You’re not looking for better ChatGPT prompts. You’re looking for workflows where humans are doing repetitive data translation between systems—and that’s where AI creates real leverage.
+The fundamental shift is from "AI as a tool" to "AI as a teammate." You’re not looking for better ChatGPT prompts. You’re looking for workflows where humans are doing repetitive data translation between systems, and that’s where AI creates real leverage.
 
 ### The Core Concept: The Friction-to-AI Pipeline
 
@@ -145,7 +145,7 @@ Now you take your friction map and turn it into an actionable roadmap. This is t
     <div class="step-content">
       <div class="step-label">Define the Workflow</div>
       <div class="step-title">Name it. Document it. Identify the bottleneck.</div>
-      <p class="step-description">Take your friction point and name it clearly. Document what the workflow does, where data enters, where it exits, and which human is currently the bottleneck. Example: "Lead Scoring Pipeline — Manual review of inbound leads before sales handoff. Sarah spends 6 hours/week reviewing 300 leads in HubSpot and tagging them by stage."</p>
+      <p class="step-description">Take your friction point and name it clearly. Document what the workflow does, where data enters, where it exits, and which human is currently the bottleneck. Example: "Lead Scoring Pipeline, Manual review of inbound leads before sales handoff. Sarah spends 6 hours/week reviewing 300 leads in HubSpot and tagging them by stage."</p>
     </div>
   </div>
   <div class="step-item">
@@ -253,7 +253,7 @@ You’ve mapped friction. You’ve built specifications. Now you need to ensure 
     <div class="step-content">
       <div class="step-label">Set the Kill-Switch</div>
       <div class="step-title">Confidence threshold. Auto-escalation. Emergency protocols.</div>
-      <p class="step-description">Every AI workflow needs a confidence threshold. Standard: 85% confidence minimum. Below that, the system pauses or escalates. Also document the off switch—the one-click way to disable AI and revert to manual workflow.</p>
+      <p class="step-description">Every AI workflow needs a confidence threshold. Standard: 85% confidence minimum. Below that, the system pauses or escalates. Also document the off switch, the one-click way to disable AI and revert to manual workflow.</p>
     </div>
   </div>
 </div>
@@ -291,7 +291,7 @@ You’ve mapped friction. You’ve built specifications. Now you need to ensure 
 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 <h3 itemprop="name">Where should you start with AI in marketing?</h3>
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-<div itemprop="text">Start by auditing friction — identify the bottlenecks where humans are acting as slow middleware between systems. Look for repetitive tasks with clear inputs and outputs, high-volume processes with consistent patterns, and areas where speed matters more than creativity. These are your highest-ROI AI opportunities.</div>
+<div itemprop="text">Start by auditing friction, identify the bottlenecks where humans are acting as slow middleware between systems. Look for repetitive tasks with clear inputs and outputs, high-volume processes with consistent patterns, and areas where speed matters more than creativity. These are your highest-ROI AI opportunities.</div>
 </div>
 </div>
 

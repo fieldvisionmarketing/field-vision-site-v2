@@ -1,6 +1,6 @@
 ---
 title: "Compound Growth System®"
-description: "The 4 C's Flywheel for Scalable Customer Acquisition & Retention — Catch, Convert, Cultivate, and Champion your way to compounding growth."
+description: "The 4 C's Flywheel for Scalable Customer Acquisition & Retention, Catch, Convert, Cultivate, and Champion your way to compounding growth."
 framework: "Compound Growth"
 gated: true
 mailerliteGroupId: ""
@@ -12,7 +12,7 @@ schemaJson: '{"@context": "https://schema.org", "@type": "HowTo", "name": "How t
 
 ## What Is Compound Growth?
 
-The Compound Growth System® is an integrated marketing operating model developed by Field Vision that drives scalable customer acquisition and retention through a four-phase flywheel: Catch, Convert, Cultivate, and Champion. Most companies optimize one funnel stage and call it a day. The Compound Growth System® is different. It's a four-phase flywheel—**CATCH, CONVERT, CULTIVATE, CHAMPION**—that locks growth at every customer lifecycle stage. Each phase multiplies the previous one. You earn attention, remove friction, build habit, and turn customers into multipliers. Done right, it compounds.
+The Compound Growth System® is an integrated marketing operating model developed by Field Vision that drives scalable customer acquisition and retention through a four-phase flywheel: Catch, Convert, Cultivate, and Champion. Most companies optimize one funnel stage and call it a day. The Compound Growth System® is different. It's a four-phase flywheel, **CATCH, CONVERT, CULTIVATE, CHAMPION**, that locks growth at every customer lifecycle stage. Each phase multiplies the previous one. You earn attention, remove friction, build habit, and turn customers into multipliers. Done right, it compounds.
 
 
 Companies using integrated multi-channel marketing see 300% higher ROI than single-channel approaches ([Aberdeen Group, 2024](https://www.aberdeen.com/)). Businesses that prioritize customer retention alongside acquisition grow revenue 2.5x faster than those focused on acquisition alone ([Bain & Company, 2024](https://www.bain.com/insights/)). Multi-channel attribution benchmarks show compound content strategies deliver 4.2x the pipeline influence of campaign-based approaches ([Forrester, 2025](https://www.forrester.com/research/)).
@@ -38,7 +38,7 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
   </div>
 </div>
 
-<blockquote>"Growth doesn't come from optimizing one funnel stage — it comes from connecting all four. When Catch feeds Convert, Convert feeds Cultivate, and Cultivate creates Champions, you get compound growth that accelerates over time." — David Hampian, Founder, Field Vision</blockquote>
+<blockquote>"Growth doesn't come from optimizing one funnel stage, it comes from connecting all four. When Catch feeds Convert, Convert feeds Cultivate, and Cultivate creates Champions, you get compound growth that accelerates over time.", David Hampian, Founder, Field Vision</blockquote>
 
 ## The 4 Phases at a Glance
 
@@ -346,21 +346,21 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 <h3 itemprop="name">What is compound growth in marketing?</h3>
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-<div itemprop="text">Compound growth in marketing means building systems where each customer interaction strengthens the next. Instead of running isolated campaigns, the Compound Growth System® creates a flywheel where attention (Catch) feeds conversion (Convert), conversion feeds retention (Cultivate), and retention creates advocacy (Champion) — each phase multiplying the previous one.</div>
+<div itemprop="text">Compound growth in marketing means building systems where each customer interaction strengthens the next. Instead of running isolated campaigns, the Compound Growth System® creates a flywheel where attention (Catch) feeds conversion (Convert), conversion feeds retention (Cultivate), and retention creates advocacy (Champion), each phase multiplying the previous one.</div>
 </div>
 </div>
 
 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 <h3 itemprop="name">How long does it take to see results from compound growth?</h3>
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-<div itemprop="text">Initial results from individual phases can appear within 30-60 days. The compounding effect — where phases reinforce each other — typically becomes measurable at 90-120 days. Full flywheel momentum, where Champions are actively feeding new Catch opportunities, usually takes 6-12 months to establish.</div>
+<div itemprop="text">Initial results from individual phases can appear within 30-60 days. The compounding effect, where phases reinforce each other, typically becomes measurable at 90-120 days. Full flywheel momentum, where Champions are actively feeding new Catch opportunities, usually takes 6-12 months to establish.</div>
 </div>
 </div>
 
 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 <h3 itemprop="name">Which channels work best for compound growth?</h3>
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-<div itemprop="text">The best channels depend on your audience and business model. The Compound Growth System® is channel-agnostic — it focuses on the lifecycle stages rather than specific channels. Most B2C implementations include content marketing, email nurture, customer success programs, and referral systems across the four phases.</div>
+<div itemprop="text">The best channels depend on your audience and business model. The Compound Growth System® is channel-agnostic, it focuses on the lifecycle stages rather than specific channels. Most B2C implementations include content marketing, email nurture, customer success programs, and referral systems across the four phases.</div>
 </div>
 </div>
 

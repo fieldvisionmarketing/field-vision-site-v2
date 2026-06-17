@@ -21,7 +21,7 @@ const siteUrl = 'https://fieldvisiongroup.com';
 const slug = industry.id.replace(/\.md$/, '');
 const pageUrl = `${siteUrl}/industries/${slug}/`;
 
-/* Chip helpers (R10/R19) — trailing punctuation stays inside the chip */
+/* Chip helpers (R10/R19), trailing punctuation stays inside the chip */
 function chipLastWord(text, chipClass = 'hl-green') {
   const words = text.trim().split(/\s+/);
   if (words.length <= 1) return text;
@@ -237,7 +237,7 @@ const faqSchema = d.faqs?.length ? {
 </BaseLayout>
 
 <style>
-  /* Entity lead — GEO-liftable paragraph, canonical tokens (R5) */
+  /* Entity lead, GEO-liftable paragraph, canonical tokens (R5) */
   .ind-lead {
     font-size: clamp(17px, 1.7vw, 21px);
     line-height: 1.6;
@@ -260,7 +260,7 @@ const faqSchema = d.faqs?.length ? {
     max-width: 720px;
     margin: 0 0 40px;
   }
-  /* Proof card — informational (R3 cream-header via .svcpg-del-icon), logo swap */
+  /* Proof card, informational (R3 cream-header via .svcpg-del-icon), logo swap */
   .ind-proof-logo {
     width: 36px;
     height: 36px;

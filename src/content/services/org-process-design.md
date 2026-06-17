@@ -1,6 +1,6 @@
 ---
 title: "Marketing Organization & Process Design"
-description: "We design marketing organizations that are structured to execute and built to scale — from org charts to operating rhythms to hiring roadmaps."
+description: "We design marketing organizations that are structured to execute and built to scale, from org charts to operating rhythms to hiring roadmaps."
 icon: "⚙️"
 order: 6
 sidebar:
@@ -15,13 +15,13 @@ sidebar:
   - label: "Location"
     value: "SF-based, nationwide"
 problemHeadline: "Your Team Scaled, But Your Structure Did Not."
-problemIntro: "Marketing organization design is the practice of structuring teams, roles, workflows, and operating rhythms so that a marketing function can execute effectively and scale without breaking. Most startups scale their marketing team by adding people without rethinking how work gets done. The result is a team that is twice as large but not twice as effective — bottlenecks multiply, ownership is unclear, and processes that worked at five people break at fifteen. Real scaling requires intentional structure, not just more headcount."
+problemIntro: "Marketing organization design is the practice of structuring teams, roles, workflows, and operating rhythms so that a marketing function can execute effectively and scale without breaking. Most startups scale their marketing team by adding people without rethinking how work gets done. The result is a team that is twice as large but not twice as effective, bottlenecks multiply, ownership is unclear, and processes that worked at five people break at fifteen. Real scaling requires intentional structure, not just more headcount."
 oldWay:
   - "Hiring to fill gaps without a structured organizational plan"
   - "No clear role definitions, ownership boundaries, or career paths"
   - "Processes that worked at 5 people breaking down at 15"
   - "Vendor and agency relationships managed ad hoc with no performance criteria"
-  - "No operating rhythm — meetings without cadence, accountability, or decision frameworks"
+  - "No operating rhythm, meetings without cadence, accountability, or decision frameworks"
   - "Team development treated as an afterthought instead of a strategic priority"
 newWay:
   - "Marketing org designed for your current stage AND your next 12 months of growth"
@@ -33,7 +33,7 @@ newWay:
 deliverables:
   - icon: "🏗️"
     title: "Org Design"
-    desc: "Marketing organization structure built for your current stage and next 12 months of growth — with clear reporting lines and cross-functional alignment."
+    desc: "Marketing organization structure built for your current stage and next 12 months of growth, with clear reporting lines and cross-functional alignment."
   - icon: "⚙️"
     title: "Role Architecture"
     desc: "Defined roles with ownership clarity, responsibilities, career progression paths, and performance expectations."
@@ -42,7 +42,7 @@ deliverables:
     desc: "Meeting cadence, decision frameworks, and team rituals that keep execution moving without depending on the founder in the room."
   - icon: "🔄"
     title: "Process Playbook"
-    desc: "Documented workflows from campaign conception through execution and post-launch analysis — built to be learned and repeated."
+    desc: "Documented workflows from campaign conception through execution and post-launch analysis, built to be learned and repeated."
   - icon: "👥"
     title: "Hiring Roadmap"
     desc: "Phased hiring plan with role priorities, profile specifications, and sequencing tied to your growth milestones."
@@ -75,15 +75,15 @@ abctSteps:
     desc: "We embed with your leadership team to ensure the new structure compounds. This includes quarterly org health reviews, process refinement, hiring support as you bring on new team members, and coaching on scaling leadership capabilities."
 faqs:
   - question: "How should I structure my marketing team at a startup?"
-    answer: "Marketing team structure at a startup depends on your stage and growth priorities. At the seed stage, you typically need one to two generalists who can cover multiple functions. By Series A, you need specialists in your highest-leverage channels — usually a growth marketer, content marketer, and someone owning brand or product marketing. By Series B and beyond, you are building a full function with clear reporting lines, specialized roles, and cross-functional coordination. The key principle is to design your org for where you will be in 12 months, not just where you are today. We help founders build this structure intentionally rather than reactively."
+    answer: "Marketing team structure at a startup depends on your stage and growth priorities. At the seed stage, you typically need one to two generalists who can cover multiple functions. By Series A, you need specialists in your highest-leverage channels, usually a growth marketer, content marketer, and someone owning brand or product marketing. By Series B and beyond, you are building a full function with clear reporting lines, specialized roles, and cross-functional coordination. The key principle is to design your org for where you will be in 12 months, not just where you are today. We help founders build this structure intentionally rather than reactively."
   - question: "When should a startup hire its first marketing leader?"
-    answer: "Most startups should bring in marketing leadership — whether fractional or full-time — once they have product-market fit and are ready to scale acquisition and retention. Common triggers include preparing for a product launch, raising a Series A, hitting a growth plateau, or realizing the founder can no longer manage marketing alongside everything else. A fractional CMO is often the right first step because it provides senior strategic leadership without the $500K+ total compensation of a full-time hire. The marketing leader then builds the team and systems underneath them."
+    answer: "Most startups should bring in marketing leadership, whether fractional or full-time, once they have product-market fit and are ready to scale acquisition and retention. Common triggers include preparing for a product launch, raising a Series A, hitting a growth plateau, or realizing the founder can no longer manage marketing alongside everything else. A fractional CMO is often the right first step because it provides senior strategic leadership without the $500K+ total compensation of a full-time hire. The marketing leader then builds the team and systems underneath them."
   - question: "How do you scale a marketing team without losing quality?"
-    answer: "Scaling a marketing team without losing quality requires three things: clear role definitions with ownership boundaries so people know exactly what they own, documented processes and workflows so work is repeatable and not dependent on tribal knowledge, and an operating rhythm with cadence, rituals, and decision frameworks that keep execution coordinated. Most teams lose quality when they scale because they add people without adding structure. We design the structure first, then help you hire into it — so each new team member amplifies output instead of creating confusion."
+    answer: "Scaling a marketing team without losing quality requires three things: clear role definitions with ownership boundaries so people know exactly what they own, documented processes and workflows so work is repeatable and not dependent on tribal knowledge, and an operating rhythm with cadence, rituals, and decision frameworks that keep execution coordinated. Most teams lose quality when they scale because they add people without adding structure. We design the structure first, then help you hire into it, so each new team member amplifies output instead of creating confusion."
   - question: "What marketing roles should a startup hire first?"
-    answer: "The first marketing hires depend on your growth model and highest-leverage channels. For most startups in digital media and entertainment, the first three hires are typically a growth marketer who owns acquisition and retention metrics, a content marketer who builds the editorial engine and search presence, and a brand or product marketer who owns positioning and messaging. After that, you layer in specialists based on your channel mix — paid media, lifecycle marketing, partnerships, community, or creative. We build a phased hiring roadmap that sequences these roles based on your specific priorities and budget."
+    answer: "The first marketing hires depend on your growth model and highest-leverage channels. For most startups in digital media and entertainment, the first three hires are typically a growth marketer who owns acquisition and retention metrics, a content marketer who builds the editorial engine and search presence, and a brand or product marketer who owns positioning and messaging. After that, you layer in specialists based on your channel mix, paid media, lifecycle marketing, partnerships, community, or creative. We build a phased hiring roadmap that sequences these roles based on your specific priorities and budget."
   - question: "How do you design marketing processes that scale?"
-    answer: "Scalable marketing processes share four characteristics: they are documented so anyone can follow them, they have clear ownership so nothing falls through the cracks, they include quality checkpoints so standards are maintained, and they are designed for iteration so they improve over time. We build process playbooks covering the full marketing workflow — from campaign planning and creative briefing through execution, measurement, and post-launch analysis. The goal is to create a system where great work is the default, not the exception — and where the team can operate at speed without sacrificing quality."
+    answer: "Scalable marketing processes share four characteristics: they are documented so anyone can follow them, they have clear ownership so nothing falls through the cracks, they include quality checkpoints so standards are maintained, and they are designed for iteration so they improve over time. We build process playbooks covering the full marketing workflow, from campaign planning and creative briefing through execution, measurement, and post-launch analysis. The goal is to create a system where great work is the default, not the exception, and where the team can operate at speed without sacrificing quality."
 ctaHeadline: "Ready to Scale Your Team?"
 ctaBody: "Book a 30-minute discovery call. We will assess your current marketing org and map the structure that takes you to the next stage of growth."
 ---
