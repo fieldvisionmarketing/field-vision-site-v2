@@ -374,12 +374,6 @@ const entries = ['foundation', 'focused', 'full'];
         }
       });
 
-      // Keyboard: Enter/Space on option cards and chips
-      document.querySelectorAll('.opt-card, .chip').forEach((b) => {
-        b.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); b.click(); }
-        });
-      });
     })();
   </script>
 
