@@ -1,0 +1,389 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import FinalCTA from '@/components/FinalCTA.astro';
+
+const DOWNLOAD_URL = '/downloads/field-vision-the-four-questions.pdf';
+---
+
+<BaseLayout
+  title="The Four Questions Every Launch Must Answer | Field Vision"
+  description="Before you scale, answer four questions: who you build around, how you position, what to learn first, and whether customers stay. The launch diagnostic Field Vision uses to grow with data instead of aspiration."
+>
+  <Header slot="header" />
+
+  <!-- Scroll progress bar -->
+  <div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+  <!-- ═══ HERO — sticky parallax + blur-to-focus ═══ -->
+  <div class="cs-hero-v2-wrapper">
+    <div class="cs-hero-v2-sticky" id="csHero">
+      <div class="cs-hero-v2-bg"></div>
+      <div class="cs-hero-v2-content">
+        <h1>The <span class="highlight-chip">Four Questions</span><br>Every Launch<br>Must Answer</h1>
+        <p class="cs-hero-v2-summary">
+          Most launches fail on the same four questions — who you build around, how you
+          position, what to learn before scaling, and whether customers stay. Here's the
+          framework we use to answer them with data instead of aspiration.
+        </p>
+        <div class="cs-scroll-hint">Scroll to explore</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ THE FOUR QUESTIONS — alternating fly-in cards ═══ -->
+  <section class="cs-challenge-v2 fq-section">
+    <div class="cs-challenge-v2-inner">
+      <span class="eyebrow">The Framework</span>
+      <h2>Answer These Before You Scale</h2>
+
+      <!-- 01 — Cohort Strategy -->
+      <div class="cs-fly-card fq-card">
+        <span class="cs-fly-card-num">1</span>
+        <div class="cs-fly-card-text">
+          <span class="fq-topic">Cohort Strategy</span>
+          <h3 class="fq-q">Which users do we build around, and why? What data point will tell us the answer?</h3>
+          <p class="fq-why-label">Why it matters</p>
+          <p class="fq-why">
+            We often go into a launch with an aspirational target audience. The mistake is
+            confusing aspiration with reality. The users who actually love the product and
+            stick around are often not who we expected — and if we ignore them to chase a
+            customer who was never going to come or stay, we don't have a business.
+          </p>
+          <div class="fq-takeaway">
+            <span class="fq-takeaway-label">The Takeaway</span>
+            <p>
+              Go in with intention, but let the data tell you who your real customer is —
+              then build around them. The key is identifying the right data point (hint:
+              it's usually not volume of customers from "XYZ channel").
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 — Positioning -->
+      <div class="cs-fly-card fq-card">
+        <span class="cs-fly-card-num">2</span>
+        <div class="cs-fly-card-text">
+          <span class="fq-topic">Positioning</span>
+          <h3 class="fq-q">What we think makes us special and what our audience believes are often not the same thing. What's the simple truth that connects them?</h3>
+          <p class="fq-why-label">Why it matters</p>
+          <p class="fq-why">
+            It's easy to get close to the product and start leading with what excites us:
+            the technology, the model, the proprietary architecture. The audience often
+            doesn't care what we think is cool. They have one thing on their mind when
+            deciding whether to try something new — and it's almost always simpler than
+            anyone inside the company expects.
+          </p>
+          <div class="fq-takeaway">
+            <span class="fq-takeaway-label">The Takeaway</span>
+            <p>
+              Strip out the internal narrative. Find the simple truth the audience wants to
+              believe, and show them how your product delivers it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 — Activation Sequencing -->
+      <div class="cs-fly-card fq-card">
+        <span class="cs-fly-card-num">3</span>
+        <div class="cs-fly-card-text">
+          <span class="fq-topic">Activation Sequencing</span>
+          <h3 class="fq-q">What do we need to learn before we scale? What are the gates that unlock our next move?</h3>
+          <p class="fq-why-label">Why it matters</p>
+          <p class="fq-why">
+            Sequencing is not a channel rollout. It's a learning agenda. The question isn't
+            which campaigns or channels go live first — it's what we need to know first, and
+            what's the sharpest experiment that gets us that answer. Each inflection point
+            unlocks the next decision.
+          </p>
+          <div class="fq-takeaway">
+            <span class="fq-takeaway-label">The Takeaway</span>
+            <p>
+              It's easy to default to sequencing tactics. Don't. Sequence the learning
+              agenda instead — build gates, the inflection points where what you've learned
+              unlocks what you do next.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 — Retention -->
+      <div class="cs-fly-card fq-card">
+        <span class="cs-fly-card-num">4</span>
+        <div class="cs-fly-card-text">
+          <span class="fq-topic">Retention</span>
+          <h3 class="fq-q">Do we optimize for volume or depth? Which one actually funds the next round?</h3>
+          <p class="fq-why-label">Why it matters</p>
+          <p class="fq-why">
+            We often treat retention as something to fix after growth. We shouldn't.
+            Investors want to know how sticky customers are, and CAC is usually secondary:
+            if customers stay and use the product deeply, a higher acquisition cost is
+            manageable. If they churn, no growth strategy fixes the business.
+          </p>
+          <div class="fq-takeaway">
+            <span class="fq-takeaway-label">The Takeaway</span>
+            <p>
+              Optimize for depth before volume (or both in parallel). The customers who stay
+              and invite others are often the reason the next round gets funded.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GATED DOWNLOAD ═══ -->
+  <section class="fq-gate-section" id="fqGate" data-download-url={DOWNLOAD_URL}>
+    <div class="fq-gate-inner">
+      <span class="eyebrow">Get the Framework</span>
+      <h2 class="fq-gate-title">Take the Four Questions with you</h2>
+      <p class="fq-gate-desc">
+        Drop your email and we'll send you the full framework as a PDF — the one-pager we
+        run against every launch and growth plan.
+      </p>
+
+      <div class="fq-gate-form-wrap">
+        <form class="fq-gate-submit" id="fqGateForm">
+          <input type="text" name="name" placeholder="First name" class="fq-gate-input" />
+          <input type="email" name="email" placeholder="Work email" class="fq-gate-input" required />
+          <button type="submit" class="fq-gate-btn">Get the PDF &rarr;</button>
+        </form>
+        <p class="fq-gate-fine">No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA />
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  /* ── The Four Questions — page-specific card internals ── */
+  .fq-section { padding-top: 96px; }
+  .fq-card { padding: 32px; }
+  .fq-card .cs-fly-card-num { width: 48px; height: 48px; font-size: 22px; }
+
+  .fq-topic {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--green-dk);
+    margin-bottom: 10px;
+  }
+  .fq-q {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.12; letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .fq-why-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .fq-why {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px; font-weight: 450; line-height: 1.6;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  /* Takeaway — dark punchline strip, drops in slightly after the card lands */
+  .fq-takeaway {
+    background: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--green-dk);
+    padding: 22px 24px;
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s;
+  }
+  .cs-fly-card.visible .fq-takeaway { opacity: 1; transform: translateY(0) scale(1); }
+  .fq-takeaway-label {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--green-lt);
+    margin-bottom: 8px;
+  }
+  .fq-takeaway p {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px; font-weight: 500; line-height: 1.55;
+    color: rgba(239, 234, 211, 0.92);
+  }
+
+  /* ── Gated download ── */
+  .fq-gate-section {
+    background: var(--offwhite);
+    padding: 110px 24px;
+  }
+  .fq-gate-inner {
+    max-width: 720px; margin: 0 auto;
+    text-align: center;
+  }
+  .fq-gate-inner .eyebrow { justify-content: center; }
+  .fq-gate-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(32px, 4vw, 52px);
+    text-transform: uppercase; line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .fq-gate-desc {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px; line-height: 1.55; font-weight: 450;
+    color: var(--muted);
+    max-width: 560px; margin: 0 auto 32px;
+  }
+  .fq-gate-form-wrap { max-width: 560px; margin: 0 auto; }
+  .fq-gate-submit {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+  }
+  .fq-gate-input {
+    flex: 1 1 180px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    padding: 14px 16px;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    color: var(--ink);
+  }
+  .fq-gate-input:focus { outline: none; box-shadow: 4px 4px 0 var(--green-dk); }
+  .fq-gate-btn {
+    flex: 0 0 auto;
+    font-family: 'Anton', sans-serif;
+    font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 14px 26px;
+    background: var(--green-lt); color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .fq-gate-btn:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
+  .fq-gate-fine {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.05em;
+    color: var(--muted); opacity: 0.7;
+    margin-top: 14px;
+  }
+  .fq-gate-success {
+    background: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--green-dk);
+    padding: 40px 28px; text-align: center;
+  }
+  .fq-gate-success h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 26px; text-transform: uppercase;
+    color: var(--paper); margin: 8px 0 16px;
+  }
+  .fq-gate-dl {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'Anton', sans-serif;
+    font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 14px 26px;
+    background: var(--green-lt); color: var(--ink);
+    border: 3px solid var(--green-lt);
+    text-decoration: none;
+    transition: transform 0.15s;
+  }
+  .fq-gate-dl:hover { transform: translateY(-2px); }
+
+  @media (max-width: 620px) {
+    .fq-card { padding: 24px; }
+    .fq-gate-submit { flex-direction: column; }
+  }
+
+  /* ── Accessibility: respect reduced-motion (absent site-wide; added here) ── */
+  @media (prefers-reduced-motion: reduce) {
+    .cs-hero-v2-sticky h1,
+    .cs-hero-v2-summary,
+    .cs-fly-card,
+    .cs-fly-card-num,
+    .fq-takeaway,
+    .cs-challenge-v2 .eyebrow,
+    .cs-challenge-v2 h2 {
+      transition: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+      filter: none !important;
+      transform: none !important;
+    }
+    .cs-scroll-hint { animation: none !important; opacity: 0.6 !important; }
+  }
+</style>
+
+<script>
+  // Scroll progress bar
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // Reveal observer — eyebrow, heading, fly-in cards
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card'
+  ).forEach(el => obs.observe(el));
+
+  // ── Email gate → unlock download (mirrors the guides gate) ──
+  const KEY = 'fourq_unlocked';
+  const gate = document.getElementById('fqGate') as HTMLElement | null;
+  const downloadUrl = gate?.dataset.downloadUrl || '';
+
+  function showSuccess() {
+    const wrap = document.querySelector('.fq-gate-form-wrap') as HTMLElement | null;
+    if (!wrap) return;
+    wrap.innerHTML =
+      '<div class="fq-gate-success">' +
+        '<div style="font-size:2.6rem;line-height:1">&#10003;</div>' +
+        '<h3>You\'re in.</h3>' +
+        '<a class="fq-gate-dl" href="' + downloadUrl + '" download>Download the PDF &rarr;</a>' +
+      '</div>';
+  }
+
+  if (gate && localStorage.getItem(KEY)) showSuccess();
+
+  const form = document.getElementById('fqGateForm') as HTMLFormElement | null;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.fq-gate-btn') as HTMLButtonElement;
+    const name = (form.querySelector('input[name="name"]') as HTMLInputElement)?.value || '';
+    const email = (form.querySelector('input[name="email"]') as HTMLInputElement)?.value || '';
+    if (!email) return;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    fetch('https://script.google.com/macros/s/AKfycbwLa1iVkHLxu15OjmvM2kcj08RXGEpsx-j6Q82-U6M6Knayj6ZT1775Hl__J_Ctwzs-Kw/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, guide: 'four-questions' })
+    }).then(() => {
+      localStorage.setItem(KEY, 'true');
+      showSuccess();
+    }).catch(() => {
+      localStorage.setItem(KEY, 'true');
+      showSuccess();
+    });
+  });
+</script>
