@@ -31,6 +31,7 @@ const articleSchema = {
   <div class="ep-progress" id="epProgress" aria-hidden="true">
     <div class="ep-progress-fill" id="epProgressFill"></div>
   </div>
+  <div class="ep-progress-pct" id="epProgressPct" aria-hidden="true">0%</div>
 
   <article class="ep">
 
@@ -123,11 +124,22 @@ const articleSchema = {
   }
   .ep-progress-fill {
     width: 100%; height: 0;
-    background: var(--ink);
+    background: var(--green-lt);
     transition: height 0.1s linear;
+  }
+  .ep-progress-pct {
+    position: fixed; right: 24px; bottom: 24px;
+    z-index: 1300;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700; font-size: 13px; letter-spacing: 0.04em;
+    background: var(--ink); color: var(--offwhite);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--green-lt);
+    padding: 7px 11px;
   }
   @media (max-width: 600px) {
     .ep-progress { width: 8px; }
+    .ep-progress-pct { right: 16px; bottom: 16px; font-size: 12px; }
   }
 
   /* ── Hero ── */
@@ -301,12 +313,15 @@ const articleSchema = {
 <script>
   // Reading progress bar
   const fill = document.getElementById('epProgressFill');
+  const pctEl = document.getElementById('epProgressPct');
   function updateProgress() {
     if (!fill) return;
     const h = document.documentElement;
     const max = h.scrollHeight - window.innerHeight;
     const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
-    fill.style.height = Math.min(pct, 100) + '%';
+    const clamped = Math.min(Math.max(pct, 0), 100);
+    fill.style.height = clamped + '%';
+    if (pctEl) pctEl.textContent = Math.round(clamped) + '%';
   }
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
