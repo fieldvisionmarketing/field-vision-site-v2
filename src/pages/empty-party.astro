@@ -27,6 +27,9 @@ const articleSchema = {
   <Header slot="header" />
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
+  <!-- Reading progress -->
+  <div class="ep-progress" id="epProgress"></div>
+
   <article class="ep">
 
     <!-- ── Hero ── -->
@@ -86,9 +89,8 @@ const articleSchema = {
 
       <!-- ── Signature ── -->
       <div class="ep-sign ep-reveal">
-        <img class="ep-headshot" src="/headshot-david-hampian.jpg" alt="David Hampian" width="64" height="64" />
+        <img class="ep-headshot" src="/headshot-david-hampian.jpg" alt="David Hampian" width="72" height="72" />
         <div class="ep-sign-text">
-          <img class="ep-signature" src="/signature-david-hampian.png" alt="David Hampian signature" />
           <div class="ep-sign-name">David Hampian</div>
           <div class="ep-sign-role">Fractional CMO, Field Vision Group</div>
           <div class="ep-sign-links">
@@ -108,6 +110,15 @@ const articleSchema = {
 
 <style>
   .ep { width: 100%; overflow: hidden; }
+
+  /* ── Reading progress bar ── */
+  .ep-progress {
+    position: fixed; top: 0; left: 0;
+    height: 4px; width: 0;
+    background: var(--green-lt);
+    z-index: 1300;
+    transition: width 0.1s linear;
+  }
 
   /* ── Hero ── */
   .ep-hero {
@@ -162,7 +173,7 @@ const articleSchema = {
     font-family: 'Anton', sans-serif;
     font-weight: 400;
     letter-spacing: 0.02em;
-    color: var(--green-dk);
+    color: var(--ink);
     text-transform: uppercase;
   }
   .ep-body h2 {
@@ -191,11 +202,11 @@ const articleSchema = {
     margin: 52px 0;
   }
   .ep-questions .eyebrow {
-    color: var(--green-lt) !important;
+    color: var(--offwhite) !important;
     margin-bottom: 24px;
     line-height: 1.4;
   }
-  .ep-questions .eyebrow::before { background: var(--green-lt); }
+  .ep-questions .eyebrow::before { background: var(--offwhite); }
   .ep-q {
     display: flex; gap: 18px; align-items: flex-start;
     padding: 18px 0;
@@ -230,18 +241,17 @@ const articleSchema = {
     color: var(--ink);
   }
   .ep-sign {
-    display: flex; gap: 18px; align-items: flex-start;
+    display: flex; gap: 18px; align-items: center;
     border-top: 4px solid var(--ink);
     padding-top: 28px;
     margin-top: 8px;
   }
   .ep-headshot {
-    width: 64px; height: 64px;
+    width: 72px; height: 72px;
     border: 3px solid var(--ink);
     object-fit: cover;
     flex-shrink: 0;
   }
-  .ep-signature { height: 46px; width: auto; margin-bottom: 6px; display: block; }
   .ep-sign-name {
     font-family: 'Anton', sans-serif;
     font-size: 18px; text-transform: uppercase;
@@ -256,8 +266,8 @@ const articleSchema = {
     font-size: 12.5px; margin-top: 8px;
     display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
   }
-  .ep-sign-links a { color: var(--green-dk); text-decoration: none; }
-  .ep-sign-links a:hover { text-decoration: underline; }
+  .ep-sign-links a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .ep-sign-links a:hover { color: var(--muted); }
 
   .ep-cta { margin-top: 40px; }
 
@@ -279,6 +289,19 @@ const articleSchema = {
 </style>
 
 <script>
+  // Reading progress bar
+  const bar = document.getElementById('epProgress');
+  function updateProgress() {
+    if (!bar) return;
+    const h = document.documentElement;
+    const max = h.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    bar.style.width = Math.min(pct, 100) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
