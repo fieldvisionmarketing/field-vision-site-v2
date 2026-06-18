@@ -8,7 +8,7 @@ const DOWNLOAD_URL = '/downloads/field-vision-the-four-questions.pdf';
 ---
 
 <BaseLayout
-  title="The Four Questions Every Launch Must Answer | Field Vision"
+  title="The Four Questions Every Launch Must Answer"
   description="Before you scale, answer four questions: who you build around, how you position, what to learn first, and whether customers stay. The launch diagnostic Field Vision uses to grow with data instead of aspiration."
 >
   <Header slot="header" />
@@ -32,105 +32,106 @@ const DOWNLOAD_URL = '/downloads/field-vision-the-four-questions.pdf';
     </div>
   </div>
 
-  <!-- ═══ THE FOUR QUESTIONS — alternating fly-in cards ═══ -->
-  <section class="cs-challenge-v2 fq-section">
-    <div class="cs-challenge-v2-inner">
-      <span class="eyebrow">The Framework</span>
-      <h2>Answer These Before You Scale</h2>
+  <!-- ═══ INTRO ═══ -->
+  <section class="fq-intro">
+    <div class="fq-intro-inner">
+      <span class="eyebrow fq-reveal slide-in">The Framework</span>
+      <h2 class="fq-intro-title fq-reveal blur-in">Answer These Before You Scale</h2>
+    </div>
+  </section>
 
-      <!-- 01 — Cohort Strategy -->
-      <div class="cs-fly-card fq-card">
-        <span class="cs-fly-card-num">1</span>
-        <div class="cs-fly-card-text">
-          <span class="fq-topic">Cohort Strategy</span>
-          <h3 class="fq-q">Which users do we build around, and why? What data point will tell us the answer?</h3>
-          <p class="fq-why-label">Why it matters</p>
-          <p class="fq-why">
-            We often go into a launch with an aspirational target audience. The mistake is
-            confusing aspiration with reality. The users who actually love the product and
-            stick around are often not who we expected — and if we ignore them to chase a
-            customer who was never going to come or stay, we don't have a business.
-          </p>
-          <div class="fq-takeaway">
-            <span class="fq-takeaway-label">The Takeaway</span>
-            <p>
-              Go in with intention, but let the data tell you who your real customer is —
-              then build around them. The key is identifying the right data point (hint:
-              it's usually not volume of customers from "XYZ channel").
-            </p>
-          </div>
+  <!-- ═══ 01 — COHORT STRATEGY ═══ -->
+  <section class="fq-q-section fq-bg-paper">
+    <div class="fq-q-inner">
+      <div class="fq-q-head">
+        <span class="fq-q-ghost fq-reveal fade-up">01</span>
+        <h2 class="fq-q-topic fq-reveal blur-in">Cohort Strategy</h2>
+      </div>
+      <div class="fq-q-cols">
+        <div class="fq-block fq-reveal from-left">
+          <span class="eyebrow">The Question</span>
+          <p class="fq-question">Which users do we build around, and why? What data point(s) will tell us the answer?</p>
+        </div>
+        <div class="fq-block fq-reveal from-right">
+          <span class="eyebrow">Why It Matters</span>
+          <p class="fq-why">Often, we go into a launch with an aspirational target audience. The mistake is confusing aspiration with reality. The users who actually love the product and stick around are often not who we expected. And if we ignore them in favor of chasing a customer who was never going to come or stay, we don't have a business.</p>
         </div>
       </div>
+      <div class="fq-takeaway-bar fq-reveal drop-in">
+        <span class="eyebrow">The Takeaway</span>
+        <p>Go in with intention, but data will tell us who our real customer is. Then, build around them. The key is in identifying the right data point (hint: it's usually not volume of customers from "XYZ channel").</p>
+      </div>
+    </div>
+  </section>
 
-      <!-- 02 — Positioning -->
-      <div class="cs-fly-card fq-card">
-        <span class="cs-fly-card-num">2</span>
-        <div class="cs-fly-card-text">
-          <span class="fq-topic">Positioning</span>
-          <h3 class="fq-q">What we think makes us special and what our audience believes are often not the same thing. What's the simple truth that connects them?</h3>
-          <p class="fq-why-label">Why it matters</p>
-          <p class="fq-why">
-            It's easy to get close to the product and start leading with what excites us:
-            the technology, the model, the proprietary architecture. The audience often
-            doesn't care what we think is cool. They have one thing on their mind when
-            deciding whether to try something new — and it's almost always simpler than
-            anyone inside the company expects.
-          </p>
-          <div class="fq-takeaway">
-            <span class="fq-takeaway-label">The Takeaway</span>
-            <p>
-              Strip out the internal narrative. Find the simple truth the audience wants to
-              believe, and show them how your product delivers it.
-            </p>
-          </div>
+  <!-- ═══ 02 — POSITIONING ═══ -->
+  <section class="fq-q-section fq-bg-cream">
+    <div class="fq-q-inner">
+      <div class="fq-q-head">
+        <span class="fq-q-ghost fq-reveal fade-up">02</span>
+        <h2 class="fq-q-topic fq-reveal blur-in">Positioning</h2>
+      </div>
+      <div class="fq-q-cols">
+        <div class="fq-block fq-reveal from-left">
+          <span class="eyebrow">The Question</span>
+          <p class="fq-question">What we believe makes us special and what our audience believes are often not the same thing. <strong>The unlock is the simple truth that connects them.</strong></p>
+        </div>
+        <div class="fq-block fq-reveal from-right">
+          <span class="eyebrow">Why It Matters</span>
+          <p class="fq-why">It's easy to get close to the product and start leading with <em>what excites us</em>: the technology, the model, the proprietary architecture. The audience often does not care what we think is cool. They have one thing on their mind when deciding whether to try something new, and it is almost always simpler than anyone inside the company expects.</p>
         </div>
       </div>
+      <div class="fq-takeaway-bar fq-reveal drop-in">
+        <span class="eyebrow">The Takeaway</span>
+        <p>Strip out the internal narrative. Find the simple truth that the audience wants to believe and show them how our product delivers it.</p>
+      </div>
+    </div>
+  </section>
 
-      <!-- 03 — Activation Sequencing -->
-      <div class="cs-fly-card fq-card">
-        <span class="cs-fly-card-num">3</span>
-        <div class="cs-fly-card-text">
-          <span class="fq-topic">Activation Sequencing</span>
-          <h3 class="fq-q">What do we need to learn before we scale? What are the gates that unlock our next move?</h3>
-          <p class="fq-why-label">Why it matters</p>
-          <p class="fq-why">
-            Sequencing is not a channel rollout. It's a learning agenda. The question isn't
-            which campaigns or channels go live first — it's what we need to know first, and
-            what's the sharpest experiment that gets us that answer. Each inflection point
-            unlocks the next decision.
-          </p>
-          <div class="fq-takeaway">
-            <span class="fq-takeaway-label">The Takeaway</span>
-            <p>
-              It's easy to default to sequencing tactics. Don't. Sequence the learning
-              agenda instead — build gates, the inflection points where what you've learned
-              unlocks what you do next.
-            </p>
-          </div>
+  <!-- ═══ 03 — ACTIVATION SEQUENCING ═══ -->
+  <section class="fq-q-section fq-bg-paper">
+    <div class="fq-q-inner">
+      <div class="fq-q-head">
+        <span class="fq-q-ghost fq-reveal fade-up">03</span>
+        <h2 class="fq-q-topic fq-reveal blur-in">Activation Sequencing</h2>
+      </div>
+      <div class="fq-q-cols">
+        <div class="fq-block fq-reveal from-left">
+          <span class="eyebrow">The Question</span>
+          <p class="fq-question">What do we need to learn before we scale? What are the gates that unlock our next move?</p>
+        </div>
+        <div class="fq-block fq-reveal from-right">
+          <span class="eyebrow">Why It Matters</span>
+          <p class="fq-why">Sequencing is not a channel rollout. It is a learning agenda. The question is not which campaigns or channels go live first - it is what we need to know first, and what is the sharpest experiment that gets us that answer. Each inflection point unlocks the next decision.</p>
         </div>
       </div>
+      <div class="fq-takeaway-bar fq-reveal drop-in">
+        <span class="eyebrow">The Takeaway</span>
+        <p>It's easy to default to sequencing tactics. Don't. Sequence the learning agenda instead. Build gates, e.g. the inflection points. where what we've learned unlocks what we do next.</p>
+      </div>
+    </div>
+  </section>
 
-      <!-- 04 — Retention -->
-      <div class="cs-fly-card fq-card">
-        <span class="cs-fly-card-num">4</span>
-        <div class="cs-fly-card-text">
-          <span class="fq-topic">Retention</span>
-          <h3 class="fq-q">Do we optimize for volume or depth? Which one actually funds the next round?</h3>
-          <p class="fq-why-label">Why it matters</p>
-          <p class="fq-why">
-            We often treat retention as something to fix after growth. We shouldn't.
-            Investors want to know how sticky customers are, and CAC is usually secondary:
-            if customers stay and use the product deeply, a higher acquisition cost is
-            manageable. If they churn, no growth strategy fixes the business.
-          </p>
-          <div class="fq-takeaway">
-            <span class="fq-takeaway-label">The Takeaway</span>
-            <p>
-              Optimize for depth before volume (or both in parallel). The customers who stay
-              and invite others are often the reason the next round gets funded.
-            </p>
-          </div>
+  <!-- ═══ 04 — RETENTION ═══ -->
+  <section class="fq-q-section fq-bg-cream">
+    <div class="fq-q-inner">
+      <div class="fq-q-head">
+        <span class="fq-q-ghost fq-reveal fade-up">04</span>
+        <h2 class="fq-q-topic fq-reveal blur-in">Retention</h2>
+      </div>
+      <div class="fq-q-cols">
+        <div class="fq-block fq-reveal from-left">
+          <span class="eyebrow">The Question</span>
+          <p class="fq-question">Do we need to optimize for volume or depth? Which one actually funds our next round?</p>
         </div>
+        <div class="fq-block fq-reveal from-right">
+          <span class="eyebrow">Why It Matters</span>
+          <p class="fq-why">We often treat retention as something to fix after growth. We shouldn't. Investors will want to know how sticky our customers are, and CAC is usually secondary because if customers stay and use the product deeply, a higher acquisition cost is manageable. If they churn, no growth strategy fixes the business.</p>
+        </div>
+      </div>
+      <div class="fq-takeaway-bar fq-reveal drop-in">
+        <span class="eyebrow">The Takeaway</span>
+        <p>Optimize for depth before optimizing for volume (or, both in parallel). The customers who stay and invite others are often the reason the next round gets funded.</p>
       </div>
     </div>
   </section>
@@ -138,14 +139,14 @@ const DOWNLOAD_URL = '/downloads/field-vision-the-four-questions.pdf';
   <!-- ═══ GATED DOWNLOAD ═══ -->
   <section class="fq-gate-section" id="fqGate" data-download-url={DOWNLOAD_URL}>
     <div class="fq-gate-inner">
-      <span class="eyebrow">Get the Framework</span>
-      <h2 class="fq-gate-title">Take the Four Questions with you</h2>
-      <p class="fq-gate-desc">
+      <span class="eyebrow fq-reveal slide-in">Get the Framework</span>
+      <h2 class="fq-gate-title fq-reveal blur-in">Take the Four Questions with you</h2>
+      <p class="fq-gate-desc fq-reveal fade-up">
         Drop your email and we'll send you the full framework as a PDF — the one-pager we
         run against every launch and growth plan.
       </p>
 
-      <div class="fq-gate-form-wrap">
+      <div class="fq-gate-form-wrap fq-reveal fade-up">
         <form class="fq-gate-submit" id="fqGateForm">
           <input type="text" name="name" placeholder="First name" class="fq-gate-input" />
           <input type="email" name="email" placeholder="Work email" class="fq-gate-input" required />
@@ -162,131 +163,174 @@ const DOWNLOAD_URL = '/downloads/field-vision-the-four-questions.pdf';
 </BaseLayout>
 
 <style>
-  /* ── The Four Questions — page-specific card internals ── */
-  .fq-section { padding-top: 96px; }
-  .fq-card { padding: 32px; }
-  .fq-card .cs-fly-card-num { width: 48px; height: 48px; font-size: 22px; }
+  /* ════════════════════════════════════════════
+     THE FOUR QUESTIONS — scroll-reveal framework page
+     Each element reveals independently on scroll.
+     ════════════════════════════════════════════ */
 
-  .fq-topic {
-    display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.14em;
-    color: var(--green-dk);
-    margin-bottom: 10px;
+  /* ── Reveal engine (mirrors case-study mechanics) ── */
+  .fq-reveal {
+    opacity: 0;
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
   }
-  .fq-q {
+  .fq-reveal.visible {
+    opacity: 1;
+    transform: none !important;
+    filter: none !important;
+  }
+  .fq-reveal.slide-in { transform: translateX(-24px); }
+  .fq-reveal.from-left { transform: translateX(-60px); }
+  .fq-reveal.from-right { transform: translateX(60px); }
+  .fq-reveal.fade-up { transform: translateY(40px); }
+  .fq-reveal.blur-in { filter: blur(8px); transform: translateY(20px); }
+  .fq-reveal.drop-in {
+    transform: translateY(-32px) scale(1.05);
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-duration: 0.95s;
+  }
+
+  /* ── Intro ── */
+  .fq-intro {
+    background: var(--paper);
+    padding: 120px 24px 40px;
+  }
+  .fq-intro-inner { max-width: 1000px; margin: 0 auto; }
+  .fq-intro-title {
     font-family: 'Anton', sans-serif;
-    font-size: clamp(22px, 2.4vw, 30px);
-    line-height: 1.12; letter-spacing: 0.01em;
-    text-transform: uppercase;
+    font-size: clamp(36px, 5vw, 68px);
+    text-transform: uppercase; line-height: 1.02;
+    color: var(--ink); margin-top: 8px;
+  }
+
+  /* ── Question section (one "act" per question) ── */
+  .fq-q-section { padding: 110px 24px; }
+  .fq-bg-paper { background: var(--paper); }
+  .fq-bg-cream { background: var(--offwhite); }
+  .fq-q-inner { max-width: 1000px; margin: 0 auto; }
+
+  /* Header: giant ghost number + topic */
+  .fq-q-head {
+    display: flex; align-items: center; gap: 20px;
+    margin-bottom: 56px;
+  }
+  .fq-q-ghost {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(72px, 11vw, 150px);
+    line-height: 0.8;
     color: var(--ink);
-    margin-bottom: 20px;
+    opacity: 0.12;
+    flex-shrink: 0;
   }
-  .fq-why-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--muted);
-    margin-bottom: 6px;
+  .fq-reveal.fade-up.fq-q-ghost.visible { opacity: 0.12; }
+  .fq-q-topic {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(34px, 5vw, 72px);
+    text-transform: uppercase; line-height: 1.0;
+    letter-spacing: 0.01em;
+    color: var(--ink);
   }
+
+  /* Two columns: Question | Why It Matters */
+  .fq-q-cols {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  .fq-block .eyebrow { margin-bottom: 14px; }
+  .fq-question {
+    font-family: 'Satoshi', sans-serif;
+    font-size: clamp(18px, 1.9vw, 22px);
+    font-weight: 500; line-height: 1.45;
+    color: var(--ink);
+  }
+  .fq-question strong { font-weight: 700; }
   .fq-why {
     font-family: 'Satoshi', sans-serif;
-    font-size: 16px; font-weight: 450; line-height: 1.6;
+    font-size: 17px; font-weight: 450; line-height: 1.62;
     color: var(--muted);
-    margin-bottom: 24px;
   }
-  /* Takeaway — dark punchline strip, drops in slightly after the card lands */
-  .fq-takeaway {
+  .fq-why em { font-style: italic; color: var(--ink); }
+
+  /* Takeaway — full-width dark bar, drops in last */
+  .fq-takeaway-bar {
     background: var(--ink);
-    border: 3px solid var(--ink);
-    box-shadow: 6px 6px 0 var(--green-dk);
-    padding: 22px 24px;
-    opacity: 0;
-    transform: translateY(20px) scale(0.97);
-    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s;
+    border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--green-dk);
+    padding: 32px 36px;
   }
-  .cs-fly-card.visible .fq-takeaway { opacity: 1; transform: translateY(0) scale(1); }
-  .fq-takeaway-label {
-    display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.14em;
-    color: var(--green-lt);
-    margin-bottom: 8px;
+  .fq-takeaway-bar .eyebrow {
+    color: var(--green-lt) !important;
+    margin-bottom: 10px;
   }
-  .fq-takeaway p {
+  .fq-takeaway-bar .eyebrow::before { background: var(--green-lt); }
+  .fq-takeaway-bar p {
     font-family: 'Satoshi', sans-serif;
-    font-size: 16px; font-weight: 500; line-height: 1.55;
-    color: rgba(239, 234, 211, 0.92);
+    font-size: clamp(17px, 1.7vw, 20px);
+    font-weight: 500; line-height: 1.5;
+    color: rgba(239, 234, 211, 0.95);
   }
 
   /* ── Gated download ── */
-  .fq-gate-section {
-    background: var(--offwhite);
-    padding: 110px 24px;
+  .fq-gate-section { background: var(--ink); padding: 120px 24px; }
+  .fq-gate-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+  .fq-gate-inner .eyebrow {
+    justify-content: center;
+    color: var(--green-lt) !important;
   }
-  .fq-gate-inner {
-    max-width: 720px; margin: 0 auto;
-    text-align: center;
-  }
-  .fq-gate-inner .eyebrow { justify-content: center; }
+  .fq-gate-inner .eyebrow::before { background: var(--green-lt); }
   .fq-gate-title {
     font-family: 'Anton', sans-serif;
     font-size: clamp(32px, 4vw, 52px);
     text-transform: uppercase; line-height: 1.05;
-    color: var(--ink);
-    margin-bottom: 16px;
+    color: var(--paper); margin: 8px 0 16px;
   }
   .fq-gate-desc {
     font-family: 'Satoshi', sans-serif;
     font-size: 18px; line-height: 1.55; font-weight: 450;
-    color: var(--muted);
+    color: rgba(239, 234, 211, 0.85);
     max-width: 560px; margin: 0 auto 32px;
   }
   .fq-gate-form-wrap { max-width: 560px; margin: 0 auto; }
   .fq-gate-submit {
-    display: flex; flex-wrap: wrap; gap: 12px;
-    justify-content: center;
+    display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
   }
   .fq-gate-input {
     flex: 1 1 180px;
     font-family: 'Satoshi', sans-serif;
-    font-size: 16px;
-    padding: 14px 16px;
-    background: var(--paper);
-    border: 3px solid var(--ink);
-    color: var(--ink);
+    font-size: 16px; padding: 14px 16px;
+    background: var(--paper); border: 3px solid var(--ink); color: var(--ink);
   }
-  .fq-gate-input:focus { outline: none; box-shadow: 4px 4px 0 var(--green-dk); }
+  .fq-gate-input:focus { outline: none; box-shadow: 4px 4px 0 var(--green-lt); }
   .fq-gate-btn {
     flex: 0 0 auto;
     font-family: 'Anton', sans-serif;
     font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
     padding: 14px 26px;
     background: var(--green-lt); color: var(--ink);
-    border: 3px solid var(--ink);
-    box-shadow: 5px 5px 0 var(--ink);
-    cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.15s;
+    border: 3px solid var(--green-lt);
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.3);
+    cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
   }
-  .fq-gate-btn:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
+  .fq-gate-btn:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 rgba(0,0,0,0.3); }
   .fq-gate-fine {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px; letter-spacing: 0.05em;
-    color: var(--muted); opacity: 0.7;
-    margin-top: 14px;
+    color: rgba(239, 234, 211, 0.6); margin-top: 14px;
   }
   .fq-gate-success {
-    background: var(--ink);
-    border: 3px solid var(--ink);
-    box-shadow: 6px 6px 0 var(--green-dk);
-    padding: 40px 28px; text-align: center;
+    background: var(--paper);
+    border: 4px solid var(--green-lt);
+    box-shadow: 10px 10px 0 var(--green-dk);
+    padding: 44px 28px; text-align: center;
   }
   .fq-gate-success h3 {
     font-family: 'Anton', sans-serif;
     font-size: 26px; text-transform: uppercase;
-    color: var(--paper); margin: 8px 0 16px;
+    color: var(--ink); margin: 8px 0 16px;
   }
   .fq-gate-dl {
     display: inline-flex; align-items: center; gap: 10px;
@@ -294,32 +338,32 @@ const DOWNLOAD_URL = '/downloads/field-vision-the-four-questions.pdf';
     font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
     padding: 14px 26px;
     background: var(--green-lt); color: var(--ink);
-    border: 3px solid var(--green-lt);
-    text-decoration: none;
+    border: 3px solid var(--ink); text-decoration: none;
+    box-shadow: 5px 5px 0 var(--ink);
     transition: transform 0.15s;
   }
   .fq-gate-dl:hover { transform: translateY(-2px); }
 
-  @media (max-width: 620px) {
-    .fq-card { padding: 24px; }
+  /* ── Responsive ── */
+  @media (max-width: 720px) {
+    .fq-q-cols { grid-template-columns: 1fr; gap: 32px; }
+    .fq-q-head { gap: 14px; margin-bottom: 40px; }
+    .fq-q-section { padding: 80px 24px; }
     .fq-gate-submit { flex-direction: column; }
   }
 
   /* ── Accessibility: respect reduced-motion (absent site-wide; added here) ── */
   @media (prefers-reduced-motion: reduce) {
+    .fq-reveal,
     .cs-hero-v2-sticky h1,
-    .cs-hero-v2-summary,
-    .cs-fly-card,
-    .cs-fly-card-num,
-    .fq-takeaway,
-    .cs-challenge-v2 .eyebrow,
-    .cs-challenge-v2 h2 {
+    .cs-hero-v2-summary {
       transition: none !important;
       animation: none !important;
       opacity: 1 !important;
       filter: none !important;
       transform: none !important;
     }
+    .fq-q-ghost { opacity: 0.12 !important; }
     .cs-scroll-hint { animation: none !important; opacity: 0.6 !important; }
   }
 </style>
@@ -335,16 +379,17 @@ const DOWNLOAD_URL = '/downloads/field-vision-the-four-questions.pdf';
   // Hero activation
   setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
 
-  // Reveal observer — eyebrow, heading, fly-in cards
+  // Reveal-on-scroll — every .fq-reveal animates in independently
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
 
-  document.querySelectorAll(
-    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card'
-  ).forEach(el => obs.observe(el));
+  document.querySelectorAll('.fq-reveal').forEach(el => obs.observe(el));
 
   // ── Email gate → unlock download (mirrors the guides gate) ──
   const KEY = 'fourq_unlocked';
@@ -356,7 +401,7 @@ const DOWNLOAD_URL = '/downloads/field-vision-the-four-questions.pdf';
     if (!wrap) return;
     wrap.innerHTML =
       '<div class="fq-gate-success">' +
-        '<div style="font-size:2.6rem;line-height:1">&#10003;</div>' +
+        '<div style="font-size:2.6rem;line-height:1;color:var(--ink)">&#10003;</div>' +
         '<h3>You\'re in.</h3>' +
         '<a class="fq-gate-dl" href="' + downloadUrl + '" download>Download the PDF &rarr;</a>' +
       '</div>';
