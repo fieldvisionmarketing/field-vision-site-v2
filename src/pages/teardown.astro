@@ -91,10 +91,11 @@ const entries = ['foundation', 'focused', 'full'];
   <main class="td">
     <a class="td-logo" href="/" aria-label="Field Vision home">FIELD<br/>VISION</a>
 
-    <!-- Progress: football field (question phase only) -->
-    <div class="td-field" id="tdProgress" aria-hidden="true">
-      <span class="td-field-fill" id="tdProgressBar"></span>
-      <span class="td-field-ball" id="tdProgressBall">🏈</span>
+    <!-- Progress: segmented stepper (question phase only) -->
+    <div class="td-steps" id="tdProgress" aria-hidden="true">
+      <span class="td-step"></span>
+      <span class="td-step"></span>
+      <span class="td-step"></span>
     </div>
 
     <div class="td-stage" aria-live="polite">
@@ -251,13 +252,12 @@ const entries = ['foundation', 'focused', 'full'];
     (function () {
       const ENDPOINT = 'https://formsubmit.co/ajax/hampian@fieldvisiongroup.com';
       const state = { entry: null, opt: null, industry: null, stage: null };
-      const STEP_PROGRESS = { fork: 33, branch: 66, about: 100 };
+      const STEP_INDEX = { fork: 1, branch: 2, about: 3 };
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       let transitioning = false;
       const screens = Array.from(document.querySelectorAll('.screen'));
       const progress = document.getElementById('tdProgress');
-      const progressBar = document.getElementById('tdProgressBar');
-      const progressBall = document.getElementById('tdProgressBall');
+      const stepEls = progress ? progress.querySelectorAll('.td-step') : [];
       const affirmEl = document.getElementById('tdAffirm');
       const AFFIRMS = ['Got it.', 'Good call.', 'Say less.', 'Love that.', 'On it.'];
 
@@ -276,10 +276,10 @@ const entries = ['foundation', 'focused', 'full'];
           s.classList.remove('slide-fwd', 'slide-back');
           if (on && !prefersReduced) { void s.offsetWidth; s.classList.add(dir === 'back' ? 'slide-back' : 'slide-fwd'); }
         });
-        if (STEP_PROGRESS[key]) {
+        if (STEP_INDEX[key]) {
           progress.style.visibility = 'visible';
-          progressBar.style.width = STEP_PROGRESS[key] + '%';
-          if (progressBall) progressBall.style.left = STEP_PROGRESS[key] + '%';
+          const n = STEP_INDEX[key];
+          stepEls.forEach((el, i) => el.classList.toggle('is-filled', i < n));
         } else { progress.style.visibility = 'hidden'; }
         const active = document.querySelector('.screen.is-active');
         const f = active && active.querySelector('[data-focus]');
@@ -459,30 +459,19 @@ const entries = ['foundation', 'focused', 'full'];
       text-align: center;
       margin-bottom: 34px;
     }
-    .td-field {
-      position: relative;
-      width: 100%;
-      max-width: 680px;
-      height: 30px;
-      background: var(--ink);
-      border: 3px solid var(--ink);
-      margin-bottom: 44px;
-      visibility: hidden;
-      overflow: visible;
-      background-image: repeating-linear-gradient(90deg, transparent 0, transparent calc(10% - 2px), rgba(239,234,211,0.4) calc(10% - 2px), rgba(239,234,211,0.4) 10%);
+    .td-steps {
+      display: flex; gap: 12px;
+      width: 100%; max-width: 680px;
+      margin-bottom: 44px; visibility: hidden;
     }
-    .td-field-fill {
-      display: block; height: 100%; width: 0;
-      background: var(--green-lt);
-      transition: width 0.5s cubic-bezier(.34,1.4,.5,1);
+    .td-step {
+      flex: 1; height: 18px;
+      background: var(--paper);
+      border: 4px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: background 0.45s cubic-bezier(.34,1.5,.5,1);
     }
-    .td-field-ball {
-      position: absolute; top: 50%; left: 0;
-      transform: translate(-50%, -50%);
-      font-size: 22px; line-height: 1;
-      transition: left 0.5s cubic-bezier(.34,1.4,.5,1);
-      filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.3));
-    }
+    .td-step.is-filled { background: var(--green-lt); }
     .td-stage { width: 100%; max-width: 680px; }
 
     .screen { display: none; }
@@ -514,7 +503,7 @@ const entries = ['foundation', 'focused', 'full'];
       .screen.is-active .chip,
       .screen.is-active .reveal-list li,
       .screen.is-active .td-play { animation: none; opacity: 1; transform: none; }
-      .td-field-fill, .td-field-ball { transition: none; }
+      .td-step { transition: none; }
       .td-play-route { stroke-dashoffset: 0; animation: none; }
       .td-affirm.show { animation: none; opacity: 0; }
     }
