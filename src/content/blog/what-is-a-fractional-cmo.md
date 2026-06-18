@@ -162,3 +162,7 @@ Measure a fractional CMO the same way you'd measure a full-time CMO: by business
 </div>
 
 </div>
+
+---
+
+**Want to see where your growth is leaking?** [Get a free marketing teardown](/teardown/) and we will show you what to fix first, in about 30 minutes.

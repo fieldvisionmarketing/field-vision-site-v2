@@ -100,3 +100,7 @@ A marketing architecture audit is a structured diagnostic process that maps rete
 **What metrics should a startup track in its first 90 days of marketing?**
 
 The four critical metrics are: 30-day retention by acquisition channel, leaky bucket drop-off point (where users leave in weeks 1–2), 60-day retained CAC by channel, and the ONE north-star metric tied directly to business outcomes.
+
+---
+
+**Want this diagnosis for your startup?** [Get a free marketing teardown](/teardown/) and we will pinpoint where your growth is leaking and the first fix to make.
