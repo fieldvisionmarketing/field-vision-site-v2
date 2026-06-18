@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Logo from '@/components/Logo.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 import { getCollection } from 'astro:content';
 
 // 3 most recent blog posts for the confirmation screen
@@ -124,8 +125,9 @@ const ldJson = JSON.stringify({
 
 <BaseLayout title="Free Marketing Teardown" description="Get a free marketing teardown from Field Vision. Answer a few quick questions and see where your growth is leaking and what to fix first. A personalized 30-minute teardown with fractional CMO David Hampian, for founders in streaming, media, music, gaming, sports, and the creator economy." ogImage="https://fieldvisiongroup.com/og-teardown.jpg">
   <Fragment slot="head" set:html={`<script type="application/ld+json">${ldJson}</script>`} />
+  <Header slot="header" />
+  <Footer slot="footer" />
   <div class="td">
-    <a class="td-logo" href="/" aria-label="Field Vision home"><Logo class="td-logo-img" /></a>
 
     <!-- Progress: segmented stepper (question phase only) -->
     <div class="td-steps" id="tdProgress" aria-hidden="true">
@@ -500,13 +502,11 @@ const ldJson = JSON.stringify({
     .td {
       min-height: 100vh;
       background: var(--paper);
-      padding: 44px 24px 96px;
+      padding: 104px 24px 96px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    .td-logo { display: inline-block; text-decoration: none; margin-bottom: 34px; }
-    .td-logo-img { max-height: 2.6rem; width: auto; display: block; }
     .td-steps {
       display: flex; gap: 12px;
       width: 100%; max-width: 680px;
@@ -683,7 +683,7 @@ const ldJson = JSON.stringify({
     .done-title { font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 1.16rem; line-height: 1.3; }
 
     @media (min-width: 640px) {
-      .td { padding-top: 60px; }
+      .td { padding-top: 120px; }
     }
 
     .hl-chip {
