@@ -85,10 +85,45 @@ const INDUSTRIES = [
 ];
 const STAGES = ['Pre-seed', 'Seed', 'Series A', 'Series B', 'Series C+'];
 const entries = ['foundation', 'focused', 'full'];
+
+const FAQS = [
+  { q: "Is the marketing teardown really free?", a: "Yes. The teardown is a free, roughly 30-minute working session with David Hampian, founder of Field Vision. There is no cost and no obligation, and a couple of slots open each month." },
+  { q: "What do I get out of the teardown?", a: "A clear read on what is working versus wasting budget, the single highest-impact fix to make first, and a prioritized list of what to do next. You keep everything, whether or not you work with Field Vision." },
+  { q: "Who is the teardown for?", a: "Founders and operators at seed to Series D startups in streaming, digital media, entertainment, music, gaming, sports, and the creator economy." },
+  { q: "Is this a sales pitch?", a: "No. It is a working teardown of your marketing. If it makes sense to work together afterward that is great, but the session stands on its own." },
+  { q: "How should I prepare?", a: "Nothing is required. The more context you share in the questions, the more tailored your teardown will be." },
+  { q: "Who runs the teardown?", a: "David Hampian, founder and fractional CMO at Field Vision, who has led marketing at Amazon, Twitch, Pandora, and Hard Rock." },
+];
+
+const PAGE_URL = 'https://fieldvisiongroup.com/teardown/';
+const ORG_ID = 'https://fieldvisiongroup.com/#organization';
+const ldJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": PAGE_URL + "#service",
+      "name": "Free Marketing Teardown",
+      "serviceType": "Marketing strategy consultation",
+      "provider": { "@id": ORG_ID },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "audience": { "@type": "Audience", "audienceType": "Startup founders and operators, seed to Series D" },
+      "description": "A free, roughly 30-minute personalized marketing teardown with fractional CMO David Hampian. See where your growth is leaking and what to fix first.",
+      "url": PAGE_URL,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/LimitedAvailability", "url": PAGE_URL }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": PAGE_URL + "#faq",
+      "mainEntity": FAQS.map((f) => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+    }
+  ]
+});
 ---
 
-<BaseLayout title="Free Marketing Teardown" description="Answer a few quick questions and see where your growth is leaking, and what we'd fix first. About 90 seconds. Free, from Field Vision.">
-  <main class="td">
+<BaseLayout title="Free Marketing Teardown" description="Get a free marketing teardown from Field Vision. Answer a few quick questions and see where your growth is leaking and what to fix first. A personalized 30-minute teardown with fractional CMO David Hampian, for founders in streaming, media, music, gaming, sports, and the creator economy." ogImage="https://fieldvisiongroup.com/og-teardown.jpg">
+  <Fragment slot="head" set:html={`<script type="application/ld+json">${ldJson}</script>`} />
+  <div class="td">
     <a class="td-logo" href="/" aria-label="Field Vision home">FIELD<br/>VISION</a>
 
     <!-- Progress: segmented stepper (question phase only) -->
@@ -227,7 +262,41 @@ const entries = ['foundation', 'focused', 'full'];
       <input type="hidden" name="firstName" /><input type="hidden" name="email" /><input type="hidden" name="website" /><input type="hidden" name="note" />
       <input type="hidden" name="entry_point" /><input type="hidden" name="their_situation" /><input type="hidden" name="industry" /><input type="hidden" name="stage" />
     </form>
-  </main>
+  </div>
+
+  <section class="td-seo" aria-label="About the free marketing teardown">
+    <div class="td-seo-inner">
+      <span class="eyebrow">The free teardown</span>
+      <h2>What is a marketing teardown?</h2>
+      <p>A marketing teardown is a fast, focused diagnostic of where your growth is leaking and what to fix first. It is run by David Hampian, founder and fractional CMO at Field Vision, who has led marketing at Amazon, Twitch, Pandora, and Hard Rock. You answer a few quick questions about your situation, and you get a personalized read on the highest-impact moves to make next. It takes about 90 seconds to start and about 30 minutes with David to complete. It is free, and a couple of slots open each month.</p>
+
+      <h3>Who the teardown is for</h3>
+      <p>It is built for founders and operators at seed to Series D startups in streaming, digital media, entertainment, music, gaming, sports, and the creator economy. If you are deciding where to spend your first marketing dollar, trying to fix one thing that is stuck, or running a lot of activity without clarity on what is working, the teardown meets you where you are.</p>
+
+      <h3>How it works</h3>
+      <p>Answer a few quick questions about your stage and your biggest marketing challenge. Based on your answers, you see a personalized teardown that names your situation and the specific moves worth making first. If you want it, you leave your details and David reaches out within one business day to schedule. No deck, no pitch, and you keep everything.</p>
+
+      <h3>The three situations founders come in with</h3>
+      <p><strong>Just getting started.</strong> No formal marketing yet. The teardown maps your fastest path to traction: who your real audience is, the one or two plays to run first, and the moves to ignore so you do not waste time or money.</p>
+      <p><strong>One specific thing is not working.</strong> Something is broken or stuck. The teardown traces where it is actually breaking, separates the real cause from the symptom, and gives you the single highest-impact fix plus a couple of experiments to prove it out.</p>
+      <p><strong>Doing a lot, but unsure it is working.</strong> Plenty of activity, maybe a team, but no clear read on payoff. The teardown looks across everything you are running, finds what is quietly working and what is leaking budget, and gives you a prioritized list of what to fix, in order.</p>
+
+      <h3>What you walk away with</h3>
+      <p>An honest read on what is working versus wasting spend, the one fix or structural gap to address first, and a prioritized next-step plan you can act on whether or not you ever work with Field Vision.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="td-faq">
+        {FAQS.map((f) => (
+          <div class="td-faq-item">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="td-seo-links">Explore more from Field Vision: <a href="/services/fractional-cmo/">fractional CMO services</a>, <a href="/case-studies/">case studies</a>, and the <a href="/industries/music/">industries we serve</a>.</p>
+    </div>
+  </section>
 
   <script define:vars={{ FLOW, ENTRY_LABELS }}>
     (function () {
@@ -651,5 +720,19 @@ const entries = ['foundation', 'focused', 'full'];
       100% { opacity: 0; transform: translate(-50%,-50%) scale(.92) rotate(-1.5deg); }
     }
 
+
+    .td-seo { background: var(--warm-gray); border-top: 4px solid var(--ink); padding: 64px 24px 84px; }
+    .td-seo-inner { max-width: 680px; margin: 0 auto; }
+    .td-seo h2 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.08; color: var(--ink); margin: 6px 0 16px; }
+    .td-seo h3 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 1.32rem; color: var(--ink); margin: 28px 0 10px; }
+    .td-seo p { font-family: 'Satoshi', sans-serif; font-size: 1.06rem; line-height: 1.6; color: var(--muted); margin: 0 0 12px; }
+    .td-seo p strong { color: var(--ink); font-weight: 700; }
+    .td-faq { margin-top: 4px; }
+    .td-faq-item { padding: 18px 0; border-bottom: 2px solid rgba(33,54,33,0.12); }
+    .td-faq-item h3 { margin: 0 0 8px; font-size: 1.12rem; }
+    .td-faq-item p { margin: 0; }
+    .td-seo-links { margin-top: 30px; font-size: 1.02rem; }
+    .td-seo-links a { color: var(--green-dk); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+    .td-seo-links a:hover { color: var(--ink); }
   </style>
 </BaseLayout>

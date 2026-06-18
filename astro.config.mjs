@@ -20,6 +20,9 @@ export default defineConfig({
         } else if (url.includes('/services/') || url.includes('/guides/')) {
           priority = 0.9;
           changefreq = 'monthly';
+        } else if (url.includes('/teardown')) {
+          priority = 0.9;
+          changefreq = 'monthly';
         } else if (url.includes('/case-studies/')) {
           priority = 0.8;
           changefreq = 'monthly';
