@@ -17,7 +17,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
 const FLOW = {
   foundation: {
     forkLabel: "We haven't really started.",
-    forkSub: "No real marketing yet. Figuring out where to even begin.",
+    forkSub: "No formal marketing yet. Figuring out where to even begin.",
     branchQ: "What moment are you in?",
     options: [
       { id: 'f1', label: 'Pre-launch', echo: "You're pre-launch, which is the best time to get this right, before you spend a dollar in the wrong place." },
@@ -33,8 +33,8 @@ const FLOW = {
     ],
   },
   focused: {
-    forkLabel: "One thing isn't working.",
-    forkSub: "Something specific is broken or stuck.",
+    forkLabel: "A specific thing isn't working.",
+    forkSub: "Something is broken or stuck.",
     branchQ: "What's bugging you most?",
     options: [
       { id: 'o1', label: 'Not enough people know we exist', echo: "No one knows you exist, which is rarely a quality problem and almost always a reach and positioning problem you can fix faster than you think." },
@@ -53,7 +53,7 @@ const FLOW = {
   },
   full: {
     forkLabel: "We're doing a lot, but I'm not sure it's working.",
-    forkSub: "Activity, maybe a team, but no clarity it's paying off.",
+    forkSub: "Lots of activity. A team. But unclear if it's paying off.",
     branchQ: "When you look at your marketing, what's true?",
     options: [
       { id: 'u1', label: "We do a lot, but I can't tell what's working", echo: "You're active, but can't tell what's working. That's the most expensive problem in marketing, because you can't fix or defend what you can't measure." },
@@ -163,34 +163,15 @@ const entries = ['foundation', 'focused', 'full'];
 
       <!-- SCREEN 4: REVEAL -->
       <section class="screen" data-screen="reveal">
-        <div class="reveal-card">
-          <svg class="td-play" viewBox="0 0 300 140" role="img" aria-label="Field Vision play diagram">
-            <line class="td-play-line" x1="20" y1="85" x2="280" y2="85" />
-            <circle class="td-play-o" cx="70" cy="85" r="7" />
-            <circle class="td-play-o" cx="110" cy="85" r="7" />
-            <circle class="td-play-o" cx="150" cy="85" r="7" />
-            <circle class="td-play-o" cx="190" cy="85" r="7" />
-            <circle class="td-play-o" cx="230" cy="85" r="7" />
-            <circle class="td-play-o" cx="150" cy="112" r="7" />
-            <path class="td-play-route" d="M150 112 C 150 60, 225 74, 256 30" marker-end="url(#tdArrow)" />
-            <line class="td-play-x" x1="248" y1="46" x2="262" y2="60" />
-            <line class="td-play-x" x1="262" y1="46" x2="248" y2="60" />
-            <defs>
-              <marker id="tdArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M0 0 L10 5 L0 10 z" fill="#A5DB5D" />
-              </marker>
-            </defs>
-          </svg>
-          <span class="eyebrow">Your teardown</span>
-          <p class="reveal-echo" data-focus tabindex="-1" id="revealEcho"></p>
-          <p class="reveal-body" id="revealBody"></p>
-          <p class="reveal-walk">Walk away with</p>
-          <ul class="reveal-list" id="revealList">
-            <li></li><li></li><li></li>
-          </ul>
-          <p class="td-terms">Free. 30 minutes. You keep everything.</p>
-          <button class="btn-brutal td-cta" data-action="toSignup">I want this &rarr;</button>
-        </div>
+        <span class="eyebrow">Your teardown</span>
+        <p class="reveal-echo" data-focus tabindex="-1" id="revealEcho"></p>
+        <p class="reveal-body" id="revealBody"></p>
+        <p class="reveal-walk">Walk away with</p>
+        <ul class="reveal-list" id="revealList">
+          <li></li><li></li><li></li>
+        </ul>
+        <p class="td-terms">Free. 30 minutes. You keep everything.</p>
+        <button class="btn-brutal td-cta" data-action="toSignup">I want this &rarr;</button>
       </section>
 
       <!-- SCREEN 5: SIGNUP -->
@@ -501,10 +482,8 @@ const entries = ['foundation', 'focused', 'full'];
       .screen.is-active.slide-back,
       .screen.is-active .opt-card,
       .screen.is-active .chip,
-      .screen.is-active .reveal-list li,
-      .screen.is-active .td-play { animation: none; opacity: 1; transform: none; }
+      .screen.is-active .reveal-list li { animation: none; opacity: 1; transform: none; }
       .td-step { transition: none; }
-      .td-play-route { stroke-dashoffset: 0; animation: none; }
       .td-affirm.show { animation: none; opacity: 0; }
     }
 
@@ -581,27 +560,28 @@ const entries = ['foundation', 'focused', 'full'];
 
     .reveal-echo {
       font-family: 'Anton', sans-serif; font-weight: 400;
-      font-size: clamp(1.95rem, 6.4vw, 2.8rem); line-height: 1.08;
-      color: var(--ink); outline: none; margin-bottom: 24px;
+      font-size: clamp(1.5rem, 4.4vw, 2.05rem); line-height: 1.16;
+      color: var(--ink); outline: none; margin-bottom: 14px;
     }
-    .reveal-body { font-family: 'Satoshi', sans-serif; font-size: 1.28rem; line-height: 1.6; color: var(--ink); }
+    .reveal-body { font-family: 'Satoshi', sans-serif; font-size: 1.06rem; line-height: 1.55; color: var(--muted); }
     .reveal-walk {
-      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.14em; color: var(--green-dk); margin: 32px 0 16px;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.14em; color: var(--green-dk); margin: 22px 0 12px;
     }
-    .reveal-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .reveal-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
     .reveal-list li {
-      position: relative; padding-left: 34px;
-      font-family: 'Satoshi', sans-serif; font-size: 1.18rem; line-height: 1.5; color: var(--ink);
+      position: relative; padding-left: 28px;
+      font-family: 'Satoshi', sans-serif; font-size: 1.0rem; line-height: 1.45; color: var(--ink);
     }
     .reveal-list li::before {
       content: ''; position: absolute; left: 0; top: 6px;
-      width: 16px; height: 16px; background: var(--green-lt); border: 3px solid var(--ink);
+      width: 13px; height: 13px; background: var(--green-lt); border: 3px solid var(--ink);
     }
     .td-terms {
-      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink); margin-top: 34px;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--green-dk); margin-top: 20px;
     }
+    .screen[data-screen="reveal"] .td-cta { margin-top: 20px; }
 
     .td-form { display: flex; flex-direction: column; gap: 16px; margin-top: 30px; }
     .td-input {
@@ -651,29 +631,6 @@ const entries = ['foundation', 'focused', 'full'];
     .td-sub { font-size: 1.3rem; }
     .td-cta { font-size: 1.18rem; padding: 20px 38px; }
 
-    .reveal-card {
-      background: var(--ink); color: var(--offwhite);
-      border: 4px solid var(--ink); box-shadow: 12px 12px 0 var(--green-dk);
-      padding: 44px 38px;
-    }
-    .reveal-card .eyebrow { color: var(--green-lt); }
-    .reveal-card .eyebrow::before { background: var(--green-lt); }
-    .reveal-card .reveal-echo {
-      color: var(--offwhite);
-      font-size: clamp(2.2rem, 7.2vw, 3.4rem); line-height: 1.05;
-      text-shadow: 0 0 44px rgba(165,219,93,0.18);
-    }
-    .reveal-card .reveal-body { color: var(--offwhite); font-size: 1.32rem; opacity: 0.92; }
-    .reveal-card .reveal-walk { color: var(--green-lt); }
-    .reveal-card .reveal-list li { color: var(--offwhite); font-size: 1.22rem; padding-left: 38px; }
-    .reveal-card .reveal-list li::before {
-      width: 18px; height: 18px; top: 6px;
-      background: var(--green-lt); border: 3px solid var(--green-lt);
-      box-shadow: 0 0 18px rgba(165,219,93,0.5);
-    }
-    .reveal-card .td-terms { color: var(--green-lt); }
-    @media (max-width: 560px) { .reveal-card { padding: 32px 22px; } }
-
     .chip--icon { display: inline-flex; align-items: center; gap: 9px; }
     .chip-ico { font-size: 1.2rem; line-height: 1; }
 
@@ -694,17 +651,5 @@ const entries = ['foundation', 'focused', 'full'];
       100% { opacity: 0; transform: translate(-50%,-50%) scale(.92) rotate(-1.5deg); }
     }
 
-    .td-play { display: block; width: 100%; max-width: 320px; height: auto; margin: 0 auto 26px; }
-    .td-play-line { stroke: var(--offwhite); stroke-width: 2; stroke-dasharray: 6 6; opacity: .4; }
-    .td-play-o { fill: none; stroke: var(--offwhite); stroke-width: 3; opacity: .85; }
-    .td-play-x { stroke: var(--offwhite); stroke-width: 3; opacity: .55; }
-    .td-play-route {
-      fill: none; stroke: var(--green-lt); stroke-width: 4; stroke-linecap: round;
-      stroke-dasharray: 460; stroke-dashoffset: 460;
-      filter: drop-shadow(0 0 8px rgba(165,219,93,.5));
-    }
-    .screen.is-active .td-play { animation: popIn .5s ease both; }
-    .screen.is-active .td-play-route { animation: drawRoute 1.15s .2s ease forwards; }
-    @keyframes drawRoute { from { stroke-dashoffset: 460; } to { stroke-dashoffset: 0; } }
   </style>
 </BaseLayout>
