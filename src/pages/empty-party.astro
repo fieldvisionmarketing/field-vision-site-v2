@@ -27,8 +27,10 @@ const articleSchema = {
   <Header slot="header" />
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
-  <!-- Reading progress -->
-  <div class="ep-progress" id="epProgress"></div>
+  <!-- Reading progress (vertical, right edge) -->
+  <div class="ep-progress" id="epProgress" aria-hidden="true">
+    <div class="ep-progress-fill" id="epProgressFill"></div>
+  </div>
 
   <article class="ep">
 
@@ -111,13 +113,21 @@ const articleSchema = {
 <style>
   .ep { width: 100%; overflow: hidden; }
 
-  /* ── Reading progress bar ── */
+  /* ── Reading progress bar (vertical, right edge) ── */
   .ep-progress {
-    position: fixed; top: 0; left: 0;
-    height: 4px; width: 0;
-    background: var(--green-lt);
+    position: fixed; top: 0; right: 0;
+    width: 12px; height: 100vh;
+    background: rgba(33, 54, 33, 0.12);
+    border-left: 2px solid var(--ink);
     z-index: 1300;
-    transition: width 0.1s linear;
+  }
+  .ep-progress-fill {
+    width: 100%; height: 0;
+    background: var(--ink);
+    transition: height 0.1s linear;
+  }
+  @media (max-width: 600px) {
+    .ep-progress { width: 8px; }
   }
 
   /* ── Hero ── */
@@ -290,13 +300,13 @@ const articleSchema = {
 
 <script>
   // Reading progress bar
-  const bar = document.getElementById('epProgress');
+  const fill = document.getElementById('epProgressFill');
   function updateProgress() {
-    if (!bar) return;
+    if (!fill) return;
     const h = document.documentElement;
     const max = h.scrollHeight - window.innerHeight;
     const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
-    bar.style.width = Math.min(pct, 100) + '%';
+    fill.style.height = Math.min(pct, 100) + '%';
   }
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
