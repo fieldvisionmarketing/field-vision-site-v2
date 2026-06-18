@@ -57,6 +57,10 @@
 /ai-blueprint                                          /guides/ai-blueprint/                         301
 /compound-growth-system                                /guides/compound-growth-system/               301
 
+# ── Empty Party moved out of /services ──
+/services/empty-party    /empty-party/   301
+/services/empty-party/   /empty-party/   301
+
 # ── Common Wix system pages ──
 /blank                                                 /                                             301
 /home                                                  /                                             301

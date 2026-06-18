@@ -1,0 +1,288 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const siteUrl = 'https://fieldvisiongroup.com';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Empty Party: Why Creator Platforms Stall",
+  "description": "Most creator platforms invest heavily in supply and still can't get the flywheel spinning. This is the pattern I keep seeing, and how to fix it.",
+  "author": {
+    "@type": "Person",
+    "name": "David Hampian",
+    "url": "https://www.linkedin.com/in/davidhampian/"
+  },
+  "publisher": { "@type": "Organization", "name": "Field Vision Group", "url": siteUrl },
+  "datePublished": "2026-05-01",
+  "mainEntityOfPage": siteUrl + "/empty-party"
+};
+---
+
+<BaseLayout
+  title="The Empty Party: Why Creator Platforms Stall"
+  description="Most creator platforms invest heavily in supply and still can't get the flywheel spinning. This is the pattern I keep seeing, and how to fix it."
+>
+  <Header slot="header" />
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <article class="ep">
+
+    <!-- ── Hero ── -->
+    <header class="ep-hero">
+      <span class="eyebrow ep-reveal">A Field Vision Briefing</span>
+      <h1 class="ep-reveal">The Empty Party:<br>Why Creator Platforms <span class="hl-green">Stall</span></h1>
+      <div class="ep-meta ep-reveal">
+        <span>David Hampian — Field Vision Group — May 2026</span>
+        <span class="ep-meta-sep">·</span>
+        <span>3 min read</span>
+      </div>
+      <div class="ep-rule"></div>
+    </header>
+
+    <!-- ── Body ── -->
+    <div class="ep-body">
+      <p class="ep-lede ep-reveal">Every creator platform runs on a two-sided engine. Creators make content. Viewers show up. Each side gives the other a reason to stay. When this flywheel spins, growth compounds. When it stalls, cash burns and growth halts.</p>
+
+      <p class="ep-reveal">I call it the Empty Party. A viewer lands on a piece of creator content and sees low engagement – low comments, few reactions, no visible community. The content might be great, but the perception that “nobody is here” has already killed the vibe. So, they leave. The creator sees the same thing from the other side. They showed up and put in the work to an empty room. If that keeps happening, they leave too.</p>
+
+      <p class="ep-reveal">Most creator platforms I work with have some version of this problem. They’ve invested in acquiring creators with large social followings, but they haven’t built the demand-side engine that makes those creators successful once they arrive. So those creators come in, underperform against their own expectations, and churn. Viewers bounce before they engage. The cost of creator acquisition keeps climbing with nothing to show for it.</p>
+
+      <h2 class="ep-reveal">Why It Happens.</h2>
+
+      <p class="ep-reveal">The platforms are operating under a reasonable but flawed assumption: sign creators with existing audiences and those audiences will follow them.</p>
+
+      <p class="ep-reveal">The thing that gets overlooked is a creator’s audience on Instagram or TikTok is essentially rented. Those followers exist within that platform. Asking them to leave, create a new account, and rebuild their behavior somewhere else is a steep, friction-laden ask. One that star power alone doesn’t overcome.</p>
+
+      <p class="ep-reveal">What actually happens is the creator promotes the new platform, a small fraction of their audience clicks through, they arrive at a low-engagement environment, and they bounce. <strong class="ep-tag">The Empty Party.</strong></p>
+
+      <p class="ep-reveal">The creator blames the platform for not delivering viewers. The viewer blames the creator for throwing a lame party. Both are wrong – it’s the system that failed them.</p>
+
+      <h2 class="ep-reveal">What We Did About It at Twitch.</h2>
+
+      <p class="ep-reveal">I saw this firsthand leading GTM for Twitch’s expansion into Sports and Music. We signed notable creators with social reach who struggled to convert their off-platform audiences. When we drove new viewers to their content, bounce rates were high. The content was great, but the social proof just wasn’t there.</p>
+
+      <p class="ep-reveal">So we flipped the approach. Instead of spreading viewer acquisition evenly, we concentrated new viewer traffic at moments of peak engagement, amplifying social proof during a creator’s strongest windows.</p>
+
+      <p class="ep-reveal">Viewers who arrived during those windows stayed longer, spent more, and came back. Creators saw immediate audience growth and monetization, which deepened their commitment to Twitch. Best of all, referral loops kicked in on both sides, because who doesn’t want to invite their friends to a great party?</p>
+
+      <p class="ep-reveal">This completely shifted our focus from spending more on creator and viewer acquisition to instead orchestrating both so that neither side ever walked into an empty party.</p>
+
+      <!-- ── Two questions callout ── -->
+      <div class="ep-questions ep-reveal">
+        <span class="eyebrow">Two Questions Worth Asking at Your Next Leadership Meeting</span>
+        <div class="ep-q">
+          <span class="ep-q-num">1</span>
+          <p>If you brought on a wave of new creators and viewers tomorrow, do you have the engine to retain them and set the flywheel in motion?</p>
+        </div>
+        <div class="ep-q">
+          <span class="ep-q-num">2</span>
+          <p>If half your viewers churned tomorrow, would your creators also leave? And vice versa.</p>
+        </div>
+      </div>
+
+      <p class="ep-close ep-reveal">If either answer gives you pause, I'm happy to compare notes.</p>
+
+      <!-- ── Signature ── -->
+      <div class="ep-sign ep-reveal">
+        <img class="ep-headshot" src="/headshot-david-hampian.jpg" alt="David Hampian" width="64" height="64" />
+        <div class="ep-sign-text">
+          <img class="ep-signature" src="/signature-david-hampian.png" alt="David Hampian signature" />
+          <div class="ep-sign-name">David Hampian</div>
+          <div class="ep-sign-role">Fractional CMO, Field Vision Group</div>
+          <div class="ep-sign-links">
+            <a href="mailto:david@fieldvisiongroup.com">david@fieldvisiongroup.com</a>
+            <span class="ep-meta-sep">·</span>
+            <a href="https://www.fieldvisiongroup.com">www.fieldvisiongroup.com</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="/contact/" class="btn-brutal ep-cta ep-reveal">Compare notes <span>→</span></a>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .ep { width: 100%; overflow: hidden; }
+
+  /* ── Hero ── */
+  .ep-hero {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 140px 24px 0;
+  }
+  .ep-hero h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(38px, 5.4vw, 68px);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    margin: 14px 0 22px;
+  }
+  .ep-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  }
+  .ep-meta-sep { opacity: 0.4; }
+  .ep-rule {
+    height: 4px;
+    background: var(--ink);
+    margin-top: 28px;
+  }
+
+  /* ── Body ── */
+  .ep-body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 44px 24px 90px;
+  }
+  .ep-body p {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 19px;
+    line-height: 1.72;
+    font-weight: 450;
+    color: var(--ink);
+    margin-bottom: 26px;
+  }
+  .ep-lede {
+    font-size: 22px !important;
+    line-height: 1.6 !important;
+    font-weight: 500 !important;
+    color: var(--ink);
+  }
+  .ep-tag {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--green-dk);
+    text-transform: uppercase;
+  }
+  .ep-body h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(24px, 3vw, 34px);
+    text-transform: uppercase;
+    line-height: 1.05;
+    color: var(--ink);
+    margin: 52px 0 22px;
+    position: relative;
+    padding-top: 26px;
+  }
+  .ep-body h2::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 48px; height: 4px;
+    background: var(--green-lt);
+  }
+
+  /* ── Two questions callout ── */
+  .ep-questions {
+    background: var(--ink);
+    border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--green-dk);
+    padding: 36px 34px;
+    margin: 52px 0;
+  }
+  .ep-questions .eyebrow {
+    color: var(--green-lt) !important;
+    margin-bottom: 24px;
+    line-height: 1.4;
+  }
+  .ep-questions .eyebrow::before { background: var(--green-lt); }
+  .ep-q {
+    display: flex; gap: 18px; align-items: flex-start;
+    padding: 18px 0;
+    border-top: 2px solid rgba(239, 234, 211, 0.15);
+  }
+  .ep-q:first-of-type { border-top: none; padding-top: 0; }
+  .ep-q:last-of-type { padding-bottom: 0; }
+  .ep-q-num {
+    flex-shrink: 0;
+    width: 38px; height: 38px;
+    background: var(--green-lt);
+    border: 3px solid var(--green-lt);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 17px;
+    color: var(--ink);
+  }
+  .ep-q p {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+    font-style: italic;
+    color: rgba(239, 234, 211, 0.95);
+    margin: 5px 0 0;
+  }
+
+  /* ── Close + signature ── */
+  .ep-close {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    color: var(--ink);
+  }
+  .ep-sign {
+    display: flex; gap: 18px; align-items: flex-start;
+    border-top: 4px solid var(--ink);
+    padding-top: 28px;
+    margin-top: 8px;
+  }
+  .ep-headshot {
+    width: 64px; height: 64px;
+    border: 3px solid var(--ink);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .ep-signature { height: 46px; width: auto; margin-bottom: 6px; display: block; }
+  .ep-sign-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 18px; text-transform: uppercase;
+    color: var(--ink);
+  }
+  .ep-sign-role {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 15px; color: var(--muted); margin-top: 2px;
+  }
+  .ep-sign-links {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px; margin-top: 8px;
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  }
+  .ep-sign-links a { color: var(--green-dk); text-decoration: none; }
+  .ep-sign-links a:hover { text-decoration: underline; }
+
+  .ep-cta { margin-top: 40px; }
+
+  @media (max-width: 600px) {
+    .ep-hero { padding-top: 112px; }
+    .ep-questions { padding: 28px 22px; }
+  }
+
+  /* ── Scroll reveal ── */
+  .ep-reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .ep-reveal.visible { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ep-reveal { transition: none !important; opacity: 1 !important; transform: none !important; }
+  }
+</style>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.ep-reveal').forEach(el => obs.observe(el));
+</script>
