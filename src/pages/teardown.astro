@@ -267,7 +267,7 @@ const ldJson = JSON.stringify({
   <section class="td-seo" aria-label="About the free marketing teardown">
     <div class="td-seo-inner">
       <span class="eyebrow">The free teardown</span>
-      <h2>What is a marketing teardown?</h2>
+      <h2>What is a <span class="hl-cream">marketing teardown?</span></h2>
       <p>A marketing teardown is a fast, focused diagnostic of where your growth is leaking and what to fix first. It is run by David Hampian, founder and fractional CMO at Field Vision, who has led marketing at Amazon, Twitch, Pandora, and Hard Rock. You answer a few quick questions about your situation, and you get a personalized read on the highest-impact moves to make next. It takes about 90 seconds to start and about 30 minutes with David to complete. It is free, and a couple of slots open each month.</p>
 
       <h3>Who the teardown is for</h3>
@@ -284,17 +284,22 @@ const ldJson = JSON.stringify({
       <h3>What you walk away with</h3>
       <p>An honest read on what is working versus wasting spend, the one fix or structural gap to address first, and a prioritized next-step plan you can act on whether or not you ever work with Field Vision.</p>
 
-      <h2>Frequently asked questions</h2>
-      <div class="td-faq">
+      <p class="td-seo-links">Explore more from Field Vision: <a href="/services/fractional-cmo/">fractional CMO services</a>, <a href="/case-studies/">case studies</a>, and the <a href="/industries/music/">industries we serve</a>.</p>
+    </div>
+  </section>
+
+  <section class="faq-section" aria-label="Frequently asked questions">
+    <div class="faq-section-inner">
+      <span class="eyebrow">Common Questions</span>
+      <h2><span class="hl-cream">FAQ</span></h2>
+      <div class="faq-canon-list">
         {FAQS.map((f) => (
-          <div class="td-faq-item">
-            <h3>{f.q}</h3>
-            <p>{f.a}</p>
-          </div>
+          <details class="faq-canon-item">
+            <summary>{f.q}</summary>
+            <div class="faq-canon-answer"><p>{f.a}</p></div>
+          </details>
         ))}
       </div>
-
-      <p class="td-seo-links">Explore more from Field Vision: <a href="/services/fractional-cmo/">fractional CMO services</a>, <a href="/case-studies/">case studies</a>, and the <a href="/industries/music/">industries we serve</a>.</p>
     </div>
   </section>
 
@@ -727,10 +732,6 @@ const ldJson = JSON.stringify({
     .td-seo h3 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 1.32rem; color: var(--ink); margin: 28px 0 10px; }
     .td-seo p { font-family: 'Satoshi', sans-serif; font-size: 1.06rem; line-height: 1.6; color: var(--muted); margin: 0 0 12px; }
     .td-seo p strong { color: var(--ink); font-weight: 700; }
-    .td-faq { margin-top: 4px; }
-    .td-faq-item { padding: 18px 0; border-bottom: 2px solid rgba(33,54,33,0.12); }
-    .td-faq-item h3 { margin: 0 0 8px; font-size: 1.12rem; }
-    .td-faq-item p { margin: 0; }
     .td-seo-links { margin-top: 30px; font-size: 1.02rem; }
     .td-seo-links a { color: var(--green-dk); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
     .td-seo-links a:hover { color: var(--ink); }
