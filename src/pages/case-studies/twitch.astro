@@ -235,10 +235,10 @@ import RelatedIndustry from '@/components/RelatedIndustry.astro';
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll(
-    '.cs-challenge-v2 .eyebrow.cs-challenge-v2 h2.cs-fly-card.cs-mandate-drop, ' +
-    '.cs-approach .eyebrow.cs-approach h2.cs-approach-insight.cs-approach-grid .cs-phase-card, ' +
-    '.cs-results .eyebrow.cs-results h2.cs-result-row, ' +
-    '.cs-impact-v2 .eyebrow.cs-impact-v2 h2.cs-impact-v2-card'
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
   ).forEach(el => obs.observe(el));
 
   // Stats auto-play drop-in
