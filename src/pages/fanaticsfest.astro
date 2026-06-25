@@ -1,0 +1,390 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+/* ════════════════════════════════════════════════════════════
+   MARKETING TEARDOWN LIVE @ FANATICS FEST NYC — signup page
+   Route: /fanaticsfest
+
+   ⚠️ SCHEDULER_URL: paste your Google Calendar appointment-schedule
+   embed URL below (the "?gv=true" iframe link from Google Calendar →
+   Appointment schedules → Share → Embed). Build it with 8 slots,
+   15-min each, one person per slot, 10:00 AM–12:00 PM EDT on Sat
+   Jul 18, 2026. Until a real URL is set here, the page shows a
+   clean "reserve your spot" fallback instead of a broken iframe.
+   ════════════════════════════════════════════════════════════ */
+const SCHEDULER_URL = ""; // ← paste Google Calendar appointment-schedule embed URL here
+
+// Event constants
+const EVENT_ISO = "2026-07-18T10:00:00-04:00"; // Sat Jul 18, 2026, 10:00 AM EDT
+const SLOTS = [
+  "10:00 AM", "10:15 AM", "10:30 AM", "10:45 AM",
+  "11:00 AM", "11:15 AM", "11:30 AM", "11:45 AM",
+];
+---
+
+<BaseLayout
+  title="Marketing Teardown LIVE @ Fanatics Fest NYC"
+  description="Book a free 15-minute 1:1 marketing teardown with David Hampian at Fanatics Fest NYC. Saturday, July 18 — 8 slots only. The real talk on your marketing strategy for entertainment, creator, and collectible brands."
+  ogImage="https://fieldvisiongroup.com/og-teardown.jpg"
+  noindex={true}
+>
+  <Header slot="header" />
+
+  <!-- ═══ HERO ═══ -->
+  <section class="ff-hero">
+    <div class="ff-hero-inner">
+      <p class="ff-eyebrow">Live Workshop at Fanatics Fest NYC</p>
+
+      <h1 class="ff-title">
+        Marketing<br />Teardown
+        <span class="ff-live">LIVE</span>
+      </h1>
+      <p class="ff-at">@ Fanatics Fest NYC</p>
+
+      <p class="ff-sub">The real talk on your marketing strategy.</p>
+      <p class="ff-for">For <strong>ENTERTAINMENT</strong>, <strong>CREATOR</strong>, and <strong>COLLECTIBLE</strong> brands.</p>
+
+      <!-- Countdown + scarcity -->
+      <div class="ff-countdown" id="ff-countdown" data-target={EVENT_ISO}>
+        <div class="cd-box"><span class="cd-num" data-d>--</span><span class="cd-lbl">Days</span></div>
+        <div class="cd-box"><span class="cd-num" data-h>--</span><span class="cd-lbl">Hrs</span></div>
+        <div class="cd-box"><span class="cd-num" data-m>--</span><span class="cd-lbl">Min</span></div>
+        <div class="cd-box"><span class="cd-num" data-s>--</span><span class="cd-lbl">Sec</span></div>
+      </div>
+      <p class="ff-scarcity">Only <strong>8 spots</strong> &mdash; 15-minute 1:1 teardowns. First come, first served.</p>
+
+      <a href="#reserve" class="btn-brutal ff-cta">Reserve Your Slot &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ═══ THE DETAILS BAR ═══ -->
+  <section class="ff-details">
+    <div class="ff-details-grid">
+      <div class="ff-detail-card">
+        <p class="ff-detail-label">When</p>
+        <p class="ff-detail-big">Sat, July 18</p>
+        <p class="ff-detail-sm">10:00 AM &ndash; 12:00 PM EDT</p>
+      </div>
+      <div class="ff-detail-card">
+        <p class="ff-detail-label">Where</p>
+        <p class="ff-detail-big">Altair at Arlo</p>
+        <p class="ff-detail-sm">351 W 38th St, New York, NY 10018<br />2 blocks from Javits</p>
+      </div>
+      <div class="ff-detail-card">
+        <p class="ff-detail-label">Format</p>
+        <p class="ff-detail-big">15-Min 1:1</p>
+        <p class="ff-detail-sm">Bring your marketing. Leave with a plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOST ═══ -->
+  <section class="ff-host">
+    <div class="ff-host-inner">
+      <img src="/headshot-david-hampian.jpg" alt="David Hampian" class="ff-host-img" />
+      <div class="ff-host-text">
+        <p class="ff-eyebrow">Hosted by David Hampian</p>
+        <h2 class="ff-host-name">Marketing executive who's run growth at the biggest names in media.</h2>
+        <p class="ff-host-bio">
+          Senior marketing leadership at <strong>Twitch</strong>, <strong>Amazon</strong>,
+          <strong>Hard Rock Bet</strong>, <strong>Pandora</strong>, and more. Now founder of
+          Field Vision, the fractional CMO firm for entertainment, creator, and collectible brands.
+        </p>
+        <p class="ff-host-bio">
+          Sit down for 15 minutes and get an honest teardown of your marketing &mdash; what's working,
+          what's not, and the one or two plays that'll move the needle next.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESERVE ═══ -->
+  <section class="ff-reserve section-dark" id="reserve">
+    <div class="ff-reserve-inner">
+      <p class="ff-eyebrow">Claim Your Spot</p>
+      <h2 class="ff-reserve-title">Pick Your 15 Minutes</h2>
+      <p class="ff-reserve-sub">
+        Eight slots, 10:00 AM to 12:00 PM. One brand per slot. Once a time is gone, it's gone.
+      </p>
+
+      <!-- Slot chips (visual reference of the 8 windows) -->
+      <ul class="ff-slots">
+        {SLOTS.map((t) => (
+          <li class="ff-slot">{t}</li>
+        ))}
+      </ul>
+
+      <!-- Booking widget -->
+      <div class="ff-booking">
+        {SCHEDULER_URL ? (
+          <iframe
+            src={SCHEDULER_URL}
+            title="Reserve your Marketing Teardown slot"
+            width="100%"
+            height="640"
+            frameborder="0"
+            loading="lazy"
+          ></iframe>
+        ) : (
+          <div class="ff-booking-fallback">
+            <p class="ff-booking-fallback-kicker">Booking opens soon</p>
+            <p class="ff-booking-fallback-copy">
+              Reserve your slot now by email and we'll lock in your 15-minute window.
+            </p>
+            <a
+              class="btn-brutal"
+              href="mailto:hampian@fieldvisiongroup.com?subject=Reserve%20my%20Marketing%20Teardown%20slot%20%40%20Fanatics%20Fest&body=Name%3A%0ABrand%2FCompany%3A%0APreferred%20time%20(10%3A00%E2%80%9311%3A45%20AM)%3A%0AWhat%20you%20want%20torn%20down%3A"
+            >Reserve by Email &rarr;</a>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <section class="ff-final">
+    <div class="ff-final-inner">
+      <h2 class="ff-final-title">8 Slots. <span class="hl-green">One&nbsp;Morning.</span></h2>
+      <p class="ff-final-sub">Saturday, July 18 &middot; Altair at Arlo &middot; 2 blocks from Javits</p>
+      <a href="#reserve" class="btn-brutal ff-cta">Reserve Your Slot &rarr;</a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<script is:inline>
+  (function () {
+    var root = document.getElementById('ff-countdown');
+    if (!root) return;
+    var target = new Date(root.getAttribute('data-target')).getTime();
+    var dEl = root.querySelector('[data-d]');
+    var hEl = root.querySelector('[data-h]');
+    var mEl = root.querySelector('[data-m]');
+    var sEl = root.querySelector('[data-s]');
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    function tick() {
+      var diff = target - Date.now();
+      if (diff <= 0) {
+        root.innerHTML = '<p class="cd-live">Happening now &mdash; come find us at Altair at Arlo.</p>';
+        clearInterval(timer);
+        return;
+      }
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      dEl.textContent = d;
+      hEl.textContent = pad(h);
+      mEl.textContent = pad(m);
+      sEl.textContent = pad(s);
+    }
+    tick();
+    var timer = setInterval(tick, 1000);
+  })();
+</script>
+
+<style>
+  /* ── HERO ── */
+  .ff-hero {
+    background: var(--paper);
+    padding: 132px 24px 56px;
+    text-align: center;
+    border-bottom: 4px solid var(--ink);
+  }
+  .ff-hero-inner { max-width: 880px; margin: 0 auto; }
+  .ff-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--ink); margin-bottom: 20px;
+  }
+  .ff-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(56px, 11vw, 132px);
+    line-height: 0.9; text-transform: uppercase;
+    color: var(--ink); letter-spacing: 0.01em;
+  }
+  .ff-live {
+    display: inline-block;
+    background: var(--green-lt);
+    color: var(--ink);
+    border: 4px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+    padding: 0 22px 6px;
+    transform: rotate(-2deg);
+    margin-top: 14px;
+  }
+  .ff-at {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(20px, 3.4vw, 34px);
+    text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--ink); margin-top: 22px;
+  }
+  .ff-sub {
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(22px, 3.6vw, 36px);
+    color: var(--green-dk); margin-top: 28px;
+  }
+  .ff-for {
+    font-size: clamp(15px, 1.8vw, 19px);
+    color: var(--muted); margin-top: 10px;
+  }
+  .ff-for strong { color: var(--ink); }
+
+  /* ── COUNTDOWN ── */
+  .ff-countdown {
+    display: flex; justify-content: center; gap: 14px;
+    margin-top: 40px; flex-wrap: wrap;
+  }
+  .cd-box {
+    background: var(--ink); color: var(--paper);
+    border: 4px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--green-lt);
+    min-width: 84px; padding: 14px 10px 10px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .cd-num {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(30px, 5vw, 46px); line-height: 1;
+  }
+  .cd-lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; margin-top: 6px;
+    color: var(--green-lt);
+  }
+  .cd-live {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(20px, 3vw, 30px);
+    text-transform: uppercase; color: var(--green-dk);
+  }
+  .ff-scarcity {
+    margin-top: 24px; font-size: clamp(15px, 1.8vw, 18px);
+    color: var(--muted);
+  }
+  .ff-scarcity strong { color: var(--ink); }
+  .ff-cta { margin-top: 28px; font-size: 15px; padding: 18px 30px; }
+
+  /* ── DETAILS ── */
+  .ff-details { background: var(--warm-gray); padding: 64px 24px; }
+  .ff-details-grid {
+    max-width: 1040px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .ff-detail-card {
+    background: var(--paper);
+    border: 4px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+    padding: 26px 24px;
+  }
+  .ff-detail-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--green-dk);
+    margin-bottom: 12px;
+  }
+  .ff-detail-big {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    text-transform: uppercase; color: var(--ink); line-height: 1.02;
+  }
+  .ff-detail-sm {
+    margin-top: 10px; font-size: 15px; color: var(--muted); line-height: 1.5;
+  }
+
+  /* ── HOST ── */
+  .ff-host { background: var(--paper); padding: 80px 24px; }
+  .ff-host-inner {
+    max-width: 1000px; margin: 0 auto;
+    display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: center;
+  }
+  .ff-host-img {
+    width: 240px; height: 240px; object-fit: cover;
+    border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--green-lt);
+  }
+  .ff-host-name {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(26px, 3.4vw, 40px);
+    text-transform: uppercase; color: var(--ink);
+    line-height: 1.05; margin: 6px 0 18px;
+  }
+  .ff-host-bio {
+    font-size: clamp(15px, 1.7vw, 18px); color: var(--muted);
+    line-height: 1.6; margin-bottom: 14px;
+  }
+  .ff-host-bio strong { color: var(--ink); }
+
+  /* ── RESERVE ── */
+  .ff-reserve { padding: 84px 24px; }
+  .ff-reserve-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+  .ff-reserve .ff-eyebrow { color: var(--offwhite); }
+  .ff-reserve-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(34px, 5vw, 60px);
+    text-transform: uppercase; color: var(--paper);
+    margin-top: 8px;
+  }
+  .ff-reserve-sub {
+    color: rgba(255,255,255,0.75);
+    font-size: clamp(15px, 1.8vw, 18px);
+    margin: 16px auto 0; max-width: 560px; line-height: 1.6;
+  }
+  .ff-slots {
+    list-style: none; display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 12px; margin: 36px 0 8px;
+  }
+  .ff-slot {
+    font-family: 'Anton', sans-serif;
+    font-size: 16px; letter-spacing: 0.04em;
+    background: var(--green-lt); color: var(--ink);
+    border: 4px solid var(--paper);
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.4);
+    padding: 10px 16px 8px;
+  }
+  .ff-booking { margin-top: 40px; }
+  .ff-booking iframe {
+    background: var(--paper);
+    border: 4px solid var(--paper);
+    box-shadow: 10px 10px 0 var(--green-lt);
+    display: block;
+  }
+  .ff-booking-fallback {
+    background: var(--paper); color: var(--ink);
+    border: 4px solid var(--paper);
+    box-shadow: 10px 10px 0 var(--green-lt);
+    padding: 44px 28px; max-width: 560px; margin: 0 auto;
+  }
+  .ff-booking-fallback-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--green-dk); margin-bottom: 14px;
+  }
+  .ff-booking-fallback-copy {
+    font-size: 17px; line-height: 1.6; color: var(--muted); margin-bottom: 26px;
+  }
+
+  /* ── FINAL CTA ── */
+  .ff-final {
+    background: var(--offwhite); padding: 80px 24px; text-align: center;
+    border-top: 4px solid var(--ink);
+  }
+  .ff-final-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(38px, 6vw, 72px);
+    text-transform: uppercase; color: var(--ink);
+  }
+  .ff-final-sub {
+    margin-top: 18px; font-size: clamp(15px, 1.8vw, 18px); color: var(--muted);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .ff-details-grid { grid-template-columns: 1fr; }
+    .ff-host-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+    .ff-host-img { width: 200px; height: 200px; }
+  }
+</style>
