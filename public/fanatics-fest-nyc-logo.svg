@@ -1,0 +1,9 @@
+<svg viewBox="0 0 210 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fanatics Fest NYC">
+  <g fill="#C29A2E">
+    <path d="M8 5 H22 V55 H8 Z"/>
+    <path d="M22 5 H57 L48 15 L57 25 H22 Z"/>
+    <path d="M22 31 H49 L40 39.5 L49 48 H22 Z"/>
+  </g>
+  <text x="70" y="26" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="21" letter-spacing="0.3" fill="#213621">FANATICS</text>
+  <text x="70" y="50" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="21" letter-spacing="0.3" fill="#213621">FEST <tspan font-weight="400" fill="#213621" opacity="0.55">NYC</tspan></text>
+</svg>
