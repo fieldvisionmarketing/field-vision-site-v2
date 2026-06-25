@@ -7,8 +7,10 @@ const HREF = "/fanaticsfest/";
     <div class="ff-banner-inner">
       <span class="ff-banner-chip"><span class="ff-live-dot"></span>LIVE</span>
       <span class="ff-banner-text">
-        Marketing Teardown @ Fanatics Fest NYC &mdash; Sat, Jul 18 &middot;
-        <span class="ff-banner-cta">Reserve your slot <span class="ff-arrow">&rarr;</span></span>
+        <span class="ff-track">
+          <span class="ff-msg">Marketing Teardown @ Fanatics Fest NYC &mdash; Sat, Jul 18 &middot; <span class="ff-banner-cta">Reserve your slot <span class="ff-arrow">&rarr;</span></span></span>
+          <span class="ff-msg ff-msg--dup" aria-hidden="true">Marketing Teardown @ Fanatics Fest NYC &mdash; Sat, Jul 18 &middot; <span class="ff-banner-cta">Reserve your slot &rarr;</span></span>
+        </span>
       </span>
     </div>
   </a>
@@ -55,6 +57,8 @@ const HREF = "/fanaticsfest/";
     overflow: hidden; text-overflow: ellipsis;
   }
   .ff-banner-cta { text-decoration: underline; text-underline-offset: 3px; }
+  .ff-track { display: inline; }
+  .ff-msg--dup { display: none; }
   .ff-arrow { display: inline-block; animation: ffNudge 1.1s ease-in-out infinite; }
 
   #ff-banner-close {
@@ -84,15 +88,27 @@ const HREF = "/fanaticsfest/";
   }
 
   @media (max-width: 600px) {
-    .ff-banner-inner { padding: 0 44px; gap: 8px; }
-    .ff-banner-text { font-size: 10.5px; letter-spacing: 0.01em; }
+    .ff-banner-inner { padding: 0 40px; gap: 0; justify-content: flex-start; }
+    .ff-banner-text { font-size: 11px; letter-spacing: 0.01em; width: 100%; overflow: hidden; }
     .ff-banner-chip { display: none; }
+    .ff-track {
+      display: inline-flex; flex-wrap: nowrap; will-change: transform;
+      animation: ffMarquee 14s linear infinite;
+    }
+    .ff-msg { white-space: nowrap; padding-right: 48px; }
+    .ff-msg--dup { display: inline-block; }
+  }
+
+  @keyframes ffMarquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 
   @media (prefers-reduced-motion: reduce) {
     #ff-banner { transition: transform 0.3s ease; }
-    #ff-banner::after, .ff-live-dot, .ff-arrow { animation: none; }
+    #ff-banner::after, .ff-live-dot, .ff-arrow, .ff-track { animation: none; }
     #ff-banner::after { display: none; }
+    .ff-msg--dup { display: none; }
   }
 </style>
 
