@@ -1,0 +1,75 @@
+---
+// Dismissible slide-down promo banner — site-wide, links to the event page.
+const HREF = "/fanaticsfest/";
+---
+<div id="ff-banner" role="region" aria-label="Event announcement">
+  <a href={HREF} class="ff-banner-link-wrap">
+    <div class="ff-banner-inner">
+      <span class="ff-banner-chip">LIVE</span>
+      <span class="ff-banner-text">
+        Marketing Teardown @ Fanatics Fest NYC &mdash; Sat, Jul 18 &middot;
+        <span class="ff-banner-cta">Reserve your slot &rarr;</span>
+      </span>
+    </div>
+  </a>
+  <button id="ff-banner-close" aria-label="Dismiss announcement">&times;</button>
+</div>
+
+<style is:global>
+  #ff-banner {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 1200;
+    transform: translateY(-100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--green-lt); color: var(--ink);
+    border-bottom: 4px solid var(--ink);
+  }
+  #ff-banner.is-open { transform: translateY(0); }
+  .ff-banner-link-wrap { display: block; color: var(--ink); }
+  .ff-banner-inner {
+    height: 44px; display: flex; align-items: center; justify-content: center;
+    gap: 12px; padding: 0 52px;
+  }
+  .ff-banner-chip {
+    font-family: 'Anton', sans-serif; font-size: 12px; letter-spacing: 0.08em;
+    text-transform: uppercase; background: var(--ink); color: var(--green-lt);
+    padding: 3px 9px 4px; flex-shrink: 0;
+  }
+  .ff-banner-text {
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
+    letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+  .ff-banner-cta { text-decoration: underline; text-underline-offset: 3px; }
+  #ff-banner-close {
+    position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+    background: none; border: none; cursor: pointer;
+    font-size: 24px; line-height: 1; color: var(--ink); padding: 4px 8px;
+  }
+  /* Push the page + fixed header down when the banner is visible */
+  body.has-banner { padding-top: 44px; }
+  body.has-banner .header { top: 44px; }
+  @media (max-width: 600px) {
+    .ff-banner-inner { padding: 0 44px; gap: 8px; }
+    .ff-banner-text { font-size: 10.5px; letter-spacing: 0.01em; }
+    .ff-banner-chip { display: none; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var KEY = 'ff-banner-dismissed';
+    var bar = document.getElementById('ff-banner');
+    if (!bar) return;
+    try { if (localStorage.getItem(KEY) === '1') { bar.parentNode && bar.parentNode.removeChild(bar); return; } } catch (e) {}
+    document.body.classList.add('has-banner');
+    requestAnimationFrame(function () { bar.classList.add('is-open'); });
+    var close = document.getElementById('ff-banner-close');
+    close.addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      bar.classList.remove('is-open');
+      document.body.classList.remove('has-banner');
+      try { localStorage.setItem(KEY, '1'); } catch (er) {}
+      setTimeout(function () { bar.parentNode && bar.parentNode.removeChild(bar); }, 360);
+    });
+  })();
+</script>

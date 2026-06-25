@@ -1,6 +1,7 @@
 ---
 import Analytics from '@/components/Analytics.astro';
 import CookieConsent from '@/components/CookieConsent.astro';
+import AnnouncementBar from '@/components/AnnouncementBar.astro';
 
 interface Props {
   title: string;
@@ -274,6 +275,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <slot name="head" />
 </head>
 <body>
+  <AnnouncementBar />
   <slot name="header" />
   <main>
     <slot />
