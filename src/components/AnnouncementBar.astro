@@ -5,10 +5,10 @@ const HREF = "/fanaticsfest/";
 <div id="ff-banner" role="region" aria-label="Event announcement">
   <a href={HREF} class="ff-banner-link-wrap">
     <div class="ff-banner-inner">
-      <span class="ff-banner-chip">LIVE</span>
+      <span class="ff-banner-chip"><span class="ff-live-dot"></span>LIVE</span>
       <span class="ff-banner-text">
         Marketing Teardown @ Fanatics Fest NYC &mdash; Sat, Jul 18 &middot;
-        <span class="ff-banner-cta">Reserve your slot &rarr;</span>
+        <span class="ff-banner-cta">Reserve your slot <span class="ff-arrow">&rarr;</span></span>
       </span>
     </div>
   </a>
@@ -19,20 +19,35 @@ const HREF = "/fanaticsfest/";
   #ff-banner {
     position: fixed; top: 0; left: 0; width: 100%; z-index: 1200;
     transform: translateY(-100%);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     background: var(--green-lt); color: var(--ink);
     border-bottom: 4px solid var(--ink);
+    overflow: hidden;
   }
   #ff-banner.is-open { transform: translateY(0); }
-  .ff-banner-link-wrap { display: block; color: var(--ink); }
+
+  /* Glossy shine sweep */
+  #ff-banner::after {
+    content: ''; position: absolute; top: 0; left: -60%; height: 100%; width: 55%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%);
+    transform: skewX(-20deg); pointer-events: none; z-index: 1;
+    animation: ffShine 5s ease-in-out 0.8s infinite;
+  }
+
+  .ff-banner-link-wrap { display: block; color: var(--ink); position: relative; z-index: 2; }
   .ff-banner-inner {
     height: 44px; display: flex; align-items: center; justify-content: center;
     gap: 12px; padding: 0 52px;
   }
   .ff-banner-chip {
+    display: inline-flex; align-items: center; gap: 7px;
     font-family: 'Anton', sans-serif; font-size: 12px; letter-spacing: 0.08em;
     text-transform: uppercase; background: var(--ink); color: var(--green-lt);
-    padding: 3px 9px 4px; flex-shrink: 0;
+    padding: 3px 10px 4px; flex-shrink: 0;
+  }
+  .ff-live-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--green-lt);
+    display: inline-block; animation: ffPulse 1.3s ease-in-out infinite;
   }
   .ff-banner-text {
     font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
@@ -40,18 +55,44 @@ const HREF = "/fanaticsfest/";
     overflow: hidden; text-overflow: ellipsis;
   }
   .ff-banner-cta { text-decoration: underline; text-underline-offset: 3px; }
+  .ff-arrow { display: inline-block; animation: ffNudge 1.1s ease-in-out infinite; }
+
   #ff-banner-close {
     position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
-    background: none; border: none; cursor: pointer;
+    background: none; border: none; cursor: pointer; z-index: 3;
     font-size: 24px; line-height: 1; color: var(--ink); padding: 4px 8px;
+    transition: transform 0.15s;
   }
+  #ff-banner-close:hover { transform: translateY(-50%) scale(1.15); }
+
   /* Push the page + fixed header down when the banner is visible */
   body.has-banner { padding-top: 44px; }
   body.has-banner .header { top: 44px; }
+
+  @keyframes ffShine {
+    0% { left: -60%; }
+    45% { left: 120%; }
+    100% { left: 120%; }
+  }
+  @keyframes ffPulse {
+    0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(165,219,93,0.7); }
+    50% { transform: scale(1.35); opacity: 0.65; box-shadow: 0 0 0 4px rgba(165,219,93,0); }
+  }
+  @keyframes ffNudge {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+  }
+
   @media (max-width: 600px) {
     .ff-banner-inner { padding: 0 44px; gap: 8px; }
     .ff-banner-text { font-size: 10.5px; letter-spacing: 0.01em; }
     .ff-banner-chip { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #ff-banner { transition: transform 0.3s ease; }
+    #ff-banner::after, .ff-live-dot, .ff-arrow { animation: none; }
+    #ff-banner::after { display: none; }
   }
 </style>
 
