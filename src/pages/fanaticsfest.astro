@@ -114,7 +114,7 @@ const SLOTS = [
         ))}
       </ul>
 
-      <a href={BOOKING_URL} target="_blank" rel="noopener" class="btn-brutal ff-cta ff-cta--lg">Book My Slot &rarr;</a>
+      <a href={BOOKING_URL} target="_blank" rel="noopener" class="btn-brutal ff-cta">Book My Slot &rarr;</a>
       <p class="ff-reserve-note">Opens the Field Vision booking calendar in a new tab.</p>
     </div>
   </section>
@@ -205,7 +205,7 @@ const SLOTS = [
     font-size: clamp(22px, 3vw, 32px);
     color: var(--muted);
   }
-  .ff-fanatics { height: clamp(40px, 6vw, 56px); width: auto; }
+  .ff-fanatics { height: clamp(54px, 7vw, 74px); width: auto; }
 
   .ff-sub {
     font-family: 'Permanent Marker', cursive;
@@ -251,7 +251,6 @@ const SLOTS = [
   }
   .ff-scarcity strong { color: var(--ink); }
   .ff-cta { margin-top: 28px; font-size: 15px; padding: 18px 30px; }
-  .ff-cta--lg { font-size: 17px; padding: 20px 36px; }
 
   /* ── DETAILS ── */
   .ff-details { background: var(--warm-gray); padding: 64px 24px; }
@@ -319,16 +318,17 @@ const SLOTS = [
     margin: 16px auto 0; max-width: 560px; line-height: 1.6;
   }
   .ff-slots {
-    list-style: none; display: flex; flex-wrap: wrap;
-    justify-content: center; gap: 12px; margin: 36px 0 8px;
+    list-style: none; display: flex; flex-wrap: nowrap;
+    justify-content: center; gap: 9px; margin: 36px 0 8px;
   }
   .ff-slot {
     font-family: 'Anton', sans-serif;
-    font-size: 16px; letter-spacing: 0.04em;
+    font-size: clamp(12px, 1.5vw, 15px); letter-spacing: 0.02em;
+    white-space: nowrap;
     background: var(--green-lt); color: var(--ink);
     border: 4px solid var(--paper);
-    box-shadow: 5px 5px 0 rgba(0,0,0,0.4);
-    padding: 10px 16px 8px;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+    padding: 9px 11px 7px;
   }
   .ff-reserve-note {
     margin-top: 16px; font-size: 13px;
@@ -352,6 +352,7 @@ const SLOTS = [
 
   /* ── RESPONSIVE ── */
   @media (max-width: 860px) {
+    .ff-slots { flex-wrap: wrap; }
     .ff-details-grid { grid-template-columns: 1fr; }
     .ff-host-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
     .ff-host-img { width: 200px; height: 200px; }
