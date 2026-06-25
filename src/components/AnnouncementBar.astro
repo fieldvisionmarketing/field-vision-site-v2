@@ -42,11 +42,11 @@ const HREF = "/fanaticsfest/";
   .ff-banner-chip {
     display: inline-flex; align-items: center; gap: 7px;
     font-family: 'Anton', sans-serif; font-size: 12px; letter-spacing: 0.08em;
-    text-transform: uppercase; background: var(--ink); color: var(--green-lt);
+    text-transform: uppercase; background: #d62828; color: #fff;
     padding: 3px 10px 4px; flex-shrink: 0;
   }
   .ff-live-dot {
-    width: 8px; height: 8px; border-radius: 50%; background: var(--green-lt);
+    width: 8px; height: 8px; border-radius: 50%; background: #fff;
     display: inline-block; animation: ffPulse 1.3s ease-in-out infinite;
   }
   .ff-banner-text {
@@ -75,8 +75,8 @@ const HREF = "/fanaticsfest/";
     100% { left: 120%; }
   }
   @keyframes ffPulse {
-    0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(165,219,93,0.7); }
-    50% { transform: scale(1.35); opacity: 0.65; box-shadow: 0 0 0 4px rgba(165,219,93,0); }
+    0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(255,255,255,0.8); }
+    50% { transform: scale(1.35); opacity: 0.65; box-shadow: 0 0 0 4px rgba(255,255,255,0); }
   }
   @keyframes ffNudge {
     0%, 100% { transform: translateX(0); }
