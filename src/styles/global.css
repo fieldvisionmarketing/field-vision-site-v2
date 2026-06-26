@@ -1914,7 +1914,7 @@ h1, h2, h3 {
 }
 .abt-press-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   margin-bottom: 0;
   text-align: left;
@@ -1949,6 +1949,16 @@ h1, h2, h3 {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--green-lt);
+}
+.abt-press-card-date {
+  display: block;
+  margin-top: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(239,234,211,0.55);
 }
 .abt-press-card-body {
   padding: 16px 20px 14px;

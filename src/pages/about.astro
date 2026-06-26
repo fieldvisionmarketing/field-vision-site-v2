@@ -191,10 +191,11 @@ const services = [
 
 /* ── Press data ── */
 const press = [
-  { name: "Australian Financial Review", topic: "Sports Marketing & US Market Entry", slug: "rugby-union-rising-us-nrl-sports-marketing" },
-  { name: "Covers", topic: "Music Industry & Culture", slug: "grammys-2026-kendrick-lamar-record-breaking-night" },
-  { name: "Daily Express", topic: "Awards & Industry Evolution", slug: "grammy-awards-evolution-voting-categories" },
-  { name: "Birch", topic: "Performance Marketing", slug: "creative-testing-automation-performance-marketing" }
+  { name: "Quartz", topic: "Prediction Markets & Responsible Gaming", date: "March 2026", slug: "prediction-markets-teen-gambling-quartz" },
+  { name: "Ball Is Life", topic: "Sports Betting & Regulatory Technology", date: "May 2026", slug: "geofencing-college-campuses-ny-sports-betting" },
+  { name: "Covers", topic: "Music Industry & Culture", date: "February 2026", slug: "grammys-2026-kendrick-lamar-record-breaking-night" },
+  { name: "CIM Catalyst", topic: "Global Brand Strategy & Market Expansion", date: "April 2026", slug: "cim-catalyst-global-local-brand-expansion" },
+  { name: "Daily Express", topic: "Awards & Industry Evolution", date: "January 2026", slug: "grammy-awards-evolution-voting-categories" }
 ];
 ---
 
@@ -356,6 +357,7 @@ const press = [
           <a href={`/press/${p.slug}`} class="abt-press-card">
             <div class="abt-press-card-header">
               <span>{p.name}</span>
+              <time class="abt-press-card-date">{p.date}</time>
             </div>
             <div class="abt-press-card-body">
               <p>{p.topic}</p>
