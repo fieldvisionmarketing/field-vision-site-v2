@@ -1,0 +1,309 @@
+---
+/**
+ * CASE STUDY — Arena Talent
+ * Built on case-study-template.astro v2.0 (Animated). CS rules CS1–CS29 + Brutalist v2.4.
+ * Source: Arena-Talent-Case-Study-Draft.pdf (June 2026).
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import FinalCTA from '@/components/FinalCTA.astro';
+---
+
+<BaseLayout
+  title="Building the Subscription Growth Engine at Arena Talent | Field Vision"
+  description="How Field Vision helped Arena Talent grow active subscriptions ~4x in 90 days with a conversion playbook, annual-first pricing, content framework, and referral program."
+>
+  <Header slot="header" />
+
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
+
+<!-- ═══ HERO — CS4-CS8 ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <div class="cs-hero-v2-bg" style="background-image:url('REPLACE_WITH_HERO_IMAGE_URL')"></div>
+    <div class="cs-hero-v2-content">
+      <h1>Building the<br>Subscription Growth Engine<br>at <span class="highlight-chip">Arena Talent</span></h1>
+      <p class="cs-hero-v2-summary">We built the conversion playbook, pricing strategy, content framework, and referral program that grew active subscriptions ~4x in three months — turning a beloved beta community into a self-sustaining subscription business.</p>
+    </div>
+    <div class="cs-scroll-hint">Scroll to explore</div>
+  </div>
+</div>
+
+<!-- ═══ STATS — CS9-CS12 ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <!-- Stat 1 -->
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="4" data-prefix="~" data-suffix="x">~0x</div>
+      <div class="cs-stat-drop-label">Active Subscription Growth</div>
+    </div>
+    <!-- Stat 2 -->
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="79" data-prefix="" data-suffix="%">0%</div>
+      <div class="cs-stat-drop-label">Annual Plan Adoption</div>
+    </div>
+    <!-- Stat 3 -->
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="58" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Application Volume Growth</div>
+    </div>
+    <!-- Stat 4 -->
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="18" data-prefix="+" data-suffix="%">+0%</div>
+      <div class="cs-stat-drop-label">Conversion Rate Increase</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CHALLENGE — CS13-CS16 ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
+    <span class="eyebrow">— The Challenge</span>
+    <h2>Strong Product, Untapped Growth Levers</h2>
+
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>Conversion had room to run.</strong> Approved-to-paid conversion sat at 40%, and a wave of beta trials were approaching their conversion deadline with no structured nurture sequence to guide them.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>Pricing and packaging needed a rethink.</strong> Free trials and monthly billing created a low-commitment entry point that contributed to early churn, with cost perception as the leading cancellation factor.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>Content and marketing infrastructure was early.</strong> A sizable newsletter audience existed, but there were no content pillars, editorial calendar, or system connecting content to applications.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>Referral and word-of-mouth channels were untapped.</strong> Members loved the product, but no structured program existed to channel that enthusiasm into a repeatable acquisition engine.</span>
+    </div>
+
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">— The Mandate</span>
+      <blockquote>Build the conversion, content, and growth infrastructure to turn a beloved beta community into a self-sustaining subscription business.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APPROACH — CS17-CS20 ═══ -->
+<div class="cs-approach section">
+  <div class="cs-section-inner">
+    <span class="eyebrow">— The Approach</span>
+    <h2>Conversion First, Then Scale</h2>
+    <p class="cs-approach-insight">The engagement started with the most urgent lever — <em>a wave of beta trials approaching their conversion deadline</em> — then expanded into the full growth infrastructure Arena Talent needed to scale sustainably.</p>
+
+    <div class="cs-approach-grid">
+      <div class="cs-phase-card">
+        <div class="cs-phase-num">01</div>
+        <div class="cs-phase-title">Conversion Playbook</div>
+        <div class="cs-phase-desc">Audited the full funnel from application approval to paid subscription and built a five-part playbook: pre-conversion nurture, best-match acceleration, social proof, pre-emptive price framing, and win-back flows.</div>
+        <div class="cs-phase-tools">
+          <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle →</a>
+        </div>
+      </div>
+      <div class="cs-phase-card">
+        <div class="cs-phase-num">02</div>
+        <div class="cs-phase-title">Pricing &amp; Packaging Strategy</div>
+        <div class="cs-phase-desc">Anchored pricing to annual plans over monthly, reframing the value conversation from monthly cost to annual ROI — the foundation for the annual-first billing that now drives 79% of subscriptions.</div>
+        <div class="cs-phase-tools">
+          <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
+        </div>
+      </div>
+      <div class="cs-phase-card">
+        <div class="cs-phase-num">03</div>
+        <div class="cs-phase-title">Content Strategy Framework</div>
+        <div class="cs-phase-desc">Developed content pillars, channel strategy, and a 90-day editorial calendar designed to drive applications, plus the campaign playbook connecting content to conversion at every stage.</div>
+        <div class="cs-phase-tools">
+          <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creators →</a>
+        </div>
+      </div>
+      <div class="cs-phase-card">
+        <div class="cs-phase-num">04</div>
+        <div class="cs-phase-title">Referral Program Design</div>
+        <div class="cs-phase-desc">Ran competitive analysis across 12 platforms, then designed a tiered referral program with Rewardful integration, automation workflows, and a phased rollout to turn members into an organic acquisition channel.</div>
+        <div class="cs-phase-tools">
+          <a href="/services/integrated-marketing" class="cs-phase-tool">Integrated Marketing →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ RESULTS — CS21-CS22 ═══ -->
+<section class="cs-results section">
+  <div class="cs-results-inner">
+    <span class="eyebrow">— The Results</span>
+    <h2>The Numbers Tell the Story</h2>
+
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="4" data-prefix="~" data-suffix="x">~0x</div>
+      <div>
+        <div class="cs-result-label">Active Subscription Growth</div>
+        <div class="cs-result-desc">Active subscriptions grew ~4x in three months as conversion optimization, annual pricing strategy, and content-driven demand generation compounded into accelerating growth.</div>
+      </div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="79" data-prefix="" data-suffix="%">0%</div>
+      <div>
+        <div class="cs-result-label">Annual Plan Adoption</div>
+        <div class="cs-result-desc">After implementing the annual-first pricing recommendation, 79% of active subscribers chose annual plans — improving revenue predictability and reducing churn exposure.</div>
+      </div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="58" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
+        <div class="cs-result-label">Application Volume Growth</div>
+        <div class="cs-result-desc">Applications per cohort grew 58% as the content strategy and improved positioning began driving top-of-funnel demand.</div>
+      </div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="18" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div>
+        <div class="cs-result-label">Conversion Rate Increase</div>
+        <div class="cs-result-desc">Approved-to-paid conversion rose 18% even after eliminating free trials entirely — pre-conversion nurture and value framing replaced the trial safety net.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IMPACT — CS23-CS25 ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
+    <span class="eyebrow">— The Impact</span>
+    <h2>From Beta to Business</h2>
+
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">↗</div>
+      <p class="cs-impact-text">The shift to annual-first billing changed the business model — Arena Talent moved from churn-vulnerable monthly subscriptions to predictable annual revenue, with every deliverable shipped with step-by-step instructions so the team could execute independently from day one.</p>
+    </div>
+
+    <!-- STAGING NOTE: testimonial folded in here (no native quote slot in v2.0 template). Move/cut per David. -->
+    <blockquote class="cs-impact-quote">
+      &ldquo;The work you did was eye-opening and truly helped us re-evaluate our strategy. The results have been real and fast.&rdquo;
+      <cite>— Parul Khosla, Co-Founder, Arena Talent</cite>
+    </blockquote>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
+      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
+      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<FinalCTA />
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card, .cs-impact-quote'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num[data-target]');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const accentHtml = prefix === '+' ? '<span class="accent">+</span>' : '';
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.innerHTML = accentHtml + (prefix === '+' ? '' : prefix) + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
+</script>
