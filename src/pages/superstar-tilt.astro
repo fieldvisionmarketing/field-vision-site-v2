@@ -259,6 +259,15 @@ const articleSchema = {
 
     <section class="backmatter">
       <hr class="backmatter-rule">
+      <div class="author-note">
+        <h3>About the Author</h3>
+        <div class="author-note-inner">
+          <img src="/headshot-david-hampian.jpg" alt="David Hampian" class="author-photo" loading="lazy" />
+          <p>David Hampian is the founder of <a href="/about/">Field Vision</a>, a San Francisco–based growth marketing firm serving digital media, streaming, entertainment, and creator economy companies. He has spent more than a decade in senior marketing leadership at Amazon Music, Twitch, Pandora, and Hard Rock International, building audiences on both sides of the creator platforms this paper describes.</p>
+        </div>
+        <hr class="author-note-rule">
+      </div>
+
       <h3>Endnotes</h3>
       <ol class="endnotes">
         <li id="en1">Twitch payout figures from the 2021 data leak, with the Wall Street Journal's reporting that the majority of paid streamers earned under $120, as compiled in CreatorBoom, "There Will Never be a Creator Middle Class and Why That's Good."</li>
@@ -430,6 +439,17 @@ const articleSchema = {
     max-width: var(--measure); margin: 40px auto 0; padding: 0 24px 80px;
   }
   .backmatter-rule { border: 0; border-top: 1px solid var(--st-ink); margin-bottom: 48px; }
+
+  /* About the Author */
+  .author-note { margin-bottom: 56px; }
+  .author-note-inner { display: flex; gap: 24px; align-items: flex-start; }
+  .author-photo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+  .author-note-inner p { font-size: 17px; line-height: 1.6; color: var(--st-ink-soft); margin: 0; }
+  .author-note-inner a { color: var(--st-green); }
+  .author-note-rule { border: 0; border-top: 1px solid var(--st-rule); margin-top: 48px; }
+  @media (max-width: 520px) {
+    .author-note-inner { flex-direction: column; align-items: center; text-align: center; }
+  }
   .backmatter h3 {
     font-family: 'Newsreader', Georgia, serif;
     font-size: 24px; font-weight: 600; margin-bottom: 28px; letter-spacing: -0.01em;
