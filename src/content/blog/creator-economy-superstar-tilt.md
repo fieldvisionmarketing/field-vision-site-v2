@@ -69,14 +69,9 @@ The full piece runs about 28 minutes and covers the ground this post can't: the 
 
 **Read it here: [The Superstar Tilt →](https://fieldvisiongroup.com/superstar-tilt/)**
 
-Prefer to read it in your inbox or listen along? It's also on Substack:
+Prefer to read it in your inbox or listen along? [It's also on Substack](https://hampian.substack.com/p/the-superstar-tilt), where you can subscribe to get the next one delivered:
 
-<div class="substack-post-embed">
-<p lang="en">The Superstar Tilt by David Hampian</p>
-<p>How a 1981 paper about opera singers predicted the modern creator economy — and what it means for brands and creators. Read Now and Listen Along.</p>
-<a data-post-link href="https://hampian.substack.com/p/the-superstar-tilt">Read on Substack</a>
-</div>
-<script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+<iframe src="https://hampian.substack.com/embed" width="100%" height="150" style="border:1px solid #b9a98f; border-radius:8px; background:#f9efdc; margin:1rem 0;" frameborder="0" scrolling="no" title="Subscribe to David Hampian on Substack"></iframe>
 
 ## Frequently asked questions
 
