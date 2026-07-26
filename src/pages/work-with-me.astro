@@ -205,7 +205,7 @@ const CTA_POST = "/contact/?offer=post-mortem";
   .lm-card--audit .lm-card-head { background: var(--ink); }
   .lm-card--audit .lm-card-head::after { background: var(--green-lt); }
   .lm-card--audit .lm-card-title { color: var(--offwhite); }
-  .lm-card--post .lm-card-head { background: var(--green-lt); border-bottom: 4px solid var(--ink); }
+  .lm-card--post .lm-card-head { background: var(--offwhite); border-bottom: 4px solid var(--ink); }
   .lm-card--post .lm-card-head::after { background: var(--ink); }
   .lm-card--post .lm-card-title { color: var(--ink); }
   .lm-card-title {
@@ -218,16 +218,28 @@ const CTA_POST = "/contact/?offer=post-mortem";
   .lm-card-lead { display: flex; flex-direction: column; flex: 1 1 auto; padding: 24px 28px 22px; }
   .lm-lead-text { font-size: 16px; color: var(--ink); font-weight: 600; line-height: 1.5; margin-top: 7px; margin-bottom: 18px; }
   .lm-expand {
-    display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; margin-top: auto;
-    font-family: 'JetBrains Mono', monospace; font-size: 13.5px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.12em; color: var(--green-dk);
-    animation: lm-pulse 1.6s ease-in-out infinite;
+    position: relative; overflow: hidden;
+    display: inline-flex; align-items: center; gap: 9px; align-self: flex-start; margin-top: auto;
+    font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    background: var(--green-lt); color: var(--ink);
+    border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+    padding: 11px 18px 12px;
+    transition: transform .15s ease, box-shadow .15s ease;
   }
-  @keyframes lm-pulse { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
-  .lm-expand-icon { display: inline-block; transition: transform .3s ease; font-size: 14px; }
-  .lm-card.is-open .lm-expand { animation: none; opacity: 1; }
+  /* Glossy shine sweep (matches the Fanatics promo bar) */
+  .lm-expand::after {
+    content: ''; position: absolute; top: 0; left: -60%; height: 100%; width: 55%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+    transform: skewX(-20deg); pointer-events: none;
+    animation: lm-sheen 3.2s ease-in-out 0.6s infinite;
+  }
+  @keyframes lm-sheen { 0% { left: -60%; } 45% { left: 120%; } 100% { left: 120%; } }
+  .lm-expand-txt { position: relative; z-index: 1; }
+  .lm-expand-icon { position: relative; z-index: 1; display: inline-block; transition: transform .3s ease; font-size: 13px; }
+  .lm-card-summary:hover .lm-expand { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
   .lm-card.is-open .lm-expand-icon { transform: rotate(180deg); }
-  .lm-card-summary:hover .lm-expand { color: var(--ink); animation: none; opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .lm-expand::after { display: none; } }
 
   /* collapsible body */
   .lm-card-more { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
