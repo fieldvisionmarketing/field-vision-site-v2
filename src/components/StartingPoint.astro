@@ -1,22 +1,38 @@
 ---
-const cards = [
+// v3 (2026 brand realignment): trigger router as an editorial index (non-card).
+// Four founder triggers, in their own words, each routing to a door.
+const rows = [
   {
     num: '01',
-    title: "Not ready for a full-time marketing hire",
-    body: "You need senior marketing leadership but not the $500K+ commitment. A fractional CMO gives you the strategy and oversight without the overhead.",
-    link: { label: "Explore Fractional CMO →", href: "/services/fractional-cmo/" },
+    quote: "“I'm the CEO, the fundraiser, and apparently the CMO too.”",
+    resp: "No senior marketing brain in the building. A fractional CMO takes the wheel: strategy, systems, and the team to run them.",
+    door: "Fractional CMO",
+    sub: "Embedded leadership",
+    href: "/services/fractional-cmo/",
   },
   {
     num: '02',
-    title: "Launching something and need a growth strategy",
-    body: "You have a specific initiative, a product launch, new market entry, or rebrand, and need an expert to build the plan and lead the execution.",
-    link: { label: "Explore Go-to-Market →", href: "/services/go-to-market/" },
+    quote: "“We launch in six weeks and I'm not sure anyone will show up.”",
+    resp: "Something ships with a real date and nobody senior owns the landing. We build the plan and lead the launch.",
+    door: "Go-to-Market",
+    sub: "Plan and launch",
+    href: "/services/go-to-market/",
   },
   {
     num: '03',
-    title: "Have a team but need an expert to steer",
-    body: "You're doing marketing but aren't sure it's working. You need someone to audit what exists, set a direction, and coach your team to execute.",
-    link: { label: "Take the Assessment →", href: "/assessment/" },
+    quote: "“Everything that used to work just stopped working.”",
+    resp: "The channels stopped compounding and more budget did nothing. We rebuild the funnel so growth compounds again.",
+    door: "Growth & Lifecycle",
+    sub: "Full-funnel engine",
+    href: "/services/growth-marketing/",
+  },
+  {
+    num: '04',
+    quote: "“We built our growth plan with AI, and so did everyone else.”",
+    resp: "The story came out generic mush. We sharpen the positioning so you sound like no one else in the category.",
+    door: "Brand Strategy",
+    sub: "Sharp positioning",
+    href: "/services/brand-strategy-positioning/",
   },
 ];
 ---
@@ -25,21 +41,119 @@ const cards = [
   <div class="section-header reveal">
     <div class="section-eyebrow">Your Starting Point</div>
     <h2 class="section-title">Every Startup's Marketing Challenge Looks <span class="hl-cream">Different</span></h2>
-    <p class="section-subtitle">Which sounds like yours?</p>
+    <p class="section-subtitle">Find the sentence you've said out loud. That's your door.</p>
   </div>
-  <div class="persona-grid">
-    {cards.map((card, i) => (
-      <div class={`persona-card reveal rd${i + 1}`}>
-        <div class="persona-top">
-          <div class="persona-num">{card.num}</div>
-          <div>
-            <div class="persona-name">{card.title}</div>
-          </div>
+
+  <div class="sp-index reveal">
+    {rows.map((r) => (
+      <a href={r.href} class="sp-row">
+        <div class="sp-num">{r.num}</div>
+        <div class="sp-body">
+          <div class="sp-quote">{r.quote}</div>
+          <p class="sp-resp">{r.resp}</p>
         </div>
-        <div class="persona-bottom">
-          <p class="persona-desc">{card.body}</p>
+        <div class="sp-door">
+          <span class="sp-door-label">{r.door} →</span>
+          <span class="sp-door-sub">{r.sub}</span>
         </div>
-      </div>
+      </a>
     ))}
   </div>
 </section>
+
+<style>
+  .sp-index {
+    margin-top: 34px;
+    border-top: 2px solid var(--ink);
+  }
+  .sp-row {
+    display: grid;
+    grid-template-columns: 118px 1fr 220px;
+    align-items: center;
+    gap: 30px;
+    padding: 28px 12px;
+    border-bottom: 1px solid var(--line, #e4e1d3);
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.15s ease;
+  }
+  .sp-row:hover { background: var(--paper); }
+
+  .sp-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 64px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--green-dk);
+    transition: color 0.15s ease, -webkit-text-stroke-color 0.15s ease;
+  }
+  .sp-row:hover .sp-num {
+    color: var(--green-lt);
+    -webkit-text-stroke: 2px var(--ink);
+  }
+
+  .sp-quote {
+    font-family: 'Anton', sans-serif;
+    font-size: 23px;
+    line-height: 1.12;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+  }
+  .sp-resp {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 9px 0 0;
+    max-width: 560px;
+  }
+
+  .sp-door {
+    justify-self: end;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .sp-door-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+    border-top: 3px solid var(--ink);
+    padding-top: 10px;
+  }
+  .sp-row:hover .sp-door-label { color: var(--green-dk); }
+  .sp-door-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 5px;
+  }
+
+  @media (max-width: 760px) {
+    .sp-row {
+      grid-template-columns: 64px 1fr;
+      grid-template-areas: "num body" "num door";
+      gap: 6px 18px;
+      padding: 22px 4px;
+      align-items: start;
+    }
+    .sp-num { grid-area: num; font-size: 40px; }
+    .sp-body { grid-area: body; }
+    .sp-quote { font-size: 19px; }
+    .sp-door {
+      grid-area: door;
+      justify-self: start;
+      text-align: left;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+    .sp-door-label { border-top: none; padding-top: 0; }
+  }
+</style>

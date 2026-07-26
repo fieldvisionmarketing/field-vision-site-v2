@@ -3,6 +3,7 @@ title: "Integrated Marketing Strategy"
 description: "We connect brand, growth, content, and channels into one coordinated system, so every touchpoint reinforces the same story and compounds over time."
 icon: "🧩"
 order: 3
+hidden: true
 sidebar:
   - label: "Duration"
     value: "3–6 months"
