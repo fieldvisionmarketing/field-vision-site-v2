@@ -1,4 +1,8 @@
 
+# === Lead magnet page renamed (/work-with-me -> /founders-offer) ===
+/work-with-me                         /founders-offer/           301
+/work-with-me/                        /founders-offer/           301
+
 # === v3 realignment: retired service pages (7 doors -> 4) ===
 /services/ai-growth-systems           /services/                 301
 /services/ai-growth-systems/          /services/                 301
