@@ -1,11 +1,11 @@
 ---
 title: "Brand Strategy & Positioning for Startups"
-description: "Sharp positioning and a story your whole company can tell — so a media, entertainment, or creator-economy startup sounds like no one else in its category. Fractional CMO leadership for brand strategy."
+description: "Sharp positioning and a story your whole company can tell, so a media, entertainment, or creator-economy startup sounds like no one else in its category. Fractional CMO leadership for brand strategy."
 icon: "✏️"
 order: 5
 sidebar:
   - label: "Duration"
-    value: "4–8 weeks"
+    value: "4 to 8 weeks"
   - label: "Commitment"
     value: "Intensive sprint"
   - label: "Best For"
@@ -15,7 +15,7 @@ sidebar:
   - label: "Location"
     value: "SF-based, nationwide"
 problemHeadline: "AI Gave Everyone the Same Story. Yours Should Sound Like No One Else's."
-problemIntro: "Brand strategy and positioning is the work of deciding who you're for, why you win, and how you say it — the story every part of the company tells, from the homepage to the sales deck to the fundraising narrative. Most startups now build that story with AI, and the tools hand every competitor the same median answer. The result is positioning mush: a deck that reads like the three companies you're trying to beat. For startups in media, entertainment, and the creator economy — where fandom is the whole game — a story nobody can repeat is a growth problem, not a branding one."
+problemIntro: "Brand strategy and positioning is the work of deciding who you're for, why you win, and how you say it, the story every part of the company tells, from the homepage to the sales deck to the fundraising narrative. Most startups now build that story with AI, and the tools hand every competitor the same median answer. The result is positioning mush: a deck that reads like the three companies you're trying to beat. For startups in media, entertainment, and the creator economy, where fandom is the whole game, a story nobody can repeat is a growth problem, not a branding one."
 oldWay:
   - "Positioning built from an AI prompt that every competitor also ran"
   - "A story the founder tells one way and the sales deck tells another"
@@ -26,31 +26,31 @@ oldWay:
 newWay:
   - "A single positioning idea the whole company can repeat from memory"
   - "Messaging architecture: essence, pillars, proof, and the words to use"
-  - "A narrative built on receipts — numbers, names, and moments only you have"
+  - "A narrative built on receipts, numbers, names, and moments only you have"
   - "Category framing that makes competitors sound generic by comparison"
   - "Fandom-first language mapped to how your audience actually talks"
   - "One story, deployed across site, deck, sales, and fundraising"
 deliverables:
   - icon: "🎯"
     title: "Positioning Platform"
-    desc: "The core idea, the audience, and the reason you win — one sentence the whole company can say the same way, plus the ladder of claims beneath it."
+    desc: "The core idea, the audience, and the reason you win, one sentence the whole company can say the same way, plus the ladder of claims beneath it."
   - icon: "🗂️"
     title: "Messaging Architecture"
     desc: "Essence, pillars, proof points, and a voice guide, so marketing, sales, product, and fundraising all tell one story."
   - icon: "🏷️"
     title: "Category & Competitive Framing"
-    desc: "How you name the game you're playing so competitors sound like the median — and you sound like the answer."
+    desc: "How you name the game you're playing so competitors sound like the median, and you sound like the answer."
   - icon: "📣"
     title: "Narrative & Proof System"
     desc: "The receipts deployed by relevance: the numbers, names, and moments that make the story believable in one breath."
   - icon: "🧭"
     title: "Rollout Playbook"
-    desc: "Where the new story lands first — homepage, deck, bios, sales talk tracks — and the sequence to put it live without confusing the market."
-whoIntro: "This sprint is built for founders whose story stopped landing — or never did. If any of the following sound familiar, brand strategy and positioning may be the right first move."
+    desc: "Where the new story lands first, homepage, deck, bios, sales talk tracks, and the sequence to put it live without confusing the market."
+whoIntro: "This sprint is built for founders whose story stopped landing, or never did. If any of the following sound familiar, brand strategy and positioning may be the right first move."
 whoTriggers:
   - "The pitch deck and the website tell two different stories"
   - "You built the positioning with AI and it reads like every competitor"
-  - "You get attention — views, followers, press — but no fandom"
+  - "You get attention, views, followers, press, but no fandom"
   - "A rebrand, raise, or new category is forcing a story decision"
   - "Sales keeps re-explaining what you do, in different words each time"
   - "You need a story your whole team can repeat, not just approve"
@@ -63,26 +63,26 @@ abctSteps:
     desc: "A hard look at how you're positioned today: the deck, the site, the sales language, the category you're implicitly competing in, and where your story sounds like everyone else's."
   - step: "B"
     title: "Blueprint"
-    desc: "We build the positioning platform and messaging architecture — the one idea, the ladder of claims, the proof, and the voice — tied to the audiences and moments that actually convert."
+    desc: "We build the positioning platform and messaging architecture, the one idea, the ladder of claims, the proof, and the voice, tied to the audiences and moments that actually convert."
   - step: "C"
     title: "Construct"
     desc: "We put the story into the assets that matter first: homepage, deck, bios, and sales talk tracks, with the receipts deployed where they land hardest."
   - step: "T"
     title: "Transfer"
-    desc: "We hand over the messaging system and voice guide so your team writes on-brand without us. Built to be fired — the story is yours to run."
+    desc: "We hand over the messaging system and voice guide so your team writes on-brand without us. Built to be fired, the story is yours to run."
 faqs:
   - question: "What is brand strategy and positioning?"
-    answer: "Brand strategy and positioning is the work of defining who your product is for, why it wins, and how you say it consistently — the single story that every part of the company tells, from the website and sales deck to the fundraising narrative. Positioning is the strategic core: the specific place you occupy in your buyer's mind relative to the alternatives. For startups in media, entertainment, and the creator economy, strong positioning is what turns attention into fandom instead of one-off views."
+    answer: "Brand strategy and positioning is the work of defining who your product is for, why it wins, and how you say it consistently, the single story that every part of the company tells, from the website and sales deck to the fundraising narrative. Positioning is the strategic core: the specific place you occupy in your buyer's mind relative to the alternatives. For startups in media, entertainment, and the creator economy, strong positioning is what turns attention into fandom instead of one-off views."
   - question: "How is this different from a logo or a rebrand?"
-    answer: "A logo and visual identity are the expression of a brand; positioning is the strategy underneath it. This engagement is about the idea and the words — who you're for, why you win, and the story your whole team can repeat — not colors and typefaces. Positioning usually comes first: get the strategy right, and the visual and verbal identity have something true to express. Many startups discover their real problem was never the logo; it was that nobody could say what made them different."
+    answer: "A logo and visual identity are the expression of a brand; positioning is the strategy underneath it. This engagement is about the idea and the words, who you're for, why you win, and the story your whole team can repeat, not colors and typefaces. Positioning usually comes first: get the strategy right, and the visual and verbal identity have something true to express. Many startups discover their real problem was never the logo; it was that nobody could say what made them different."
   - question: "Why do I need this if I already used AI to write our messaging?"
-    answer: "Because AI hands every competitor the same median answer. When you and the three companies you're trying to beat all prompt the same tools, you get the same safe, generic story — and none of you stand out. The value of a senior operator is judgment and pattern recognition AI can't commoditize: the ability to find the one true thing only you can say, back it with receipts, and frame the category so competitors sound generic. AI is a tool we use in the work; it is not a substitute for the point of view."
+    answer: "Because AI hands every competitor the same median answer. When you and the three companies you're trying to beat all prompt the same tools, you get the same safe, generic story, and none of you stand out. The value of a senior marketing leader is judgment and pattern recognition AI can't commoditize: the ability to find the one true thing only you can say, back it with receipts, and frame the category so competitors sound generic. AI is a tool we use in the work; it is not a substitute for the point of view."
   - question: "How long does a positioning engagement take?"
-    answer: "Most brand strategy and positioning engagements run as a focused 4 to 8 week sprint, following the ABCT® model — Audit, Blueprint, Construct, Transfer. You come out with a positioning platform, a messaging architecture, and the story live in the assets that matter most, plus a voice guide so your team can keep writing on-brand. The goal is a story your whole company can run without us."
+    answer: "Most brand strategy and positioning engagements run as a focused 4 to 8 week sprint, following the ABCT® model, Audit, Blueprint, Construct, Transfer. You come out with a positioning platform, a messaging architecture, and the story live in the assets that matter most, plus a voice guide so your team can keep writing on-brand. The goal is a story your whole company can run without us."
 ctaHeadline: "Ready to Sharpen Your Story?"
 ctaBody: "Book a 30-minute discovery call. We'll talk about where your positioning is fuzzy, where it sounds like everyone else, and whether a positioning sprint is the right first move."
 ---
 
-Brand strategy and positioning decides who you're for, why you win, and how you say it — the one story every part of the company tells. For media, entertainment, and creator-economy startups, that story is what turns attention into fandom.
+Brand strategy and positioning decides who you're for, why you win, and how you say it, the one story every part of the company tells. For media, entertainment, and creator-economy startups, that story is what turns attention into fandom.
 
-We build it the way it was built at Pandora, Twitch, and Amazon: a sharp point of view, backed by receipts, framed so the category sounds generic and you sound like the answer. Then we hand you the system to run it — built to be fired.
+We build it the way it was built at Pandora, Twitch, and Amazon: a sharp point of view, backed by receipts, framed so the category sounds generic and you sound like the answer. Then we hand you the system to run it, built to be fired.
