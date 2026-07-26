@@ -45,7 +45,7 @@ When I embed with a startup, I'm not advising from the sidelines. I'm in Slack, 
 
 The fractional model solves three problems simultaneously:
 
-**Cost efficiency.** You get C-suite strategic thinking at a fraction of the cost. A typical fractional CMO engagement runs $5K-$15K per month versus $20K-$35K per month for a full-time CMO (salary, benefits, equity dilution). That's capital you can redirect to actual marketing execution.
+**Cost efficiency.** You get C-suite strategic thinking without a full-time hire. A typical fractional CMO engagement runs $5K-$15K per month versus $20K-$35K per month for a full-time CMO (salary, benefits, equity dilution). That's capital you can redirect to actual marketing execution.
 
 **Speed to impact.** A full-time CMO takes 3-6 months to ramp. A fractional CMO who's done this dozens of times can diagnose your situation in weeks and start building within the first month. At Amazon Music, the difference between a team operating with a playbook and a team operating on intuition was the difference between 3x and 0.3x return on ad spend.
 

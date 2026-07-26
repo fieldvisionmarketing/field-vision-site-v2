@@ -39,7 +39,7 @@ The decision between a fractional CMO, a full-time CMO, and a marketing agency d
 
 **Industry expertise.** Fractional CMOs often bring cross-industry experience because they've worked with multiple companies across sectors. This breadth can be an advantage: they've seen what works in different markets and can apply those lessons to your business. Full-time CMOs bring depth in a specific industry but may have narrower perspective. Agencies bring channel-specific expertise (paid media, SEO, creative) but rarely the holistic business perspective a CMO provides.
 
-For companies between $2M and $30M in revenue, the fractional CMO model often represents the best fit: senior leadership, strategic frameworks, and team development at a fraction of the full-time cost. If you're unsure whether you're ready for any form of CMO, read [when NOT to hire a CMO](/blog/why-your-startup-doesnt-need-a-cmo-yet/) for the counterpoint.
+For companies between $2M and $30M in revenue, the fractional CMO model often represents the best fit: senior leadership, strategic frameworks, and team development with the senior judgment a startup actually needs. If you're unsure whether you're ready for any form of CMO, read [when NOT to hire a CMO](/blog/why-your-startup-doesnt-need-a-cmo-yet/) for the counterpoint.
 
 ## How Much Does a Fractional CMO Cost?
 
@@ -85,7 +85,7 @@ Not all fractional CMOs are created equal. Some are genuinely C-suite caliber. O
 
 **Check industry fluency, not just industry experience.** Having worked in your exact industry is less important than understanding the dynamics of your market. A fractional CMO with B2C SaaS experience can often transition effectively to B2C services or B2C hardware because the buyer psychology and channel dynamics are similar. What matters more is whether they understand your buyer's decision-making process.
 
-**Look for technology fluency.** Modern marketing is inseparable from technology. Your fractional CMO should be comfortable with marketing automation, CRM systems, analytics platforms, and increasingly, AI tools. They don't need to be a technical operator, but they need to understand what's possible and make informed decisions about your marketing stack.
+**Look for technology fluency.** Modern marketing is inseparable from technology. Your fractional CMO should be comfortable with marketing automation, CRM systems, analytics platforms, and increasingly, AI tools. They don't need to be a hands-on technical specialist, but they need to understand what's possible and make informed decisions about your marketing stack.
 
 **Ask about their transition plan.** A fractional CMO who plans to make themselves indispensable is a red flag. The best fractional CMOs build systems, document processes, and develop your internal team so that when the engagement ends, the marketing function runs smoothly without them. Ask specifically: how do you ensure your work outlives the engagement?
 

@@ -141,7 +141,7 @@ Get the sequence right and marketing becomes a growth engine. Get it wrong and y
     <span class="faq-toggle">+</span>
   </summary>
   <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-    <p itemprop="text">A startup should hire a full-time CMO at Series C or later, when revenue exceeds $10M ARR, the marketing team has grown past 3-5 people, and there’s a repeatable go-to-market motion that needs scaling. Before that point, a fractional CMO provides executive-level strategy at a fraction of the cost.</p>
+    <p itemprop="text">A startup should hire a full-time CMO at Series C or later, when revenue exceeds $10M ARR, the marketing team has grown past 3-5 people, and there’s a repeatable go-to-market motion that needs scaling. Before that point, a fractional CMO provides executive-level strategy without a full-time hire.</p>
   </div>
 </details>
 <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">

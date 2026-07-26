@@ -1,6 +1,6 @@
 ---
 title: "Go-to-Market Strategy"
-description: "We define who your product is for, why it wins, and how you take it to market, with the rigor of operators who have launched at Amazon, Twitch, and Pandora."
+description: "We define who your product is for, why it wins, and how you take it to market, with the rigor of leaders who have launched at Amazon, Twitch, and Pandora."
 icon: "🚀"
 order: 2
 sidebar:
@@ -15,7 +15,7 @@ sidebar:
   - label: "Location"
     value: "SF-based, nationwide"
 problemHeadline: "Most Products Don't Fail Because They're Bad. They Fail Because Nobody Knew Who They Were For."
-problemIntro: "A go-to-market strategy is the structured plan that defines your target customer, competitive positioning, pricing, channel strategy, and launch sequence. Most startups skip GTM strategy entirely, they have a great product, a launch date, and a hope that awareness will follow. Without a structured GTM plan, teams waste months learning lessons that experienced operators already know."
+problemIntro: "A go-to-market strategy is the structured plan that defines your target customer, competitive positioning, pricing, channel strategy, and launch sequence. Most startups skip GTM strategy entirely, they have a great product, a launch date, and a hope that awareness will follow. Without a structured GTM plan, teams waste months learning lessons that experienced leaders already know."
 oldWay:
   - "Launching without clear positioning or target customer definition"
   - "Hope-based awareness with no structured customer research"
@@ -56,7 +56,7 @@ whoTriggers:
   - "Repositioning after a pivot and need clarity on who you are now"
   - "Preparing for a funding round and need a compelling growth narrative"
   - "Have a product with traction but no structured go-to-market plan"
-  - "Need GTM expertise from operators who have launched at scale"
+  - "Need GTM expertise from leaders who have launched at scale"
 whoCta:
   headline: "Launching Soon?"
   body: "Book a 30-minute discovery call. We will assess your go-to-market readiness and map the path to a structured, repeatable launch."
@@ -88,7 +88,7 @@ ctaHeadline: "Ready to Launch With Confidence?"
 ctaBody: "Book a 30-minute discovery call. We will assess your go-to-market readiness and map the path to a structured, repeatable launch."
 ------
 title: "Go-to-Market Strategy"
-description: "We define who your product is for, why it wins, and how you take it to market, with the rigor of operators who have launched at Amazon, Twitch, and Pandora."
+description: "We define who your product is for, why it wins, and how you take it to market, with the rigor of leaders who have launched at Amazon, Twitch, and Pandora."
 icon: "🚀"
 order: 2
 sidebar:
@@ -103,7 +103,7 @@ sidebar:
   - label: "Location"
     value: "SF-based, nationwide"
 problemHeadline: "Most Products Don't Fail Because They're Bad. They Fail Because Nobody Knew Who They Were For."
-problemIntro: "A go-to-market strategy is the structured plan that defines your target customer, competitive positioning, pricing, channel strategy, and launch sequence. Most startups skip GTM strategy entirely, they have a great product, a launch date, and a hope that awareness will follow. Without a structured GTM plan, teams waste months learning lessons that experienced operators already know."
+problemIntro: "A go-to-market strategy is the structured plan that defines your target customer, competitive positioning, pricing, channel strategy, and launch sequence. Most startups skip GTM strategy entirely, they have a great product, a launch date, and a hope that awareness will follow. Without a structured GTM plan, teams waste months learning lessons that experienced leaders already know."
 oldWay:
   - "Launching without clear positioning or target customer definition"
   - "Hope-based awareness with no structured customer research"
@@ -144,7 +144,7 @@ whoTriggers:
   - "Repositioning after a pivot and need clarity on who you are now"
   - "Preparing for a funding round and need a compelling growth narrative"
   - "Have a product with traction but no structured go-to-market plan"
-  - "Need GTM expertise from operators who have launched at scale"
+  - "Need GTM expertise from leaders who have launched at scale"
 whoCta:
   headline: "Launching Soon?"
   body: "Book a 30-minute discovery call. We will assess your go-to-market readiness and map the path to a structured, repeatable launch."
