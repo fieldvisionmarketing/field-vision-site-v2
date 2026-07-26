@@ -1,4 +1,9 @@
 ---
+/**
+ * CASE STUDY — StreamU
+ * Built on case-study-template.astro v2.0 (Animated). CS rules CS1-CS29 + Brutalist v2.4.
+ * Source: 2026 brand guide (client-era receipts). v3 realignment.
+ */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
@@ -11,292 +16,287 @@ import FinalCTA from '@/components/FinalCTA.astro';
 >
   <Header slot="header" />
 
-  <!-- Section 1: Hero -->
-  <section class="cs-hero section">
-    <div class="cs-hero-inner">
-      <div>
-        <span class="eyebrow">Case Study</span>
-        <h1>A National Launch Playbook for StreamU at the Final Four</h1>
-        <p class="cs-hero-desc">
-          I was brought in to give an NIL-era, athlete-led livestreaming startup a national launch worthy of its moment. I built the content and go-to-market plan that put StreamU in front of the country at the March Madness Final Four, a launch its co-founder calls a first-of-its-kind strategy that will change college sports forever.
-        </p>
-        <div class="cs-hero-meta">
-          <div class="cs-hero-meta-item">
-            <span class="cs-hero-meta-label">Company</span>
-            <span class="cs-hero-meta-value">StreamU</span>
-          </div>
-          <div class="cs-hero-meta-item">
-            <span class="cs-hero-meta-label">Industry</span>
-            <span class="cs-hero-meta-value">Sports, Creator &amp; Livestreaming</span>
-          </div>
-          <div class="cs-hero-meta-item">
-            <span class="cs-hero-meta-label">Scope</span>
-            <span class="cs-hero-meta-value">Sub-20-person startup, national launch</span>
-          </div>
-          <div class="cs-hero-meta-item">
-            <span class="cs-hero-meta-label">Focus</span>
-            <span class="cs-hero-meta-value">Go-to-Market &amp; Content</span>
-          </div>
-        </div>
-      </div>
-      <div class="cs-hero-image">
-        <div style="width:100%;height:100%;min-height:340px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#213621,#2f4a2f);">
-          <span style="font-family:'Anton',sans-serif;font-size:clamp(40px,6vw,88px);color:#A5DB5D;letter-spacing:0.02em;text-align:center;line-height:1;">StreamU</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Scroll progress bar -->
+<div class="cs-scroll-progress" id="csScrollProgress"></div>
 
-  <!-- Section 2: Results Strip -->
-  <section class="cs-results-strip section">
-    <div class="cs-results-strip-inner">
-      <div class="cs-result-stat">
-        <div class="cs-stat-num">1st</div>
-        <div class="cs-stat-label">Of-Its-Kind GTM Strategy</div>
-      </div>
-      <div class="cs-result-stat">
-        <div class="cs-stat-num">Final 4</div>
-        <div class="cs-stat-label">National Launch Stage</div>
-      </div>
-      <div class="cs-result-stat">
-        <div class="cs-stat-num">&lt;20</div>
-        <div class="cs-stat-label">Person Team, National Reach</div>
-      </div>
-      <div class="cs-result-stat">
-        <div class="cs-stat-num">1</div>
-        <div class="cs-stat-label">Repeatable Launch Playbook</div>
-      </div>
+<!-- ═══ HERO — CS4-CS8 ═══ -->
+<div class="cs-hero-v2-wrapper">
+  <div class="cs-hero-v2-sticky" id="csHero">
+    <div class="cs-hero-v2-bg" style="background:linear-gradient(135deg,#18271a,#2f4a2f)"></div>
+    <div class="cs-hero-v2-content">
+      <h1>A National Launch Playbook for<br><span class="highlight-chip">StreamU</span> at the Final Four</h1>
+      <p class="cs-hero-v2-summary">We built the content and go-to-market plan that launched an athlete-led livestreaming startup nationally at the March Madness Final Four, a first-of-its-kind strategy executed by a sub-20-person team.</p>
     </div>
-  </section>
+    <div class="cs-scroll-hint">Scroll to explore</div>
+  </div>
+</div>
 
-  <!-- Section 3: The Situation -->
-  <section class="cs-section section">
+<!-- ═══ STATS — CS9-CS12 ═══ -->
+<section class="cs-stats-v2" id="csStats">
+  <div class="cs-stats-v2-inner">
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="1" data-prefix="" data-suffix="st">0st</div>
+      <div class="cs-stat-drop-label">First-of-Its-Kind GTM Strategy</div>
+    </div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="4" data-prefix="" data-suffix="">0</div>
+      <div class="cs-stat-drop-label">Final Four Launch Stage</div>
+    </div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="20" data-prefix="&lt;" data-suffix="">&lt;0</div>
+      <div class="cs-stat-drop-label">Person Team, National Reach</div>
+    </div>
+    <div class="cs-stat-drop">
+      <div class="cs-stat-drop-num" data-target="1" data-prefix="" data-suffix="">0</div>
+      <div class="cs-stat-drop-label">Repeatable Launch Playbook</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CHALLENGE — CS13-CS16 ═══ -->
+<section class="cs-challenge-v2">
+  <div class="cs-challenge-v2-inner">
     <span class="eyebrow">The Challenge</span>
     <h2>A National Moment, and One Shot to Land It</h2>
-    <p>
-      StreamU is an athlete-led livestreaming platform built for the NIL era, where college athletes own their audiences and their upside. The team had the product and the timing. What it did not have was a launch: a plan to convert one of sport's biggest stages, the March Madness Final Four, into a national arrival.
-    </p>
-    <div class="cs-challenge-grid">
-      <ul class="cs-challenge-list">
-        <li class="cs-challenge-item">
-          <div class="cs-challenge-num">1</div>
-          <div class="cs-challenge-text">
-            <strong>No go-to-market plan.</strong> A sub-20-person team had a product and a date, with no structured launch, sequencing, or content strategy behind it.
-          </div>
-        </li>
-        <li class="cs-challenge-item">
-          <div class="cs-challenge-num">2</div>
-          <div class="cs-challenge-text">
-            <strong>A stage that would not wait.</strong> The Final Four is fixed on the calendar and unforgiving. The launch had to be right the first time.
-          </div>
-        </li>
-        <li class="cs-challenge-item">
-          <div class="cs-challenge-num">3</div>
-          <div class="cs-challenge-text">
-            <strong>A new category to explain.</strong> Athlete-led livestreaming in the NIL era was unfamiliar to fans, athletes, and press, and needed a story anyone could repeat.
-          </div>
-        </li>
-        <li class="cs-challenge-item">
-          <div class="cs-challenge-num">4</div>
-          <div class="cs-challenge-text">
-            <strong>Creators as the channel.</strong> The whole model depended on athletes showing up and bringing their audiences, which required a content plan built for them.
-          </div>
-        </li>
-      </ul>
-      <div class="cs-callout">
-        <span class="eyebrow" style="color:var(--green-lt)">The Mandate</span>
-        <blockquote>
-          Turn the Final Four into StreamU's national launch, with a plan a small team can execute under pressure.
-        </blockquote>
-      </div>
-    </div>
-  </section>
 
-  <!-- Section 4: The Approach -->
-  <div class="cs-approach section">
-    <div class="cs-section-inner">
-      <span class="eyebrow">The Approach</span>
-      <h2>Build the Launch Around the Moment</h2>
-      <p>
-        We reverse-engineered the launch from the Final Four back: the positioning, the go-to-market plan, the athlete and creator motion, and the sequencing that would make a small team look national.
-      </p>
-      <div class="cs-phases">
-        <div class="cs-phase-card">
-          <div class="cs-phase-num">01</div>
-          <div class="cs-phase-title">Position the Category</div>
-          <div class="cs-phase-desc">
-            Defined what StreamU is and why athlete-led livestreaming matters now, giving fans, athletes, and press a story they could repeat.
-          </div>
-          <div class="cs-phase-tools">
-            <a href="/services/brand-strategy-positioning" class="cs-phase-tool">Brand Strategy &amp; Positioning →</a>
-          </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">1</span>
+      <span class="cs-fly-card-text"><strong>No go-to-market plan.</strong> A sub-20-person team had a product and a date, with no structured launch, sequencing, or content strategy behind it.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">2</span>
+      <span class="cs-fly-card-text"><strong>A stage that would not wait.</strong> The Final Four is fixed on the calendar and unforgiving. The launch had to be right the first time.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">3</span>
+      <span class="cs-fly-card-text"><strong>A new category to explain.</strong> Athlete-led livestreaming in the NIL era was unfamiliar to fans, athletes, and press, and needed a story anyone could repeat.</span>
+    </div>
+    <div class="cs-fly-card">
+      <span class="cs-fly-card-num">4</span>
+      <span class="cs-fly-card-text"><strong>Creators as the channel.</strong> The whole model depended on athletes showing up and bringing their audiences, which required a content plan built for them.</span>
+    </div>
+
+    <div class="cs-mandate-drop">
+      <span class="eyebrow">The Mandate</span>
+      <blockquote>Turn the Final Four into StreamU's national launch, with a plan a small team can execute under pressure.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APPROACH — CS17-CS20 ═══ -->
+<div class="cs-approach section">
+  <div class="cs-section-inner">
+    <span class="eyebrow">The Approach</span>
+    <h2>Build the Launch Around the Moment</h2>
+    <p class="cs-approach-insight">We reverse-engineered the launch from the Final Four back: <em>the positioning, the plan, the athlete motion, and the sequencing</em> that would make a small team look national.</p>
+
+    <div class="cs-approach-grid">
+      <div class="cs-phase-card">
+        <div class="cs-phase-num">01</div>
+        <div class="cs-phase-title">Position the Category</div>
+        <div class="cs-phase-desc">Defined what StreamU is and why athlete-led livestreaming matters now, giving fans, athletes, and press a story they could repeat.</div>
+        <div class="cs-phase-tools">
+          <a href="/services/brand-strategy-positioning" class="cs-phase-tool">Brand Strategy &amp; Positioning →</a>
         </div>
-        <div class="cs-phase-card">
-          <div class="cs-phase-num">02</div>
-          <div class="cs-phase-title">Build the GTM Plan</div>
-          <div class="cs-phase-desc">
-            Built the full go-to-market plan for a national launch anchored on the Final Four: audiences, channels, sequencing, and milestones.
-          </div>
-          <div class="cs-phase-tools">
-            <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
-          </div>
+      </div>
+      <div class="cs-phase-card">
+        <div class="cs-phase-num">02</div>
+        <div class="cs-phase-title">Build the GTM Plan</div>
+        <div class="cs-phase-desc">Built the full go-to-market plan for a national launch anchored on the Final Four: audiences, channels, sequencing, and milestones.</div>
+        <div class="cs-phase-tools">
+          <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
         </div>
-        <div class="cs-phase-card">
-          <div class="cs-phase-num">03</div>
-          <div class="cs-phase-title">Design the Content Engine</div>
-          <div class="cs-phase-desc">
-            Created the content and creator plan that put athletes and their audiences at the center of the launch, so the platform filled with the right programming.
-          </div>
-          <div class="cs-phase-tools">
-            <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle →</a>
-          </div>
+      </div>
+      <div class="cs-phase-card">
+        <div class="cs-phase-num">03</div>
+        <div class="cs-phase-title">Design the Content Engine</div>
+        <div class="cs-phase-desc">Created the content and creator plan that put athletes and their audiences at the center of the launch, so the platform filled with the right programming.</div>
+        <div class="cs-phase-tools">
+          <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle →</a>
         </div>
-        <div class="cs-phase-card">
-          <div class="cs-phase-num">04</div>
-          <div class="cs-phase-title">Launch at the Final Four</div>
-          <div class="cs-phase-desc">
-            Sequenced the launch to land on college sport's biggest stage, and handed over a playbook the team could run for the next moment themselves.
-          </div>
-          <div class="cs-phase-tools">
-            <a href="/services/fractional-cmo" class="cs-phase-tool">Fractional CMO →</a>
-          </div>
+      </div>
+      <div class="cs-phase-card">
+        <div class="cs-phase-num">04</div>
+        <div class="cs-phase-title">Launch at the Final Four</div>
+        <div class="cs-phase-desc">Sequenced the launch to land on college sport's biggest stage, and handed over a playbook the team could run for the next moment themselves.</div>
+        <div class="cs-phase-tools">
+          <a href="/services/fractional-cmo" class="cs-phase-tool">Fractional CMO →</a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Section 5: Visual Gallery, add when imagery is available -->
+<!-- ═══ RESULTS — CS21-CS22 ═══ -->
+<section class="cs-results section">
+  <div class="cs-results-inner">
+    <span class="eyebrow">The Results</span>
+    <h2>The Numbers Tell the Story</h2>
 
-  <!-- Section 6: Before & After -->
-  <section class="cs-ba section">
-    <div class="cs-ba-inner">
-      <span class="eyebrow">Transformation</span>
-      <h2>Before &amp; After StreamU</h2>
-      <div class="cs-ba-grid">
-        <div class="cs-ba-before">
-          <div class="cs-ba-label">Before</div>
-          <div class="cs-ba-item">
-            <div class="cs-ba-bullet"></div>
-            <div class="cs-ba-text">A product and a date, with no launch plan</div>
-          </div>
-          <div class="cs-ba-item">
-            <div class="cs-ba-bullet"></div>
-            <div class="cs-ba-text">A new category no one could yet explain</div>
-          </div>
-          <div class="cs-ba-item">
-            <div class="cs-ba-bullet"></div>
-            <div class="cs-ba-text">No content system to activate athletes</div>
-          </div>
-          <div class="cs-ba-item">
-            <div class="cs-ba-bullet"></div>
-            <div class="cs-ba-text">National ambition, sub-20-person execution</div>
-          </div>
-        </div>
-        <div class="cs-ba-after">
-          <div class="cs-ba-label">After</div>
-          <div class="cs-ba-item">
-            <div class="cs-ba-bullet"></div>
-            <div class="cs-ba-text">A full national go-to-market plan built around the Final Four</div>
-          </div>
-          <div class="cs-ba-item">
-            <div class="cs-ba-bullet"></div>
-            <div class="cs-ba-text">A clear category story fans, athletes, and press could repeat</div>
-          </div>
-          <div class="cs-ba-item">
-            <div class="cs-ba-bullet"></div>
-            <div class="cs-ba-text">A content and creator engine designed for athlete audiences</div>
-          </div>
-          <div class="cs-ba-item">
-            <div class="cs-ba-bullet"></div>
-            <div class="cs-ba-text">A launch a small team could run, on the sport's biggest stage</div>
-          </div>
-        </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="4" data-prefix="" data-suffix="">0</div>
+      <div>
+        <div class="cs-result-label">Final Four Launch Stage</div>
+        <div class="cs-result-desc">The go-to-market plan turned the March Madness Final Four into StreamU's national launch moment.</div>
       </div>
     </div>
-  </section>
-
-  <!-- Section 7: Results Deep Dive -->
-  <section class="cs-results section">
-    <div class="cs-results-inner">
-      <span class="eyebrow">The Results</span>
-      <h2>
-        The Numbers Tell the Story
-      </h2>
-      <p>
-        A sub-20-person startup arrived nationally on college sport's biggest weekend.
-      </p>
-      <div class="cs-results-grid">
-        <div class="cs-result-card">
-          <div class="cs-result-metric">Final 4</div>
-          <div class="cs-result-label">Launch Stage</div>
-          <div class="cs-result-desc">
-            The go-to-market plan turned the March Madness Final Four into StreamU's national launch moment.
-          </div>
-          <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:100%"></div></div>
-        </div>
-        <div class="cs-result-card">
-          <div class="cs-result-metric">1st</div>
-          <div class="cs-result-label">Of Its Kind</div>
-          <div class="cs-result-desc">
-            A first-of-its-kind go-to-market strategy for athlete-led livestreaming, in the co-founder's own words.
-          </div>
-          <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:93%"></div></div>
-        </div>
-        <div class="cs-result-card">
-          <div class="cs-result-metric">&lt;20</div>
-          <div class="cs-result-label">Person Team</div>
-          <div class="cs-result-desc">
-            A national launch built to be executed by a sub-20-person startup, without a big-company machine behind it.
-          </div>
-          <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:83%"></div></div>
-        </div>
-        <div class="cs-result-card">
-          <div class="cs-result-metric">1</div>
-          <div class="cs-result-label">Repeatable Playbook</div>
-          <div class="cs-result-desc">
-            A launch and content playbook the team kept and can run again for the next moment.
-          </div>
-          <div class="cs-result-bar"><div class="cs-result-bar-fill" style="width:78%"></div></div>
-        </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="1" data-prefix="" data-suffix="st">0st</div>
+      <div>
+        <div class="cs-result-label">Of Its Kind</div>
+        <div class="cs-result-desc">A first-of-its-kind go-to-market strategy for athlete-led livestreaming, in the co-founder's own words.</div>
       </div>
     </div>
-  </section>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="20" data-prefix="&lt;" data-suffix="">&lt;0</div>
+      <div>
+        <div class="cs-result-label">Person Team</div>
+        <div class="cs-result-desc">A national launch built to be executed by a sub-20-person startup, without a big-company machine behind it.</div>
+      </div>
+    </div>
+    <div class="cs-result-row">
+      <div class="cs-result-row-num" data-target="1" data-prefix="" data-suffix="">0</div>
+      <div>
+        <div class="cs-result-label">Repeatable Playbook</div>
+        <div class="cs-result-desc">A launch and content playbook the team kept and can run again for the next moment.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Section 8: Impact -->
-  <section class="cs-impact section">
-    <div class="cs-impact-inner">
+<!-- ═══ IMPACT — CS23-CS25 ═══ -->
+<section class="cs-impact-v2">
+  <div class="cs-impact-v2-inner">
     <span class="eyebrow">The Impact</span>
     <h2>A Startup That Arrived National</h2>
-    <p>
-      StreamU was built for a real shift: in the NIL era, college athletes own their audiences, and the platforms that serve them can grow as fast as the athletes do. The opportunity was clear. The launch was the hard part.
-    </p>
-    <p>
-      By reverse-engineering the plan from the Final Four back, StreamU turned a fixed, high-pressure moment into a national arrival, with a go-to-market and content playbook a small team could run again. Its co-founder called it a first-of-its-kind strategy that will change college sports forever.
-    </p>
-    <div class="cs-impact-callout">
-      <div class="cs-impact-icon">🏀</div>
-      <div class="cs-impact-text">
-        A sub-20-person startup used the Final Four to launch nationally, and kept the playbook to do it again.
-      </div>
-    </div>
-  </section>
 
-  <!-- Section 9: Services Used -->
-  <section class="cs-services section">
-    <div class="cs-services-inner">
-    <span class="eyebrow">Capabilities Applied</span>
-    <h2>
-      What This Took
-    </h2>
-    <div class="cs-services-pills">
-      <a href="/services/brand-strategy-positioning" class="cs-service-pill">Brand Strategy &amp; Positioning</a>
-      <a href="/services/go-to-market" class="cs-service-pill">Go-to-Market Strategy</a>
-      <a href="/services/growth-marketing" class="cs-service-pill">Growth &amp; Lifecycle</a>
+    <div class="cs-impact-v2-card">
+      <div class="cs-impact-icon">↗</div>
+      <p class="cs-impact-text">StreamU was built for a real shift: in the NIL era, college athletes own their audiences, and the platforms that serve them grow as fast as the athletes do. By reverse-engineering the plan from the Final Four back, StreamU turned a fixed, high-pressure moment into a national arrival, with a go-to-market and content playbook a small team could run again.</p>
     </div>
-  </section>
 
-  <!-- Section 10: CTA -->
-  <FinalCTA />
+    <blockquote class="cs-impact-quote">
+      &ldquo;A first-of-its-kind go-to-market strategy that will change college sports forever.&rdquo;
+      <cite>Co-Founder, StreamU</cite>
+    </blockquote>
+
+    <div class="cs-caps-grid" id="csCapsGrid">
+      <a href="/services/brand-strategy-positioning" class="cs-cap-chip">Brand Strategy &amp; Positioning</a>
+      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
+      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<FinalCTA />
 
   <Footer slot="footer" />
 </BaseLayout>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const bar = document.getElementById('csScrollProgress');
+    if (bar) bar.style.width = p + '%';
+  });
+
+  // Hero activation
+  setTimeout(() => document.getElementById('csHero')?.classList.add('active'), 300);
+
+  // General reveal observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll(
+    '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
+    '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
+    '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card, .cs-impact-quote'
+  ).forEach(el => obs.observe(el));
+
+  // Stats auto-play drop-in
+  let statsTriggered = false;
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsTriggered) {
+        statsTriggered = true;
+        e.target.classList.add('in-view');
+        const blocks = document.querySelectorAll('.cs-stat-drop');
+        const nums = document.querySelectorAll('.cs-stat-drop-num[data-target]');
+        blocks.forEach((block, i) => {
+          setTimeout(() => {
+            block.classList.add('dropped');
+            const el = nums[i];
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 1800;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 400);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const statsEl = document.getElementById('csStats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // Results count-up
+  let resultsCounted = false;
+  const resultObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !resultsCounted) {
+        resultsCounted = true;
+        document.querySelectorAll('.cs-result-row-num[data-target]').forEach((el, i) => {
+          setTimeout(() => {
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const isFloat = target % 1 !== 0;
+            const duration = 2000;
+            const start = performance.now();
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  const resultsEl = document.querySelector('.cs-results');
+  if (resultsEl) resultObs.observe(resultsEl);
+
+  // Cap chips staggered
+  const capObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.cs-cap-chip').forEach((chip, i) => {
+          setTimeout(() => chip.classList.add('visible'), i * 150);
+        });
+        capObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const capsEl = document.getElementById('csCapsGrid');
+  if (capsEl) capObs.observe(capsEl);
+</script>
