@@ -36,49 +36,55 @@ const CTA_POST = "/contact/?offer=post-mortem";
     <div class="lm-offers-inner">
       <div class="lm-grid">
 
-        <!-- Card 1 — The Launch Audit -->
-        <a class="lm-card" href={CTA_AUDIT}>
-          <div class="lm-card-head">
-            <div class="lm-card-title">The Launch Audit</div>
-          </div>
-          <div class="lm-card-body">
-            <div class="lm-block">
+        <!-- Card 1 — The Launch Audit (dark header) -->
+        <div class="lm-card lm-card--audit">
+          <button class="lm-card-summary" aria-expanded="false" aria-controls="more-audit">
+            <div class="lm-card-head"><div class="lm-card-title">The Launch Audit</div></div>
+            <div class="lm-card-lead">
               <span class="lm-block-label">For</span>
-              <p class="lm-block-text">Founders who have an important upcoming launch and need a marketing plan to land it.</p>
+              <p class="lm-lead-text">Founders who have an important upcoming launch and need a marketing plan to land it.</p>
+              <span class="lm-expand"><span class="lm-expand-txt">See what you get</span><span class="lm-expand-icon">▾</span></span>
             </div>
-            <div class="lm-block">
-              <span class="lm-block-label">What</span>
-              <p class="lm-block-text">I'll tell you what pieces are in place and where the gaps are. <strong>Strategy, tool stack, tracking and measurement, and potential blind spots.</strong></p>
-            </div>
-            <div class="lm-block">
-              <span class="lm-block-label">Why me</span>
-              <p class="lm-block-text">I've run high-stakes GTM at both start-ups and Fortune 500 brands. Amazon's first AI launch. Hard Rock Bet's national GTM. Thursday Night Football, and more.</p>
+          </button>
+          <div class="lm-card-more" id="more-audit">
+            <div class="lm-more-inner">
+              <div class="lm-block">
+                <span class="lm-block-label">What</span>
+                <p class="lm-block-text">I'll tell you what pieces are in place and where the gaps are. <strong>Strategy, tool stack, tracking and measurement, and potential blind spots.</strong></p>
+              </div>
+              <div class="lm-block">
+                <span class="lm-block-label">Why me</span>
+                <p class="lm-block-text">I've run high-stakes GTM at both start-ups and Fortune 500 brands. Amazon's first AI launch. Hard Rock Bet's national GTM. Thursday Night Football, and more.</p>
+              </div>
+              <a class="lm-card-cta" href={CTA_AUDIT}>Claim the Launch Audit →</a>
             </div>
           </div>
-          <div class="lm-card-foot"><span class="lm-card-cta">Claim the Launch Audit →</span></div>
-        </a>
+        </div>
 
-        <!-- Card 2 — The Post-Mortem -->
-        <a class="lm-card" href={CTA_POST}>
-          <div class="lm-card-head">
-            <div class="lm-card-title">The Post-Mortem</div>
-          </div>
-          <div class="lm-card-body">
-            <div class="lm-block">
+        <!-- Card 2 — The Post-Mortem (lime header) -->
+        <div class="lm-card lm-card--post">
+          <button class="lm-card-summary" aria-expanded="false" aria-controls="more-post">
+            <div class="lm-card-head"><div class="lm-card-title">The Post-Mortem</div></div>
+            <div class="lm-card-lead">
               <span class="lm-block-label">For</span>
-              <p class="lm-block-text">Founders who know their marketing went sideways. A bad hire. AI leading you astray. Or something else (your secret is safe).</p>
+              <p class="lm-lead-text">Founders who know their marketing went sideways. A bad hire. AI leading you astray. Or something else (your secret is safe).</p>
+              <span class="lm-expand"><span class="lm-expand-txt">See what you get</span><span class="lm-expand-icon">▾</span></span>
             </div>
-            <div class="lm-block">
-              <span class="lm-block-label">What</span>
-              <p class="lm-block-text">I'll be your seasoned, second pair of eyes. We'll pinpoint the exact mistake, how to avoid it moving forward, and what you should do next.</p>
-            </div>
-            <div class="lm-block">
-              <span class="lm-block-label">Why me</span>
-              <p class="lm-block-text">I built the first marketing teams at Pandora, Twitch, Amazon Entertainment, and more. There isn't a mistake I haven't encountered and had to fix, fast.</p>
+          </button>
+          <div class="lm-card-more" id="more-post">
+            <div class="lm-more-inner">
+              <div class="lm-block">
+                <span class="lm-block-label">What</span>
+                <p class="lm-block-text">I'll be your seasoned, second pair of eyes. We'll pinpoint the exact mistake, how to avoid it moving forward, and what you should do next.</p>
+              </div>
+              <div class="lm-block">
+                <span class="lm-block-label">Why me</span>
+                <p class="lm-block-text">I built the first marketing teams at Pandora, Twitch, Amazon Entertainment, and more. There isn't a mistake I haven't encountered and had to fix, fast.</p>
+              </div>
+              <a class="lm-card-cta" href={CTA_POST}>Claim the Post-Mortem →</a>
             </div>
           </div>
-          <div class="lm-card-foot"><span class="lm-card-cta">Claim the Post-Mortem →</span></div>
-        </a>
+        </div>
 
       </div>
     </div>
@@ -173,35 +179,56 @@ const CTA_POST = "/contact/?offer=post-mortem";
   /* ── OFFERS ── */
   .lm-offers { background: var(--warm-gray); padding: 72px 24px 80px; }
   .lm-offers-inner { max-width: 1080px; margin: 0 auto; }
-  .lm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .lm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+
   .lm-card {
-    display: flex; flex-direction: column; background: var(--paper);
-    border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink);
-    transition: transform .18s, box-shadow .18s; overflow: hidden;
+    background: var(--paper); border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink);
+    overflow: hidden; transition: box-shadow .18s, transform .18s;
   }
-  .lm-card:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 11px 11px 0 var(--ink), 0 0 30px rgba(165,219,93,.55), 0 0 60px rgba(165,219,93,.2);
+  .lm-card:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0 var(--ink); }
+  .lm-card.is-open { box-shadow: 8px 8px 0 var(--ink), 0 0 30px rgba(165,219,93,.35); }
+
+  /* summary (always visible, clickable) */
+  .lm-card-summary {
+    display: block; width: 100%; text-align: left; padding: 0;
+    background: none; border: none; cursor: pointer; font: inherit; color: inherit;
   }
-  .lm-card-head { background: var(--ink); padding: 26px 28px 30px; }
+  .lm-card-head { padding: 22px 28px 24px; }
+  .lm-card--audit .lm-card-head { background: var(--ink); }
+  .lm-card--audit .lm-card-title { color: var(--offwhite); }
+  .lm-card--post .lm-card-head { background: var(--green-lt); border-bottom: 4px solid var(--ink); }
+  .lm-card--post .lm-card-title { color: var(--ink); }
   .lm-card-title {
-    font-family: 'Anton', sans-serif; font-size: clamp(38px, 4.6vw, 58px);
-    line-height: 0.94; text-transform: uppercase; color: var(--offwhite); letter-spacing: 0.01em;
+    font-family: 'Anton', sans-serif; font-size: clamp(30px, 3.4vw, 44px);
+    line-height: 0.96; text-transform: uppercase; letter-spacing: 0.01em;
   }
-  .lm-card-body { padding: 26px 28px 8px; flex: 1; }
-  .lm-block { margin-bottom: 22px; }
-  .lm-block:last-child { margin-bottom: 0; }
+
+  .lm-card-lead { padding: 24px 28px 22px; }
+  .lm-lead-text { font-size: 16px; color: var(--ink); font-weight: 600; line-height: 1.5; margin-top: 7px; }
+  .lm-expand {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--green-dk);
+  }
+  .lm-expand-icon { display: inline-block; transition: transform .3s ease; font-size: 13px; }
+  .lm-card.is-open .lm-expand-icon { transform: rotate(180deg); }
+  .lm-card.is-open .lm-expand-txt::after { content: none; }
+  .lm-card-summary:hover .lm-expand { color: var(--ink); }
+
+  /* collapsible body */
+  .lm-card-more { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+  .lm-more-inner { padding: 4px 28px 28px; border-top: 2px solid rgba(33,54,33,.12); }
+  .lm-block { margin-top: 20px; }
   .lm-block-label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); margin-bottom: 7px; }
   .lm-block-text { font-size: 15px; color: var(--muted); line-height: 1.55; }
   .lm-block-text strong { color: var(--ink); font-weight: 700; }
-  .lm-card-foot { margin-top: auto; padding: 24px 28px 28px; border-top: 4px solid var(--ink); }
   .lm-card-cta {
-    display: inline-block; font-family: 'Anton', sans-serif; font-size: 14px;
+    display: inline-block; margin-top: 26px; font-family: 'Anton', sans-serif; font-size: 14px;
     text-transform: uppercase; letter-spacing: 0.03em; padding: 13px 22px;
     background: var(--green-lt); color: var(--ink); border: 4px solid var(--ink);
     box-shadow: 6px 6px 0 var(--ink); transition: transform .15s, box-shadow .15s;
   }
-  .lm-card:hover .lm-card-cta { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
+  .lm-card-cta:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
 
   /* ── ABOUT DAVID ── */
   .lm-about { background: var(--paper); padding: 84px 24px; border-top: 4px solid var(--ink); }
@@ -236,3 +263,20 @@ const CTA_POST = "/contact/?offer=post-mortem";
     .lm-about-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   }
 </style>
+
+<script>
+  document.querySelectorAll('.lm-card-summary').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var card = btn.closest('.lm-card');
+      var more = card.querySelector('.lm-card-more');
+      var isOpen = card.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      more.style.maxHeight = isOpen ? more.scrollHeight + 'px' : '0px';
+    });
+  });
+  window.addEventListener('resize', function () {
+    document.querySelectorAll('.lm-card.is-open .lm-card-more').forEach(function (more) {
+      more.style.maxHeight = more.scrollHeight + 'px';
+    });
+  });
+</script>
