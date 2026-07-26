@@ -24,7 +24,7 @@ const CTA_POST = "/contact/?offer=post-mortem";
   <section class="lm-hero">
     <div class="lm-hero-inner">
       <span class="lm-hero-pill">Free for Founders</span>
-      <h1 class="lm-title">Get a <span class="hl-green">Free</span> <span class="nowrap">CMO-Level</span> Read on Your Marketing.</h1>
+      <h1 class="lm-title">Get a <span class="nowrap">CMO-Level</span> Read on Your Marketing.</h1>
       <p class="lm-sub">Two free 1:1 sessions with the guy who built the first marketing teams at <strong>Twitch</strong>, <strong>Pandora</strong>, <strong>Amazon</strong>, and your other favorite start-ups.</p>
       <p class="lm-pickline">Pick the one you need. <a href="#offers" class="lm-chevron" aria-label="Jump to the offers">↓</a></p>
     </div>
@@ -149,8 +149,9 @@ const CTA_POST = "/contact/?offer=post-mortem";
   .lm-hero-inner { max-width: 900px; margin: 0 auto; }
   .lm-hero-pill {
     display: inline-block; font-family: 'JetBrains Mono', monospace;
-    font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em;
-    color: var(--green-dk); margin-bottom: 16px;
+    font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--ink); background: var(--green-lt); border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink); padding: 6px 15px 7px; margin-bottom: 20px; transform: rotate(-1.5deg);
   }
   .lm-title {
     font-family: 'Anton', sans-serif; font-size: clamp(34px, 5vw, 62px);
