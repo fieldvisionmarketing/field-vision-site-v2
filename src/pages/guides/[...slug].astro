@@ -5,7 +5,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 
 export async function getStaticPaths() {
-  const guides = await getCollection("guides");
+  const guides = (await getCollection("guides")).filter(g => g.id.replace(/\.mdx?$/, '') !== 'plot-framework');
   return guides.map((guide) => ({
     params: { slug: guide.id.replace(/\.mdx?$/, '') },
     props: { guide },

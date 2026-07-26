@@ -13,7 +13,9 @@ const orderMap = {
   'ai-blueprint': 5,
   'gtm-template': 6,
 };
-const guides = (await getCollection('guides')).sort((a, b) => {
+const guides = (await getCollection('guides'))
+  .filter((g) => g.id.replace(/\.(md|mdx)$/, '') !== 'plot-framework')
+  .sort((a, b) => {
   const slugA = a.id.replace(/\.(md|mdx)$/, '');
   const slugB = b.id.replace(/\.(md|mdx)$/, '');
   return (orderMap[slugA] || 99) - (orderMap[slugB] || 99);
