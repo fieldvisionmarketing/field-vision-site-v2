@@ -1,3 +1,17 @@
+
+# === v3 realignment: retired service pages (7 doors -> 4) ===
+/services/ai-growth-systems           /services/                 301
+/services/ai-growth-systems/          /services/                 301
+/services/integrated-marketing        /services/                 301
+/services/integrated-marketing/       /services/                 301
+/services/content-creator-marketing   /services/go-to-market/    301
+/services/content-creator-marketing/  /services/go-to-market/    301
+/services/org-process-design          /services/fractional-cmo/  301
+/services/org-process-design/         /services/fractional-cmo/  301
+# === v3: retired PLOT framework guide (blog post kept as archival) ===
+/guides/plot-framework                /guides/score-framework/   301
+/guides/plot-framework/               /guides/score-framework/   301
+
 # === Redirect old /about-david/ URL to /about/ (page renamed) ===
 /about-david     /about/   301
 /about-david/    /about/   301
