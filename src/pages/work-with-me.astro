@@ -23,8 +23,7 @@ const CTA_POST = "/contact/?offer=post-mortem";
   <!-- ═══ HERO ═══ -->
   <section class="lm-hero">
     <div class="lm-hero-inner">
-      <span class="lm-hero-pill">Free for founders</span>
-      <h1 class="lm-title">Get a <span class="hl-green">Free</span> CMO-Level Read on Your Marketing.</h1>
+      <h1 class="lm-title">Get a <span class="hl-green">Free</span> <span class="nowrap">CMO-Level</span> Read on Your Marketing.</h1>
       <p class="lm-sub">Two free 1:1 sessions with the guy who built the first marketing teams at <strong>Twitch</strong>, <strong>Pandora</strong>, <strong>Amazon</strong>, and your other favorite start-ups.</p>
       <p class="lm-pickline">Pick the one you need.</p>
       <a href="#offers" class="lm-chevron" aria-label="Jump to the offers">↓</a>
@@ -98,7 +97,7 @@ const CTA_POST = "/contact/?offer=post-mortem";
     <div class="lm-about-inner">
       <img class="lm-about-img" src="/headshot-david-hampian.jpg" alt="David Hampian, founder of Field Vision" width="260" height="260" />
       <div class="lm-about-text">
-        <h2 class="lm-about-name">A CMO Who Turns Start-Ups Into Household Names.</h2>
+        <h2 class="lm-about-name">A CMO Who Turns <span class="nowrap">Start-Ups</span> Into Household Names.</h2>
         <p class="lm-about-bio">I've spent over a decade leading marketing at <strong>Twitch</strong>, <strong>Amazon</strong>, <strong>Pandora</strong>, and <strong>Hard Rock</strong>, building and scaling the first marketing teams behind products used by hundreds of millions of people.</p>
         <p class="lm-about-bio">Today I run <strong>Field Vision</strong>, the fractional CMO firm for startups in digital media, streaming, entertainment, and the creator economy. You get senior marketing leadership embedded in your team, without the full-time hire.</p>
       </div>
@@ -270,6 +269,12 @@ const CTA_POST = "/contact/?offer=post-mortem";
   .lm-final-title .hl-green { margin: 0 6px; }
   .lm-final-sub { margin: 18px auto 0; max-width: 560px; font-size: clamp(15px, 1.8vw, 18px); color: var(--muted); line-height: 1.55; }
   .lm-final-btns { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
+
+  /* ── LINE-WRAPPING POLISH ── */
+  .nowrap { white-space: nowrap; }
+  .lm-title, .lm-pickline, .lm-about-name, .lm-how-head h2, .lm-final-title { text-wrap: balance; }
+  .lm-card-title { white-space: nowrap; }
+  .lm-sub, .lm-lead-text, .lm-block-text, .lm-about-bio, .lm-final-sub, .lm-step-desc { text-wrap: pretty; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 860px) {
