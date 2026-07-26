@@ -87,9 +87,9 @@ Now you need someone who can build and manage a department, own a P&L, interface
 
 ## The Fractional Alternative
 
-There’s a gap between “we need strategic marketing leadership” and “we can justify a $500K+ fully-loaded executive.” That gap is exactly where the [fractional CMO model](https://www.fieldvisiongroup.com/services/fractional-cmo) lives.
+There’s a gap between “we need strategic marketing leadership” and “we are ready for a full-time executive.” That gap is exactly where the [fractional CMO model](https://www.fieldvisiongroup.com/services/fractional-cmo) lives.
 
-A fractional CMO gives you the strategic brain at Series A or B without the full-time executive cost. They’ve seen the playbook work at scale, at companies like Amazon, Twitch, Pandora, and they know how to adapt it to your stage. They’re not theorizing about what might work. They’re pattern-matching from dozens of engagements and hundreds of go-to-market launches.
+A fractional CMO gives you the strategic brain at Series A or B without the full-time executive commitment. They’ve seen the playbook work at scale, at companies like Amazon, Twitch, Pandora, and they know how to adapt it to your stage. They’re not theorizing about what might work. They’re pattern-matching from dozens of engagements and hundreds of go-to-market launches.
 
 The key: a fractional CMO works *alongside* your builder, not instead of them. The fractional brings the strategic architecture, what we call the [SCORE® Framework](https://www.fieldvisiongroup.com/blog/the-score-framework), while your builder executes against it. Strategy without execution is a whiteboard exercise. Execution without strategy is random acts of marketing. You need both, and the fractional model lets you afford both at the stage where it matters most.
 
@@ -151,15 +151,6 @@ Get the sequence right and marketing becomes a growth engine. Get it wrong and y
   </summary>
   <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
     <p itemprop="text">A fractional CMO provides senior marketing leadership on a part-time or contract basis, typically at 30-50% of the cost of a full-time executive. They bring the same strategic capability (market positioning, growth architecture, team building) but work alongside your existing team rather than replacing the need for hands-on executors.</p>
-  </div>
-</details>
-<details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-  <summary class="faq-question">
-    <span itemprop="name">How much should a startup spend on their first marketing hire?</span>
-    <span class="faq-toggle">+</span>
-  </summary>
-  <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-    <p itemprop="text">Budget depends on stage: $0-$80K at pre-seed/seed for a generalist, $90K-$140K at Series A for a growth marketer or builder, and $150K-$200K at Series B for a Head of Marketing. Adding a fractional CMO typically costs $5K-$15K per month, significantly less than the $500K+ fully-loaded cost of a full-time marketing executive.</p>
   </div>
 </details>
 <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">

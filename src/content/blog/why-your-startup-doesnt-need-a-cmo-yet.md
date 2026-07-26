@@ -1,6 +1,6 @@
 ---
 title: "Why Your Startup Doesn't Need a CMO Yet"
-description: "The case for fractional marketing leadership before making a full-time commitment. How to get executive-level strategy without the $500K+ salary."
+description: "The case for fractional marketing leadership before making a full-time commitment. How to get executive-level strategy at your stage."
 category: "Growth Strategy"
 date: 2025-03-01
 author: "Field Vision"
@@ -11,13 +11,13 @@ When to hire a CMO is one of the most consequential timing decisions a startup f
 
 The issue isn't the person. It's the timing.
 
-Most seed-to-Series B startups don't need a full-time CMO. They need senior marketing leadership, strategy, systems, and oversight, without the $500K+ commitment that comes with a C-suite hire. The fractional executive market has grown 78% since 2020 ([Harvard Business Review, 2024](https://hbr.org/)), and for good reason: it solves the timing problem that sinks most startup marketing efforts.
+Most seed-to-Series B startups don't need a full-time CMO. They need senior marketing leadership, strategy, systems, and oversight, without the full-time commitment that comes with a C-suite hire. The fractional executive market has grown 78% since 2020 ([Harvard Business Review, 2024](https://hbr.org/)), and for good reason: it solves the timing problem that sinks most startup marketing efforts.
 
 ## The Problem With Hiring Too Early
 
 Here's what I see over and over after two decades leading marketing at companies like Amazon, Twitch, and Pandora, and now working with startups as a fractional CMO: founders confuse the need for marketing leadership with the need for a full-time executive.
 
-A full-time CMO makes sense when you have product-market fit locked in, a repeatable sales motion, and enough marketing infrastructure to justify daily executive oversight. Before that point, you're asking someone to build the plane while flying it, and paying $500K+ per year (with benefits and equity) for the privilege.
+A full-time CMO makes sense when you have product-market fit locked in, a repeatable sales motion, and enough marketing infrastructure to justify daily executive oversight. Before that point, you're asking someone to build the plane while flying it, and committing to a full-time C-suite hire before you need it.
 
 The three most common failure modes I've seen:
 
@@ -45,7 +45,7 @@ When I embed with a startup, I'm not advising from the sidelines. I'm in Slack, 
 
 The fractional model solves three problems simultaneously:
 
-**Cost efficiency.** You get C-suite strategic thinking without a full-time hire. A typical fractional CMO engagement runs $5K-$15K per month versus $20K-$35K per month for a full-time CMO (salary, benefits, equity dilution). That's capital you can redirect to actual marketing execution.
+**Efficiency.** You get C-suite strategic thinking without a full-time hire. That's capital you can redirect to actual marketing execution.
 
 **Speed to impact.** A full-time CMO takes 3-6 months to ramp. A fractional CMO who's done this dozens of times can diagnose your situation in weeks and start building within the first month. At Amazon Music, the difference between a team operating with a playbook and a team operating on intuition was the difference between 3x and 0.3x return on ad spend.
 
