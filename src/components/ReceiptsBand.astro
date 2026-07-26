@@ -1,0 +1,72 @@
+---
+// v3 Phase 3: receipts band — judgment, with receipts, in one glance.
+// Numbers pulled from the 2026 brand guide "Key Receipts".
+const receipts = [
+  { stat: "80M+", label: "MAU grown at Pandora, first marketer to the #1 US streaming service" },
+  { stat: "$24M", label: "Twitch creator-commerce weekend, four years before TikTok Shop" },
+  { stat: "3×", label: "growth rebuilt at Amazon, with +45% retention" },
+  { stat: "1st", label: "creator-led NFL co-stream, invented on Prime Video" },
+  { stat: "6", label: "states in the Hard Rock Bet national launch" },
+];
+---
+
+<section class="receipts-band">
+  <div class="receipts-inner">
+    <div class="section-eyebrow rb-eyebrow">The receipts</div>
+    <div class="receipts-grid">
+      {receipts.map((r) => (
+        <div class="receipt">
+          <div class="receipt-stat">{r.stat}</div>
+          <p class="receipt-label">{r.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .receipts-band {
+    background: var(--ink);
+    color: var(--offwhite);
+    padding: clamp(48px, 6vw, 84px) 0;
+  }
+  .receipts-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 48px);
+  }
+  .rb-eyebrow {
+    color: var(--green-lt);
+    margin-bottom: 28px;
+  }
+  .receipts-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(20px, 3vw, 40px);
+  }
+  .receipt {
+    border-top: 3px solid var(--green-lt);
+    padding-top: 16px;
+  }
+  .receipt-stat {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(38px, 4.4vw, 60px);
+    line-height: 1;
+    color: var(--offwhite);
+    letter-spacing: 0.01em;
+  }
+  .receipt-label {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: rgba(239, 234, 211, 0.72);
+    margin: 12px 0 0;
+  }
+  @media (max-width: 900px) {
+    .receipts-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
+  }
+  @media (max-width: 520px) {
+    .receipts-grid { grid-template-columns: 1fr 1fr; }
+    .receipt-label { font-size: 12.5px; }
+  }
+</style>
