@@ -3,6 +3,7 @@ title: "Marketing Organization & Process Design"
 description: "We design marketing organizations that are structured to execute and built to scale, from org charts to operating rhythms to hiring roadmaps."
 icon: "⚙️"
 order: 6
+hidden: true
 sidebar:
   - label: "Duration"
     value: "4–8 weeks"

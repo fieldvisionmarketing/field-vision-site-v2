@@ -3,6 +3,7 @@ title: "AI Growth Systems"
 description: "Most AI consultants configure tools. We build the systems that connect those tools to revenue, with a compliance-first approach that protects your brand while accelerating growth."
 icon: "🤖"
 order: 7
+hidden: true
 sidebar:
   - label: "Duration"
     value: "4–8 weeks"

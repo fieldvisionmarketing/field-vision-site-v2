@@ -1,22 +1,30 @@
 ---
+// v3 (2026 brand realignment): trigger router — four doors, founders' own words.
+// Maps to the six founder pain points; cost framing removed.
 const cards = [
   {
     num: '01',
-    title: "Not ready for a full-time marketing hire",
-    body: "You need senior marketing leadership but not the $500K+ commitment. A fractional CMO gives you the strategy and oversight without the overhead.",
+    title: "“I’m the CEO, the fundraiser, and apparently the CMO too.”",
+    body: "No senior marketing brain in the building, so you’re approving ad copy at midnight on top of running the company. A fractional CMO takes the wheel — strategy, systems, and the team to run them.",
     link: { label: "Explore Fractional CMO →", href: "/services/fractional-cmo/" },
   },
   {
     num: '02',
-    title: "Launching something and need a growth strategy",
-    body: "You have a specific initiative, a product launch, new market entry, or rebrand, and need an expert to build the plan and lead the execution.",
+    title: "“We launch in six weeks and I’m not sure anyone will show up.”",
+    body: "Something is shipping with a real date and nobody senior owns making it land. We build the plan and lead the launch — the way it was done at Amazon, Twitch, and Hard Rock.",
     link: { label: "Explore Go-to-Market →", href: "/services/go-to-market/" },
   },
   {
     num: '03',
-    title: "Have a team but need an expert to steer",
-    body: "You're doing marketing but aren't sure it's working. You need someone to audit what exists, set a direction, and coach your team to execute.",
-    link: { label: "Take the Assessment →", href: "/assessment/" },
+    title: "“Everything that used to work just stopped working.”",
+    body: "The channels that got you here stopped compounding, and doubling the budget did nothing. We rebuild the full funnel so growth compounds again.",
+    link: { label: "Explore Growth & Lifecycle →", href: "/services/growth-marketing/" },
+  },
+  {
+    num: '04',
+    title: "“We built our growth plan with AI — and so did everyone else.”",
+    body: "The story came out generic mush that sounds like every competitor. We sharpen the positioning so you sound like no one else in the category.",
+    link: { label: "Explore Brand Strategy →", href: "/services/brand-strategy-positioning/" },
   },
 ];
 ---
@@ -24,12 +32,12 @@ const cards = [
 <section class="starting-point section">
   <div class="section-header reveal">
     <div class="section-eyebrow">Your Starting Point</div>
-    <h2 class="section-title">Every Startup's Marketing Challenge Looks <span class="hl-cream">Different</span></h2>
-    <p class="section-subtitle">Which sounds like yours?</p>
+    <h2 class="section-title">Every Startup’s Marketing Challenge Looks <span class="hl-cream">Different</span></h2>
+    <p class="section-subtitle">Which one sounds like yours?</p>
   </div>
   <div class="persona-grid">
     {cards.map((card, i) => (
-      <div class={`persona-card reveal rd${i + 1}`}>
+      <a href={card.link.href} class={`persona-card reveal rd${i + 1}`}>
         <div class="persona-top">
           <div class="persona-num">{card.num}</div>
           <div>
@@ -38,8 +46,9 @@ const cards = [
         </div>
         <div class="persona-bottom">
           <p class="persona-desc">{card.body}</p>
+          <span class="service-link">{card.link.label}</span>
         </div>
-      </div>
+      </a>
     ))}
   </div>
 </section>

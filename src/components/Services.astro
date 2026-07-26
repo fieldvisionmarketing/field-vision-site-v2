@@ -1,50 +1,30 @@
 ---
-const topRow = [
+// v3 (2026 brand realignment): seven services collapsed to the four doors.
+// Each door opens with its trigger's pain, not a feature list.
+const doors = [
   {
     emoji: "🎯",
     title: "Fractional CMO",
-    body: "Senior marketing leadership embedded in your team, without the full-time price tag. Strategy, execution, and accountability on a flexible engagement.",
+    body: "“Nobody senior is steering.” Embedded marketing leadership for founders carrying the CMO hat on top of everything else — strategy, systems, hiring, and the operating cadence to run them.",
     href: "/services/fractional-cmo/",
   },
   {
     emoji: "🚀",
     title: "Go-to-Market Strategy",
-    body: "Launch plans built on market intelligence, competitive positioning, and channel strategy that actually converts.",
+    body: "“We’re launching something.” The plan and the launch for a product, market, or moment with a real date — from a leader who’s launched at Amazon, Twitch, and Hard Rock.",
     href: "/services/go-to-market/",
   },
   {
     emoji: "📈",
     title: "Growth & Lifecycle",
-    body: "Acquisition, activation, retention, full-funnel systems designed to compound over time.",
+    body: "“Growth stalled; the wins are drying up.” The full-funnel engine that acquires the right users and keeps them, so growth compounds instead of plateaus.",
     href: "/services/growth-marketing/",
   },
   {
-    emoji: "🧩",
-    title: "Integrated Marketing",
-    body: "Brand, product, and growth marketing aligned under one strategy. No more silos, no more mixed messages.",
-    href: "/services/integrated-marketing/",
-  },
-];
-
-const bottomRow = [
-  {
-    emoji: "✍️",
-    title: "Content & Creator",
-    body: "Content strategy, creator partnerships, and community building that drive organic growth and brand equity.",
-    href: "/services/content-creator-marketing/",
-  },
-  {
-    emoji: "🤖",
-    title: "AI Growth Systems",
-    body: "Custom AI-powered workflows that automate research, content, reporting, and competitive intelligence.",
-    href: "/services/ai-growth-systems/",
-    badge: "New",
-  },
-  {
-    emoji: "⚙️",
-    title: "Org & Process Design",
-    body: "Marketing team structures, hiring plans, vendor selection, and operating models built to scale.",
-    href: "/services/org-process-design/",
+    emoji: "✏️",
+    title: "Brand Strategy & Positioning",
+    body: "“Our story is fuzzy — AI gave us mush.” Sharp positioning and a story your whole company can tell, so you sound like no one else in the category.",
+    href: "/services/brand-strategy-positioning/",
   },
 ];
 ---
@@ -58,26 +38,11 @@ const bottomRow = [
     <a href="/services/" class="btn-brutal-outline">View All Services →</a>
   </div>
   <div class="services-grid">
-    {topRow.map((s, i) => (
+    {doors.map((s, i) => (
       <a href={s.href} class={`service-card reveal rd${i + 1}`}>
         <div class="service-card-header">
           <span class="service-emoji">{s.emoji}</span>
           <span class="service-name">{s.title}</span>
-        </div>
-        <div class="service-card-body">
-          <p class="service-desc">{s.body}</p>
-          <span class="service-link">Learn More →</span>
-        </div>
-      </a>
-    ))}
-  </div>
-  <div class="services-row-bottom">
-    {bottomRow.map((s, i) => (
-      <a href={s.href} class={`service-card reveal rd${i + 1}`}>
-        <div class="service-card-header">
-          <span class="service-emoji">{s.emoji}</span>
-          <span class="service-name">{s.title}</span>
-          {s.badge && <span class="service-new-badge">{s.badge}</span>}
         </div>
         <div class="service-card-body">
           <p class="service-desc">{s.body}</p>
