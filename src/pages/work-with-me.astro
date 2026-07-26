@@ -217,29 +217,23 @@ const CTA_POST = "/contact/?offer=post-mortem";
 
   .lm-card-lead { display: flex; flex-direction: column; flex: 1 1 auto; padding: 24px 28px 22px; }
   .lm-lead-text { font-size: 16px; color: var(--ink); font-weight: 600; line-height: 1.5; margin-top: 7px; margin-bottom: 18px; }
+  /* Shimmer text: dark-green base, lime + glossy sweep passes through */
   .lm-expand {
-    position: relative; overflow: hidden;
-    display: inline-flex; align-items: center; gap: 9px; align-self: flex-start; margin-top: auto;
-    font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700;
+    display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; margin-top: auto;
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
     text-transform: uppercase; letter-spacing: 0.1em;
-    background: var(--green-lt); color: var(--ink);
-    border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
-    padding: 11px 18px 12px;
-    transition: transform .15s ease, box-shadow .15s ease;
+    background: linear-gradient(90deg, var(--ink) 0%, var(--ink) 36%, var(--green-lt) 46%, #f2ffd6 50%, var(--green-lt) 54%, var(--ink) 64%, var(--ink) 100%);
+    background-size: 250% 100%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    animation: lm-shimmer 2.8s linear infinite;
   }
-  /* Glossy shine sweep (matches the Fanatics promo bar) */
-  .lm-expand::after {
-    content: ''; position: absolute; top: 0; left: -60%; height: 100%; width: 55%;
-    background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
-    transform: skewX(-20deg); pointer-events: none;
-    animation: lm-sheen 3.2s ease-in-out 0.6s infinite;
-  }
-  @keyframes lm-sheen { 0% { left: -60%; } 45% { left: 120%; } 100% { left: 120%; } }
-  .lm-expand-txt { position: relative; z-index: 1; }
-  .lm-expand-icon { position: relative; z-index: 1; display: inline-block; transition: transform .3s ease; font-size: 13px; }
-  .lm-card-summary:hover .lm-expand { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+  @keyframes lm-shimmer { 0% { background-position: 250% 0; } 100% { background-position: -250% 0; } }
+  .lm-expand-icon { display: inline-block; transition: transform .3s ease; font-size: 13px; }
   .lm-card.is-open .lm-expand-icon { transform: rotate(180deg); }
-  @media (prefers-reduced-motion: reduce) { .lm-expand::after { display: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .lm-expand { animation: none; background: none; -webkit-text-fill-color: var(--ink); color: var(--ink); }
+  }
 
   /* collapsible body */
   .lm-card-more { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
