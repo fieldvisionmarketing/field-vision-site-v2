@@ -11,18 +11,13 @@ import Footer from '@/components/Footer.astro';
     <div class="contact-inner">
       <div class="contact-text reveal">
         <h1>Let's <span class="highlight">Talk</span></h1>
-        <p class="contact-sub">Book a 30-minute discovery call to discuss your marketing challenges, growth goals, and whether Field Vision is the right fit.</p>
+        <p class="contact-sub">Tell me about your marketing challenges, growth goals, and where you want to take things. I'll get back to you personally.</p>
       </div>
 
       <div class="contact-grid reveal rd1">
-        <!-- Google Calendar Scheduling -->
-        <div class="contact-booking">
-          <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ000qS7-Zde2OJuhy9OE-k5POEPYrBYIcs3nSIioTUUg3So_ia8Ao5axqJ7HF39xP_BSH84Cz4v?gv=true" style="border: 0" width="100%" height="600" frameborder="0" loading="lazy"></iframe>
-        </div>
-
-        <!-- Contact Form (Netlify Forms) -->
+        <!-- Contact Form -->
         <div class="contact-form-wrap">
-          <h3>Or Send a Message</h3>
+          <h3>Let's Talk</h3>
       <form action="https://formsubmit.co/hampian@fieldvisiongroup.com" method="POST" class="contact-form">
         <input type="hidden" name="_subject" value="New Lead from fieldvisiongroup.com" />
         <input type="hidden" name="_captcha" value="false" />
@@ -71,18 +66,8 @@ import Footer from '@/components/Footer.astro';
     color: #555;
   }
   .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-  }
-  .contact-booking {
-    border-radius: 0;
-    overflow: hidden;
-    min-height: 400px;
-  }
-  .contact-booking iframe {
-    border-radius: 0;
+    max-width: 560px;
+    margin: 0 auto;
   }
   .contact-form-wrap h3 {
     font-family: var(--font-display);
@@ -127,10 +112,5 @@ import Footer from '@/components/Footer.astro';
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 3px;
-  }
-  @media (max-width: 768px) {
-    .contact-grid {
-      grid-template-columns: 1fr;
-    }
   }
 </style>
