@@ -3067,35 +3067,67 @@ h1, h2, h3 {
   transform: translateY(0);
 }
 .cs-scroll-hint {
+  /* action-green base with a glossy white sweep passing through */
+  --cs-hint-shine: linear-gradient(90deg,
+    var(--green-lt) 0%, var(--green-lt) 34%,
+    #eaffc2 44%, #ffffff 50%, #eaffc2 56%,
+    var(--green-lt) 66%, var(--green-lt) 100%);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--muted);
   opacity: 0;
-  animation: csHintFadeIn 1s 2s forwards, csHintBob 2.5s 3s ease-in-out infinite;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 14px;
   margin-top: 32px;
+  background-image: var(--cs-hint-shine);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 22px rgba(165, 219, 93, 0.4);
+  animation:
+    csHintFadeIn 1s 2s forwards,
+    csHintBob 2.6s 3s ease-in-out infinite,
+    csHintShine 4.5s 3s linear infinite;
 }
-.cs-scroll-hint::before {
-  content: '\2193';
-  font-size: 11px;
-}
+.cs-scroll-hint::before,
 .cs-scroll-hint::after {
   content: '\2193';
-  font-size: 11px;
+  font-size: 22px;
+  background-image: var(--cs-hint-shine);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: csHintShine 4.5s 3s linear infinite;
 }
 @keyframes csHintFadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 0.6; transform: translateY(0); }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 @keyframes csHintBob {
-  0%, 100% { transform: translateY(0); opacity: 0.6; }
-  50% { transform: translateY(6px); opacity: 1; }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+@keyframes csHintShine {
+  0% { background-position: 250% 0; }
+  100% { background-position: -250% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-scroll-hint,
+  .cs-scroll-hint::before,
+  .cs-scroll-hint::after {
+    animation: csHintFadeIn 1s 2s forwards;
+    background: none;
+    -webkit-text-fill-color: var(--green-lt);
+    color: var(--green-lt);
+  }
 }
 @keyframes csFadeIn { to { opacity: 1; } }
 @keyframes csScrollPulse {
@@ -3446,10 +3478,12 @@ h1, h2, h3 {
     padding-bottom: 24px;
   }
   .cs-scroll-hint {
-    font-size: 10px;
+    font-size: 20px;
     margin-top: 24px;
     justify-content: center;
   }
+  .cs-scroll-hint::before,
+  .cs-scroll-hint::after { font-size: 20px; }
   .cs-hero-v2-summary {
     font-size: 16px;
     margin-top: 20px;
