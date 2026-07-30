@@ -234,9 +234,15 @@ import RelatedIndustry from '@/components/RelatedIndustry.astro';
 
 <style>
   /* ── FEATURE VIDEO — dark section that flows out of the stats ── */
+  /* Stats block defaults to 100vh with centered numbers, leaving a half-screen
+     void below them. Compact it here so the video sits right under the numbers. */
+  .cs-stats-v2 {
+    min-height: auto;
+    padding: 120px 24px 48px;
+  }
   .cs-video-v2 {
     background: var(--ink);
-    padding: 120px 24px;
+    padding: 48px 24px 120px;
   }
   .cs-video-v2-inner {
     max-width: 1000px;
