@@ -36,8 +36,8 @@ import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
 <section class="cs-stats-v2" id="csStats">
   <div class="cs-stats-v2-inner">
     <div class="cs-stat-drop">
-      <div class="cs-stat-drop-num" data-target="6" data-prefix="" data-suffix="-Figures">0-Figures</div>
-      <div class="cs-stat-drop-label">First Partnership, with Adobe</div>
+      <div class="cs-stat-drop-num" data-target="6" data-prefix="" data-suffix="">0</div>
+      <div class="cs-stat-drop-label">Figure Partnership with Adobe</div>
     </div>
     <div class="cs-stat-drop">
       <div class="cs-stat-drop-num" data-target="1" data-prefix="" data-suffix="st">0st</div>
@@ -58,7 +58,8 @@ import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
 <section class="cs-video-v2" id="csVideo">
   <div class="cs-video-v2-inner">
     <span class="eyebrow">See It Live</span>
-    <h2>MONTREALITY, In Action</h2>
+    <h2>THE SERIES: LAYERS</h2>
+    <p class="cs-video-sub">MONTREALITY x Field Vision x Adobe</p>
     <div class="cs-video-embed">
       <iframe
         src="https://www.youtube-nocookie.com/embed/tVz2IAAxttE?rel=0"
@@ -240,13 +241,24 @@ import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
     color: var(--offwhite);
     font-size: clamp(32px, 5vw, 56px);
     line-height: 1.05;
-    margin: 12px 0 40px;
+    margin: 12px 0 10px;
     opacity: 0;
     filter: blur(8px);
     transform: translateY(20px);
     transition: all 0.7s ease;
   }
   .cs-video-v2 h2.visible { opacity: 1; filter: blur(0); transform: translateY(0); }
+  .cs-video-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: var(--green-lt);
+    margin: 0 0 40px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.6s ease 0.1s;
+  }
+  .cs-video-sub.visible { opacity: 1; transform: translateY(0); }
   .cs-video-embed {
     position: relative;
     width: 100%;
@@ -291,7 +303,7 @@ import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll(
-    '.cs-video-v2 .eyebrow, .cs-video-v2 h2, .cs-video-embed, ' +
+    '.cs-video-v2 .eyebrow, .cs-video-v2 h2, .cs-video-v2 .cs-video-sub, .cs-video-embed, ' +
     '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
     '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
     '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
