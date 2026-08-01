@@ -1,71 +1,95 @@
 ---
 /**
- * CASE STUDY — Arena
- * Built on case-study-template.astro v2.0 (Animated). CS rules CS1–CS29 + Brutalist v2.4.
- * Source: Arena-Talent-Case-Study-Draft.pdf (June 2026).
+ * ══════════════════════════════════════════════════════════════════════════
+ * CANONICAL CASE STUDY TEMPLATE — v2.1 (Animated)
+ * ══════════════════════════════════════════════════════════════════════════
+ * This is the single source of truth for the layout of every Field Vision
+ * case study page. The reference implementation is Twitch Sells Out
+ * (src/pages/case-studies/twitch-sells-out.astro). Arena, MONTREALITY, and
+ * StreamU are also aligned to it.
+ *
+ * NOT A ROUTE: this file lives at the repo root (outside src/pages) so Astro
+ * never builds it. To create a new case study, COPY this file into
+ * src/pages/case-studies/<slug>.astro and replace every {{PLACEHOLDER}}.
+ *
+ * CANONICAL RULES (do not drift):
+ * - Hero: .cs-hero-v2-wrapper > .cs-hero-v2-sticky#csHero > .cs-hero-v2-bg
+ *   + .cs-hero-v2-content. The .cs-scroll-hint MUST live INSIDE
+ *   .cs-hero-v2-content, directly after the .cs-hero-v2-summary <p>. Putting
+ *   it outside the content div breaks hero alignment.
+ * - Hero background: a real image via background-image:url(...) (shows on the
+ *   right 50% at 0.2 opacity), OR the standard gradient fallback
+ *   background:linear-gradient(135deg,#18271a,#2f4a2f) when no image exists.
+ *   Never ship the literal placeholder URL.
+ * - Feature video (optional): include the .cs-video-v2 section only when there
+ *   is a video. Use the youtube-nocookie embed. Keep the <style> block below.
+ * - Copy rules: no em-dashes or en-dashes anywhere (use periods/commas, "to"
+ *   for ranges). Never position on price.
+ * - Keep the <style> and <script> blocks verbatim. Add the new page's video
+ *   selectors are already covered by the reveal observer.
+ * ══════════════════════════════════════════════════════════════════════════
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import FinalCTA from '@/components/FinalCTA.astro';
+import RelatedIndustry from '@/components/RelatedIndustry.astro';
 ---
 
 <BaseLayout
-  title="Building the Subscription Growth Engine at Arena"
-  description="How Field Vision helped Arena grow active subscriptions ~4x in 90 days with a conversion playbook, annual-first pricing, content framework, and referral program."
+  title="{{SEO_TITLE}} | Field Vision"
+  description="{{META_DESCRIPTION}}"
 >
   <Header slot="header" />
 
 <!-- Scroll progress bar -->
 <div class="cs-scroll-progress" id="csScrollProgress"></div>
 
-<!-- ═══ HERO — CS4-CS8 ═══ -->
+<!-- ═══ HERO ═══ -->
 <div class="cs-hero-v2-wrapper">
   <div class="cs-hero-v2-sticky" id="csHero">
+    <!-- Real image: style="background-image:url('{{HERO_IMAGE_URL}}')"
+         No image: style="background:linear-gradient(135deg,#18271a,#2f4a2f)" -->
     <div class="cs-hero-v2-bg" style="background:linear-gradient(135deg,#18271a,#2f4a2f)"></div>
     <div class="cs-hero-v2-content">
-      <h1>Building the<br>Subscription Growth Engine<br>at <span class="highlight-chip">Arena</span></h1>
-      <p class="cs-hero-v2-summary">We built the conversion playbook, pricing strategy, content framework, and referral program that grew active subscriptions ~4x in three months, turning a beloved beta community into a self-sustaining subscription business.</p>
+      <h1>{{HERO_HEADLINE_LINE_1}}<br>{{HERO_HEADLINE_LINE_2}} <span class="highlight-chip">{{CLIENT_NAME}}</span></h1>
+      <p class="cs-hero-v2-summary">{{HERO_SUMMARY}}</p>
       <div class="cs-scroll-hint">Scroll to explore</div>
     </div>
   </div>
 </div>
 
-<!-- ═══ STATS — CS9-CS12 ═══ -->
+<!-- ═══ STATS ═══ -->
 <section class="cs-stats-v2" id="csStats">
   <div class="cs-stats-v2-inner">
-    <!-- Stat 1 -->
     <div class="cs-stat-drop">
-      <div class="cs-stat-drop-num" data-target="4" data-prefix="~" data-suffix="x">~0x</div>
-      <div class="cs-stat-drop-label">Active Subscription Growth</div>
+      <div class="cs-stat-drop-num" data-target="{{STAT1_NUM}}" data-prefix="{{STAT1_PREFIX}}" data-suffix="{{STAT1_SUFFIX}}">{{STAT1_PREFIX}}0{{STAT1_SUFFIX}}</div>
+      <div class="cs-stat-drop-label">{{STAT1_LABEL}}</div>
     </div>
-    <!-- Stat 2 -->
     <div class="cs-stat-drop">
-      <div class="cs-stat-drop-num" data-target="79" data-prefix="" data-suffix="%">0%</div>
-      <div class="cs-stat-drop-label">Annual Plan Adoption</div>
+      <div class="cs-stat-drop-num" data-target="{{STAT2_NUM}}" data-prefix="{{STAT2_PREFIX}}" data-suffix="{{STAT2_SUFFIX}}">{{STAT2_PREFIX}}0{{STAT2_SUFFIX}}</div>
+      <div class="cs-stat-drop-label">{{STAT2_LABEL}}</div>
     </div>
-    <!-- Stat 3 -->
     <div class="cs-stat-drop">
-      <div class="cs-stat-drop-num" data-target="58" data-prefix="+" data-suffix="%">+0%</div>
-      <div class="cs-stat-drop-label">Application Volume Growth</div>
+      <div class="cs-stat-drop-num" data-target="{{STAT3_NUM}}" data-prefix="{{STAT3_PREFIX}}" data-suffix="{{STAT3_SUFFIX}}">{{STAT3_PREFIX}}0{{STAT3_SUFFIX}}</div>
+      <div class="cs-stat-drop-label">{{STAT3_LABEL}}</div>
     </div>
-    <!-- Stat 4 -->
     <div class="cs-stat-drop">
-      <div class="cs-stat-drop-num" data-target="18" data-prefix="+" data-suffix="%">+0%</div>
-      <div class="cs-stat-drop-label">Conversion Rate Increase</div>
+      <div class="cs-stat-drop-num" data-target="{{STAT4_NUM}}" data-prefix="{{STAT4_PREFIX}}" data-suffix="{{STAT4_SUFFIX}}">{{STAT4_PREFIX}}0{{STAT4_SUFFIX}}</div>
+      <div class="cs-stat-drop-label">{{STAT4_LABEL}}</div>
     </div>
   </div>
 </section>
 
-<!-- ═══ FEATURE VIDEO ═══ -->
+<!-- ═══ FEATURE VIDEO (optional — include only if there is a video) ═══ -->
 <section class="cs-video-v2" id="csVideo">
   <div class="cs-video-v2-inner">
     <span class="eyebrow">See It Live</span>
-    <h2>Arena, In Their Words</h2>
+    <h2>{{VIDEO_HEADING}}</h2>
     <div class="cs-video-embed">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/zKmwcrsuO7I?rel=0"
-        title="Arena Testimonial"
+        src="https://www.youtube-nocookie.com/embed/{{YOUTUBE_ID}}?rel=0"
+        title="{{VIDEO_TITLE}}"
         loading="lazy"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -76,144 +100,139 @@ import FinalCTA from '@/components/FinalCTA.astro';
   </div>
 </section>
 
-<!-- ═══ CHALLENGE — CS13-CS16 ═══ -->
+<!-- ═══ CHALLENGE ═══ -->
 <section class="cs-challenge-v2">
   <div class="cs-challenge-v2-inner">
     <span class="eyebrow">The Challenge</span>
-    <h2>Strong Product, Untapped Growth Levers</h2>
+    <h2>{{CHALLENGE_HEADLINE}}</h2>
 
     <div class="cs-fly-card">
       <span class="cs-fly-card-num">1</span>
-      <span class="cs-fly-card-text"><strong>Conversion had room to run.</strong> Approved-to-paid conversion sat at 40%, and a wave of beta trials were approaching their conversion deadline with no structured nurture sequence to guide them.</span>
+      <span class="cs-fly-card-text"><strong>{{CHALLENGE_1_BOLD}}</strong> {{CHALLENGE_1_TEXT}}</span>
     </div>
     <div class="cs-fly-card">
       <span class="cs-fly-card-num">2</span>
-      <span class="cs-fly-card-text"><strong>Pricing and packaging needed a rethink.</strong> Free trials and monthly billing created a low-commitment entry point that contributed to early churn, with cost perception as the leading cancellation factor.</span>
+      <span class="cs-fly-card-text"><strong>{{CHALLENGE_2_BOLD}}</strong> {{CHALLENGE_2_TEXT}}</span>
     </div>
     <div class="cs-fly-card">
       <span class="cs-fly-card-num">3</span>
-      <span class="cs-fly-card-text"><strong>Content and marketing infrastructure was early.</strong> A sizable newsletter audience existed, but there were no content pillars, editorial calendar, or system connecting content to applications.</span>
+      <span class="cs-fly-card-text"><strong>{{CHALLENGE_3_BOLD}}</strong> {{CHALLENGE_3_TEXT}}</span>
     </div>
     <div class="cs-fly-card">
       <span class="cs-fly-card-num">4</span>
-      <span class="cs-fly-card-text"><strong>Referral and word-of-mouth channels were untapped.</strong> Members loved the product, but no structured program existed to channel that enthusiasm into a repeatable acquisition engine.</span>
+      <span class="cs-fly-card-text"><strong>{{CHALLENGE_4_BOLD}}</strong> {{CHALLENGE_4_TEXT}}</span>
     </div>
 
     <div class="cs-mandate-drop">
       <span class="eyebrow">The Mandate</span>
-      <blockquote>Build the conversion, content, and growth infrastructure to turn a beloved beta community into a self-sustaining subscription business.</blockquote>
+      <blockquote>{{MANDATE_TEXT}}</blockquote>
     </div>
   </div>
 </section>
 
-<!-- ═══ APPROACH — CS17-CS20 ═══ -->
+<!-- ═══ APPROACH ═══ -->
 <div class="cs-approach section">
   <div class="cs-section-inner">
     <span class="eyebrow">The Approach</span>
-    <h2>Conversion First, Then Scale</h2>
-    <p class="cs-approach-insight">The engagement started with the most urgent lever, <em>a wave of beta trials approaching their conversion deadline</em>, then expanded into the full growth infrastructure Arena needed to scale sustainably.</p>
+    <h2>{{APPROACH_HEADLINE}}</h2>
+    <p class="cs-approach-insight">{{APPROACH_INSIGHT}}</p>
 
     <div class="cs-approach-grid">
       <div class="cs-phase-card">
         <div class="cs-phase-num">01</div>
-        <div class="cs-phase-title">Conversion Playbook</div>
-        <div class="cs-phase-desc">Audited the full funnel from application approval to paid subscription and built a five-part playbook: pre-conversion nurture, best-match acceleration, social proof, pre-emptive price framing, and win-back flows.</div>
+        <div class="cs-phase-title">{{PHASE1_TITLE}}</div>
+        <div class="cs-phase-desc">{{PHASE1_DESC}}</div>
         <div class="cs-phase-tools">
-          <a href="/services/growth-marketing" class="cs-phase-tool">Growth &amp; Lifecycle →</a>
+          <a href="{{PHASE1_SERVICE_HREF}}" class="cs-phase-tool">{{PHASE1_SERVICE_LABEL}} →</a>
         </div>
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">02</div>
-        <div class="cs-phase-title">Pricing &amp; Packaging Strategy</div>
-        <div class="cs-phase-desc">Anchored pricing to annual plans over monthly, reframing the value conversation from monthly cost to annual ROI — the foundation for the annual-first billing that now drives 79% of subscriptions.</div>
+        <div class="cs-phase-title">{{PHASE2_TITLE}}</div>
+        <div class="cs-phase-desc">{{PHASE2_DESC}}</div>
         <div class="cs-phase-tools">
-          <a href="/services/go-to-market" class="cs-phase-tool">Go-to-Market Strategy →</a>
+          <a href="{{PHASE2_SERVICE_HREF}}" class="cs-phase-tool">{{PHASE2_SERVICE_LABEL}} →</a>
         </div>
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">03</div>
-        <div class="cs-phase-title">Content Strategy Framework</div>
-        <div class="cs-phase-desc">Developed content pillars, channel strategy, and a 90-day editorial calendar designed to drive applications, plus the campaign playbook connecting content to conversion at every stage.</div>
+        <div class="cs-phase-title">{{PHASE3_TITLE}}</div>
+        <div class="cs-phase-desc">{{PHASE3_DESC}}</div>
         <div class="cs-phase-tools">
-          <a href="/services/content-creator-marketing" class="cs-phase-tool">Content &amp; Creators →</a>
+          <a href="{{PHASE3_SERVICE_HREF}}" class="cs-phase-tool">{{PHASE3_SERVICE_LABEL}} →</a>
         </div>
       </div>
       <div class="cs-phase-card">
         <div class="cs-phase-num">04</div>
-        <div class="cs-phase-title">Referral Program Design</div>
-        <div class="cs-phase-desc">Ran competitive analysis across 12 platforms, then designed a tiered referral program with Rewardful integration, automation workflows, and a phased rollout to turn members into an organic acquisition channel.</div>
+        <div class="cs-phase-title">{{PHASE4_TITLE}}</div>
+        <div class="cs-phase-desc">{{PHASE4_DESC}}</div>
         <div class="cs-phase-tools">
-          <a href="/services/integrated-marketing" class="cs-phase-tool">Integrated Marketing →</a>
+          <a href="{{PHASE4_SERVICE_HREF}}" class="cs-phase-tool">{{PHASE4_SERVICE_LABEL}} →</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ RESULTS — CS21-CS22 ═══ -->
+<!-- ═══ RESULTS ═══ -->
 <section class="cs-results section">
   <div class="cs-results-inner">
     <span class="eyebrow">The Results</span>
-    <h2>The Numbers Tell the Story</h2>
+    <h2>{{RESULTS_HEADLINE}}</h2>
 
     <div class="cs-result-row">
-      <div class="cs-result-row-num" data-target="4" data-prefix="~" data-suffix="x">~0x</div>
+      <div class="cs-result-row-num" data-target="{{RESULT1_NUM}}" data-prefix="{{RESULT1_PREFIX}}" data-suffix="{{RESULT1_SUFFIX}}"><span class="accent">{{RESULT1_PREFIX}}</span>0{{RESULT1_SUFFIX}}</div>
       <div>
-        <div class="cs-result-label">Active Subscription Growth</div>
-        <div class="cs-result-desc">Active subscriptions grew ~4x in three months as conversion optimization, annual pricing strategy, and content-driven demand generation compounded into accelerating growth.</div>
+        <div class="cs-result-label">{{RESULT1_LABEL}}</div>
+        <div class="cs-result-desc">{{RESULT1_DESC}}</div>
       </div>
     </div>
     <div class="cs-result-row">
-      <div class="cs-result-row-num" data-target="79" data-prefix="" data-suffix="%">0%</div>
+      <div class="cs-result-row-num" data-target="{{RESULT2_NUM}}" data-prefix="{{RESULT2_PREFIX}}" data-suffix="{{RESULT2_SUFFIX}}"><span class="accent">{{RESULT2_PREFIX}}</span>0{{RESULT2_SUFFIX}}</div>
       <div>
-        <div class="cs-result-label">Annual Plan Adoption</div>
-        <div class="cs-result-desc">After implementing the annual-first pricing recommendation, 79% of active subscribers chose annual plans — improving revenue predictability and reducing churn exposure.</div>
+        <div class="cs-result-label">{{RESULT2_LABEL}}</div>
+        <div class="cs-result-desc">{{RESULT2_DESC}}</div>
       </div>
     </div>
     <div class="cs-result-row">
-      <div class="cs-result-row-num" data-target="58" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div class="cs-result-row-num" data-target="{{RESULT3_NUM}}" data-prefix="{{RESULT3_PREFIX}}" data-suffix="{{RESULT3_SUFFIX}}"><span class="accent">{{RESULT3_PREFIX}}</span>0{{RESULT3_SUFFIX}}</div>
       <div>
-        <div class="cs-result-label">Application Volume Growth</div>
-        <div class="cs-result-desc">Applications per cohort grew 58% as the content strategy and improved positioning began driving top-of-funnel demand.</div>
+        <div class="cs-result-label">{{RESULT3_LABEL}}</div>
+        <div class="cs-result-desc">{{RESULT3_DESC}}</div>
       </div>
     </div>
     <div class="cs-result-row">
-      <div class="cs-result-row-num" data-target="18" data-prefix="+" data-suffix="%"><span class="accent">+</span>0%</div>
+      <div class="cs-result-row-num" data-target="{{RESULT4_NUM}}" data-prefix="{{RESULT4_PREFIX}}" data-suffix="{{RESULT4_SUFFIX}}"><span class="accent">{{RESULT4_PREFIX}}</span>0{{RESULT4_SUFFIX}}</div>
       <div>
-        <div class="cs-result-label">Conversion Rate Increase</div>
-        <div class="cs-result-desc">Approved-to-paid conversion rose 18% even after eliminating free trials entirely — pre-conversion nurture and value framing replaced the trial safety net.</div>
+        <div class="cs-result-label">{{RESULT4_LABEL}}</div>
+        <div class="cs-result-desc">{{RESULT4_DESC}}</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ IMPACT — CS23-CS25 ═══ -->
+<!-- ═══ IMPACT ═══ -->
 <section class="cs-impact-v2">
   <div class="cs-impact-v2-inner">
     <span class="eyebrow">The Impact</span>
-    <h2>From Beta to Business</h2>
+    <h2>{{IMPACT_HEADLINE}}</h2>
 
     <div class="cs-impact-v2-card">
-      <div class="cs-impact-icon">↗</div>
-      <p class="cs-impact-text">The shift to annual-first billing changed the business model. Arena moved from churn-vulnerable monthly subscriptions to predictable annual revenue, with every deliverable shipped with step-by-step instructions so the team could execute independently from day one.</p>
+      <div class="cs-impact-icon">{{IMPACT_ICON}}</div>
+      <p class="cs-impact-text">{{IMPACT_TEXT}}</p>
     </div>
 
-    <!-- STAGING NOTE: testimonial folded in here (no native quote slot in v2.0 template). Move/cut per David. -->
-    <blockquote class="cs-impact-quote">
-      &ldquo;The work you did was eye-opening and truly helped us re-evaluate our strategy. The results have been real and fast.&rdquo;
-      <cite>Parul Khosla, Co-Founder, Arena</cite>
-    </blockquote>
-
     <div class="cs-caps-grid" id="csCapsGrid">
-      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
-      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
-      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
-      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
+      <a href="{{CAP1_HREF}}" class="cs-cap-chip">{{CAP1_LABEL}}</a>
+      <a href="{{CAP2_HREF}}" class="cs-cap-chip">{{CAP2_LABEL}}</a>
+      <a href="{{CAP3_HREF}}" class="cs-cap-chip">{{CAP3_LABEL}}</a>
+      <a href="{{CAP4_HREF}}" class="cs-cap-chip">{{CAP4_LABEL}}</a>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
+<RelatedIndustry items={[{ label: '{{RELATED_INDUSTRY_LABEL}}', href: '{{RELATED_INDUSTRY_HREF}}' }]} />
 <FinalCTA />
 
   <Footer slot="footer" />
@@ -304,7 +323,7 @@ import FinalCTA from '@/components/FinalCTA.astro';
     '.cs-challenge-v2 .eyebrow, .cs-challenge-v2 h2, .cs-fly-card, .cs-mandate-drop, ' +
     '.cs-approach .eyebrow, .cs-approach h2, .cs-approach-insight, .cs-approach-grid .cs-phase-card, ' +
     '.cs-results .eyebrow, .cs-results h2, .cs-result-row, ' +
-    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card, .cs-impact-quote'
+    '.cs-impact-v2 .eyebrow, .cs-impact-v2 h2, .cs-impact-v2-card'
   ).forEach(el => obs.observe(el));
 
   // Stats auto-play drop-in
@@ -355,7 +374,7 @@ import FinalCTA from '@/components/FinalCTA.astro';
             const prefix = el.dataset.prefix || '';
             const suffix = el.dataset.suffix || '';
             const isFloat = target % 1 !== 0;
-            const accentHtml = prefix === '+' ? '<span class="accent">+</span>' : '';
+            const accentHtml = prefix ? '<span class="accent">' + prefix + '</span>' : '';
             const duration = 2000;
             const start = performance.now();
             function update(now) {
@@ -363,7 +382,7 @@ import FinalCTA from '@/components/FinalCTA.astro';
               const progress = Math.min(elapsed / duration, 1);
               const eased = 1 - Math.pow(1 - progress, 3);
               const current = isFloat ? (target * eased).toFixed(1) : Math.round(target * eased);
-              el.innerHTML = accentHtml + (prefix === '+' ? '' : prefix) + current + suffix;
+              el.innerHTML = accentHtml + current + suffix;
               if (progress < 1) requestAnimationFrame(update);
             }
             requestAnimationFrame(update);
