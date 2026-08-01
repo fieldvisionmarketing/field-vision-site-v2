@@ -1,0 +1,32 @@
+---
+/**
+ * CaseStudyTestimonial — canonical standout testimonial unit for case study pages.
+ * Reuses the .cs-testimonial styles in global.css (dark ink card, lime offset
+ * shadow, large quote, circular photo). Drop it into the Impact section (or
+ * anywhere) when David asks for a testimonial on a case study page.
+ *
+ * Props:
+ *   quote    — the testimonial text (no surrounding quotation marks; the card adds a mark)
+ *   name     — person's name
+ *   title    — role + company (e.g. "Co-Founder, Arena")
+ *   image    — path to a square headshot in /public (e.g. "/testimonials/parul-khosla.jpg")
+ *   imageAlt — optional alt text (defaults to name)
+ */
+const { quote, name, title, image, imageAlt } = Astro.props;
+---
+
+<figure class="cs-testimonial">
+  <div class="cs-testimonial-mark" aria-hidden="true">&ldquo;</div>
+  <blockquote class="cs-testimonial-quote">{quote}</blockquote>
+  <figcaption class="cs-testimonial-attr">
+    {image && (
+      <div class="cs-testimonial-photo">
+        <img src={image} alt={imageAlt || name} width="68" height="68" loading="lazy" />
+      </div>
+    )}
+    <div>
+      <div class="cs-testimonial-name">{name}</div>
+      <div class="cs-testimonial-role">{title}</div>
+    </div>
+  </figcaption>
+</figure>

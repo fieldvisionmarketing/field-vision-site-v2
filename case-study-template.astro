@@ -34,6 +34,8 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import FinalCTA from '@/components/FinalCTA.astro';
 import RelatedIndustry from '@/components/RelatedIndustry.astro';
+// Optional: standard featured testimonial unit. Include only when there is a client quote.
+import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
 ---
 
 <BaseLayout
@@ -221,6 +223,15 @@ import RelatedIndustry from '@/components/RelatedIndustry.astro';
       <div class="cs-impact-icon">{{IMPACT_ICON}}</div>
       <p class="cs-impact-text">{{IMPACT_TEXT}}</p>
     </div>
+
+    <!-- STANDARD TESTIMONIAL UNIT (optional) — include when there is a client quote.
+         Headshot is a square image in /public/testimonials/. Remove this block if none. -->
+    <CaseStudyTestimonial
+      quote="{{TESTIMONIAL_QUOTE}}"
+      name="{{TESTIMONIAL_NAME}}"
+      title="{{TESTIMONIAL_TITLE}}"
+      image="/testimonials/{{TESTIMONIAL_IMAGE_FILE}}"
+    />
 
     <div class="cs-caps-grid" id="csCapsGrid">
       <a href="{{CAP1_HREF}}" class="cs-cap-chip">{{CAP1_LABEL}}</a>

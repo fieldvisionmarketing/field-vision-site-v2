@@ -8,6 +8,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import FinalCTA from '@/components/FinalCTA.astro';
+import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
 ---
 
 <BaseLayout
@@ -198,11 +199,12 @@ import FinalCTA from '@/components/FinalCTA.astro';
       <p class="cs-impact-text">The shift to annual-first billing changed the business model. Arena moved from churn-vulnerable monthly subscriptions to predictable annual revenue, with every deliverable shipped with step-by-step instructions so the team could execute independently from day one.</p>
     </div>
 
-    <!-- STAGING NOTE: testimonial folded in here (no native quote slot in v2.0 template). Move/cut per David. -->
-    <blockquote class="cs-impact-quote">
-      &ldquo;The work you did was eye-opening and truly helped us re-evaluate our strategy. The results have been real and fast.&rdquo;
-      <cite>Parul Khosla, Co-Founder, Arena</cite>
-    </blockquote>
+    <CaseStudyTestimonial
+      quote="The work you did was eye-opening and truly helped us re-evaluate our strategy. The results have been real and fast."
+      name="Parul Khosla"
+      title="Co-Founder, Arena"
+      image="/testimonials/parul-khosla.jpg"
+    />
 
     <div class="cs-caps-grid" id="csCapsGrid">
       <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
