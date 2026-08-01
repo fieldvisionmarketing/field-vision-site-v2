@@ -4,6 +4,7 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import FinalCTA from '@/components/FinalCTA.astro';
 import RelatedIndustry from '@/components/RelatedIndustry.astro';
+import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
 ---
 
 <BaseLayout
@@ -200,12 +201,12 @@ import RelatedIndustry from '@/components/RelatedIndustry.astro';
       </p>
     </div>
 
-    <div class="cs-caps-grid" id="csCapsGrid">
-      <a href="/services/go-to-market" class="cs-cap-chip">Go-to-Market Strategy</a>
-      <a href="/services/integrated-marketing" class="cs-cap-chip">Integrated Marketing</a>
-      <a href="/services/content-creator-marketing" class="cs-cap-chip">Content &amp; Creators</a>
-      <a href="/services/growth-marketing" class="cs-cap-chip">Growth &amp; Lifecycle</a>
-    </div>
+    <CaseStudyTestimonial
+      quote="David is one of the elite integrated marketers that can tap into both culture as well as traditional marketing discipline to drive outsized success in market. When you get him into idea workshops and planning on how to build a sustainable and differentiated moat for your business, he's one of the best I've ever seen."
+      name="John Koller"
+      title="Former CMO, Twitch"
+      image="https://brand-innovators.com/wp-content/uploads/2024/01/Koller-John-e1769471129407.png"
+    />
   </div>
 </section>
 
