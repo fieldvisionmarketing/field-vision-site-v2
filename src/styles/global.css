@@ -526,9 +526,13 @@ h1, h2, h3 {
    card with a lime offset shadow so it pops on light sections (e.g. the
    Impact section's warm-gray bg). Add via <CaseStudyTestimonial /> when David
    asks for a testimonial on a case study page. */
+.cs-testimonial-band {
+  background: var(--warm-gray);
+  padding: 76px 24px;
+}
 .cs-testimonial {
   max-width: 780px;
-  margin: 52px auto 0;
+  margin: 0 auto;
   background: var(--ink);
   border: 4px solid var(--ink);
   box-shadow: 12px 12px 0 var(--green-lt);

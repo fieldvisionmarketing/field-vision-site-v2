@@ -102,6 +102,18 @@ import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
   </div>
 </section>
 
+<!-- ═══ TESTIMONIAL (optional) — standard featured testimonial unit.
+     Include when there is a client quote; remove this whole section if none.
+     Sits right before Challenge, after Stats and the Feature Video. ═══ -->
+<section class="cs-testimonial-band">
+  <CaseStudyTestimonial
+    quote="{{TESTIMONIAL_QUOTE}}"
+    name="{{TESTIMONIAL_NAME}}"
+    title="{{TESTIMONIAL_TITLE}}"
+    image="/testimonials/{{TESTIMONIAL_IMAGE_FILE}}"
+  />
+</section>
+
 <!-- ═══ CHALLENGE ═══ -->
 <section class="cs-challenge-v2">
   <div class="cs-challenge-v2-inner">
@@ -223,15 +235,6 @@ import CaseStudyTestimonial from '@/components/CaseStudyTestimonial.astro';
       <div class="cs-impact-icon">{{IMPACT_ICON}}</div>
       <p class="cs-impact-text">{{IMPACT_TEXT}}</p>
     </div>
-
-    <!-- STANDARD TESTIMONIAL UNIT (optional) — include when there is a client quote.
-         Headshot is a square image in /public/testimonials/. Remove this block if none. -->
-    <CaseStudyTestimonial
-      quote="{{TESTIMONIAL_QUOTE}}"
-      name="{{TESTIMONIAL_NAME}}"
-      title="{{TESTIMONIAL_TITLE}}"
-      image="/testimonials/{{TESTIMONIAL_IMAGE_FILE}}"
-    />
   </div>
 </section>
 
