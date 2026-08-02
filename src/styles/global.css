@@ -12,7 +12,7 @@
    R5  TEXT COLORS:  --ink (headings), --muted (body), --green-dk (labels).
    R6  CARD LINKS:   Archivo 11px uppercase, 4px top-border, arrow on hover.
    R7  HOVER:        Cards = lift (-2px, shadow +2px). Text = green-dk.
-   R8  SECTION HDR:  Eyebrow (Archivo 13px, normal case, no bar) + Title (Anton).
+   R8  SECTION HDR:  Eyebrow (Archivo 13px, UPPERCASE, no bar) + Title (Anton).
    R9  BACKGROUNDS:  white ↔ warm-gray alternate. Cream = bookends. Dark = testimonials/footer.
    R10 HIGHLIGHTS:   Rotated chips only. Max 2 per headline.
    R11 HOVER RULE:   Only clickable cards animate on hover. Non-clickable = no transition.
@@ -24,7 +24,7 @@
    R17 SCROLL REVEAL: Sections fade+slide in via IntersectionObserver. Chevron pulses below Trusted By bar.
    R18 FULL ROWS:    Card grids must fill every row. No orphan cards. Use column spans or split rows.
    R19 NO ORPHAN PUNCT: Trailing punctuation (?!.) must be INSIDE the highlight chip span, never after it.
-   R20 EYEBROWS:     Archivo 13px, weight 600, normal casing, NO leading bar. Light bg = --ink (#213621). Dark bg = --offwhite (#efead3).
+   R20 EYEBROWS:     Archivo 13px, weight 600, UPPERCASE (letter-spacing 0.12em), NO leading bar. Light bg = --ink (#213621). Dark bg = --offwhite (#efead3).
    ══════════════════════════════════════════ */
 
 :root {
@@ -102,14 +102,14 @@ h1, h2, h3 {
 .section-eyebrow {
   font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px; font-weight: 600;
-  text-transform: none; letter-spacing: 0.01em;
+  text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--ink); margin-bottom: 12px;
   display: block;
 }
 .eyebrow {
   font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px; font-weight: 600;
-  text-transform: none; letter-spacing: 0.01em;
+  text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--ink); margin-bottom: 12px;
   display: block;
 }
@@ -256,7 +256,7 @@ h1, h2, h3 {
 .label-eyebrow {
   font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
   font-size: clamp(11px, 1.2vw, 15px); font-weight: 600;
-  text-transform: none; letter-spacing: 0.01em;
+  text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--green-dk); margin-bottom: 4px;
 }
 .label-service {
