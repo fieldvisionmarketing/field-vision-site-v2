@@ -10,9 +10,9 @@
    R3  CARD TYPES:   Dark-header = actionable. Cream-header = informational.
    R4  PADDING:      Header/body: 20px 24px. Footer: 14px 24px.
    R5  TEXT COLORS:  --ink (headings), --muted (body), --green-dk (labels).
-   R6  CARD LINKS:   JBM 11px uppercase, 4px top-border, arrow on hover.
+   R6  CARD LINKS:   Archivo 11px uppercase, 4px top-border, arrow on hover.
    R7  HOVER:        Cards = lift (-2px, shadow +2px). Text = green-dk.
-   R8  SECTION HDR:  Eyebrow (Roboto 13px, normal case, no bar) + Title (Anton).
+   R8  SECTION HDR:  Eyebrow (Archivo 13px, normal case, no bar) + Title (Anton).
    R9  BACKGROUNDS:  white ↔ warm-gray alternate. Cream = bookends. Dark = testimonials/footer.
    R10 HIGHLIGHTS:   Rotated chips only. Max 2 per headline.
    R11 HOVER RULE:   Only clickable cards animate on hover. Non-clickable = no transition.
@@ -24,7 +24,7 @@
    R17 SCROLL REVEAL: Sections fade+slide in via IntersectionObserver. Chevron pulses below Trusted By bar.
    R18 FULL ROWS:    Card grids must fill every row. No orphan cards. Use column spans or split rows.
    R19 NO ORPHAN PUNCT: Trailing punctuation (?!.) must be INSIDE the highlight chip span, never after it.
-   R20 EYEBROWS:     Roboto 13px, weight 600, normal casing, NO leading bar. Light bg = --ink (#213621). Dark bg = --offwhite (#efead3).
+   R20 EYEBROWS:     Archivo 13px, weight 600, normal casing, NO leading bar. Light bg = --ink (#213621). Dark bg = --offwhite (#efead3).
    ══════════════════════════════════════════ */
 
 :root {
@@ -100,14 +100,14 @@ h1, h2, h3 {
 
 .section-header { margin-bottom: 48px; }
 .section-eyebrow {
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px; font-weight: 600;
   text-transform: none; letter-spacing: 0.01em;
   color: var(--ink); margin-bottom: 12px;
   display: block;
 }
 .eyebrow {
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px; font-weight: 600;
   text-transform: none; letter-spacing: 0.01em;
   color: var(--ink); margin-bottom: 12px;
@@ -254,7 +254,7 @@ h1, h2, h3 {
   position: absolute; top: clamp(80px, 9vh, 100px); left: 24px; z-index: 2;
 }
 .label-eyebrow {
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
   font-size: clamp(11px, 1.2vw, 15px); font-weight: 600;
   text-transform: none; letter-spacing: 0.01em;
   color: var(--green-dk); margin-bottom: 4px;
@@ -340,7 +340,7 @@ h1, h2, h3 {
   display: flex; align-items: flex-start; gap: 16px;
 }
 .persona-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 9px; text-transform: uppercase;
   letter-spacing: 0.12em; color: var(--green-dk);
   margin-bottom: 6px;
@@ -352,7 +352,7 @@ h1, h2, h3 {
 }
 .persona-bottom { background: var(--paper); padding: 20px 24px; }
 .persona-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 11px; text-transform: uppercase;
   letter-spacing: 0.1em; color: var(--ink);
   border-top: 4px solid var(--ink);
@@ -411,7 +411,7 @@ h1, h2, h3 {
   flex: 1; margin-bottom: 16px;
 }
 .service-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 11px; text-transform: uppercase;
   letter-spacing: 0.08em; color: var(--ink);
   text-decoration: none; font-weight: 700;
@@ -420,7 +420,7 @@ h1, h2, h3 {
 }
 .service-link:hover { color: var(--green-dk); }
 .service-new-badge {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 8px; text-transform: uppercase;
   letter-spacing: 0.1em;
   background: var(--green-lt); color: var(--ink);
@@ -516,7 +516,7 @@ h1, h2, h3 {
   letter-spacing: 0.04em; color: var(--paper);
 }
 .testimonial-role {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 9px; text-transform: uppercase;
   letter-spacing: 0.08em; color: var(--green-dk);
 }
@@ -575,7 +575,7 @@ h1, h2, h3 {
   line-height: 1.1;
 }
 .cs-testimonial-role {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 11px; text-transform: uppercase;
   letter-spacing: 0.08em; color: var(--green-lt);
   margin-top: 5px;
@@ -671,7 +671,7 @@ h1, h2, h3 {
   flex: 1; margin-bottom: 16px;
 }
 .product-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 11px; text-transform: uppercase;
   letter-spacing: 0.08em; color: var(--ink);
   text-decoration: none; font-weight: 700;
@@ -799,12 +799,12 @@ h1, h2, h3 {
   max-width: 300px; margin-bottom: 8px;
 }
 .footer-brand .footer-location {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 10px; text-transform: uppercase;
   letter-spacing: 0.08em; color: rgba(255,255,255,0.35);
 }
 .footer-col h4 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 9px; text-transform: uppercase;
   letter-spacing: 0.12em; color: var(--green-dk);
   margin-bottom: 12px;
@@ -820,7 +820,7 @@ h1, h2, h3 {
   flex-wrap: wrap; gap: 16px;
 }
 .footer-copy {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 0.06em;
 }
 .footer-legal a {
@@ -973,7 +973,7 @@ h1, h2, h3 {
   margin-bottom: 16px;
 }
 .svclp-card-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1136,7 +1136,7 @@ h1, h2, h3 {
 }
 .svcpg-sidebar-row:last-child { border-bottom: none; }
 .svcpg-sidebar-key {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1449,7 +1449,7 @@ h1, h2, h3 {
 .svcpg-faq-item summary::after {
   content: '+';
   font-size: 1.4rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   transition: transform 0.2s;
 }
 .svcpg-faq-item[open] summary::after {
@@ -1532,7 +1532,7 @@ h1, h2, h3 {
 }
 .scroll-chevron {
   display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 24px;
   color: var(--muted);
   animation: bounce-down 1.8s ease-in-out infinite;
@@ -1646,7 +1646,7 @@ h1, h2, h3 {
   margin-bottom: 6px;
 }
 .abt-cred-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1713,7 +1713,7 @@ h1, h2, h3 {
   color: var(--ink);
 }
 .abt-sign-title {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.78rem;
   color: var(--ink);
   text-transform: uppercase;
@@ -1778,7 +1778,7 @@ h1, h2, h3 {
   padding-bottom: 40px;
 }
 .abt-tl-period {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1801,7 +1801,7 @@ h1, h2, h3 {
   display: block;
 }
 .abt-tl-loc {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.78rem;
   color: var(--muted);
   display: block;
@@ -1858,7 +1858,7 @@ h1, h2, h3 {
   border-bottom: 4px solid var(--ink);
 }
 .abt-teach-card-header span {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2010,7 +2010,7 @@ h1, h2, h3 {
 .abt-press-card-date {
   display: block;
   margin-top: 6px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2029,7 +2029,7 @@ h1, h2, h3 {
   margin-bottom: 12px;
 }
 .abt-press-card-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2095,7 +2095,7 @@ h1, h2, h3 {
   border-top: 4px solid var(--ink);
 }
 .abt-svc-card-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2149,7 +2149,7 @@ h1, h2, h3 {
 .faq-canon-item summary::after {
   content: '+';
   font-size: 1.4rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   transition: transform 0.2s;
 }
 .faq-canon-item[open] summary::after {
@@ -2305,7 +2305,7 @@ h1, h2, h3 {
   border-bottom: 4px solid var(--ink);
 }
 .cslp-card-header span {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2343,7 +2343,7 @@ h1, h2, h3 {
   gap: 8px;
 }
 .cslp-tag {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2354,7 +2354,7 @@ h1, h2, h3 {
   border: 2px solid var(--ink);
 }
 .cslp-card-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2452,7 +2452,7 @@ h1, h2, h3 {
   gap: 2px;
 }
 .cs-hero-meta-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2493,7 +2493,7 @@ h1, h2, h3 {
   margin-bottom: 4px;
 }
 .cs-stat-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2637,7 +2637,7 @@ h1, h2, h3 {
   gap: 6px;
 }
 .cs-phase-tool {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2676,7 +2676,7 @@ h1, h2, h3 {
   gap: 32px;
 }
 .cs-ba-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2739,7 +2739,7 @@ h1, h2, h3 {
   margin-bottom: 4px;
 }
 .cs-result-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2823,7 +2823,7 @@ h1, h2, h3 {
   margin-top: 20px;
 }
 .cs-service-pill {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2866,7 +2866,7 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   color: var(--offwhite);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2974,7 +2974,7 @@ h1, h2, h3 {
   color: var(--ink);
 }
 .gdlp-card-header span {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -3017,7 +3017,7 @@ h1, h2, h3 {
   flex-wrap: wrap;
 }
 .gdlp-tag {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -3027,7 +3027,7 @@ h1, h2, h3 {
   color: var(--ink);
 }
 .gdlp-card-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -3137,7 +3137,7 @@ h1, h2, h3 {
     var(--green-lt) 0%, var(--green-lt) 34%,
     #eaffc2 44%, #ffffff 50%, #eaffc2 56%,
     var(--green-lt) 66%, var(--green-lt) 100%);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
@@ -3248,7 +3248,7 @@ h1, h2, h3 {
   text-shadow: 0 0 40px rgba(165,219,93,0.3);
 }
 .cs-stat-drop-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -3500,7 +3500,7 @@ h1, h2, h3 {
   max-width: 800px; margin: 0 auto;
 }
 .cs-cap-chip {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Archivo', sans-serif;
   font-size: 12px; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.08em;
   color: var(--ink);
