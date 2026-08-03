@@ -14,7 +14,7 @@
    R7  HOVER:        Cards = lift (-2px, shadow +2px). Text = green-dk.
    R8  SECTION HDR:  Eyebrow (Archivo 13px, UPPERCASE, no bar) + Title (Anton).
    R9  BACKGROUNDS:  white ↔ warm-gray alternate. Cream = bookends. Dark = testimonials/footer.
-   R10 HIGHLIGHTS:   Rotated chips only. Max 2 per headline.
+   R10 HIGHLIGHTS:   Rotated chips only. Max 2 per headline. NEVER a border. Fill = cream OR dark green ONLY, never action/lime green (that is reserved for CTAs/links). Dark-green chip = --ink fill + --offwhite text + lime (--green-lt) offset shadow; flips to cream fill on dark (--ink) backgrounds.
    R11 HOVER RULE:   Only clickable cards animate on hover. Non-clickable = no transition.
    R12 CLICK AREA:   Clickable cards are fully clickable — whole card is an <a>, not just the CTA.
    R13 HOVER GLOW:   Clickable cards glow green on hover to signal interactivity.
@@ -63,12 +63,15 @@ h1, h2, h3 {
 }
 
 /* ── Highlight Chips (R10) ── */
+/* Dark-green chip (default). Never action green. No border.
+   Shadow uses lime as a decorative pop (not dark green / not black). */
 .hl-green {
-  background: var(--green-lt);
+  background: var(--ink);
+  color: var(--offwhite);
   padding: 2px 16px 4px;
   display: inline-block;
   transform: rotate(-1.2deg);
-  box-shadow: 6px 6px 0 var(--ink);
+  box-shadow: 6px 6px 0 var(--green-lt);
   margin: 4px 0;
   line-height: 1.05;
 }
@@ -82,11 +85,19 @@ h1, h2, h3 {
   margin: 4px 0;
   line-height: 1.05;
 }
+/* On dark (ink) backgrounds a dark-green chip would vanish — flip to cream.
+   Covers .section-dark contexts and the inline-dark About "Featured In" band. */
+.section-dark .hl-green,
+.abt-press .hl-green {
+  background: var(--offwhite);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 var(--green-lt);
+}
 /* Legacy highlight bar — fallback */
 .highlight { position: relative; display: inline-block; }
 .highlight::before {
   content: ''; position: absolute; left: -6px; right: -6px; bottom: 6px; height: 28%;
-  background: var(--green-lt); z-index: -1; transform: rotate(-2deg);
+  background: var(--offwhite); z-index: -1; transform: rotate(-2deg);
 }
 
 /* ── Reveal Animation ── */
@@ -3108,12 +3119,12 @@ h1, h2, h3 {
   transform: translateY(0) scale(1);
 }
 .cs-hero-v2-sticky h1 .highlight-chip {
-  background: var(--green-lt);
+  background: var(--ink);
+  color: var(--offwhite);
   padding: 0 14px;
   display: inline-block;
   transform: rotate(-1deg);
-  box-shadow: 6px 6px 0 var(--ink);
-  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--green-lt);
 }
 .cs-hero-v2-summary {
   font-family: 'Satoshi', sans-serif;
