@@ -14,7 +14,7 @@
    R7  HOVER:        Cards = lift (-2px, shadow +2px). Text = green-dk.
    R8  SECTION HDR:  Eyebrow (Archivo 13px, UPPERCASE, no bar) + Title (Anton).
    R9  BACKGROUNDS:  white ↔ warm-gray alternate. Cream = bookends. Dark = testimonials/footer.
-   R10 HIGHLIGHTS:   Rotated chips only. Max 2 per headline. NEVER a border. Fill = cream OR dark green ONLY, never action/lime green (that is reserved for CTAs/links). Dark-green chip = --ink fill + --offwhite text + lime (--green-lt) offset shadow; flips to cream fill on dark (--ink) backgrounds.
+   R10 HIGHLIGHTS:   Rotated chips only. Max 2 per headline. NEVER a border. Never action/lime green fill (reserved for CTAs/links). Chip color follows the SECTION BG: white/warm-gray -> CREAM chip (--offwhite fill, --ink text, --ink shadow); cream (--offwhite) bg -> DARK-GREEN chip (--ink fill, --offwhite text, lime shadow); dark (--ink) bg -> CREAM chip with action-green (lime) shadow. Section context drives it, not the .hl- class.
    R11 HOVER RULE:   Only clickable cards animate on hover. Non-clickable = no transition.
    R12 CLICK AREA:   Clickable cards are fully clickable — whole card is an <a>, not just the CTA.
    R13 HOVER GLOW:   Clickable cards glow green on hover to signal interactivity.
@@ -62,38 +62,55 @@ h1, h2, h3 {
   color: var(--ink);
 }
 
-/* ── Highlight Chips (R10) ── */
-/* Dark-green chip (default). Never action green. No border.
-   Shadow uses lime as a decorative pop (not dark green / not black). */
-.hl-green {
-  background: var(--ink);
-  color: var(--offwhite);
-  padding: 2px 16px 4px;
-  display: inline-block;
-  transform: rotate(-1.2deg);
-  box-shadow: 6px 6px 0 var(--green-lt);
-  margin: 4px 0;
-  line-height: 1.05;
-}
-.hl-cream {
+/* ── Highlight Chips (R10) ──
+   Chip color is driven by the SECTION BACKGROUND (never a border, never action green):
+     • white / warm-gray bg  → CREAM chip: --offwhite fill, --ink text, --ink shadow   (default, below)
+     • cream (--offwhite) bg  → DARK-GREEN chip: --ink fill, --offwhite text, lime shadow
+     • dark (--ink) bg        → CREAM chip with action-green (lime) shadow
+   The .hl-green / .hl-cream markup class no longer sets the color — the section wins —
+   so chips stay correct no matter which class the markup happens to use. */
+.hl-green, .hl-cream, .cs-hero-v2-sticky h1 .highlight-chip {
   background: var(--offwhite);
   color: var(--ink);
   padding: 2px 16px 4px;
   display: inline-block;
-  transform: rotate(0.8deg);
   box-shadow: 6px 6px 0 var(--ink);
   margin: 4px 0;
   line-height: 1.05;
 }
-/* On dark (ink) backgrounds a dark-green chip would vanish — flip to cream.
-   Covers .section-dark contexts and the inline-dark About "Featured In" band. */
-.section-dark .hl-green,
-.abt-press .hl-green {
+.hl-green { transform: rotate(-1.2deg); }
+.hl-cream { transform: rotate(0.8deg); }
+
+/* Cream (--offwhite) sections → DARK-GREEN chip (lime offset shadow). */
+.final-cta :is(.hl-green, .hl-cream),
+.svclp-hero :is(.hl-green, .hl-cream),
+.svclp-cta :is(.hl-green, .hl-cream),
+.svcpg-hero :is(.hl-green, .hl-cream),
+.svcpg-abct :is(.hl-green, .hl-cream),
+.svcpg-final-cta :is(.hl-green, .hl-cream),
+.blg-hero :is(.hl-green, .hl-cream),
+.gdlp-hero :is(.hl-green, .hl-cream),
+.cslp-hero :is(.hl-green, .hl-cream),
+.cslp-cta :is(.hl-green, .hl-cream),
+.abt-hero :is(.hl-green, .hl-cream),
+.abt-cta :is(.hl-green, .hl-cream),
+.mc-final :is(.hl-green, .hl-cream),
+.lm-final :is(.hl-green, .hl-cream),
+.ff-final :is(.hl-green, .hl-cream) {
+  background: var(--ink);
+  color: var(--offwhite);
+  box-shadow: 6px 6px 0 var(--green-lt);
+}
+
+/* Dark (--ink) sections → CREAM chip with action-green (lime) shadow. */
+.section-dark :is(.hl-green, .hl-cream),
+.abt-press :is(.hl-green, .hl-cream) {
   background: var(--offwhite);
   color: var(--ink);
   box-shadow: 6px 6px 0 var(--green-lt);
 }
-/* Legacy highlight bar — fallback */
+
+/* Legacy highlight bar — fallback (underline swash, not a chip) */
 .highlight { position: relative; display: inline-block; }
 .highlight::before {
   content: ''; position: absolute; left: -6px; right: -6px; bottom: 6px; height: 28%;
@@ -3119,12 +3136,12 @@ h1, h2, h3 {
   transform: translateY(0) scale(1);
 }
 .cs-hero-v2-sticky h1 .highlight-chip {
-  background: var(--ink);
-  color: var(--offwhite);
+  background: var(--offwhite);
+  color: var(--ink);
   padding: 0 14px;
   display: inline-block;
   transform: rotate(-1deg);
-  box-shadow: 6px 6px 0 var(--green-lt);
+  box-shadow: 6px 6px 0 var(--ink);
 }
 .cs-hero-v2-summary {
   font-family: 'Satoshi', sans-serif;
