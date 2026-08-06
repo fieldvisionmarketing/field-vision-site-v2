@@ -184,4 +184,53 @@ const articleSchema = {
     border-radius: 0;
     font-size: 0.95em;
   }
+  .article-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0 40px;
+    font-size: 1rem;
+    line-height: 1.55;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .article-content :global(thead) {
+    background: var(--ink);
+  }
+  .article-content :global(th) {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--offwhite);
+    text-align: left;
+    padding: 13px 16px;
+    font-size: 0.92rem;
+    line-height: 1.2;
+    border-right: 1px solid rgba(239, 234, 211, 0.18);
+  }
+  .article-content :global(td) {
+    padding: 13px 16px;
+    border-top: 1px solid #e4dfcd;
+    border-right: 1px solid #e4dfcd;
+    color: #333;
+    vertical-align: top;
+  }
+  .article-content :global(tbody tr:nth-child(even)) {
+    background: var(--offwhite);
+  }
+  .article-content :global(th:last-child),
+  .article-content :global(td:last-child) {
+    border-right: none;
+  }
+  @media (max-width: 640px) {
+    .article-content :global(table) {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .article-content :global(th),
+    .article-content :global(td) {
+      min-width: 150px;
+    }
+  }
 </style>
