@@ -12,7 +12,6 @@ const receipts = [
 
 <section class="receipts-band">
   <div class="receipts-inner">
-    <div class="section-eyebrow rb-eyebrow">The receipts</div>
     <div class="receipts-grid">
       {receipts.map((r) => (
         <div class="receipt">
@@ -34,10 +33,6 @@ const receipts = [
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 clamp(20px, 5vw, 48px);
-  }
-  .rb-eyebrow {
-    color: var(--green-lt);
-    margin-bottom: 28px;
   }
   .receipts-grid {
     display: grid;

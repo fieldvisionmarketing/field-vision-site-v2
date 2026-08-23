@@ -1,4 +1,6 @@
 ---
+const { eyebrow = true } = Astro.props;
+
 const verticals = [
   { icon: '📱', label: 'Digital Media' },
   { icon: '🎬', label: 'Entertainment' },
@@ -11,7 +13,7 @@ const verticals = [
 
 <section class="verticals section">
   <div class="section-header reveal">
-    <div class="section-eyebrow">Industries</div>
+    {eyebrow && <div class="section-eyebrow">Industries</div>}
     <h2 class="section-title">Where We <span class="hl-green">Play</span></h2>
   </div>
   <div class="verticals-grid">

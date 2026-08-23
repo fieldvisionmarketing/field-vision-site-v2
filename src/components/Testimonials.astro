@@ -1,4 +1,6 @@
 ---
+const { eyebrow = true } = Astro.props;
+
 const testimonials = [
   {
     quote: "Working with Field Vision has been a game-changer for MONTREALITY. They helped us revamp our media kit into something sharper, more premium, and brand-ready, and also improved our outreach approach with clearer messaging and stronger positioning.",
@@ -33,7 +35,7 @@ const testimonials = [
 
 <section class="testimonials section section-dark">
   <div class="section-header reveal">
-    <div class="section-eyebrow">Testimonials</div>
+    {eyebrow && <div class="section-eyebrow">Testimonials</div>}
     <h2 class="section-title">What Founders <span class="hl-green">Say</span></h2>
   </div>
   <div class="testimonials-grid">
