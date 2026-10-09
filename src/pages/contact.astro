@@ -18,10 +18,18 @@ import Footer from '@/components/Footer.astro';
         <!-- Contact Form -->
         <div class="contact-form-wrap">
           <h3>Let's Talk</h3>
-      <form action="https://formsubmit.co/hampian@fieldvisiongroup.com" method="POST" class="contact-form">
-        <input type="hidden" name="_subject" value="New Lead from fieldvisiongroup.com" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://fieldvisiongroup.com/thank-you/" />
+      <form
+        name="contact"
+        method="POST"
+        action="/thank-you/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        class="contact-form"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hp-field" aria-hidden="true">
+          <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </p>
             <input type="text" name="name" placeholder="Your name" required class="form-input" />
             <input type="email" name="email" placeholder="Work email" required class="form-input" />
             <input type="text" name="company" placeholder="Company" class="form-input" />
@@ -41,6 +49,11 @@ import Footer from '@/components/Footer.astro';
 </BaseLayout>
 
 <style>
+  /* Honeypot: hidden from humans, filled by bots. Netlify discards those. */
+  .hp-field {
+    display: none;
+  }
+
   .contact-page {
     padding: 140px 24px 80px;
   }

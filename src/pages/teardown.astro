@@ -222,7 +222,7 @@ const ldJson = JSON.stringify({
           <input type="text" name="website" placeholder="Company website" autocomplete="url" class="td-input" />
           <textarea name="note" rows="3" placeholder="Anything we should know? (optional)" class="td-input td-textarea"></textarea>
           <!-- honeypot -->
-          <input type="text" name="_honey" class="td-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="text" name="bot-field" class="td-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <p class="td-error" id="tdError" hidden>Please add your name and a valid work email.</p>
           <button type="submit" class="btn-brutal td-cta" id="tdSubmit">Claim my teardown &rarr;</button>
         </form>
@@ -256,14 +256,22 @@ const ldJson = JSON.stringify({
 
     <div class="td-affirm" id="tdAffirm" aria-hidden="true"></div>
 
-    <!-- Fallback form: guarantees email delivery if AJAX fails. Submits to the same proven endpoint as the contact form. -->
-    <form id="tdFallback" action="https://formsubmit.co/hampian@fieldvisiongroup.com" method="POST" class="td-honey">
-      <input type="hidden" name="_subject" value="New Teardown Lead from fieldvisiongroup.com" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_next" value="https://fieldvisiongroup.com/thank-you/" />
+    <!-- Netlify form declaration. Also the fallback post target if the AJAX submit fails. -->
+    <form
+      id="tdFallback"
+      name="teardown"
+      method="POST"
+      action="/thank-you/"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      class="td-honey"
+    >
+      <input type="hidden" name="form-name" value="teardown" />
+      <input type="hidden" name="bot-field" />
       <input type="hidden" name="firstName" /><input type="hidden" name="email" /><input type="hidden" name="website" /><input type="hidden" name="note" />
       <input type="hidden" name="entry_point" /><input type="hidden" name="their_situation" /><input type="hidden" name="industry" /><input type="hidden" name="stage" />
+      <input type="hidden" name="utm_source" /><input type="hidden" name="utm_medium" /><input type="hidden" name="utm_campaign" /><input type="hidden" name="utm_content" /><input type="hidden" name="utm_term" />
+      <input type="hidden" name="landing_page" /><input type="hidden" name="referrer" />
     </form>
   </div>
 
@@ -308,7 +316,7 @@ const ldJson = JSON.stringify({
 
   <script define:vars={{ FLOW, ENTRY_LABELS }}>
     (function () {
-      const ENDPOINT = 'https://formsubmit.co/ajax/hampian@fieldvisiongroup.com';
+      const ENDPOINT = '/';
       const state = { entry: null, opt: null, industry: null, stage: null };
       const STEP_INDEX = { fork: 1, branch: 2, about: 3 };
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -445,7 +453,7 @@ const ldJson = JSON.stringify({
 
       form.addEventListener('submit', async function (e) {
         e.preventDefault();
-        if (form._honey.value) return; // bot trap
+        if (form['bot-field'].value) return; // bot trap
         const firstName = form.firstName.value.trim();
         const email = form.email.value.trim();
         const okEmail = /.+@.+\..+/.test(email);
@@ -456,8 +464,8 @@ const ldJson = JSON.stringify({
 
         const opt = FLOW[state.entry] ? FLOW[state.entry].options.find((o) => o.id === state.opt) : null;
         const payload = {
-          _subject: 'New Teardown Lead from fieldvisiongroup.com',
-          _template: 'table',
+          'form-name': 'teardown',
+          'bot-field': '',
           firstName: firstName,
           email: email,
           website: form.website.value.trim(),
@@ -477,8 +485,8 @@ const ldJson = JSON.stringify({
         try {
           const res = await fetch(ENDPOINT, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(payload),
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(payload).toString(),
           });
           if (!res.ok) throw new Error('bad status ' + res.status);
           fireLead();
@@ -487,10 +495,9 @@ const ldJson = JSON.stringify({
           // Fallback: submit the classic form (guaranteed email, redirects to /thank-you)
           fireLead();
           const fb = document.getElementById('tdFallback');
-          fb.firstName.value = payload.firstName; fb.email.value = payload.email;
-          fb.website.value = payload.website; fb.note.value = payload.note;
-          fb.entry_point.value = payload.entry_point; fb.their_situation.value = payload.their_situation;
-          fb.industry.value = payload.industry; fb.stage.value = payload.stage;
+          Object.keys(payload).forEach(function (k) {
+            if (fb.elements[k]) fb.elements[k].value = payload[k];
+          });
           fb.submit();
         }
       });
