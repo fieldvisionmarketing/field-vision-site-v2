@@ -2,21 +2,24 @@
 const { eyebrow = true } = Astro.props;
 
 const verticals = [
-  { icon: '📱', label: 'Digital Media' },
-  { icon: '🎬', label: 'Entertainment' },
-  { icon: '🎨', label: 'Creator Economy' },
-  { icon: '📺', label: 'Streaming' },
-  { icon: '🎵', label: 'Music' },
-  { icon: '⚽', label: 'Sports' },
+  { icon: '🎵', label: 'Music', href: '/industries/music/' },
+  { icon: '⚽', label: 'Sports', href: '/industries/sports/' },
+  { icon: '🎮', label: 'Gaming' },
+];
+
+const alsoLinks = [
+  { label: 'Streaming & subscription', href: '/industries/streaming/' },
+  { label: 'Entertainment', href: '/industries/entertainment/' },
+  { label: 'Digital media', href: '/industries/digital-media/' },
 ];
 ---
 
-<section class="verticals section">
+<section class="verticals section" id="industries">
   <div class="section-header reveal">
     {eyebrow && <div class="section-eyebrow">Industries</div>}
     <h2 class="section-title">Where We <span class="hl-green">Play</span></h2>
   </div>
-  <div class="verticals-grid">
+  <div class="verticals-grid verticals-grid--three">
     {verticals.map((v, i) => (
       v.href ? (
         <a href={v.href} class={`vertical-tile vertical-tile--link reveal rd${i + 1}`}>
@@ -31,4 +34,5 @@ const verticals = [
       )
     ))}
   </div>
+  <p class="verticals-also reveal">Also: {alsoLinks.map((l, i) => (<>{i > 0 && ' · '}<a href={l.href}>{l.label}</a></>))}</p>
 </section>

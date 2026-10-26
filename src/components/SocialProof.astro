@@ -27,7 +27,7 @@ const brands = [
           {brands.map(b => (
             <span class="sp-brand">
               {(b.logo || b.domain) && (
-                <img src={b.logo || `https://www.google.com/s2/favicons?domain=${b.domain}&sz=128`} alt="" class="sp-logo" />
+                <img src={b.logo || `https://www.google.com/s2/favicons?domain=${b.domain}&sz=128`} alt={`${b.name} logo`} class="sp-logo" />
               )}
               {b.name}
             </span>

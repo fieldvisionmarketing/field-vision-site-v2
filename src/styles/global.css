@@ -467,6 +467,12 @@ h1, h2, h3 {
   padding: 28px 16px; text-align: center;
 }
 
+.verticals-grid--three { grid-template-columns: repeat(3, 1fr); max-width: 900px; margin: 0 auto; }
+a.vertical-tile--link { display: block; text-decoration: none; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+a.vertical-tile--link:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
+.verticals-also { text-align: center; margin-top: 28px; font-size: 15px; color: var(--muted); }
+.verticals-also a { color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 700px) { .verticals-grid.verticals-grid--three { grid-template-columns: 1fr; max-width: 320px; } }
 .vertical-emoji { font-size: 28px; margin-bottom: 10px; display: block; }
 .vertical-name {
   font-family: 'Anton', sans-serif;
