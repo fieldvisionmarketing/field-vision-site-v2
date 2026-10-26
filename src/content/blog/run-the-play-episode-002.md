@@ -4,7 +4,7 @@ description: "Scott McAdams breaks down the behind-the-scenes strategy that made
 category: "Run The Play"
 date: 2025-11-11
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["PlayStation", "PS5", "product launch", "brand partnerships", "podcast", "run the play"]
 ---
 

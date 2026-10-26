@@ -3,7 +3,7 @@ title: "What Is ABCT®? Field Vision's Four-Phase Marketing Growth System"
 description: "ABCT® is Field Vision's end-to-end client engagement framework: four phases that take your marketing from raw inputs to a fully trained, self-sustaining growth system. Here's how it works."
 category: "Growth Strategy"
 date: 2026-04-08
-author: Field Vision
+author: "David Hampian"
 tags:
   - ABCT®
   - framework

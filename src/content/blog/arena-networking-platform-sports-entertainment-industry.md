@@ -3,7 +3,7 @@ title: "The Networking Platform Rewriting the Entertainment Industry"
 description: "Adriene Bueno got 1,000 Arena signups in 7 days. The co-founder of Arena breaks down what it actually takes to build a networking platform inside the sports and entertainment industry."
 category: "Run The Play"
 date: 2026-04-06
-author: "Field Vision"
+author: "David Hampian"
 tags: ["arena", "networking", "sports business", "entrepreneurship", "startup", "podcast", "run the play"]
 ---
 

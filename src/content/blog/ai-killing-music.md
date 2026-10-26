@@ -4,7 +4,7 @@ description: "AI isn't killing music. It's killing cheap, disposable music. Why 
 category: "Culture & Marketing"
 date: 2025-08-08
 updated: 2026-02-23
-author: "Field Vision"
+author: "David Hampian"
 tags: ["AI", "music industry", "creativity", "culture", "authenticity"]
 ---
 

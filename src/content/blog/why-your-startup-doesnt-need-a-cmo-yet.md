@@ -3,7 +3,7 @@ title: "Why Your Startup Doesn't Need a CMO Yet"
 description: "The case for fractional marketing leadership before making a full-time commitment. How to get executive-level strategy at your stage."
 category: "Growth Strategy"
 date: 2025-03-01
-author: "Field Vision"
+author: "David Hampian"
 tags: ["fractional cmo", "startup marketing", "leadership"]
 ---
 

@@ -4,7 +4,7 @@ description: "Field Vision breaks down how Kendrick Lamar turns songs into cultu
 category: "Culture & Marketing"
 date: 2026-02-21
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["kendrick lamar", "culture", "marketing", "artist branding", "music marketing"]
 ---
 

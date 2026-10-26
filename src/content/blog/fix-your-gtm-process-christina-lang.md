@@ -3,7 +3,7 @@ title: "Fix Your GTM Process: Lessons From Twitch, Meta & Mozilla"
 description: "Christina Lang (ex-VP Global Marketing at Mozilla, Twitch, and Meta) breaks down the exact go-to-market process she used to fix cross-functional chaos at some of the biggest platforms in tech."
 category: "Run The Play"
 date: 2026-05-06
-author: "Field Vision"
+author: "David Hampian"
 tags: ["go-to-market", "GTM", "cross-functional", "marketing leadership", "podcast", "run the play", "twitch", "meta", "mozilla"]
 ---
 

@@ -4,7 +4,7 @@ description: "82% of marketers say their content calendar is outdated before the
 category: "Growth Strategy"
 date: 2025-10-06
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["content strategy", "marketing calendar", "reactive content", "growth strategy", "culture"]
 ---
 

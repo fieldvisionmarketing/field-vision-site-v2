@@ -4,7 +4,7 @@ description: "Why narrative-driven content outperforms feature-led marketing. In
 category: "Growth Strategy"
 date: 2025-11-30
 updated: 2026-03-04
-author: "Field Vision"
+author: "David Hampian"
 tags: ["PLOT framework", "marketing budget", "leadership", "finance", "growth strategy"]
 ---
 

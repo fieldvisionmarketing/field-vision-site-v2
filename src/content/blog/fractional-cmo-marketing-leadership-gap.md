@@ -4,7 +4,7 @@ seoTitle: "Marketing Problem or Leadership Gap? | Fractional CMO"
 description: "Most startups add marketing hands when they're missing senior judgment. Here's how to tell a true marketing problem from a leadership gap."
 category: "Growth Strategy"
 date: 2026-06-08
-author: "Field Vision"
+author: "David Hampian"
 ogImage: "https://fieldvisiongroup.com/blog/marketing-leadership-gap-hero.webp"
 tags: ["fractional cmo", "marketing leadership", "startup marketing", "abct framework", "fractional cmo vs full-time", "fractional cmo cost"]
 schemaJson: |

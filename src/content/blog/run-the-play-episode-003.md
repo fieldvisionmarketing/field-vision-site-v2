@@ -4,7 +4,7 @@ description: "Most people daydream about starting their own agency. Shachar Aylo
 category: "Run The Play"
 date: 2025-12-10
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["creative agency", "entrepreneurship", "podcast", "run the play", "big tech"]
 ---
 

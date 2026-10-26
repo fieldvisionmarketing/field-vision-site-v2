@@ -30,11 +30,14 @@ const articleSchema = {
   "description": post.data.description,
   "author": {
     "@type": "Person",
-    "name": post.data.author,
-    "url": "https://www.linkedin.com/in/davidhampian/"
+    "@id": `${siteUrl}/#david-hampian`,
+    "name": "David Hampian",
+    "url": `${siteUrl}/about/`,
+    "sameAs": ["https://www.linkedin.com/in/davidhampian/"]
   },
   "publisher": {
     "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
     "name": "Field Vision Group",
     "url": siteUrl
   },

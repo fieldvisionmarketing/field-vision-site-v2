@@ -3,7 +3,7 @@ title: "Why Your Startup's First Marketing Hire Is Probably Wrong"
 description: "Most startups hire the wrong first marketer. Here's what each funding stage actually needs, and the one interview question that reveals whether a candidate is a builder or a scaler."
 category: "Growth Strategy"
 date: 2026-04-12
-author: "Field Vision"
+author: "David Hampian"
 ogImage: "/blog/hero.png"
 tags: ["first marketing hire startup", "startup marketing", "hiring", "fractional cmo", "growth strategy"]
 ---

@@ -4,7 +4,7 @@ description: "What Super Bowl LX ads teach us about creative effectiveness, bran
 category: "Events"
 date: 2026-02-07
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["super bowl", "tentpole events", "networking", "sports marketing", "bay area", "advertising analysis"]
 ---
 

@@ -3,7 +3,7 @@ title: "Authenticity as Competitive Edge"
 description: "In an AI-saturated content landscape, authentic brand voice is the ultimate competitive advantage. Here's why and how to build it."
 category: "Growth Strategy"
 date: 2026-03-04
-author: "Field Vision"
+author: "David Hampian"
 tags: ["authenticity", "AI content", "content strategy", "startup marketing", "growth"]
 ---
 

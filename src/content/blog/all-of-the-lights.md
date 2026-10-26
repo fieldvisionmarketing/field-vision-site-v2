@@ -4,7 +4,7 @@ description: "What nobody tells you about starting a business: the rejection, th
 category: "Career & Leadership"
 date: 2025-10-22
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["entrepreneurship", "startups", "fractional CMO", "career advice", "Field Vision"]
 ---
 

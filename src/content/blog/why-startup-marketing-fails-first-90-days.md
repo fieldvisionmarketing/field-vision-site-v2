@@ -3,7 +3,7 @@ title: "Why Startup Marketing Fails in the First 90 Days (And the Architecture F
 description: "Most startup marketing failures stem from architecture problems, not execution problems. Learn the four diagnostic questions and 90-day audit framework that separate durable growth engines from expensive false starts."
 category: "Growth Strategy"
 date: 2026-04-20
-author: "Field Vision"
+author: "David Hampian"
 tags: ["startup marketing", "marketing architecture", "retention", "growth strategy", "fractional cmo"]
 ---
 

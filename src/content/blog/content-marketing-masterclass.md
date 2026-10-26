@@ -4,7 +4,7 @@ description: "Most content strategies fail because they treat content as a deliv
 category: "Growth Strategy"
 date: 2025-09-29
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["content marketing", "growth strategy", "BrightonSEO", "content strategy", "startup marketing"]
 ---
 

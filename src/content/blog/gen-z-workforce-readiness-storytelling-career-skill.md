@@ -3,7 +3,7 @@ title: "Gen Z Career Skills: Storytelling Wins"
 description: "Why 94% of companies expect Gen Z skills they never teach. Marta Riggins & Cam Moore reveal how personal storytelling wins jobs AI can't."
 category: "Run The Play"
 date: 2026-02-23
-author: "Field Vision"
+author: "David Hampian"
 tags: ["gen z", "career skills", "storytelling", "employer branding", "podcast", "run the play"]
 ---
 

@@ -17,9 +17,9 @@ const formattedDate = date.toLocaleDateString('en-US', {
 
 
 <div class="author-byline">
-  <img src="/logos/NoXO%20Social%20Profile.png" alt="Field Vision" class="author-avatar" loading="lazy" />
+  <img src="/headshot-david-hampian.jpg" alt="David Hampian" class="author-avatar" loading="lazy" />
   <div>
-    <span class="author-name">Field Vision</span>
+    <span class="author-name"><a href="/about/" rel="author">David Hampian</a> · Field Vision</span>
     <span class="author-meta">
       Published {formattedDate}{readingTime ? ` · ${readingTime} min read` : ''}
     </span>
@@ -38,3 +38,24 @@ const formattedDate = date.toLocaleDateString('en-US', {
     width: 48px;
     height: 48px;
     border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .author-name {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .author-name a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .author-name a:hover {
+    text-decoration: underline;
+  }
+  .author-meta {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+</style>

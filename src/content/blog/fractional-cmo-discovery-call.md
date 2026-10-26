@@ -4,7 +4,7 @@ seoTitle: "The Fractional CMO Discovery Call Question I Won't Answer"
 description: "On a fractional CMO discovery call, founders ask what I'd do to drive growth. Here's why there's no generic answer, and the reverse-engineering approach I use instead."
 category: "Growth Strategy"
 date: 2026-06-15
-author: "Field Vision"
+author: "David Hampian"
 ogImage: "https://fieldvisiongroup.com/blog/fractional-cmo-discovery-call-hero.webp"
 tags: ["fractional cmo discovery call", "fractional cmo", "startup marketing strategy", "how to hire a fractional cmo", "marketing consultant first 30 days", "reverse engineering business growth"]
 schemaJson: |

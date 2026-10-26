@@ -4,7 +4,7 @@ description: "The best opportunities in your career won't come from your network
 category: "Career & Leadership"
 date: 2025-11-11
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["relationships", "networking", "career advice", "leadership", "business", "personal brand"]
 ---
 

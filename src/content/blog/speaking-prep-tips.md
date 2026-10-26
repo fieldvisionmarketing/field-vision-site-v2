@@ -4,7 +4,7 @@ description: "Field Vision keynoted BrightonSEO in front of thousands. Here are 
 category: "Career & Leadership"
 date: 2025-09-24
 updated: 2026-02-23
-author: "Field Vision"
+author: "David Hampian"
 tags: ["public speaking", "BrightonSEO", "career advice", "presentation tips", "leadership"]
 ---
 

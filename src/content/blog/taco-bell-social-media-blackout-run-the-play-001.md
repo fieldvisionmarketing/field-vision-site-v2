@@ -4,7 +4,7 @@ description: "Taco Bell deleted every social media post across every platform. T
 category: "Run The Play"
 date: 2025-09-24
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["taco bell", "viral marketing", "social media", "product launch", "podcast", "run the play"]
 ---
 

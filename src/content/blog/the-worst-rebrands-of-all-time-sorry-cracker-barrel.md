@@ -4,7 +4,7 @@ description: "Netflix Qwikster. Olive Garden's breadstick rebrand. The London 20
 category: "Culture & Marketing"
 date: 2025-08-25
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["rebranding", "marketing failures", "brand strategy", "Netflix", "case study"]
 ---
 

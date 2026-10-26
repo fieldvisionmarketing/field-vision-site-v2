@@ -4,7 +4,7 @@ description: "The story of how Twitch built a permanent brand experience inside 
 category: "Case Study"
 date: 2025-09-10
 updated: 2026-03-03
-author: "Field Vision"
+author: "David Hampian"
 tags: ["twitch", "brand experience", "NFL", "experiential marketing", "Las Vegas Raiders"]
 ---
 

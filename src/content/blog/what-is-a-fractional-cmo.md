@@ -3,7 +3,7 @@ title: "What is a Fractional CMO? Everything You Need to Know"
 description: "A fractional CMO is a senior marketing executive who works with companies on a part-time or contract basis. Learn how fractional CMOs work, what they cost, and when to hire one."
 category: "Growth Strategy"
 date: 2026-03-14
-author: "Field Vision"
+author: "David Hampian"
 tags: ["fractional cmo", "marketing leadership", "growth strategy", "fractional cmo cost"]
 ---
 

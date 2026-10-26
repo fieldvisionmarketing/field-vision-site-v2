@@ -8,7 +8,7 @@ const blog = defineCollection({
     category: z.string(),
     date: z.coerce.date(),
     updated: z.coerce.date().optional(),
-    author: z.string().default('Field Vision'),
+    author: z.string().default('David Hampian'),
     ogImage: z.string().optional(),
     seoTitle: z.string().optional(),
     schemaJson: z.string().optional(),

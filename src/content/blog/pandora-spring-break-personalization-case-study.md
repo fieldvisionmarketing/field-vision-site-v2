@@ -3,7 +3,7 @@ title: "How Pandora Broke Its Listening Record Without Spending a Dime"
 description: "How a personalized spring break campaign at Pandora reactivated millions of lapsed listeners and set the company's all-time listening record, without a single discount."
 category: "Case Study"
 date: 2026-03-25
-author: "Field Vision"
+author: "David Hampian"
 tags: ["Pandora", "personalization", "growth marketing", "reactivation", "case study", "nostalgia marketing"]
 ---
 

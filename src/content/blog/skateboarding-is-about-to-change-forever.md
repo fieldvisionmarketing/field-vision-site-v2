@@ -4,7 +4,7 @@ description: "Gary Payton II is launching a professional skateboarding league. T
 category: "Culture & Marketing"
 date: 2025-09-02
 updated: 2026-02-23
-author: "Field Vision"
+author: "David Hampian"
 tags: ["skateboarding", "sports marketing", "brand authenticity", "culture", "SBA"]
 ---
 
