@@ -75,7 +75,7 @@ Not all fractional CMOs are created equal. Some are genuinely C-suite caliber. O
 
 **Ask about their transition plan.** A fractional CMO who plans to make themselves indispensable is a red flag. The best fractional CMOs build systems, document processes, and develop your internal team so that when the engagement ends, the marketing function runs smoothly without them. Ask specifically: how do you ensure your work outlives the engagement?
 
-If you're a [San Francisco fractional CMO](/landing/fractional-cmo-sf/) candidate evaluating options, or a company looking for fractional marketing leadership, [our fractional CMO service](/services/fractional-cmo/) page outlines how Field Vision approaches these engagements.
+If you're evaluating fractional marketing leadership, [our fractional CMO service](/services/fractional-cmo/) page outlines how Field Vision approaches these engagements.
 
 ## Frequently Asked Questions
 

@@ -16,6 +16,11 @@
 /guides/plot-framework                /guides/score-framework/   301
 /guides/plot-framework/               /guides/score-framework/   301
 
+# === Retired placeholder landing page (Oct 2026) ===
+/landing/fractional-cmo-sf     /services/fractional-cmo/  301
+/landing/fractional-cmo-sf/    /services/fractional-cmo/  301
+/landing/*                     /services/fractional-cmo/  301
+
 # === Redirect old /about-david/ URL to /about/ (page renamed) ===
 /about-david     /about/   301
 /about-david/    /about/   301
