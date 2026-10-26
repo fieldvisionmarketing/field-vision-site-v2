@@ -4,7 +4,7 @@ description: "Fractional CMO and marketing leadership for sports startups, sport
 h1: "Fractional CMO for Sports Startups"
 subtitle: "Senior marketing leadership for sports-tech and fan-economy companies, from a leader who invented creator-led NFL broadcasting on Prime Video and launched Twitch's sports vertical."
 targetKeyword: "Fractional CMO for Sports Startups"
-order: 3
+order: 2
 sidebar:
   - label: "Best For"
     value: "Sports-tech, fan economy, NIL"

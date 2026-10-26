@@ -1,10 +1,10 @@
 ---
-title: "Fractional CMO for Streaming Companies"
+title: "Fractional CMO for Streaming & Subscription Companies"
 description: "Fractional CMO and marketing leadership for streaming startups and platforms, from the first marketer at Pandora who scaled it to the #1 US streaming service and built live and creator programming at Amazon and Twitch."
-h1: "Fractional CMO for Streaming Companies"
+h1: "Fractional CMO for Streaming & Subscription Companies"
 subtitle: "Senior marketing leadership for streaming platforms and startups, from the leader who grew Pandora to over 80 million monthly active users and built live and creator programming at Amazon Music, Prime Video, and Twitch."
 targetKeyword: "Fractional CMO for Streaming Companies"
-order: 5
+order: 4
 sidebar:
   - label: "Best For"
     value: "Audio, video, and live streaming"

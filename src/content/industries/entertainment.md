@@ -4,7 +4,7 @@ description: "Fractional CMO and marketing leadership for entertainment companie
 h1: "Fractional CMO for Entertainment Companies"
 subtitle: "Senior marketing leadership for entertainment brands and startups, from a leader who launched new verticals at Twitch, NFL broadcasting on Prime Video, and a sportsbook at Hard Rock."
 targetKeyword: "Fractional CMO for Entertainment Companies"
-order: 2
+order: 5
 sidebar:
   - label: "Best For"
     value: "Entertainment brands, IP, platforms"

@@ -4,7 +4,7 @@ description: "Fractional CMO and marketing leadership for digital media companie
 h1: "Fractional CMO for Digital Media Companies"
 subtitle: "Senior marketing leadership for digital media platforms and startups, from a leader who scaled audience growth and monetization at Amazon, Twitch, and Pandora."
 targetKeyword: "Fractional CMO for Digital Media Companies"
-order: 4
+order: 6
 sidebar:
   - label: "Best For"
     value: "Platforms, publishers, media apps"
