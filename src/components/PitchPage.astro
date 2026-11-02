@@ -27,6 +27,18 @@ interface Props {
   pdf?: string;               // downloadable deck
   contactEmail?: string;
   ogImage?: string;           // link-preview image, 1200x630
+  theme?: PitchTheme;         // optional brand reskin (colors only)
+}
+
+/* Brand reskin. Remaps the FV tokens inside the pitch content only;
+   Field Vision header and footer stay on-brand. */
+export interface PitchTheme {
+  bg: string;        // hero + contact background (replaces --offwhite)
+  surface: string;   // deck section background (replaces --paper)
+  ink: string;       // text, borders, shadows, chip fill (replaces --ink)
+  muted: string;     // body copy (replaces --muted)
+  accent: string;    // buttons, chip shadow, underlines (replaces --green-lt)
+  accentDk: string;  // hover state (replaces --green-dk)
 }
 
 const {
@@ -40,6 +52,7 @@ const {
   pdf,
   contactEmail = 'david@fieldvisiongroup.com',
   ogImage,
+  theme,
 } = Astro.props;
 
 const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x ${brand}`)}`;
@@ -47,6 +60,8 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
 
 <BaseLayout title={pageTitle} description={`${show}: a partnership idea prepared for ${brand}.`} ogImage={ogImage ? new URL(ogImage, 'https://fieldvisiongroup.com').href : undefined} noindex={true}>
   <Header slot="header" />
+
+  <div class="pp-theme" style={theme ? `--offwhite:${theme.bg};--paper:${theme.surface};--ink:${theme.ink};--muted:${theme.muted};--green-lt:${theme.accent};--green-dk:${theme.accentDk};` : undefined}>
 
   <!-- ═══ HERO + VIDEO ═══ -->
   <section class="pp-hero">
@@ -119,6 +134,8 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
       <p class="pp-cta-email"><a href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
     </div>
   </section>
+
+  </div>
 
   <Footer slot="footer" />
 </BaseLayout>
