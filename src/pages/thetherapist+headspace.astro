@@ -1,0 +1,20 @@
+---
+/* Private pitch: The Therapist x Headspace. Unlisted, DM only. */
+import PitchPage from '@/components/PitchPage.astro';
+
+const base = '/pitch/thetherapist-headspace';
+const deck = '/pitch/thetherapist'; // shared, brand-neutral deck
+const slides = Array.from({ length: 19 }, (_, i) => `${deck}/slides/slide-${String(i + 1).padStart(2, '0')}.webp`);
+---
+
+<PitchPage
+  pageTitle="The Therapist x Headspace"
+  brand="Headspace"
+  show="The Therapist"
+  subhead="A Season 2 partnership built for Headspace. Watch the sizzle, then open the deck."
+  video={`${base}/pitch.mp4`}
+  poster={`${base}/poster.jpg`}
+  slides={slides}
+  pdf={`${deck}/The-Therapist-Sponsorship-Deck.pdf`}
+  ogImage={`${base}/og.jpg`}
+/>

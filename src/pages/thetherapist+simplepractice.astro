@@ -3,7 +3,8 @@
 import PitchPage from '@/components/PitchPage.astro';
 
 const base = '/pitch/thetherapist-simplepractice';
-const slides = Array.from({ length: 19 }, (_, i) => `${base}/slides/slide-${String(i + 1).padStart(2, '0')}.webp`);
+const deck = '/pitch/thetherapist'; // shared, brand-neutral deck
+const slides = Array.from({ length: 19 }, (_, i) => `${deck}/slides/slide-${String(i + 1).padStart(2, '0')}.webp`);
 ---
 
 <PitchPage
@@ -14,6 +15,6 @@ const slides = Array.from({ length: 19 }, (_, i) => `${base}/slides/slide-${Stri
   video={`${base}/pitch.mp4`}
   poster={`${base}/poster.jpg`}
   slides={slides}
-  pdf={`${base}/The-Therapist-Sponsorship-Deck.pdf`}
+  pdf={`${deck}/The-Therapist-Sponsorship-Deck.pdf`}
   ogImage={`${base}/og.jpg`}
 />

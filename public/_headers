@@ -4,5 +4,8 @@
 /thetherapist+simplepractice*
   X-Robots-Tag: noindex, nofollow
 
+/thetherapist+headspace*
+  X-Robots-Tag: noindex, nofollow
+
 /pitch/*
   X-Robots-Tag: noindex, nofollow

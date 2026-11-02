@@ -99,6 +99,8 @@
 # === Private pitch pages: forgiving aliases for DM'd links ===
 /thetherapist-simplepractice   /thetherapist+simplepractice/   301
 /thetherapist-simplepractice/  /thetherapist+simplepractice/   301
+/thetherapist-headspace        /thetherapist+headspace/        301
+/thetherapist-headspace/       /thetherapist+headspace/        301
 
 /*                                                     /404.html                                     404
 
