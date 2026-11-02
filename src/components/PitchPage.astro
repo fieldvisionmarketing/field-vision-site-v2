@@ -26,6 +26,7 @@ interface Props {
   slides: string[];           // ordered slide image paths
   pdf?: string;               // downloadable deck
   contactEmail?: string;
+  ogImage?: string;           // link-preview image, 1200x630
 }
 
 const {
@@ -38,18 +39,18 @@ const {
   slides,
   pdf,
   contactEmail = 'david@fieldvisiongroup.com',
+  ogImage,
 } = Astro.props;
 
 const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x ${brand}`)}`;
 ---
 
-<BaseLayout title={pageTitle} description={`${show}: a partnership idea prepared for ${brand}.`} noindex={true}>
+<BaseLayout title={pageTitle} description={`${show}: a partnership idea prepared for ${brand}.`} ogImage={ogImage ? new URL(ogImage, 'https://fieldvisiongroup.com').href : undefined} noindex={true}>
   <Header slot="header" />
 
   <!-- ═══ HERO + VIDEO ═══ -->
   <section class="pp-hero">
     <div class="pp-inner">
-      <p class="eyebrow">Prepared for {brand}</p>
       <h1 class="pp-title">{show} <span class="pp-x">x</span> <span class="hl-green pp-chip">{brand}</span></h1>
       <p class="pp-sub">{subhead}</p>
 
@@ -115,6 +116,7 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
       <h2 class="pp-cta-title">Let's <span class="hl-green">Talk.</span></h2>
       <p class="pp-cta-sub">Questions, ideas, or ready to build this together? Reach out directly.</p>
       <a href={mailto} class="btn-brutal">Email David &rarr;</a>
+      <p class="pp-cta-email"><a href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
     </div>
   </section>
 
@@ -209,6 +211,9 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
   .pp-cta { background: var(--offwhite); padding: 80px 0 96px; text-align: center; }
   .pp-cta-title { font-family: 'Anton', sans-serif; text-transform: uppercase; font-size: clamp(36px, 5vw, 56px); color: var(--ink); margin: 0 0 12px; }
   .pp-cta-sub { font-family: 'Satoshi', sans-serif; font-size: 18px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; text-wrap: pretty; }
+  .pp-cta-email { margin: 24px 0 0; font-family: 'Satoshi', sans-serif; font-size: 17px; }
+  .pp-cta-email a { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--green-lt); transition: color 0.15s; }
+  .pp-cta-email a:hover { color: var(--green-dk); }
 
   @media (max-width: 640px) {
     .pp-hero { padding: 104px 0 48px; }
