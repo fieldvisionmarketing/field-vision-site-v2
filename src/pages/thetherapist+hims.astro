@@ -1,0 +1,21 @@
+---
+/* Private pitch: The Therapist x Hims. Unlisted, DM only. */
+import PitchPage from '@/components/PitchPage.astro';
+
+const base = '/pitch/thetherapist-hims';
+const deck = '/pitch/thetherapist'; // shared, brand-neutral deck
+const slides = Array.from({ length: 19 }, (_, i) => `${deck}/slides/slide-${String(i + 1).padStart(2, '0')}.webp`);
+---
+
+<PitchPage
+  pageTitle="The Therapist x Hims"
+  brand="Hims"
+  show="The Therapist"
+  subhead="A Season 2 partnership built for Hims. Watch the sizzle, then open the deck."
+  video={`${base}/pitch.mp4`}
+  poster={`${base}/poster.jpg`}
+  slides={slides}
+  pdf={`${deck}/The-Therapist-Sponsorship-Deck.pdf`}
+  ogImage={`${base}/og.jpg`}
+  theme={{ bg: '#F5F0E8', surface: '#FFFFFF', ink: '#453421', muted: '#6B5A47', accent: '#FFC671', accentDk: '#E0A04A' }}
+/>

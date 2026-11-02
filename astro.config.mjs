@@ -5,7 +5,7 @@ import mdx from '@astrojs/mdx';
 const BUILD_DATE = new Date().toISOString();
 
 // Unlisted DM-only pitch pages (src/components/PitchPage.astro). Keep out of the sitemap.
-const PRIVATE_ROUTES = ['/thetherapist+simplepractice', '/thetherapist%2Bsimplepractice', '/thetherapist+headspace', '/thetherapist%2Bheadspace', '/pitch/'];
+const PRIVATE_ROUTES = ['/thetherapist+simplepractice', '/thetherapist%2Bsimplepractice', '/thetherapist+headspace', '/thetherapist%2Bheadspace', '/thetherapist+', '/thetherapist%2B', '/pitch/'];
 
 export default defineConfig({
   site: 'https://fieldvisiongroup.com',

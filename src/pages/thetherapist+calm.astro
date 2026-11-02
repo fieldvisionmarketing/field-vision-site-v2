@@ -1,0 +1,21 @@
+---
+/* Private pitch: The Therapist x Calm. Unlisted, DM only. */
+import PitchPage from '@/components/PitchPage.astro';
+
+const base = '/pitch/thetherapist-calm';
+const deck = '/pitch/thetherapist'; // shared, brand-neutral deck
+const slides = Array.from({ length: 19 }, (_, i) => `${deck}/slides/slide-${String(i + 1).padStart(2, '0')}.webp`);
+---
+
+<PitchPage
+  pageTitle="The Therapist x Calm"
+  brand="Calm"
+  show="The Therapist"
+  subhead="A Season 2 partnership built for Calm. Watch the sizzle, then open the deck."
+  video={`${base}/pitch.mp4`}
+  poster={`${base}/poster.jpg`}
+  slides={slides}
+  pdf={`${deck}/The-Therapist-Sponsorship-Deck.pdf`}
+  ogImage={`${base}/og.jpg`}
+  theme={{ bg: '#F2F5FC', surface: '#FFFFFF', ink: '#1B2250', muted: '#4A5275', accent: '#5B9BE8', accentDk: '#3F6FD0' }}
+/>

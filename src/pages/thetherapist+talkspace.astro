@@ -1,0 +1,21 @@
+---
+/* Private pitch: The Therapist x Talkspace. Unlisted, DM only. */
+import PitchPage from '@/components/PitchPage.astro';
+
+const base = '/pitch/thetherapist-talkspace';
+const deck = '/pitch/thetherapist'; // shared, brand-neutral deck
+const slides = Array.from({ length: 19 }, (_, i) => `${deck}/slides/slide-${String(i + 1).padStart(2, '0')}.webp`);
+---
+
+<PitchPage
+  pageTitle="The Therapist x Talkspace"
+  brand="Talkspace"
+  show="The Therapist"
+  subhead="A Season 2 partnership built for Talkspace. Watch the sizzle, then open the deck."
+  video={`${base}/pitch.mp4`}
+  poster={`${base}/poster.jpg`}
+  slides={slides}
+  pdf={`${deck}/The-Therapist-Sponsorship-Deck.pdf`}
+  ogImage={`${base}/og.jpg`}
+  theme={{ bg: '#E1F0EE', surface: '#FFFFFF', ink: '#005C65', muted: '#2A4F53', accent: '#9DEAB2', accentDk: '#6CCB8A' }}
+/>
