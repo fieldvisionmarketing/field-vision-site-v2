@@ -96,9 +96,10 @@
 
 # ── Sitemap redirect ──
 /sitemap.xml             /sitemap-index.xml        301
-/*                                                     /404.html                                     404
-
-
 # === Private pitch pages: forgiving aliases for DM'd links ===
 /thetherapist-simplepractice   /thetherapist+simplepractice/   301
 /thetherapist-simplepractice/  /thetherapist+simplepractice/   301
+
+/*                                                     /404.html                                     404
+
+
