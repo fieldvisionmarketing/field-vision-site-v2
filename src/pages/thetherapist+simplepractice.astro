@@ -1,0 +1,18 @@
+---
+/* Private pitch: The Therapist x SimplePractice. Unlisted, DM only. */
+import PitchPage from '@/components/PitchPage.astro';
+
+const base = '/pitch/thetherapist-simplepractice';
+const slides = Array.from({ length: 19 }, (_, i) => `${base}/slides/slide-${String(i + 1).padStart(2, '0')}.webp`);
+---
+
+<PitchPage
+  pageTitle="The Therapist x SimplePractice"
+  brand="SimplePractice"
+  show="The Therapist"
+  subhead="A Season 2 partnership built for SimplePractice. Watch the sizzle, then open the deck."
+  video={`${base}/pitch.mp4`}
+  poster={`${base}/poster.jpg`}
+  slides={slides}
+  pdf={`${base}/The-Therapist-Sponsorship-Deck.pdf`}
+/>

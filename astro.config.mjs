@@ -4,12 +4,15 @@ import mdx from '@astrojs/mdx';
 
 const BUILD_DATE = new Date().toISOString();
 
+// Unlisted DM-only pitch pages (src/components/PitchPage.astro). Keep out of the sitemap.
+const PRIVATE_ROUTES = ['/thetherapist+simplepractice', '/thetherapist%2Bsimplepractice', '/pitch/'];
+
 export default defineConfig({
   site: 'https://fieldvisiongroup.com',
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/thank-you') && !page.includes('/empty-party'),
+      filter: (page) => !page.includes('/thank-you') && !page.includes('/empty-party') && !PRIVATE_ROUTES.some((r) => page.includes(r)),
       serialize(item) {
         const url = item.url;
         let priority = 0.5;

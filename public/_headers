@@ -1,2 +1,8 @@
 /audio/*
   Access-Control-Allow-Origin: *
+
+/thetherapist+simplepractice*
+  X-Robots-Tag: noindex, nofollow
+
+/pitch/*
+  X-Robots-Tag: noindex, nofollow

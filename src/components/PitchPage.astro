@@ -1,0 +1,328 @@
+---
+/* ════════════════════════════════════════════════════════════
+   PRIVATE PITCH PAGE (reusable)
+   Unlisted, DM-only landing pages for brand pitches.
+   Video up top, "Learn more about this content" toggle that
+   expands an inline swipeable deck viewer (slide images) with
+   a PDF download.
+
+   PRIVACY CHECKLIST for every new pitch page:
+   1. Page passes noindex (handled here automatically).
+   2. Add the route to PRIVATE_ROUTES in astro.config.mjs (sitemap).
+   3. Assets live in /public/pitch/<slug>/ (X-Robots-Tag via _headers).
+   4. Never link to the page from nav, footer, blog, or sitemap.
+   ════════════════════════════════════════════════════════════ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+interface Props {
+  pageTitle: string;          // <title>
+  brand: string;              // who the pitch is for, e.g. "SimplePractice"
+  show: string;               // content property, e.g. "The Therapist"
+  subhead: string;            // one line under the H1
+  video: string;              // /pitch/<slug>/pitch.mp4
+  poster?: string;            // /pitch/<slug>/poster.jpg
+  slides: string[];           // ordered slide image paths
+  pdf?: string;               // downloadable deck
+  contactEmail?: string;
+}
+
+const {
+  pageTitle,
+  brand,
+  show,
+  subhead,
+  video,
+  poster,
+  slides,
+  pdf,
+  contactEmail = 'david@fieldvisiongroup.com',
+} = Astro.props;
+
+const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x ${brand}`)}`;
+---
+
+<BaseLayout title={pageTitle} description={`${show}: a partnership idea prepared for ${brand}.`} noindex={true}>
+  <Header slot="header" />
+
+  <!-- ═══ HERO + VIDEO ═══ -->
+  <section class="pp-hero">
+    <div class="pp-inner">
+      <p class="eyebrow">Prepared for {brand}</p>
+      <h1 class="pp-title">{show} <span class="pp-x">x</span> <span class="hl-green pp-chip">{brand}</span></h1>
+      <p class="pp-sub">{subhead}</p>
+
+      <div class="pp-video">
+        <video controls playsinline preload="metadata" poster={poster}>
+          <source src={video} type="video/mp4" />
+          Your browser does not support embedded video. <a href={video}>Download the video</a>.
+        </video>
+      </div>
+
+      <div class="pp-actions">
+        <button type="button" class="btn-brutal pp-toggle" id="pp-toggle" aria-expanded="false" aria-controls="pp-deck">
+          <span class="pp-toggle-label">Learn more about this content</span>
+          <span class="pp-toggle-icon" aria-hidden="true">+</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DECK (expands) ═══ -->
+  <section class="pp-deck" id="pp-deck" hidden>
+    <div class="pp-inner">
+      <div class="pp-viewer" id="pp-viewer" tabindex="0" aria-roledescription="carousel" aria-label={`${show} deck`}>
+        <div class="pp-track" id="pp-track">
+          {slides.map((src, i) => (
+            <figure class="pp-slide" aria-roledescription="slide" aria-label={`Slide ${i + 1} of ${slides.length}`}>
+              <img
+                data-src={src}
+                src={i < 2 ? src : undefined}
+                alt={`${show} deck, slide ${i + 1}`}
+                width="1920" height="1080"
+                decoding="async"
+                draggable="false"
+              />
+            </figure>
+          ))}
+        </div>
+        <button type="button" class="pp-nav pp-prev" id="pp-prev" aria-label="Previous slide">&larr;</button>
+        <button type="button" class="pp-nav pp-next" id="pp-next" aria-label="Next slide">&rarr;</button>
+      </div>
+
+      <div class="pp-bar">
+        <span class="pp-count" id="pp-count">1 / {slides.length}</span>
+        <div class="pp-bar-links">
+          <button type="button" class="pp-link" id="pp-full">Full screen</button>
+          {pdf && <a class="pp-link" href={pdf} download>Download PDF</a>}
+        </div>
+      </div>
+
+      <div class="pp-thumbs" id="pp-thumbs">
+        {slides.map((src, i) => (
+          <button type="button" class="pp-thumb" data-i={i} aria-label={`Go to slide ${i + 1}`}>
+            <img data-src={src} alt="" width="160" height="90" />
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="pp-cta">
+    <div class="pp-inner pp-cta-inner">
+      <h2 class="pp-cta-title">Let's <span class="hl-green">Talk.</span></h2>
+      <p class="pp-cta-sub">Questions, ideas, or ready to build this together? Reach out directly.</p>
+      <a href={mailto} class="btn-brutal">Email David &rarr;</a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .pp-inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero (cream bookend) */
+  .pp-hero { background: var(--offwhite); padding: 128px 0 64px; }
+  .pp-title {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(40px, 6vw, 72px); line-height: 1.02; color: var(--ink);
+    margin: 0 0 16px; text-wrap: balance;
+  }
+  .pp-x { color: var(--muted); font-size: 0.6em; vertical-align: 0.12em; }
+  .pp-chip { white-space: nowrap; display: inline-block; max-width: 100%; }
+  .pp-sub {
+    font-family: 'Satoshi', sans-serif; font-size: 20px; line-height: 1.5;
+    color: var(--muted); max-width: 640px; margin: 0 0 40px; text-wrap: pretty;
+  }
+
+  .pp-video {
+    border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink);
+    background: #000; line-height: 0;
+  }
+  .pp-video video { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; background: #000; }
+
+  .pp-actions { margin-top: 40px; display: flex; justify-content: center; }
+  .pp-toggle { font-size: 15px; padding: 18px 28px; }
+  .pp-toggle-icon { font-size: 20px; line-height: 1; transition: transform 0.25s ease; }
+  .pp-toggle[aria-expanded="true"] .pp-toggle-icon { transform: rotate(45deg); }
+
+  /* Deck (white) */
+  .pp-deck { background: var(--paper); padding: 64px 0 72px; }
+  .pp-deck.is-open { animation: pp-in 0.45s ease both; }
+  @keyframes pp-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+
+  .pp-viewer {
+    position: relative; overflow: hidden; overflow: clip; outline: none;
+    border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink);
+    background: var(--ink); touch-action: pan-y; user-select: none;
+  }
+  .pp-viewer:focus-visible { box-shadow: 8px 8px 0 var(--ink), 0 0 0 4px var(--green-lt); }
+  .pp-track { display: flex; transition: transform 0.4s cubic-bezier(.2,.7,.2,1); will-change: transform; }
+  .pp-slide { flex: 0 0 100%; margin: 0; aspect-ratio: 16 / 9; }
+  .pp-slide img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+  .pp-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 48px; height: 48px; display: grid; place-items: center;
+    font-family: 'Anton', sans-serif; font-size: 20px; cursor: pointer;
+    background: var(--green-lt); color: var(--ink);
+    border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+  }
+  .pp-nav:hover { transform: translate(-2px, calc(-50% - 2px)); box-shadow: 8px 8px 0 var(--ink); }
+  .pp-nav:disabled { opacity: 0; pointer-events: none; }
+  .pp-prev { left: 16px; }
+  .pp-next { right: 16px; }
+
+  .pp-bar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
+  .pp-count { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; color: var(--ink); }
+  .pp-bar-links { display: flex; gap: 24px; }
+  .pp-link {
+    font-family: 'Archivo', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink); text-decoration: none;
+    background: none; border: 0; border-bottom: 4px solid var(--green-lt); padding: 0 0 2px; cursor: pointer;
+    transition: color 0.15s;
+  }
+  .pp-link:hover { color: var(--green-dk); }
+
+  .pp-thumbs {
+    display: flex; gap: 12px; overflow-x: auto; margin-top: 24px; padding: 4px 4px 12px;
+    scrollbar-width: thin;
+  }
+  .pp-thumb {
+    flex: 0 0 120px; padding: 0; cursor: pointer; background: var(--ink); line-height: 0;
+    border: 3px solid var(--ink); opacity: 0.55; transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s;
+  }
+  .pp-thumb img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+  .pp-thumb:hover { opacity: 0.9; transform: translate(-2px, -2px); }
+  .pp-thumb.is-active { opacity: 1; box-shadow: 4px 4px 0 var(--green-lt); }
+
+  /* Fullscreen */
+  .pp-viewer:fullscreen { border: 0; box-shadow: none; display: flex; align-items: center; background: #000; }
+  .pp-viewer:fullscreen .pp-track { width: 100%; }
+  .pp-viewer:fullscreen .pp-slide { aspect-ratio: auto; height: 100vh; }
+
+  /* CTA (cream bookend) */
+  .pp-cta { background: var(--offwhite); padding: 80px 0 96px; text-align: center; }
+  .pp-cta-title { font-family: 'Anton', sans-serif; text-transform: uppercase; font-size: clamp(36px, 5vw, 56px); color: var(--ink); margin: 0 0 12px; }
+  .pp-cta-sub { font-family: 'Satoshi', sans-serif; font-size: 18px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; text-wrap: pretty; }
+
+  @media (max-width: 640px) {
+    .pp-hero { padding: 104px 0 48px; }
+    .pp-title { font-size: clamp(28px, 8.5vw, 44px); }
+    .pp-sub { font-size: 17px; margin-bottom: 28px; }
+    .pp-video, .pp-viewer { box-shadow: 6px 6px 0 var(--ink); }
+    .pp-toggle { white-space: normal; text-align: left; font-size: 14px; }
+    .pp-nav { width: 38px; height: 38px; font-size: 16px; }
+    .pp-prev { left: 8px; } .pp-next { right: 8px; }
+    .pp-thumb { flex-basis: 88px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pp-track, .pp-deck.is-open { transition: none; animation: none; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var toggle = document.getElementById('pp-toggle');
+    var deck = document.getElementById('pp-deck');
+    var viewer = document.getElementById('pp-viewer');
+    var track = document.getElementById('pp-track');
+    var prev = document.getElementById('pp-prev');
+    var next = document.getElementById('pp-next');
+    var count = document.getElementById('pp-count');
+    var full = document.getElementById('pp-full');
+    var thumbs = Array.prototype.slice.call(document.querySelectorAll('.pp-thumb'));
+    var imgs = Array.prototype.slice.call(track.querySelectorAll('img'));
+    if (!toggle || !deck || !track) return;
+    var total = imgs.length, idx = 0, loadedThumbs = false;
+
+    function load(i) {
+      var im = imgs[i];
+      if (im && !im.getAttribute('src')) im.setAttribute('src', im.getAttribute('data-src'));
+    }
+    function go(i) {
+      idx = Math.max(0, Math.min(total - 1, i));
+      viewer.scrollLeft = 0;
+      track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+      load(idx); load(idx + 1); load(idx + 2); load(idx - 1);
+      count.textContent = (idx + 1) + ' / ' + total;
+      prev.disabled = idx === 0;
+      next.disabled = idx === total - 1;
+      thumbs.forEach(function (t, k) { t.classList.toggle('is-active', k === idx); });
+      var at = thumbs[idx];
+      if (at && at.parentNode) {
+        var p = at.parentNode;
+        p.scrollTo({ left: at.offsetLeft - p.clientWidth / 2 + at.clientWidth / 2, behavior: 'smooth' });
+      }
+    }
+
+    toggle.addEventListener('click', function () {
+      var open = toggle.getAttribute('aria-expanded') === 'true';
+      if (open) {
+        deck.hidden = true; deck.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        return;
+      }
+      deck.hidden = false; deck.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      if (!loadedThumbs) {
+        thumbs.forEach(function (t) { var im = t.querySelector('img'); im.src = im.getAttribute('data-src'); });
+        loadedThumbs = true;
+      }
+      go(idx);
+      setTimeout(function () {
+        var y = viewer.getBoundingClientRect().top + window.pageYOffset - 96;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }, 60);
+    });
+
+    prev.addEventListener('click', function () { go(idx - 1); });
+    next.addEventListener('click', function () { go(idx + 1); });
+    thumbs.forEach(function (t) { t.addEventListener('click', function () { go(+t.getAttribute('data-i')); }); });
+
+    viewer.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { go(idx + 1); e.preventDefault(); }
+      if (e.key === 'ArrowLeft') { go(idx - 1); e.preventDefault(); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (deck.hidden || document.activeElement === viewer) return;
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'VIDEO') return;
+      if (e.key === 'ArrowRight') go(idx + 1);
+      if (e.key === 'ArrowLeft') go(idx - 1);
+    });
+
+    // Swipe / drag
+    var startX = null, dx = 0, w = 1;
+    function down(x) { startX = x; dx = 0; w = viewer.clientWidth || 1; track.style.transition = 'none'; }
+    function move(x) {
+      if (startX === null) return;
+      dx = x - startX;
+      track.style.transform = 'translateX(calc(' + (-idx * 100) + '% + ' + dx + 'px))';
+    }
+    function up() {
+      if (startX === null) return;
+      track.style.transition = '';
+      if (Math.abs(dx) > w * 0.15) go(idx + (dx < 0 ? 1 : -1)); else go(idx);
+      startX = null;
+    }
+    viewer.addEventListener('touchstart', function (e) { down(e.touches[0].clientX); }, { passive: true });
+    viewer.addEventListener('touchmove', function (e) { move(e.touches[0].clientX); }, { passive: true });
+    viewer.addEventListener('touchend', up);
+    viewer.addEventListener('mousedown', function (e) { if (e.target.closest('.pp-nav')) return; down(e.clientX); });
+    window.addEventListener('mousemove', function (e) { move(e.clientX); });
+    window.addEventListener('mouseup', up);
+
+    // Fullscreen (hide the control where unsupported, e.g. iPhone Safari)
+    if (!viewer.requestFullscreen && !viewer.webkitRequestFullscreen) { full.style.display = 'none'; }
+    full.addEventListener('click', function () {
+      if (document.fullscreenElement) { document.exitFullscreen(); return; }
+      (viewer.requestFullscreen || viewer.webkitRequestFullscreen).call(viewer);
+      viewer.focus();
+    });
+  })();
+</script>

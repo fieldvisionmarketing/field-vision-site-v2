@@ -96,7 +96,9 @@ h1, h2, h3 {
 .abt-cta :is(.hl-green, .hl-cream),
 .mc-final :is(.hl-green, .hl-cream),
 .lm-final :is(.hl-green, .hl-cream),
-.ff-final :is(.hl-green, .hl-cream) {
+.ff-final :is(.hl-green, .hl-cream),
+.pp-hero :is(.hl-green, .hl-cream),
+.pp-cta :is(.hl-green, .hl-cream) {
   background: var(--ink);
   color: var(--offwhite);
   box-shadow: 6px 6px 0 var(--green-lt);
