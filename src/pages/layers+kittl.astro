@@ -3,19 +3,20 @@
 import PitchPage from '@/components/PitchPage.astro';
 
 const base = '/pitch/layers-kittl';
-// No deck yet: the LAYERS one-pager is portrait and the viewer is 16:9.
-// Add slide paths here to turn the "Learn more" drawer back on.
-const slides: string[] = [];
+const deck = '/pitch/layers'; // shared LAYERS one-pager (portrait, letter)
+const slides = [`${deck}/slides/slide-01.webp`];
 ---
 
 <PitchPage
   pageTitle="LAYERS x Kittl"
   brand="Kittl"
   show="LAYERS"
-  subhead="A Season 2 partnership built for Kittl. Watch the sizzle, then let's talk."
+  subhead="A Season 2 partnership built for Kittl. Watch the sizzle, then open the one-pager."
   video={`${base}/pitch.mp4`}
   poster={`${base}/poster.jpg`}
   slides={slides}
+  slideAspect="612 / 792"
+  pdf={`${deck}/LAYERS-One-Pager.pdf`}
   ogImage={`${base}/og.jpg`}
   hideNav
   theme={{ bg: '#F7F7F2', surface: '#FFFFFF', ink: '#111111', muted: '#4D4D47', accent: '#D8FC00', accentDk: '#B4D400' }}

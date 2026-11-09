@@ -28,6 +28,7 @@ interface Props {
   contactEmail?: string;
   ogImage?: string;           // link-preview image, 1200x630
   theme?: PitchTheme;         // optional brand reskin (colors only)
+  slideAspect?: string;       // e.g. '612 / 792' for a portrait one-pager; default 16 / 9
   hideNav?: boolean;          // drop the site header/nav for a distraction-free pitch
 }
 
@@ -55,7 +56,9 @@ const {
   ogImage,
   theme,
   hideNav = false,
+  slideAspect,
 } = Astro.props;
+const deckClass = ['pp-deck', slideAspect && 'pp-portrait', slides.length === 1 && 'pp-single'].filter(Boolean).join(' ');
 
 const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x ${brand}`)}`;
 ---
@@ -88,7 +91,7 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
   </section>
 
   <!-- ═══ DECK (expands; omitted when a page has no slides) ═══ -->
-  {slides.length > 0 && <section class="pp-deck" id="pp-deck" hidden>
+  {slides.length > 0 && <section class={deckClass} id="pp-deck" style={slideAspect ? `--pp-aspect:${slideAspect};` : undefined} hidden>
     <div class="pp-inner">
       <div class="pp-viewer" id="pp-viewer" tabindex="0" aria-roledescription="carousel" aria-label={`${show} deck`}>
         <div class="pp-track" id="pp-track">
@@ -220,6 +223,12 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
   .pp-thumb img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
   .pp-thumb:hover { opacity: 0.9; transform: translate(-2px, -2px); }
   .pp-thumb.is-active { opacity: 1; box-shadow: 4px 4px 0 var(--green-lt); }
+
+  /* Portrait one-pager + single-slide decks */
+  .pp-portrait .pp-viewer, .pp-portrait .pp-bar { max-width: 780px; margin-inline: auto; }
+  .pp-portrait .pp-slide { aspect-ratio: var(--pp-aspect, 16 / 9); }
+  .pp-single .pp-nav, .pp-single .pp-thumbs { display: none; }
+  .pp-single .pp-count { visibility: hidden; }
 
   /* Fullscreen */
   .pp-viewer:fullscreen { border: 0; box-shadow: none; display: flex; align-items: center; background: #000; }
