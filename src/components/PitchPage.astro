@@ -42,6 +42,7 @@ export interface PitchTheme {
   muted: string;     // body copy (replaces --muted)
   accent: string;    // buttons, chip shadow, underlines (replaces --green-lt)
   accentDk: string;  // hover state (replaces --green-dk)
+  onAccent?: string; // text color on accent buttons (default: ink); use #FFFFFF for dark accents
 }
 
 const {
@@ -68,7 +69,7 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
 <BaseLayout title={pageTitle} description={`${show}: a partnership idea prepared for ${brand}.`} ogImage={ogImage ? new URL(ogImage, 'https://fieldvisiongroup.com').href : undefined} noindex={true}>
   {!hideNav && <Header slot="header" />}
 
-  <div class="pp-theme" style={theme ? `--offwhite:${theme.bg};--paper:${theme.surface};--ink:${theme.ink};--muted:${theme.muted};--green-lt:${theme.accent};--green-dk:${theme.accentDk};` : undefined}>
+  <div class="pp-theme" style={theme ? `--offwhite:${theme.bg};--paper:${theme.surface};--ink:${theme.ink};--muted:${theme.muted};--green-lt:${theme.accent};--green-dk:${theme.accentDk};${theme.onAccent ? `--pp-on-accent:${theme.onAccent};` : ''}` : undefined}>
 
   <!-- ═══ HERO + VIDEO ═══ -->
   <section class="pp-hero">
@@ -225,6 +226,8 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
   .pp-thumb img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
   .pp-thumb:hover { opacity: 0.9; transform: translate(-2px, -2px); }
   .pp-thumb.is-active { opacity: 1; box-shadow: 4px 4px 0 var(--green-lt); }
+
+  .pp-theme .btn-brutal { color: var(--pp-on-accent, var(--ink)); }
 
   /* Portrait one-pager + single-slide decks */
   .pp-portrait .pp-viewer, .pp-portrait .pp-bar { max-width: 780px; margin-inline: auto; }
