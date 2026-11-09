@@ -76,17 +76,17 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
         </video>
       </div>
 
-      <div class="pp-actions">
+      {slides.length > 0 && <div class="pp-actions">
         <button type="button" class="btn-brutal pp-toggle" id="pp-toggle" aria-expanded="false" aria-controls="pp-deck">
           <span class="pp-toggle-label">Learn more about this content</span>
           <span class="pp-toggle-icon" aria-hidden="true">+</span>
         </button>
-      </div>
+      </div>}
     </div>
   </section>
 
-  <!-- ═══ DECK (expands) ═══ -->
-  <section class="pp-deck" id="pp-deck" hidden>
+  <!-- ═══ DECK (expands; omitted when a page has no slides) ═══ -->
+  {slides.length > 0 && <section class="pp-deck" id="pp-deck" hidden>
     <div class="pp-inner">
       <div class="pp-viewer" id="pp-viewer" tabindex="0" aria-roledescription="carousel" aria-label={`${show} deck`}>
         <div class="pp-track" id="pp-track">
@@ -123,7 +123,7 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
         ))}
       </div>
     </div>
-  </section>
+  </section>}
 
   <!-- ═══ CONTACT ═══ -->
   <section class="pp-cta">
@@ -258,8 +258,8 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
     var count = document.getElementById('pp-count');
     var full = document.getElementById('pp-full');
     var thumbs = Array.prototype.slice.call(document.querySelectorAll('.pp-thumb'));
-    var imgs = Array.prototype.slice.call(track.querySelectorAll('img'));
     if (!toggle || !deck || !track) return;
+    var imgs = Array.prototype.slice.call(track.querySelectorAll('img'));
     var total = imgs.length, idx = 0, loadedThumbs = false;
 
     function load(i) {
