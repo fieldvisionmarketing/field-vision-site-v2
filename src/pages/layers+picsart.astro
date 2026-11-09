@@ -1,0 +1,24 @@
+---
+/* Private pitch: LAYERS Season 2 x Picsart. Unlisted, DM only. */
+import PitchPage from '@/components/PitchPage.astro';
+
+const base = '/pitch/layers-picsart';
+const deck = '/pitch/layers'; // shared LAYERS one-pager (portrait, letter)
+const slides = [`${deck}/slides/slide-01.webp`];
+---
+
+<PitchPage
+  pageTitle="LAYERS x Picsart"
+  brand="Picsart"
+  show="LAYERS"
+  subhead="A Season 2 partnership built for Picsart. Watch the sizzle, then open the one-pager."
+  video={`${base}/pitch.mp4`}
+  poster={`${base}/poster.jpg`}
+  slides={slides}
+  slideLinks={['https://www.youtube.com/watch?v=tVz2IAAxttE&t=2s']}
+  slideAspect="612 / 792"
+  pdf={`${deck}/LAYERS-One-Pager.pdf`}
+  ogImage={`${base}/og.jpg`}
+  hideNav
+  theme={{ bg: '#FBF6FB', surface: '#FFFFFF', ink: '#1C0A1C', muted: '#5A4A5A', accent: '#B408B4', accentDk: '#8A0689', onAccent: '#FFFFFF' }}
+/>
