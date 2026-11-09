@@ -28,6 +28,9 @@ interface Props {
   contactEmail?: string;
   ogImage?: string;           // link-preview image, 1200x630
   theme?: PitchTheme;         // optional brand reskin (colors only)
+  slideLinks?: (string | undefined)[]; // optional click-through URL per slide (opens in a new tab)
+  slideAspect?: string;       // e.g. '612 / 792' for a portrait one-pager; default 16 / 9
+  hideNav?: boolean;          // drop the site header/nav for a distraction-free pitch
 }
 
 /* Brand reskin. Remaps the FV tokens inside the pitch content only;
@@ -53,13 +56,17 @@ const {
   contactEmail = 'david@fieldvisiongroup.com',
   ogImage,
   theme,
+  hideNav = false,
+  slideAspect,
+  slideLinks = [],
 } = Astro.props;
+const deckClass = ['pp-deck', slideAspect && 'pp-portrait', slides.length === 1 && 'pp-single'].filter(Boolean).join(' ');
 
 const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x ${brand}`)}`;
 ---
 
 <BaseLayout title={pageTitle} description={`${show}: a partnership idea prepared for ${brand}.`} ogImage={ogImage ? new URL(ogImage, 'https://fieldvisiongroup.com').href : undefined} noindex={true}>
-  <Header slot="header" />
+  {!hideNav && <Header slot="header" />}
 
   <div class="pp-theme" style={theme ? `--offwhite:${theme.bg};--paper:${theme.surface};--ink:${theme.ink};--muted:${theme.muted};--green-lt:${theme.accent};--green-dk:${theme.accentDk};` : undefined}>
 
@@ -76,30 +83,29 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
         </video>
       </div>
 
-      <div class="pp-actions">
+      {slides.length > 0 && <div class="pp-actions">
         <button type="button" class="btn-brutal pp-toggle" id="pp-toggle" aria-expanded="false" aria-controls="pp-deck">
           <span class="pp-toggle-label">Learn more about this content</span>
           <span class="pp-toggle-icon" aria-hidden="true">+</span>
         </button>
-      </div>
+      </div>}
     </div>
   </section>
 
-  <!-- ═══ DECK (expands) ═══ -->
-  <section class="pp-deck" id="pp-deck" hidden>
+  <!-- ═══ DECK (expands; omitted when a page has no slides) ═══ -->
+  {slides.length > 0 && <section class={deckClass} id="pp-deck" style={slideAspect ? `--pp-aspect:${slideAspect};` : undefined} hidden>
     <div class="pp-inner">
       <div class="pp-viewer" id="pp-viewer" tabindex="0" aria-roledescription="carousel" aria-label={`${show} deck`}>
         <div class="pp-track" id="pp-track">
           {slides.map((src, i) => (
             <figure class="pp-slide" aria-roledescription="slide" aria-label={`Slide ${i + 1} of ${slides.length}`}>
-              <img
-                data-src={src}
-                src={i < 2 ? src : undefined}
-                alt={`${show} deck, slide ${i + 1}`}
-                width="1920" height="1080"
-                decoding="async"
-                draggable="false"
-              />
+              {slideLinks[i] ? (
+                <a class="pp-slide-link" href={slideLinks[i]} target="_blank" rel="noopener" draggable="false" aria-label={`${show} deck, slide ${i + 1}: opens in a new tab`}>
+                  <img data-src={src} src={i < 2 ? src : undefined} alt={`${show} deck, slide ${i + 1}`} width="1920" height="1080" decoding="async" draggable="false" />
+                </a>
+              ) : (
+                <img data-src={src} src={i < 2 ? src : undefined} alt={`${show} deck, slide ${i + 1}`} width="1920" height="1080" decoding="async" draggable="false" />
+              )}
             </figure>
           ))}
         </div>
@@ -123,7 +129,7 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
         ))}
       </div>
     </div>
-  </section>
+  </section>}
 
   <!-- ═══ CONTACT ═══ -->
   <section class="pp-cta">
@@ -182,6 +188,7 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
   .pp-track { display: flex; transition: transform 0.4s cubic-bezier(.2,.7,.2,1); will-change: transform; }
   .pp-slide { flex: 0 0 100%; margin: 0; aspect-ratio: 16 / 9; }
   .pp-slide img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .pp-slide-link { display: block; width: 100%; height: 100%; cursor: pointer; }
 
   .pp-nav {
     position: absolute; top: 50%; transform: translateY(-50%);
@@ -218,6 +225,12 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
   .pp-thumb img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
   .pp-thumb:hover { opacity: 0.9; transform: translate(-2px, -2px); }
   .pp-thumb.is-active { opacity: 1; box-shadow: 4px 4px 0 var(--green-lt); }
+
+  /* Portrait one-pager + single-slide decks */
+  .pp-portrait .pp-viewer, .pp-portrait .pp-bar { max-width: 780px; margin-inline: auto; }
+  .pp-portrait .pp-slide { aspect-ratio: var(--pp-aspect, 16 / 9); }
+  .pp-single .pp-nav, .pp-single .pp-thumbs { display: none; }
+  .pp-single .pp-count { visibility: hidden; }
 
   /* Fullscreen */
   .pp-viewer:fullscreen { border: 0; box-shadow: none; display: flex; align-items: center; background: #000; }
@@ -258,8 +271,8 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
     var count = document.getElementById('pp-count');
     var full = document.getElementById('pp-full');
     var thumbs = Array.prototype.slice.call(document.querySelectorAll('.pp-thumb'));
-    var imgs = Array.prototype.slice.call(track.querySelectorAll('img'));
     if (!toggle || !deck || !track) return;
+    var imgs = Array.prototype.slice.call(track.querySelectorAll('img'));
     var total = imgs.length, idx = 0, loadedThumbs = false;
 
     function load(i) {
@@ -332,6 +345,10 @@ const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(`${show} x $
       if (Math.abs(dx) > w * 0.15) go(idx + (dx < 0 ? 1 : -1)); else go(idx);
       startX = null;
     }
+    // A drag that started on a linked slide should not open the link
+    Array.prototype.forEach.call(track.querySelectorAll('.pp-slide-link'), function (a) {
+      a.addEventListener('click', function (e) { if (Math.abs(dx) > 6) e.preventDefault(); });
+    });
     viewer.addEventListener('touchstart', function (e) { down(e.touches[0].clientX); }, { passive: true });
     viewer.addEventListener('touchmove', function (e) { move(e.touches[0].clientX); }, { passive: true });
     viewer.addEventListener('touchend', up);
