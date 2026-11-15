@@ -1,0 +1,24 @@
+---
+/* Private pitch: LAYERS Season 2 x Squarespace. Unlisted, DM only. */
+import PitchPage from '@/components/PitchPage.astro';
+
+const base = '/pitch/layers-squarespace';
+const deck = '/pitch/layers'; // shared LAYERS one-pager (portrait, letter)
+const slides = [`${deck}/slides/slide-01.webp`];
+---
+
+<PitchPage
+  pageTitle="LAYERS x Squarespace"
+  brand="Squarespace"
+  show="LAYERS"
+  subhead="A Season 2 partnership built for Squarespace. Watch the sizzle, then open the one-pager."
+  video={`${base}/pitch.mp4`}
+  poster={`${base}/poster.jpg`}
+  slides={slides}
+  slideLinks={['https://www.youtube.com/watch?v=tVz2IAAxttE&t=2s']}
+  slideAspect="612 / 792"
+  pdf={`${deck}/LAYERS-One-Pager.pdf`}
+  ogImage={`${base}/og.jpg`}
+  hideNav
+  theme={{ bg: '#F5F5F3', surface: '#FFFFFF', ink: '#000000', muted: '#4D4D4D', accent: '#000000', accentDk: '#333333', onAccent: '#FFFFFF' }}
+/>
