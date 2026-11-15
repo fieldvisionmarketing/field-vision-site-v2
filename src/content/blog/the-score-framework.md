@@ -22,7 +22,7 @@ Unlike traditional growth frameworks that assume you know your market, SCORE® i
 
 ## Set the Foundation: Define the strategic context before you build anything
 
-The first step is establishing the strategic landscape. Not jumping into tactics. Not chasing shiny objects. Defining the audience, the goals, and the competitive environment with precision. At Twitch, this meant mapping the total addressable market for music, narrowing to the serviceable audience (18–34 year olds passionate about live music), and identifying the core insight: differentiated live content that viewers couldn't get anywhere else.
+The first step is establishing the strategic landscape. Not jumping into tactics. Not chasing shiny objects. Defining the audience, the goals, and the competitive environment with precision. At Twitch, this meant mapping the total addressable market for music, narrowing to the serviceable audience (18 to 34 year olds passionate about live music), and identifying the core insight: differentiated live content that viewers couldn't get anywhere else.
 
 ## Create the Hypothesis: Translate context into a testable bet
 

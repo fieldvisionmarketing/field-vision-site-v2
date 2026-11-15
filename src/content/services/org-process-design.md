@@ -6,7 +6,7 @@ order: 6
 hidden: true
 sidebar:
   - label: "Duration"
-    value: "4–8 weeks"
+    value: "4 to 8 weeks"
   - label: "Commitment"
     value: "Intensive sprint"
   - label: "Best For"

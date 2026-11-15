@@ -29,11 +29,11 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
     </div>
     <div class="summary-item">
       <strong>Time to Impact</strong>
-      <span>4–12 weeks to see measurable lift in retention and referral velocity</span>
+      <span>4 to 12 weeks to see measurable lift in retention and referral velocity</span>
     </div>
     <div class="summary-item">
       <strong>Ideal For</strong>
-      <span>Product-led and marketing-led companies scaling from 10k–10M ARR</span>
+      <span>Product-led and marketing-led companies scaling from 10k to 10M ARR</span>
     </div>
   </div>
 </div>
@@ -120,7 +120,7 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 
 <div class="output-card">
   <span class="output-icon">✓</span>
-  <div><strong>OUTPUT:</strong> 1–2 proven hooks that earn attention and drive first action. Expect 2.5–4% CTR. CAC reduction of 15–22% vs. baseline.</div>
+  <div><strong>OUTPUT:</strong> 1 to 2 proven hooks that earn attention and drive first action. Expect 2.5 to 4% CTR. CAC reduction of 15 to 22% vs. baseline.</div>
 </div>
 
 <div class="example-card">
@@ -144,7 +144,7 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
     </div>
   </div>
 
-**Why This Phase Matters:** A 3% CTR means nothing if your conversion rate is 0.5%. CONVERT is where you make it effortless to act on the interest you earned. Small friction kills. One extra form field can drop conversion 10–15%.
+**Why This Phase Matters:** A 3% CTR means nothing if your conversion rate is 0.5%. CONVERT is where you make it effortless to act on the interest you earned. Small friction kills. One extra form field can drop conversion 10 to 15%.
 
 **The Work:**
 
@@ -188,7 +188,7 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 
 <div class="output-card">
   <span class="output-icon">✓</span>
-  <div><strong>OUTPUT:</strong> A simplified, high-conversion on-ramp. Expect 20–35% landing-page-to-signup conversion rate. Time-to-signup reduced by 40–50% seconds.</div>
+  <div><strong>OUTPUT:</strong> A simplified, high-conversion on-ramp. Expect 20 to 35% landing-page-to-signup conversion rate. Time-to-signup reduced by 40 to 50% seconds.</div>
 </div>
 
 <div class="example-card">
@@ -211,7 +211,7 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
     </div>
   </div>
 
-**Why This Phase Matters:** Acquisition costs money. Retention builds it. One repeat customer is worth 3–5 new customers in terms of LTV. CULTIVATE is where you build habit loops that keep people coming back.
+**Why This Phase Matters:** Acquisition costs money. Retention builds it. One repeat customer is worth 3 to 5 new customers in terms of LTV. CULTIVATE is where you build habit loops that keep people coming back.
 
 **The Work:**
 
@@ -236,7 +236,7 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
     <div class="step-content">
       <div class="step-label">Create</div>
       <div class="step-title">Automated Nudges (Email, Push, In-App)</div>
-      <p class="step-description">Build a 6–8 touch lifecycle sequence. Message 1 (hour 1): welcome + first value. Message 2 (day 2): show a success story. Message 3 (day 5): how to [reach milestone]. Message 4 (day 10): highlight secondary feature. Message 5–6 (week 2–3): loyalty behavior prompts (refer a friend, integrate tool, upgrade). Segment by behavior. Don't blast everyone the same message.</p>
+      <p class="step-description">Build a 6 to 8 touch lifecycle sequence. Message 1 (hour 1): welcome + first value. Message 2 (day 2): show a success story. Message 3 (day 5): how to [reach milestone]. Message 4 (day 10): highlight secondary feature. Message 5 to 6 (week 2 to 3): loyalty behavior prompts (refer a friend, integrate tool, upgrade). Segment by behavior. Don't blast everyone the same message.</p>
     </div>
   </div>
 
@@ -255,7 +255,7 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 
 <div class="output-card">
   <span class="output-icon">✓</span>
-  <div><strong>OUTPUT:</strong> A lifecycle sequence that drives habit. Expect 15–25% lift in 30-day retention. Frequency of use increases 18–30%. % of users hitting loyalty behaviors increases 22–35%.</div>
+  <div><strong>OUTPUT:</strong> A lifecycle sequence that drives habit. Expect 15 to 25% lift in 30-day retention. Frequency of use increases 18 to 30%. % of users hitting loyalty behaviors increases 22 to 35%.</div>
 </div>
 
 <div class="example-card">
@@ -323,7 +323,7 @@ Companies using integrated multi-channel marketing see 300% higher ROI than sing
 
 <div class="output-card">
   <span class="output-icon">✓</span>
-  <div><strong>OUTPUT:</strong> Customers spreading brand organically. Expect 2–4% of active users to refer monthly. Referral customers have 25% higher LTV. Organic word-of-mouth lift of 18–35% in brand mentions and community engagement.</div>
+  <div><strong>OUTPUT:</strong> Customers spreading brand organically. Expect 2 to 4% of active users to refer monthly. Referral customers have 25% higher LTV. Organic word-of-mouth lift of 18 to 35% in brand mentions and community engagement.</div>
 </div>
 
 <div class="example-card">

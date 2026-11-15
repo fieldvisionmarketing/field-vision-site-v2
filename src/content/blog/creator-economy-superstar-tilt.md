@@ -12,7 +12,7 @@ schemaJson: |
 ---
 
 <div class="key-takeaway">
-<strong>Key Takeaway:</strong> The Superstar Tilt is the structural force that combines winner-take-most audience preferences with cheap, infinite reach, converting small differences in creator quality into massive differences in reward. It concentrates reach at the top of the creator economy, but it does not concentrate trust — and that split is where smart brands find value.
+<strong>Key Takeaway:</strong> The Superstar Tilt is the structural force that combines winner-take-most audience preferences with cheap, infinite reach, converting small differences in creator quality into massive differences in reward. It concentrates reach at the top of the creator economy, but it does not concentrate trust, and that split is where smart brands find value.
 </div>
 
 In October 2021, someone breached Twitch and dumped its creator payout records onto the internet. For the first time, anyone could see the numbers the platforms keep internal, sorted top to bottom.

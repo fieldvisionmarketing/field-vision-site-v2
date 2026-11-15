@@ -78,10 +78,10 @@ Now you need someone who can build and manage a department, own a P&L, interface
 <tr><th>Stage</th><th>Right Hire</th><th>Wrong Hire</th><th>Budget</th></tr>
 </thead>
 <tbody>
-<tr><td>Pre-Seed / Seed</td><td>Founder-led or one generalist</td><td>VP/Director from a big brand</td><td>$0–$80K</td></tr>
-<tr><td>Series A</td><td>Growth marketer / builder</td><td>Strategist who needs a team to execute</td><td>$90K–$140K</td></tr>
-<tr><td>Series B</td><td>Head of Marketing (strategy + execution)</td><td>Pure executive with no hands-on ability</td><td>$150K–$200K</td></tr>
-<tr><td>Series C+</td><td>CMO (team builder, P&L owner)</td><td>Another builder when you need a scaler</td><td>$200K–$300K+</td></tr>
+<tr><td>Pre-Seed / Seed</td><td>Founder-led or one generalist</td><td>VP/Director from a big brand</td><td>$0 to $80K</td></tr>
+<tr><td>Series A</td><td>Growth marketer / builder</td><td>Strategist who needs a team to execute</td><td>$90K to $140K</td></tr>
+<tr><td>Series B</td><td>Head of Marketing (strategy + execution)</td><td>Pure executive with no hands-on ability</td><td>$150K to $200K</td></tr>
+<tr><td>Series C+</td><td>CMO (team builder, P&L owner)</td><td>Another builder when you need a scaler</td><td>$200K to $300K+</td></tr>
 </tbody>
 </table>
 
