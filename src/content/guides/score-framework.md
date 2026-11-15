@@ -49,7 +49,7 @@ Companies that align messaging to buyer psychology see 2.3x higher conversion ra
 <div class="card"><div class="card-label">KEY QUESTIONS</div><p>What is the brand/product story? Who is the Total Addressable Market vs. the Serviceable Addressable Market? What are the business goals and how does marketing ladder up? What does the competitive landscape look like?</p></div>
 </div>
 <div class="output-card"><div class="output-icon">✓</div><div><strong>CHECKPOINT:</strong> Do we know what we need to do and for whom? You should walk away with a documented audience definition, clear business objectives, and a thorough understanding of the market landscape.</div></div>
-<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>Amazon Music needed efficient subscriber acquisition. Setting the Foundation meant defining their TAM (non-Amazon Music customers), narrowing the SAM (18–34 year olds passionate about Latin, Hip-Hop, and World music), and identifying the key insight: differentiated content that listeners couldn't get anywhere else would be the driver.</p></div>
+<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>Amazon Music needed efficient subscriber acquisition. Setting the Foundation meant defining their TAM (non-Amazon Music customers), narrowing the SAM (18 to 34 year olds passionate about Latin, Hip-Hop, and World music), and identifying the key insight: differentiated content that listeners couldn't get anywhere else would be the driver.</p></div>
 <div class="key-principle"><strong>Key Principle:</strong> Strategy without context is guesswork. Setting the Foundation forces you to document who you serve, what you're solving, and where you play, before you spend a dollar on tactics.</div>
 </div>
 
@@ -60,7 +60,7 @@ Companies that align messaging to buyer psychology see 2.3x higher conversion ra
 <div class="card"><div class="card-label">WARNING SIGNS</div><p>Vague goals instead of testable hypotheses. No clear IF/THEN. Tactics chosen before the strategic bet is articulated. Multiple competing hypotheses without prioritization.</p></div>
 </div>
 <div class="output-card"><div class="output-icon">✓</div><div><strong>CHECKPOINT:</strong> Is the bet crisp and measurable? Your hypothesis should follow the format: "IF we do [specific action], THEN we will achieve [measurable outcome]."</div></div>
-<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>For Amazon Music, the hypothesis was clear: "IF we create exclusive content that listeners can't get anywhere else, THEN we will drive trial subscriptions among 18–34 year old music fans." Every downstream decision, channel mix, creative, targeting, laddered back to proving this single hypothesis.</p></div>
+<div class="example-card"><div class="card-label">REAL-WORLD EXAMPLE</div><p>For Amazon Music, the hypothesis was clear: "IF we create exclusive content that listeners can't get anywhere else, THEN we will drive trial subscriptions among 18 to 34 year old music fans." Every downstream decision, channel mix, creative, targeting, laddered back to proving this single hypothesis.</p></div>
 <div class="key-principle"><strong>Key Principle:</strong> A hypothesis turns strategy into science. Without one, you're just running campaigns. With one, every campaign is an experiment that compounds your knowledge, whether it succeeds or fails.</div>
 </div>
 

@@ -53,9 +53,9 @@ The principle generalizes: find the behavior in your specific product that indic
 
 **Week 1:** Pull every data source you have. Build the retention curve by channel. Find the drop-off point. If you don't have the data infrastructure, build it now, before you run another campaign.
 
-**Weeks 2–4:** Run small tests with the diagnostic layer active. Track cohorts, not just aggregate metrics. Every piece of content, every ad, every email sequence should feed back into the same measurement framework.
+**Weeks 2 to 4:** Run small tests with the diagnostic layer active. Track cohorts, not just aggregate metrics. Every piece of content, every ad, every email sequence should feed back into the same measurement framework.
 
-**Days 30–90:** Scale what the data tells you is working. Kill everything else. The founders who get this right are ruthless about stopping campaigns that are winning on vanity metrics but losing on the ONE number.
+**Days 30 to 90:** Scale what the data tells you is working. Kill everything else. The founders who get this right are ruthless about stopping campaigns that are winning on vanity metrics but losing on the ONE number.
 
 ## The Retention Trap That Kills Series A/B Companies
 
@@ -99,7 +99,7 @@ A marketing architecture audit is a structured diagnostic process that maps rete
 
 **What metrics should a startup track in its first 90 days of marketing?**
 
-The four critical metrics are: 30-day retention by acquisition channel, leaky bucket drop-off point (where users leave in weeks 1–2), 60-day retained CAC by channel, and the ONE north-star metric tied directly to business outcomes.
+The four critical metrics are: 30-day retention by acquisition channel, leaky bucket drop-off point (where users leave in weeks 1 to 2), 60-day retained CAC by channel, and the ONE north-star metric tied directly to business outcomes.
 
 ---
 

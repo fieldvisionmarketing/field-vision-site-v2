@@ -5,7 +5,7 @@ icon: "🚀"
 order: 2
 sidebar:
   - label: "Duration"
-    value: "4–8 weeks"
+    value: "4 to 8 weeks"
   - label: "Commitment"
     value: "Intensive sprint"
   - label: "Best For"
@@ -51,7 +51,7 @@ deliverables:
     desc: "Weekly sprints that get product, engineering, sales, and marketing on the same page, because GTM execution is a team sport."
 whoIntro: "This engagement is built for founders and product leaders who are about to launch something important and want to get it right the first time."
 whoTriggers:
-  - "Launching a new product or feature in the next 3–6 months"
+  - "Launching a new product or feature in the next 3 to 6 months"
   - "Entering a new market or vertical and need a structured entry plan"
   - "Repositioning after a pivot and need clarity on who you are now"
   - "Preparing for a funding round and need a compelling growth narrative"
@@ -93,7 +93,7 @@ icon: "🚀"
 order: 2
 sidebar:
   - label: "Duration"
-    value: "4–8 weeks"
+    value: "4 to 8 weeks"
   - label: "Commitment"
     value: "Intensive sprint"
   - label: "Best For"
@@ -139,7 +139,7 @@ deliverables:
     desc: "Weekly sprints that get product, engineering, sales, and marketing on the same page, because GTM execution is a team sport."
 whoIntro: "This engagement is built for founders and product leaders who are about to launch something important and want to get it right the first time."
 whoTriggers:
-  - "Launching a new product or feature in the next 3–6 months"
+  - "Launching a new product or feature in the next 3 to 6 months"
   - "Entering a new market or vertical and need a structured entry plan"
   - "Repositioning after a pivot and need clarity on who you are now"
   - "Preparing for a funding round and need a compelling growth narrative"

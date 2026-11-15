@@ -11,7 +11,7 @@ sidebar:
   - label: "Stage"
     value: "Seed → Series D"
   - label: "Commitment"
-    value: "2–3 days/week"
+    value: "2 to 3 days/week"
   - label: "Proof"
     value: "Amazon, Twitch, Pandora"
   - label: "Location"

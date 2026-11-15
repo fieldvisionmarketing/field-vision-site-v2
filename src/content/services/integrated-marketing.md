@@ -6,9 +6,9 @@ order: 3
 hidden: true
 sidebar:
   - label: "Duration"
-    value: "3–6 months"
+    value: "3 to 6 months"
   - label: "Commitment"
-    value: "2–3 days/week"
+    value: "2 to 3 days/week"
   - label: "Best For"
     value: "Scaling companies"
   - label: "Industries"

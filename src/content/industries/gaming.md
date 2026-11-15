@@ -11,7 +11,7 @@ sidebar:
   - label: "Stage"
     value: "Seed → Series D"
   - label: "Commitment"
-    value: "2–3 days/week, or a launch project"
+    value: "2 to 3 days/week, or a launch project"
   - label: "Proof"
     value: "Hard Rock Bet, Twitch"
   - label: "Location"

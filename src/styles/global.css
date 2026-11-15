@@ -3,7 +3,7 @@
    Global Stylesheet — LOCKED v2.1
    ══════════════════════════════════════════
 
-   CANONICAL DESIGN RULES (R1–R17)
+   CANONICAL DESIGN RULES (R1 to R21)
 
    R1  BORDERS:      4px solid. Always.
    R2  SHADOWS:      6px (buttons, chips, small) / 8px (cards). Hover: +2px lift.
@@ -25,6 +25,7 @@
    R18 FULL ROWS:    Card grids must fill every row. No orphan cards. Use column spans or split rows.
    R19 NO ORPHAN PUNCT: Trailing punctuation (?!.) must be INSIDE the highlight chip span, never after it.
    R20 EYEBROWS:     Archivo 13px, weight 600, UPPERCASE (letter-spacing 0.12em), NO leading bar. Light bg = --ink (#213621). Dark bg = --offwhite (#efead3).
+   R21 READING PROGRESS: Long-form pages use <ReadingProgress /> (src/components/ReadingProgress.astro): vertical lime bar on the right edge + Archivo percent pill. Never a horizontal top bar.
    ══════════════════════════════════════════ */
 
 :root {
@@ -163,9 +164,7 @@ h1, h2, h3 {
 .section-dark { background: var(--ink); color: var(--paper); }
 .section-dark .section-title { color: var(--paper); }
 .section-dark .section-eyebrow { color: var(--offwhite); }
-.section-dark .section-eyebrow::before { background: var(--offwhite); }
 .section-dark .eyebrow { color: var(--offwhite); }
-.section-dark .eyebrow::before { background: var(--offwhite); }
 
 /* ── Buttons ── */
 .btn-brutal {
