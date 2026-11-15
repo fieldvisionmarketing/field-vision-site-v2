@@ -1,0 +1,24 @@
+---
+/* Private pitch: LAYERS Season 2 x Skillshare. Unlisted, DM only. */
+import PitchPage from '@/components/PitchPage.astro';
+
+const base = '/pitch/layers-skillshare';
+const deck = '/pitch/layers'; // shared LAYERS one-pager (portrait, letter)
+const slides = [`${deck}/slides/slide-01.webp`];
+---
+
+<PitchPage
+  pageTitle="LAYERS x Skillshare"
+  brand="Skillshare"
+  show="LAYERS"
+  subhead="A Season 2 partnership built for Skillshare. Watch the sizzle, then open the one-pager."
+  video={`${base}/pitch.mp4`}
+  poster={`${base}/poster.jpg`}
+  slides={slides}
+  slideLinks={['https://www.youtube.com/watch?v=tVz2IAAxttE&t=2s']}
+  slideAspect="612 / 792"
+  pdf={`${deck}/LAYERS-One-Pager.pdf`}
+  ogImage={`${base}/og.jpg`}
+  hideNav
+  theme={{ bg: '#F4F7F5', surface: '#FFFFFF', ink: '#002333', muted: '#3F5560', accent: '#00FF84', accentDk: '#00D46E' }}
+/>
