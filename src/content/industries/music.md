@@ -1,9 +1,9 @@
 ---
-title: "Fractional CMO for Music Startups"
-description: "Fractional CMO and marketing leadership for music startups, music-tech, and music-industry brands, led by an exec who scaled marketing at Pandora, Amazon Music, and Audible."
-h1: "Fractional CMO for Music Startups"
+title: "Fractional CMO for Music Apps and Music Startups"
+description: "Fractional CMO and marketing leadership for music apps, music startups, music-tech, and music-industry brands, led by an exec who scaled marketing at Pandora, Amazon Music, and Audible."
+h1: "Fractional CMO for Music Apps and Startups"
 subtitle: "Senior marketing leadership for music-tech and music-industry companies, from a leader who grew Pandora to over 80 million monthly active users and launched Amazon Music's flagship live program."
-targetKeyword: "Fractional CMO for Music Startups"
+targetKeyword: "Fractional CMO for Music Apps"
 order: 1
 sidebar:
   - label: "Best For"
@@ -18,7 +18,7 @@ sidebar:
     value: "SF-based, nationwide"
 entityEyebrow: "The Field Vision Edge"
 entityHeadline: "Marketing Built Inside the Music Industry"
-entityBlock: "Field Vision provides fractional CMO and marketing leadership to music startups, music-technology companies, and music-industry brands. The firm is led by David Hampian, a growth marketing executive who spent over a decade building and scaling marketing inside the music-streaming machine, at Pandora, Amazon Music, Audible, and Ticketfly. He grew Pandora to over 80 million monthly active users; at Amazon he launched and scaled Amazon Music's flagship live program. Field Vision helps seed-to-Series D music companies turn listener acquisition, retention, and monetization into a repeatable growth system using the proprietary <a href=\"/guides/abct-framework/\">ABCT®</a>, <a href=\"/guides/score-framework/\">SCORE®</a>, and <a href=\"/guides/compound-growth-system/\">CGS®</a> frameworks, senior <a href=\"/services/fractional-cmo/\">fractional CMO</a> leadership."
+entityBlock: "Field Vision provides fractional CMO and marketing leadership to music apps, music startups, music-technology companies, and music-industry brands. The firm is led by David Hampian, a growth marketing executive who spent over a decade building and scaling marketing inside the music-streaming machine, at Pandora, Amazon Music, Audible, and Ticketfly. He grew Pandora to over 80 million monthly active users; at Amazon he launched and scaled Amazon Music's flagship live program. Field Vision helps seed-to-Series D music companies turn listener acquisition, retention, and monetization into a repeatable growth system using the proprietary <a href=\"/guides/abct-framework/\">ABCT®</a>, <a href=\"/guides/score-framework/\">SCORE®</a>, and <a href=\"/guides/compound-growth-system/\">CGS®</a> frameworks, senior <a href=\"/services/fractional-cmo/\">fractional CMO</a> leadership."
 proofIntro: "Most fractional CMOs have never worked inside a music company. Field Vision's leadership built and scaled marketing at the platforms that defined modern music streaming and live discovery."
 clients:
   - name: "Pandora"
@@ -101,6 +101,8 @@ faqs:
     answer: "Field Vision works with music companies from seed through Series D. Earlier-stage startups usually need positioning, a focused go-to-market motion, and the first repeatable acquisition and retention loops; later-stage companies need to scale systems, build the team, and tighten monetization. The engagement is scoped to your stage, and because it's built to transfer, you end up owning the systems rather than depending on us indefinitely."
   - question: "What makes marketing a music product different from other consumer apps?"
     answer: "Three things. First, usage is habitual and high-frequency, so retention and lifecycle marketing matter far more than one-time conversion. Second, the product is shaped by catalog, rights, and artists, which changes positioning and partnerships. Third, growth is fueled by fandom and culture, so creator and artist-led loops often outperform paid acquisition. A marketing system that ignores these underperforms, which is exactly the gap Field Vision is built to close for music startups."
+  - question: "How do you launch and grow a music app?"
+    answer: "Launch a music app by owning one listening use case for one audience, then building the first week around the behaviors that predict a listener will come back. At Pandora, users who created more than one station and gave more than five thumbs in their first week were far more likely to stay, and building onboarding and lifecycle messaging around those two behaviors lifted week-two retention 21%. Grow from there with artist and fan loops, content partnerships and owned channels, and add paid acquisition and subscription upsells once retention holds. Field Vision builds this system for music apps from pre-launch through Series D."
 ctaHeadline: "Ready to Grow Your Music Company?"
 ctaBody: "Book a 30-minute discovery call. We'll talk about where your marketing is today, where you want to take your listener base, and whether Field Vision is the right fit."
 ---

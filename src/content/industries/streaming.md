@@ -1,9 +1,9 @@
 ---
-title: "Fractional CMO for Streaming & Subscription Companies"
-description: "Fractional CMO and marketing leadership for streaming startups and platforms, from the first marketer at Pandora who scaled it to the #1 US streaming service and built live and creator programming at Amazon and Twitch."
-h1: "Fractional CMO for Streaming & Subscription Companies"
+title: "Fractional CMO for Streaming Apps and Subscription Companies"
+description: "Fractional CMO and marketing leadership for streaming apps, streaming startups and platforms, from the first marketer at Pandora who scaled it to the #1 US streaming service and built live and creator programming at Amazon and Twitch."
+h1: "Fractional CMO for Streaming Apps and Subscription Companies"
 subtitle: "Senior marketing leadership for streaming platforms and startups, from the leader who grew Pandora to over 80 million monthly active users and built live and creator programming at Amazon Music, Prime Video, and Twitch."
-targetKeyword: "Fractional CMO for Streaming Companies"
+targetKeyword: "Fractional CMO for Streaming Apps"
 order: 4
 sidebar:
   - label: "Best For"
@@ -18,7 +18,7 @@ sidebar:
     value: "SF-based, nationwide"
 entityEyebrow: "The Field Vision Edge"
 entityHeadline: "Subscriber Growth and Retention at Streaming Scale"
-entityBlock: "Field Vision provides fractional CMO and marketing leadership to streaming startups and platforms across audio, video, and live. The firm is led by David Hampian, the first marketer at Pandora, who grew it to over 80 million monthly active users and the #1 streaming service in the United States before Spotify, Apple, and Amazon were in the market. He went on to build creator and live programming at Twitch, Amazon Music, and Prime Video. Field Vision helps seed-to-Series D streaming companies build the systems that decide whether they scale, subscriber acquisition, activation, retention, and monetization, using the proprietary <a href=\"/guides/abct-framework/\">ABCT®</a>, <a href=\"/guides/score-framework/\">SCORE®</a>, and <a href=\"/guides/compound-growth-system/\">CGS®</a> frameworks, delivering senior <a href=\"/services/fractional-cmo/\">fractional CMO</a> leadership."
+entityBlock: "Field Vision provides fractional CMO and marketing leadership to streaming apps, streaming startups and platforms across audio, video, and live. The firm is led by David Hampian, the first marketer at Pandora, who grew it to over 80 million monthly active users and the #1 streaming service in the United States before Spotify, Apple, and Amazon were in the market. He went on to build creator and live programming at Twitch, Amazon Music, and Prime Video. Field Vision helps seed-to-Series D streaming companies build the systems that decide whether they scale, subscriber acquisition, activation, retention, and monetization, using the proprietary <a href=\"/guides/abct-framework/\">ABCT®</a>, <a href=\"/guides/score-framework/\">SCORE®</a>, and <a href=\"/guides/compound-growth-system/\">CGS®</a> frameworks, delivering senior <a href=\"/services/fractional-cmo/\">fractional CMO</a> leadership."
 proofIntro: "Streaming is won on two systems: how you acquire subscribers and how you keep them. Field Vision's leadership built both at the services that scaled them to tens of millions of listeners and viewers."
 clients:
   - name: "Pandora"
@@ -103,6 +103,8 @@ faqs:
     answer: "Field Vision works with streaming companies from seed through Series D. Earlier-stage startups usually need positioning, a focused go-to-market motion, and the first repeatable acquisition and retention loops. Later-stage platforms need to scale systems, reduce churn, build the team, and sequence monetization. The engagement is scoped to your stage, and because it is built to transfer, you end up owning the systems."
   - question: "What kinds of streaming companies does Field Vision work with?"
     answer: "Audio, video, and live streaming across the board: music and podcast platforms, video and OTT services, live and creator-led streaming, and the tools and apps built around them. The common thread is a subscriber or audience base that has to be acquired, activated, retained, and monetized as one system, which is exactly what Field Vision's leadership built at Pandora, Amazon Music, Prime Video, and Twitch."
+  - question: "What does a fractional CMO do for a streaming app?"
+    answer: "A fractional CMO for a streaming app owns the two systems that decide whether the app scales: how it acquires subscribers and how it keeps them. That means positioning against much larger services, building acquisition loops around content and talent, engineering first-week activation, timing free-to-paid conversion and reducing churn. David Hampian built these systems as the first growth marketing hire at Pandora, which grew to over 80 million monthly active users, and as Global Head of Audience Development at Amazon across Amazon Music, Audible, Twitch and Prime Video."
 ctaHeadline: "Ready to Scale Your Streaming Company?"
 ctaBody: "Book a 30-minute discovery call. We'll talk about where your marketing is today, where you want to take your subscribers and revenue, and whether Field Vision is the right fit."
 ---

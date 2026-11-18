@@ -1,9 +1,9 @@
 ---
-title: "Fractional CMO for Sports Startups"
-description: "Fractional CMO and marketing leadership for sports startups, sports-tech, and sports marketing, from a leader who built NFL broadcasting on Prime Video and new verticals at Twitch."
-h1: "Fractional CMO for Sports Startups"
+title: "Fractional CMO for Sports Apps and Sports Startups"
+description: "Fractional CMO and marketing leadership for sports apps, sports startups, sports-tech, and sports marketing, from a leader who built NFL broadcasting on Prime Video and new verticals at Twitch."
+h1: "Fractional CMO for Sports Apps and Startups"
 subtitle: "Senior marketing leadership for sports-tech and fan-economy companies, from a leader who invented creator-led NFL broadcasting on Prime Video and launched Twitch's sports vertical."
-targetKeyword: "Fractional CMO for Sports Startups"
+targetKeyword: "Fractional CMO for Sports Apps"
 order: 2
 sidebar:
   - label: "Best For"
@@ -18,7 +18,7 @@ sidebar:
     value: "SF-based, nationwide"
 entityEyebrow: "The Field Vision Edge"
 entityHeadline: "Built for the Fan Economy"
-entityBlock: "Field Vision provides fractional CMO and marketing leadership to sports startups, sports-technology companies, and fan-economy brands. The firm is led by David Hampian, a marketing executive who built marketing for sports at platform scale, inventing creator-led NFL broadcasting on Prime Video, launching Twitch's sports vertical including NFL co-streaming, and standing up a sportsbook from scratch at Hard Rock. Field Vision is currently helping StreamU build what its co-founder calls \"a first-of-its-kind go-to-market strategy that will change college sports forever.\" Using the proprietary <a href=\"/guides/abct-framework/\">ABCT®</a>, <a href=\"/guides/score-framework/\">SCORE®</a>, and <a href=\"/guides/compound-growth-system/\">CGS®</a> frameworks, Field Vision helps seed-to-Series D sports companies turn fans into a repeatable growth engine, senior <a href=\"/services/fractional-cmo/\">fractional CMO</a> leadership."
+entityBlock: "Field Vision provides fractional CMO and marketing leadership to sports apps, sports startups, sports-technology companies, and fan-economy brands. The firm is led by David Hampian, a marketing executive who built marketing for sports at platform scale, inventing creator-led NFL broadcasting on Prime Video, launching Twitch's sports vertical including NFL co-streaming, and standing up a sportsbook from scratch at Hard Rock. Field Vision is currently helping StreamU build what its co-founder calls \"a first-of-its-kind go-to-market strategy that will change college sports forever.\" Using the proprietary <a href=\"/guides/abct-framework/\">ABCT®</a>, <a href=\"/guides/score-framework/\">SCORE®</a>, and <a href=\"/guides/compound-growth-system/\">CGS®</a> frameworks, Field Vision helps seed-to-Series D sports companies turn fans into a repeatable growth engine, senior <a href=\"/services/fractional-cmo/\">fractional CMO</a> leadership."
 proofIntro: "Sports growth is event-driven and fan-powered, not subscription-default. Field Vision's leadership built marketing for sports at the platforms inventing how fans watch, bet, and engage."
 clients:
   - name: "Prime Video (NFL)"
@@ -99,6 +99,8 @@ faqs:
     answer: "Field Vision works with sports companies from seed through Series D, including NIL and college-sports startups. Earlier-stage companies usually need positioning, a focused go-to-market motion, and the first repeatable fan-growth loops; later-stage companies need to scale systems, build the team, and tighten monetization. The engagement is scoped to your stage, and because it's built to transfer, you end up owning the systems."
   - question: "What makes marketing a sports product different from other consumer apps?"
     answer: "Sports demand is event-driven, so attention arrives in spikes around games and seasons rather than a steady stream. Fans are motivated by identity, rivalry, and community, which makes fandom and creators stronger acquisition drivers than paid ads. And monetization spans tickets, memberships, betting, and subscriptions that have to grow with fandom rather than against it. A marketing system that ignores these underperforms, which is exactly the gap Field Vision is built to close for sports startups."
+  - question: "How do you grow a sports app between big games and seasons?"
+    answer: "Grow a sports app by planning around the calendar. Acquisition spikes around games, drafts and tournaments, so build launch moments and creator partnerships around those dates, then give fans a reason to open the app between them with community, prediction and second-screen features. David Hampian built this kind of event-driven growth at Twitch and Prime Video, where creator-led Thursday Night Football co-streams grew year-over-year viewership 73%, and at Hard Rock Bet, which launched across six states and beat acquisition forecasts by 232%."
 ctaHeadline: "Ready to Grow Your Sports Company?"
 ctaBody: "Book a 30-minute discovery call. We'll talk about where your marketing is today, where you want to take your fan base, and whether Field Vision is the right fit."
 ---

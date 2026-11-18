@@ -1,0 +1,134 @@
+---
+/* "Who You Work With" author block for service and industry pages.
+   Names the person behind Field Vision so search engines and AI assistants
+   can attribute the expertise to David Hampian (Person @id #david-hampian).
+   Informational card: cream header (R3), 4px border (R1), 8px shadow (R2),
+   no hover (R11). */
+interface Props {
+  bg?: 'paper' | 'warm-gray';
+}
+const { bg = 'warm-gray' } = Astro.props;
+---
+
+<section class={`ledby reveal ledby--${bg}`}>
+  <div class="ledby-inner">
+    <span class="eyebrow">Who You Work With</span>
+    <h2>Led by David <span class="hl-cream">Hampian</span></h2>
+    <div class="ledby-card">
+      <div class="ledby-card-header">Your Fractional CMO</div>
+      <div class="ledby-card-body">
+        <img src="/headshot-david-hampian.jpg" alt="David Hampian, fractional CMO and founder of Field Vision" class="ledby-avatar" width="120" height="120" loading="lazy" />
+        <div class="ledby-text">
+          <p class="ledby-name">David Hampian</p>
+          <p class="ledby-role">Founder and Fractional CMO, Field Vision</p>
+          <ul class="ledby-roles">
+            <li>Former Global Head of Audience Development, Amazon (Music, Audible, Twitch, Prime Video)</li>
+            <li>Former Senior Director of Global Integrated Marketing, Twitch</li>
+            <li>Former VP of Brand and Go-to-Market, Hard Rock International (Hard Rock Bet)</li>
+            <li>First growth marketing hire at Pandora</li>
+          </ul>
+          <p class="ledby-bio">David grew Pandora to over 80 million monthly active users, built Twitch's expansion into music and sports, and scaled audience development at Amazon from a team of one to a 30+ person global team across four regions. Every Field Vision engagement is led by David personally.</p>
+          <div class="ledby-links">
+            <a href="/about/" rel="author">Full background →</a>
+            <a href="https://www.linkedin.com/in/davidhampian/" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ledby { padding: 96px 24px; }
+  .ledby--warm-gray { background: var(--warm-gray); }
+  .ledby--paper { background: var(--paper); }
+  .ledby-inner { max-width: 960px; margin: 0 auto; }
+  .ledby h2 { font-size: clamp(36px, 5vw, 56px); margin: 12px 0 40px; }
+  .ledby-card {
+    background: var(--paper);
+    border: 4px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+  .ledby-card-header {
+    background: var(--offwhite);
+    border-bottom: 4px solid var(--ink);
+    padding: 20px 24px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .ledby-card-body {
+    display: flex;
+    gap: 28px;
+    padding: 28px 24px;
+    align-items: flex-start;
+  }
+  .ledby-avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid var(--ink);
+    flex-shrink: 0;
+  }
+  .ledby-name {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1.05;
+    color: var(--ink);
+  }
+  .ledby-role {
+    font-family: 'Archivo', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--green-dk);
+    margin: 6px 0 16px;
+  }
+  .ledby-roles {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+  }
+  .ledby-roles li {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 500;
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  .ledby-roles li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--green-dk);
+    font-weight: 700;
+  }
+  .ledby-bio {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0 0 18px;
+  }
+  .ledby-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .ledby-links a {
+    font-family: 'Archivo', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .ledby-links a:hover { color: var(--green-dk); }
+  @media (max-width: 640px) {
+    .ledby { padding: 64px 20px; }
+    .ledby-card-body { flex-direction: column; }
+  }
+</style>
