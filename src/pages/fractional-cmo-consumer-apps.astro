@@ -1,0 +1,13 @@
+---
+import { getEntry } from 'astro:content';
+import IndustryPage from '@/components/IndustryPage.astro';
+
+/* Keyword page for "fractional CMO for consumer apps" searches.
+   Content lives in src/content/industries/consumer-apps.md (hidden: true,
+   so it is not also built at /industries/consumer-apps/). */
+const industry = await getEntry('industries', 'consumer-apps');
+if (!industry) throw new Error('consumer-apps industry entry missing');
+const pageUrl = 'https://fieldvisiongroup.com/fractional-cmo-consumer-apps/';
+---
+
+<IndustryPage industry={industry} pageUrl={pageUrl} />

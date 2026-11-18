@@ -1,3 +1,11 @@
+# === "content apps" wording replaced with "consumer apps" (Nov 18 2026) ===
+/fractional-cmo-content-apps                    /fractional-cmo-consumer-apps/                    301
+/fractional-cmo-content-apps/                   /fractional-cmo-consumer-apps/                    301
+/blog/how-to-launch-a-content-app               /blog/how-to-launch-a-consumer-app/               301
+/blog/how-to-launch-a-content-app/              /blog/how-to-launch-a-consumer-app/               301
+/blog/pandora-growth-lessons-content-apps       /blog/pandora-growth-lessons-consumer-apps/       301
+/blog/pandora-growth-lessons-content-apps/      /blog/pandora-growth-lessons-consumer-apps/       301
+
 
 # === Lead magnet page renamed (/work-with-me -> /founders-offer) ===
 /work-with-me                         /founders-offer/           301

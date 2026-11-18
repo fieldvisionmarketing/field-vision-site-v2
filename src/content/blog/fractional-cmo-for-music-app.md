@@ -70,7 +70,7 @@ A fractional CMO should leave you with a working machine: dashboards, a testing 
 
 ## Where Field Vision Fits
 
-Field Vision provides fractional CMO leadership to [music apps and music startups](/industries/music/), along with [streaming apps](/industries/streaming/) and other [content apps](/fractional-cmo-content-apps/). Every engagement is led by me personally, embedded 2 to 3 days a week, and built so your team owns the system when we're done. If you're building a music app, [book a discovery call](/contact/).
+Field Vision provides fractional CMO leadership to [music apps and music startups](/industries/music/), along with [streaming apps](/industries/streaming/) and other [consumer apps](/fractional-cmo-consumer-apps/). Every engagement is led by me personally, embedded 2 to 3 days a week, and built so your team owns the system when we're done. If you're building a music app, [book a discovery call](/contact/).
 
 ## Frequently Asked Questions
 
