@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import LedBy from '@/components/LedBy.astro';
+import Verticals from '@/components/Verticals.astro';
 
 export async function getStaticPaths() {
   const services = (await getCollection('services')).filter(s => !s.data.hidden);
@@ -45,11 +47,8 @@ const serviceSchema = {
   "@type": "Service",
   "name": d.title,
   "description": d.description,
-  "provider": {
-    "@type": "Organization",
-    "name": "Field Vision Group",
-    "url": siteUrl
-  },
+  "provider": { "@id": `${siteUrl}/#organization` },
+  "brand": { "@id": `${siteUrl}/#organization` },
   "areaServed": { "@type": "Country", "name": "United States" },
   "url": `${siteUrl}/services/${slug}/`
 };
@@ -70,7 +69,7 @@ const faqSchema = d.faqs?.length ? {
 ---
 
 <BaseLayout
-  title={d.title}
+  title={`${d.title} | David Hampian`}
   description={d.description}
   ogImage={d.ogImage}
 >
@@ -170,6 +169,9 @@ const faqSchema = d.faqs?.length ? {
     </div>
   </section>
 
+  <!-- ═══ WHO YOU WORK WITH ═══ -->
+  <LedBy bg="warm-gray" />
+
   <!-- ═══ ABCT® MODEL ═══ -->
   <section class="svcpg-abct reveal">
     <div class="svcpg-abct-inner">
@@ -192,6 +194,9 @@ const faqSchema = d.faqs?.length ? {
       </div>
     </div>
   </section>
+
+  <!-- ═══ WHERE WE PLAY (internal links to vertical pages) ═══ -->
+  <Verticals />
 
   <!-- ═══ FAQ ═══ -->
   {d.faqs?.length > 0 && (

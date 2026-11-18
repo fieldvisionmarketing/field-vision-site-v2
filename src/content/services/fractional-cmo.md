@@ -1,6 +1,6 @@
 ---
 title: "Fractional CMO for Startups"
-description: "Senior marketing leadership embedded in your team: strategy, systems, positioning, and the executive judgment that turns scattered activity into a growth engine. Built for seed to Series D startups in media, streaming, and the creator economy."
+description: "Senior marketing leadership embedded in your team: strategy, systems, positioning, and the executive judgment that turns scattered activity into a growth engine. Led by David Hampian for seed to Series D startups and content apps in music, streaming, sports, gaming and the creator economy."
 icon: "🎯"
 order: 1
 sidebar:
@@ -11,7 +11,7 @@ sidebar:
   - label: "Best For"
     value: "Seed to Series D"
   - label: "Industries"
-    value: "Media, Streaming, Creator Economy"
+    value: "Music, Streaming, Sports, Creator Apps"
   - label: "Location"
     value: "SF-based, nationwide"
 problemHeadline: "You Don't Have a Marketing Problem. You Have a Leadership Gap."
@@ -82,6 +82,10 @@ faqs:
     answer: "Most fractional CMO engagements at Field Vision run 3 to 6 months, though some extend to 12 months or longer depending on complexity. Every engagement follows the ABCT® model, Audit, Blueprint, Construct, Transfer, which means there is a clear structure, defined milestones, and a planned exit point. The goal is always to build systems your team can own and operate independently. We are built to be fired, that is the measure of success."
   - question: "What types of startups benefit most from a fractional CMO?"
     answer: "Startups between seed and Series D see the strongest results from fractional CMO leadership, particularly those in digital media, streaming, entertainment, and the creator economy. Common triggers include preparing for a product launch, entering a new market, hitting a growth plateau, or scaling a marketing team without a senior leader. If you have a product with traction but marketing that feels tactical and disconnected from business outcomes, a fractional CMO provides the strategic layer you are missing."
+  - question: "Who leads a Field Vision fractional CMO engagement?"
+    answer: "Every Field Vision engagement is led personally by David Hampian. David was the first growth marketing hire at Pandora and helped grow it to over 80 million monthly active users, served as Senior Director of Global Integrated Marketing at Twitch, where he led the expansion into music and sports, and was Global Head of Audience Development at Amazon, leading a 30+ person team across Amazon Music, Audible, Twitch and Prime Video. He also launched Hard Rock Bet as VP of Brand and Go-to-Market at Hard Rock International."
+  - question: "Do you work with content apps and consumer apps?"
+    answer: "Yes. Field Vision works with content and fan apps, including music apps, streaming apps, creator platforms, micro-drama apps, sports apps and gaming communities. These products grow on habit, first-week retention and creator supply, which is the playbook David Hampian built at Pandora, Twitch and Amazon. Field Vision works with them from pre-launch through Series D."
 ctaHeadline: "Ready to Build Your Growth Engine?"
 ctaBody: "Book a 30-minute discovery call. We will discuss where you are, where you want to go, and whether fractional CMO leadership is the right move for your startup."
 ---
